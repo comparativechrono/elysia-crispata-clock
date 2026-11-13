@@ -1,0 +1,48 @@
+symbol	name	category	protein_length	model_source	ensembl_gene(s)	purdue_protein(s)	sanger_primary_status	sanger_coverage	sanger_locus	alt_haplotype_status	purdue_status	tampa_status	pfam_domains	human_orthologue	drosophila_orthologue
+Clock	Clock (circadian locomotor output cycles kaput)	core	843	ensembl:ENSUFQP00005016859	ENSUFQG00005014897,ENSUFQG00005014170	A0AAE0YW14	complete	1.00	3:18120426-18136344(-)	fragmented	complete	complete	HLH,PAS,PAS_11	CLOCK	Clk
+Bmal1	Bmal1 / cycle (Arntl)	core	703	proj:purdue:BIOGL_A0A9W3BNJ3_LOC106079856	-	A0AAE1CZQ1	partial	0.39	CAWKYH010000109.1:1482-9706(+)	partial	complete	complete	HLH,PAS,PAS_11	BMAL1	cyc
+Period	Period	core	1666	purdue:A0AAE1CRZ6	ENSUFQG00005027999	A0AAE1CRZ6	complete	1.00	9:16090125-16123279(+)	partial	complete	complete	PAS_11,Period_C,Period_C	PER2	per
+Timeless	Timeless (tim1, insect-type)	core	1152	purdue:A0AAE1DMX8	ENSUFQG00005002792	A0AAE1DMX8	complete	0.97	11:14152770-14172627(+)	partial	complete	complete	TIMELESS,TIMELESS,TOF-1-like_helical,TIMELESS_C	-	tim
+Timeout	Timeout / Tim2 (orthologue of mammalian TIMELESS)	core	1461	proj:purdue:BIOGL_A0A9W2YE75_LOC106075541	ENSUFQG00005027391,ENSUFQG00005026871,ENSUFQG00005027542	A0AAE1ALR2,A0AAE1E0Q2	fragmented	1.00	12:6971662-6986689(-); 12:6822833-6886223(-)	partial	complete	complete	TIMELESS,TOF-1-like_helical,HTH_TIMELESS,TIMELESS_C	TIMELESS	timeout
+Cry1	Cryptochrome 1 (Drosophila-type, light-sensitive)	core	554	ensembl:ENSUFQP00005024726	ENSUFQG00005020080	A0AAE1B0S4	complete	1.00	1:44889513-44904893(+)	complete	complete	complete	DNA_photolyase,FAD_binding_7	CRY1 (not reciprocal)	cry
+Cry2	Cryptochrome 2 (mammalian-type, transcriptional repressor)	core	518	proj:sanger:ELYCH_A0A3S0ZKJ3_EGW08_015234	ENSUFQG00005015099	A0AAE1CT52	complete	1.00	3:43133898-43151974(+)	partial	partial	partial	DNA_photolyase,FAD_binding_7	CRY1	phr6-4 (not reciprocal)
+Phr6-4	(6-4) photolyase	photolyase	532	ensembl:ENSUFQP00005006349	ENSUFQG00005006057	A0AAE1ATM9	complete	1.00	6:16142706-16156852(+)	absent	complete	complete	DNA_photolyase,FAD_binding_7	CRY1 (not reciprocal)	phr6-4
+PhrCPD	CPD photolyase (class II)	photolyase	535	ensembl:ENSUFQP00005000182	ENSUFQG00005000250	A0AAE0YA44	complete	1.00	11:17109163-17115693(-)	partial	complete	complete	DNA_photolyase	-	phr
+CryDASH1	Cryptochrome-DASH 1	photolyase	589	ensembl:ENSUFQP00005008054	ENSUFQG00005007252	A0AAE1DMV9	complete	1.00	2:54405297-54420199(-)	partial	complete	complete	DNA_photolyase,FAD_binding_7	CRY1 (not reciprocal)	phr6-4 (not reciprocal)
+CryDASH2	Cryptochrome-DASH 2	photolyase	471	ensembl:ENSUFQP00005008987	ENSUFQG00005007750	A0AAE1AFC4	complete	1.00	2:35793870-35802920(+)	complete	complete	partial	DNA_photolyase,FAD_binding_7	CRY1 (not reciprocal)	phr6-4 (not reciprocal)
+Pdp1	PAR-domain protein 1 (Hlf/Dbp/Tef family)	loop2	324	purdue:A0AAE1DZI1	-	A0AAE1DZI1	absent	0.00	-	complete_discrepancy	complete	complete	bZIP_2	HLF	Pdp1
+Vrille	Vrille / Nfil3 (E4bp4)	loop2	910	ensembl:ENSUFQP00005008196	ENSUFQG00005007351	A0AAE0YP22	complete	1.00	2:53861547-53864958(+)	absent	complete	complete	bZIP_2,bZIP_2	NFIL3	vri
+E75	E75 / Rev-erb (Nr1d)	loop2	1671	purdue:A0AAE0YD99	-	A0AAE0YD99	absent	0.00	-	partial	complete	complete	zf-C4,Hormone_recep	NR1D2	Eip75B
+Hr3	Hr3 / Ror (Nr1f)	loop2	458	purdue:A0AAE0Y6I2	ENSUFQG00005024325	A0AAE0Y6I2	complete	1.00	14:7021303-7029516(-)	partial	complete	partial	zf-C4,Hormone_recep	RORA	Hr3
+Cwo	Clockwork orange	loop2	796	purdue:A0AAE1AU98	ENSUFQG00005024443	A0AAE1AVJ1,A0AAE1AU98	partial	0.86	5:18872266-18883555(+)	partial	complete	divergent	HLH,Hairy_orange	HEY2 (not reciprocal)	cwo
+Ck1de	Casein kinase 1 delta/epsilon (doubletime)	kinase	429	ensembl:ENSUFQP00005010653	ENSUFQG00005008799	A0AAE0ZNT6	complete	1.00	4:21065976-21091888(+)	complete	complete	complete	Pkinase,CK1_C	CSNK1D	dco
+Ck1a	Casein kinase 1 alpha	kinase	326	ensembl:ENSUFQP00005020686	ENSUFQG00005016763	A0AAE0Y2C9	complete	1.00	1:4900782-4918800(+)	partial	complete	complete	Pkinase	CSNK1A1	CkIalpha
+Ck2a	Casein kinase 2 alpha	kinase	354	ensembl:ENSUFQP00005019981	ENSUFQG00005016385	A0AAE1A0Z3	complete	1.00	1:36238091-36250326(-)	complete	complete	complete	Pkinase	CSNK2A1	CkIIalpha
+Ck2b	Casein kinase 2 beta	kinase	221	ensembl:ENSUFQP00005000541	ENSUFQG00005000736	A0AAE1A168	complete	1.00	10:1394843-1401649(-)	complete	complete	complete	CK_II_beta	CSNK2B	CkIIbeta
+Gsk3	Glycogen synthase kinase 3 (shaggy)	kinase	422	purdue:A0AAE1E8E4	ENSUFQG00005024300	A0AAE1E8E4	complete	1.00	15:4966856-4980493(-)	absent	complete	complete	Pkinase	GSK3B	sgg
+Nemo	Nemo-like kinase (nemo)	kinase	459	proj:purdue:BIOGL_A0A9W2YEF4_LOC106065260	ENSUFQG00005026594	A0AAE1AEE1,A0AAE1AF54	partial	0.43	CAWKYH010000219.1:11957-16067(-)	partial	complete	complete	Pkinase	NLK	nmo
+Pp1a	Protein phosphatase 1 catalytic subunit (Pp1-87B / PPP1CA-like)	phosphatase	328	purdue:A0AAE0YSL8	-	A0AAE0YSL8	absent	0.00	-	partial	complete	complete	STPPase_N,Metallophos	PPP1CA	Pp1alpha-96A
+Pp1b	Protein phosphatase 1 catalytic subunit beta (flapwing / PPP1CB)	phosphatase	332	purdue:A0AAE1ED90	ENSUFQG00005011587	A0AAE1ED90	complete_discrepancy	1.00	2:60107763-60118897(+)	partial	complete	complete	STPPase_N,Metallophos	PPP1CB	flw
+Pp2aC	Protein phosphatase 2A catalytic subunit (microtubule star)	phosphatase	312	ensembl:ENSUFQP00005008675	ENSUFQG00005007612	A0AAE1DCI0	complete	1.00	4:14528690-14538726(+)	partial	complete	complete	Metallophos	PPP2CB	mts
+Pp2aB55	PP2A regulatory subunit B55 (twins)	phosphatase	504	purdue:A0AAE1BA08	ENSUFQG00005017297	A0AAE1BA08	complete_discrepancy	1.00	1:74302019-74323193(-)	partial	complete	complete	WD40	PPP2R2A	tws
+Pp2aB56e	PP2A regulatory subunit B56 epsilon (widerborst)	phosphatase	459	ensembl:ENSUFQP00005009486	ENSUFQG00005008067	A0AAE1DYQ8	complete	1.00	2:42729530-42745277(+)	absent	complete	complete	B56	PPP2R5E	wdb
+Pp2aB56d	PP2A regulatory subunit B56 gamma/delta (well-rounded)	phosphatase	591	proj:purdue:APLCA_A0ABM0JJ49_LOC101860798	ENSUFQG00005008928,ENSUFQG00005010645	A0AAE1EE62	complete	1.00	2:60136041-60171166(+)	partial	complete	complete	B56	PPP2R5D	wrd
+Slimb	Slimb / beta-TrCP (Btrc, Fbxw11)	degradation	524	purdue:A0AAE1DDM3	-	A0AAE1DDM3	absent	0.00	-	partial	complete	complete	Beta-TrCP_D,F-box-like,WD40,WD40,WD40,WD40,WD40,WD40,WD40	BTRC	slmb
+Jetlag	Jetlag-like F-box/LRR protein (Fbxl15-like)	degradation	320	purdue:A0AAE1B2J7	-	A0AAE1B2J7	complete_discrepancy	1.00	CAWKYH010002341.1:1869-5212(-)	complete	complete	complete	-	FBXL15	jet
+Sirt1	Sirtuin 1	modulator	1028	purdue:A0AAE1A839	ENSUFQG00005005712,ENSUFQG00005009110	A0AAE1A839	complete_discrepancy	1.00	4:8632910-8659206(-)	fragmented	complete	complete	SIRT1_N,SIR2	SIRT1	Sirt1
+Pdf	Cerebrin / PDF-like neuropeptide precursor	output	89	ensembl:ENSUFQP00005022562	ENSUFQG00005018259	A0AAE0Z7I9	complete	1.00	1:42421545-42423625(+)	complete	complete	complete	-	-	-
+Pdfr	PDF receptor-like (class B GPCR)	output	539	purdue:A0AAE0YF58	ENSUFQG00005016299	A0AAE0YF58	divergent	0.00	-	partial	complete	complete	HRM,7tm_2	CRHR2 (not reciprocal)	Pdfr
+Lark	Lark / Rbm4	output	246	ensembl:ENSUFQP00005011156	ENSUFQG00005009250,ENSUFQG00005008092	A0AAE1AQP7	complete	1.00	2:45210530-45219975(+)	partial	complete	complete	RRM_1,zf-CCHC	RBM4	lark
+Atx2	Ataxin-2	output	1072	ensembl:ENSUFQP00005021574	ENSUFQG00005017298	A0AAE1CLI0	complete	1.00	7:8364541-8399195(+)	complete	complete	complete	LsmAD,PAM2	ATXN2	Atx2
+Nocturnin	Nocturnin (curled)	output	371	ensembl:ENSUFQP00005017258	ENSUFQG00005014525	A0AAE0YA69	complete	1.00	3:4848213-4851565(-)	absent	complete	complete	Exo_endo_phos	NOCT	cu
+NonA	NonA / Nono (Pspc1, Sfpq family)	output	681	ensembl:ENSUFQP00005014209	ENSUFQG00005011831	A0AAE1D1S9	complete	1.00	3:21234150-21285645(+)	complete	complete	complete	RRM_1,RRM_1,NOPS	PSPC1	nonA-l
+Tipin	Timeless-interacting protein (Tipin)	output	455	ensembl:ENSUFQP00005021199	ENSUFQG00005017046	A0AAE0YY63	complete	1.00	1:53408536-53419125(-)	complete	complete	complete	Swi3	TIPIN	CG10336
+Ropsin1	Rhabdomeric opsin 1 (Gq)	light	563	purdue:A0AAE1A9X2	-	A0AAE1A9X2	absent	0.00	-	partial	complete	complete	7tm_1	OPN4	Rh6
+Ropsin2	Rhabdomeric opsin 2 (Gq)	light	533	purdue:A0AAE1AAI2	-	A0AAE1AAI2	absent	0.00	-	absent	complete	divergent	7tm_1	OPN4	Rh6
+RopsinL1	Rhabdomeric-opsin-like 1 (non-canonical Gq group)	light	249	ensembl:ENSUFQP00005007853	ENSUFQG00005007165	A0AAE1ASU8	complete	1.00	4:8337713-8339928(-)	complete	complete	complete	7tm_1	OPN4 (not reciprocal)	Rh6 (not reciprocal)
+RopsinL2	Rhabdomeric-opsin-like 2 (non-canonical Gq group)	light	284	purdue:A0AAE0XE11	ENSUFQG00005005610	A0AAE0XE11	complete	1.00	4:37885370-37891519(+)	absent	complete	complete	7tm_1	OPN4 (not reciprocal)	Rh2 (not reciprocal)
+Xenopsin	Xenopsin	light	439	proj:purdue:APLCA_A0ABM1A1M1_LOC101858557	ENSUFQG00005004544	A0AAE0YAN9	absent	0.00	-	partial	complete	complete	7tm_1	RRH (not reciprocal)	Rh6 (not reciprocal)
+GoOpsin1	Go-coupled opsin 1	light	421	ensembl:ENSUFQP00005015236	ENSUFQG00005012845	A0AAE0ZJ91	complete	1.00	3:47474864-47486565(-)	partial	complete	complete	7tm_1	RRH (not reciprocal)	Rh6 (not reciprocal)
+GoOpsin2	Go-coupled opsin 2	light	388	purdue:A0AAE1DH43	-	A0AAE1DH43	complete	1.00	CAWKYH010000856.1:9111-25585(-)	complete	complete	complete	7tm_1	RRH	Rh6 (not reciprocal)
+Neuropsin	Neuropsin (Opn5-like)	light	489	purdue:A0AAE0ZYB3	ENSUFQG00005026799	A0AAE0ZYB3	partial	0.56	CAWKYH010002135.1:52538-79056(-)	absent	complete	complete	7tm_1	OPN5	Rh7 (not reciprocal)
+Retinochrome	Retinochrome	light	318	purdue:A0AAE1E6W7	ENSUFQG00005021826	A0AAE1E6W7	complete	1.00	15:7846819-7858762(-)	absent	complete	complete	7tm_1	RRH (not reciprocal)	Rh6 (not reciprocal)

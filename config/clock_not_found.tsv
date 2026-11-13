@@ -1,0 +1,10 @@
+# Clock-associated genes searched for but without a detectable orthologue in E. crispata
+# (DIAMOND very-sensitive, e <= 1e-5, against both annotations; miniprot against four assemblies).
+symbol	name	seeds	interpretation
+Dec1/2	Bhlhe40 / Bhlhe41	HsBHLHE40,HsBHLHE41	no orthologue; closest bHLH-Orange genes are Hey and Clockwork orange
+Fbxl3/21	F-box/LRR protein 3 / 21	HsFBXL3,MmFbxl21	vertebrate-specific Cry ubiquitin ligases; no orthologue
+Tyf	Twenty-four	DmTyf	no homologue detected
+Cipc	Clock-interacting pacemaker	HsCIPC	no homologue detected
+Ciart	Chrono (Ciart)	HsCIART	vertebrate-specific; no homologue detected
+Aanat	Arylalkylamine N-acetyltransferase	HsAANAT,DmAANAT1	no homologue detected with vertebrate or insect seeds
+Asmt	Acetylserotonin O-methyltransferase (Hiomt)	HsASMT	no homologue detected

@@ -1,0 +1,108 @@
+JAWDGP010001067.1	emb|HG518460.1|	95.402	348	31406	31753	1	348	556	Acetabularia acetabulum chlorplast rpl20 gene for chloroplast 50S ribosomal protein L20, strain DI1
+JAWDGP010001067.1	gb|KY495860.1|	88.761	347	31406	31752	1	347	451	Neomeris sp. HV02668 ribosomal protein L20 (rpl20) gene, complete cds; chloroplast
+JAWDGP010001067.1	gb|MH545214.1|	98.726	471	56026	56496	471	1	823	Acetabularia peniculus 30S ribosomal protein S7 (rps7) gene, complete cds; chloroplast
+JAWDGP010001067.1	emb|HG518468.1|	95.117	471	56026	56496	471	1	746	Acetabularia acetabulum chlorplast rps7 gene for chloroplast 30S ribosomal protein S7, strain DI1
+JAWDGP010001067.1	gb|MH545325.1|	90.446	471	56026	56496	471	1	647	Dasycladus sp. HV04045 30S ribosomal protein S7 (rps7) gene, complete cds; chloroplast
+JAWDGP010001067.1	gb|MH545354.1|	90.021	471	56026	56496	471	1	638	Halicoryne sp. HV04044 30S ribosomal protein S7 (rps7) gene, complete cds; chloroplast
+JAWDGP010001067.1	gb|KY495866.1|	89.597	471	56026	56496	471	1	629	Neomeris sp. HV02668 ribosomal protein S7 (rps7) gene, complete cds; chloroplast
+JAWDGP010001067.1	gb|MH545258.1|	88.110	471	56026	56496	471	1	598	Batophora oerstedii 30S ribosomal protein S7 (rps7) gene, complete cds; chloroplast
+JAWDGP010001067.1	gb|MH545276.1|	88.110	471	56026	56496	471	1	598	Batophora occidentalis 30S ribosomal protein S7 (rps7) gene, complete cds; chloroplast
+JAWDGP010001067.1	gb|MH545304.1|	85.366	410	56087	56496	410	1	470	Cymopolia barbata 30S ribosomal protein S7 (rps7) gene, complete cds; chloroplast
+JAWDGP010001067.1	gb|MH545212.1|	98.839	517	113994	114510	516	1	902	Acetabularia peniculus photosystem I assembly protein Ycf3 (ycf3) gene, complete cds; chloroplast
+JAWDGP010001067.1	emb|HG518473.1|	95.543	516	113995	114510	515	1	824	Acetabularia acetabulum chlorplast ycf3 gene for conserved hypothetical chloroplast protein ycf3, strain DI1
+JAWDGP010001067.1	gb|MH545357.1|	92.564	511	114000	114510	510	1	747	Halicoryne sp. HV04044 photosystem I assembly protein Ycf3 (ycf3) gene, complete cds; chloroplast
+JAWDGP010001067.1	gb|MH545308.1|	92.813	487	114024	114510	487	1	721	Dasycladus sp. HV04045 photosystem I assembly protein Ycf3 (ycf3) gene, complete cds; chloroplast
+JAWDGP010001067.1	gb|KY495873.1|	92.402	487	114024	114510	487	1	712	Neomeris sp. HV02668 photosystem I assembly protein Ycf3 (ycf3) gene, complete cds; chloroplast
+JAWDGP010001067.1	gb|MH545272.1|	92.402	487	114024	114510	487	1	712	Batophora oerstedii photosystem I assembly protein Ycf3 (ycf3) gene, complete cds; chloroplast
+JAWDGP010001067.1	gb|MH545283.1|	92.402	487	114024	114510	487	1	712	Batophora occidentalis photosystem I assembly protein Ycf3 (ycf3) gene, complete cds; chloroplast
+JAWDGP010001250.1	gb|MH545222.1|	98.417	695	49921	50615	693	1	1197	Acetabularia peniculus sulfate ABC transporter protein (cysA) gene, complete cds; chloroplast
+JAWDGP010001250.1	emb|HG518436.1|	95.396	695	49921	50615	693	1	1103	Acetabularia acetabulum chlorplast cysA gene for sulfate ABC transporter protein, strain DI1
+JAWDGP010001250.1	gb|KY495835.1|	89.665	687	49929	50615	685	1	912	Neomeris sp. HV02668 sulfate ABC transporter ATP-binding subunit (cysA) gene, complete cds; chloroplast
+JAWDGP010001250.1	gb|MH545334.1|	91.971	685	49931	50615	683	1	981	Halicoryne sp. HV04044 sulfate ABC transporter protein (cysA) gene, complete cds; chloroplast
+JAWDGP010001250.1	gb|MH545331.1|	89.035	684	49932	50615	682	1	889	Dasycladus sp. HV04045 sulfate ABC transporter protein (cysA) gene, complete cds; chloroplast
+JAWDGP010001250.1	gb|MH545298.1|	88.496	678	49938	50615	676	1	865	Cymopolia barbata sulfate ABC transporter protein (cysA) gene, complete cds; chloroplast
+JAWDGP010001250.1	emb|HG518425.1|	96.271	885	56766	57649	885	1	1444	Acetabularia acetabulum chlorplast accD gene for acetyl-CoA carboxylase beta-carboxyl transferase subunit, strain DI1
+JAWDGP010001250.1	gb|MH545333.1|	93.793	870	56781	57649	870	1	1323	Halicoryne sp. HV04044 acetyl-CoA carboxylase beta subunit (accD) gene, complete cds; chloroplast
+JAWDGP010001375.1	emb|HG518451.1|	97.778	135	17674	17808	1	135	231	Acetabularia acetabulum chlorplast psbN gene for photosystem II reaction center N protein, strain DI1
+JAWDGP010001375.1	gb|KY495852.1|	96.296	135	17674	17808	1	135	222	Neomeris sp. HV02668 photosystem II protein N (psbN) gene, complete cds; chloroplast
+JAWDGP010002183.1	gb|MH545199.1|	97.541	1708	1435	3141	1695	1	2877	Acetabularia peniculus photochlorophyllide reductase subunit B (chlB) gene, complete cds; chloroplast
+JAWDGP010002183.1	emb|HG518431.1|	90.366	737	1435	2171	1575	841	1003	Acetabularia acetabulum chlorplast chlB gene for light-independent protochlorophyllide reductase subunit B, strain DI1
+JAWDGP010002183.1	gb|MH545230.1|	85.915	710	1435	2144	1581	874	823	Batophora oerstedii photochlorophyllide reductase subunit B (chlB) gene, complete cds; chloroplast
+JAWDGP010002183.1	gb|MH545280.1|	85.915	710	1435	2144	1587	880	823	Batophora occidentalis photochlorophyllide reductase subunit B (chlB) gene, complete cds; chloroplast
+JAWDGP010002183.1	gb|MH545316.1|	85.449	701	1444	2144	1542	844	798	Dasycladus sp. HV04045 photochlorophyllide reductase subunit B (chlB) gene, complete cds; chloroplast
+JAWDGP010002183.1	emb|HG518431.1|	95.221	837	2287	3123	835	1	1323	Acetabularia acetabulum chlorplast chlB gene for light-independent protochlorophyllide reductase subunit B, strain DI1
+JAWDGP010002183.1	gb|MH545316.1|	89.532	812	2318	3129	807	1	1073	Dasycladus sp. HV04045 photochlorophyllide reductase subunit B (chlB) gene, complete cds; chloroplast
+JAWDGP010002183.1	gb|MH545280.1|	86.310	840	2318	3124	843	6	1002	Batophora occidentalis photochlorophyllide reductase subunit B (chlB) gene, complete cds; chloroplast
+JAWDGP010002183.1	gb|MH545230.1|	86.293	839	2318	3123	837	1	1000	Batophora oerstedii photochlorophyllide reductase subunit B (chlB) gene, complete cds; chloroplast
+JAWDGP010002183.1	gb|MH545297.1|	88.339	626	2375	3000	621	1	787	Cymopolia barbata photochlorophyllide reductase subunit B (chlB) gene, complete cds; chloroplast
+JAWDGP010004663.1	gb|MH545228.1|	92.718	412	16322	16733	1	412	609	Batophora oerstedii ATP synthase CF0 A subunit (atpI) gene, complete cds; chloroplast
+JAWDGP010004663.1	gb|MH545228.1|	95.918	98	18052	18148	413	510	156	Batophora oerstedii ATP synthase CF0 A subunit (atpI) gene, complete cds; chloroplast
+JAWDGP010004663.1	emb|HG518453.1|	97.895	190	39292	39481	1	189	322	Acetabularia acetabulum chlorplast psbZ gene for photosystem II reaction center Z protein, strain DI1
+JAWDGP010004663.1	gb|MH545253.1|	92.105	190	39292	39481	1	189	272	Batophora oerstedii photosystem II protein Z (psbZ) gene, complete cds; chloroplast
+JAWDGP010005039.1	emb|HG518438.1|	72.136	323	9532	9811	84	401	189	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	79.487	429	11001	11423	1223	1647	369	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	79.361	407	12518	12916	1917	2309	344	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	88.772	285	13662	13945	3109	3384	366	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	78.836	378	14005	14374	3509	3870	307	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	93.836	146	14734	14878	4238	4383	220	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	89.775	1242	15284	16519	4525	5740	1638	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	85.246	122	16929	17049	6125	6246	136	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	84.577	201	18479	18679	7193	7392	220	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	84.314	102	18854	18955	7516	7611	113	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	79.343	426	20945	21361	9030	9454	363	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	79.545	352	21722	22073	9513	9835	315	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	82.819	227	22123	22349	10023	10249	234	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	77.778	207	22768	22970	10470	10670	153	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	75.460	489	23486	23937	11029	11516	349	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	81.250	160	24320	24478	11760	11913	147	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	84.364	275	24900	25166	12027	12299	298	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	93.764	433	25436	25866	12506	12938	657	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	emb|HG518438.1|	91.770	243	26640	26882	13246	13488	349	Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1
+JAWDGP010005039.1	gb|KY495849.1|	88.276	145	47778	47922	21	162	179	Neomeris sp. HV02668 photosystem II protein K (psbK) gene, complete cds; chloroplast
+JAWDGP010005039.1	emb|HG518449.1|	93.333	135	47788	47922	1	132	197	Acetabularia acetabulum chlorplast psbK gene for PSII K protein, strain DI1
+JAWDGP010005039.1	gb|MH545250.1|	91.111	135	47788	47922	1	132	184	Batophora oerstedii photosystem II protein K (psbK) gene, complete cds; chloroplast
+JAWDGP010005039.1	emb|HG518472.1|	97.059	102	57759	57860	1	102	171	Acetabularia acetabulum chlorplast ycf12 gene for conserved hypothetical chloroplast protein ycf12, strain DI1
+JAWDGP010005634.1	gb|MH545191.1|	99.323	591	5001	5589	1	591	1041	Acetabularia peniculus ATP-dependent Clp protease proteolytic subunit (clpP) gene, complete cds; chloroplast
+JAWDGP010005634.1	emb|HG518435.1|	93.909	591	5001	5589	1	591	897	Acetabularia acetabulum chlorplast clpP gene for ATP-dependent Clp protease proteolytic subunit, strain DI1
+JAWDGP010005634.1	gb|MH545344.1|	93.232	591	5001	5589	1	591	879	Halicoryne sp. HV04044 ATP-dependent Clp protease proteolytic subunit (clpP) gene, complete cds; chloroplast
+JAWDGP010005634.1	gb|MH545312.1|	92.047	591	5001	5589	1	591	847	Dasycladus sp. HV04045 ATP-dependent Clp protease proteolytic subunit (clpP) gene, complete cds; chloroplast
+JAWDGP010005634.1	gb|MH545233.1|	91.864	590	5001	5588	1	590	841	Batophora oerstedii ATP-dependent Clp protease proteolytic subunit (clpP) gene, complete cds; chloroplast
+JAWDGP010005634.1	gb|MH545284.1|	91.864	590	5001	5588	1	590	841	Batophora occidentalis ATP-dependent Clp protease proteolytic subunit (clpP) gene, complete cds; chloroplast
+JAWDGP010005634.1	gb|KY495834.1|	89.152	507	5001	5506	1	507	664	Neomeris sp. HV02668 clp protease proteolytic subunit (clpP) gene, complete cds; chloroplast
+JAWDGP010005634.1	gb|MH545296.1|	83.133	581	5001	5579	1	581	600	Cymopolia barbata ATP-dependent Clp protease proteolytic subunit (clpP) gene, complete cds; chloroplast
+JAWDGP010006072.1	gb|MH545248.1|	88.742	151	30903	31053	234	85	193	Batophora oerstedii photosystem II protein H (psbH) gene, complete cds; chloroplast
+JAWDGP010006072.1	gb|MH545248.1|	91.667	84	55508	55591	84	1	121	Batophora oerstedii photosystem II protein H (psbH) gene, complete cds; chloroplast
+JAWDGP010006072.1	emb|HG518446.1|	98.413	126	61774	61899	126	1	219	Acetabularia acetabulum chlorplast psaJ gene for photosystem I subunit IX, strain DI1
+JAWDGP010006072.1	gb|MH545241.1|	96.032	126	61774	61899	126	1	205	Batophora oerstedii photosystem I reaction center subunit IX (psaJ) gene, complete cds; chloroplast
+JAWDGP010006072.1	gb|KY495843.1|	93.651	126	61774	61899	126	1	192	Neomeris sp. HV02668 photosystem I reaction center subunit IX (psaJ) gene, complete cds; chloroplast
+JAWDGP010006072.1	emb|HG518448.1|	96.154	130	69737	69866	129	1	209	Acetabularia acetabulum chlorplast psbJ gene for photosystem II reaction center subunit X, strain DI1
+JAWDGP010006072.1	gb|KY495848.1|	86.486	111	69756	69866	110	1	130	Neomeris sp. HV02668 photosystem II protein J (psbJ) gene, complete cds; chloroplast
+JAWDGP010006072.1	gb|MH545251.1|	97.436	117	76848	76964	117	1	198	Batophora oerstedii photosystem II protein L (psbL) gene, complete cds; chloroplast
+JAWDGP010006072.1	gb|KY495850.1|	93.750	96	76869	76964	96	1	147	Neomeris sp. HV02668 photosystem II protein L (psbL) gene, partial cds; chloroplast
+JAWDGP010006072.1	gb|MH545247.1|	88.976	127	78888	79013	125	1	162	Batophora oerstedii photosystem II protein VI (psbF) gene, complete cds; chloroplast
+JAWDGP010006072.1	gb|MH545246.1|	92.063	252	79521	79772	252	1	365	Batophora oerstedii photosystem II protein V (psbE) gene, complete cds; chloroplast
+JAWDGP010006072.1	emb|HG518467.1|	91.943	633	106720	107349	1	609	878	Acetabularia acetabulum chlorplast rps4 gene for chloroplast 30S ribosomal protein S4, strain DI1
+JAWDGP010006072.1	gb|MH545328.1|	86.098	633	106720	107349	1	609	707	Dasycladus sp. HV04045 30S ribosomal protein S4 (rps4) gene, complete cds; chloroplast
+JAWDGP010006072.1	gb|KY495865.1|	85.308	633	106720	107349	1	609	684	Neomeris sp. HV02668 ribosomal protein S4 (rps4) gene, complete cds; chloroplast
+JAWDGP010006072.1	gb|MH545267.1|	84.119	636	106720	107349	1	612	652	Batophora oerstedii 30S ribosomal protein S4 (rps4) gene, complete cds; chloroplast
+JAWDGP010006072.1	gb|MH545277.1|	84.119	636	106720	107349	1	612	652	Batophora occidentalis 30S ribosomal protein S4 (rps4) gene, complete cds; chloroplast
+JAWDGP010006093.1	gb|MH545197.1|	97.400	1231	11832	13060	1	1230	2066	Acetabularia peniculus elongation factor Tu (tufA) gene, complete cds; chloroplast
+JAWDGP010006093.1	emb|HG518471.1|	94.151	1231	11832	13060	1	1230	1885	Acetabularia acetabulum chlorplast tufA gene for elongation factor 1-alpha, strain DI1
+JAWDGP010006093.1	gb|MH545356.1|	91.795	1231	11832	13060	1	1230	1755	Halicoryne sp. HV04044 elongation factor Tu (tufA) gene, complete cds; chloroplast
+JAWDGP010006093.1	gb|MH545261.1|	87.521	1186	11877	13060	4	1179	1467	Batophora oerstedii elongation factor Tu (tufA) gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|MH545295.1|	87.627	1180	11883	13060	1	1170	1463	Batophora occidentalis elongation factor Tu (tufA) gene, complete cds; chloroplast
+JAWDGP010006093.1	gb|OR861142.1|	92.331	978	11973	12948	1	977	1416	Parvocaulis parvulus voucher PF953 translational elongation factor Tu (tufA) gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|KU362061.1|	99.666	899	12053	12949	1	898	1598	Acetabularia sp. TS1860 elongation factor tu gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|KU362060.1|	99.555	899	12053	12949	1	898	1595	Acetabularia sp. TS1811 elongation factor tu gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|KU362059.1|	95.328	899	12053	12949	1	898	1422	Acetabularia sp. TS1704 elongation factor tu gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|KU362058.1|	91.991	899	12053	12949	1	898	1287	Parvocaulis parvulus voucher TS1702 elongation factor tu gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|KU362053.1|	87.319	899	12053	12949	1	898	1097	Dasycladus vermicularis voucher TS1094 elongation factor tu gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|MK125424.1|	97.422	892	12064	12953	1	891	1495	Acetabularia peniculus voucher HV06429 elongation factor tu (tufA) gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|KU362055.1|	91.995	887	12065	12949	1	886	1269	Parvocaulis parvulus voucher TS0026/ARS1083 elongation factor tu gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|KU362054.1|	87.982	882	12070	12949	1	881	1103	Batophora sp. TS1812 elongation factor tu gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|KU362056.1|	95.035	866	12076	12939	1	865	1358	Acetabularia sp. TS1210 elongation factor tu gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|FJ535855.1|	99.412	850	12099	12946	1	849	1500	Acetabularia calyculus elongation factor Tu (tufA) gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|FJ535858.1|	90.706	850	12099	12946	1	849	1167	Halicoryne wrightii elongation factor Tu (tufA) gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|FJ535854.1|	93.963	762	12100	12859	2	762	1157	Acetabularia acetabulum elongation factor Tu (tufA) gene, partial cds; chloroplast
+JAWDGP010006093.1	gb|MH545323.1|	88.413	958	12105	13060	1	957	1217	Dasycladus sp. HV04045 elongation factor Tu (tufA) gene, complete cds; chloroplast
+JAWDGP010006093.1	gb|OR861141.1|	91.822	807	12129	12933	1	806	1148	Parvocaulis parvulus voucher PF1308 translational elongation factor Tu (tufA) gene, partial cds; chloroplast

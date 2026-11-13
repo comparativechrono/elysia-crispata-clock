@@ -1,0 +1,27 @@
+assembly	contig	start	end	length	identity	alga	plastome	plastome_start	plastome_end	genes	abuts	through_reads	through_molecules	unique_flank_bp	diverging_reads	diverging_molecules	flank_reads
+sanger	9	2842019	2847596	5577	1.0	Penicillus lamourouxii	OZ372796.1	2459	6055	atpB,petB,petD,psaA,rps14	gap	2	1	300	1	1	3
+sanger	1	27252467	27256169	3702	0.9973	Penicillus capitatus	OZ373742.1	9563	13273	atpB,atpE,petB,rps14	gap	1	1	1500	13	11	17
+sanger	4	35236216	35239714	3498	1.0	Penicillus capitatus	OZ373742.1	8976	12474	atpB,atpE,psbN,rps14	gap	1	1	0	0	0	0
+sanger	6	17830984	17834019	3035	0.9997	Penicillus capitatus	OZ373742.1	62775	65811	accD,orf434,rps7,tufA	gap	1	1	700	12	8	15
+sanger	6	1304771	1306640	1869	0.9933	Penicillus lamourouxii	OZ372796.1	3338	4979	petB,petD,rps14	gap	1	1	800	7	6	9
+sanger	3	50389534	50391382	1848	0.9984	Penicillus capitatus	OZ287723.1	23471	25318		gap	1	1	2000	15	12	22
+sanger	11	3088313	3090133	1820	0.9984	Penicillus capitatus	OZ373742.1	64340	66161	orf434,tufA	gap	1	1	0	0	0	0
+sanger	14	9862870	9864679	1809	0.9972	Penicillus capitatus	OZ373742.1	11269	13073	atpB,petB,rps14	gap	1	1	700	6	6	8
+sanger	CAWKYH010001228.1	160125	161704	1579	1.0	Penicillus capitatus	OZ287723.1	57376	58955		sequence end	1	1	2000	6	5	9
+sanger	14	11487394	11488888	1494	0.998	Penicillus capitatus	OZ373742.1	13724	15220	petD,psaA	gap	1	1	2000	6	6	10
+sanger	CAWKYH010000620.1	98295	99562	1267	1.0	Penicillus capitatus	OZ373742.1	22789	24056	atpA	sequence end	1	1	2000	25	21	43
+sanger	3	4370341	4371555	1214	0.9992	Penicillus capitatus	OZ373742.1	7827	9042		gap	1	1	2000	3	2	8
+sanger	CAWKYH010000836.1	12447	13518	1071	0.9832	Penicillus capitatus	OZ373742.1	35791	36877	ccs1,ycf1	sequence end	1	1	0	0	0	0
+sanger	9	517682	518692	1010	1.0	Penicillus capitatus	OZ373742.1	60847	61857	rbcL	gap	1	1	1900	2	1	5
+sanger	10	7606013	7606448	435	1.0	Penicillus capitatus	OZ287723.1	72681	73116		gap	1	1	0	0	0	0
+alt	CAWKYI010000192.1	0	3187	3187	0.9991	Penicillus capitatus	OZ373742.1	68875	72064	rpoC1,rpoC2,rps9	sequence end	1	1	900	3	3	6
+alt	CAWKYI010001489.1	0	2961	2961	1.0	Penicillus capitatus	OZ373742.1	25994	28955	chlI,psbA	sequence end	1	1	1400	9	7	14
+alt	CAWKYI010013009.1	268464	270668	2204	1.0	Penicillus capitatus	OZ287723.1	11449	13653		sequence end	1	1	0	0	0	0
+alt	CAWKYI010003135.1	63621	65506	1885	1.0	Penicillus capitatus	OZ373742.1	55946	57831	rpl14,rpl16,rpl2,rps19,rps3	sequence end	1	1	2000	31	23	42
+alt	CAWKYI010005799.1	18959	20635	1676	1.0	Penicillus lamourouxii	OZ372796.1	61111	62787	orf434,tufA	sequence end	1	1	0	0	0	0
+alt	CAWKYI010006797.1	24844	26518	1674	1.0	Penicillus capitatus	OZ373742.1	27681	29355	psbA	sequence end	1	1	2000	16	10	26
+alt	CAWKYI010003440.1	0	1657	1657	1.0	Penicillus capitatus	OZ373742.1	32276	33933	psbB,psbH,psbI,psbT,rpl20	sequence end	1	1	1200	19	15	23
+alt	CAWKYI010014291.1	17690	19313	1623	0.9985	Penicillus capitatus	OZ373742.1	81940	83255		sequence end	1	1	300	0	0	0
+alt	CAWKYI010002447.1	0	1449	1449	0.9965	Penicillus capitatus	OZ287723.1	12134	13582		sequence end	1	1	1600	28	19	33
+alt	CAWKYI010014511.1	0	1307	1307	0.9947	Penicillus capitatus	OZ373742.1	56351	57655	rpl16,rpl2,rps19,rps3	sequence end	1	1	1100	4	4	6
+alt	CAWKYI010006464.1	43472	44319	847	1.0	Penicillus capitatus	OZ287723.1	14975	15822		sequence end	2	1	2000	17	15	23

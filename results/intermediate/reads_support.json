@@ -1,0 +1,2393 @@
+{
+ "Clock": {
+  "segments": 14,
+  "covered": 14,
+  "median_reads": 98.0,
+  "min_reads": 76,
+  "total_reads": 284,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010005274.1:339195-339550",
+    "reads": 78
+   },
+   {
+    "segment": "JAWDGP010005274.1:341555-342342",
+    "reads": 76
+   },
+   {
+    "segment": "JAWDGP010005274.1:342443-343127",
+    "reads": 79
+   },
+   {
+    "segment": "JAWDGP010005274.1:344524-344914",
+    "reads": 79
+   },
+   {
+    "segment": "JAWDGP010005274.1:344952-345676",
+    "reads": 85
+   },
+   {
+    "segment": "JAWDGP010005274.1:346393-346799",
+    "reads": 92
+   },
+   {
+    "segment": "JAWDGP010005274.1:347336-347783",
+    "reads": 95
+   },
+   {
+    "segment": "JAWDGP010005274.1:347987-348567",
+    "reads": 101
+   },
+   {
+    "segment": "JAWDGP010005274.1:348674-349257",
+    "reads": 101
+   },
+   {
+    "segment": "JAWDGP010005274.1:349360-349803",
+    "reads": 107
+   },
+   {
+    "segment": "JAWDGP010005274.1:350040-350510",
+    "reads": 107
+   },
+   {
+    "segment": "JAWDGP010005274.1:353152-353563",
+    "reads": 133
+   },
+   {
+    "segment": "JAWDGP010005274.1:353967-354467",
+    "reads": 129
+   },
+   {
+    "segment": "JAWDGP010005274.1:354869-355407",
+    "reads": 130
+   }
+  ]
+ },
+ "Bmal1": {
+  "segments": 10,
+  "covered": 10,
+  "median_reads": 16.5,
+  "min_reads": 7,
+  "total_reads": 51,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010006162.1:375277-376257",
+    "reads": 19
+   },
+   {
+    "segment": "JAWDGP010006162.1:376667-377024",
+    "reads": 15
+   },
+   {
+    "segment": "JAWDGP010006162.1:377849-378275",
+    "reads": 15
+   },
+   {
+    "segment": "JAWDGP010006162.1:379190-379578",
+    "reads": 9
+   },
+   {
+    "segment": "JAWDGP010006162.1:382466-382916",
+    "reads": 7
+   },
+   {
+    "segment": "JAWDGP010006162.1:383734-384140",
+    "reads": 11
+   },
+   {
+    "segment": "JAWDGP010006162.1:386255-386801",
+    "reads": 19
+   },
+   {
+    "segment": "JAWDGP010006162.1:386997-387473",
+    "reads": 18
+   },
+   {
+    "segment": "JAWDGP010006162.1:390106-390523",
+    "reads": 23
+   },
+   {
+    "segment": "JAWDGP010006162.1:390705-391136",
+    "reads": 20
+   }
+  ]
+ },
+ "Period": {
+  "segments": 25,
+  "covered": 25,
+  "median_reads": 93,
+  "min_reads": 3,
+  "total_reads": 284,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010006995.1:362778-364697",
+    "reads": 94
+   },
+   {
+    "segment": "JAWDGP010006995.1:365007-365738",
+    "reads": 84
+   },
+   {
+    "segment": "JAWDGP010006995.1:366851-367295",
+    "reads": 93
+   },
+   {
+    "segment": "JAWDGP010006995.1:367481-367899",
+    "reads": 100
+   },
+   {
+    "segment": "JAWDGP010006995.1:368344-368766",
+    "reads": 95
+   },
+   {
+    "segment": "JAWDGP010006995.1:369140-369591",
+    "reads": 95
+   },
+   {
+    "segment": "JAWDGP010006995.1:369602-370081",
+    "reads": 99
+   },
+   {
+    "segment": "JAWDGP010006995.1:370446-370930",
+    "reads": 104
+   },
+   {
+    "segment": "JAWDGP010006995.1:371506-371912",
+    "reads": 113
+   },
+   {
+    "segment": "JAWDGP010006995.1:372137-372646",
+    "reads": 114
+   },
+   {
+    "segment": "JAWDGP010006995.1:373015-373391",
+    "reads": 115
+   },
+   {
+    "segment": "JAWDGP010006995.1:375138-375517",
+    "reads": 120
+   },
+   {
+    "segment": "JAWDGP010006995.1:377613-378010",
+    "reads": 103
+   },
+   {
+    "segment": "JAWDGP010006995.1:378468-378865",
+    "reads": 99
+   },
+   {
+    "segment": "JAWDGP010006995.1:379101-379458",
+    "reads": 92
+   },
+   {
+    "segment": "JAWDGP010006995.1:379702-380116",
+    "reads": 88
+   },
+   {
+    "segment": "JAWDGP010006995.1:380284-380737",
+    "reads": 83
+   },
+   {
+    "segment": "JAWDGP010006995.1:380994-381400",
+    "reads": 77
+   },
+   {
+    "segment": "JAWDGP010006995.1:381809-382184",
+    "reads": 74
+   },
+   {
+    "segment": "JAWDGP010006995.1:383149-383905",
+    "reads": 45
+   },
+   {
+    "segment": "JAWDGP010006995.1:384311-385103",
+    "reads": 31
+   },
+   {
+    "segment": "JAWDGP010006995.1:385747-386132",
+    "reads": 15
+   },
+   {
+    "segment": "JAWDGP010006995.1:386576-387039",
+    "reads": 11
+   },
+   {
+    "segment": "JAWDGP010006995.1:387510-387890",
+    "reads": 3
+   },
+   {
+    "segment": "JAWDGP010006995.1:394093-394481",
+    "reads": 5
+   }
+  ]
+ },
+ "Timeless": {
+  "segments": 22,
+  "covered": 21,
+  "median_reads": 75.0,
+  "min_reads": 2,
+  "total_reads": 218,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010003233.1:188629-189010",
+    "reads": 91
+   },
+   {
+    "segment": "JAWDGP010003233.1:189347-189773",
+    "reads": 95
+   },
+   {
+    "segment": "JAWDGP010003233.1:190098-190598",
+    "reads": 95
+   },
+   {
+    "segment": "JAWDGP010003233.1:191297-191656",
+    "reads": 92
+   },
+   {
+    "segment": "JAWDGP010003233.1:192206-192719",
+    "reads": 87
+   },
+   {
+    "segment": "JAWDGP010003233.1:192777-193187",
+    "reads": 82
+   },
+   {
+    "segment": "JAWDGP010003233.1:194105-195009",
+    "reads": 82
+   },
+   {
+    "segment": "JAWDGP010003233.1:195016-195514",
+    "reads": 76
+   },
+   {
+    "segment": "JAWDGP010003233.1:196031-196529",
+    "reads": 67
+   },
+   {
+    "segment": "JAWDGP010003233.1:196704-197089",
+    "reads": 59
+   },
+   {
+    "segment": "JAWDGP010003233.1:198159-198572",
+    "reads": 70
+   },
+   {
+    "segment": "JAWDGP010003233.1:198940-199352",
+    "reads": 70
+   },
+   {
+    "segment": "JAWDGP010003233.1:200076-200445",
+    "reads": 74
+   },
+   {
+    "segment": "JAWDGP010003233.1:200872-201415",
+    "reads": 79
+   },
+   {
+    "segment": "JAWDGP010003233.1:201519-202278",
+    "reads": 81
+   },
+   {
+    "segment": "JAWDGP010003233.1:203080-203433",
+    "reads": 77
+   },
+   {
+    "segment": "JAWDGP010003233.1:204240-204600",
+    "reads": 65
+   },
+   {
+    "segment": "JAWDGP010003233.1:205190-205617",
+    "reads": 58
+   },
+   {
+    "segment": "JAWDGP010003233.1:206381-206999",
+    "reads": 44
+   },
+   {
+    "segment": "JAWDGP010003233.1:207373-207731",
+    "reads": 31
+   },
+   {
+    "segment": "JAWDGP010003233.1:208381-208775",
+    "reads": 28
+   },
+   {
+    "segment": "JAWDGP010003233.1:235215-235605",
+    "reads": 2
+   }
+  ]
+ },
+ "Timeout": {
+  "segments": 33,
+  "covered": 33,
+  "median_reads": 96,
+  "min_reads": 11,
+  "total_reads": 477,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010001591.1:257165-257529",
+    "reads": 62
+   },
+   {
+    "segment": "JAWDGP010001591.1:259188-259666",
+    "reads": 58
+   },
+   {
+    "segment": "JAWDGP010001591.1:259963-260419",
+    "reads": 70
+   },
+   {
+    "segment": "JAWDGP010001591.1:261725-262164",
+    "reads": 82
+   },
+   {
+    "segment": "JAWDGP010001591.1:263681-264059",
+    "reads": 93
+   },
+   {
+    "segment": "JAWDGP010001591.1:264382-265189",
+    "reads": 102
+   },
+   {
+    "segment": "JAWDGP010001591.1:265263-265675",
+    "reads": 101
+   },
+   {
+    "segment": "JAWDGP010001591.1:265697-266261",
+    "reads": 107
+   },
+   {
+    "segment": "JAWDGP010001591.1:266398-266766",
+    "reads": 103
+   },
+   {
+    "segment": "JAWDGP010001591.1:266936-267300",
+    "reads": 107
+   },
+   {
+    "segment": "JAWDGP010001591.1:267426-267884",
+    "reads": 109
+   },
+   {
+    "segment": "JAWDGP010001591.1:268604-269005",
+    "reads": 110
+   },
+   {
+    "segment": "JAWDGP010001591.1:272390-272752",
+    "reads": 103
+   },
+   {
+    "segment": "JAWDGP010001591.1:273144-273561",
+    "reads": 103
+   },
+   {
+    "segment": "JAWDGP010001591.1:275089-275542",
+    "reads": 86
+   },
+   {
+    "segment": "JAWDGP010001591.1:276062-276443",
+    "reads": 73
+   },
+   {
+    "segment": "JAWDGP010001591.1:218278-218702",
+    "reads": 96
+   },
+   {
+    "segment": "JAWDGP010001591.1:219238-219723",
+    "reads": 104
+   },
+   {
+    "segment": "JAWDGP010001591.1:220300-220736",
+    "reads": 94
+   },
+   {
+    "segment": "JAWDGP010001591.1:220788-221225",
+    "reads": 101
+   },
+   {
+    "segment": "JAWDGP010001591.1:221413-221868",
+    "reads": 104
+   },
+   {
+    "segment": "JAWDGP010001591.1:222134-222647",
+    "reads": 104
+   },
+   {
+    "segment": "JAWDGP010001591.1:223598-224249",
+    "reads": 105
+   },
+   {
+    "segment": "JAWDGP010001591.1:224393-224808",
+    "reads": 105
+   },
+   {
+    "segment": "JAWDGP010001591.1:224877-225685",
+    "reads": 101
+   },
+   {
+    "segment": "JAWDGP010001591.1:226207-226641",
+    "reads": 87
+   },
+   {
+    "segment": "JAWDGP010001591.1:226906-227273",
+    "reads": 80
+   },
+   {
+    "segment": "JAWDGP010001591.1:227605-228031",
+    "reads": 73
+   },
+   {
+    "segment": "JAWDGP010001591.1:229766-230148",
+    "reads": 61
+   },
+   {
+    "segment": "JAWDGP010001591.1:231597-232042",
+    "reads": 46
+   },
+   {
+    "segment": "JAWDGP010001591.1:232712-233610",
+    "reads": 36
+   },
+   {
+    "segment": "JAWDGP010001591.1:235085-235513",
+    "reads": 16
+   },
+   {
+    "segment": "JAWDGP010001591.1:235875-236292",
+    "reads": 11
+   }
+  ]
+ },
+ "Cry1": {
+  "segments": 11,
+  "covered": 11,
+  "median_reads": 61,
+  "min_reads": 52,
+  "total_reads": 212,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010000750.1:1411855-1412323",
+    "reads": 52
+   },
+   {
+    "segment": "JAWDGP010000750.1:1413004-1413443",
+    "reads": 57
+   },
+   {
+    "segment": "JAWDGP010000750.1:1414534-1414976",
+    "reads": 66
+   },
+   {
+    "segment": "JAWDGP010000750.1:1416288-1416763",
+    "reads": 68
+   },
+   {
+    "segment": "JAWDGP010000750.1:1417364-1417770",
+    "reads": 69
+   },
+   {
+    "segment": "JAWDGP010000750.1:1418313-1418753",
+    "reads": 61
+   },
+   {
+    "segment": "JAWDGP010000750.1:1419277-1419747",
+    "reads": 58
+   },
+   {
+    "segment": "JAWDGP010000750.1:1419762-1420202",
+    "reads": 61
+   },
+   {
+    "segment": "JAWDGP010000750.1:1420417-1420874",
+    "reads": 61
+   },
+   {
+    "segment": "JAWDGP010000750.1:1424202-1424689",
+    "reads": 86
+   },
+   {
+    "segment": "JAWDGP010000750.1:1427154-1427584",
+    "reads": 110
+   }
+  ]
+ },
+ "Cry2": {
+  "segments": 11,
+  "covered": 11,
+  "median_reads": 92,
+  "min_reads": 28,
+  "total_reads": 155,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010006862.1:37067-37473",
+    "reads": 100
+   },
+   {
+    "segment": "JAWDGP010006862.1:37504-37845",
+    "reads": 107
+   },
+   {
+    "segment": "JAWDGP010006862.1:38288-38787",
+    "reads": 105
+   },
+   {
+    "segment": "JAWDGP010006862.1:39192-39643",
+    "reads": 104
+   },
+   {
+    "segment": "JAWDGP010006862.1:40112-40552",
+    "reads": 95
+   },
+   {
+    "segment": "JAWDGP010006862.1:41125-41595",
+    "reads": 92
+   },
+   {
+    "segment": "JAWDGP010006862.1:42111-42551",
+    "reads": 84
+   },
+   {
+    "segment": "JAWDGP010006862.1:42686-43074",
+    "reads": 77
+   },
+   {
+    "segment": "JAWDGP010006862.1:43234-43718",
+    "reads": 72
+   },
+   {
+    "segment": "JAWDGP010006862.1:45850-46292",
+    "reads": 45
+   },
+   {
+    "segment": "JAWDGP010006862.1:48054-48461",
+    "reads": 28
+   }
+  ]
+ },
+ "Phr6-4": {
+  "segments": 9,
+  "covered": 9,
+  "median_reads": 79,
+  "min_reads": 47,
+  "total_reads": 193,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010001176.1:291202-292031",
+    "reads": 47
+   },
+   {
+    "segment": "JAWDGP010001176.1:293224-293675",
+    "reads": 53
+   },
+   {
+    "segment": "JAWDGP010001176.1:293835-294275",
+    "reads": 57
+   },
+   {
+    "segment": "JAWDGP010001176.1:294997-295461",
+    "reads": 66
+   },
+   {
+    "segment": "JAWDGP010001176.1:297061-297504",
+    "reads": 79
+   },
+   {
+    "segment": "JAWDGP010001176.1:297878-298332",
+    "reads": 85
+   },
+   {
+    "segment": "JAWDGP010001176.1:300418-300836",
+    "reads": 105
+   },
+   {
+    "segment": "JAWDGP010001176.1:301342-301836",
+    "reads": 108
+   },
+   {
+    "segment": "JAWDGP010001176.1:302708-303231",
+    "reads": 109
+   }
+  ]
+ },
+ "PhrCPD": {
+  "segments": 15,
+  "covered": 15,
+  "median_reads": 117,
+  "min_reads": 14,
+  "total_reads": 257,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010006658.1:164423-164847",
+    "reads": 15
+   },
+   {
+    "segment": "JAWDGP010006658.1:165864-166243",
+    "reads": 14
+   },
+   {
+    "segment": "JAWDGP010006658.1:169185-169537",
+    "reads": 28
+   },
+   {
+    "segment": "JAWDGP010006658.1:170045-170440",
+    "reads": 42
+   },
+   {
+    "segment": "JAWDGP010006658.1:170683-171458",
+    "reads": 83
+   },
+   {
+    "segment": "JAWDGP010006658.1:171734-172247",
+    "reads": 94
+   },
+   {
+    "segment": "JAWDGP010006658.1:172460-172905",
+    "reads": 109
+   },
+   {
+    "segment": "JAWDGP010006658.1:173129-174016",
+    "reads": 123
+   },
+   {
+    "segment": "JAWDGP010006658.1:174596-175094",
+    "reads": 121
+   },
+   {
+    "segment": "JAWDGP010006658.1:175739-176191",
+    "reads": 140
+   },
+   {
+    "segment": "JAWDGP010006658.1:176518-177339",
+    "reads": 143
+   },
+   {
+    "segment": "JAWDGP010006658.1:177569-177995",
+    "reads": 131
+   },
+   {
+    "segment": "JAWDGP010006658.1:178466-178815",
+    "reads": 126
+   },
+   {
+    "segment": "JAWDGP010006658.1:181453-181819",
+    "reads": 122
+   },
+   {
+    "segment": "JAWDGP010006658.1:182214-182544",
+    "reads": 117
+   }
+  ]
+ },
+ "CryDASH1": {
+  "segments": 13,
+  "covered": 13,
+  "median_reads": 83,
+  "min_reads": 73,
+  "total_reads": 181,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010003195.1:236348-236713",
+    "reads": 85
+   },
+   {
+    "segment": "JAWDGP010003195.1:236919-237391",
+    "reads": 73
+   },
+   {
+    "segment": "JAWDGP010003195.1:238842-239238",
+    "reads": 74
+   },
+   {
+    "segment": "JAWDGP010003195.1:240212-240630",
+    "reads": 78
+   },
+   {
+    "segment": "JAWDGP010003195.1:240734-241182",
+    "reads": 81
+   },
+   {
+    "segment": "JAWDGP010003195.1:241759-242221",
+    "reads": 85
+   },
+   {
+    "segment": "JAWDGP010003195.1:242269-242738",
+    "reads": 87
+   },
+   {
+    "segment": "JAWDGP010003195.1:242762-243124",
+    "reads": 89
+   },
+   {
+    "segment": "JAWDGP010003195.1:244149-244531",
+    "reads": 87
+   },
+   {
+    "segment": "JAWDGP010003195.1:244933-245307",
+    "reads": 84
+   },
+   {
+    "segment": "JAWDGP010003195.1:245793-246212",
+    "reads": 82
+   },
+   {
+    "segment": "JAWDGP010003195.1:246555-247028",
+    "reads": 83
+   },
+   {
+    "segment": "JAWDGP010003195.1:247218-247676",
+    "reads": 76
+   }
+  ]
+ },
+ "CryDASH2": {
+  "segments": 11,
+  "covered": 11,
+  "median_reads": 81,
+  "min_reads": 73,
+  "total_reads": 185,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010002095.1:10153-10521",
+    "reads": 73
+   },
+   {
+    "segment": "JAWDGP010002095.1:1123-1614",
+    "reads": 96
+   },
+   {
+    "segment": "JAWDGP010002095.1:2102-2521",
+    "reads": 98
+   },
+   {
+    "segment": "JAWDGP010002095.1:2532-3607",
+    "reads": 104
+   },
+   {
+    "segment": "JAWDGP010002095.1:262-650",
+    "reads": 94
+   },
+   {
+    "segment": "JAWDGP010002095.1:4771-5240",
+    "reads": 89
+   },
+   {
+    "segment": "JAWDGP010002095.1:5739-6177",
+    "reads": 77
+   },
+   {
+    "segment": "JAWDGP010002095.1:6259-6707",
+    "reads": 74
+   },
+   {
+    "segment": "JAWDGP010002095.1:7075-7493",
+    "reads": 74
+   },
+   {
+    "segment": "JAWDGP010002095.1:8275-8674",
+    "reads": 79
+   },
+   {
+    "segment": "JAWDGP010002095.1:9218-9687",
+    "reads": 81
+   }
+  ]
+ },
+ "Pdp1": {
+  "segments": 6,
+  "covered": 6,
+  "median_reads": 64.0,
+  "min_reads": 10,
+  "total_reads": 129,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010001738.1:233353-233743",
+    "reads": 10
+   },
+   {
+    "segment": "JAWDGP010001738.1:239248-239775",
+    "reads": 55
+   },
+   {
+    "segment": "JAWDGP010001738.1:239849-240391",
+    "reads": 61
+   },
+   {
+    "segment": "JAWDGP010001738.1:242143-242514",
+    "reads": 67
+   },
+   {
+    "segment": "JAWDGP010001738.1:246659-247041",
+    "reads": 85
+   },
+   {
+    "segment": "JAWDGP010001738.1:247090-247647",
+    "reads": 84
+   }
+  ]
+ },
+ "Vrille": {
+  "segments": 3,
+  "covered": 3,
+  "median_reads": 48,
+  "min_reads": 42,
+  "total_reads": 66,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010005718.1:569250-571575",
+    "reads": 60
+   },
+   {
+    "segment": "JAWDGP010005718.1:571948-573048",
+    "reads": 48
+   },
+   {
+    "segment": "JAWDGP010005718.1:573457-573806",
+    "reads": 42
+   }
+  ]
+ },
+ "E75": {
+  "segments": 15,
+  "covered": 12,
+  "median_reads": 10,
+  "min_reads": 0,
+  "total_reads": 96,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010006465.1:11828-12230",
+    "reads": 0
+   },
+   {
+    "segment": "JAWDGP010006465.1:12515-15336",
+    "reads": 69
+   },
+   {
+    "segment": "JAWDGP010006465.1:15373-15875",
+    "reads": 44
+   },
+   {
+    "segment": "JAWDGP010006465.1:15976-17137",
+    "reads": 32
+   },
+   {
+    "segment": "JAWDGP010006465.1:17281-17780",
+    "reads": 19
+   },
+   {
+    "segment": "JAWDGP010006465.1:18029-18464",
+    "reads": 0
+   },
+   {
+    "segment": "JAWDGP010006465.1:19201-19585",
+    "reads": 7
+   },
+   {
+    "segment": "JAWDGP010006465.1:28100-28576",
+    "reads": 8
+   },
+   {
+    "segment": "JAWDGP010006465.1:28730-29520",
+    "reads": 10
+   },
+   {
+    "segment": "JAWDGP010006465.1:29673-30185",
+    "reads": 10
+   },
+   {
+    "segment": "JAWDGP010006465.1:30555-31093",
+    "reads": 10
+   },
+   {
+    "segment": "JAWDGP010006465.1:31739-32076",
+    "reads": 7
+   },
+   {
+    "segment": "JAWDGP010006465.1:35055-35461",
+    "reads": 14
+   },
+   {
+    "segment": "JAWDGP010006465.1:42899-43287",
+    "reads": 2
+   },
+   {
+    "segment": "JAWDGP010006465.1:49026-49419",
+    "reads": 8
+   }
+  ]
+ },
+ "Hr3": {
+  "segments": 10,
+  "covered": 10,
+  "median_reads": 67.0,
+  "min_reads": 16,
+  "total_reads": 111,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010006905.1:50396-50964",
+    "reads": 89
+   },
+   {
+    "segment": "JAWDGP010006905.1:51158-51574",
+    "reads": 88
+   },
+   {
+    "segment": "JAWDGP010006905.1:51705-52112",
+    "reads": 84
+   },
+   {
+    "segment": "JAWDGP010006905.1:52455-52887",
+    "reads": 83
+   },
+   {
+    "segment": "JAWDGP010006905.1:53396-53817",
+    "reads": 74
+   },
+   {
+    "segment": "JAWDGP010006905.1:54762-55300",
+    "reads": 60
+   },
+   {
+    "segment": "JAWDGP010006905.1:56135-56519",
+    "reads": 39
+   },
+   {
+    "segment": "JAWDGP010006905.1:56995-57436",
+    "reads": 30
+   },
+   {
+    "segment": "JAWDGP010006905.1:57555-57940",
+    "reads": 24
+   },
+   {
+    "segment": "JAWDGP010006905.1:58816-59191",
+    "reads": 16
+   }
+  ]
+ },
+ "Cwo": {
+  "segments": 18,
+  "covered": 17,
+  "median_reads": 18.5,
+  "min_reads": 1,
+  "total_reads": 104,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010001136.1:62212-62855",
+    "reads": 11
+   },
+   {
+    "segment": "JAWDGP010001136.1:81026-81748",
+    "reads": 13
+   },
+   {
+    "segment": "JAWDGP010001136.1:83447-83837",
+    "reads": 18
+   },
+   {
+    "segment": "JAWDGP010001136.1:84838-85235",
+    "reads": 10
+   },
+   {
+    "segment": "JAWDGP010001136.1:86450-86861",
+    "reads": 22
+   },
+   {
+    "segment": "JAWDGP010001136.1:87586-88602",
+    "reads": 27
+   },
+   {
+    "segment": "JAWDGP010001136.1:90082-90526",
+    "reads": 24
+   },
+   {
+    "segment": "JAWDGP010001136.1:91780-92794",
+    "reads": 1
+   },
+   {
+    "segment": "JAWDGP010001136.1:76418-76809",
+    "reads": 13
+   },
+   {
+    "segment": "JAWDGP010001136.1:81026-81748",
+    "reads": 13
+   },
+   {
+    "segment": "JAWDGP010001136.1:83447-83837",
+    "reads": 14
+   },
+   {
+    "segment": "JAWDGP010001136.1:84838-85235",
+    "reads": 24
+   },
+   {
+    "segment": "JAWDGP010001136.1:86450-86861",
+    "reads": 17
+   },
+   {
+    "segment": "JAWDGP010001136.1:87586-88602",
+    "reads": 23
+   },
+   {
+    "segment": "JAWDGP010001136.1:90082-90526",
+    "reads": 19
+   },
+   {
+    "segment": "JAWDGP010001136.1:91780-93124",
+    "reads": 44
+   },
+   {
+    "segment": "JAWDGP010001136.1:93427-93804",
+    "reads": 38
+   },
+   {
+    "segment": "JAWDGP010001136.1:94591-94917",
+    "reads": 36
+   }
+  ]
+ },
+ "Ck1de": {
+  "segments": 7,
+  "covered": 7,
+  "median_reads": 64,
+  "min_reads": 58,
+  "total_reads": 262,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010003613.1:454683-455248",
+    "reads": 130
+   },
+   {
+    "segment": "JAWDGP010003613.1:461246-461684",
+    "reads": 59
+   },
+   {
+    "segment": "JAWDGP010003613.1:466976-467847",
+    "reads": 66
+   },
+   {
+    "segment": "JAWDGP010003613.1:468044-468572",
+    "reads": 65
+   },
+   {
+    "segment": "JAWDGP010003613.1:468710-469158",
+    "reads": 58
+   },
+   {
+    "segment": "JAWDGP010003613.1:471355-471765",
+    "reads": 64
+   },
+   {
+    "segment": "JAWDGP010003613.1:473576-473951",
+    "reads": 61
+   }
+  ]
+ },
+ "Ck1a": {
+  "segments": 7,
+  "covered": 7,
+  "median_reads": 80,
+  "min_reads": 42,
+  "total_reads": 174,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010007160.1:739775-740197",
+    "reads": 42
+   },
+   {
+    "segment": "JAWDGP010007160.1:746589-746995",
+    "reads": 69
+   },
+   {
+    "segment": "JAWDGP010007160.1:747540-747966",
+    "reads": 77
+   },
+   {
+    "segment": "JAWDGP010007160.1:749999-750397",
+    "reads": 80
+   },
+   {
+    "segment": "JAWDGP010007160.1:751016-751534",
+    "reads": 92
+   },
+   {
+    "segment": "JAWDGP010007160.1:751706-752080",
+    "reads": 97
+   },
+   {
+    "segment": "JAWDGP010007160.1:752877-753404",
+    "reads": 103
+   }
+  ]
+ },
+ "Ck2a": {
+  "segments": 12,
+  "covered": 11,
+  "median_reads": 91.5,
+  "min_reads": 0,
+  "total_reads": 265,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010002927.1:10726-11123",
+    "reads": 50
+   },
+   {
+    "segment": "JAWDGP010002927.1:14259-14599",
+    "reads": 77
+   },
+   {
+    "segment": "JAWDGP010002927.1:16159-16510",
+    "reads": 94
+   },
+   {
+    "segment": "JAWDGP010002927.1:17824-18581",
+    "reads": 109
+   },
+   {
+    "segment": "JAWDGP010002927.1:19016-19416",
+    "reads": 108
+   },
+   {
+    "segment": "JAWDGP010002927.1:20314-20715",
+    "reads": 109
+   },
+   {
+    "segment": "JAWDGP010002927.1:25664-26074",
+    "reads": 114
+   },
+   {
+    "segment": "JAWDGP010002927.1:26200-26583",
+    "reads": 112
+   },
+   {
+    "segment": "JAWDGP010002927.1:27355-27993",
+    "reads": 0
+   },
+   {
+    "segment": "JAWDGP010002927.1:28637-29038",
+    "reads": 89
+   },
+   {
+    "segment": "JAWDGP010002927.1:29371-29782",
+    "reads": 79
+   },
+   {
+    "segment": "JAWDGP010002927.1:30104-30498",
+    "reads": 74
+   }
+  ]
+ },
+ "Ck2b": {
+  "segments": 6,
+  "covered": 6,
+  "median_reads": 85.5,
+  "min_reads": 49,
+  "total_reads": 149,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010002843.1:247656-248027",
+    "reads": 49
+   },
+   {
+    "segment": "JAWDGP010002843.1:248646-249048",
+    "reads": 51
+   },
+   {
+    "segment": "JAWDGP010002843.1:250810-251225",
+    "reads": 81
+   },
+   {
+    "segment": "JAWDGP010002843.1:252372-252747",
+    "reads": 97
+   },
+   {
+    "segment": "JAWDGP010002843.1:252958-253447",
+    "reads": 102
+   },
+   {
+    "segment": "JAWDGP010002843.1:254332-254740",
+    "reads": 90
+   }
+  ]
+ },
+ "Gsk3": {
+  "segments": 9,
+  "covered": 9,
+  "median_reads": 113,
+  "min_reads": 42,
+  "total_reads": 223,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010000712.1:207905-208383",
+    "reads": 120
+   },
+   {
+    "segment": "JAWDGP010000712.1:208397-208883",
+    "reads": 121
+   },
+   {
+    "segment": "JAWDGP010000712.1:210485-210978",
+    "reads": 113
+   },
+   {
+    "segment": "JAWDGP010000712.1:211215-211621",
+    "reads": 121
+   },
+   {
+    "segment": "JAWDGP010000712.1:212071-212501",
+    "reads": 116
+   },
+   {
+    "segment": "JAWDGP010000712.1:212658-213068",
+    "reads": 113
+   },
+   {
+    "segment": "JAWDGP010000712.1:213476-213859",
+    "reads": 102
+   },
+   {
+    "segment": "JAWDGP010000712.1:215111-215601",
+    "reads": 88
+   },
+   {
+    "segment": "JAWDGP010000712.1:221452-221836",
+    "reads": 42
+   }
+  ]
+ },
+ "Nemo": {
+  "segments": 19,
+  "covered": 13,
+  "median_reads": 9,
+  "min_reads": 0,
+  "total_reads": 93,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010002014.1:370736-371123",
+    "reads": 0
+   },
+   {
+    "segment": "JAWDGP010002014.1:371307-371692",
+    "reads": 1
+   },
+   {
+    "segment": "JAWDGP010002014.1:371733-372242",
+    "reads": 0
+   },
+   {
+    "segment": "JAWDGP010002014.1:379903-380391",
+    "reads": 14
+   },
+   {
+    "segment": "JAWDGP010002014.1:380513-381011",
+    "reads": 24
+   },
+   {
+    "segment": "JAWDGP010002014.1:381298-381697",
+    "reads": 24
+   },
+   {
+    "segment": "JAWDGP010002014.1:383905-384300",
+    "reads": 35
+   },
+   {
+    "segment": "JAWDGP010002014.1:384601-385396",
+    "reads": 68
+   },
+   {
+    "segment": "JAWDGP010002014.1:386177-386646",
+    "reads": 73
+   },
+   {
+    "segment": "JAWDGP010002014.1:368709-369119",
+    "reads": 5
+   },
+   {
+    "segment": "JAWDGP010002014.1:369324-369685",
+    "reads": 3
+   },
+   {
+    "segment": "JAWDGP010002014.1:370717-371123",
+    "reads": 2
+   },
+   {
+    "segment": "JAWDGP010002014.1:371307-371692",
+    "reads": 3
+   },
+   {
+    "segment": "JAWDGP010002014.1:371733-372242",
+    "reads": 1
+   },
+   {
+    "segment": "JAWDGP010002014.1:379903-380391",
+    "reads": 11
+   },
+   {
+    "segment": "JAWDGP010002014.1:380513-381011",
+    "reads": 9
+   },
+   {
+    "segment": "JAWDGP010002014.1:381298-381697",
+    "reads": 11
+   },
+   {
+    "segment": "JAWDGP010002014.1:383905-384300",
+    "reads": 20
+   },
+   {
+    "segment": "JAWDGP010002014.1:384636-384990",
+    "reads": 0
+   }
+  ]
+ },
+ "Pp1a": {
+  "segments": 6,
+  "covered": 6,
+  "median_reads": 109.5,
+  "min_reads": 72,
+  "total_reads": 189,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010005542.1:62446-62850",
+    "reads": 72
+   },
+   {
+    "segment": "JAWDGP010005542.1:64162-64596",
+    "reads": 85
+   },
+   {
+    "segment": "JAWDGP010005542.1:65432-65955",
+    "reads": 106
+   },
+   {
+    "segment": "JAWDGP010005542.1:67146-67550",
+    "reads": 120
+   },
+   {
+    "segment": "JAWDGP010005542.1:67790-68724",
+    "reads": 125
+   },
+   {
+    "segment": "JAWDGP010005542.1:71692-72046",
+    "reads": 113
+   }
+  ]
+ },
+ "Pp1b": {
+  "segments": 7,
+  "covered": 7,
+  "median_reads": 30,
+  "min_reads": 18,
+  "total_reads": 154,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010000218.1:267194-267613",
+    "reads": 109
+   },
+   {
+    "segment": "JAWDGP010000218.1:268219-269033",
+    "reads": 111
+   },
+   {
+    "segment": "JAWDGP010000218.1:273809-274180",
+    "reads": 38
+   },
+   {
+    "segment": "JAWDGP010000218.1:274477-274881",
+    "reads": 30
+   },
+   {
+    "segment": "JAWDGP010000218.1:275069-275599",
+    "reads": 28
+   },
+   {
+    "segment": "JAWDGP010000218.1:275993-276424",
+    "reads": 18
+   },
+   {
+    "segment": "JAWDGP010000218.1:278590-278941",
+    "reads": 27
+   }
+  ]
+ },
+ "Pp2aC": {
+  "segments": 7,
+  "covered": 7,
+  "median_reads": 81,
+  "min_reads": 58,
+  "total_reads": 163,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010004279.1:551554-551964",
+    "reads": 58
+   },
+   {
+    "segment": "JAWDGP010004279.1:554785-555294",
+    "reads": 71
+   },
+   {
+    "segment": "JAWDGP010004279.1:555703-556176",
+    "reads": 72
+   },
+   {
+    "segment": "JAWDGP010004279.1:556803-557192",
+    "reads": 81
+   },
+   {
+    "segment": "JAWDGP010004279.1:559711-560172",
+    "reads": 93
+   },
+   {
+    "segment": "JAWDGP010004279.1:560781-561199",
+    "reads": 98
+   },
+   {
+    "segment": "JAWDGP010004279.1:561503-561875",
+    "reads": 98
+   }
+  ]
+ },
+ "Pp2aB55": {
+  "segments": 8,
+  "covered": 8,
+  "median_reads": 111.0,
+  "min_reads": 17,
+  "total_reads": 238,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010000260.1:1294270-1294846",
+    "reads": 80
+   },
+   {
+    "segment": "JAWDGP010000260.1:1295750-1296311",
+    "reads": 79
+   },
+   {
+    "segment": "JAWDGP010000260.1:1300179-1300643",
+    "reads": 108
+   },
+   {
+    "segment": "JAWDGP010000260.1:1300845-1301435",
+    "reads": 117
+   },
+   {
+    "segment": "JAWDGP010000260.1:1301631-1302096",
+    "reads": 118
+   },
+   {
+    "segment": "JAWDGP010000260.1:1302134-1302531",
+    "reads": 128
+   },
+   {
+    "segment": "JAWDGP010000260.1:1305303-1305671",
+    "reads": 114
+   },
+   {
+    "segment": "JAWDGP010000260.1:1315225-1315711",
+    "reads": 17
+   }
+  ]
+ },
+ "Pp2aB56e": {
+  "segments": 9,
+  "covered": 9,
+  "median_reads": 116,
+  "min_reads": 74,
+  "total_reads": 279,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010001872.1:54349-54778",
+    "reads": 74
+   },
+   {
+    "segment": "JAWDGP010001872.1:57945-58441",
+    "reads": 97
+   },
+   {
+    "segment": "JAWDGP010001872.1:58526-59261",
+    "reads": 108
+   },
+   {
+    "segment": "JAWDGP010001872.1:59658-60088",
+    "reads": 107
+   },
+   {
+    "segment": "JAWDGP010001872.1:62540-63008",
+    "reads": 116
+   },
+   {
+    "segment": "JAWDGP010001872.1:63614-63967",
+    "reads": 122
+   },
+   {
+    "segment": "JAWDGP010001872.1:64174-64524",
+    "reads": 116
+   },
+   {
+    "segment": "JAWDGP010001872.1:64570-65465",
+    "reads": 123
+   },
+   {
+    "segment": "JAWDGP010001872.1:69991-70381",
+    "reads": 122
+   }
+  ]
+ },
+ "Pp2aB56d": {
+  "segments": 11,
+  "covered": 11,
+  "median_reads": 61,
+  "min_reads": 32,
+  "total_reads": 245,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010000218.1:211017-211451",
+    "reads": 76
+   },
+   {
+    "segment": "JAWDGP010000218.1:216966-217412",
+    "reads": 107
+   },
+   {
+    "segment": "JAWDGP010000218.1:219232-219604",
+    "reads": 98
+   },
+   {
+    "segment": "JAWDGP010000218.1:219820-220221",
+    "reads": 96
+   },
+   {
+    "segment": "JAWDGP010000218.1:221624-222048",
+    "reads": 85
+   },
+   {
+    "segment": "JAWDGP010000218.1:223608-224740",
+    "reads": 61
+   },
+   {
+    "segment": "JAWDGP010000218.1:224917-225276",
+    "reads": 46
+   },
+   {
+    "segment": "JAWDGP010000218.1:225394-225824",
+    "reads": 41
+   },
+   {
+    "segment": "JAWDGP010000218.1:225877-226269",
+    "reads": 35
+   },
+   {
+    "segment": "JAWDGP010000218.1:226384-226794",
+    "reads": 32
+   },
+   {
+    "segment": "JAWDGP010000218.1:233961-234278",
+    "reads": 55
+   }
+  ]
+ },
+ "Slimb": {
+  "segments": 12,
+  "covered": 12,
+  "median_reads": 79.5,
+  "min_reads": 46,
+  "total_reads": 306,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010004263.1:2902155-2902489",
+    "reads": 128
+   },
+   {
+    "segment": "JAWDGP010004263.1:2903559-2903991",
+    "reads": 128
+   },
+   {
+    "segment": "JAWDGP010004263.1:2906424-2906802",
+    "reads": 113
+   },
+   {
+    "segment": "JAWDGP010004263.1:2907720-2908130",
+    "reads": 100
+   },
+   {
+    "segment": "JAWDGP010004263.1:2908972-2909390",
+    "reads": 91
+   },
+   {
+    "segment": "JAWDGP010004263.1:2909425-2909868",
+    "reads": 46
+   },
+   {
+    "segment": "JAWDGP010004263.1:2912331-2912736",
+    "reads": 48
+   },
+   {
+    "segment": "JAWDGP010004263.1:2912949-2913367",
+    "reads": 60
+   },
+   {
+    "segment": "JAWDGP010004263.1:2913861-2914683",
+    "reads": 70
+   },
+   {
+    "segment": "JAWDGP010004263.1:2914713-2915199",
+    "reads": 69
+   },
+   {
+    "segment": "JAWDGP010004263.1:2916100-2916628",
+    "reads": 75
+   },
+   {
+    "segment": "JAWDGP010004263.1:2918440-2918820",
+    "reads": 84
+   }
+  ]
+ },
+ "Jetlag": {
+  "segments": 3,
+  "covered": 3,
+  "median_reads": 36,
+  "min_reads": 35,
+  "total_reads": 41,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010000643.1:41780-42720",
+    "reads": 38
+   },
+   {
+    "segment": "JAWDGP010000643.1:43613-44044",
+    "reads": 36
+   },
+   {
+    "segment": "JAWDGP010000643.1:44929-45418",
+    "reads": 35
+   }
+  ]
+ },
+ "Sirt1": {
+  "segments": 11,
+  "covered": 11,
+  "median_reads": 83,
+  "min_reads": 43,
+  "total_reads": 276,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010002514.1:618174-618634",
+    "reads": 43
+   },
+   {
+    "segment": "JAWDGP010002514.1:618785-619106",
+    "reads": 45
+   },
+   {
+    "segment": "JAWDGP010002514.1:626909-627413",
+    "reads": 114
+   },
+   {
+    "segment": "JAWDGP010002514.1:628032-628375",
+    "reads": 104
+   },
+   {
+    "segment": "JAWDGP010002514.1:628460-628853",
+    "reads": 106
+   },
+   {
+    "segment": "JAWDGP010002514.1:629587-630131",
+    "reads": 95
+   },
+   {
+    "segment": "JAWDGP010002514.1:630219-630671",
+    "reads": 87
+   },
+   {
+    "segment": "JAWDGP010002514.1:632883-633330",
+    "reads": 56
+   },
+   {
+    "segment": "JAWDGP010002514.1:633336-634139",
+    "reads": 62
+   },
+   {
+    "segment": "JAWDGP010002514.1:635201-636772",
+    "reads": 67
+   },
+   {
+    "segment": "JAWDGP010002514.1:637249-638024",
+    "reads": 83
+   }
+  ]
+ },
+ "Pdf": {
+  "segments": 4,
+  "covered": 4,
+  "median_reads": 60.5,
+  "min_reads": 58,
+  "total_reads": 139,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010004466.1:115014-115488",
+    "reads": 61
+   },
+   {
+    "segment": "JAWDGP010004466.1:117039-117470",
+    "reads": 60
+   },
+   {
+    "segment": "JAWDGP010004466.1:155901-156309",
+    "reads": 62
+   },
+   {
+    "segment": "JAWDGP010004466.1:156353-156738",
+    "reads": 58
+   }
+  ]
+ },
+ "Pdfr": {
+  "segments": 13,
+  "covered": 13,
+  "median_reads": 31,
+  "min_reads": 22,
+  "total_reads": 149,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010006383.1:588941-589465",
+    "reads": 54
+   },
+   {
+    "segment": "JAWDGP010006383.1:590773-591210",
+    "reads": 28
+   },
+   {
+    "segment": "JAWDGP010006383.1:595417-595897",
+    "reads": 28
+   },
+   {
+    "segment": "JAWDGP010006383.1:597718-598103",
+    "reads": 34
+   },
+   {
+    "segment": "JAWDGP010006383.1:598737-599112",
+    "reads": 33
+   },
+   {
+    "segment": "JAWDGP010006383.1:600944-601304",
+    "reads": 31
+   },
+   {
+    "segment": "JAWDGP010006383.1:603665-604121",
+    "reads": 31
+   },
+   {
+    "segment": "JAWDGP010006383.1:604412-604877",
+    "reads": 28
+   },
+   {
+    "segment": "JAWDGP010006383.1:605138-605541",
+    "reads": 27
+   },
+   {
+    "segment": "JAWDGP010006383.1:605873-606336",
+    "reads": 22
+   },
+   {
+    "segment": "JAWDGP010006383.1:608094-608501",
+    "reads": 36
+   },
+   {
+    "segment": "JAWDGP010006383.1:610119-610523",
+    "reads": 52
+   },
+   {
+    "segment": "JAWDGP010006383.1:611328-611676",
+    "reads": 49
+   }
+  ]
+ },
+ "Lark": {
+  "segments": 10,
+  "covered": 10,
+  "median_reads": 58.0,
+  "min_reads": 43,
+  "total_reads": 188,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010001382.1:414638-414955",
+    "reads": 55
+   },
+   {
+    "segment": "JAWDGP010001382.1:415257-415577",
+    "reads": 54
+   },
+   {
+    "segment": "JAWDGP010001382.1:417654-418085",
+    "reads": 43
+   },
+   {
+    "segment": "JAWDGP010001382.1:418280-418663",
+    "reads": 47
+   },
+   {
+    "segment": "JAWDGP010001382.1:421333-421736",
+    "reads": 54
+   },
+   {
+    "segment": "JAWDGP010001382.1:424156-424752",
+    "reads": 61
+   },
+   {
+    "segment": "JAWDGP010001382.1:425296-425631",
+    "reads": 71
+   },
+   {
+    "segment": "JAWDGP010001382.1:426024-426369",
+    "reads": 76
+   },
+   {
+    "segment": "JAWDGP010001382.1:430379-430740",
+    "reads": 78
+   },
+   {
+    "segment": "JAWDGP010001382.1:431035-431536",
+    "reads": 79
+   }
+  ]
+ },
+ "Atx2": {
+  "segments": 20,
+  "covered": 20,
+  "median_reads": 99.5,
+  "min_reads": 69,
+  "total_reads": 475,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010007710.1:187799-188163",
+    "reads": 123
+   },
+   {
+    "segment": "JAWDGP010007710.1:189944-190295",
+    "reads": 123
+   },
+   {
+    "segment": "JAWDGP010007710.1:191521-191877",
+    "reads": 115
+   },
+   {
+    "segment": "JAWDGP010007710.1:192002-192373",
+    "reads": 123
+   },
+   {
+    "segment": "JAWDGP010007710.1:192755-193193",
+    "reads": 119
+   },
+   {
+    "segment": "JAWDGP010007710.1:194556-194986",
+    "reads": 114
+   },
+   {
+    "segment": "JAWDGP010007710.1:196487-196878",
+    "reads": 108
+   },
+   {
+    "segment": "JAWDGP010007710.1:199112-199624",
+    "reads": 98
+   },
+   {
+    "segment": "JAWDGP010007710.1:199681-200615",
+    "reads": 104
+   },
+   {
+    "segment": "JAWDGP010007710.1:201039-201677",
+    "reads": 100
+   },
+   {
+    "segment": "JAWDGP010007710.1:201930-202288",
+    "reads": 110
+   },
+   {
+    "segment": "JAWDGP010007710.1:202971-203464",
+    "reads": 98
+   },
+   {
+    "segment": "JAWDGP010007710.1:205058-205400",
+    "reads": 89
+   },
+   {
+    "segment": "JAWDGP010007710.1:206238-206658",
+    "reads": 84
+   },
+   {
+    "segment": "JAWDGP010007710.1:208595-209028",
+    "reads": 87
+   },
+   {
+    "segment": "JAWDGP010007710.1:212120-212516",
+    "reads": 74
+   },
+   {
+    "segment": "JAWDGP010007710.1:212877-213227",
+    "reads": 69
+   },
+   {
+    "segment": "JAWDGP010007710.1:213811-214719",
+    "reads": 76
+   },
+   {
+    "segment": "JAWDGP010007710.1:219638-220066",
+    "reads": 99
+   },
+   {
+    "segment": "JAWDGP010007710.1:222405-222742",
+    "reads": 93
+   }
+  ]
+ },
+ "Nocturnin": {
+  "segments": 3,
+  "covered": 3,
+  "median_reads": 56,
+  "min_reads": 51,
+  "total_reads": 81,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010006599.1:766206-766599",
+    "reads": 51
+   },
+   {
+    "segment": "JAWDGP010006599.1:766712-767200",
+    "reads": 56
+   },
+   {
+    "segment": "JAWDGP010006599.1:768734-769866",
+    "reads": 60
+   }
+  ]
+ },
+ "NonA": {
+  "segments": 10,
+  "covered": 10,
+  "median_reads": 94.5,
+  "min_reads": 64,
+  "total_reads": 500,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010005834.1:107817-108266",
+    "reads": 104
+   },
+   {
+    "segment": "JAWDGP010005834.1:112114-112555",
+    "reads": 96
+   },
+   {
+    "segment": "JAWDGP010005834.1:118262-118649",
+    "reads": 93
+   },
+   {
+    "segment": "JAWDGP010005834.1:119600-120096",
+    "reads": 98
+   },
+   {
+    "segment": "JAWDGP010005834.1:120787-121182",
+    "reads": 97
+   },
+   {
+    "segment": "JAWDGP010005834.1:122792-123393",
+    "reads": 98
+   },
+   {
+    "segment": "JAWDGP010005834.1:127018-127710",
+    "reads": 66
+   },
+   {
+    "segment": "JAWDGP010005834.1:75824-76438",
+    "reads": 64
+   },
+   {
+    "segment": "JAWDGP010005834.1:84247-84660",
+    "reads": 92
+   },
+   {
+    "segment": "JAWDGP010005834.1:90875-91423",
+    "reads": 89
+   }
+  ]
+ },
+ "Tipin": {
+  "segments": 8,
+  "covered": 8,
+  "median_reads": 93.0,
+  "min_reads": 70,
+  "total_reads": 190,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010005150.1:155493-155943",
+    "reads": 70
+   },
+   {
+    "segment": "JAWDGP010005150.1:155964-156354",
+    "reads": 74
+   },
+   {
+    "segment": "JAWDGP010005150.1:159884-160259",
+    "reads": 89
+   },
+   {
+    "segment": "JAWDGP010005150.1:160757-161179",
+    "reads": 94
+   },
+   {
+    "segment": "JAWDGP010005150.1:161525-161983",
+    "reads": 98
+   },
+   {
+    "segment": "JAWDGP010005150.1:162645-163052",
+    "reads": 100
+   },
+   {
+    "segment": "JAWDGP010005150.1:164451-164838",
+    "reads": 93
+   },
+   {
+    "segment": "JAWDGP010005150.1:165489-166339",
+    "reads": 93
+   }
+  ]
+ },
+ "Ropsin1": {
+  "segments": 9,
+  "covered": 9,
+  "median_reads": 50,
+  "min_reads": 30,
+  "total_reads": 94,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010002313.1:273301-273833",
+    "reads": 30
+   },
+   {
+    "segment": "JAWDGP010002313.1:274714-275150",
+    "reads": 37
+   },
+   {
+    "segment": "JAWDGP010002313.1:276667-277187",
+    "reads": 40
+   },
+   {
+    "segment": "JAWDGP010002313.1:277637-278092",
+    "reads": 42
+   },
+   {
+    "segment": "JAWDGP010002313.1:278646-279218",
+    "reads": 50
+   },
+   {
+    "segment": "JAWDGP010002313.1:279665-280129",
+    "reads": 52
+   },
+   {
+    "segment": "JAWDGP010002313.1:280414-280956",
+    "reads": 56
+   },
+   {
+    "segment": "JAWDGP010002313.1:281587-282018",
+    "reads": 63
+   },
+   {
+    "segment": "JAWDGP010002313.1:282311-282742",
+    "reads": 65
+   }
+  ]
+ },
+ "Ropsin2": {
+  "segments": 9,
+  "covered": 9,
+  "median_reads": 62,
+  "min_reads": 59,
+  "total_reads": 179,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010002313.1:236419-236945",
+    "reads": 92
+   },
+   {
+    "segment": "JAWDGP010002313.1:241585-242021",
+    "reads": 64
+   },
+   {
+    "segment": "JAWDGP010002313.1:242391-242911",
+    "reads": 62
+   },
+   {
+    "segment": "JAWDGP010002313.1:243376-243831",
+    "reads": 62
+   },
+   {
+    "segment": "JAWDGP010002313.1:244660-245232",
+    "reads": 59
+   },
+   {
+    "segment": "JAWDGP010002313.1:245915-246379",
+    "reads": 62
+   },
+   {
+    "segment": "JAWDGP010002313.1:246890-247363",
+    "reads": 67
+   },
+   {
+    "segment": "JAWDGP010002313.1:248190-248585",
+    "reads": 62
+   },
+   {
+    "segment": "JAWDGP010002313.1:248901-249353",
+    "reads": 61
+   }
+  ]
+ },
+ "RopsinL1": {
+  "segments": 3,
+  "covered": 3,
+  "median_reads": 3,
+  "min_reads": 3,
+  "total_reads": 72,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010001257.1:112524-114529",
+    "reads": 68
+   },
+   {
+    "segment": "JAWDGP010001257.1:120346-120779",
+    "reads": 3
+   },
+   {
+    "segment": "JAWDGP010001257.1:124000-124451",
+    "reads": 3
+   }
+  ]
+ },
+ "RopsinL2": {
+  "segments": 3,
+  "covered": 3,
+  "median_reads": 23,
+  "min_reads": 23,
+  "total_reads": 53,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010008106.1:710011-710380",
+    "reads": 23
+   },
+   {
+    "segment": "JAWDGP010008106.1:714796-715233",
+    "reads": 23
+   },
+   {
+    "segment": "JAWDGP010008106.1:716029-716975",
+    "reads": 36
+   }
+  ]
+ },
+ "Xenopsin": {
+  "segments": 6,
+  "covered": 6,
+  "median_reads": 8.5,
+  "min_reads": 3,
+  "total_reads": 57,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010006574.1:323291-323780",
+    "reads": 28
+   },
+   {
+    "segment": "JAWDGP010006574.1:341183-341691",
+    "reads": 3
+   },
+   {
+    "segment": "JAWDGP010006574.1:346504-346909",
+    "reads": 6
+   },
+   {
+    "segment": "JAWDGP010006574.1:347300-347719",
+    "reads": 9
+   },
+   {
+    "segment": "JAWDGP010006574.1:356010-356437",
+    "reads": 16
+   },
+   {
+    "segment": "JAWDGP010006574.1:357864-358241",
+    "reads": 8
+   }
+  ]
+ },
+ "GoOpsin1": {
+  "segments": 10,
+  "covered": 10,
+  "median_reads": 68.0,
+  "min_reads": 56,
+  "total_reads": 170,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010003851.1:76446-76839",
+    "reads": 60
+   },
+   {
+    "segment": "JAWDGP010003851.1:79530-79847",
+    "reads": 57
+   },
+   {
+    "segment": "JAWDGP010003851.1:80135-80579",
+    "reads": 56
+   },
+   {
+    "segment": "JAWDGP010003851.1:81459-81861",
+    "reads": 59
+   },
+   {
+    "segment": "JAWDGP010003851.1:81953-82370",
+    "reads": 65
+   },
+   {
+    "segment": "JAWDGP010003851.1:83147-83591",
+    "reads": 71
+   },
+   {
+    "segment": "JAWDGP010003851.1:84255-84641",
+    "reads": 75
+   },
+   {
+    "segment": "JAWDGP010003851.1:85131-85564",
+    "reads": 84
+   },
+   {
+    "segment": "JAWDGP010003851.1:85784-86243",
+    "reads": 84
+   },
+   {
+    "segment": "JAWDGP010003851.1:88166-88727",
+    "reads": 90
+   }
+  ]
+ },
+ "GoOpsin2": {
+  "segments": 10,
+  "covered": 10,
+  "median_reads": 37.5,
+  "min_reads": 32,
+  "total_reads": 110,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010003851.1:13651-14044",
+    "reads": 38
+   },
+   {
+    "segment": "JAWDGP010003851.1:16424-16741",
+    "reads": 32
+   },
+   {
+    "segment": "JAWDGP010003851.1:16743-17187",
+    "reads": 33
+   },
+   {
+    "segment": "JAWDGP010003851.1:20390-20792",
+    "reads": 35
+   },
+   {
+    "segment": "JAWDGP010003851.1:21030-21447",
+    "reads": 34
+   },
+   {
+    "segment": "JAWDGP010003851.1:25479-25923",
+    "reads": 37
+   },
+   {
+    "segment": "JAWDGP010003851.1:26612-26998",
+    "reads": 40
+   },
+   {
+    "segment": "JAWDGP010003851.1:27862-28295",
+    "reads": 41
+   },
+   {
+    "segment": "JAWDGP010003851.1:28581-29040",
+    "reads": 41
+   },
+   {
+    "segment": "JAWDGP010003851.1:29924-30386",
+    "reads": 44
+   }
+  ]
+ },
+ "Neuropsin": {
+  "segments": 8,
+  "covered": 8,
+  "median_reads": 24.0,
+  "min_reads": 13,
+  "total_reads": 125,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010003056.1:254925-255539",
+    "reads": 30
+   },
+   {
+    "segment": "JAWDGP010003056.1:256829-257321",
+    "reads": 21
+   },
+   {
+    "segment": "JAWDGP010003056.1:260024-260459",
+    "reads": 18
+   },
+   {
+    "segment": "JAWDGP010003056.1:263524-263931",
+    "reads": 13
+   },
+   {
+    "segment": "JAWDGP010003056.1:271571-272053",
+    "reads": 16
+   },
+   {
+    "segment": "JAWDGP010003056.1:282556-283077",
+    "reads": 37
+   },
+   {
+    "segment": "JAWDGP010003056.1:284194-284747",
+    "reads": 27
+   },
+   {
+    "segment": "JAWDGP010003056.1:289231-289589",
+    "reads": 31
+   }
+  ]
+ },
+ "Retinochrome": {
+  "segments": 6,
+  "covered": 6,
+  "median_reads": 24.0,
+  "min_reads": 14,
+  "total_reads": 51,
+  "per_segment": [
+   {
+    "segment": "JAWDGP010000881.1:561429-561898",
+    "reads": 14
+   },
+   {
+    "segment": "JAWDGP010000881.1:562502-562964",
+    "reads": 14
+   },
+   {
+    "segment": "JAWDGP010000881.1:565265-565692",
+    "reads": 23
+   },
+   {
+    "segment": "JAWDGP010000881.1:568373-568763",
+    "reads": 25
+   },
+   {
+    "segment": "JAWDGP010000881.1:571083-571674",
+    "reads": 27
+   },
+   {
+    "segment": "JAWDGP010000881.1:574508-575041",
+    "reads": 25
+   }
+  ]
+ }
+}

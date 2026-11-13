@@ -1,0 +1,44 @@
+{
+ "assignment": [
+  {
+   "taxon": "Penicillus capitatus",
+   "reads": 117213,
+   "bp": 970743548,
+   "fraction": 0.8611971662683793
+  },
+  {
+   "taxon": "Penicillus lamourouxii",
+   "reads": 18876,
+   "bp": 154992551,
+   "fraction": 0.13750196536346926
+  },
+  {
+   "taxon": "Udotea flabellum",
+   "reads": 147,
+   "bp": 1043191,
+   "fraction": 0.000925469074636257
+  },
+  {
+   "taxon": "Halimeda cylindracea",
+   "reads": 46,
+   "bp": 348816,
+   "fraction": 0.0003094528429964605
+  },
+  {
+   "taxon": "Halimeda borneensis",
+   "reads": 8,
+   "bp": 68425,
+   "fraction": 6.0703381674099835e-05
+  },
+  {
+   "taxon": "Boodleopsis pusilla",
+   "reads": 3,
+   "bp": 5910,
+   "fraction": 5.243068844631787e-06
+  }
+ ],
+ "weak": {
+  "reads": 15276,
+  "bp": 29778482
+ }
+}

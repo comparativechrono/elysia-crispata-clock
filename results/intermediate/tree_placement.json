@@ -1,0 +1,527 @@
+{
+ "Clock": {
+  "tree": "BHLHPAS",
+  "clade_size": 24,
+  "support": 0.986,
+  "seeds_in_clade": [
+   "DmClk",
+   "HsCLOCK",
+   "HsNPAS2"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Bmal1": {
+  "tree": "BHLHPAS",
+  "clade_size": 23,
+  "support": 0.948,
+  "seeds_in_clade": [
+   "DmCyc",
+   "HsBMAL1",
+   "HsBMAL2"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Period": {
+  "tree": "PER",
+  "clade_size": 24,
+  "support": 1.0,
+  "seeds_in_clade": [
+   "DmPer",
+   "HsPER1",
+   "HsPER2",
+   "HsPER3"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Timeless": {
+  "tree": "TIMFAM",
+  "clade_size": 18,
+  "support": 1.0,
+  "seeds_in_clade": [
+   "DmTim"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Timeout": {
+  "tree": "TIMFAM",
+  "clade_size": 30,
+  "support": null,
+  "seeds_in_clade": [
+   "DmTimeout",
+   "HsTIMELESS"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Cry1": {
+  "tree": "CRY",
+  "clade_size": 18,
+  "support": 0.985,
+  "seeds_in_clade": [
+   "CgCRY1",
+   "DmCry",
+   "DpCRY1"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Cry2": {
+  "tree": "CRY",
+  "clade_size": 21,
+  "support": 0.341,
+  "seeds_in_clade": [
+   "CgCRY2",
+   "DpCRY2",
+   "HsCRY1",
+   "HsCRY2"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Phr6-4": {
+  "tree": "CRY",
+  "clade_size": 14,
+  "support": 0.879,
+  "seeds_in_clade": [
+   "Dm64PHR"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "PhrCPD": {
+  "tree": "CRY",
+  "clade_size": 20,
+  "support": 0.14,
+  "seeds_in_clade": [
+   "DmCPDPHR"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "CryDASH1": {
+  "tree": "CRY",
+  "clade_size": 13,
+  "support": 0.881,
+  "seeds_in_clade": [
+   "AtCRY3",
+   "DrCRYDASH"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "CryDASH2": {
+  "tree": "CRY",
+  "clade_size": 17,
+  "support": 1.0,
+  "seeds_in_clade": [
+   "AtCRY3",
+   "DrCRYDASH"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Pdp1": {
+  "tree": "BZIP",
+  "clade_size": 25,
+  "support": 0.149,
+  "seeds_in_clade": [
+   "DmPdp1",
+   "HsDBP",
+   "HsHLF",
+   "HsTEF"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Vrille": {
+  "tree": "BZIP",
+  "clade_size": 15,
+  "support": 0.798,
+  "seeds_in_clade": [
+   "DmVri",
+   "HsNFIL3"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "E75": {
+  "tree": "NR1",
+  "clade_size": 22,
+  "support": 0.925,
+  "seeds_in_clade": [
+   "DmE75",
+   "HsNR1D1",
+   "HsNR1D2"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Hr3": {
+  "tree": "NR1",
+  "clade_size": 28,
+  "support": 0.936,
+  "seeds_in_clade": [
+   "DmHr3",
+   "HsRORA",
+   "HsRORB",
+   "HsRORC"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Cwo": {
+  "tree": "CWO",
+  "clade_size": 17,
+  "support": 0.958,
+  "seeds_in_clade": [
+   "DmCwo"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Ck1de": {
+  "tree": "CK1",
+  "clade_size": 25,
+  "support": 0.809,
+  "seeds_in_clade": [
+   "DmDbt",
+   "HsCSNK1D",
+   "HsCSNK1E"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Ck1a": {
+  "tree": "CK1",
+  "clade_size": 25,
+  "support": 0.0,
+  "seeds_in_clade": [
+   "DmCK1a",
+   "HsCSNK1A1"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Ck2a": {
+  "tree": "CK2A",
+  "clade_size": 19,
+  "support": 0.227,
+  "seeds_in_clade": [
+   "DmCK2a",
+   "HsCSNK2A1"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Ck2b": {
+  "tree": "CK2B",
+  "clade_size": 19,
+  "support": 0.612,
+  "seeds_in_clade": [
+   "DmCK2b",
+   "HsCSNK2B"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Gsk3": {
+  "tree": "GSK3",
+  "clade_size": 21,
+  "support": 0.964,
+  "seeds_in_clade": [
+   "DmSgg",
+   "HsGSK3B"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Nemo": {
+  "tree": "NLK",
+  "clade_size": 20,
+  "support": 1.0,
+  "seeds_in_clade": [
+   "DmNemo",
+   "HsNLK"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Pp1a": {
+  "tree": "PP1",
+  "clade_size": 23,
+  "support": 0.474,
+  "seeds_in_clade": [
+   "DmPp1-87B",
+   "HsPPP1CA"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Pp1b": {
+  "tree": "PP1",
+  "clade_size": 41,
+  "support": 0.455,
+  "seeds_in_clade": [
+   "DmPp1-87B",
+   "HsPPP1CA"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Pp2aC": {
+  "tree": "PP2AC",
+  "clade_size": 20,
+  "support": null,
+  "seeds_in_clade": [
+   "DmMts",
+   "HsPPP2CA"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Pp2aB55": {
+  "tree": "PP2AB55",
+  "clade_size": 26,
+  "support": null,
+  "seeds_in_clade": [
+   "DmTws",
+   "HsPPP2R2A"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Pp2aB56e": {
+  "tree": "PP2AB56",
+  "clade_size": 23,
+  "support": 0.741,
+  "seeds_in_clade": [
+   "DmWdb",
+   "HsPPP2R5E"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Pp2aB56d": {
+  "tree": "PP2AB56",
+  "clade_size": 48,
+  "support": 0.859,
+  "seeds_in_clade": [
+   "DmWdb",
+   "HsPPP2R5E"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Slimb": {
+  "tree": "BTRC",
+  "clade_size": 22,
+  "support": 0.866,
+  "seeds_in_clade": [
+   "DmSlimb",
+   "HsBTRC",
+   "HsFBXW11"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Jetlag": {
+  "tree": "JET",
+  "clade_size": 11,
+  "support": 0.95,
+  "seeds_in_clade": [
+   "DmJet"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Sirt1": {
+  "tree": "SIRT1",
+  "clade_size": 19,
+  "support": 0.943,
+  "seeds_in_clade": [
+   "DmSirt1",
+   "HsSIRT1"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Pdf": {
+  "tree": "PDF",
+  "clade_size": 8,
+  "support": 0.141,
+  "seeds_in_clade": [
+   "AcCerebrin",
+   "EmCerebrin"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Pdfr": {
+  "tree": "PDFR",
+  "clade_size": 14,
+  "support": 1.0,
+  "seeds_in_clade": [
+   "DmPdfr"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Lark": {
+  "tree": "RBM4",
+  "clade_size": 48,
+  "support": 0.882,
+  "seeds_in_clade": [
+   "DmLark",
+   "HsRBM4"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Atx2": {
+  "tree": "ATXN2",
+  "clade_size": 24,
+  "support": null,
+  "seeds_in_clade": [
+   "DmAtx2",
+   "HsATXN2"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Nocturnin": {
+  "tree": "NOCT",
+  "clade_size": 18,
+  "support": 0.834,
+  "seeds_in_clade": [
+   "DmCurled",
+   "HsNOCT"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "NonA": {
+  "tree": "NONO",
+  "clade_size": 28,
+  "support": 0.817,
+  "seeds_in_clade": [
+   "DmNonA",
+   "HsNONO"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Tipin": {
+  "tree": "TIPIN",
+  "clade_size": 15,
+  "support": 0.355,
+  "seeds_in_clade": [
+   "HsTIPIN"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Ropsin1": {
+  "tree": "OPSIN",
+  "clade_size": 19,
+  "support": 0.92,
+  "seeds_in_clade": [
+   "MyGqOpsin",
+   "TpRhodopsin"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Ropsin2": {
+  "tree": "OPSIN",
+  "clade_size": 19,
+  "support": 0.92,
+  "seeds_in_clade": [
+   "MyGqOpsin",
+   "TpRhodopsin"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "RopsinL1": {
+  "tree": "OPSIN",
+  "clade_size": 61,
+  "support": 0.999,
+  "seeds_in_clade": [
+   "DmRh1",
+   "HsOPN4",
+   "MyGqOpsin",
+   "TpRhodopsin"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "RopsinL2": {
+  "tree": "OPSIN",
+  "clade_size": 61,
+  "support": 0.999,
+  "seeds_in_clade": [
+   "DmRh1",
+   "HsOPN4",
+   "MyGqOpsin",
+   "TpRhodopsin"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Xenopsin": {
+  "tree": "OPSIN",
+  "clade_size": 19,
+  "support": 0.993,
+  "seeds_in_clade": [
+   "AvXenopsin",
+   "LaXenopsin"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "GoOpsin1": {
+  "tree": "OPSIN",
+  "clade_size": 19,
+  "support": 0.918,
+  "seeds_in_clade": [
+   "MyGoOpsin"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "GoOpsin2": {
+  "tree": "OPSIN",
+  "clade_size": 19,
+  "support": 0.918,
+  "seeds_in_clade": [
+   "MyGoOpsin"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Neuropsin": {
+  "tree": "OPSIN",
+  "clade_size": 17,
+  "support": 0.989,
+  "seeds_in_clade": [
+   "HsOPN5"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ },
+ "Retinochrome": {
+  "tree": "OPSIN",
+  "clade_size": 14,
+  "support": 0.321,
+  "seeds_in_clade": [
+   "HsRGR",
+   "TpRetinochrome"
+  ],
+  "foreign_seeds_in_clade": [],
+  "all_seeds": true
+ }
+}

@@ -1,0 +1,94 @@
+{
+ "partner_species": {
+  "capitatus": 3828,
+  "lamourouxii": 673,
+  "other": 4
+ },
+ "junctions": 4505,
+ "within5bp": 3892,
+ "slug_location": {
+  "alternate haplotype": 1427,
+  "Purdue or Tampa assembly only": 743,
+  "chromosome": 1963,
+  "unplaced scaffold": 372
+ },
+ "per_chromosome": [
+  {
+   "chrom": "1",
+   "observed": 326,
+   "expected": 375.4
+  },
+  {
+   "chrom": "2",
+   "observed": 302,
+   "expected": 304.9
+  },
+  {
+   "chrom": "3",
+   "observed": 232,
+   "expected": 231.9
+  },
+  {
+   "chrom": "4",
+   "observed": 158,
+   "expected": 176.0
+  },
+  {
+   "chrom": "5",
+   "observed": 135,
+   "expected": 126.6
+  },
+  {
+   "chrom": "6",
+   "observed": 108,
+   "expected": 104.2
+  },
+  {
+   "chrom": "7",
+   "observed": 80,
+   "expected": 95.2
+  },
+  {
+   "chrom": "8",
+   "observed": 115,
+   "expected": 81.3
+  },
+  {
+   "chrom": "9",
+   "observed": 92,
+   "expected": 81.2
+  },
+  {
+   "chrom": "10",
+   "observed": 87,
+   "expected": 75.8
+  },
+  {
+   "chrom": "11",
+   "observed": 71,
+   "expected": 72.6
+  },
+  {
+   "chrom": "12",
+   "observed": 70,
+   "expected": 64.7
+  },
+  {
+   "chrom": "13",
+   "observed": 77,
+   "expected": 58.5
+  },
+  {
+   "chrom": "14",
+   "observed": 54,
+   "expected": 58.4
+  },
+  {
+   "chrom": "15",
+   "observed": 56,
+   "expected": 56.4
+  }
+ ],
+ "chi_square": 35.1,
+ "chi_df": 14
+}

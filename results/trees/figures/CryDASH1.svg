@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 266" role="img" aria-label="Family tree placing CryDASH1" class="treefig">
+<g fill="none" stroke="var(--tree-line,#8a958f)" stroke-width="1.2">
+<path d="M26.0 39.0V141.2"/>
+<path d="M26.0 39.0H49.2"/>
+<path d="M26.0 141.2H37.2"/>
+<path d="M49.2 22.5V55.4"/>
+<path d="M49.2 22.5H131.5"/>
+<path d="M49.2 55.4H64.0"/>
+<path d="M64.0 39.5V71.4"/>
+<path d="M64.0 39.5H140.3"/>
+<path d="M64.0 71.4H75.2"/>
+<path d="M75.2 56.5V86.2"/>
+<path d="M75.2 56.5H130.0"/>
+<path d="M75.2 86.2H90.9"/>
+<path d="M90.9 73.5V99.0"/>
+<path d="M90.9 73.5H156.6"/>
+<path d="M90.9 99.0H102.6"/>
+<path d="M102.6 90.5V107.5"/>
+<path d="M102.6 90.5H290.0"/>
+<path d="M102.6 107.5H204.4"/>
+<path d="M37.2 124.5V158.0"/>
+<path d="M37.2 124.5H79.2"/>
+<path d="M37.2 158.0H46.3"/>
+<path d="M46.3 141.5V174.4"/>
+<path d="M46.3 141.5H86.2"/>
+<path d="M46.3 174.4H78.2"/>
+<path d="M78.2 158.5V190.4"/>
+<path d="M78.2 158.5H107.0"/>
+<path d="M78.2 190.4H90.3"/>
+<path d="M90.3 175.5V205.2"/>
+<path d="M90.3 175.5H114.1"/>
+<path d="M90.3 205.2H95.3"/>
+<path d="M95.3 192.5V218.0"/>
+<path d="M95.3 192.5H109.5"/>
+<path d="M95.3 218.0H103.4"/>
+<path d="M103.4 209.5V226.5"/>
+<path d="M103.4 209.5H103.4"/>
+<path d="M103.4 226.5H104.1"/>
+<path d="M12.0 90.1V243.5M12.0 90.1H26.0M12.0 243.5H56.0" stroke-dasharray="3 3"/>
+</g>
+<text x="46.2" y="36.0" text-anchor="end" class="sup">0.98</text>
+<text x="72.2" y="68.4" text-anchor="end" class="sup">0.85</text>
+<text x="87.9" y="83.2" text-anchor="end" class="sup">0.72</text>
+<text x="75.2" y="171.4" text-anchor="end" class="sup">1.00</text>
+<text x="87.3" y="187.4" text-anchor="end" class="sup">0.95</text>
+<text x="100.4" y="215.0" text-anchor="end" class="sup">0.98</text>
+<path d="M134.5 22.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="26.5" class="tip">Pomacea canaliculata A0A2T7NWZ3</text>
+<path d="M143.3 39.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="43.5" class="tip">Magallana gigas A0A8W8IDI3</text>
+<path d="M133.0 56.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="60.5" class="tip">Lottia gigantea V4B9P4</text>
+<path d="M159.6 73.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<rect x="153.1" y="70.0" width="7" height="7" class="dot-seed"/>
+<text x="300" y="77.5" class="tip-seed">Danio rerio CRYDASH</text>
+<path d="M293.0 90.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<rect x="286.5" y="87.0" width="7" height="7" class="dot-seed"/>
+<text x="300" y="94.5" class="tip-seed">Arabidopsis thaliana CRY3</text>
+<path d="M207.4 107.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="111.5" class="tip">Nematostella vectensis NEMVEDRAFT_v1g219650</text>
+<path d="M82.2 124.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="128.5" class="tip">Biomphalaria glabrata A0A9W2ZX49</text>
+<path d="M89.2 141.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="145.5" class="tip">Aplysia californica A0ABM0JP98</text>
+<path d="M110.0 158.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="162.5" class="tip">Plakobranchus ocellatus A0AAV4AJP5</text>
+<path d="M117.1 175.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="179.5" class="tip">Elysia marginata A0AAV4FU60</text>
+<path d="M112.5 192.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="196.5" class="tip">Elysia chlorotica A0A433TFC3</text>
+<path d="M106.4 209.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<circle cx="103.4" cy="209.5" r="4" class="dot-me"/>
+<text x="300" y="213.5" class="tip-me">Elysia crispata RRG08_063315 (Purdue)</text>
+<path d="M107.1 226.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<circle cx="104.1" cy="226.5" r="4" class="dot-me"/>
+<text x="300" y="230.5" class="tip-me">Elysia crispata ENSUFQG00005007252 (Ensembl)</text>
+<text x="62" y="247.5" class="tip sister">sister lineage: 4 sequences</text>
+</svg>

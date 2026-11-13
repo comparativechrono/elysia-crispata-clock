@@ -1,0 +1,103 @@
+# family	category	seed_label	taxid	gene	note
+CLOCK	core	HsCLOCK	9606	CLOCK	bHLH-PAS activator
+CLOCK	core	HsNPAS2	9606	NPAS2	vertebrate CLOCK paralogue
+CLOCK	core	DmClk	7227	Clk	
+BMAL	core	HsBMAL1	9606	BMAL1	ARNTL
+BMAL	core	HsBMAL2	9606	BMAL2	ARNTL2
+BMAL	core	DmCyc	7227	cyc	cycle
+PER	core	HsPER1	9606	PER1	
+PER	core	HsPER2	9606	PER2	
+PER	core	HsPER3	9606	PER3	
+PER	core	DmPer	7227	per	
+TIM	core	DmTim	7227	tim	timeless (insect-type, tim1)
+TIMEOUT	core	DmTimeout	7227	tim2	timeout / tim2
+TIMEOUT	core	HsTIMELESS	9606	TIMELESS	mammalian TIMELESS is the timeout orthologue
+CRY	core	HsCRY1	9606	CRY1	mammalian-type (repressor)
+CRY	core	HsCRY2	9606	CRY2	mammalian-type (repressor)
+CRY	core	DmCry	7227	cry	Drosophila-type (light-sensitive)
+CRY	core	Dm64PHR	7227	phr6-4	(6-4) photolyase
+CRY	core	DmCPDPHR	7227	phr	CPD photolyase class II
+CRY	core	AtCRY1	3702	CRY1	plant cryptochrome
+CRY	core	AtCRY3	3702	CRY3	CRY-DASH
+VRI	loop2	DmVri	7227	vri	vrille
+VRI	loop2	HsNFIL3	9606	NFIL3	E4BP4
+PARBZIP	loop2	DmPdp1	7227	Pdp1	
+PARBZIP	loop2	HsDBP	9606	DBP	
+PARBZIP	loop2	HsHLF	9606	HLF	
+PARBZIP	loop2	HsTEF	9606	TEF	
+REVERB	loop2	HsNR1D1	9606	NR1D1	REV-ERB alpha
+REVERB	loop2	HsNR1D2	9606	NR1D2	REV-ERB beta
+REVERB	loop2	DmE75	7227	Eip75B	E75
+ROR	loop2	HsRORA	9606	RORA	
+ROR	loop2	HsRORB	9606	RORB	
+ROR	loop2	HsRORC	9606	RORC	
+ROR	loop2	DmHr3	7227	Hr3	HR3 / Hr46
+CWO	loop2	DmCwo	7227	cwo	clockwork orange
+CWO	loop2	HsBHLHE40	9606	BHLHE40	DEC1
+CWO	loop2	HsBHLHE41	9606	BHLHE41	DEC2
+CK1DE	ptm	HsCSNK1D	9606	CSNK1D	
+CK1DE	ptm	HsCSNK1E	9606	CSNK1E	
+CK1DE	ptm	DmDbt	7227	dco	doubletime
+CK1A	ptm	HsCSNK1A1	9606	CSNK1A1	
+CK1A	ptm	DmCK1a	7227	CkIalpha	
+CK2A	ptm	HsCSNK2A1	9606	CSNK2A1	
+CK2A	ptm	DmCK2a	7227	CkIIalpha	Timekeeper
+CK2B	ptm	HsCSNK2B	9606	CSNK2B	
+CK2B	ptm	DmCK2b	7227	CkIIbeta	Andante
+GSK3	ptm	HsGSK3B	9606	GSK3B	
+GSK3	ptm	DmSgg	7227	sgg	shaggy
+NLK	ptm	HsNLK	9606	NLK	
+NLK	ptm	DmNemo	7227	nmo	nemo
+PP1	ptm	HsPPP1CA	9606	PPP1CA	
+PP1	ptm	DmPp1-87B	7227	Pp1-87B	
+PP2AC	ptm	HsPPP2CA	9606	PPP2CA	
+PP2AC	ptm	DmMts	7227	mts	microtubule star
+PP2AB55	ptm	HsPPP2R2A	9606	PPP2R2A	
+PP2AB55	ptm	DmTws	7227	tws	twins
+PP2AB56	ptm	HsPPP2R5E	9606	PPP2R5E	
+PP2AB56	ptm	DmWdb	7227	wdb	widerborst
+BTRC	ptm	HsBTRC	9606	BTRC	beta-TrCP1
+BTRC	ptm	HsFBXW11	9606	FBXW11	beta-TrCP2
+BTRC	ptm	DmSlimb	7227	slmb	supernumerary limbs
+FBXL3	ptm	HsFBXL3	9606	FBXL3	
+FBXL3	ptm	MmFbxl21	10090	Fbxl21	
+JET	ptm	DmJet	7227	jet	jetlag
+SIRT1	ptm	HsSIRT1	9606	SIRT1	
+SIRT1	ptm	DmSirt1	7227	Sirt1	
+PDF	output	DmPdf	7227	Pdf	pigment-dispersing factor
+PDFR	output	DmPdfr	7227	Pdfr	
+RBM4	output	HsRBM4	9606	RBM4	
+RBM4	output	DmLark	7227	lark	
+ATXN2	output	HsATXN2	9606	ATXN2	
+ATXN2	output	DmAtx2	7227	Atx2	
+TYF	output	DmTyf	7227	tyf	twenty-four
+NOCT	output	HsNOCT	9606	NOCT	nocturnin
+NOCT	output	DmCurled	7227	cu	curled
+NONO	output	HsNONO	9606	NONO	
+NONO	output	DmNonA	7227	nonA	
+AANAT	output	HsAANAT	9606	AANAT	
+AANAT	output	DmAANAT1	7227	AANAT1	
+ASMT	output	HsASMT	9606	ASMT	HIOMT
+CIPC	output	HsCIPC	9606	CIPC	
+CIART	output	HsCIART	9606	CIART	CHRONO
+TIPIN	output	HsTIPIN	9606	TIPIN	
+OPSIN	light	HsOPN4	9606	OPN4	melanopsin (r-opsin)
+OPSIN	light	HsOPN5	9606	OPN5	neuropsin
+OPSIN	light	HsOPN3	9606	OPN3	encephalopsin (c-opsin group)
+OPSIN	light	HsRRH	9606	RRH	peropsin
+OPSIN	light	HsRGR	9606	acc:P47804	RGR/retinochrome group
+OPSIN	light	HsRHO	9606	RHO	c-opsin
+OPSIN	light	DmRh1	7227	ninaE	r-opsin
+CRY	core	DpCRY1	13037	acc:Q2TJN5	monarch Drosophila-type CRY
+CRY	core	DpCRY2	13037	acc:Q0QWP3	monarch mammalian-type CRY
+CRY	core	DrCRYDASH	7955	acc:Q4KML2	zebrafish CRY-DASH
+CRY	core	CgCRY1	29159	acc:A0A3G1DL81	Pacific oyster Cry1 (Perrigault & Tran 2017)
+CRY	core	CgCRY2	29159	acc:A0A1Q1NMJ7	Pacific oyster Cry2 (Perrigault & Tran 2017)
+PDF	output	AcCerebrin	6500	acc:Q8T112	Aplysia cerebrin prohormone (molluscan PDF-like)
+PDF	output	EmCerebrin	1093978	acc:A0AAV4GHM1	Elysia marginata cerebrin prohormone
+OPSIN	light	TpRhodopsin	6637	acc:P31356	squid Gq r-opsin
+OPSIN	light	TpRetinochrome	6637	acc:P23820	squid retinochrome
+OPSIN	light	MyGqOpsin	6573	acc:O15973	scallop Gq-coupled opsin (SCOP1)
+OPSIN	light	MyGoOpsin	6573	acc:O15974	scallop Go-coupled opsin (SCOP2)
+OPSIN	light	AvXenopsin	1028688	acc:A0A455SJK2	slug xenopsin
+OPSIN	light	LaXenopsin	50309	acc:A0A288XNQ3	chiton xenopsin

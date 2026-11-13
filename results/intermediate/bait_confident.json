@@ -1,0 +1,42 @@
+{
+ "slugrDNA": {
+  "reads": 7026,
+  "bp": 15685273,
+  "all_reads": 8011
+ },
+ "bac": {
+  "reads": 167513,
+  "bp": 1495473995,
+  "all_reads": 170598
+ },
+ "cp": {
+  "reads": 136293,
+  "bp": 1127202441,
+  "all_reads": 151334
+ },
+ "clk": {
+  "reads": 1687,
+  "bp": 4715030,
+  "all_reads": 15746
+ },
+ "algrDNA": {
+  "reads": 0,
+  "bp": 0,
+  "all_reads": 1066
+ },
+ "algmt": {
+  "reads": 1,
+  "bp": 5053,
+  "all_reads": 1844
+ },
+ "cpx": {
+  "reads": 0,
+  "bp": 0,
+  "all_reads": 235
+ },
+ "slugmt": {
+  "reads": 2371,
+  "bp": 23221857,
+  "all_reads": 2373
+ }
+}

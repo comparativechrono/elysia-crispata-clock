@@ -1,0 +1,650 @@
+assembly	contig	contig_length	start	end	strand	class	query	query_description	identity	aligned_aa	frameshifts	stops	animal_bits	alga_bits	microbe_bits	peptide_entropy
+sanger	1	90802811	299592	321828	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.297	257	2	0	0	0	0	2.84
+sanger	1	90802811	1918014	1919948	+	animal gene	UDOFL|cysA		0.391	150	0	0	286.0	0	0	4.01
+sanger	1	90802811	1946687	1948888	+	animal gene	UDOFL|cysA		0.391	150	0	0	229.0	0	0	4.0
+sanger	1	90802811	1965322	1967198	+	animal gene	UDOFL|cysA		0.391	150	0	0	280.0	0	0	4.01
+sanger	1	90802811	4342814	4349306	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.4144	371	0	0	643.0	288.0	285.0	4.06
+sanger	1	90802811	6478093	6486881	+	animal gene	UDOFL|atpB		0.6872	470	0	0	897.0	704.0	717.0	4.03
+sanger	1	90802811	13462389	13467612	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4512	214	0	0	422.0	379.0	373.0	4.02
+sanger	1	90802811	22960300	22969609	-	animal gene	UDOFL|atpA		0.5643	488	0	0	946.0	724.0	722.0	4.03
+sanger	1	90802811	25444998	25448071	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2563	265	1	0	0	0	0	2.15
+sanger	1	90802811	27165776	27168636	+	animal gene	UDOFL|cysA		0.3408	215	0	0	366.0	0	0	4.07
+sanger	1	90802811	27188153	27190346	+	animal gene	UDOFL|cysA		0.4	145	0	0	227.0	0	0	4.07
+sanger	1	90802811	27253127	27253505	-	plastid fragment (assembly artefact)	UDOFL|atpE		0.7995	126	1	0	0	132.0	103.0	3.92
+sanger	1	90802811	27253524	27254941	-	plastid fragment (assembly artefact)	UDOFL|atpB		0.9408	470	1	0	729.0	796.0	725.0	4.08
+sanger	1	90802811	27255174	27255473	+	plastid fragment (assembly artefact)	UDOFL|rps14		0.75	100	2	0	0	99.4	89.0	3.9
+sanger	1	90802811	27255527	27256182	+	plastid fragment (assembly artefact)	UDOFL|petB		0.9589	219	1	0	0	402.0	369.0	4.1
+sanger	1	90802811	34997780	35023635	-	animal gene	VAULI|H6WB86	ThrRS Probable threonine--tRNA ligase, cytoplasmic	0.5112	670	0	0	1210.0	719.0	769.0	4.22
+sanger	1	90802811	36258529	36330334	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3922	204	0	0	0	0	0	1.3
+sanger	1	90802811	38214805	38309188	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2606	265	0	0	0	0	0	2.8
+sanger	1	90802811	41281774	41362641	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2785	269	1	0	0	0	0	2.6
+sanger	1	90802811	41418618	41480878	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4	195	0	0	0	0	0	1.64
+sanger	1	90802811	43303585	43314027	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4486	394	0	0	765.0	466.0	444.0	4.07
+sanger	1	90802811	51164421	51164591	-	no database match	ARATH|Q38929	IPP1 Isopentenyl-diphosphate Delta-isomerase I, chloroplastic	0.2794	68	0	0	0	0	0	3.78
+sanger	1	90802811	61537671	61542648	+	animal gene	UDOFL|cysA		0.3116	215	0	0	342.0	0	0	4.04
+sanger	1	90802811	61549106	61550477	+	animal gene	UDOFL|cysA		0.3735	150	1	0	293.0	0	0	4.02
+sanger	1	90802811	61562062	61564275	+	animal gene	UDOFL|cysA		0.324	215	1	2	238.0	0	180.0	4.0
+sanger	1	90802811	61570401	61572887	+	animal gene	UDOFL|cysA		0.4212	150	1	0	265.0	0	0	4.02
+sanger	1	90802811	61587112	61588318	+	animal gene	UDOFL|cysA		0.3907	147	0	0	271.0	0	0	4.03
+sanger	1	90802811	61598681	61627422	+	animal gene	UDOFL|cysA		0.404	147	1	0	253.0	0	0	4.01
+sanger	1	90802811	63527642	63530647	+	animal gene	UDOFL|cysA		0.396	147	0	0	260.0	0	0	4.06
+sanger	1	90802811	63536236	63553573	+	animal gene	UDOFL|cysA		0.4082	147	0	0	239.0	0	0	4.01
+sanger	1	90802811	63565205	63567616	+	animal gene	UDOFL|cysA		0.3947	150	0	0	273.0	0	0	4.0
+sanger	1	90802811	64793377	64804412	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.5186	533	0	0	1001.0	776.0	776.0	4.04
+sanger	1	90802811	72231926	72232998	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4834	151	0	0	293.0	258.0	254.0	3.94
+sanger	1	90802811	72881052	72931885	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3538	252	0	0	0	0	0	1.66
+sanger	1	90802811	77387015	77391034	-	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6301	145	0	0	274.0	189.0	203.0	4.03
+sanger	1	90802811	78655307	78682679	-	animal gene	VAULI|H6WB82	cpn60 Chaperonin	0.4117	545	0	0	1001.0	624.0	614.0	3.96
+sanger	1	90802811	78704398	78894040	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3882	225	1	0	0	0	0	1.86
+sanger	1	90802811	79981473	79990472	-	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.4048	84	0	0	0	0	0	1.68
+sanger	1	90802811	80852845	80950109	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3954	263	2	0	0	0	0	1.67
+sanger	1	90802811	83497786	83500873	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.372	162	0	0	315.0	253.0	262.0	3.98
+sanger	1	90802811	86339900	86347585	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4918	423	0	0	801.0	546.0	529.0	4.1
+sanger	1	90802811	87011798	87061253	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2769	303	1	0	0	0	0	2.81
+sanger	10	18345459	3810400	3810978	-	no database match	CHLRE|A0A2K3DBG1	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3782	193	0	0	0	0	0	0.32
+sanger	10	18345459	3843414	3845276	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.5914	652	5	0	980.0	0	0	4.09
+sanger	10	18345459	4549099	4636689	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2737	266	1	0	0	0	0	1.12
+sanger	10	18345459	6953076	6954239	-	animal gene	UDOFL|tufA		0.4876	400	0	0	722.0	0	421.0	4.09
+sanger	10	18345459	7606007	7606126	-	plastid fragment (assembly artefact)	UDOFL|psbL		0.875	40	0	0	0	67.4	55.8	3.88
+sanger	10	18345459	7606133	7606258	-	plastid fragment (assembly artefact)	UDOFL|psbF		0.9512	41	0	0	0	67.0	65.9	3.84
+sanger	10	18345459	7606258	7606446	-	plastid fragment (assembly artefact)	UDOFL|psbE		0.8571	63	0	0	0	116.0	107.0	3.99
+sanger	10	18345459	8185727	8343075	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.5333	150	0	0	301.0	200.0	0	4.18
+sanger	10	18345459	13842272	13919994	+	no database match	ARATH|O49668	PAM68 Protein PAM68, chloroplastic	0.2692	154	0	0	0	0	0	3.87
+sanger	10	18345459	15863661	15907895	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3318	223	0	0	0	0	0	1.15
+sanger	10	18345459	16173834	16179045	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6149	616	0	0	1158.0	853.0	810.0	4.04
+sanger	10	18345459	17957055	18044562	-	animal gene	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3871	217	0	0	51.2	0	0	1.59
+sanger	11	17553211	1113732	1113890	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.2642	53	0	0	0	0	0	0.69
+sanger	11	17553211	3088321	3088938	-	plastid fragment (assembly artefact)	UDOFL|orf434		0.5673	201	0	0	0	0	0	3.84
+sanger	11	17553211	3089406	3089681	-	plastid fragment (assembly artefact)	UDOFL|tufA		0.9783	92	0	0	0	171.0	169.0	3.92
+sanger	11	17553211	4509877	4510441	+	no database match	UDOFL|rpl20		0.3333	47	0	0	0	0	0	3.72
+sanger	11	17553211	10206925	10209169	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4191	136	0	0	264.0	231.0	233.0	4.02
+sanger	11	17553211	11411313	11481217	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3888	238	1	0	0	0	0	1.5
+sanger	11	17553211	13615447	13688664	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2956	273	1	0	0	0	0	3.13
+sanger	12	15649513	11938900	11945093	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6985	659	0	0	1213.0	946.0	939.0	4.08
+sanger	13	14153947	1763251	1861726	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2724	268	0	1	0	0	0	2.73
+sanger	13	14153947	2056390	2057538	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3415	286	1	0	0	0	0	1.25
+sanger	13	14153947	3510298	3519722	+	animal gene	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3358	255	1	0	94.7	0	0	3.08
+sanger	13	14153947	3566005	3577346	+	animal gene	VAULI|B9ZZR6	GapC2 Glyceraldehyde-3-phosphate dehydrogenase (Fragment)	0.6118	304	0	0	525.0	419.0	439.0	4.07
+sanger	13	14153947	6505005	6505751	-	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.3093	91	0	0	0	0	0	3.12
+sanger	13	14153947	7674576	7740858	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4156	231	1	0	0	0	0	1.61
+sanger	13	14153947	7740898	7741801	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3532	223	1	1	0	0	0	1.17
+sanger	13	14153947	10803097	10900112	+	animal gene	VAULI|H6WB87	Rab8 Rab8 family GTPase	0.3028	303	0	0	271.0	182.0	166.0	3.98
+sanger	13	14153947	11062715	11066175	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.3769	185	0	0	390.0	292.0	295.0	4.01
+sanger	13	14153947	11562676	11655461	-	no database match	ARATH|O49668	PAM68 Protein PAM68, chloroplastic	0.3393	56	0	0	0	0	0	3.68
+sanger	13	14153947	13437076	13479566	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4245	207	0	0	312.0	240.0	213.0	3.96
+sanger	14	14121010	1480781	1510615	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.3237	272	0	0	279.0	135.0	135.0	3.74
+sanger	14	14121010	4018470	4092319	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2645	271	0	1	0	0	0	3.49
+sanger	14	14121010	4344713	4385584	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3923	258	1	0	0	0	0	1.93
+sanger	14	14121010	4610259	4684196	-	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2907	270	0	0	69.3	0	0	3.16
+sanger	14	14121010	7112658	7125759	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.5443	229	0	0	345.0	243.0	237.0	4.06
+sanger	14	14121010	9025816	9068972	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.807	171	0	0	339.0	283.0	263.0	4.06
+sanger	14	14121010	9861854	9917039	-	plastid fragment (assembly artefact)	UDOFL|atpB		0.9276	257	2	0	372.0	420.0	379.0	4.05
+sanger	14	14121010	11487623	11488907	-	plastid fragment (assembly artefact)	UDOFL|psaA		0.9594	419	2	0	0	771.0	723.0	4.1
+sanger	14	14121010	12880243	12994692	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3194	301	1	0	0	0	0	2.87
+sanger	15	13644184	7861006	7881199	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2676	299	1	0	0	0	0	2.56
+sanger	15	13644184	10514227	10531442	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2526	285	0	1	0	0	0	2.25
+sanger	15	13644184	13082172	13088033	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3415	188	1	0	0	0	0	2.56
+sanger	2	73756357	1127513	1131742	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4313	160	0	0	318.0	164.0	158.0	4.08
+sanger	2	73756357	3508750	3511685	+	no database match	ARATH|O49668	PAM68 Protein PAM68, chloroplastic	0.2703	108	0	0	0	0	0	1.62
+sanger	2	73756357	9357743	9367849	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4256	193	0	0	382.0	293.0	278.0	4.02
+sanger	2	73756357	10750315	10753833	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4365	197	0	0	387.0	351.0	325.0	4.01
+sanger	2	73756357	21510613	21514623	+	animal gene	UDOFL|rpoC1		0.3553	151	0	0	234.0	174.0	165.0	4.2
+sanger	2	73756357	23417004	23433828	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4087	229	0	0	335.0	306.0	312.0	3.99
+sanger	2	73756357	26578313	26636746	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2647	272	0	0	0	0	0	2.31
+sanger	2	73756357	27018111	27026836	-	animal gene	VAULI|D7P7V4	uroD Uroporphyrinogen decarboxylase (Fragment)	0.32	342	0	0	687.0	0	359.0	4.15
+sanger	2	73756357	39119781	39122630	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4458	165	0	0	283.0	249.0	240.0	4.08
+sanger	2	73756357	39772489	39803707	+	no database match	UDOFL|ycf4		0.2917	90	0	1	0	0	0	2.89
+sanger	2	73756357	43573567	43647373	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2925	294	0	0	0	0	0	2.88
+sanger	2	73756357	45103467	45138650	+	no database match	CHLRE|A0A2K3DBG1	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3378	290	0	0	0	0	0	3.08
+sanger	2	73756357	52211714	52214909	-	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6691	139	0	0	279.0	223.0	217.0	4.01
+sanger	2	73756357	54275689	54350225	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.2698	126	0	0	0	0	0	1.65
+sanger	2	73756357	64527198	64527320	+	animal gene	UDOFL|cysA		0.4878	41	0	0	82.4	57.4	59.7	3.65
+sanger	2	73756357	68026358	68124522	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.472	210	0	0	334.0	209.0	0	3.97
+sanger	2	73756357	70300925	70415890	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.392	249	0	0	398.0	210.0	200.0	4.07
+sanger	3	56100361	281038	283079	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4857	105	1	0	0	0	0	0.39
+sanger	3	56100361	284873	285082	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3459	132	0	0	0	0	0	1.42
+sanger	3	56100361	293647	293928	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4662	133	0	0	0	0	0	0.55
+sanger	3	56100361	2212000	2214063	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.422	171	0	0	0	0	0	1.8
+sanger	3	56100361	7348986	7363096	-	no database match	ARATH|O48722	HO2 Probable inactive heme oxygenase 2, chloroplastic	0.2857	115	0	0	0	0	0	2.74
+sanger	3	56100361	14448802	14519720	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4051	145	0	0	0	0	0	1.77
+sanger	3	56100361	19616894	19690116	+	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2727	261	0	0	165.0	0	0	3.2
+sanger	3	56100361	20056914	20130506	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3306	245	1	0	0	0	0	2.78
+sanger	3	56100361	24242102	24301985	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4115	224	0	0	358.0	175.0	0	4.18
+sanger	3	56100361	31580698	31727816	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4254	228	1	0	0	0	0	2.08
+sanger	3	56100361	33067568	33069054	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.3655	192	0	0	385.0	190.0	181.0	4.18
+sanger	3	56100361	33898248	33905598	+	animal gene	VAULI|H6WB90	ATPase	0.4673	198	0	0	379.0	0	205.0	4.1
+sanger	3	56100361	42803115	42805037	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6468	652	0	0	1112.0	0	0	4.08
+sanger	3	56100361	44933069	45120900	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3759	266	1	0	0	0	0	2.06
+sanger	3	56100361	50389817	50391380	+	plastid fragment (assembly artefact)	UDOFL|psaA		0.9341	521	1	0	0	932.0	857.0	4.15
+sanger	3	56100361	52049799	52080204	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2737	274	2	0	0	0	0	2.86
+sanger	4	42579028	2762213	2863751	+	no database match	CHLRE|A0A2K3DBG1	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4342	228	0	0	0	0	0	1.54
+sanger	4	42579028	4458262	4458723	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.3052	138	0	0	0	0	0	2.01
+sanger	4	42579028	5015978	5027789	+	animal gene	VAULI|H6WB96	Ribosomal protein L3 superfamily protein	0.6327	383	0	0	718.0	514.0	518.0	4.08
+sanger	4	42579028	9916490	9916624	-	no database match	ARATH|Q38929	IPP1 Isopentenyl-diphosphate Delta-isomerase I, chloroplastic	0.3778	45	0	0	0	0	0	0.41
+sanger	4	42579028	13719351	13722145	+	animal gene	UDOFL|cysA		0.3259	215	0	0	373.0	0	0	4.06
+sanger	4	42579028	13733849	13736137	+	animal gene	UDOFL|cysA		0.3924	156	0	0	256.0	0	0	3.97
+sanger	4	42579028	14570532	14608135	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3255	255	0	0	0	0	0	3.29
+sanger	4	42579028	16754134	16850781	+	animal gene	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.346	221	0	0	89.4	0	0	2.81
+sanger	4	42579028	20034065	20040434	-	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6619	139	0	0	236.0	209.0	210.0	4.01
+sanger	4	42579028	20055373	20062375	-	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6806	144	0	0	238.0	215.0	231.0	4.01
+sanger	4	42579028	21036626	21043674	-	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.4023	84	0	0	0	0	0	2.06
+sanger	4	42579028	30347005	30409141	-	animal gene	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4121	181	1	0	44.3	0	0	2.99
+sanger	4	42579028	31140450	31166433	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2576	191	0	0	0	0	0	3.06
+sanger	4	42579028	33707871	33836710	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4598	224	0	0	0	0	0	2.15
+sanger	4	42579028	34168009	34170153	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4011	176	0	0	348.0	255.0	0	4.04
+sanger	4	42579028	34653890	34655785	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6422	652	0	0	1182.0	0	0	4.1
+sanger	4	42579028	35236181	35236417	-	plastid fragment (assembly artefact)	UDOFL|rps14		0.6709	79	0	0	0	67.4	55.8	3.67
+sanger	4	42579028	35236651	35238072	+	plastid fragment (assembly artefact)	UDOFL|atpB		0.945	470	0	0	735.0	802.0	729.0	4.08
+sanger	4	42579028	35238089	35238475	+	plastid fragment (assembly artefact)	UDOFL|atpE		0.8047	128	0	0	0	133.0	103.0	3.91
+sanger	4	42579028	35238868	35239365	+	plastid fragment (assembly artefact)	UDOFL|cemA		0.6242	165	0	0	0	112.0	97.8	3.89
+sanger	4	42579028	35239499	35239630	+	plastid fragment (assembly artefact)	UDOFL|psbN		0.8864	44	0	0	0	88.2	51.6	3.96
+sanger	4	42579028	38137724	38138546	-	no database match	CHLRE|A0A2K3DBG1	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3475	257	0	0	0	0	0	0.77
+sanger	4	42579028	38552694	38557836	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4744	155	0	0	310.0	184.0	187.0	4.05
+sanger	5	30624988	8837021	8855263	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2799	275	2	0	0	0	0	2.15
+sanger	5	30624988	16371861	16374025	-	animal gene	UDOFL|tufA		0.4817	409	0	0	776.0	442.0	453.0	4.1
+sanger	5	30624988	17763262	17790401	+	animal gene	CHLRE|Q39617	PORA Protochlorophyllide reductase, chloroplastic	0.3299	269	0	0	207.0	0	0	4.05
+sanger	5	30624988	18388685	18474298	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.417	223	1	0	0	0	0	1.4
+sanger	5	30624988	23933672	23933899	-	no database match	CHLRE|A0A2K3DBG1	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3185	157	0	0	0	0	0	1.64
+sanger	5	30624988	25994781	26001536	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4512	214	0	0	403.0	199.0	194.0	4.1
+sanger	6	25209903	1305155	1305457	+	plastid fragment (assembly artefact)	UDOFL|rps14		0.85	100	0	0	0	109.0	95.5	3.86
+sanger	6	25209903	1305511	1306170	+	plastid fragment (assembly artefact)	UDOFL|petB		0.9817	219	0	0	0	415.0	383.0	4.1
+sanger	6	25209903	1306195	1312902	+	plastid fragment (assembly artefact)	UDOFL|petD		0.825	160	0	0	0	254.0	235.0	4.01
+sanger	6	25209903	2351700	2435198	+	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2607	280	0	0	82.8	0	0	2.61
+sanger	6	25209903	2440169	2522990	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2986	220	0	0	0	0	0	2.17
+sanger	6	25209903	3663865	3741925	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3417	270	1	0	0	0	0	2.82
+sanger	6	25209903	4547271	4550772	-	no database match	ARATH|Q6NKS4	LIL3.2 Light-harvesting complex-like protein 3 isotype 2, chloroplastic	0.3	70	0	0	0	0	0	3.43
+sanger	6	25209903	10974658	11062512	+	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3143	210	0	0	149.0	0	0	2.54
+sanger	6	25209903	15448804	15461394	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2698	252	0	0	0	0	0	2.38
+sanger	6	25209903	17831727	17832002	-	plastid fragment (assembly artefact)	UDOFL|tufA		0.9783	92	0	0	0	171.0	169.0	3.92
+sanger	6	25209903	17832733	17833836	-	plastid fragment (assembly artefact)	UDOFL|accD		0.6685	343	0	0	0	402.0	312.0	4.1
+sanger	6	25209903	17890858	17968124	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3728	228	0	0	0	0	0	1.91
+sanger	6	25209903	20934599	20945835	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2864	265	2	0	0	0	0	2.59
+sanger	7	23020430	5171458	5171748	-	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.3131	84	0	0	0	0	0	1.48
+sanger	7	23020430	9875555	9895114	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2526	284	0	1	0	0	0	1.41
+sanger	7	23020430	10564437	10649546	-	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3024	247	1	1	58.9	0	0	3.09
+sanger	7	23020430	11178946	11184093	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2629	194	0	0	0	0	0	2.33
+sanger	7	23020430	11651023	11740980	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2587	319	1	0	0	0	0	3.42
+sanger	7	23020430	11988332	12058721	-	animal gene	VAULI|H6WB87	Rab8 Rab8 family GTPase	0.2826	411	0	0	281.0	182.0	172.0	3.51
+sanger	7	23020430	16861361	16936038	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4241	158	0	0	0	0	0	1.78
+sanger	7	23020430	17938728	18095153	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3492	281	0	0	0	0	0	2.29
+sanger	7	23020430	18854923	18927496	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3101	298	1	0	0	0	0	2.92
+sanger	8	19671316	2327675	2389437	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.282	258	0	1	0	0	0	2.47
+sanger	8	19671316	6130263	6130532	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4681	94	0	0	0	0	0	0.81
+sanger	8	19671316	6926516	6928432	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.643	659	0	0	1177.0	0	0	4.08
+sanger	8	19671316	7594179	7664712	+	no database match	VAULI|H6WBB7	Putative NIN-like transcription factor	0.3333	42	0	0	0	0	0	3.63
+sanger	8	19671316	14107917	14141699	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.411	163	0	0	0	0	0	0.51
+sanger	9	19645690	517677	518702	-	plastid fragment (assembly artefact)	UDOFL|rbcL		0.9765	340	0	0	0	644.0	607.0	4.17
+sanger	9	19645690	1851820	1855706	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4474	227	0	0	442.0	400.0	397.0	4.07
+sanger	9	19645690	2473841	2530902	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2921	267	0	0	0	0	0	2.48
+sanger	9	19645690	2842464	2844722	+	plastid fragment (assembly artefact)	UDOFL|psaA		0.9481	751	0	0	0	1363.0	1271.0	4.13
+sanger	9	19645690	2845041	2845523	-	plastid fragment (assembly artefact)	UDOFL|petD		0.9313	160	0	0	0	295.0	269.0	3.99
+sanger	9	19645690	2845548	2846207	-	plastid fragment (assembly artefact)	UDOFL|petB		0.9817	219	0	0	0	415.0	383.0	4.1
+sanger	9	19645690	2846261	2846563	-	plastid fragment (assembly artefact)	UDOFL|rps14		0.85	100	0	0	0	109.0	95.5	3.86
+sanger	9	19645690	2846797	2847615	+	plastid fragment (assembly artefact)	UDOFL|atpB		0.9048	273	0	0	394.0	432.0	402.0	4.03
+sanger	9	19645690	3358968	3361584	-	animal gene	UDOFL|cysA		0.3539	166	0	1	302.0	0	0	4.04
+sanger	9	19645690	3370560	3373189	-	animal gene	UDOFL|cysA		0.3529	217	0	0	358.0	0	0	4.04
+sanger	9	19645690	4777952	4778222	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.2599	92	1	0	0	0	0	1.3
+sanger	9	19645690	5882789	5970628	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2741	269	1	1	0	0	0	2.95
+sanger	9	19645690	8710641	8726610	-	animal gene	VAULI|B9ZZR6	GapC2 Glyceraldehyde-3-phosphate dehydrogenase (Fragment)	0.6393	304	0	0	574.0	432.0	461.0	4.06
+sanger	9	19645690	15611279	15658470	-	animal gene	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.293	198	1	0	98.6	82.0	84.7	2.98
+sanger	9	19645690	17794398	17866694	+	no database match	VAULI|H6WB89	ABC transporter-like protein	0.28	75	0	0	0	0	0	3.91
+sanger	CAWKYH010000129.1	24565	13418	24104	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4035	228	1	0	0	0	0	1.36
+sanger	CAWKYH010000390.1	19649	5279	15255	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6095	527	1	0	722.0	655.0	665.0	4.09
+sanger	CAWKYH010000620.1	99562	98727	99560	+	plastid fragment (assembly artefact)	UDOFL|atpA		0.8561	278	0	0	0	384.0	376.0	4.0
+sanger	CAWKYH010000715.1	19090	2832	9485	-	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.709	134	0	0	251.0	217.0	207.0	4.01
+sanger	CAWKYH010000836.1	13518	12949	13166	-	plastid fragment (assembly artefact)	UDOFL|ccs1		0.7808	73	1	0	0	47.4	0	3.85
+sanger	CAWKYH010000972.1	10042	329	457	-	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.413	46	0	0	0	0	0	2.7
+sanger	CAWKYH010001035.1	14912	1129	2931	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.5273	603	0	0	793.0	0	0	4.09
+sanger	CAWKYH010001155.1	24832	1268	17825	-	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2543	218	0	0	73.9	0	0	3.74
+sanger	CAWKYH010001166.1	288000	279871	280116	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3889	125	0	0	0	0	0	1.56
+sanger	CAWKYH010001228.1	161704	160579	161703	+	plastid fragment (assembly artefact)	UDOFL|orf434		0.6152	375	0	0	0	0	0	3.79
+sanger	CAWKYH010001294.1	11684	8953	9179	+	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.3377	77	1	0	0	0	0	2.57
+sanger	CAWKYH010001349.1	14256	10080	12424	+	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.4024	81	0	0	0	0	0	2.48
+sanger	CAWKYH010001447.1	36837	4574	20336	+	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2981	258	0	0	70.9	0	0	3.13
+sanger	CAWKYH010001897.1	19570	13070	13411	+	no database match	CHLRE|A0A2K3DBG1	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4474	113	0	0	0	0	0	0.78
+sanger	CAWKYH010001941.1	105483	103	31031	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2822	265	1	1	0	0	0	2.79
+sanger	CAWKYH010002091.1	101739	70827	85090	-	no database match	CHLRE|A8I531	CHLRE_05g242000v5 Mg-protoporphyrin IX chelatase	0.2667	90	0	0	0	0	0	3.23
+sanger	CAWKYH010002122.1	193531	159287	178209	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2609	281	1	0	0	0	0	2.48
+sanger	CAWKYH010002246.1	2000	415	1341	-	plastid-only contig	UDOFL|chlI		0.896	298	0	0	0	461.0	431.0	4.04
+sanger	CAWKYH010002246.1	2000	1584	2000	+	plastid-only contig	UDOFL|psbA		0.8993	139	0	0	0	262.0	249.0	4.07
+sanger	CAWKYH010002319.1	157027	40556	45158	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.5139	144	0	0	187.0	153.0	133.0	3.43
+alt	CAWKYI010000145.1	38027	5440	6154	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3812	181	1	0	0	0	0	1.17
+alt	CAWKYI010000171.1	51427	47199	47462	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4019	107	0	0	0	0	0	1.55
+alt	CAWKYI010000192.1	47110	399	3072	-	plastid fragment (assembly artefact)	UDOFL|rpoC1		0.6398	833	2	0	0	472.0	359.0	4.08
+alt	CAWKYI010000280.1	53017	28674	31758	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.372	162	0	0	315.0	253.0	262.0	3.98
+alt	CAWKYI010000335.1	32784	20891	24911	-	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6301	145	0	0	274.0	189.0	203.0	4.03
+alt	CAWKYI010000458.1	38927	12169	14750	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4245	207	0	0	312.0	239.0	213.0	4.15
+alt	CAWKYI010000518.1	46609	21137	42532	+	animal gene	VAULI|H6WB82	cpn60 Chaperonin	0.4117	545	0	0	1000.0	622.0	613.0	3.97
+alt	CAWKYI010000549.1	21533	6184	12140	-	animal gene	VAULI|H6WB87	Rab8 Rab8 family GTPase	0.4176	91	0	0	177.0	136.0	116.0	4.05
+alt	CAWKYI010000655.1	73083	61453	68828	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4625	156	0	0	293.0	196.0	191.0	4.12
+alt	CAWKYI010000835.1	73190	7465	10930	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.3769	185	0	0	390.0	292.0	295.0	4.01
+alt	CAWKYI010000946.1	25381	19514	20078	+	no database match	UDOFL|rpl20		0.3333	47	0	0	0	0	0	3.72
+alt	CAWKYI010001065.1	50879	49298	50360	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3756	197	2	0	0	0	0	1.33
+alt	CAWKYI010001384.1	76217	58406	65162	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4512	214	0	0	403.0	199.0	194.0	4.1
+alt	CAWKYI010001489.1	22120	3	440	-	plastid fragment (assembly artefact)	UDOFL|chlI		0.8846	130	0	0	0	209.0	197.0	3.86
+alt	CAWKYI010001489.1	22120	645	1706	+	plastid fragment (assembly artefact)	UDOFL|psbA		0.9377	353	0	0	0	665.0	629.0	4.08
+alt	CAWKYI010001650.1	24623	4722	9700	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3702	181	0	0	0	0	0	2.46
+alt	CAWKYI010001881.1	25165	16034	18235	+	animal gene	UDOFL|cysA		0.3935	150	0	0	204.0	0	0	4.06
+alt	CAWKYI010001896.1	32533	24022	25508	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.3655	192	0	0	385.0	190.0	181.0	4.18
+alt	CAWKYI010001960.1	27135	7172	7396	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4286	112	0	0	0	0	0	0.2
+alt	CAWKYI010001965.1	179726	132187	140971	+	animal gene	UDOFL|atpB		0.6872	470	0	0	897.0	704.0	717.0	4.03
+alt	CAWKYI010001966.1	12466	5225	5512	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4479	95	0	0	0	0	0	1.06
+alt	CAWKYI010002147.1	94158	43747	47254	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4365	197	0	0	387.0	351.0	325.0	4.01
+alt	CAWKYI010002217.1	34090	7201	7620	+	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.5479	145	0	0	219.0	174.0	176.0	4.18
+alt	CAWKYI010002421.1	31521	3700	15504	+	animal gene	VAULI|H6WB96	Ribosomal protein L3 superfamily protein	0.6327	383	0	0	718.0	514.0	518.0	4.08
+alt	CAWKYI010002447.1	39803	63	1124	+	plastid fragment (assembly artefact)	UDOFL|psbA		0.9377	353	0	0	0	665.0	629.0	4.08
+alt	CAWKYI010002457.1	38829	8621	16239	+	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6875	144	0	0	243.0	218.0	229.0	4.01
+alt	CAWKYI010002457.1	38829	28440	37060	+	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6979	96	0	0	175.0	154.0	158.0	3.98
+alt	CAWKYI010002496.1	26769	21092	21328	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4737	95	0	0	0	0	0	0.99
+alt	CAWKYI010002658.1	17245	14	211	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.3529	60	0	0	0	0	0	1.32
+alt	CAWKYI010002916.1	45672	37391	45156	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4062	224	0	0	0	0	0	1.48
+alt	CAWKYI010003078.1	33987	8482	8793	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4326	141	0	0	0	0	0	0.64
+alt	CAWKYI010003125.1	84160	28337	31954	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.5333	150	0	0	301.0	200.0	0	4.18
+alt	CAWKYI010003135.1	65506	63624	63839	+	plastid fragment (assembly artefact)	UDOFL|rpl2		0.8732	71	0	0	0	113.0	110.0	3.76
+alt	CAWKYI010003135.1	65506	63840	64121	+	plastid fragment (assembly artefact)	UDOFL|rps19		0.8602	93	0	0	0	124.0	120.0	3.9
+alt	CAWKYI010003135.1	65506	64132	64782	+	plastid fragment (assembly artefact)	UDOFL|rps3		0.6912	211	0	0	0	174.0	167.0	4.01
+alt	CAWKYI010003135.1	65506	64798	65504	+	plastid fragment (assembly artefact)	UDOFL|rpl16		0.8881	134	0	0	0	179.0	181.0	4.01
+alt	CAWKYI010003145.1	50361	15930	34509	+	animal gene	VAULI|H6WB86	ThrRS Probable threonine--tRNA ligase, cytoplasmic	0.5112	670	0	0	1210.0	719.0	769.0	4.22
+alt	CAWKYI010003256.1	36619	23730	25664	+	animal gene	UDOFL|cysA		0.391	150	0	0	286.0	0	0	4.01
+alt	CAWKYI010003316.1	50505	30624	39093	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4256	193	0	0	382.0	293.0	278.0	4.02
+alt	CAWKYI010003440.1	37271	331	591	-	plastid fragment (assembly artefact)	UDOFL|psbH		0.8378	74	0	0	0	102.0	88.6	3.9
+alt	CAWKYI010003440.1	37271	773	1657	-	plastid fragment (assembly artefact)	UDOFL|psbB		0.9418	292	0	0	0	493.0	459.0	4.12
+alt	CAWKYI010003455.1	36020	14792	21352	-	animal gene	VAULI|H6WBB6	Myotubularin phosphatase domain-containing protein	0.4177	395	0	0	739.0	0	0	4.22
+alt	CAWKYI010003521.1	79549	45275	62102	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4087	229	0	0	335.0	306.0	312.0	3.99
+alt	CAWKYI010003622.1	54923	30875	37349	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.4144	371	0	0	643.0	288.0	285.0	4.06
+alt	CAWKYI010003845.1	19305	1949	4202	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4191	136	0	0	264.0	231.0	233.0	4.02
+alt	CAWKYI010004096.1	61235	3253	32427	+	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2661	210	0	1	79.0	0	0	3.53
+alt	CAWKYI010004147.1	70583	63148	66540	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.6331	169	0	0	316.0	235.0	226.0	4.07
+alt	CAWKYI010004267.1	27027	7342	10206	+	animal gene	UDOFL|cysA		0.3408	215	0	0	366.0	0	0	4.07
+alt	CAWKYI010004539.1	40341	3168	10854	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4918	423	0	0	801.0	546.0	529.0	4.1
+alt	CAWKYI010004614.1	86496	20563	29287	+	animal gene	VAULI|D7P7V4	uroD Uroporphyrinogen decarboxylase (Fragment)	0.32	342	0	0	687.0	0	359.0	4.15
+alt	CAWKYI010004728.1	36748	13502	13921	+	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.5548	145	0	0	223.0	174.0	176.0	4.19
+alt	CAWKYI010005222.1	20700	3202	12249	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3864	215	0	0	0	0	0	2.46
+alt	CAWKYI010005306.1	23350	17551	19721	-	animal gene	UDOFL|tufA		0.4817	409	0	0	776.0	442.0	453.0	4.1
+alt	CAWKYI010005363.1	21034	11015	12167	+	animal gene	VAULI|D7P7W4	spds Spermidine synthase (Fragment)	0.6081	74	0	0	151.0	105.0	112.0	4.01
+alt	CAWKYI010005439.1	31216	23971	25252	-	animal gene	UDOFL|cysA		0.3654	147	0	0	273.0	0	0	4.05
+alt	CAWKYI010005671.1	16010	7319	16008	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3197	122	0	0	0	0	0	1.51
+alt	CAWKYI010005693.1	8126	4871	5047	+	animal gene	UDOFL|cysA		0.5424	56	0	0	90.9	0	0	3.73
+alt	CAWKYI010005714.1	29437	22496	23155	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.308	186	0	0	0	0	0	2.18
+alt	CAWKYI010005763.1	15356	7766	12972	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6149	616	0	0	1158.0	853.0	810.0	4.04
+alt	CAWKYI010005785.1	17864	17300	17729	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4	132	1	0	0	0	0	1.59
+alt	CAWKYI010005799.1	20635	19103	20350	-	plastid fragment (assembly artefact)	UDOFL|orf434		0.6376	410	0	0	0	0	0	3.86
+alt	CAWKYI010006099.1	31187	9362	20400	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.5186	533	0	0	1001.0	776.0	776.0	4.04
+alt	CAWKYI010006160.1	21545	1333	2325	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3947	228	0	0	0	0	0	1.37
+alt	CAWKYI010006464.1	44319	43473	43859	+	plastid fragment (assembly artefact)	UDOFL|atpA		0.8397	131	0	0	0	157.0	134.0	3.85
+alt	CAWKYI010006464.1	44319	43871	44319	-	plastid fragment (assembly artefact)	UDOFL|ycf4		0.8725	149	1	0	0	159.0	129.0	3.9
+alt	CAWKYI010006527.1	32718	3770	5978	+	animal gene	UDOFL|cysA		0.324	215	1	2	237.0	0	181.0	3.98
+alt	CAWKYI010006527.1	32718	28838	30044	+	animal gene	UDOFL|cysA		0.3907	147	0	0	271.0	0	0	4.03
+alt	CAWKYI010006737.1	19849	1872	12554	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.3636	214	0	0	276.0	132.0	134.0	4.02
+alt	CAWKYI010006749.1	18433	17475	17950	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3827	174	1	0	0	0	0	0.96
+alt	CAWKYI010006823.1	14869	2839	4002	+	animal gene	UDOFL|tufA		0.4876	400	0	0	722.0	0	421.0	4.09
+alt	CAWKYI010006851.1	55029	10819	14732	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4474	227	0	0	442.0	400.0	397.0	4.07
+alt	CAWKYI010006857.1	19648	8982	13318	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3896	154	0	0	0	0	0	1.43
+alt	CAWKYI010007193.1	29472	6977	9318	-	animal gene	UDOFL|rpoC2		0.3476	185	0	0	250.0	143.0	123.0	4.13
+alt	CAWKYI010007392.1	14329	5690	8546	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4458	165	0	0	284.0	250.0	240.0	4.07
+alt	CAWKYI010007802.1	33375	5697	8354	+	animal gene	UDOFL|cysA		0.3947	150	0	0	273.0	0	0	4.0
+alt	CAWKYI010008144.1	26069	22875	23042	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.375	56	0	0	0	0	0	1.35
+alt	CAWKYI010008204.1	15069	8524	12252	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4011	176	0	0	348.0	255.0	0	4.04
+alt	CAWKYI010008288.1	14813	1178	8527	-	animal gene	VAULI|H6WB90	ATPase	0.4673	198	0	0	379.0	0	205.0	4.1
+alt	CAWKYI010008551.1	16615	4178	10976	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4286	203	0	0	357.0	249.0	258.0	4.07
+alt	CAWKYI010008591.1	16721	576	1992	-	animal gene	UDOFL|cysA		0.4052	150	0	0	264.0	0	0	4.01
+alt	CAWKYI010008591.1	16721	9264	11555	-	animal gene	UDOFL|cysA		0.366	153	0	0	146.0	0	0	3.87
+alt	CAWKYI010008831.1	13104	6852	7598	+	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.3093	91	0	0	0	0	0	3.12
+alt	CAWKYI010008904.1	17802	13159	16890	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4862	177	0	0	334.0	209.0	0	4.04
+alt	CAWKYI010009074.1	20947	2465	2587	+	animal gene	UDOFL|cysA		0.4878	41	0	0	82.4	57.4	59.7	3.65
+alt	CAWKYI010009812.1	20330	12644	18577	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.5376	606	4	0	1098.0	725.0	702.0	4.05
+alt	CAWKYI010009879.1	11187	3672	10333	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4322	159	1	0	0	0	0	0.93
+alt	CAWKYI010009960.1	29717	10878	20972	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4181	177	1	0	0	0	0	1.0
+alt	CAWKYI010009973.1	46017	20755	22677	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6468	652	0	0	1112.0	0	0	4.08
+alt	CAWKYI010010186.1	20683	7148	20509	+	animal gene	VAULI|B9ZZR6	GapC2 Glyceraldehyde-3-phosphate dehydrogenase (Fragment)	0.6118	304	0	0	525.0	419.0	439.0	4.07
+alt	CAWKYI010010312.1	20775	6570	15880	-	animal gene	UDOFL|atpA		0.5643	488	0	0	946.0	724.0	722.0	4.03
+alt	CAWKYI010010367.1	11031	3648	6264	-	animal gene	UDOFL|cysA		0.3539	166	0	1	302.0	0	0	4.04
+alt	CAWKYI010010539.1	33031	19593	22070	-	animal gene	VAULI|H6WBB5	Major facilitator superfamily (MFS) profile domain-containing protein	0.4156	77	0	0	147.0	80.9	0	3.75
+alt	CAWKYI010012034.1	13203	11606	11935	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3256	129	0	0	0	0	0	1.17
+alt	CAWKYI010012146.1	8572	5331	7947	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4296	142	0	0	276.0	146.0	144.0	4.08
+alt	CAWKYI010012164.1	11663	3862	4084	-	no database match	ARATH|O49668	PAM68 Protein PAM68, chloroplastic	0.3702	77	1	0	0	0	0	3.55
+alt	CAWKYI010012169.1	12891	10318	10650	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4505	111	0	0	0	0	0	0.79
+alt	CAWKYI010012366.1	13507	2529	2891	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.391	128	0	0	0	0	0	1.35
+alt	CAWKYI010012392.1	21618	5949	6071	-	no database match	ARATH|Q38929	IPP1 Isopentenyl-diphosphate Delta-isomerase I, chloroplastic	0.3415	41	0	0	0	0	0	1.13
+alt	CAWKYI010012811.1	10488	135	3814	+	no database match	ARATH|Q6NKS4	LIL3.2 Light-harvesting complex-like protein 3 isotype 2, chloroplastic	0.3	70	0	0	0	0	0	3.43
+alt	CAWKYI010013009.1	270668	268598	269659	+	plastid fragment (assembly artefact)	UDOFL|psbA		0.9377	353	0	0	0	665.0	629.0	4.08
+alt	CAWKYI010013183.1	34280	1632	9490	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3867	252	1	0	0	0	0	1.17
+alt	CAWKYI010013363.1	27400	34	19164	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2965	281	3	0	0	0	0	3.03
+alt	CAWKYI010013456.1	61724	5216	8439	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4048	168	1	0	0	0	0	1.48
+alt	CAWKYI010013476.1	37078	18804	19022	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.28	75	0	0	0	0	0	1.25
+alt	CAWKYI010014082.1	39451	31124	32660	+	animal gene	UDOFL|cysA		0.3933	147	0	0	256.0	0	0	4.07
+alt	CAWKYI010014082.1	39451	38346	39439	+	animal gene	UDOFL|cysA		0.404	150	0	0	247.0	0	0	4.01
+alt	CAWKYI010014109.1	31285	485	31226	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2765	254	0	2	0	0	0	2.97
+alt	CAWKYI010014291.1	19313	17702	19259	-	plastid fragment (assembly artefact)	UDOFL|ftsH		0.3974	510	2	0	80.5	165.0	75.5	4.02
+alt	CAWKYI010014412.1	12921	3994	7973	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3896	240	1	0	0	0	0	1.77
+alt	CAWKYI010014413.1	19661	14120	16036	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.643	659	0	0	1176.0	0	0	4.08
+alt	CAWKYI010014511.1	23984	2	305	-	plastid fragment (assembly artefact)	UDOFL|rpl16		0.9079	101	1	0	0	142.0	144.0	3.99
+alt	CAWKYI010014511.1	23984	321	971	-	plastid fragment (assembly artefact)	UDOFL|rps3		0.6912	211	0	0	0	174.0	167.0	4.01
+alt	CAWKYI010014511.1	23984	982	1265	-	plastid fragment (assembly artefact)	UDOFL|rps19		0.8191	93	1	1	0	123.0	117.0	3.87
+alt	CAWKYI010014595.1	132653	5250	93336	+	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2786	260	0	0	137.0	0	0	2.8
+purdue	JAWDGP010000029.1	1057831	37838	46624	-	animal gene	UDOFL|atpB		0.6872	470	0	0	897.0	704.0	717.0	4.03
+purdue	JAWDGP010000041.1	163750	68494	121547	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2824	285	0	0	0	0	0	2.34
+purdue	JAWDGP010000077.1	1018964	783817	787012	-	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6691	139	0	0	279.0	223.0	217.0	4.01
+purdue	JAWDGP010000148.1	373656	370061	371863	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.5273	603	0	0	793.0	0	0	4.09
+purdue	JAWDGP010000167.1	838679	438949	449390	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4486	394	0	0	765.0	466.0	444.0	4.07
+purdue	JAWDGP010000235.1	34067	17330	27428	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4256	193	0	0	382.0	293.0	278.0	4.02
+purdue	JAWDGP010000260.1	1362311	1184960	1264122	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3613	191	0	0	0	0	0	2.01
+purdue	JAWDGP010000296.1	38656	5315	20232	+	alga-like	UDOFL|rpoC1		0.4477	622	2	1	0	446.0	375.0	4.07
+purdue	JAWDGP010000422.1	1914647	1764430	1790855	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3063	269	0	0	0	0	0	2.87
+purdue	JAWDGP010000502.1	1108154	615808	624519	-	animal gene	VAULI|D7P7V4	uroD Uroporphyrinogen decarboxylase (Fragment)	0.32	342	0	0	689.0	0	360.0	4.15
+purdue	JAWDGP010000505.1	534078	172438	234713	-	animal gene	ARATH|Q9SJE1	CHLD Magnesium-chelatase subunit ChlD, chloroplastic	0.2724	246	0	0	155.0	0	0	3.71
+purdue	JAWDGP010000593.1	2460607	303670	394952	-	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.3981	108	0	0	0	0	0	1.83
+purdue	JAWDGP010000706.1	158166	91136	100462	-	animal gene	UDOFL|atpA		0.5643	488	0	0	946.0	724.0	722.0	4.03
+purdue	JAWDGP010000740.1	1130298	677523	679687	-	animal gene	UDOFL|tufA		0.4817	409	0	0	776.0	442.0	453.0	4.1
+purdue	JAWDGP010000750.1	3999347	3162477	3202854	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2669	280	0	0	0	0	0	1.88
+purdue	JAWDGP010000919.1	429189	51195	138661	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4698	210	0	0	330.0	204.0	0	3.84
+purdue	JAWDGP010000962.1	157004	31315	76627	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.5411	229	0	0	345.0	243.0	237.0	4.06
+purdue	JAWDGP010001043.1	125702	6190	91133	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2666	303	1	0	0	0	0	3.02
+purdue	JAWDGP010001067.1	130901	56633	56891	-	microbe-like	UDOFL|rps12		0.834	86	1	0	0	154.0	156.0	3.79
+purdue	JAWDGP010001067.1	130901	114025	114510	-	alga-like	BRYO|D0EVP7	ycf3 Photosystem I assembly protein Ycf3	0.8704	162	0	0	0	241.0	202.0	4.03
+purdue	JAWDGP010001087.1	1702852	56136	58031	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6468	652	0	0	1170.0	0	0	4.09
+purdue	JAWDGP010001087.1	1702852	475108	476594	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.3655	192	0	0	385.0	190.0	181.0	4.18
+purdue	JAWDGP010001087.1	1702852	1132397	1223057	+	no database match	VAULI|H6WBC2	Uncharacterized protein	0.3203	145	0	0	0	0	0	3.73
+purdue	JAWDGP010001174.1	184633	11682	15156	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4748	138	0	0	269.0	157.0	164.0	4.06
+purdue	JAWDGP010001250.1	76989	49957	50615	-	alga-like	UDOFL|cysA		0.6373	216	2	0	0	291.0	284.0	4.05
+purdue	JAWDGP010001250.1	76989	56769	57589	-	alga-like	UDOFL|accD		0.6971	272	1	0	0	433.0	343.0	4.13
+purdue	JAWDGP010001262.1	412327	370375	377707	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4625	156	0	0	293.0	196.0	191.0	4.12
+purdue	JAWDGP010001264.1	275103	134385	143090	-	no database match	ARATH|Q38929	IPP1 Isopentenyl-diphosphate Delta-isomerase I, chloroplastic	0.3265	94	0	0	0	0	0	2.05
+purdue	JAWDGP010001272.1	36567	24711	27800	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.372	162	0	0	315.0	253.0	262.0	3.98
+purdue	JAWDGP010001375.1	21862	17674	17805	+	alga-like	UDOFL|psbN		0.8182	44	0	0	0	85.9	55.8	3.87
+purdue	JAWDGP010001379.1	364956	23762	23884	-	animal gene	UDOFL|cysA		0.4878	41	0	0	82.4	57.4	59.7	3.65
+purdue	JAWDGP010001389.1	1176704	66052	92367	+	no database match	ARATH|Q9M591	CRD1 Magnesium-protoporphyrin IX monomethyl ester [oxidative] cyclase, chloroplastic	0.3226	62	0	0	0	0	0	3.72
+purdue	JAWDGP010001450.1	94740	2553	3441	-	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.2739	239	0	0	0	0	0	2.17
+purdue	JAWDGP010001473.1	1898939	794492	799715	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4512	214	0	0	422.0	379.0	373.0	4.02
+purdue	JAWDGP010001536.1	285807	231289	234753	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.3769	185	0	0	390.0	292.0	295.0	4.01
+purdue	JAWDGP010001539.1	982462	558070	583930	+	animal gene	VAULI|H6WB86	ThrRS Probable threonine--tRNA ligase, cytoplasmic	0.5112	670	0	0	1210.0	719.0	769.0	4.22
+purdue	JAWDGP010001549.1	743165	167374	175480	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2529	257	0	1	0	0	0	1.22
+purdue	JAWDGP010001550.1	1176208	812643	886235	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2708	283	1	0	0	0	0	2.4
+purdue	JAWDGP010001578.1	63317	4507	10290	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.396	149	0	0	251.0	125.0	125.0	4.06
+purdue	JAWDGP010001627.1	314556	289473	293524	-	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6301	145	0	0	274.0	189.0	203.0	4.03
+purdue	JAWDGP010001640.1	61791	40526	61771	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.292	254	2	0	0	0	0	2.59
+purdue	JAWDGP010001678.1	2029404	1308714	1309351	-	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.2958	207	1	0	0	0	0	1.98
+purdue	JAWDGP010001678.1	2029404	1860437	1952028	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2837	285	0	0	0	0	0	2.35
+purdue	JAWDGP010001684.1	4997	73	445	+	alga-like	UDOFL|rpoC1		0.6568	121	3	1	0	45.8	0	3.97
+purdue	JAWDGP010001707.1	585798	512133	519461	+	animal gene	VAULI|H6WB90	ATPase	0.4673	198	0	0	379.0	0	205.0	4.1
+purdue	JAWDGP010001796.1	650834	54204	103486	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2838	285	0	1	0	0	0	2.37
+purdue	JAWDGP010001944.1	370033	3538	36924	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.3909	220	0	0	412.0	210.0	200.0	4.06
+purdue	JAWDGP010001967.1	152999	45548	53226	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4918	423	0	0	801.0	546.0	529.0	4.1
+purdue	JAWDGP010002014.1	619025	168410	183897	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2525	198	0	0	0	0	0	2.28
+purdue	JAWDGP010002080.1	54708	7235	30209	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3262	135	0	0	0	0	0	1.59
+purdue	JAWDGP010002092.1	304774	2435	72085	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.302	147	0	0	0	0	0	1.54
+purdue	JAWDGP010002130.1	55580	33408	33679	-	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.4271	97	2	0	0	0	0	2.45
+purdue	JAWDGP010002135.1	22502	19838	22039	-	alga-like	UDOFL|rpoB_2		0.4631	514	17	0	0	458.0	429.0	4.08
+purdue	JAWDGP010002183.1	18025	1438	3123	-	alga-like	UDOFL|chlB		0.7719	499	4	0	0	808.0	787.0	4.19
+purdue	JAWDGP010002289.1	381181	247780	249925	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4011	176	0	0	348.0	255.0	0	4.04
+purdue	JAWDGP010002540.1	4927	46	4919	+	plastid-only contig	UDOFL|ftsH		0.3106	1469	25	2	0	0	0	3.93
+purdue	JAWDGP010002695.1	169839	103605	132051	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.308	263	0	0	0	0	0	0.61
+purdue	JAWDGP010002732.1	713221	447640	544913	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2686	327	1	0	0	0	0	2.88
+purdue	JAWDGP010002751.1	603557	403357	426244	+	animal gene	VAULI|H6WB82	cpn60 Chaperonin	0.4117	545	0	0	1001.0	624.0	614.0	3.96
+purdue	JAWDGP010002764.1	203706	189810	195891	-	animal gene	CHLRE|Q39617	PORA Protochlorophyllide reductase, chloroplastic	0.2895	226	0	0	175.0	0	0	3.2
+purdue	JAWDGP010002824.1	980815	718713	748629	+	animal gene	UDOFL|cysA		0.396	145	0	0	260.0	0	0	4.01
+purdue	JAWDGP010002890.1	1167745	181073	222668	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2699	285	0	1	0	0	0	2.67
+purdue	JAWDGP010002977.1	401579	36128	48136	-	animal gene	VAULI|H6WB96	Ribosomal protein L3 superfamily protein	0.6327	383	0	0	718.0	514.0	518.0	4.08
+purdue	JAWDGP010003139.1	1471998	686254	739774	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2662	278	0	0	0	0	0	2.75
+purdue	JAWDGP010003173.1	1564804	700756	702999	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4191	136	0	0	264.0	231.0	233.0	4.02
+purdue	JAWDGP010003189.1	215649	6362	24869	+	animal gene	VAULI|B9ZZR6	GapC2 Glyceraldehyde-3-phosphate dehydrogenase (Fragment)	0.6393	304	0	0	574.0	432.0	461.0	4.06
+purdue	JAWDGP010003199.1	537835	449266	507795	-	no database match	ARATH|Q38929	IPP1 Isopentenyl-diphosphate Delta-isomerase I, chloroplastic	0.3824	68	0	0	0	0	0	2.54
+purdue	JAWDGP010003279.1	4642	60	4641	+	plastid-only contig	UDOFL|ftsH		0.2905	1471	3	0	0	0	0	3.96
+purdue	JAWDGP010003406.1	633797	281026	411772	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3248	215	1	0	0	0	0	2.1
+purdue	JAWDGP010003469.1	1181968	631380	674437	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3083	246	0	0	0	0	0	2.43
+purdue	JAWDGP010003560.1	549029	364682	454930	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2645	310	0	0	0	0	0	3.32
+purdue	JAWDGP010003707.1	155944	131	4181	-	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.2837	108	0	0	0	0	0	2.48
+purdue	JAWDGP010004054.1	760406	4396	95058	+	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.25	278	2	1	49.3	0	0	2.14
+purdue	JAWDGP010004098.1	1246787	970998	999669	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2627	268	1	0	0	0	0	3.48
+purdue	JAWDGP010004098.1	1246787	1051121	1144477	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3241	263	3	2	0	0	0	3.08
+purdue	JAWDGP010004108.1	236707	9730	12256	-	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.3256	157	0	0	0	0	0	1.65
+purdue	JAWDGP010004109.1	366950	249686	265593	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.3933	239	0	0	355.0	249.0	258.0	3.94
+purdue	JAWDGP010004109.1	366950	364523	365629	-	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.3723	168	0	0	0	0	0	1.63
+purdue	JAWDGP010004118.1	517657	29170	83959	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4292	207	0	0	312.0	240.0	213.0	3.99
+purdue	JAWDGP010004170.1	3062548	2295607	2299617	-	animal gene	UDOFL|rpoC1		0.3553	151	0	0	234.0	174.0	165.0	4.2
+purdue	JAWDGP010004190.1	1078946	657144	659999	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4458	165	0	0	284.0	250.0	240.0	4.07
+purdue	JAWDGP010004208.1	1035828	490348	492243	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6468	652	0	0	1185.0	0	0	4.09
+purdue	JAWDGP010004222.1	400708	137634	190775	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2689	276	1	1	0	0	0	2.22
+purdue	JAWDGP010004263.1	3994179	69548	75666	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.5385	606	0	0	1111.0	728.0	705.0	4.06
+purdue	JAWDGP010004466.1	990729	80696	100452	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2878	262	0	0	0	0	0	2.89
+purdue	JAWDGP010004531.1	27451	7321	7740	+	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.5479	145	0	0	223.0	173.0	174.0	4.19
+purdue	JAWDGP010004573.1	1004711	614222	616144	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6468	652	0	0	1112.0	0	0	4.08
+purdue	JAWDGP010004663.1	58229	16322	18364	+	alga-like	UDOFL|atpI		0.7642	244	1	0	0	374.0	334.0	3.95
+purdue	JAWDGP010004663.1	58229	39292	39481	+	alga-like	BRYO|D0EVT4	psbZ Photosystem II reaction center protein Z	0.754	62	1	0	0	92.8	67.0	3.48
+purdue	JAWDGP010004793.1	25917	1686	4027	+	animal gene	UDOFL|rpoC2		0.3476	185	0	0	250.0	143.0	124.0	4.14
+purdue	JAWDGP010004964.1	975754	2842	9537	+	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.7174	138	0	0	256.0	223.0	215.0	4.03
+purdue	JAWDGP010005039.1	68207	15349	26870	+	alga-like	UDOFL|ftsH		0.282	803	4	1	142.0	246.0	144.0	4.04
+purdue	JAWDGP010005039.1	68207	47788	47922	+	alga-like	BRYO|D0EVU6	psbK Photosystem II reaction center protein K	0.8182	43	2	0	0	70.9	62.0	3.59
+purdue	JAWDGP010005140.1	75606	33886	41036	+	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6875	144	0	0	243.0	218.0	229.0	4.01
+purdue	JAWDGP010005140.1	75606	54418	63047	+	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6619	139	0	0	236.0	209.0	210.0	4.01
+purdue	JAWDGP010005190.1	510425	48724	96022	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3422	225	1	0	0	0	0	1.64
+purdue	JAWDGP010005207.1	240806	85676	129932	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.807	171	0	0	339.0	283.0	263.0	4.06
+purdue	JAWDGP010005301.1	1723348	355991	357065	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4834	151	0	0	293.0	258.0	254.0	3.94
+purdue	JAWDGP010005352.1	1350865	679389	679691	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.283	106	0	0	0	0	0	1.16
+purdue	JAWDGP010005366.1	252370	44905	51393	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.4144	371	0	0	643.0	290.0	285.0	4.05
+purdue	JAWDGP010005428.1	376861	58486	59559	+	animal gene	CHLRE|A8I531	CHLRE_05g242000v5 Mg-protoporphyrin IX chelatase	0.3178	80	0	0	47.4	0	0	3.09
+purdue	JAWDGP010005530.1	656326	393547	404575	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.5186	533	0	0	1001.0	776.0	776.0	4.04
+purdue	JAWDGP010005567.1	296072	4003	16966	-	animal gene	VAULI|B9ZZR6	GapC2 Glyceraldehyde-3-phosphate dehydrogenase (Fragment)	0.6118	304	0	0	525.0	419.0	439.0	4.07
+purdue	JAWDGP010005602.1	856708	235361	237254	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.63	652	1	1	1063.0	0	0	4.08
+purdue	JAWDGP010005634.1	30561	5001	5586	+	alga-like	UDOFL|clpP		0.75	196	2	0	0	307.0	243.0	4.09
+purdue	JAWDGP010005636.1	80184	7101	74592	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3453	223	0	0	0	0	0	0.88
+purdue	JAWDGP010005712.1	634282	314366	318349	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2835	254	0	0	0	0	0	2.14
+purdue	JAWDGP010005741.1	390049	313674	313850	-	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.339	52	0	0	0	0	0	0.88
+purdue	JAWDGP010005966.1	250336	117514	201208	-	no database match	CHLRE|A8I531	CHLRE_05g242000v5 Mg-protoporphyrin IX chelatase	0.2667	90	0	0	0	0	0	3.18
+purdue	JAWDGP010006072.1	157771	30903	55591	-	alga-like	BRYO|A0A2P0QH85	psbH Photosystem II reaction center protein H	0.7364	71	1	0	0	103.0	87.4	3.97
+purdue	JAWDGP010006072.1	157771	61774	61899	-	alga-like	CHLRE|P59777	psaJ Photosystem I reaction center subunit IX	0.8293	41	0	0	0	78.2	60.1	3.86
+purdue	JAWDGP010006072.1	157771	69737	69865	-	alga-like	CHLRE|O19930	psbJ Photosystem II reaction center protein J	0.8333	42	0	0	0	75.9	53.5	3.55
+purdue	JAWDGP010006072.1	157771	76848	76970	-	alga-like	UDOFL|psbL		0.875	40	0	0	0	74.7	58.5	3.76
+purdue	JAWDGP010006072.1	157771	79524	79772	-	alga-like	BRYO|A0A0D6E1E6	psbE Cytochrome b559 subunit alpha	0.9268	82	0	0	0	160.0	139.0	4.05
+purdue	JAWDGP010006072.1	157771	106724	107346	+	alga-like	UDOFL|rps4		0.4662	208	4	0	0	179.0	179.0	4.01
+purdue	JAWDGP010006093.1	22231	11832	13060	+	alga-like	UDOFL|tufA		0.7891	409	3	0	0	688.0	661.0	4.08
+purdue	JAWDGP010006101.1	269054	197144	199060	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.643	659	0	0	1176.0	0	0	4.08
+purdue	JAWDGP010006134.1	236311	81840	99167	+	animal gene	VAULI|H6WBB5	Major facilitator superfamily (MFS) profile domain-containing protein	0.3466	321	0	1	447.0	175.0	0	4.06
+purdue	JAWDGP010006150.1	127254	106878	110366	+	no database match	ARATH|Q6NKS4	LIL3.2 Light-harvesting complex-like protein 3 isotype 2, chloroplastic	0.2857	70	0	0	0	0	0	3.48
+purdue	JAWDGP010006183.1	291373	4300	88876	+	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.3942	99	0	1	0	0	0	2.78
+purdue	JAWDGP010006314.1	229723	14125	20822	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4512	214	0	0	403.0	199.0	194.0	4.1
+purdue	JAWDGP010006349.1	261733	2756	71090	-	no database match	VAULI|H6WBB7	Putative NIN-like transcription factor	0.3333	42	0	0	0	0	0	3.63
+purdue	JAWDGP010006400.1	75587	30096	73696	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2606	284	0	0	0	0	0	1.77
+purdue	JAWDGP010006830.1	241844	98548	191749	-	animal gene	VAULI|H6WB87	Rab8 Rab8 family GTPase	0.3028	303	0	0	271.0	182.0	166.0	3.98
+purdue	JAWDGP010006834.1	2192584	27669	86101	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4115	224	0	0	358.0	175.0	0	4.18
+purdue	JAWDGP010006848.1	1141972	977018	1075367	-	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3019	268	1	1	95.9	0	0	3.16
+purdue	JAWDGP010006885.1	764441	657884	666044	-	animal gene	ARATH|Q38929	IPP1 Isopentenyl-diphosphate Delta-isomerase I, chloroplastic	0.4947	275	0	1	447.0	246.0	270.0	4.03
+purdue	JAWDGP010006893.1	101747	18994	31450	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6174	527	0	0	726.0	665.0	676.0	4.08
+purdue	JAWDGP010006893.1	101747	39569	45758	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6985	659	0	0	1212.0	946.0	938.0	4.08
+purdue	JAWDGP010006957.1	745572	629254	630417	+	animal gene	UDOFL|tufA		0.49	400	0	0	720.0	0	422.0	4.09
+purdue	JAWDGP010007174.1	986431	537283	540893	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.5333	150	0	0	301.0	200.0	0	4.18
+purdue	JAWDGP010007175.1	149436	11437	13309	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6015	652	1	1	1004.0	0	0	4.09
+purdue	JAWDGP010007194.1	484238	262305	309074	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3385	195	0	0	0	0	0	2.47
+purdue	JAWDGP010007236.1	1471750	621179	747984	+	animal gene	VAULI|H6WBA2	RRM domain-containing protein	0.5283	210	0	0	197.0	156.0	123.0	3.21
+purdue	JAWDGP010007329.1	1893042	1349455	1437948	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2776	276	0	0	0	0	0	2.03
+purdue	JAWDGP010007412.1	2374843	2004747	2004896	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.3519	54	0	0	0	0	0	0.9
+purdue	JAWDGP010007415.1	514241	340405	345609	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6149	616	0	0	1158.0	853.0	810.0	4.04
+purdue	JAWDGP010007464.1	314399	283723	287950	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4313	160	0	0	318.0	164.0	158.0	4.08
+purdue	JAWDGP010007594.1	106295	18102	34939	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4087	229	0	0	335.0	306.0	312.0	3.99
+purdue	JAWDGP010007769.1	6042	4076	4590	-	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.3786	168	2	0	0	0	0	1.81
+purdue	JAWDGP010007897.1	1032104	327944	331949	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.3052	137	0	0	0	0	0	1.92
+purdue	JAWDGP010007919.1	785729	500576	504083	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4365	197	0	0	387.0	351.0	325.0	4.01
+purdue	JAWDGP010008076.1	153798	45965	72196	-	animal gene	VAULI|B9ZZR6	GapC2 Glyceraldehyde-3-phosphate dehydrogenase (Fragment)	0.585	304	0	0	409.0	367.0	395.0	4.06
+purdue	JAWDGP010008080.1	430130	164660	165224	-	no database match	UDOFL|rpl20		0.3333	47	0	0	0	0	0	3.72
+purdue	JAWDGP010008106.1	1373057	911193	955918	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2684	272	0	0	0	0	0	2.52
+tampa	CFHGKC010000017.1	851773	35975	44771	-	animal gene	UDOFL|atpB		0.6872	470	0	0	895.0	705.0	718.0	4.03
+tampa	CFHGKC010000046.1	992723	755317	758524	-	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6414	145	0	0	276.0	222.0	216.0	3.99
+tampa	CFHGKC010000079.1	47266	33450	45635	-	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.2653	87	0	0	0	0	0	3.12
+tampa	CFHGKC010000087.1	312211	308935	310737	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.5273	603	0	0	794.0	0	0	4.09
+tampa	CFHGKC010000095.1	794082	405142	415664	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4486	394	0	0	765.0	466.0	444.0	4.07
+tampa	CFHGKC010000100.1	143783	3716	8840	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4744	155	0	0	310.0	184.0	187.0	4.05
+tampa	CFHGKC010000128.1	1087914	338084	338227	-	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.3889	54	0	0	0	0	0	1.45
+tampa	CFHGKC010000135.1	134376	26258	53618	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3197	231	0	0	0	0	0	2.31
+tampa	CFHGKC010000142.1	39217	22106	32204	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4256	193	0	0	382.0	293.0	278.0	4.02
+tampa	CFHGKC010000164.1	136427	56473	95319	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2528	264	0	0	0	0	0	3.04
+tampa	CFHGKC010000303.1	867864	445992	454703	-	animal gene	VAULI|D7P7V4	uroD Uroporphyrinogen decarboxylase (Fragment)	0.32	342	0	0	689.0	0	360.0	4.15
+tampa	CFHGKC010000303.1	867864	697070	748774	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.3582	111	1	0	0	0	0	1.22
+tampa	CFHGKC010000304.1	552685	145302	227273	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.329	227	0	0	0	0	0	2.93
+tampa	CFHGKC010000354.1	177367	116096	116778	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4646	127	1	0	0	0	0	1.67
+tampa	CFHGKC010000384.1	611957	63302	80648	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3265	252	1	0	0	0	0	3.32
+tampa	CFHGKC010000433.1	139760	85446	94773	-	animal gene	UDOFL|atpA		0.5643	488	0	0	946.0	724.0	722.0	4.03
+tampa	CFHGKC010000460.1	1015867	612673	614837	-	animal gene	UDOFL|tufA		0.4817	409	0	0	776.0	442.0	453.0	4.1
+tampa	CFHGKC010000467.1	2415513	2289204	2378658	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3114	269	0	0	0	0	0	3.21
+tampa	CFHGKC010000517.1	561444	455135	455446	+	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.3077	101	0	0	0	0	0	2.61
+tampa	CFHGKC010000530.1	116138	18102	91785	+	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2809	296	0	0	81.6	0	0	3.56
+tampa	CFHGKC010000570.1	406527	46347	128672	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.472	210	0	0	334.0	209.0	0	3.96
+tampa	CFHGKC010000596.1	133947	54891	58281	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.6331	169	0	0	316.0	235.0	226.0	4.07
+tampa	CFHGKC010000668.1	1571524	480923	482414	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.3655	192	0	0	385.0	190.0	181.0	4.18
+tampa	CFHGKC010000668.1	1571524	1136360	1142968	+	no database match	VAULI|H6WBC2	Uncharacterized protein	0.3158	75	0	0	0	0	0	3.22
+tampa	CFHGKC010000679.1	2486283	823815	842065	-	animal gene	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3165	269	1	0	98.2	0	0	3.19
+tampa	CFHGKC010000693.1	391662	132037	150505	+	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.3529	184	0	0	0	0	0	2.78
+tampa	CFHGKC010000763.1	394519	349941	357292	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4625	156	0	0	293.0	196.0	191.0	4.12
+tampa	CFHGKC010000769.1	30912	19970	23155	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.372	162	0	0	315.0	253.0	262.0	3.98
+tampa	CFHGKC010000777.1	475286	207940	294539	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.26	245	0	0	0	0	0	2.87
+tampa	CFHGKC010000837.1	367851	32617	32739	-	animal gene	UDOFL|cysA		0.4878	41	0	0	82.4	57.4	59.7	3.65
+tampa	CFHGKC010000848.1	1111020	59689	89393	+	no database match	ARATH|Q9M591	CRD1 Magnesium-protoporphyrin IX monomethyl ester [oxidative] cyclase, chloroplastic	0.3226	62	0	0	0	0	0	3.72
+tampa	CFHGKC010000884.1	233600	13385	103570	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2555	199	2	0	0	0	0	3.88
+tampa	CFHGKC010000893.1	811128	367043	372253	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4512	214	0	0	422.0	379.0	373.0	4.02
+tampa	CFHGKC010000937.1	242744	203301	206767	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.3769	185	0	0	390.0	292.0	295.0	4.01
+tampa	CFHGKC010000939.1	857431	489833	515679	+	animal gene	VAULI|H6WB86	ThrRS Probable threonine--tRNA ligase, cytoplasmic	0.5112	670	0	0	1210.0	719.0	769.0	4.22
+tampa	CFHGKC010000959.1	62282	4550	29803	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.3333	207	0	0	254.0	125.0	125.0	3.74
+tampa	CFHGKC010000986.1	298480	277878	281942	-	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6301	145	0	0	274.0	189.0	203.0	4.03
+tampa	CFHGKC010000988.1	5307	4614	5183	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3938	226	0	0	0	0	0	1.29
+tampa	CFHGKC010001017.1	1820771	1691120	1765084	+	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.251	257	0	1	52.4	0	0	2.63
+tampa	CFHGKC010001038.1	575225	503976	511309	+	animal gene	VAULI|H6WB90	ATPase	0.4673	198	0	0	379.0	0	205.0	4.1
+tampa	CFHGKC010001067.1	802204	415332	511424	-	no database match	CHLRE|A8I531	CHLRE_05g242000v5 Mg-protoporphyrin IX chelatase	0.4545	77	0	0	0	0	0	1.74
+tampa	CFHGKC010001087.1	518774	12708	72410	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3495	212	2	0	0	0	0	2.38
+tampa	CFHGKC010001090.1	155177	26404	39986	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3485	198	0	1	0	0	0	3.31
+tampa	CFHGKC010001128.1	574988	224287	234071	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4091	172	0	0	0	0	0	1.65
+tampa	CFHGKC010001175.1	346053	6856	34584	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.3909	220	0	0	412.0	210.0	200.0	4.06
+tampa	CFHGKC010001188.1	123787	32944	40704	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4918	423	0	0	801.0	546.0	529.0	4.1
+tampa	CFHGKC010001281.1	946201	99540	200637	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2627	269	2	0	0	0	0	3.54
+tampa	CFHGKC010001316.1	1278309	810780	855152	+	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.3445	113	0	0	0	0	0	2.47
+tampa	CFHGKC010001316.1	1278309	903180	903509	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3916	143	0	0	0	0	0	0.86
+tampa	CFHGKC010001375.1	343411	221083	223405	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4011	176	0	0	348.0	255.0	0	4.04
+tampa	CFHGKC010001414.1	1063946	371358	496247	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.375	144	0	0	0	0	0	1.32
+tampa	CFHGKC010001497.1	222079	103328	207427	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3083	265	0	0	0	0	0	3.19
+tampa	CFHGKC010001527.1	4860	40	4853	+	plastid-only contig	UDOFL|ftsH		0.3125	1469	6	2	0	0	0	3.91
+tampa	CFHGKC010001655.1	570008	383718	405271	+	animal gene	VAULI|H6WB82	cpn60 Chaperonin	0.4117	545	0	0	1004.0	625.0	612.0	3.97
+tampa	CFHGKC010001664.1	184596	172748	176395	-	animal gene	CHLRE|Q39617	PORA Protochlorophyllide reductase, chloroplastic	0.2522	226	0	0	106.0	0	0	3.2
+tampa	CFHGKC010001692.1	204061	200817	201436	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3956	224	3	0	0	0	0	1.07
+tampa	CFHGKC010001693.1	799230	75800	100245	-	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3018	277	1	0	50.4	0	0	3.5
+tampa	CFHGKC010001693.1	799230	557671	560496	+	animal gene	UDOFL|cysA		0.3974	147	0	0	269.0	0	0	4.05
+tampa	CFHGKC010001693.1	799230	579885	581588	+	animal gene	UDOFL|cysA		0.391	150	0	0	286.0	0	0	4.01
+tampa	CFHGKC010001693.1	799230	607711	609893	+	animal gene	UDOFL|cysA		0.391	150	0	0	229.0	0	0	4.0
+tampa	CFHGKC010001693.1	799230	614653	616843	+	animal gene	UDOFL|cysA		0.3861	152	0	0	232.0	0	0	4.0
+tampa	CFHGKC010001742.1	1717095	913922	951676	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2746	193	0	1	0	0	0	3.01
+tampa	CFHGKC010001742.1	1717095	1318489	1363327	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4567	123	0	0	0	0	0	2.35
+tampa	CFHGKC010001772.1	547575	266108	297448	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4	170	0	0	0	0	0	2.77
+tampa	CFHGKC010001785.1	337709	26224	38199	-	animal gene	VAULI|H6WB96	Ribosomal protein L3 superfamily protein	0.6327	383	0	0	718.0	514.0	518.0	4.08
+tampa	CFHGKC010001905.1	1060117	565118	567365	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4191	136	0	0	264.0	231.0	233.0	4.02
+tampa	CFHGKC010001917.1	209811	6526	25037	+	animal gene	VAULI|B9ZZR6	GapC2 Glyceraldehyde-3-phosphate dehydrogenase (Fragment)	0.6393	304	0	0	574.0	432.0	461.0	4.06
+tampa	CFHGKC010001921.1	412733	341059	386957	-	animal gene	CHLRE|A0A2K3DBG1	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.2888	224	0	0	90.9	0	0	3.62
+tampa	CFHGKC010001924.1	479799	399880	450669	-	no database match	ARATH|Q38929	IPP1 Isopentenyl-diphosphate Delta-isomerase I, chloroplastic	0.3824	68	0	0	0	0	0	2.68
+tampa	CFHGKC010001934.1	1550905	313532	392560	-	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3008	250	1	1	57.8	0	0	3.41
+tampa	CFHGKC010001934.1	1550905	1407357	1418412	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.5186	533	0	0	1001.0	776.0	776.0	4.04
+tampa	CFHGKC010001967.1	514873	275993	367666	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2593	269	0	1	0	0	0	2.7
+tampa	CFHGKC010001968.1	308576	301461	302802	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4099	228	2	1	0	0	0	1.63
+tampa	CFHGKC010001973.1	652537	549749	558267	-	animal gene	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3387	108	0	0	89.4	0	0	3.48
+tampa	CFHGKC010002027.1	518401	74035	74310	-	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.25	92	0	0	0	0	0	1.04
+tampa	CFHGKC010002088.1	1096936	969616	1028443	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2757	190	0	0	0	0	0	3.12
+tampa	CFHGKC010002090.1	323603	10162	38115	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2845	270	1	0	0	0	0	2.88
+tampa	CFHGKC010002130.1	1303060	341357	431426	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3227	287	1	1	0	0	0	3.34
+tampa	CFHGKC010002139.1	1096394	310530	312389	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.5966	652	2	0	1016.0	0	0	4.09
+tampa	CFHGKC010002182.1	225554	49622	136964	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.2632	152	0	0	0	0	0	2.36
+tampa	CFHGKC010002220.1	394222	13659	94019	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2971	248	1	0	0	0	0	2.89
+tampa	CFHGKC010002227.1	33518	16725	24200	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4132	176	1	0	0	0	0	1.26
+tampa	CFHGKC010002274.1	1295780	1153402	1155505	-	animal gene	UDOFL|cysA		0.3919	145	0	0	265.0	0	0	4.05
+tampa	CFHGKC010002274.1	1295780	1174128	1177000	-	animal gene	UDOFL|cysA		0.3408	215	0	0	366.0	0	0	4.07
+tampa	CFHGKC010002274.1	1295780	1184222	1185926	-	animal gene	UDOFL|cysA		0.3841	147	0	0	286.0	0	0	4.07
+tampa	CFHGKC010002292.1	1333911	1200912	1231726	+	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2939	279	0	1	83.6	0	0	2.73
+tampa	CFHGKC010002355.1	1014292	951104	958614	-	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2679	254	1	0	49.3	0	0	2.71
+tampa	CFHGKC010002366.1	428340	168774	236385	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4115	135	1	0	0	0	0	1.06
+tampa	CFHGKC010002424.1	113496	41133	43765	+	animal gene	UDOFL|cysA		0.3529	217	0	0	358.0	0	0	4.04
+tampa	CFHGKC010002424.1	113496	52698	55314	+	animal gene	UDOFL|cysA		0.3539	166	0	1	302.0	0	0	4.04
+tampa	CFHGKC010002427.1	241642	3245	3879	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3865	224	1	0	0	0	0	1.43
+tampa	CFHGKC010002435.1	131383	105404	124812	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2865	192	0	1	0	0	0	2.83
+tampa	CFHGKC010002483.1	283408	216712	222064	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4294	170	0	0	283.0	207.0	215.0	4.09
+tampa	CFHGKC010002483.1	283408	226136	230849	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4388	139	0	0	270.0	196.0	200.0	4.01
+tampa	CFHGKC010002490.1	389715	63058	65620	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4245	207	0	0	312.0	240.0	213.0	4.15
+tampa	CFHGKC010002496.1	1024832	593682	608666	+	no database match	CHLRE|A8I531	CHLRE_05g242000v5 Mg-protoporphyrin IX chelatase	0.3765	85	0	0	0	0	0	1.82
+tampa	CFHGKC010002523.1	1883249	1219082	1223093	-	animal gene	UDOFL|rpoC1		0.3553	151	0	0	236.0	175.0	167.0	4.2
+tampa	CFHGKC010002535.1	1033180	640106	642965	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4458	165	0	0	284.0	250.0	240.0	4.07
+tampa	CFHGKC010002548.1	914761	410100	411995	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6453	652	0	0	1183.0	0	0	4.09
+tampa	CFHGKC010002556.1	378517	134382	225439	-	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2599	273	0	1	48.1	0	0	3.16
+tampa	CFHGKC010002581.1	217683	68759	74308	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.5368	606	0	0	1110.0	727.0	704.0	4.06
+tampa	CFHGKC010002582.1	3031597	2946355	2951297	+	animal gene	UDOFL|cysA		0.3167	215	0	0	331.0	0	0	4.04
+tampa	CFHGKC010002582.1	3031597	2959562	2960962	+	animal gene	UDOFL|cysA		0.3351	172	0	0	300.0	0	0	4.04
+tampa	CFHGKC010002582.1	3031597	2973554	2975863	+	animal gene	UDOFL|cysA		0.3319	215	0	0	383.0	0	0	4.09
+tampa	CFHGKC010002582.1	3031597	2982069	2984530	+	animal gene	UDOFL|cysA		0.4013	150	0	0	275.0	0	0	4.01
+tampa	CFHGKC010002582.1	3031597	2999780	3000984	+	animal gene	UDOFL|cysA		0.3907	147	0	0	271.0	0	0	4.03
+tampa	CFHGKC010002582.1	3031597	3022838	3023750	+	animal gene	UDOFL|cysA		0.3401	147	0	0	128.0	0	0	3.93
+tampa	CFHGKC010002583.1	551884	2860	4731	+	animal gene	UDOFL|cysA		0.362	150	0	0	306.0	0	0	3.99
+tampa	CFHGKC010002591.1	497880	77363	164720	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.373	251	1	1	0	0	0	1.76
+tampa	CFHGKC010002666.1	458548	265975	344335	+	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2694	256	1	0	157.0	0	0	3.74
+tampa	CFHGKC010002684.1	215275	37881	100268	+	no database match	ARATH|O49668	PAM68 Protein PAM68, chloroplastic	0.3644	80	1	0	0	0	0	3.22
+tampa	CFHGKC010002705.1	939416	705445	745100	-	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.281	268	0	0	71.2	0	0	3.49
+tampa	CFHGKC010002716.1	6500	134	460	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4771	100	0	0	0	0	0	1.46
+tampa	CFHGKC010002717.1	279134	141480	233097	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2697	290	0	0	0	0	0	3.4
+tampa	CFHGKC010002747.1	30856	6867	7286	+	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.5479	145	0	0	223.0	173.0	174.0	4.19
+tampa	CFHGKC010002772.1	931433	552224	554146	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6453	652	0	0	1110.0	0	0	4.08
+tampa	CFHGKC010002776.1	162394	81118	81845	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4029	228	2	0	0	0	0	1.4
+tampa	CFHGKC010002998.1	917320	2079	8800	+	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.7174	138	0	0	256.0	223.0	215.0	4.03
+tampa	CFHGKC010003004.1	216179	212	28448	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4161	161	0	0	0	0	0	1.42
+tampa	CFHGKC010003006.1	858515	814661	815122	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.3052	138	0	0	0	0	0	2.01
+tampa	CFHGKC010003082.1	127505	20416	90953	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3933	173	0	0	0	0	0	2.01
+tampa	CFHGKC010003116.1	54967	22840	30482	+	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6875	144	0	0	242.0	218.0	231.0	4.01
+tampa	CFHGKC010003116.1	54967	43328	49699	+	animal gene	VAULI|Q9ATC5	Peptidyl-prolyl cis-trans isomerase (Fragment)	0.6619	139	0	0	236.0	209.0	210.0	4.01
+tampa	CFHGKC010003154.1	145992	86781	108346	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.569	171	0	0	228.0	182.0	162.0	4.01
+tampa	CFHGKC010003188.1	27086	6803	12090	+	animal gene	UDOFL|rpoC1		0.3351	189	0	0	297.0	232.0	238.0	4.11
+tampa	CFHGKC010003212.1	1591188	340611	341684	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4834	151	0	0	293.0	258.0	254.0	3.94
+tampa	CFHGKC010003212.1	1591188	1120070	1179698	-	animal gene	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2948	262	0	0	89.0	0	0	3.44
+tampa	CFHGKC010003244.1	1246204	557036	641973	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2702	285	0	1	0	0	0	2.83
+tampa	CFHGKC010003253.1	248658	52990	59600	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.4144	371	0	0	643.0	288.0	285.0	4.06
+tampa	CFHGKC010003263.1	280117	247932	248143	-	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.2961	77	1	0	0	0	0	2.89
+tampa	CFHGKC010003329.1	316796	62302	62721	-	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.382	177	0	1	0	0	0	1.51
+tampa	CFHGKC010003375.1	33877	622	8329	-	animal gene	VAULI|B9ZZR6	GapC2 Glyceraldehyde-3-phosphate dehydrogenase (Fragment)	0.6245	277	0	0	477.0	396.0	402.0	4.04
+tampa	CFHGKC010003399.1	754464	169283	171170	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6206	648	1	1	1040.0	0	0	4.08
+tampa	CFHGKC010003435.1	199827	126001	147611	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2705	292	0	0	0	0	0	2.15
+tampa	CFHGKC010003445.1	118372	84164	88184	+	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.4902	51	0	0	0	0	0	2.03
+tampa	CFHGKC010003511.1	419744	239895	240641	+	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.3093	91	0	0	0	0	0	3.12
+tampa	CFHGKC010003633.1	30457	18533	18826	+	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.2653	89	0	0	0	0	0	1.35
+tampa	CFHGKC010003692.1	253503	187449	189365	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.643	659	0	0	1179.0	0	0	4.08
+tampa	CFHGKC010003701.1	1411079	971095	973504	-	animal gene	UDOFL|cysA		0.3947	150	0	0	273.0	0	0	4.0
+tampa	CFHGKC010003701.1	1411079	985211	1018796	-	animal gene	UDOFL|cysA		0.4082	147	0	0	239.0	0	0	4.01
+tampa	CFHGKC010003701.1	1411079	1024772	1026307	-	animal gene	UDOFL|cysA		0.3933	147	0	0	256.0	0	0	4.07
+tampa	CFHGKC010003702.1	314468	234241	266523	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2724	285	2	1	0	0	0	3.05
+tampa	CFHGKC010003715.1	232366	78742	95241	+	animal gene	VAULI|H6WBB5	Major facilitator superfamily (MFS) profile domain-containing protein	0.3437	321	0	1	391.0	153.0	0	4.01
+tampa	CFHGKC010003740.1	252987	3058	5241	+	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.3662	65	0	1	0	0	0	3.18
+tampa	CFHGKC010003832.1	152941	14573	21310	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4512	214	0	0	403.0	199.0	194.0	4.1
+tampa	CFHGKC010003849.1	1123268	119152	188834	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2745	286	1	0	0	0	0	2.97
+tampa	CFHGKC010003850.1	406446	330919	332198	+	animal gene	UDOFL|cysA		0.3654	147	0	0	273.0	0	0	4.05
+tampa	CFHGKC010003850.1	406446	342641	344938	+	animal gene	UDOFL|cysA		0.3937	156	0	0	263.0	0	0	3.98
+tampa	CFHGKC010003851.1	240255	184	65737	-	no database match	VAULI|H6WBB7	Putative NIN-like transcription factor	0.3333	42	0	0	0	0	0	3.63
+tampa	CFHGKC010003901.1	181257	80342	117793	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3058	202	1	0	0	0	0	3.04
+tampa	CFHGKC010003951.1	235153	6918	79372	+	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2586	263	0	0	0	0	0	2.14
+tampa	CFHGKC010003987.1	1015929	349304	349492	-	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.2857	58	0	0	0	0	0	1.42
+tampa	CFHGKC010004030.1	391503	12331	21371	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4158	500	0	0	803.0	469.0	434.0	4.08
+tampa	CFHGKC010004138.1	210121	77490	168335	-	animal gene	VAULI|H6WB87	Rab8 Rab8 family GTPase	0.3028	303	0	0	271.0	182.0	166.0	3.98
+tampa	CFHGKC010004140.1	783038	25398	82394	+	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4115	224	0	0	358.0	175.0	0	4.18
+tampa	CFHGKC010004149.1	1025443	686546	778260	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.2787	183	1	0	0	0	0	2.92
+tampa	CFHGKC010004175.1	701166	613711	617632	-	animal gene	ARATH|Q42553	IPP2 Isopentenyl-diphosphate Delta-isomerase II, chloroplastic	0.5415	226	0	0	441.0	247.0	269.0	4.14
+tampa	CFHGKC010004182.1	91571	16053	25685	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.5587	527	0	0	624.0	577.0	591.0	4.07
+tampa	CFHGKC010004182.1	91571	32792	39106	-	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6985	659	0	0	1212.0	946.0	938.0	4.08
+tampa	CFHGKC010004218.1	678409	574161	575324	+	animal gene	UDOFL|tufA		0.4876	400	0	0	722.0	0	421.0	4.09
+tampa	CFHGKC010004347.1	940843	507808	511421	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.5333	150	0	0	301.0	200.0	0	4.18
+tampa	CFHGKC010004347.1	940843	589915	687436	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4194	232	2	0	0	0	0	2.74
+tampa	CFHGKC010004494.1	433767	266587	271800	+	animal gene	VAULI|H6WB83	hsp70 Heat shock 70 kDa protein	0.6149	616	0	0	1158.0	853.0	810.0	4.04
+tampa	CFHGKC010004523.1	296318	256558	260780	-	animal gene	VAULI|H6WB88	Rab11 Rab11 family GTPase	0.4313	160	0	0	318.0	164.0	158.0	4.08
+tampa	CFHGKC010004593.1	114118	18092	35009	+	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4087	229	0	0	335.0	306.0	312.0	3.99
+tampa	CFHGKC010004624.1	925258	69743	171406	+	no database match	CHLRE|A0A2K3DBG1	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.3594	178	0	0	0	0	0	2.04
+tampa	CFHGKC010004734.1	58843	255	1187	+	no database match	CHLRE|A0A2K3DBG0	CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic	0.4052	224	0	0	0	0	0	1.18
+tampa	CFHGKC010004746.1	3652301	1137437	1196838	-	no database match	CHLRE|A0A2K3D8F4	CHLRE_11g477625v5 magnesium chelatase	0.3037	265	1	0	0	0	0	3.11
+tampa	CFHGKC010004784.1	752727	498859	502318	-	animal gene	VAULI|B7T1V0	ftsH ATP-dependent zinc metalloprotease FtsH	0.4365	197	0	0	387.0	351.0	325.0	4.01
+tampa	CFHGKC010004861.1	136424	43044	64578	-	animal gene	VAULI|B9ZZR6	GapC2 Glyceraldehyde-3-phosphate dehydrogenase (Fragment)	0.585	304	0	0	409.0	367.0	395.0	4.06
+tampa	CFHGKC010004864.1	400485	165358	165922	-	no database match	UDOFL|rpl20		0.3333	47	0	0	0	0	0	3.72
+tampa	CFHGKC010006655.1	1173	6	1169	+	microbe-like	VAULI|H6WB82	cpn60 Chaperonin	0.4425	390	0	0	0	0	529.0	3.9
+tampa	CFHGKC010007944.1	6805	2058	4573	+	animal gene	UDOFL|cysA		0.3522	156	0	0	166.0	0	0	4.05
+tampa	CFHGKC010008025.1	6398	168	458	-	no database match	CHLRE|A0A2K3DKD7	CHLRE_07g339000v5 Uncharacterized protein	0.268	95	0	0	0	0	0	1.49
+tampa	CFHGKC010008165.1	5715	2998	3639	-	microbe-like	UDOFL|cysA		0.3505	201	0	0	0	0	195.0	3.86
+tampa	CFHGKC010008360.1	4985	1	138	-	no database match	VAULI|H6WBA2	RRM domain-containing protein	0.3696	46	0	0	0	0	0	2.43
+tampa	CFHGKC010008962.1	3735	2	283	+	microbe-like	UDOFL|rpoB_2		0.6277	93	0	0	0	0	160.0	4.02
+tampa	CFHGKC010008962.1	3735	470	1924	+	microbe-like	UDOFL|rpoC1		0.3246	675	0	0	0	0	735.0	4.12
+tampa	CFHGKC010008962.1	3735	2162	3136	+	microbe-like	UDOFL|rpoC2		0.4315	334	0	0	359.0	0	370.0	4.06
+tampa	CFHGKC010009534.1	3077	193	354	+	animal gene	VAULI|B9ZZR5	GapC1 Glyceraldehyde-3-phosphate dehydrogenase (Fragment)	0.8113	53	0	0	100.0	97.4	95.5	3.78
+tampa	CFHGKC010009740.1	2883	850	1218	-	microbe-like	UDOFL|rpl14		0.5323	124	0	0	0	0	162.0	3.91

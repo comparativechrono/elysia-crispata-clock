@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 385" role="img" aria-label="Family tree placing Pp2aC" class="treefig">
+<g fill="none" stroke="var(--tree-line,#8a958f)" stroke-width="1.2">
+<path d="M26.0 40.8V228.1"/>
+<path d="M26.0 40.8H46.9"/>
+<path d="M26.0 228.1H36.6"/>
+<path d="M46.9 22.5V59.2"/>
+<path d="M46.9 22.5H79.2"/>
+<path d="M46.9 59.2H84.9"/>
+<path d="M84.9 39.5V78.8"/>
+<path d="M84.9 39.5H144.6"/>
+<path d="M84.9 78.8H109.3"/>
+<path d="M109.3 56.5V101.1"/>
+<path d="M109.3 56.5H216.2"/>
+<path d="M109.3 101.1H138.9"/>
+<path d="M138.9 82.0V120.2"/>
+<path d="M138.9 82.0H160.0"/>
+<path d="M138.9 120.2H150.7"/>
+<path d="M160.0 73.5V90.5"/>
+<path d="M160.0 73.5H160.0"/>
+<path d="M160.0 90.5H160.0"/>
+<path d="M150.7 107.5V133.0"/>
+<path d="M150.7 107.5H182.3"/>
+<path d="M150.7 133.0H290.0"/>
+<path d="M290.0 124.5V141.5"/>
+<path d="M290.0 124.5H290.0"/>
+<path d="M290.0 141.5H290.0"/>
+<path d="M36.6 174.4V281.8"/>
+<path d="M36.6 174.4H36.6"/>
+<path d="M36.6 281.8H47.0"/>
+<path d="M36.6 158.5V190.4"/>
+<path d="M36.6 158.5H145.5"/>
+<path d="M36.6 190.4H67.7"/>
+<path d="M67.7 175.5V205.2"/>
+<path d="M67.7 175.5H121.1"/>
+<path d="M67.7 205.2H67.7"/>
+<path d="M67.7 192.5V218.0"/>
+<path d="M67.7 192.5H67.7"/>
+<path d="M67.7 218.0H67.7"/>
+<path d="M67.7 209.5V226.5"/>
+<path d="M67.7 209.5H67.7"/>
+<path d="M67.7 226.5H67.7"/>
+<path d="M47.0 252.0V311.5"/>
+<path d="M47.0 252.0H47.0"/>
+<path d="M47.0 311.5H47.0"/>
+<path d="M47.0 243.5V260.5"/>
+<path d="M47.0 243.5H57.3"/>
+<path d="M47.0 260.5H67.7"/>
+<path d="M47.0 277.5V345.5"/>
+<path d="M47.0 277.5H47.0"/>
+<path d="M47.0 294.5H47.0"/>
+<path d="M47.0 311.5H47.0"/>
+<path d="M47.0 328.5H47.0"/>
+<path d="M47.0 345.5H47.0"/>
+<path d="M12.0 134.5V362.5M12.0 134.5H26.0M12.0 362.5H56.0" stroke-dasharray="3 3"/>
+</g>
+<text x="43.9" y="37.8" text-anchor="end" class="sup">0.88</text>
+<text x="81.9" y="56.2" text-anchor="end" class="sup">0.90</text>
+<text x="106.3" y="75.8" text-anchor="end" class="sup">0.78</text>
+<text x="135.9" y="98.1" text-anchor="end" class="sup">0.85</text>
+<text x="33.6" y="225.1" text-anchor="end" class="sup">0.81</text>
+<text x="64.7" y="187.4" text-anchor="end" class="sup">0.95</text>
+<text x="44.0" y="278.8" text-anchor="end" class="sup">0.85</text>
+<path d="M82.2 22.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="26.5" class="tip">Lottia gigantea V3ZIM9</text>
+<path d="M147.6 39.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="43.5" class="tip">Tribolium castaneum AUGUSTUS-3.0.2_05366</text>
+<path d="M219.2 56.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="60.5" class="tip">Danaus plexippus A0A212F8S6</text>
+<path d="M163.0 73.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="77.5" class="tip">Homo sapiens PPP2CA</text>
+<path d="M163.0 90.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<rect x="156.5" y="87.0" width="7" height="7" class="dot-seed"/>
+<text x="300" y="94.5" class="tip-seed">Homo sapiens PPP2CA</text>
+<path d="M185.3 107.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="111.5" class="tip">Homo sapiens PPP2CB</text>
+<path d="M293.0 124.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="128.5" class="tip">Drosophila melanogaster mts</text>
+<path d="M293.0 141.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<rect x="286.5" y="138.0" width="7" height="7" class="dot-seed"/>
+<text x="300" y="145.5" class="tip-seed">Drosophila melanogaster Mts</text>
+<path d="M148.5 158.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="162.5" class="tip">Pomacea canaliculata A0A2T7PWT6</text>
+<path d="M124.1 175.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="179.5" class="tip">Magallana gigas A0A8W8MWF5</text>
+<path d="M70.7 192.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="196.5" class="tip">Magallana gigas A0A8W8N288</text>
+<path d="M70.7 209.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="213.5" class="tip">Magallana gigas K1QNZ3</text>
+<path d="M70.7 226.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="230.5" class="tip">Magallana gigas A0A8W8MRP1</text>
+<path d="M60.3 243.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="247.5" class="tip">Elysia marginata A0AAV4IRG1</text>
+<path d="M70.7 260.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="264.5" class="tip">Plakobranchus ocellatus A0AAV4C2C0</text>
+<path d="M50.0 277.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<circle cx="47.0" cy="277.5" r="4" class="dot-me"/>
+<text x="300" y="281.5" class="tip-me">Elysia crispata RRG08_063696 (Purdue)</text>
+<path d="M50.0 294.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<circle cx="47.0" cy="294.5" r="4" class="dot-me"/>
+<text x="300" y="298.5" class="tip-me">Elysia crispata ENSUFQG00005007612 (Ensembl)</text>
+<path d="M50.0 311.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="315.5" class="tip">Elysia chlorotica A0A3S1A3S8</text>
+<path d="M50.0 328.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="332.5" class="tip">Biomphalaria glabrata A0A9W2ZNT3</text>
+<path d="M50.0 345.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="349.5" class="tip">Aplysia californica A0ABM0JRZ3</text>
+<text x="62" y="366.5" class="tip sister">sister lineage: 1 sequence</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 232" role="img" aria-label="Family tree placing Jetlag" class="treefig">
+<g fill="none" stroke="var(--tree-line,#8a958f)" stroke-width="1.2">
+<path d="M26.0 35.2V113.3"/>
+<path d="M26.0 35.2H123.8"/>
+<path d="M26.0 113.3H98.7"/>
+<path d="M123.8 22.5V48.0"/>
+<path d="M123.8 22.5H244.0"/>
+<path d="M123.8 48.0H256.5"/>
+<path d="M256.5 39.5V56.5"/>
+<path d="M256.5 39.5H256.5"/>
+<path d="M256.5 56.5H256.5"/>
+<path d="M98.7 86.2V140.4"/>
+<path d="M98.7 86.2H133.0"/>
+<path d="M98.7 140.4H181.9"/>
+<path d="M133.0 73.5V99.0"/>
+<path d="M133.0 73.5H250.4"/>
+<path d="M133.0 99.0H155.8"/>
+<path d="M155.8 90.5V107.5"/>
+<path d="M155.8 90.5H278.8"/>
+<path d="M155.8 107.5H261.7"/>
+<path d="M181.9 124.5V156.4"/>
+<path d="M181.9 124.5H236.4"/>
+<path d="M181.9 156.4H234.6"/>
+<path d="M234.6 141.5V171.2"/>
+<path d="M234.6 141.5H250.2"/>
+<path d="M234.6 171.2H246.0"/>
+<path d="M246.0 158.5V184.0"/>
+<path d="M246.0 158.5H258.7"/>
+<path d="M246.0 184.0H248.6"/>
+<path d="M248.6 175.5V192.5"/>
+<path d="M248.6 175.5H290.0"/>
+<path d="M248.6 192.5H256.1"/>
+<path d="M12.0 74.3V209.5M12.0 74.3H26.0M12.0 209.5H56.0" stroke-dasharray="3 3"/>
+</g>
+<text x="120.8" y="32.2" text-anchor="end" class="sup">0.98</text>
+<text x="95.7" y="110.3" text-anchor="end" class="sup">0.91</text>
+<text x="130.0" y="83.2" text-anchor="end" class="sup">0.73</text>
+<text x="178.9" y="137.4" text-anchor="end" class="sup">1.00</text>
+<text x="231.6" y="153.4" text-anchor="end" class="sup">0.99</text>
+<text x="243.0" y="168.2" text-anchor="end" class="sup">0.93</text>
+<text x="245.6" y="181.0" text-anchor="end" class="sup">0.78</text>
+<path d="M247.0 22.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="26.5" class="tip">Danaus plexippus A0A212EYF8</text>
+<path d="M259.5 39.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="43.5" class="tip">Drosophila melanogaster jet</text>
+<path d="M259.5 56.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<rect x="253.0" y="53.0" width="7" height="7" class="dot-seed"/>
+<text x="300" y="60.5" class="tip-seed">Drosophila melanogaster Jet</text>
+<path d="M253.4 73.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="77.5" class="tip">Branchiostoma floridae A0A9J7N7P2</text>
+<path d="M281.8 90.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="94.5" class="tip">Mizuhopecten yessoensis A0A210PFI2</text>
+<path d="M264.7 107.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="111.5" class="tip">Capitella teleta R7VDT7</text>
+<path d="M239.4 124.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="128.5" class="tip">Aplysia californica A0ABM1A2I9</text>
+<path d="M253.2 141.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="145.5" class="tip">Plakobranchus ocellatus A0AAV4BAB9</text>
+<path d="M261.7 158.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="162.5" class="tip">Elysia marginata A0AAV4F784</text>
+<path d="M293.0 175.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="179.5" class="tip">Elysia chlorotica A0A433T7X7</text>
+<path d="M259.1 192.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<circle cx="256.1" cy="192.5" r="4" class="dot-me"/>
+<text x="300" y="196.5" class="tip-me">Elysia crispata RRG08_019831 (Purdue)</text>
+<text x="62" y="213.5" class="tip sister">sister lineage: 6 sequences</text>
+</svg>

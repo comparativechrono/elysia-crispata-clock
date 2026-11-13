@@ -1,0 +1,52 @@
+# Curated catalogue of E. crispata circadian-clock genes.
+# anchors: comma-separated protein IDs used to anchor the orthogroup. ENSUFQG = Ensembl gene on xgElyCris1.1;
+# A0A... = UniProt accession of the Purdue-assembly (GCA_033675545.1) protein.  "-" = no homologue detected.
+# tree = family tree in results/trees ; seeds = reference proteins that define the orthogroup in that tree.
+symbol	name	category	tree	seeds	anchors	note
+Clock	Clock (circadian locomotor output cycles kaput)	core	BHLHPAS	HsCLOCK,HsNPAS2,DmClk	ENSUFQG00005014170,A0AAE0YW14	bHLH-PAS activator; partner of Bmal1
+Bmal1	Bmal1 / cycle (Arntl)	core	BHLHPAS	HsBMAL1,HsBMAL2,DmCyc	A0AAE1CZQ1	bHLH-PAS activator; partner of Clock
+Period	Period	core	PER	HsPER1,HsPER2,HsPER3,DmPer	ENSUFQG00005027999,A0AAE1CRZ6	PAS-domain repressor
+Timeless	Timeless (tim1, insect-type)	core	TIMFAM	DmTim	ENSUFQG00005002792,A0AAE1DMX8	Period partner in protostome clocks
+Timeout	Timeout / Tim2 (orthologue of mammalian TIMELESS)	core	TIMFAM	DmTimeout,HsTIMELESS	ENSUFQG00005027542,ENSUFQG00005027391,A0AAE1ALR2,A0AAE1E0Q2	one gene annotated as two models (N- and C-terminal halves)
+Cry1	Cryptochrome 1 (Drosophila-type, light-sensitive)	core	CRY	DmCry,DpCRY1,CgCRY1	ENSUFQG00005020080,A0AAE1B0S4	photoreceptor-type cryptochrome (d-Cry)
+Cry2	Cryptochrome 2 (mammalian-type, transcriptional repressor)	core	CRY	HsCRY1,HsCRY2,DpCRY2,CgCRY2	ENSUFQG00005015099,A0AAE1CT52	repressor-type cryptochrome (m-Cry)
+Phr6-4	(6-4) photolyase	photolyase	CRY	Dm64PHR	ENSUFQG00005006057,A0AAE1ATM9	DNA repair; sister group of animal cryptochromes
+PhrCPD	CPD photolyase (class II)	photolyase	CRY	DmCPDPHR	ENSUFQG00005000250,A0AAE0YA44	DNA repair
+CryDASH1	Cryptochrome-DASH 1	photolyase	CRY	AtCRY3,DrCRYDASH	ENSUFQG00005007252,A0AAE1DMV9	ssDNA photolyase / CRY-DASH
+CryDASH2	Cryptochrome-DASH 2	photolyase	CRY	AtCRY3,DrCRYDASH	ENSUFQG00005007750,A0AAE1AFC4	second CRY-DASH paralogue
+Pdp1	PAR-domain protein 1 (Hlf/Dbp/Tef family)	loop2	BZIP	DmPdp1,HsDBP,HsHLF,HsTEF	A0AAE1DZI1	PAR-bZIP activator of the second loop
+Vrille	Vrille / Nfil3 (E4bp4)	loop2	BZIP	DmVri,HsNFIL3	ENSUFQG00005007351,A0AAE0YP22	bZIP repressor of the second loop
+E75	E75 / Rev-erb (Nr1d)	loop2	NR1	DmE75,HsNR1D1,HsNR1D2	A0AAE0YD99	nuclear receptor repressor
+Hr3	Hr3 / Ror (Nr1f)	loop2	NR1	DmHr3,HsRORA,HsRORB,HsRORC	ENSUFQG00005024325,A0AAE0Y6I2	nuclear receptor activator
+Cwo	Clockwork orange	loop2	CWO	DmCwo	ENSUFQG00005024443,A0AAE1AVJ1,A0AAE1AU98	bHLH-Orange repressor (Dec1/2-like role)
+Ck1de	Casein kinase 1 delta/epsilon (doubletime)	kinase	CK1	HsCSNK1D,HsCSNK1E,DmDbt	ENSUFQG00005008799,A0AAE0ZNT6	phosphorylates Period
+Ck1a	Casein kinase 1 alpha	kinase	CK1	HsCSNK1A1,DmCK1a	ENSUFQG00005016763,A0AAE0Y2C9	
+Ck2a	Casein kinase 2 alpha	kinase	CK2A	HsCSNK2A1,DmCK2a	ENSUFQG00005016385,A0AAE1A0Z3	
+Ck2b	Casein kinase 2 beta	kinase	CK2B	HsCSNK2B,DmCK2b	ENSUFQG00005000736,A0AAE1A168	
+Gsk3	Glycogen synthase kinase 3 (shaggy)	kinase	GSK3	HsGSK3B,DmSgg	ENSUFQG00005024300,A0AAE1E8E4	phosphorylates Timeless / Rev-erb
+Nemo	Nemo-like kinase (nemo)	kinase	NLK	HsNLK,DmNemo	A0AAE1AEE1,A0AAE1AF54	
+Pp1a	Protein phosphatase 1 catalytic subunit (Pp1-87B / PPP1CA-like)	phosphatase	PP1	HsPPP1CA,DmPp1-87B	A0AAE0YSL8	
+Pp1b	Protein phosphatase 1 catalytic subunit beta (flapwing / PPP1CB)	phosphatase	PP1	HsPPP1CA,DmPp1-87B	ENSUFQG00005011587,A0AAE1ED90	
+Pp2aC	Protein phosphatase 2A catalytic subunit (microtubule star)	phosphatase	PP2AC	HsPPP2CA,DmMts	ENSUFQG00005007612,A0AAE1DCI0	
+Pp2aB55	PP2A regulatory subunit B55 (twins)	phosphatase	PP2AB55	HsPPP2R2A,DmTws	ENSUFQG00005017297,A0AAE1BA08	
+Pp2aB56e	PP2A regulatory subunit B56 epsilon (widerborst)	phosphatase	PP2AB56	HsPPP2R5E,DmWdb	ENSUFQG00005008067,A0AAE1DYQ8	
+Pp2aB56d	PP2A regulatory subunit B56 gamma/delta (well-rounded)	phosphatase	PP2AB56	HsPPP2R5E,DmWdb	ENSUFQG00005010645,A0AAE1EE62	
+Slimb	Slimb / beta-TrCP (Btrc, Fbxw11)	degradation	BTRC	HsBTRC,HsFBXW11,DmSlimb	A0AAE1DDM3	F-box protein targeting Period
+Jetlag	Jetlag-like F-box/LRR protein (Fbxl15-like)	degradation	JET	DmJet	A0AAE1B2J7	weak similarity only; assignment tentative
+Sirt1	Sirtuin 1	modulator	SIRT1	HsSIRT1,DmSirt1	ENSUFQG00005005712,A0AAE1A839	
+Pdf	Cerebrin / PDF-like neuropeptide precursor	output	PDF	AcCerebrin,EmCerebrin	ENSUFQG00005018259,A0AAE0Z7I9	molluscan pigment-dispersing-factor-like peptide
+Pdfr	PDF receptor-like (class B GPCR)	output	PDFR	DmPdfr	ENSUFQG00005016299,A0AAE0YF58	
+Lark	Lark / Rbm4	output	RBM4	HsRBM4,DmLark	ENSUFQG00005009250,A0AAE1AQP7	
+Atx2	Ataxin-2	output	ATXN2	HsATXN2,DmAtx2	ENSUFQG00005017298,A0AAE1CLI0	
+Nocturnin	Nocturnin (curled)	output	NOCT	HsNOCT,DmCurled	ENSUFQG00005014525,A0AAE0YA69	
+NonA	NonA / Nono (Pspc1, Sfpq family)	output	NONO	HsNONO,DmNonA	ENSUFQG00005011831,A0AAE1D1S9	
+Tipin	Timeless-interacting protein (Tipin)	output	TIPIN	HsTIPIN	ENSUFQG00005017046,A0AAE0YY63	partner of Timeout/TIMELESS
+Ropsin1	Rhabdomeric opsin 1 (Gq)	light	OPSIN	TpRhodopsin,MyGqOpsin	A0AAE1A9X2	visual r-opsin
+Ropsin2	Rhabdomeric opsin 2 (Gq)	light	OPSIN	TpRhodopsin,MyGqOpsin	A0AAE1AAI2	tandem paralogue of r-opsin 1
+RopsinL1	Rhabdomeric-opsin-like 1 (non-canonical Gq group)	light	OPSIN	DmRh1,HsOPN4,MyGqOpsin,TpRhodopsin	ENSUFQG00005007165,A0AAE1ASU8	retinal-binding lysine present; outside the visual r-opsin clade
+RopsinL2	Rhabdomeric-opsin-like 2 (non-canonical Gq group)	light	OPSIN	DmRh1,HsOPN4,MyGqOpsin,TpRhodopsin	A0AAE0XE11	retinal-binding lysine present; outside the visual r-opsin clade
+Xenopsin	Xenopsin	light	OPSIN	AvXenopsin,LaXenopsin	ENSUFQG00005004544,A0AAE0YAN9	
+GoOpsin1	Go-coupled opsin 1	light	OPSIN	MyGoOpsin	ENSUFQG00005012845,A0AAE0ZJ91	
+GoOpsin2	Go-coupled opsin 2	light	OPSIN	MyGoOpsin	A0AAE1DH43	
+Neuropsin	Neuropsin (Opn5-like)	light	OPSIN	HsOPN5	ENSUFQG00005026799,ENSUFQG00005026729,A0AAE0ZYB3	
+Retinochrome	Retinochrome	light	OPSIN	TpRetinochrome,HsRGR	ENSUFQG00005021826,A0AAE1E6W7	photoisomerase

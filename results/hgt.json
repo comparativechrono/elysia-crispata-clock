@@ -1,0 +1,2432 @@
+{
+ "chimera": {
+  "pairs": [
+   {
+    "pair": "bac+slug",
+    "junctions": 5487,
+    "reads": 5435,
+    "molecules": 5444,
+    "adapter_junctions": 131,
+    "recurrent_clusters": 1
+   },
+   {
+    "pair": "cp+slug",
+    "junctions": 4505,
+    "reads": 4452,
+    "molecules": 4445,
+    "adapter_junctions": 165,
+    "recurrent_clusters": 0
+   },
+   {
+    "pair": "bac+cp",
+    "junctions": 132,
+    "reads": 132,
+    "molecules": 132,
+    "adapter_junctions": 8,
+    "recurrent_clusters": 0
+   }
+  ],
+  "class_totals": {
+   "slugrDNA": 7026,
+   "bac": 167513,
+   "cp": 136293,
+   "clk": 1687,
+   "slugmt": 2371,
+   "algmt": 1
+  },
+  "rate_cp_slug": 0.03266492042878211,
+  "rate_bac_slug": 0.03244524305576284,
+  "expected_cp_bac": 145.62425751274114,
+  "expected_cp_bac_from_bacteria": 135.08701282809386,
+  "observed_cp_bac": 132,
+  "recurrent": [
+   {
+    "pair": "bac+slug",
+    "reads": 3,
+    "independent_molecules": 2,
+    "members": [
+     {
+      "read": "ERR11843472.1482365",
+      "pair": "bac+slug",
+      "main": "bac",
+      "a_cls": "slug",
+      "a_t": "CAWKYH010000778.1",
+      "a_bp": 1000,
+      "a_outer": 191,
+      "a_strand": "+",
+      "a_len": 811,
+      "a_ident": 0.9864,
+      "a_mapq": 60,
+      "b_cls": "bac",
+      "b_t": "bac_Kistimonas_sp_1_2|OZ220224.1",
+      "b_bp": 4102715,
+      "b_outer": 4104528,
+      "b_strand": "+",
+      "b_len": 1818,
+      "b_ident": 0.9967,
+      "b_mapq": 60,
+      "gap": 6672,
+      "adapter": false,
+      "n_segments": 2,
+      "cluster_reads": 3,
+      "cluster_molecules": 2
+     },
+     {
+      "read": "ERR11843472.1685920",
+      "pair": "bac+slug",
+      "main": "?",
+      "a_cls": "slug",
+      "a_t": "CAWKYH010000778.1",
+      "a_bp": 1000,
+      "a_outer": 0,
+      "a_strand": "+",
+      "a_len": 1000,
+      "a_ident": 1.0,
+      "a_mapq": 60,
+      "b_cls": "bac",
+      "b_t": "bac_Kistimonas_sp_1_2|OZ220224.1",
+      "b_bp": 4102715,
+      "b_outer": 4103628,
+      "b_strand": "+",
+      "b_len": 914,
+      "b_ident": 0.9989,
+      "b_mapq": 60,
+      "gap": 6687,
+      "adapter": false,
+      "n_segments": 2,
+      "cluster_reads": 3,
+      "cluster_molecules": 2
+     },
+     {
+      "read": "ERR12353011.539018",
+      "pair": "bac+slug",
+      "main": "bac",
+      "a_cls": "bac",
+      "a_t": "bac_Kistimonas_sp_1_2|OZ220224.1",
+      "a_bp": 4102715,
+      "a_outer": 4105496,
+      "a_strand": "-",
+      "a_len": 2785,
+      "a_ident": 0.9975,
+      "a_mapq": 60,
+      "b_cls": "slug",
+      "b_t": "CAWKYH010000778.1",
+      "b_bp": 1000,
+      "b_outer": 0,
+      "b_strand": "-",
+      "b_len": 1004,
+      "b_ident": 0.995,
+      "b_mapq": 60,
+      "gap": 6689,
+      "adapter": false,
+      "n_segments": 2,
+      "cluster_reads": 3,
+      "cluster_molecules": 2
+     }
+    ]
+   }
+  ],
+  "flanked": 0,
+  "reads_examined": 36284,
+  "partner_species": {
+   "capitatus": 3828,
+   "lamourouxii": 673,
+   "other": 4
+  },
+  "junctions": 4505,
+  "within5bp": 3892,
+  "slug_location": {
+   "alternate haplotype": 1427,
+   "Purdue or Tampa assembly only": 743,
+   "chromosome": 1963,
+   "unplaced scaffold": 372
+  },
+  "per_chromosome": [
+   {
+    "chrom": "1",
+    "observed": 326,
+    "expected": 375.4
+   },
+   {
+    "chrom": "2",
+    "observed": 302,
+    "expected": 304.9
+   },
+   {
+    "chrom": "3",
+    "observed": 232,
+    "expected": 231.9
+   },
+   {
+    "chrom": "4",
+    "observed": 158,
+    "expected": 176.0
+   },
+   {
+    "chrom": "5",
+    "observed": 135,
+    "expected": 126.6
+   },
+   {
+    "chrom": "6",
+    "observed": 108,
+    "expected": 104.2
+   },
+   {
+    "chrom": "7",
+    "observed": 80,
+    "expected": 95.2
+   },
+   {
+    "chrom": "8",
+    "observed": 115,
+    "expected": 81.3
+   },
+   {
+    "chrom": "9",
+    "observed": 92,
+    "expected": 81.2
+   },
+   {
+    "chrom": "10",
+    "observed": 87,
+    "expected": 75.8
+   },
+   {
+    "chrom": "11",
+    "observed": 71,
+    "expected": 72.6
+   },
+   {
+    "chrom": "12",
+    "observed": 70,
+    "expected": 64.7
+   },
+   {
+    "chrom": "13",
+    "observed": 77,
+    "expected": 58.5
+   },
+   {
+    "chrom": "14",
+    "observed": 54,
+    "expected": 58.4
+   },
+   {
+    "chrom": "15",
+    "observed": 56,
+    "expected": 56.4
+   }
+  ],
+  "chi_square": 35.1,
+  "chi_df": 14
+ },
+ "fragments": [
+  {
+   "assembly": "sanger",
+   "contig": "9",
+   "start": 2842019,
+   "end": 2847596,
+   "length": 5577,
+   "identity": 1.0,
+   "alga": "Penicillus lamourouxii",
+   "plastome": "OZ372796.1",
+   "plastome_start": 2459,
+   "plastome_end": 6055,
+   "genes": [
+    "atpB",
+    "petB",
+    "petD",
+    "psaA",
+    "rps14"
+   ],
+   "abuts": "gap",
+   "crossing_reads_pass2": 2,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 2,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 2,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 300,
+   "diverging_reads": 1,
+   "diverging_molecules": 1,
+   "flank_reads": 3
+  },
+  {
+   "assembly": "sanger",
+   "contig": "1",
+   "start": 27252467,
+   "end": 27256169,
+   "length": 3702,
+   "identity": 0.9973,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 9563,
+   "plastome_end": 13273,
+   "genes": [
+    "atpB",
+    "atpE",
+    "petB",
+    "rps14"
+   ],
+   "abuts": "gap",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 1500,
+   "diverging_reads": 13,
+   "diverging_molecules": 11,
+   "flank_reads": 17
+  },
+  {
+   "assembly": "sanger",
+   "contig": "4",
+   "start": 35236216,
+   "end": 35239714,
+   "length": 3498,
+   "identity": 1.0,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 8976,
+   "plastome_end": 12474,
+   "genes": [
+    "atpB",
+    "atpE",
+    "psbN",
+    "rps14"
+   ],
+   "abuts": "gap",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 0,
+   "through_molecules_boundary_pass": 0,
+   "unique_flank_bp": 0,
+   "diverging_reads": 0,
+   "diverging_molecules": 0,
+   "flank_reads": 0
+  },
+  {
+   "assembly": "sanger",
+   "contig": "6",
+   "start": 17830984,
+   "end": 17834019,
+   "length": 3035,
+   "identity": 0.9997,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 62775,
+   "plastome_end": 65811,
+   "genes": [
+    "accD",
+    "orf434",
+    "rps7",
+    "tufA"
+   ],
+   "abuts": "gap",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 700,
+   "diverging_reads": 12,
+   "diverging_molecules": 8,
+   "flank_reads": 15
+  },
+  {
+   "assembly": "sanger",
+   "contig": "6",
+   "start": 1304771,
+   "end": 1306640,
+   "length": 1869,
+   "identity": 0.9933,
+   "alga": "Penicillus lamourouxii",
+   "plastome": "OZ372796.1",
+   "plastome_start": 3338,
+   "plastome_end": 4979,
+   "genes": [
+    "petB",
+    "petD",
+    "rps14"
+   ],
+   "abuts": "gap",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 800,
+   "diverging_reads": 7,
+   "diverging_molecules": 6,
+   "flank_reads": 9
+  },
+  {
+   "assembly": "sanger",
+   "contig": "3",
+   "start": 50389534,
+   "end": 50391382,
+   "length": 1848,
+   "identity": 0.9984,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ287723.1",
+   "plastome_start": 23471,
+   "plastome_end": 25318,
+   "genes": [],
+   "abuts": "gap",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 2000,
+   "diverging_reads": 15,
+   "diverging_molecules": 12,
+   "flank_reads": 22
+  },
+  {
+   "assembly": "sanger",
+   "contig": "11",
+   "start": 3088313,
+   "end": 3090133,
+   "length": 1820,
+   "identity": 0.9984,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 64340,
+   "plastome_end": 66161,
+   "genes": [
+    "orf434",
+    "tufA"
+   ],
+   "abuts": "gap",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 0,
+   "through_molecules_boundary_pass": 0,
+   "unique_flank_bp": 0,
+   "diverging_reads": 0,
+   "diverging_molecules": 0,
+   "flank_reads": 0
+  },
+  {
+   "assembly": "sanger",
+   "contig": "14",
+   "start": 9862870,
+   "end": 9864679,
+   "length": 1809,
+   "identity": 0.9972,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 11269,
+   "plastome_end": 13073,
+   "genes": [
+    "atpB",
+    "petB",
+    "rps14"
+   ],
+   "abuts": "gap",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 700,
+   "diverging_reads": 6,
+   "diverging_molecules": 6,
+   "flank_reads": 8
+  },
+  {
+   "assembly": "sanger",
+   "contig": "CAWKYH010001228.1",
+   "start": 160125,
+   "end": 161704,
+   "length": 1579,
+   "identity": 1.0,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ287723.1",
+   "plastome_start": 57376,
+   "plastome_end": 58955,
+   "genes": [],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 2000,
+   "diverging_reads": 6,
+   "diverging_molecules": 5,
+   "flank_reads": 9
+  },
+  {
+   "assembly": "sanger",
+   "contig": "14",
+   "start": 11487394,
+   "end": 11488888,
+   "length": 1494,
+   "identity": 0.998,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 13724,
+   "plastome_end": 15220,
+   "genes": [
+    "petD",
+    "psaA"
+   ],
+   "abuts": "gap",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 2000,
+   "diverging_reads": 6,
+   "diverging_molecules": 6,
+   "flank_reads": 10
+  },
+  {
+   "assembly": "sanger",
+   "contig": "CAWKYH010000620.1",
+   "start": 98295,
+   "end": 99562,
+   "length": 1267,
+   "identity": 1.0,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 22789,
+   "plastome_end": 24056,
+   "genes": [
+    "atpA"
+   ],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 2000,
+   "diverging_reads": 25,
+   "diverging_molecules": 21,
+   "flank_reads": 43
+  },
+  {
+   "assembly": "sanger",
+   "contig": "3",
+   "start": 4370341,
+   "end": 4371555,
+   "length": 1214,
+   "identity": 0.9992,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 7827,
+   "plastome_end": 9042,
+   "genes": [],
+   "abuts": "gap",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 2000,
+   "diverging_reads": 3,
+   "diverging_molecules": 2,
+   "flank_reads": 8
+  },
+  {
+   "assembly": "sanger",
+   "contig": "CAWKYH010000836.1",
+   "start": 12447,
+   "end": 13518,
+   "length": 1071,
+   "identity": 0.9832,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 35791,
+   "plastome_end": 36877,
+   "genes": [
+    "ccs1",
+    "ycf1"
+   ],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 0,
+   "through_molecules_boundary_pass": 0,
+   "unique_flank_bp": 0,
+   "diverging_reads": 0,
+   "diverging_molecules": 0,
+   "flank_reads": 0
+  },
+  {
+   "assembly": "sanger",
+   "contig": "9",
+   "start": 517682,
+   "end": 518692,
+   "length": 1010,
+   "identity": 1.0,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 60847,
+   "plastome_end": 61857,
+   "genes": [
+    "rbcL"
+   ],
+   "abuts": "gap",
+   "crossing_reads_pass2": 0,
+   "crossing_molecules_pass2": 0,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 1900,
+   "diverging_reads": 2,
+   "diverging_molecules": 1,
+   "flank_reads": 5
+  },
+  {
+   "assembly": "sanger",
+   "contig": "10",
+   "start": 7606013,
+   "end": 7606448,
+   "length": 435,
+   "identity": 1.0,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ287723.1",
+   "plastome_start": 72681,
+   "plastome_end": 73116,
+   "genes": [],
+   "abuts": "gap",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 0,
+   "through_molecules_boundary_pass": 0,
+   "unique_flank_bp": 0,
+   "diverging_reads": 0,
+   "diverging_molecules": 0,
+   "flank_reads": 0
+  },
+  {
+   "assembly": "alt",
+   "contig": "CAWKYI010000192.1",
+   "start": 0,
+   "end": 3187,
+   "length": 3187,
+   "identity": 0.9991,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 68875,
+   "plastome_end": 72064,
+   "genes": [
+    "rpoC1",
+    "rpoC2",
+    "rps9"
+   ],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 900,
+   "diverging_reads": 3,
+   "diverging_molecules": 3,
+   "flank_reads": 6
+  },
+  {
+   "assembly": "alt",
+   "contig": "CAWKYI010001489.1",
+   "start": 0,
+   "end": 2961,
+   "length": 2961,
+   "identity": 1.0,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 25994,
+   "plastome_end": 28955,
+   "genes": [
+    "chlI",
+    "psbA"
+   ],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 1400,
+   "diverging_reads": 9,
+   "diverging_molecules": 7,
+   "flank_reads": 14
+  },
+  {
+   "assembly": "alt",
+   "contig": "CAWKYI010013009.1",
+   "start": 268464,
+   "end": 270668,
+   "length": 2204,
+   "identity": 1.0,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ287723.1",
+   "plastome_start": 11449,
+   "plastome_end": 13653,
+   "genes": [],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 0,
+   "through_molecules_boundary_pass": 0,
+   "unique_flank_bp": 0,
+   "diverging_reads": 0,
+   "diverging_molecules": 0,
+   "flank_reads": 0
+  },
+  {
+   "assembly": "alt",
+   "contig": "CAWKYI010003135.1",
+   "start": 63621,
+   "end": 65506,
+   "length": 1885,
+   "identity": 1.0,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 55946,
+   "plastome_end": 57831,
+   "genes": [
+    "rpl14",
+    "rpl16",
+    "rpl2",
+    "rps19",
+    "rps3"
+   ],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 2000,
+   "diverging_reads": 31,
+   "diverging_molecules": 23,
+   "flank_reads": 42
+  },
+  {
+   "assembly": "alt",
+   "contig": "CAWKYI010005799.1",
+   "start": 18959,
+   "end": 20635,
+   "length": 1676,
+   "identity": 1.0,
+   "alga": "Penicillus lamourouxii",
+   "plastome": "OZ372796.1",
+   "plastome_start": 61111,
+   "plastome_end": 62787,
+   "genes": [
+    "orf434",
+    "tufA"
+   ],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 0,
+   "through_molecules_boundary_pass": 0,
+   "unique_flank_bp": 0,
+   "diverging_reads": 0,
+   "diverging_molecules": 0,
+   "flank_reads": 0
+  },
+  {
+   "assembly": "alt",
+   "contig": "CAWKYI010006797.1",
+   "start": 24844,
+   "end": 26518,
+   "length": 1674,
+   "identity": 1.0,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 27681,
+   "plastome_end": 29355,
+   "genes": [
+    "psbA"
+   ],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 2000,
+   "diverging_reads": 16,
+   "diverging_molecules": 10,
+   "flank_reads": 26
+  },
+  {
+   "assembly": "alt",
+   "contig": "CAWKYI010003440.1",
+   "start": 0,
+   "end": 1657,
+   "length": 1657,
+   "identity": 1.0,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 32276,
+   "plastome_end": 33933,
+   "genes": [
+    "psbB",
+    "psbH",
+    "psbI",
+    "psbT",
+    "rpl20"
+   ],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 1200,
+   "diverging_reads": 19,
+   "diverging_molecules": 15,
+   "flank_reads": 23
+  },
+  {
+   "assembly": "alt",
+   "contig": "CAWKYI010014291.1",
+   "start": 17690,
+   "end": 19313,
+   "length": 1623,
+   "identity": 0.9985,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 81940,
+   "plastome_end": 83255,
+   "genes": [],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 0,
+   "through_molecules_boundary_pass": 0,
+   "unique_flank_bp": 300,
+   "diverging_reads": 0,
+   "diverging_molecules": 0,
+   "flank_reads": 0
+  },
+  {
+   "assembly": "alt",
+   "contig": "CAWKYI010002447.1",
+   "start": 0,
+   "end": 1449,
+   "length": 1449,
+   "identity": 0.9965,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ287723.1",
+   "plastome_start": 12134,
+   "plastome_end": 13582,
+   "genes": [],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 1600,
+   "diverging_reads": 28,
+   "diverging_molecules": 19,
+   "flank_reads": 33
+  },
+  {
+   "assembly": "alt",
+   "contig": "CAWKYI010014511.1",
+   "start": 0,
+   "end": 1307,
+   "length": 1307,
+   "identity": 0.9947,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ373742.1",
+   "plastome_start": 56351,
+   "plastome_end": 57655,
+   "genes": [
+    "rpl16",
+    "rpl2",
+    "rps19",
+    "rps3"
+   ],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 1,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 1,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 1,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 1100,
+   "diverging_reads": 4,
+   "diverging_molecules": 4,
+   "flank_reads": 6
+  },
+  {
+   "assembly": "alt",
+   "contig": "CAWKYI010006464.1",
+   "start": 43472,
+   "end": 44319,
+   "length": 847,
+   "identity": 1.0,
+   "alga": "Penicillus capitatus",
+   "plastome": "OZ287723.1",
+   "plastome_start": 14975,
+   "plastome_end": 15822,
+   "genes": [],
+   "abuts": "sequence end",
+   "crossing_reads_pass2": 2,
+   "crossing_molecules_pass2": 1,
+   "through_reads": 2,
+   "through_molecules": 1,
+   "through_reads_boundary_pass": 2,
+   "through_molecules_boundary_pass": 1,
+   "unique_flank_bp": 2000,
+   "diverging_reads": 17,
+   "diverging_molecules": 15,
+   "flank_reads": 23
+  }
+ ],
+ "assembly_screen": {
+  "sanger": {
+   "n": 6083,
+   "top": [
+    {
+     "target": "AP014543.1",
+     "window": 85200,
+     "n": 5283
+    },
+    {
+     "target": "OZ372796.1",
+     "window": 78900,
+     "n": 459
+    },
+    {
+     "target": "OZ494339.1",
+     "window": 57000,
+     "n": 156
+    }
+   ],
+   "whole_contigs": {
+    "bac": {
+     "n": 2,
+     "bp": 3000
+    },
+    "cp": {
+     "n": 1,
+     "bp": 2000
+    }
+   },
+   "exact": 15
+  },
+  "alt": {
+   "n": 3000,
+   "top": [
+    {
+     "target": "AP014543.1",
+     "window": 85200,
+     "n": 2616
+    },
+    {
+     "target": "OZ372796.1",
+     "window": 78900,
+     "n": 204
+    },
+    {
+     "target": "OZ494339.1",
+     "window": 57000,
+     "n": 75
+    }
+   ],
+   "whole_contigs": {},
+   "exact": 11
+  },
+  "purdue": {
+   "n": 11790,
+   "top": [
+    {
+     "target": "AP014543.1",
+     "window": 85200,
+     "n": 10548
+    },
+    {
+     "target": "OZ372796.1",
+     "window": 78900,
+     "n": 690
+    },
+    {
+     "target": "OZ494339.1",
+     "window": 57000,
+     "n": 243
+    }
+   ],
+   "whole_contigs": {
+    "cp": {
+     "n": 3,
+     "bp": 10978
+    }
+   },
+   "exact": 1
+  },
+  "tampa": {
+   "n": 6322,
+   "top": [
+    {
+     "target": "AP014543.1",
+     "window": 85200,
+     "n": 5621
+    },
+    {
+     "target": "OZ372796.1",
+     "window": 78900,
+     "n": 447
+    },
+    {
+     "target": "OZ494339.1",
+     "window": 57000,
+     "n": 155
+    }
+   ],
+   "whole_contigs": {
+    "cp": {
+     "n": 2,
+     "bp": 5927
+    },
+    "bac": {
+     "n": 23,
+     "bp": 36008
+    }
+   },
+   "exact": 0
+  }
+ },
+ "alien": {
+  "summary": {
+   "n_queries": 88221,
+   "n_with_hits": 50206,
+   "n_listed": 11,
+   "n_strong": 4,
+   "n_on_plastid_fragment": 6,
+   "n_unexplained": 0,
+   "by_source": {
+    "Ensembl xgElyCris1.1": 7,
+    "Purdue": 4
+   }
+  },
+  "candidates": [
+   {
+    "query": "ELYCR|ENSUFQP00005016588|ENSUFQG00005013998",
+    "source": "Ensembl xgElyCris1.1",
+    "length": 459,
+    "top_group": "ALG",
+    "top_hit": "ALG|BRYSP|BEI31715.1",
+    "top_bits": 809.0,
+    "top_pident": 85.3,
+    "top_alnlen": 441,
+    "best_animal_bits": 0,
+    "best_animal_hit": "",
+    "best_sacoglossan_bits": 0,
+    "best_alga_bits": 809.0,
+    "best_alga_hit": "ALG|BRYSP|BEI31715.1",
+    "best_bacteria_bits": 741.0,
+    "best_fungi_bits": 0,
+    "best_cyano_bits": 740.0,
+    "strong": true,
+    "location": "3:50389974-50391350",
+    "on_plastid_fragment": "3:50389534-50391382",
+    "top_hit_description": "photosystem I P700 chlorophyll a apoprotein A1 (chloroplast)",
+    "verdict": "chloroplast gene on one of the plastid fragments that the assembly joined to slug DNA (artefact, see above)"
+   },
+   {
+    "query": "ELYCR|ENSUFQP00005003068|ENSUFQG00005003396",
+    "source": "Ensembl xgElyCris1.1",
+    "length": 300,
+    "top_group": "ALG",
+    "top_hit": "ALG|BRYSP|BEI31732.1",
+    "top_bits": 357.0,
+    "top_pident": 94.0,
+    "top_alnlen": 183,
+    "best_animal_bits": 0,
+    "best_animal_hit": "",
+    "best_sacoglossan_bits": 0,
+    "best_alga_bits": 357.0,
+    "best_alga_hit": "ALG|BRYSP|BEI31732.1",
+    "best_bacteria_bits": 327.0,
+    "best_fungi_bits": 191.0,
+    "best_cyano_bits": 308.0,
+    "strong": true,
+    "location": "6:1305423-1307223",
+    "on_plastid_fragment": "6:1304771-1306640",
+    "top_hit_description": "cytochrome b6 (chloroplast)",
+    "verdict": "chloroplast gene on one of the plastid fragments that the assembly joined to slug DNA (artefact, see above)"
+   },
+   {
+    "query": "ELYCR|ENSUFQP00005031557|ENSUFQG00005026909",
+    "source": "Ensembl xgElyCris1.1",
+    "length": 230,
+    "top_group": "ALG",
+    "top_hit": "ALG|BRYSP|BEI31731.1",
+    "top_bits": 282.0,
+    "top_pident": 85.5,
+    "top_alnlen": 152,
+    "best_animal_bits": 0,
+    "best_animal_hit": "",
+    "best_sacoglossan_bits": 0,
+    "best_alga_bits": 282.0,
+    "best_alga_hit": "ALG|BRYSP|BEI31731.1",
+    "best_bacteria_bits": 260.0,
+    "best_fungi_bits": 0,
+    "best_cyano_bits": 238.0,
+    "strong": true,
+    "location": "9:2845041-2845907",
+    "on_plastid_fragment": "9:2842019-2847596",
+    "top_hit_description": "cytochrome b6/f complex subunit IV (chloroplast)",
+    "verdict": "chloroplast gene on one of the plastid fragments that the assembly joined to slug DNA (artefact, see above)"
+   },
+   {
+    "query": "ELYCR|ENSUFQP00005005448|ENSUFQG00005005192",
+    "source": "Ensembl xgElyCris1.1",
+    "length": 241,
+    "top_group": "ALG",
+    "top_hit": "ALG|BRYSP|BEI31736.1",
+    "top_bits": 122.0,
+    "top_pident": 36.3,
+    "top_alnlen": 245,
+    "best_animal_bits": 0,
+    "best_animal_hit": "",
+    "best_sacoglossan_bits": 0,
+    "best_alga_bits": 122.0,
+    "best_alga_hit": "ALG|BRYSP|BEI31736.1",
+    "best_bacteria_bits": 97.8,
+    "best_fungi_bits": 0,
+    "best_cyano_bits": 85.9,
+    "strong": true,
+    "location": "4:35238640-35239365",
+    "on_plastid_fragment": "4:35236216-35239714",
+    "top_hit_description": "envelope membrane protein (chloroplast)",
+    "verdict": "chloroplast gene on one of the plastid fragments that the assembly joined to slug DNA (artefact, see above)"
+   },
+   {
+    "query": "ELYCR|ENSUFQP00005020388|ENSUFQG00005016607",
+    "source": "Ensembl xgElyCris1.1",
+    "length": 303,
+    "top_group": "ALG",
+    "top_hit": "ALG|BRYSP|BEI31734.1",
+    "top_bits": 499.0,
+    "top_pident": 92.4,
+    "top_alnlen": 277,
+    "best_animal_bits": 470.0,
+    "best_animal_hit": "MET|BRAFL|A0A9J7MUI8|LOC118419450",
+    "best_sacoglossan_bits": 0,
+    "best_alga_bits": 499.0,
+    "best_alga_hit": "ALG|BRYSP|BEI31734.1",
+    "best_bacteria_bits": 459.0,
+    "best_fungi_bits": 0,
+    "best_cyano_bits": 448.0,
+    "strong": false,
+    "location": "1:27253449-27254360",
+    "on_plastid_fragment": "1:27252467-27256169",
+    "top_hit_description": "ATP synthase CF1 beta subunit (chloroplast)",
+    "verdict": "chloroplast gene on one of the plastid fragments that the assembly joined to slug DNA (artefact, see above)"
+   },
+   {
+    "query": "ELYCRP|A0AAE0Y8Q1|RRG08_016389",
+    "source": "Purdue",
+    "length": 317,
+    "top_group": "ALG",
+    "top_hit": "ALG|CHOCR|S0F301",
+    "top_bits": 205.0,
+    "top_pident": 37.5,
+    "top_alnlen": 328,
+    "best_animal_bits": 194.0,
+    "best_animal_hit": "MET|DANPL|A0A212F5G1|KGM_215350",
+    "best_sacoglossan_bits": 192.0,
+    "best_alga_bits": 205.0,
+    "best_alga_hit": "ALG|CHOCR|S0F301",
+    "best_bacteria_bits": 0,
+    "best_fungi_bits": 0,
+    "best_cyano_bits": 0,
+    "strong": false,
+    "top_hit_description": "RNA-dependent DNA polymerase",
+    "verdict": "conserved protein: animal homologues score within 20 % of the algal hit"
+   },
+   {
+    "query": "ELYCR|ENSUFQP00005009975|ENSUFQG00005008347",
+    "source": "Ensembl xgElyCris1.1",
+    "length": 210,
+    "top_group": "ALG",
+    "top_hit": "ALG|BRYSP|BEI31734.1",
+    "top_bits": 188.0,
+    "top_pident": 82.4,
+    "top_alnlen": 125,
+    "best_animal_bits": 180.0,
+    "best_animal_hit": "MET|BRAFL|A0A9J7MUI8|LOC118419450",
+    "best_sacoglossan_bits": 0,
+    "best_alga_bits": 188.0,
+    "best_alga_hit": "ALG|BRYSP|BEI31734.1",
+    "best_bacteria_bits": 185.0,
+    "best_fungi_bits": 0,
+    "best_cyano_bits": 180.0,
+    "strong": false,
+    "location": "4:35237326-35238475",
+    "on_plastid_fragment": "4:35236216-35239714",
+    "top_hit_description": "ATP synthase CF1 beta subunit (chloroplast)",
+    "verdict": "chloroplast gene on one of the plastid fragments that the assembly joined to slug DNA (artefact, see above)"
+   },
+   {
+    "query": "ELYCRP|A0AAE1AYA6|RRG08_064404",
+    "source": "Purdue",
+    "length": 207,
+    "top_group": "ALG",
+    "top_hit": "ALG|CHOCR|S0F301",
+    "top_bits": 171.0,
+    "top_pident": 44.3,
+    "top_alnlen": 212,
+    "best_animal_bits": 162.0,
+    "best_animal_hit": "MET|DANPL|A0A212F5G1|KGM_215350",
+    "best_sacoglossan_bits": 162.0,
+    "best_alga_bits": 171.0,
+    "best_alga_hit": "ALG|CHOCR|S0F301",
+    "best_bacteria_bits": 0,
+    "best_fungi_bits": 0,
+    "best_cyano_bits": 0,
+    "strong": false,
+    "top_hit_description": "RNA-dependent DNA polymerase",
+    "verdict": "conserved protein: animal homologues score within 20 % of the algal hit"
+   },
+   {
+    "query": "ELYCRP|A0AAE0Z5Z6|RRG08_049550",
+    "source": "Purdue",
+    "length": 71,
+    "top_group": "ALG",
+    "top_hit": "ALG|CHOCR|R7QRT3",
+    "top_bits": 106.0,
+    "top_pident": 76.1,
+    "top_alnlen": 71,
+    "best_animal_bits": 93.6,
+    "best_animal_hit": "MET|CAPTE|R7UNG4|",
+    "best_sacoglossan_bits": 0,
+    "best_alga_bits": 106.0,
+    "best_alga_hit": "ALG|CHOCR|R7QRT3",
+    "best_bacteria_bits": 0,
+    "best_fungi_bits": 0,
+    "best_cyano_bits": 0,
+    "strong": false,
+    "top_hit_description": "Uncharacterized protein",
+    "verdict": "conserved protein: animal homologues score within 20 % of the algal hit"
+   },
+   {
+    "query": "ELYCR|ENSUFQP00005005440|ENSUFQG00005005186",
+    "source": "Ensembl xgElyCris1.1",
+    "length": 76,
+    "top_group": "ALG",
+    "top_hit": "ALG|CHOCR|R7QRT3",
+    "top_bits": 100.0,
+    "top_pident": 75.4,
+    "top_alnlen": 69,
+    "best_animal_bits": 87.4,
+    "best_animal_hit": "MET|CAPTE|R7UNG4|",
+    "best_sacoglossan_bits": 0,
+    "best_alga_bits": 100.0,
+    "best_alga_hit": "ALG|CHOCR|R7QRT3",
+    "best_bacteria_bits": 0,
+    "best_fungi_bits": 0,
+    "best_cyano_bits": 0,
+    "strong": false,
+    "location": "CAWKYH010000784.1:22518-26835",
+    "on_plastid_fragment": null,
+    "top_hit_description": "Uncharacterized protein",
+    "verdict": "conserved protein: animal homologues score within 20 % of the algal hit"
+   },
+   {
+    "query": "ELYCRP|A0AAE1ADJ0|RRG08_035458",
+    "source": "Purdue",
+    "length": 1529,
+    "top_group": "ALG",
+    "top_hit": "ALG|BRYSP|GMH43254.1",
+    "top_bits": 94.4,
+    "top_pident": 30.5,
+    "top_alnlen": 266,
+    "best_animal_bits": 85.1,
+    "best_animal_hit": "MET|APLCA|A0ABM0ZYN5|LOC101855334",
+    "best_sacoglossan_bits": 83.2,
+    "best_alga_bits": 94.4,
+    "best_alga_hit": "ALG|BRYSP|GMH43254.1",
+    "best_bacteria_bits": 0,
+    "best_fungi_bits": 79.7,
+    "best_cyano_bits": 0,
+    "strong": false,
+    "top_hit_description": "LOW QUALITY PROTEIN: hypothetical protein BSKO_11176",
+    "verdict": "conserved protein: animal homologues score within 20 % of the algal hit"
+   }
+  ]
+ },
+ "protein_screen": {
+  "n_queries": 471,
+  "n_loci": 649,
+  "totals": {
+   "no database match": 248,
+   "animal gene": 320,
+   "plastid fragment (assembly artefact)": 49,
+   "plastid-only contig": 5,
+   "alga-like": 20,
+   "microbe-like": 7
+  },
+  "by_assembly": {
+   "sanger": {
+    "loci": 209,
+    "no database match": 89,
+    "animal gene": 87,
+    "plastid fragment (assembly artefact)": 31,
+    "plastid-only contig": 2
+   },
+   "alt": {
+    "loci": 114,
+    "no database match": 34,
+    "plastid fragment (assembly artefact)": 18,
+    "animal gene": 62
+   },
+   "purdue": {
+    "loci": 145,
+    "animal gene": 70,
+    "no database match": 52,
+    "alga-like": 20,
+    "microbe-like": 1,
+    "plastid-only contig": 2
+   },
+   "tampa": {
+    "loci": 181,
+    "animal gene": 101,
+    "no database match": 73,
+    "plastid-only contig": 1,
+    "microbe-like": 6
+   }
+  },
+  "foreign_contigs": [
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010000296.1",
+    "length": 38656,
+    "loci": 1,
+    "classes": [
+     "alga-like"
+    ],
+    "genes": [
+     "rpoC1"
+    ],
+    "identity_min": 0.4477,
+    "identity_max": 0.4477,
+    "animal_loci_on_contig": 0,
+    "gc": 0.4511,
+    "annotated_genes": 4,
+    "annotated_genes_with_protein_match": 0,
+    "read_alignments": 0,
+    "read_cover_span": null,
+    "aligned_to_other_assemblies": {
+     "sanger": 0,
+     "tampa": 0
+    },
+    "reading": "DNA of another organism left in this assembly: absent from the reads of the xgElyCris1 animal"
+   },
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010001067.1",
+    "length": 130901,
+    "loci": 2,
+    "classes": [
+     "alga-like",
+     "microbe-like"
+    ],
+    "genes": [
+     "rps12",
+     "ycf3"
+    ],
+    "identity_min": 0.834,
+    "identity_max": 0.8704,
+    "animal_loci_on_contig": 0,
+    "gc": 0.5366,
+    "annotated_genes": 28,
+    "annotated_genes_with_protein_match": 0,
+    "read_alignments": 0,
+    "read_cover_span": null,
+    "aligned_to_other_assemblies": {
+     "sanger": 0,
+     "tampa": 0
+    },
+    "reading": "DNA of another organism left in this assembly: absent from the reads of the xgElyCris1 animal"
+   },
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010001250.1",
+    "length": 76989,
+    "loci": 2,
+    "classes": [
+     "alga-like"
+    ],
+    "genes": [
+     "cysA",
+     "accD"
+    ],
+    "identity_min": 0.6373,
+    "identity_max": 0.6971,
+    "animal_loci_on_contig": 0,
+    "gc": 0.5293,
+    "annotated_genes": 19,
+    "annotated_genes_with_protein_match": 0,
+    "read_alignments": 0,
+    "read_cover_span": null,
+    "aligned_to_other_assemblies": {
+     "sanger": 0,
+     "tampa": 0
+    },
+    "reading": "DNA of another organism left in this assembly: absent from the reads of the xgElyCris1 animal"
+   },
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010001375.1",
+    "length": 21862,
+    "loci": 1,
+    "classes": [
+     "alga-like"
+    ],
+    "genes": [
+     "psbN"
+    ],
+    "identity_min": 0.8182,
+    "identity_max": 0.8182,
+    "animal_loci_on_contig": 0,
+    "gc": 0.5025,
+    "annotated_genes": 5,
+    "annotated_genes_with_protein_match": 0,
+    "read_alignments": 14268,
+    "read_cover_span": [
+     17,
+     1963
+    ],
+    "aligned_to_other_assemblies": {
+     "sanger": 1964,
+     "tampa": 1141
+    },
+    "reading": "DNA of another organism left in this assembly: absent from the reads of the xgElyCris1 animal"
+   },
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010001684.1",
+    "length": 4997,
+    "loci": 1,
+    "classes": [
+     "alga-like"
+    ],
+    "genes": [
+     "rpoC1"
+    ],
+    "identity_min": 0.6568,
+    "identity_max": 0.6568,
+    "animal_loci_on_contig": 0,
+    "gc": 0.3494,
+    "annotated_genes": 1,
+    "annotated_genes_with_protein_match": 0,
+    "read_alignments": 18592,
+    "read_cover_span": [
+     279,
+     4980
+    ],
+    "aligned_to_other_assemblies": {
+     "sanger": 2376,
+     "tampa": 3706
+    },
+    "reading": "plastid-like sequence on a contig that is otherwise slug DNA: join tested with reads (script 29_join_test)"
+   },
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010002135.1",
+    "length": 22502,
+    "loci": 1,
+    "classes": [
+     "alga-like"
+    ],
+    "genes": [
+     "rpoB_2"
+    ],
+    "identity_min": 0.4631,
+    "identity_max": 0.4631,
+    "animal_loci_on_contig": 0,
+    "gc": 0.5301,
+    "annotated_genes": 4,
+    "annotated_genes_with_protein_match": 0,
+    "read_alignments": 0,
+    "read_cover_span": null,
+    "aligned_to_other_assemblies": {
+     "sanger": 0,
+     "tampa": 0
+    },
+    "reading": "DNA of another organism left in this assembly: absent from the reads of the xgElyCris1 animal"
+   },
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010002183.1",
+    "length": 18025,
+    "loci": 1,
+    "classes": [
+     "alga-like"
+    ],
+    "genes": [
+     "chlB"
+    ],
+    "identity_min": 0.7719,
+    "identity_max": 0.7719,
+    "animal_loci_on_contig": 0,
+    "gc": 0.5068,
+    "annotated_genes": 4,
+    "annotated_genes_with_protein_match": 0,
+    "read_alignments": 0,
+    "read_cover_span": null,
+    "aligned_to_other_assemblies": {
+     "sanger": 0,
+     "tampa": 0
+    },
+    "reading": "DNA of another organism left in this assembly: absent from the reads of the xgElyCris1 animal"
+   },
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010004663.1",
+    "length": 58229,
+    "loci": 2,
+    "classes": [
+     "alga-like"
+    ],
+    "genes": [
+     "atpI",
+     "psbZ"
+    ],
+    "identity_min": 0.754,
+    "identity_max": 0.7642,
+    "animal_loci_on_contig": 0,
+    "gc": 0.5097,
+    "annotated_genes": 9,
+    "annotated_genes_with_protein_match": 0,
+    "read_alignments": 172,
+    "read_cover_span": [
+     2,
+     3365
+    ],
+    "aligned_to_other_assemblies": {
+     "sanger": 2304,
+     "tampa": 1562
+    },
+    "reading": "DNA of another organism left in this assembly: absent from the reads of the xgElyCris1 animal"
+   },
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010005039.1",
+    "length": 68207,
+    "loci": 2,
+    "classes": [
+     "alga-like"
+    ],
+    "genes": [
+     "ftsH",
+     "psbK"
+    ],
+    "identity_min": 0.282,
+    "identity_max": 0.8182,
+    "animal_loci_on_contig": 0,
+    "gc": 0.5008,
+    "annotated_genes": 19,
+    "annotated_genes_with_protein_match": 0,
+    "read_alignments": 0,
+    "read_cover_span": null,
+    "aligned_to_other_assemblies": {
+     "sanger": 0,
+     "tampa": 0
+    },
+    "reading": "DNA of another organism left in this assembly: absent from the reads of the xgElyCris1 animal"
+   },
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010005634.1",
+    "length": 30561,
+    "loci": 1,
+    "classes": [
+     "alga-like"
+    ],
+    "genes": [
+     "clpP"
+    ],
+    "identity_min": 0.75,
+    "identity_max": 0.75,
+    "animal_loci_on_contig": 0,
+    "gc": 0.5116,
+    "annotated_genes": 4,
+    "annotated_genes_with_protein_match": 0,
+    "read_alignments": 0,
+    "read_cover_span": null,
+    "aligned_to_other_assemblies": {
+     "sanger": 0,
+     "tampa": 0
+    },
+    "reading": "DNA of another organism left in this assembly: absent from the reads of the xgElyCris1 animal"
+   },
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010006072.1",
+    "length": 157771,
+    "loci": 6,
+    "classes": [
+     "alga-like"
+    ],
+    "genes": [
+     "psbH",
+     "psaJ",
+     "psbJ",
+     "psbL",
+     "psbE",
+     "rps4"
+    ],
+    "identity_min": 0.4662,
+    "identity_max": 0.9268,
+    "animal_loci_on_contig": 0,
+    "gc": 0.5254,
+    "annotated_genes": 44,
+    "annotated_genes_with_protein_match": 0,
+    "read_alignments": 0,
+    "read_cover_span": null,
+    "aligned_to_other_assemblies": {
+     "sanger": 0,
+     "tampa": 0
+    },
+    "reading": "DNA of another organism left in this assembly: absent from the reads of the xgElyCris1 animal"
+   },
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010006093.1",
+    "length": 22231,
+    "loci": 1,
+    "classes": [
+     "alga-like"
+    ],
+    "genes": [
+     "tufA"
+    ],
+    "identity_min": 0.7891,
+    "identity_max": 0.7891,
+    "animal_loci_on_contig": 0,
+    "gc": 0.4433,
+    "annotated_genes": 3,
+    "annotated_genes_with_protein_match": 0,
+    "read_alignments": 16,
+    "read_cover_span": [
+     13,
+     988
+    ],
+    "aligned_to_other_assemblies": {
+     "sanger": 988,
+     "tampa": 988
+    },
+    "reading": "DNA of another organism left in this assembly: absent from the reads of the xgElyCris1 animal"
+   },
+   {
+    "assembly": "tampa",
+    "contig": "CFHGKC010006655.1",
+    "length": 1173,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "cpn60"
+    ],
+    "identity_min": 0.4425,
+    "identity_max": 0.4425,
+    "animal_loci_on_contig": 0,
+    "gc": null,
+    "annotated_genes": null,
+    "annotated_genes_with_protein_match": null,
+    "read_alignments": null,
+    "read_cover_span": null,
+    "aligned_to_other_assemblies": {},
+    "reading": "small contig with bacterial genes only"
+   },
+   {
+    "assembly": "tampa",
+    "contig": "CFHGKC010008165.1",
+    "length": 5715,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "cysA"
+    ],
+    "identity_min": 0.3505,
+    "identity_max": 0.3505,
+    "animal_loci_on_contig": 0,
+    "gc": null,
+    "annotated_genes": null,
+    "annotated_genes_with_protein_match": null,
+    "read_alignments": null,
+    "read_cover_span": null,
+    "aligned_to_other_assemblies": {},
+    "reading": "small contig with bacterial genes only"
+   },
+   {
+    "assembly": "tampa",
+    "contig": "CFHGKC010008962.1",
+    "length": 3735,
+    "loci": 3,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "rpoB_2",
+     "rpoC1",
+     "rpoC2"
+    ],
+    "identity_min": 0.3246,
+    "identity_max": 0.6277,
+    "animal_loci_on_contig": 0,
+    "gc": null,
+    "annotated_genes": null,
+    "annotated_genes_with_protein_match": null,
+    "read_alignments": null,
+    "read_cover_span": null,
+    "aligned_to_other_assemblies": {},
+    "reading": "small contig with bacterial genes only"
+   },
+   {
+    "assembly": "tampa",
+    "contig": "CFHGKC010009740.1",
+    "length": 2883,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "rpl14"
+    ],
+    "identity_min": 0.5323,
+    "identity_max": 0.5323,
+    "animal_loci_on_contig": 0,
+    "gc": null,
+    "annotated_genes": null,
+    "annotated_genes_with_protein_match": null,
+    "read_alignments": null,
+    "read_cover_span": null,
+    "aligned_to_other_assemblies": {},
+    "reading": "small contig with bacterial genes only"
+   }
+  ],
+  "no_match": {
+   "n": 248,
+   "low_complexity": 220,
+   "short": 16,
+   "other": 12
+  },
+  "plastid_fragment_loci": [
+   {
+    "assembly": "sanger",
+    "contig": "1",
+    "start": 27253127,
+    "end": 27253505,
+    "query": "UDOFL|atpE",
+    "identity": 0.7995
+   },
+   {
+    "assembly": "sanger",
+    "contig": "1",
+    "start": 27253524,
+    "end": 27254941,
+    "query": "UDOFL|atpB",
+    "identity": 0.9408
+   },
+   {
+    "assembly": "sanger",
+    "contig": "1",
+    "start": 27255174,
+    "end": 27255473,
+    "query": "UDOFL|rps14",
+    "identity": 0.75
+   },
+   {
+    "assembly": "sanger",
+    "contig": "1",
+    "start": 27255527,
+    "end": 27256182,
+    "query": "UDOFL|petB",
+    "identity": 0.9589
+   },
+   {
+    "assembly": "sanger",
+    "contig": "10",
+    "start": 7606007,
+    "end": 7606126,
+    "query": "UDOFL|psbL",
+    "identity": 0.875
+   },
+   {
+    "assembly": "sanger",
+    "contig": "10",
+    "start": 7606133,
+    "end": 7606258,
+    "query": "UDOFL|psbF",
+    "identity": 0.9512
+   },
+   {
+    "assembly": "sanger",
+    "contig": "10",
+    "start": 7606258,
+    "end": 7606446,
+    "query": "UDOFL|psbE",
+    "identity": 0.8571
+   },
+   {
+    "assembly": "sanger",
+    "contig": "11",
+    "start": 3088321,
+    "end": 3088938,
+    "query": "UDOFL|orf434",
+    "identity": 0.5673
+   },
+   {
+    "assembly": "sanger",
+    "contig": "11",
+    "start": 3089406,
+    "end": 3089681,
+    "query": "UDOFL|tufA",
+    "identity": 0.9783
+   },
+   {
+    "assembly": "sanger",
+    "contig": "14",
+    "start": 9861854,
+    "end": 9917039,
+    "query": "UDOFL|atpB",
+    "identity": 0.9276
+   },
+   {
+    "assembly": "sanger",
+    "contig": "14",
+    "start": 11487623,
+    "end": 11488907,
+    "query": "UDOFL|psaA",
+    "identity": 0.9594
+   },
+   {
+    "assembly": "sanger",
+    "contig": "3",
+    "start": 50389817,
+    "end": 50391380,
+    "query": "UDOFL|psaA",
+    "identity": 0.9341
+   },
+   {
+    "assembly": "sanger",
+    "contig": "4",
+    "start": 35236181,
+    "end": 35236417,
+    "query": "UDOFL|rps14",
+    "identity": 0.6709
+   },
+   {
+    "assembly": "sanger",
+    "contig": "4",
+    "start": 35236651,
+    "end": 35238072,
+    "query": "UDOFL|atpB",
+    "identity": 0.945
+   },
+   {
+    "assembly": "sanger",
+    "contig": "4",
+    "start": 35238089,
+    "end": 35238475,
+    "query": "UDOFL|atpE",
+    "identity": 0.8047
+   },
+   {
+    "assembly": "sanger",
+    "contig": "4",
+    "start": 35238868,
+    "end": 35239365,
+    "query": "UDOFL|cemA",
+    "identity": 0.6242
+   },
+   {
+    "assembly": "sanger",
+    "contig": "4",
+    "start": 35239499,
+    "end": 35239630,
+    "query": "UDOFL|psbN",
+    "identity": 0.8864
+   },
+   {
+    "assembly": "sanger",
+    "contig": "6",
+    "start": 1305155,
+    "end": 1305457,
+    "query": "UDOFL|rps14",
+    "identity": 0.85
+   },
+   {
+    "assembly": "sanger",
+    "contig": "6",
+    "start": 1305511,
+    "end": 1306170,
+    "query": "UDOFL|petB",
+    "identity": 0.9817
+   },
+   {
+    "assembly": "sanger",
+    "contig": "6",
+    "start": 1306195,
+    "end": 1312902,
+    "query": "UDOFL|petD",
+    "identity": 0.825
+   },
+   {
+    "assembly": "sanger",
+    "contig": "6",
+    "start": 17831727,
+    "end": 17832002,
+    "query": "UDOFL|tufA",
+    "identity": 0.9783
+   },
+   {
+    "assembly": "sanger",
+    "contig": "6",
+    "start": 17832733,
+    "end": 17833836,
+    "query": "UDOFL|accD",
+    "identity": 0.6685
+   },
+   {
+    "assembly": "sanger",
+    "contig": "9",
+    "start": 517677,
+    "end": 518702,
+    "query": "UDOFL|rbcL",
+    "identity": 0.9765
+   },
+   {
+    "assembly": "sanger",
+    "contig": "9",
+    "start": 2842464,
+    "end": 2844722,
+    "query": "UDOFL|psaA",
+    "identity": 0.9481
+   },
+   {
+    "assembly": "sanger",
+    "contig": "9",
+    "start": 2845041,
+    "end": 2845523,
+    "query": "UDOFL|petD",
+    "identity": 0.9313
+   },
+   {
+    "assembly": "sanger",
+    "contig": "9",
+    "start": 2845548,
+    "end": 2846207,
+    "query": "UDOFL|petB",
+    "identity": 0.9817
+   },
+   {
+    "assembly": "sanger",
+    "contig": "9",
+    "start": 2846261,
+    "end": 2846563,
+    "query": "UDOFL|rps14",
+    "identity": 0.85
+   },
+   {
+    "assembly": "sanger",
+    "contig": "9",
+    "start": 2846797,
+    "end": 2847615,
+    "query": "UDOFL|atpB",
+    "identity": 0.9048
+   },
+   {
+    "assembly": "sanger",
+    "contig": "CAWKYH010000620.1",
+    "start": 98727,
+    "end": 99560,
+    "query": "UDOFL|atpA",
+    "identity": 0.8561
+   },
+   {
+    "assembly": "sanger",
+    "contig": "CAWKYH010000836.1",
+    "start": 12949,
+    "end": 13166,
+    "query": "UDOFL|ccs1",
+    "identity": 0.7808
+   },
+   {
+    "assembly": "sanger",
+    "contig": "CAWKYH010001228.1",
+    "start": 160579,
+    "end": 161703,
+    "query": "UDOFL|orf434",
+    "identity": 0.6152
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010000192.1",
+    "start": 399,
+    "end": 3072,
+    "query": "UDOFL|rpoC1",
+    "identity": 0.6398
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010001489.1",
+    "start": 3,
+    "end": 440,
+    "query": "UDOFL|chlI",
+    "identity": 0.8846
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010001489.1",
+    "start": 645,
+    "end": 1706,
+    "query": "UDOFL|psbA",
+    "identity": 0.9377
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010002447.1",
+    "start": 63,
+    "end": 1124,
+    "query": "UDOFL|psbA",
+    "identity": 0.9377
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010003135.1",
+    "start": 63624,
+    "end": 63839,
+    "query": "UDOFL|rpl2",
+    "identity": 0.8732
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010003135.1",
+    "start": 63840,
+    "end": 64121,
+    "query": "UDOFL|rps19",
+    "identity": 0.8602
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010003135.1",
+    "start": 64132,
+    "end": 64782,
+    "query": "UDOFL|rps3",
+    "identity": 0.6912
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010003135.1",
+    "start": 64798,
+    "end": 65504,
+    "query": "UDOFL|rpl16",
+    "identity": 0.8881
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010003440.1",
+    "start": 331,
+    "end": 591,
+    "query": "UDOFL|psbH",
+    "identity": 0.8378
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010003440.1",
+    "start": 773,
+    "end": 1657,
+    "query": "UDOFL|psbB",
+    "identity": 0.9418
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010005799.1",
+    "start": 19103,
+    "end": 20350,
+    "query": "UDOFL|orf434",
+    "identity": 0.6376
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010006464.1",
+    "start": 43473,
+    "end": 43859,
+    "query": "UDOFL|atpA",
+    "identity": 0.8397
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010006464.1",
+    "start": 43871,
+    "end": 44319,
+    "query": "UDOFL|ycf4",
+    "identity": 0.8725
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010013009.1",
+    "start": 268598,
+    "end": 269659,
+    "query": "UDOFL|psbA",
+    "identity": 0.9377
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010014291.1",
+    "start": 17702,
+    "end": 19259,
+    "query": "UDOFL|ftsH",
+    "identity": 0.3974
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010014511.1",
+    "start": 2,
+    "end": 305,
+    "query": "UDOFL|rpl16",
+    "identity": 0.9079
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010014511.1",
+    "start": 321,
+    "end": 971,
+    "query": "UDOFL|rps3",
+    "identity": 0.6912
+   },
+   {
+    "assembly": "alt",
+    "contig": "CAWKYI010014511.1",
+    "start": 982,
+    "end": 1265,
+    "query": "UDOFL|rps19",
+    "identity": 0.8191
+   }
+  ],
+  "whole_contig_loci": [
+   {
+    "assembly": "sanger",
+    "contig": "CAWKYH010002246.1",
+    "length": 2000,
+    "query": "UDOFL|chlI",
+    "cls": "plastid-only contig"
+   },
+   {
+    "assembly": "sanger",
+    "contig": "CAWKYH010002246.1",
+    "length": 2000,
+    "query": "UDOFL|psbA",
+    "cls": "plastid-only contig"
+   },
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010002540.1",
+    "length": 4927,
+    "query": "UDOFL|ftsH",
+    "cls": "plastid-only contig"
+   },
+   {
+    "assembly": "purdue",
+    "contig": "JAWDGP010003279.1",
+    "length": 4642,
+    "query": "UDOFL|ftsH",
+    "cls": "plastid-only contig"
+   },
+   {
+    "assembly": "tampa",
+    "contig": "CFHGKC010001527.1",
+    "length": 4860,
+    "query": "UDOFL|ftsH",
+    "cls": "plastid-only contig"
+   }
+  ],
+  "unexplained": 0
+ },
+ "diverged": {
+  "sanger": {
+   "non_exact_matches": 13290,
+   "low_complexity_removed": 14,
+   "loci": 10,
+   "by_class": {
+    "algal nuclear rDNA": 10
+   },
+   "best_plastid_identity": null
+  },
+  "alt": {
+   "non_exact_matches": 6430,
+   "low_complexity_removed": 4,
+   "loci": 8,
+   "by_class": {
+    "algal nuclear rDNA": 8
+   },
+   "best_plastid_identity": null
+  },
+  "purdue": {
+   "non_exact_matches": 24840,
+   "low_complexity_removed": 13,
+   "loci": 15,
+   "by_class": {
+    "plastid": 8,
+    "algal nuclear rDNA": 7
+   },
+   "best_plastid_identity": 0.965
+  },
+  "tampa": {
+   "non_exact_matches": 15453,
+   "low_complexity_removed": 10,
+   "loci": 1,
+   "by_class": {
+    "algal nuclear rDNA": 1
+   },
+   "best_plastid_identity": null
+  }
+ },
+ "foreign": {
+  "blast": [
+   {
+    "contig": "JAWDGP010001067.1",
+    "qstart": 31406,
+    "qend": 31753,
+    "identity": 95.402,
+    "length": 348,
+    "subject": "HG518460.1",
+    "title": "Acetabularia acetabulum chlorplast rpl20 gene for chloroplast 50S ribosomal protein L20, strain DI1"
+   },
+   {
+    "contig": "JAWDGP010001067.1",
+    "qstart": 56026,
+    "qend": 56496,
+    "identity": 98.726,
+    "length": 471,
+    "subject": "MH545214.1",
+    "title": "Acetabularia peniculus 30S ribosomal protein S7 (rps7) gene, complete cds; chloroplast"
+   },
+   {
+    "contig": "JAWDGP010001067.1",
+    "qstart": 113994,
+    "qend": 114510,
+    "identity": 98.839,
+    "length": 517,
+    "subject": "MH545212.1",
+    "title": "Acetabularia peniculus photosystem I assembly protein Ycf3 (ycf3) gene, complete cds; chloroplast"
+   },
+   {
+    "contig": "JAWDGP010001067.1",
+    "qstart": 114000,
+    "qend": 114510,
+    "identity": 92.564,
+    "length": 511,
+    "subject": "MH545357.1",
+    "title": "Halicoryne sp. HV04044 photosystem I assembly protein Ycf3 (ycf3) gene, complete cds; chloroplast"
+   },
+   {
+    "contig": "JAWDGP010001250.1",
+    "qstart": 49921,
+    "qend": 50615,
+    "identity": 98.417,
+    "length": 695,
+    "subject": "MH545222.1",
+    "title": "Acetabularia peniculus sulfate ABC transporter protein (cysA) gene, complete cds; chloroplast"
+   },
+   {
+    "contig": "JAWDGP010001250.1",
+    "qstart": 56766,
+    "qend": 57649,
+    "identity": 96.271,
+    "length": 885,
+    "subject": "HG518425.1",
+    "title": "Acetabularia acetabulum chlorplast accD gene for acetyl-CoA carboxylase beta-carboxyl transferase subunit, strain DI1"
+   },
+   {
+    "contig": "JAWDGP010002183.1",
+    "qstart": 1435,
+    "qend": 3141,
+    "identity": 97.541,
+    "length": 1708,
+    "subject": "MH545199.1",
+    "title": "Acetabularia peniculus photochlorophyllide reductase subunit B (chlB) gene, complete cds; chloroplast"
+   },
+   {
+    "contig": "JAWDGP010002183.1",
+    "qstart": 2287,
+    "qend": 3123,
+    "identity": 95.221,
+    "length": 837,
+    "subject": "HG518431.1",
+    "title": "Acetabularia acetabulum chlorplast chlB gene for light-independent protochlorophyllide reductase subunit B, strain DI1"
+   },
+   {
+    "contig": "JAWDGP010004663.1",
+    "qstart": 16322,
+    "qend": 16733,
+    "identity": 92.718,
+    "length": 412,
+    "subject": "MH545228.1",
+    "title": "Batophora oerstedii ATP synthase CF0 A subunit (atpI) gene, complete cds; chloroplast"
+   },
+   {
+    "contig": "JAWDGP010005039.1",
+    "qstart": 9532,
+    "qend": 9811,
+    "identity": 72.136,
+    "length": 323,
+    "subject": "HG518438.1",
+    "title": "Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1"
+   },
+   {
+    "contig": "JAWDGP010005039.1",
+    "qstart": 11001,
+    "qend": 11423,
+    "identity": 79.487,
+    "length": 429,
+    "subject": "HG518438.1",
+    "title": "Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1"
+   },
+   {
+    "contig": "JAWDGP010005039.1",
+    "qstart": 12518,
+    "qend": 12916,
+    "identity": 79.361,
+    "length": 407,
+    "subject": "HG518438.1",
+    "title": "Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1"
+   },
+   {
+    "contig": "JAWDGP010005039.1",
+    "qstart": 14005,
+    "qend": 14374,
+    "identity": 78.836,
+    "length": 378,
+    "subject": "HG518438.1",
+    "title": "Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1"
+   },
+   {
+    "contig": "JAWDGP010005039.1",
+    "qstart": 15284,
+    "qend": 16519,
+    "identity": 89.775,
+    "length": 1242,
+    "subject": "HG518438.1",
+    "title": "Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1"
+   },
+   {
+    "contig": "JAWDGP010005039.1",
+    "qstart": 20945,
+    "qend": 21361,
+    "identity": 79.343,
+    "length": 426,
+    "subject": "HG518438.1",
+    "title": "Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1"
+   },
+   {
+    "contig": "JAWDGP010005039.1",
+    "qstart": 21722,
+    "qend": 22073,
+    "identity": 79.545,
+    "length": 352,
+    "subject": "HG518438.1",
+    "title": "Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1"
+   },
+   {
+    "contig": "JAWDGP010005039.1",
+    "qstart": 23486,
+    "qend": 23937,
+    "identity": 75.46,
+    "length": 489,
+    "subject": "HG518438.1",
+    "title": "Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1"
+   },
+   {
+    "contig": "JAWDGP010005039.1",
+    "qstart": 25436,
+    "qend": 25866,
+    "identity": 93.764,
+    "length": 433,
+    "subject": "HG518438.1",
+    "title": "Acetabularia acetabulum chlorplast ftsH gene for cell division protein FtsH-like protease, strain DI1"
+   },
+   {
+    "contig": "JAWDGP010005634.1",
+    "qstart": 5001,
+    "qend": 5589,
+    "identity": 99.323,
+    "length": 591,
+    "subject": "MH545191.1",
+    "title": "Acetabularia peniculus ATP-dependent Clp protease proteolytic subunit (clpP) gene, complete cds; chloroplast"
+   },
+   {
+    "contig": "JAWDGP010006072.1",
+    "qstart": 106720,
+    "qend": 107349,
+    "identity": 91.943,
+    "length": 633,
+    "subject": "HG518467.1",
+    "title": "Acetabularia acetabulum chlorplast rps4 gene for chloroplast 30S ribosomal protein S4, strain DI1"
+   },
+   {
+    "contig": "JAWDGP010006093.1",
+    "qstart": 11832,
+    "qend": 13060,
+    "identity": 97.4,
+    "length": 1231,
+    "subject": "MH545197.1",
+    "title": "Acetabularia peniculus elongation factor Tu (tufA) gene, complete cds; chloroplast"
+   },
+   {
+    "contig": "JAWDGP010006093.1",
+    "qstart": 12053,
+    "qend": 12949,
+    "identity": 99.666,
+    "length": 899,
+    "subject": "KU362061.1",
+    "title": "Acetabularia sp. TS1860 elongation factor tu gene, partial cds; chloroplast"
+   }
+  ],
+  "joins": [],
+  "join_runs": {}
+ }
+}

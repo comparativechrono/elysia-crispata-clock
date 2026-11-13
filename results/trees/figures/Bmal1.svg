@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 436" role="img" aria-label="Family tree placing Bmal1" class="treefig">
+<g fill="none" stroke="var(--tree-line,#8a958f)" stroke-width="1.2">
+<path d="M26.0 58.1V220.1"/>
+<path d="M26.0 58.1H31.5"/>
+<path d="M26.0 220.1H51.0"/>
+<path d="M31.5 31.0V85.2"/>
+<path d="M31.5 31.0H44.7"/>
+<path d="M31.5 85.2H66.7"/>
+<path d="M44.7 22.5V39.5"/>
+<path d="M44.7 22.5H104.6"/>
+<path d="M44.7 39.5H223.0"/>
+<path d="M66.7 65.0V105.4"/>
+<path d="M66.7 65.0H185.9"/>
+<path d="M66.7 105.4H98.7"/>
+<path d="M185.9 56.5V73.5"/>
+<path d="M185.9 56.5H197.4"/>
+<path d="M185.9 73.5H237.1"/>
+<path d="M98.7 90.5V120.2"/>
+<path d="M98.7 90.5H254.1"/>
+<path d="M98.7 120.2H120.3"/>
+<path d="M120.3 107.5V133.0"/>
+<path d="M120.3 107.5H162.0"/>
+<path d="M120.3 133.0H220.1"/>
+<path d="M220.1 124.5V141.5"/>
+<path d="M220.1 124.5H220.1"/>
+<path d="M220.1 141.5H220.1"/>
+<path d="M51.0 184.0V256.2"/>
+<path d="M51.0 184.0H98.3"/>
+<path d="M51.0 256.2H79.1"/>
+<path d="M98.3 167.0V201.0"/>
+<path d="M98.3 167.0H215.1"/>
+<path d="M98.3 201.0H118.8"/>
+<path d="M215.1 158.5V175.5"/>
+<path d="M215.1 158.5H215.1"/>
+<path d="M215.1 175.5H215.1"/>
+<path d="M118.8 192.5V209.5"/>
+<path d="M118.8 192.5H118.8"/>
+<path d="M118.8 209.5H118.8"/>
+<path d="M79.1 235.0V277.4"/>
+<path d="M79.1 235.0H111.2"/>
+<path d="M79.1 277.4H102.8"/>
+<path d="M111.2 226.5V243.5"/>
+<path d="M111.2 226.5H168.3"/>
+<path d="M111.2 243.5H155.6"/>
+<path d="M102.8 260.5V294.4"/>
+<path d="M102.8 260.5H290.0"/>
+<path d="M102.8 294.4H130.6"/>
+<path d="M130.6 277.5V311.2"/>
+<path d="M130.6 277.5H151.5"/>
+<path d="M130.6 311.2H142.9"/>
+<path d="M142.9 294.5V328.0"/>
+<path d="M142.9 294.5H254.9"/>
+<path d="M142.9 328.0H149.5"/>
+<path d="M149.5 311.5V344.4"/>
+<path d="M149.5 311.5H172.3"/>
+<path d="M149.5 344.4H152.3"/>
+<path d="M152.3 328.5V360.4"/>
+<path d="M152.3 328.5H180.4"/>
+<path d="M152.3 360.4H167.9"/>
+<path d="M167.9 345.5V375.2"/>
+<path d="M167.9 345.5H174.5"/>
+<path d="M167.9 375.2H171.0"/>
+<path d="M171.0 362.5V388.0"/>
+<path d="M171.0 362.5H180.4"/>
+<path d="M171.0 388.0H173.0"/>
+<path d="M173.0 379.5V396.5"/>
+<path d="M173.0 379.5H175.4"/>
+<path d="M173.0 396.5H173.0"/>
+<path d="M12.0 139.1V413.5M12.0 139.1H26.0M12.0 413.5H56.0" stroke-dasharray="3 3"/>
+</g>
+<text x="41.7" y="28.0" text-anchor="end" class="sup">0.77</text>
+<text x="63.7" y="82.2" text-anchor="end" class="sup">0.95</text>
+<text x="182.9" y="62.0" text-anchor="end" class="sup">0.99</text>
+<text x="95.7" y="102.4" text-anchor="end" class="sup">0.90</text>
+<text x="117.3" y="117.2" text-anchor="end" class="sup">0.77</text>
+<text x="48.0" y="217.1" text-anchor="end" class="sup">0.93</text>
+<text x="95.3" y="181.0" text-anchor="end" class="sup">0.98</text>
+<text x="76.1" y="253.2" text-anchor="end" class="sup">0.96</text>
+<text x="108.2" y="232.0" text-anchor="end" class="sup">0.96</text>
+<text x="99.8" y="274.4" text-anchor="end" class="sup">0.87</text>
+<text x="127.6" y="291.4" text-anchor="end" class="sup">0.88</text>
+<text x="139.9" y="308.2" text-anchor="end" class="sup">0.80</text>
+<text x="146.5" y="325.0" text-anchor="end" class="sup">0.73</text>
+<text x="149.3" y="341.4" text-anchor="end" class="sup">0.76</text>
+<text x="164.9" y="357.4" text-anchor="end" class="sup">0.97</text>
+<text x="170.0" y="385.0" text-anchor="end" class="sup">0.78</text>
+<path d="M107.6 22.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="26.5" class="tip">Branchiostoma floridae A0A9J7MNN8</text>
+<path d="M226.0 39.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="43.5" class="tip">Capitella teleta R7TGT5</text>
+<path d="M200.4 56.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="60.5" class="tip">Nematostella vectensis NEMVEDRAFT_v1g224692</text>
+<path d="M240.1 73.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="77.5" class="tip">Nematostella vectensis NEMVEDRAFT_v1g132249</text>
+<path d="M257.1 90.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="94.5" class="tip">Danaus plexippus A0A212EKE6</text>
+<path d="M165.0 107.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="111.5" class="tip">Tribolium castaneum AUGUSTUS-3.0.2_02494</text>
+<path d="M223.1 124.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<rect x="216.6" y="121.0" width="7" height="7" class="dot-seed"/>
+<text x="300" y="128.5" class="tip-seed">Drosophila melanogaster Cyc</text>
+<path d="M223.1 141.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="145.5" class="tip">Drosophila melanogaster cyc</text>
+<path d="M218.1 158.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<rect x="211.6" y="155.0" width="7" height="7" class="dot-seed"/>
+<text x="300" y="162.5" class="tip-seed">Homo sapiens BMAL2</text>
+<path d="M218.1 175.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="179.5" class="tip">Homo sapiens BMAL2</text>
+<path d="M121.8 192.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<rect x="115.3" y="189.0" width="7" height="7" class="dot-seed"/>
+<text x="300" y="196.5" class="tip-seed">Homo sapiens BMAL1</text>
+<path d="M121.8 209.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="213.5" class="tip">Homo sapiens BMAL1</text>
+<path d="M171.3 226.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="230.5" class="tip">Mizuhopecten yessoensis A0A210R255</text>
+<path d="M158.6 243.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="247.5" class="tip">Magallana gigas A0A8W8N1W9</text>
+<path d="M293.0 260.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="264.5" class="tip">Capitella teleta R7TF16</text>
+<path d="M154.5 277.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="281.5" class="tip">Pomacea canaliculata A0A2T7PK89</text>
+<path d="M257.9 294.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="298.5" class="tip">Elysia marginata A0AAV4EFB8</text>
+<path d="M175.3 311.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="315.5" class="tip">Aplysia californica A0ABM1A6W0</text>
+<path d="M183.4 328.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="332.5" class="tip">Biomphalaria glabrata A0A9W3BNJ3</text>
+<path d="M177.5 345.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="349.5" class="tip">Elysia chlorotica A0A433TGI6</text>
+<path d="M183.4 362.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="366.5" class="tip">Plakobranchus ocellatus A0AAV3YYF0</text>
+<path d="M178.4 379.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<text x="300" y="383.5" class="tip">Elysia marginata A0AAV4EGS7</text>
+<path d="M176.0 396.5H294" stroke="var(--tree-guide,#d5ded8)" stroke-width="1" stroke-dasharray="1 3"/>
+<circle cx="173.0" cy="396.5" r="4" class="dot-me"/>
+<text x="300" y="400.5" class="tip-me">Elysia crispata RRG08_014709 (Purdue)</text>
+<text x="62" y="417.5" class="tip sister">sister lineage: 20 sequences</text>
+</svg>

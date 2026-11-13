@@ -1,0 +1,487 @@
+{
+ "Clock": {
+  "tpm": 0.21,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_004124",
+    "tpm": 0.21,
+    "reads": 16
+   }
+  ]
+ },
+ "Bmal1": {
+  "tpm": 0.14,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_014709",
+    "tpm": 0.14,
+    "reads": 8
+   }
+  ]
+ },
+ "Period": {
+  "tpm": 11.89,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_007667",
+    "tpm": 11.89,
+    "reads": 1944
+   }
+  ]
+ },
+ "Timeless": {
+  "tpm": 6.89,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_039856",
+    "tpm": 6.89,
+    "reads": 757
+   }
+  ]
+ },
+ "Timeout": {
+  "tpm": 0.21,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_040959",
+    "tpm": 0.03,
+    "reads": 2
+   },
+   {
+    "locus_tag": "RRG08_040956",
+    "tpm": 0.21,
+    "reads": 18
+   }
+  ]
+ },
+ "Cry1": {
+  "tpm": 6.66,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_054616",
+    "tpm": 6.66,
+    "reads": 316
+   }
+  ]
+ },
+ "Cry2": {
+  "tpm": 5.62,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_033234",
+    "tpm": 5.62,
+    "reads": 230
+   }
+  ]
+ },
+ "Phr6-4": {
+  "tpm": 0.89,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_061928",
+    "tpm": 0.89,
+    "reads": 40
+   }
+  ]
+ },
+ "PhrCPD": {
+  "tpm": 1.9,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_067383",
+    "tpm": 1.9,
+    "reads": 122
+   }
+  ]
+ },
+ "CryDASH1": {
+  "tpm": 2.87,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_063315",
+    "tpm": 2.87,
+    "reads": 131
+   }
+  ]
+ },
+ "CryDASH2": {
+  "tpm": 31.97,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_010037",
+    "tpm": 31.97,
+    "reads": 1257
+   }
+  ]
+ },
+ "Pdp1": {
+  "tpm": 35.68,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_029181",
+    "tpm": 35.68,
+    "reads": 837
+   }
+  ]
+ },
+ "Vrille": {
+  "tpm": 0.2,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_024431",
+    "tpm": 0.2,
+    "reads": 18
+   }
+  ]
+ },
+ "E75": {
+  "tpm": 0.6,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_025446",
+    "tpm": 0.6,
+    "reads": 98
+   }
+  ]
+ },
+ "Hr3": {
+  "tpm": 0.03,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_053020",
+    "tpm": 0.03,
+    "reads": 1
+   }
+  ]
+ },
+ "Cwo": {
+  "tpm": 3.87,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_062400",
+    "tpm": 0.77,
+    "reads": 53
+   },
+   {
+    "locus_tag": "RRG08_062399",
+    "tpm": 3.87,
+    "reads": 281
+   }
+  ]
+ },
+ "Ck1de": {
+  "tpm": 2.48,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_027345",
+    "tpm": 2.48,
+    "reads": 85
+   }
+  ]
+ },
+ "Ck1a": {
+  "tpm": 14.96,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_005439",
+    "tpm": 14.96,
+    "reads": 354
+   }
+  ]
+ },
+ "Ck2a": {
+  "tpm": 4.41,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_064410",
+    "tpm": 4.41,
+    "reads": 145
+   }
+  ]
+ },
+ "Ck2b": {
+  "tpm": 29.12,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_052581",
+    "tpm": 29.12,
+    "reads": 374
+   }
+  ]
+ },
+ "Gsk3": {
+  "tpm": 0.45,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_057881",
+    "tpm": 0.45,
+    "reads": 15
+   }
+  ]
+ },
+ "Nemo": {
+  "tpm": 0.0,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_045498",
+    "tpm": 0.0,
+    "reads": 0
+   },
+   {
+    "locus_tag": "RRG08_045497",
+    "tpm": 0.0,
+    "reads": 0
+   }
+  ]
+ },
+ "Pp1a": {
+  "tpm": 151.41,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_064281",
+    "tpm": 151.41,
+    "reads": 3806
+   }
+  ]
+ },
+ "Pp1b": {
+  "tpm": 1.11,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_001930",
+    "tpm": 1.11,
+    "reads": 27
+   }
+  ]
+ },
+ "Pp2aC": {
+  "tpm": 81.83,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_063696",
+    "tpm": 81.83,
+    "reads": 1818
+   }
+  ]
+ },
+ "Pp2aB55": {
+  "tpm": 1.3,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_004548",
+    "tpm": 1.3,
+    "reads": 55
+   }
+  ]
+ },
+ "Pp2aB56e": {
+  "tpm": 0.54,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_055953",
+    "tpm": 0.54,
+    "reads": 20
+   }
+  ]
+ },
+ "Pp2aB56d": {
+  "tpm": 10.37,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_001926",
+    "tpm": 10.37,
+    "reads": 371
+   }
+  ]
+ },
+ "Slimb": {
+  "tpm": 2.73,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_002302",
+    "tpm": 2.73,
+    "reads": 121
+   }
+  ]
+ },
+ "Jetlag": {
+  "tpm": 4.12,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_019831",
+    "tpm": 4.12,
+    "reads": 95
+   }
+  ]
+ },
+ "Sirt1": {
+  "tpm": 0.89,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_027909",
+    "tpm": 0.89,
+    "reads": 86
+   }
+  ]
+ },
+ "Pdf": {
+  "tpm": 0.0,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_044094",
+    "tpm": 0.0,
+    "reads": 0
+   }
+  ]
+ },
+ "Pdfr": {
+  "tpm": 0.57,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_024725",
+    "tpm": 0.57,
+    "reads": 26
+   }
+  ]
+ },
+ "Lark": {
+  "tpm": 6.8,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_007354",
+    "tpm": 6.8,
+    "reads": 166
+   }
+  ]
+ },
+ "Atx2": {
+  "tpm": 3.46,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_050507",
+    "tpm": 3.46,
+    "reads": 357
+   }
+  ]
+ },
+ "Nocturnin": {
+  "tpm": 3.1,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_039679",
+    "tpm": 3.1,
+    "reads": 88
+   }
+  ]
+ },
+ "NonA": {
+  "tpm": 40.68,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_023928",
+    "tpm": 40.68,
+    "reads": 2470
+   }
+  ]
+ },
+ "Tipin": {
+  "tpm": 0.14,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_054938",
+    "tpm": 0.14,
+    "reads": 5
+   }
+  ]
+ },
+ "Ropsin1": {
+  "tpm": 0.06,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_025204",
+    "tpm": 0.06,
+    "reads": 3
+   }
+  ]
+ },
+ "Ropsin2": {
+  "tpm": 0.02,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_025203",
+    "tpm": 0.02,
+    "reads": 1
+   }
+  ]
+ },
+ "RopsinL1": {
+  "tpm": 0.24,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_012104",
+    "tpm": 0.24,
+    "reads": 14
+   }
+  ]
+ },
+ "RopsinL2": {
+  "tpm": 0.31,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_021602",
+    "tpm": 0.31,
+    "reads": 6
+   }
+  ]
+ },
+ "Xenopsin": {
+  "tpm": 0.0,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_035656",
+    "tpm": 0.0,
+    "reads": 0
+   }
+  ]
+ },
+ "GoOpsin1": {
+  "tpm": 0.0,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_028259",
+    "tpm": 0.0,
+    "reads": 0
+   }
+  ]
+ },
+ "GoOpsin2": {
+  "tpm": 0.0,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_028256",
+    "tpm": 0.0,
+    "reads": 0
+   }
+  ]
+ },
+ "Neuropsin": {
+  "tpm": 0.12,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_050326",
+    "tpm": 0.12,
+    "reads": 5
+   }
+  ]
+ },
+ "Retinochrome": {
+  "tpm": 2.58,
+  "per_locus": [
+   {
+    "locus_tag": "RRG08_009263",
+    "tpm": 2.58,
+    "reads": 59
+   }
+  ]
+ }
+}

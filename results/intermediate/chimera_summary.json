@@ -1,0 +1,125 @@
+{
+ "pairs": [
+  {
+   "pair": "bac+slug",
+   "junctions": 5487,
+   "reads": 5435,
+   "molecules": 5444,
+   "adapter_junctions": 131,
+   "recurrent_clusters": 1
+  },
+  {
+   "pair": "cp+slug",
+   "junctions": 4505,
+   "reads": 4452,
+   "molecules": 4445,
+   "adapter_junctions": 165,
+   "recurrent_clusters": 0
+  },
+  {
+   "pair": "bac+cp",
+   "junctions": 132,
+   "reads": 132,
+   "molecules": 132,
+   "adapter_junctions": 8,
+   "recurrent_clusters": 0
+  }
+ ],
+ "class_totals": {
+  "slugrDNA": 7026,
+  "bac": 167513,
+  "cp": 136293,
+  "clk": 1687,
+  "slugmt": 2371,
+  "algmt": 1
+ },
+ "flanked": 0,
+ "recurrent": [
+  {
+   "pair": "bac+slug",
+   "reads": 3,
+   "independent_molecules": 2,
+   "members": [
+    {
+     "read": "ERR11843472.1482365",
+     "pair": "bac+slug",
+     "main": "bac",
+     "a_cls": "slug",
+     "a_t": "CAWKYH010000778.1",
+     "a_bp": 1000,
+     "a_outer": 191,
+     "a_strand": "+",
+     "a_len": 811,
+     "a_ident": 0.9864,
+     "a_mapq": 60,
+     "b_cls": "bac",
+     "b_t": "bac_Kistimonas_sp_1_2|OZ220224.1",
+     "b_bp": 4102715,
+     "b_outer": 4104528,
+     "b_strand": "+",
+     "b_len": 1818,
+     "b_ident": 0.9967,
+     "b_mapq": 60,
+     "gap": 6672,
+     "adapter": false,
+     "n_segments": 2,
+     "cluster_reads": 3,
+     "cluster_molecules": 2
+    },
+    {
+     "read": "ERR11843472.1685920",
+     "pair": "bac+slug",
+     "main": "?",
+     "a_cls": "slug",
+     "a_t": "CAWKYH010000778.1",
+     "a_bp": 1000,
+     "a_outer": 0,
+     "a_strand": "+",
+     "a_len": 1000,
+     "a_ident": 1.0,
+     "a_mapq": 60,
+     "b_cls": "bac",
+     "b_t": "bac_Kistimonas_sp_1_2|OZ220224.1",
+     "b_bp": 4102715,
+     "b_outer": 4103628,
+     "b_strand": "+",
+     "b_len": 914,
+     "b_ident": 0.9989,
+     "b_mapq": 60,
+     "gap": 6687,
+     "adapter": false,
+     "n_segments": 2,
+     "cluster_reads": 3,
+     "cluster_molecules": 2
+    },
+    {
+     "read": "ERR12353011.539018",
+     "pair": "bac+slug",
+     "main": "bac",
+     "a_cls": "bac",
+     "a_t": "bac_Kistimonas_sp_1_2|OZ220224.1",
+     "a_bp": 4102715,
+     "a_outer": 4105496,
+     "a_strand": "-",
+     "a_len": 2785,
+     "a_ident": 0.9975,
+     "a_mapq": 60,
+     "b_cls": "slug",
+     "b_t": "CAWKYH010000778.1",
+     "b_bp": 1000,
+     "b_outer": 0,
+     "b_strand": "-",
+     "b_len": 1004,
+     "b_ident": 0.995,
+     "b_mapq": 60,
+     "gap": 6689,
+     "adapter": false,
+     "n_segments": 2,
+     "cluster_reads": 3,
+     "cluster_molecules": 2
+    }
+   ]
+  }
+ ],
+ "reads_examined": 36284
+}

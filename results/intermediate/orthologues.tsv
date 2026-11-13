@@ -1,0 +1,556 @@
+symbol	species	protein	gene	length	bitscore	pident	reciprocal	description
+Clock	ELYCH	ELYCH|A0A433U6S1|EGW08_002720	EGW08_002720	856	1287	88.4	yes	Clock
+Clock	PLAOC	PLAOC|A0AAV3Y5S6|PoB_000429100	PoB_000429100	842	1052	74.6	yes	Circadian locomoter output cycles protein kaput
+Clock	ELYMA	ELYMA|A0AAV4JLH9|ElyMa_001619900	ElyMa_001619900	806	1113	78.6	yes	Circadian locomoter output cycles protein kaput
+Clock	APLCA	APLCA|A0ABM1ADX2|LOC101859683	LOC101859683	700	692	59.6	yes	Circadian locomoter output cycles protein kaput
+Clock	BIOGL	BIOGL|A0A2C9JBA1|LOC106065223	LOC106065223	823	770	56.8	yes	Circadian locomoter output cycles protein kaput-like isoform X1
+Clock	POMCA	POMCA|A0A2T7PNY5|C0Q70_06424	C0Q70_06424	1191	559	52.1	yes	Circadian locomoter output cycles protein kaput
+Clock	LOTGI	LOTGI|V4BF93|LOTGIDRAFT_179263	LOTGIDRAFT_179263	358	143	31.7	no	Aryl hydrocarbon receptor nuclear translocator
+Clock	MAGGI	MAGGI|A0A8W8LAM6|		676	423	55.2	yes	Circadian locomoter output cycles protein kaput
+Clock	MIZYE	MIZYE|A0A210Q4V3|KP79_PYT12637	KP79_PYT12637	608	412	59.3	yes	Circadian locomoter output cycles protein kaput
+Clock	CAPTE	CAPTE|R7V588|		374	379	54.5	yes	Clock
+Clock	DROME	DROME|O61735|Clk	Clk	1027	350	48.4	yes	Circadian locomoter output cycles protein kaput
+Clock	HUMAN	HUMAN|O15516|CLOCK	CLOCK	846	405	55.1	yes	Circadian locomoter output cycles protein kaput
+Bmal1	ELYCH	ELYCH|A0A433TGI6|EGW08_011611	EGW08_011611	674	606	91.1	yes	Aryl hydrocarbon receptor nuclear translocator-like protein 1
+Bmal1	PLAOC	PLAOC|A0AAV3YYF0|PoB_001327400	PoB_001327400	852	731	84.7	yes	Aryl-hydrocarbon receptor nuclear translocator-like
+Bmal1	ELYMA	ELYMA|A0AAV4EGS7|ElyMa_003508700	ElyMa_003508700	258	500	95.7	yes	Aryl hydrocarbon receptor nuclear translocator-like protein 1
+Bmal1	APLCA	APLCA|A0ABM1A6W0|LOC106012736	LOC106012736	259	389	82.3	yes	Aryl hydrocarbon receptor nuclear translocator-like protein 1
+Bmal1	BIOGL	BIOGL|A0A9W3BNJ3|LOC106079856	LOC106079856	681	599	79.5	yes	Basic helix-loop-helix ARNT-like protein 1 isoform X2
+Bmal1	POMCA	POMCA|A0A2T7PK89|C0Q70_05110	C0Q70_05110	719	526	71.9	yes	Aryl hydrocarbon receptor nuclear translocator-like protein 1
+Bmal1	LOTGI	LOTGI|V4BF93|LOTGIDRAFT_179263	LOTGIDRAFT_179263	358	215	39.8	no	Aryl hydrocarbon receptor nuclear translocator
+Bmal1	MAGGI	MAGGI|A0A8W8N1W9|		1559	406	55.6	yes	Aryl hydrocarbon receptor nuclear translocator-like protein 1
+Bmal1	MIZYE	MIZYE|A0A210R255|KP79_PYT18003	KP79_PYT18003	659	410	55.6	yes	Aryl hydrocarbon receptor nuclear translocator-like protein 1
+Bmal1	CAPTE	CAPTE|R7TGT5|		403	229	42.9	yes	PAS domain-containing protein
+Bmal1	DROME	DROME|O61734|cyc	cyc	413	293	49.0	yes	Protein cycle
+Bmal1	HUMAN	HUMAN|O00327|BMAL1	BMAL1	626	361	54.3	yes	Basic helix-loop-helix ARNT-like protein 1
+Period	ELYCH	ELYCH|A0A433TZM4|EGW08_005333	EGW08_005333	1664	2400	77.6	yes	BHLH domain-containing protein
+Period	PLAOC	PLAOC|A0AAV4BSL3|PoB_004857100	PoB_004857100	1700	1947	65.6	yes	Cationic amino acid transporter
+Period	ELYMA	ELYMA|A0AAV4J4P8|ElyMa_004991700	ElyMa_004991700	1642	2086	71.9	yes	Circadian clock protein period (Fragment)
+Period	APLCA	APLCA|A0ABM1ACB2|LOC101860455	LOC101860455	1610	1263	49.1	yes	Uncharacterized protein LOC101860455
+Period	BIOGL	BIOGL|A0A9W2YLR8|LOC106051222	LOC106051222	1495	1210	48.7	yes	Uncharacterized protein LOC106051222 isoform X1
+Period	POMCA	POMCA|A0A2T7PQB0|C0Q70_02572	C0Q70_02572	1394	453	32.9	yes	BHLH domain-containing protein
+Period	LOTGI	LOTGI|V4BJZ9|LOTGIDRAFT_165288	LOTGIDRAFT_165288	164	69	35.1	yes	Reverse transcriptase zinc-binding domain-containing protein
+Period	MAGGI	MAGGI|A0A8W8K9L3|		1372	306	28.9	yes	PAS domain-containing protein
+Period	MIZYE	MIZYE|A0A210PTQ4|KP79_PYT21748	KP79_PYT21748	1272	280	27.9	yes	Period circadian protein
+Period	CAPTE	CAPTE|R7UY34|		1504	190	24.2	yes	PAS domain-containing protein
+Period	DROME	DROME|P07663|per	per	1218	152	29.1	yes	Period circadian protein
+Period	HUMAN	HUMAN|O15055|PER2	PER2	1255	145	31.0	yes	Period circadian protein homolog 2
+Timeless	ELYCH	ELYCH|A0A3S1BK87|EGW08_002039	EGW08_002039	816	1096	76.9	yes	Uncharacterized protein (Fragment)
+Timeless	PLAOC	PLAOC|A0AAV3Y0A9|PoB_000225100	PoB_000225100	599	739	74.5	yes	Protein timeless (Fragment)
+Timeless	ELYMA	ELYMA|A0AAV4ISM2|ElyMa_006693300	ElyMa_006693300	1134	1483	74.9	yes	Timeless
+Timeless	APLCA	APLCA|A0ABM1AAH9|LOC101846314	LOC101846314	1007	897	46.7	yes	Protein timeless
+Timeless	BIOGL	BIOGL|A0A9W2YYN5|LOC106050768	LOC106050768	1012	949	48.5	yes	Protein timeless-like isoform X1
+Timeless	POMCA	POMCA|A0A2T7NC41|C0Q70_21294	C0Q70_21294	1078	597	35.9	yes	Timeless N-terminal domain-containing protein
+Timeless	LOTGI	LOTGI|V4AYX0|LOTGIDRAFT_230391	LOTGIDRAFT_230391	631	54	23.1	no	Timeless N-terminal domain-containing protein
+Timeless	MAGGI	MAGGI|A0A8W8IX15|		933	273	23.7	yes	Timeless
+Timeless	MIZYE	MIZYE|A0A210PTM0|KP79_PYT20132	KP79_PYT20132	921	231	28.6	yes	Protein timeless
+Timeless	CAPTE	CAPTE|R7UIT3|		954	99	24.4	yes	Uncharacterized protein
+Timeless	DROME	DROME|A0A9F2GM11|tim	tim	1365	187	23.7	yes	Timeless, isoform U
+Timeout	ELYCH	ELYCH|A0A433ST63|EGW08_019781	EGW08_019781	639	1125	90.0	yes	Timeless N-terminal domain-containing protein (Fragment)
+Timeout	PLAOC	PLAOC|A0AAV3ZLN5|PoB_002129900	PoB_002129900	621	1036	83.3	yes	Protein timeless homolog
+Timeout	ELYMA	ELYMA|A0AAV4IT30|ElyMa_003092200	ElyMa_003092200	921	750	71.8	yes	Timeless-like protein
+Timeout	APLCA	APLCA|A0ABM1A141|LOC101860103	LOC101860103	1667	988	74.9	yes	Protein timeless homolog
+Timeout	BIOGL	BIOGL|A0A9W2YE75|LOC106075541	LOC106075541	1453	897	69.9	yes	Protein timeless homolog isoform X2
+Timeout	POMCA	POMCA|A0A2T7PRP9|C0Q70_03067	C0Q70_03067	1295	588	58.8	yes	Timeless N-terminal domain-containing protein
+Timeout	LOTGI	LOTGI|V4AYX0|LOTGIDRAFT_230391	LOTGIDRAFT_230391	631	744	61.5	yes	Timeless N-terminal domain-containing protein
+Timeout	MAGGI	MAGGI|A0A8W8NIM1|		661	789	61.3	yes	Timeless N-terminal domain-containing protein
+Timeout	MIZYE	MIZYE|A0A210QHD7|KP79_PYT03800	KP79_PYT03800	1423	755	57.0	yes	Protein timeless-like
+Timeout	CAPTE	CAPTE|R7U1C1|		1313	706	56.0	yes	Timeless N-terminal domain-containing protein
+Timeout	DROME	DROME|Q8INH7|timeout	timeout	1384	431	38.9	yes	Timeout
+Timeout	HUMAN	HUMAN|Q9UNS1|TIMELESS	TIMELESS	1208	598	50.2	yes	Protein timeless homolog
+Cry1	ELYCH	ELYCH|A0A3S1A9F4|EGW08_006202	EGW08_006202	557	1067	88.7	yes	Cryptochrome-1
+Cry1	PLAOC	PLAOC|A0AAV4BMA6|PoB_004665100	PoB_004665100	556	1003	84.0	yes	Cryptochrome-1
+Cry1	ELYMA	ELYMA|A0AAV4JG97|ElyMa_006934100	ElyMa_006934100	457	889	90.1	yes	Cryptochrome-1
+Cry1	APLCA	APLCA|A0ABM0ZZB1|LOC101846932	LOC101846932	543	830	69.8	yes	Cryptochrome-1
+Cry1	BIOGL	BIOGL|A0A9U8E8B7|LOC106062218	LOC106062218	543	838	73.2	yes	Cryptochrome-1
+Cry1	POMCA	POMCA|A0A2T7PAA7|C0Q70_09614	C0Q70_09614	553	769	65.4	yes	Cryptochrome-1
+Cry1	LOTGI	LOTGI|V4A2E7|LOTGIDRAFT_143281	LOTGIDRAFT_143281	548	635	56.5	yes	Cryptochrome-1
+Cry1	MAGGI	MAGGI|A0A8W8MZT0|		545	691	59.2	yes	Cryptochrome-1
+Cry1	MIZYE	MIZYE|A0A210PM18|KP79_PYT07419	KP79_PYT07419	549	632	55.2	yes	Cryptochrome-1
+Cry1	CAPTE	CAPTE|R7V1J3|		564	645	56.4	yes	Cryptochrome-1
+Cry1	DROME	DROME|O77059|cry	cry	542	448	43.7	yes	Cryptochrome-1
+Cry1	HUMAN	HUMAN|Q16526|CRY1	CRY1	586	481	48.4	no	Cryptochrome-1
+Cry2	ELYCH	ELYCH|A0A3S0ZKJ3|EGW08_015234	EGW08_015234	568	1000	98.8	yes	Photolyase/cryptochrome alpha/beta domain-containing protein
+Cry2	PLAOC	PLAOC|A0AAV4DH81|PoB_007004100	PoB_007004100	566	961	94.7	yes	Cryptochrome-1
+Cry2	ELYMA	ELYMA|A0AAV4IK94|ElyMa_004777700	ElyMa_004777700	492	996	98.2	yes	Cryptochrome-1 (Fragment)
+Cry2	APLCA	APLCA|A0ABM1A5A1|LOC101853954	LOC101853954	557	884	88.7	yes	Cryptochrome-1
+Cry2	BIOGL	BIOGL|A0A9W3ASY1|LOC106066275	LOC106066275	570	877	86.2	yes	Cryptochrome-1-like
+Cry2	POMCA	POMCA|A0A2T7P458|C0Q70_10776	C0Q70_10776	559	826	81.0	yes	Photolyase/cryptochrome alpha/beta domain-containing protein
+Cry2	LOTGI	LOTGI|V3ZV38|LOTGIDRAFT_131547	LOTGIDRAFT_131547	512	686	66.2	yes	Photolyase/cryptochrome alpha/beta domain-containing protein
+Cry2	MAGGI	MAGGI|A0A8W8J9Y2|		547	757	73.3	yes	Photolyase/cryptochrome alpha/beta domain-containing protein
+Cry2	MIZYE	MIZYE|A0A210PW80|KP79_PYT18127	KP79_PYT18127	533	573	57.9	no	Cryptochrome-1
+Cry2	CAPTE	CAPTE|R7UL99|		597	727	69.0	yes	Photolyase/cryptochrome alpha/beta domain-containing protein
+Cry2	DROME	DROME|Q0E8P0|phr6-4	phr6-4	540	487	51.5	no	(6-4)-photolyase, isoform A
+Cry2	HUMAN	HUMAN|Q16526|CRY1	CRY1	586	715	69.6	yes	Cryptochrome-1
+Phr6-4	ELYCH	ELYCH|A0A433T5M7|EGW08_015338	EGW08_015338	529	972	87.4	yes	Photolyase/cryptochrome alpha/beta domain-containing protein
+Phr6-4	PLAOC	PLAOC|A0AAV4BNB6|PoB_004745000	PoB_004745000	526	938	83.6	yes	Cryptochrome-1
+Phr6-4	ELYMA	ELYMA|A0AAV4HUQ2|ElyMa_001096500	ElyMa_001096500	492	881	79.5	yes	Cryptochrome-1
+Phr6-4	APLCA	APLCA|A0ABM1W212|LOC101845146	LOC101845146	526	801	74.4	yes	Cryptochrome-1
+Phr6-4	BIOGL	BIOGL|A0A9W3BL88|LOC106054454	LOC106054454	526	793	72.1	yes	Cryptochrome-1-like
+Phr6-4	POMCA	POMCA|A0A2T7P458|C0Q70_10776	C0Q70_10776	559	608	57.6	no	Photolyase/cryptochrome alpha/beta domain-containing protein
+Phr6-4	LOTGI	LOTGI|V4BE98|LOTGIDRAFT_180057	LOTGIDRAFT_180057	525	676	63.3	yes	Photolyase/cryptochrome alpha/beta domain-containing protein
+Phr6-4	MAGGI	MAGGI|A0A8W8N694|		511	698	65.5	yes	Photolyase/cryptochrome alpha/beta domain-containing protein
+Phr6-4	MIZYE	MIZYE|A0A210PW80|KP79_PYT18127	KP79_PYT18127	533	676	63.6	yes	Cryptochrome-1
+Phr6-4	CAPTE	CAPTE|R7UL99|		597	565	52.9	no	Photolyase/cryptochrome alpha/beta domain-containing protein
+Phr6-4	DROME	DROME|Q0E8P0|phr6-4	phr6-4	540	597	58.3	yes	(6-4)-photolyase, isoform A
+Phr6-4	HUMAN	HUMAN|Q16526|CRY1	CRY1	586	615	57.6	no	Cryptochrome-1
+PhrCPD	ELYCH	ELYCH|A0A3S1H928|EGW08_017623	EGW08_017623	661	962	92.8	yes	Deoxyribodipyrimidine photo-lyase
+PhrCPD	PLAOC	PLAOC|A0AAV4DME8|PoB_007200300	PoB_007200300	622	946	87.1	yes	Deoxyribodipyrimidine photo-lyase
+PhrCPD	ELYMA	ELYMA|A0AAV4JRV4|ElyMa_007003800	ElyMa_007003800	676	967	88.6	yes	Deoxyribodipyrimidine photo-lyase
+PhrCPD	APLCA	APLCA|A0ABM0ZV83|LOC101856409	LOC101856409	636	803	76.9	yes	Deoxyribodipyrimidine photo-lyase
+PhrCPD	BIOGL	BIOGL|A0A9W2Z257|LOC106056406	LOC106056406	429	734	78.7	yes	Deoxyribodipyrimidine photo-lyase
+PhrCPD	POMCA	POMCA|A0A2T7NAU8|C0Q70_20846	C0Q70_20846	444	533	65.9	yes	Photolyase/cryptochrome alpha/beta domain-containing protein
+PhrCPD	LOTGI	LOTGI|V4A167|LOTGIDRAFT_125833	LOTGIDRAFT_125833	551	696	64.4	yes	Deoxyribodipyrimidine photo-lyase
+PhrCPD	MAGGI	MAGGI|A0A8W8IQ93|		515	740	71.5	yes	Deoxyribodipyrimidine photo-lyase
+PhrCPD	MIZYE	MIZYE|A0A210PRW9|KP79_PYT20343	KP79_PYT20343	535	742	68.6	yes	Deoxyribodipyrimidine photo-lyase
+PhrCPD	CAPTE	CAPTE|R7TV65|		504	652	63.8	yes	Deoxyribodipyrimidine photo-lyase
+PhrCPD	DROME	DROME|A1Z757|phr	phr	535	609	61.5	yes	Deoxyribodipyrimidine photo-lyase
+CryDASH1	ELYCH	ELYCH|A0A433TFC3|EGW08_011962	EGW08_011962	544	985	90.3	yes	Cryptochrome DASH
+CryDASH1	PLAOC	PLAOC|A0AAV4AJP5|PoB_003373700	PoB_003373700	537	893	79.3	yes	Cryptochrome DASH
+CryDASH1	ELYMA	ELYMA|A0AAV4FU60|ElyMa_005796100	ElyMa_005796100	462	739	73.3	yes	Cryptochrome DASH
+CryDASH1	APLCA	APLCA|A0ABM0JP99|LOC101863104	LOC101863104	538	807	74.3	yes	Cryptochrome DASH
+CryDASH1	BIOGL	BIOGL|A0A9W2ZX49|LOC106054234	LOC106054234	534	774	67.4	yes	Cryptochrome DASH
+CryDASH1	POMCA	POMCA|A0A2T7NWZ3|C0Q70_13349	C0Q70_13349	1644	648	59.5	yes	Photolyase/cryptochrome alpha/beta domain-containing protein
+CryDASH1	LOTGI	LOTGI|V4B9P4|LOTGIDRAFT_224047	LOTGIDRAFT_224047	515	661	59.7	yes	Cryptochrome DASH
+CryDASH1	MAGGI	MAGGI|A0A8W8IDI3|		513	692	60.3	yes	Cryptochrome DASH
+CryDASH1	MIZYE	MIZYE|A0A210PW80|KP79_PYT18127	KP79_PYT18127	533	206	30.7	no	Cryptochrome-1
+CryDASH1	CAPTE	CAPTE|R7UL99|		597	170	27.0	no	Photolyase/cryptochrome alpha/beta domain-containing protein
+CryDASH1	DROME	DROME|Q0E8P0|phr6-4	phr6-4	540	176	28.7	no	(6-4)-photolyase, isoform A
+CryDASH1	HUMAN	HUMAN|Q16526|CRY1	CRY1	586	190	28.6	no	Cryptochrome-1
+CryDASH2	ELYCH	ELYCH|A0A3S1BDR4|EGW08_011062	EGW08_011062	471	880	86.0	yes	Cryptochrome DASH
+CryDASH2	PLAOC	PLAOC|A0AAV4DAR9|PoB_006786200	PoB_006786200	471	803	76.8	yes	Cryptochrome DASH
+CryDASH2	ELYMA	ELYMA|A0AAV4FU60|ElyMa_005796100	ElyMa_005796100	462	353	39.5	no	Cryptochrome DASH
+CryDASH2	APLCA	APLCA|A0ABM0JP99|LOC101863104	LOC101863104	538	560	54.5	no	Cryptochrome DASH
+CryDASH2	BIOGL	BIOGL|A0A9W2ZX49|LOC106054234	LOC106054234	534	533	52.7	no	Cryptochrome DASH
+CryDASH2	POMCA	POMCA|A0A2T7NWZ3|C0Q70_13349	C0Q70_13349	1644	469	47.9	no	Photolyase/cryptochrome alpha/beta domain-containing protein
+CryDASH2	LOTGI	LOTGI|V4B9P4|LOTGIDRAFT_224047	LOTGIDRAFT_224047	515	488	48.8	no	Cryptochrome DASH
+CryDASH2	MAGGI	MAGGI|A0A8W8IDI3|		513	490	48.2	no	Cryptochrome DASH
+CryDASH2	MIZYE	MIZYE|A0A210PW80|KP79_PYT18127	KP79_PYT18127	533	169	27.2	no	Cryptochrome-1
+CryDASH2	CAPTE	CAPTE|R7UL99|		597	165	27.9	no	Photolyase/cryptochrome alpha/beta domain-containing protein
+CryDASH2	DROME	DROME|Q0E8P0|phr6-4	phr6-4	540	168	28.2	no	(6-4)-photolyase, isoform A
+CryDASH2	HUMAN	HUMAN|Q16526|CRY1	CRY1	586	177	29.2	no	Cryptochrome-1
+Pdp1	ELYCH	ELYCH|A0A3S0ZHX2|EGW08_012968	EGW08_012968	281	453	75.7	yes	BZIP domain-containing protein
+Pdp1	PLAOC	PLAOC|A0AAV4AS38|PoB_003589300	PoB_003589300	320	475	75.1	yes	Hepatic leukemia factor-like
+Pdp1	ELYMA	ELYMA|A0AAV4F636|ElyMa_005609500	ElyMa_005609500	321	537	83.3	yes	Hepatic leukemia factor
+Pdp1	APLCA	APLCA|A0ABM0JY62|LOC101863921	LOC101863921	332	382	65.3	yes	Thyrotroph embryonic factor isoform X1
+Pdp1	BIOGL	BIOGL|A0A9U8ENG5|LOC106079631	LOC106079631	312	361	61.8	yes	Thyrotroph embryonic factor-like isoform X1
+Pdp1	POMCA	POMCA|A0A2T7PP49|C0Q70_06472	C0Q70_06472	337	220	43.6	yes	BZIP domain-containing protein
+Pdp1	LOTGI	LOTGI|V4AKH4|LOTGIDRAFT_67392	LOTGIDRAFT_67392	196	186	51.2	yes	BZIP domain-containing protein (Fragment)
+Pdp1	MAGGI	MAGGI|A0A8W8LBR0|		305	181	42.0	yes	BZIP domain-containing protein
+Pdp1	MIZYE	MIZYE|A0A210Q7Z3|KP79_PYT16594	KP79_PYT16594	261	172	40.7	yes	Hepatic leukemia factor
+Pdp1	CAPTE	CAPTE|R7TIF6|		268	194	43.9	yes	BZIP domain-containing protein
+Pdp1	DROME	DROME|M9PEP3|Pdp1	Pdp1	275	145	38.1	yes	PAR-domain protein 1, isoform M
+Pdp1	HUMAN	HUMAN|Q16534|HLF	HLF	295	195	46.0	yes	Transcription factor HLF
+Vrille	ELYCH	ELYCH|A0A3S0ZWS4|EGW08_015045	EGW08_015045	710	781	75.2	yes	BZIP domain-containing protein
+Vrille	PLAOC	PLAOC|A0AAV3ZQ53|PoB_002323500	PoB_002323500	959	741	58.1	yes	Nuclear factor interleukin-3-regulated protein
+Vrille	ELYMA	ELYMA|A0AAV4HY66|ElyMa_006449700	ElyMa_006449700	950	924	62.7	yes	Nuclear factor interleukin-3-regulated protein
+Vrille	APLCA	APLCA|A0ABM0K525|LOC101861394	LOC101861394	634	387	47.7	yes	Bromodomain-containing protein 4A
+Vrille	BIOGL	BIOGL|A0A9W3AAZ4|LOC106059678	LOC106059678	666	338	42.5	yes	Uncharacterized protein LOC106059678 isoform X2
+Vrille	POMCA	POMCA|A0A2T7NRM6|C0Q70_17076	C0Q70_17076	294	120	51.0	yes	BZIP domain-containing protein
+Vrille	LOTGI	LOTGI|V4B2I9|LOTGIDRAFT_79457	LOTGIDRAFT_79457	69	76	57.4	yes	BZIP domain-containing protein (Fragment)
+Vrille	MAGGI	MAGGI|A0A8W8NHK2|		576	93	35.3	yes	BZIP domain-containing protein
+Vrille	MIZYE	MIZYE|A0A210QM82|KP79_PYT08306	KP79_PYT08306	569	92	45.3	yes	Nuclear factor interleukin-3-regulated protein
+Vrille	CAPTE	CAPTE|R7V3R7|		92	67	48.0	yes	BZIP domain-containing protein
+Vrille	DROME	DROME|Q7KTN9|vri	vri	610	60	44.1	yes	Vrille, isoform C
+Vrille	HUMAN	HUMAN|Q16649|NFIL3	NFIL3	462	79	54.1	yes	Nuclear factor interleukin-3-regulated protein
+E75	ELYCH	ELYCH|A0A3S1ABP9|EGW08_004563	EGW08_004563	1476	1672	63.7	yes	Nuclear receptor domain-containing protein (Fragment)
+E75	PLAOC	PLAOC|A0AAV4CDY1|PoB_005663300	PoB_005663300	1269	1085	58.9	yes	Nuclear hormone receptor e75
+E75	ELYMA	ELYMA|A0AAV4ICV7|ElyMa_006584600	ElyMa_006584600	1484	1502	62.2	yes	Nuclear receptor subfamily 1 group D
+E75	APLCA	APLCA|A0ABM0JW02|LOC101846826	LOC101846826	1470	1139	47.3	yes	Mucin-12 isoform X2
+E75	BIOGL	BIOGL|A0A9W2Z3W5|LOC106073033	LOC106073033	1291	912	44.1	yes	Uncharacterized protein LOC106073033 isoform X1
+E75	POMCA	POMCA|A0A2T7Q082|C0Q70_01707	C0Q70_01707	1198	790	58.8	yes	Uncharacterized protein
+E75	LOTGI	LOTGI|V4AJF3|LOTGIDRAFT_136477	LOTGIDRAFT_136477	354	511	70.3	yes	Uncharacterized protein (Fragment)
+E75	MAGGI	MAGGI|A0A8W8KPF5|		1105	634	51.7	yes	Nuclear hormone receptor E75
+E75	MIZYE	MIZYE|A0A210PZX1|KP79_PYT24102	KP79_PYT24102	1070	657	53.3	yes	Nuclear hormone receptor E75
+E75	CAPTE	CAPTE|R7V7N0|		347	422	60.5	yes	Uncharacterized protein
+E75	DROME	DROME|A0A0S0WIG6|Eip75B	Eip75B	991	351	51.5	yes	Ecdysone-induced protein 75B, isoform G
+E75	HUMAN	HUMAN|Q14995|NR1D2	NR1D2	579	280	37.5	yes	Nuclear receptor subfamily 1 group D member 2
+Hr3	ELYCH	ELYCH|A0A433TK79|EGW08_010234	EGW08_010234	404	719	96.8	yes	Uncharacterized protein (Fragment)
+Hr3	PLAOC	PLAOC|A0AAV3Z3E2|PoB_001549300	PoB_001549300	305	372	84.3	yes	Nuclear receptor ror-alpha
+Hr3	ELYMA	ELYMA|A0AAV4FFU9|ElyMa_000356300	ElyMa_000356300	428	661	82.6	yes	Nuclear receptor ROR-alpha
+Hr3	APLCA	APLCA|A0ABM0ZVF3|LOC101857395	LOC101857395	584	205	29.2	no	Ecdysone-induced protein 78C
+Hr3	BIOGL	BIOGL|A0A9W2ZDQ0|LOC106077990	LOC106077990	491	670	83.8	yes	Probable nuclear hormone receptor HR3 isoform X2
+Hr3	POMCA	POMCA|A0A2T7PSB5|C0Q70_03301	C0Q70_03301	561	395	61.6	yes	NR LBD domain-containing protein
+Hr3	LOTGI	LOTGI|V3Z6X3|LOTGIDRAFT_129003	LOTGIDRAFT_129003	426	474	60.5	yes	Nuclear hormone receptor HR3 (Fragment)
+Hr3	MAGGI	MAGGI|A0A8W8P5Q8|		500	491	60.2	yes	Nuclear hormone receptor HR3
+Hr3	MIZYE	MIZYE|A0A210PHY9|KP79_PYT23086	KP79_PYT23086	443	498	60.2	yes	Nuclear hormone receptor HR3
+Hr3	CAPTE	CAPTE|R7V5E6|		362	265	45.4	yes	NR LBD domain-containing protein
+Hr3	DROME	DROME|A8DY91|Hr3	Hr3	456	352	47.1	yes	Probable nuclear hormone receptor HR3
+Hr3	HUMAN	HUMAN|P35398|RORA	RORA	523	310	40.7	yes	Nuclear receptor ROR-alpha
+Cwo	ELYCH	ELYCH|A0A3S1A5Y4|EGW08_000715	EGW08_000715	670	798	64.7	yes	BHLH domain-containing protein
+Cwo	PLAOC	PLAOC|A0AAV4DEW0|PoB_006926800	PoB_006926800	808	774	64.7	yes	Hairy/enhancer-of-split related with yrpw motif protein 1
+Cwo	ELYMA	ELYMA|A0AAV4GPW6|ElyMa_006070300	ElyMa_006070300	695	881	80.8	yes	Hairy/enhancer-of-split related with YRPW motif protein 1
+Cwo	APLCA	APLCA|A0ABM0ZVE4|LOC101850685	LOC101850685	541	408	46.8	yes	Transcription factor cwo isoform X2
+Cwo	BIOGL	BIOGL|A0A9W3A3F0|LOC106066091	LOC106066091	518	396	42.5	yes	Transcription factor cwo-like
+Cwo	POMCA	POMCA|A0A2T7NUQ5|C0Q70_15365	C0Q70_15365	452	126	76.8	no	BHLH domain-containing protein
+Cwo	LOTGI	LOTGI|V4BA37|LOTGIDRAFT_171867	LOTGIDRAFT_171867	312	83	38.3	no	Hairy/enhancer-of-split related with YRPW motif protein
+Cwo	MAGGI	MAGGI|A0A8W8M4Q8|		473	161	55.4	yes	BHLH domain-containing protein
+Cwo	MIZYE	MIZYE|A0A210PZW2|KP79_PYT11053	KP79_PYT11053	479	166	55.7	yes	Hairy/enhancer-of-split related with YRPW motif protein
+Cwo	CAPTE	CAPTE|R7U8V5|		496	129	44.8	yes	BHLH domain-containing protein
+Cwo	DROME	DROME|Q9VGZ5|cwo	cwo	698	108	41.5	yes	Transcription factor cwo
+Cwo	HUMAN	HUMAN|Q9UBP5|HEY2	HEY2	337	80	31.8	no	Hairy/enhancer-of-split related with YRPW motif protein 2
+Ck1de	ELYCH	ELYCH|A0A433UB18|EGW08_001226	EGW08_001226	429	853	99.1	yes	non-specific serine/threonine protein kinase
+Ck1de	PLAOC	PLAOC|A0AAV3ZM37|PoB_002143400	PoB_002143400	429	844	98.1	yes	non-specific serine/threonine protein kinase
+Ck1de	ELYMA	ELYMA|A0AAV4JC70|ElyMa_001557500	ElyMa_001557500	429	852	99.1	yes	non-specific serine/threonine protein kinase
+Ck1de	APLCA	APLCA|A0ABM0JPS3|LOC101861207	LOC101861207	469	815	94.9	yes	non-specific serine/threonine protein kinase
+Ck1de	BIOGL	BIOGL|A0A9W2ZQQ7|LOC106079090	LOC106079090	427	804	93.7	yes	non-specific serine/threonine protein kinase
+Ck1de	POMCA	POMCA|A0A2T7PXL5|C0Q70_00738	C0Q70_00738	425	751	89.3	yes	non-specific serine/threonine protein kinase
+Ck1de	LOTGI	LOTGI|V3ZXK1|LOTGIDRAFT_205749	LOTGIDRAFT_205749	310	603	99.7	yes	non-specific serine/threonine protein kinase
+Ck1de	MAGGI	MAGGI|A0A8W8M5R5|		450	616	77.1	yes	non-specific serine/threonine protein kinase
+Ck1de	MIZYE	MIZYE|A0A210PUF0|KP79_PYT05901	KP79_PYT05901	419	678	82.8	yes	non-specific serine/threonine protein kinase
+Ck1de	CAPTE	CAPTE|R7U103|		421	614	90.2	yes	non-specific serine/threonine protein kinase
+Ck1de	DROME	DROME|A0A0B4KHX3|dco	dco	440	530	84.8	yes	non-specific serine/threonine protein kinase
+Ck1de	HUMAN	HUMAN|P48730|CSNK1D	CSNK1D	415	613	79.3	yes	Casein kinase I isoform delta
+Ck1a	ELYCH	ELYCH|A0A3S1BWB1|EGW08_002032	EGW08_002032	329	534	85.7	no	non-specific serine/threonine protein kinase
+Ck1a	PLAOC	PLAOC|A0AAV4CK93|PoB_005808900	PoB_005808900	325	641	97.9	yes	non-specific serine/threonine protein kinase
+Ck1a	ELYMA	ELYMA|A0AAV4GNC6|ElyMa_000728400	ElyMa_000728400	394	558	98.2	yes	non-specific serine/threonine protein kinase
+Ck1a	APLCA	APLCA|A0ABM0JNA5|LOC101851803	LOC101851803	324	628	95.7	yes	non-specific serine/threonine protein kinase
+Ck1a	BIOGL	BIOGL|A0A2C9JKQ4|LOC106058030	LOC106058030	324	624	95.7	yes	non-specific serine/threonine protein kinase
+Ck1a	POMCA	POMCA|A0A2T7PBZ8|C0Q70_10207	C0Q70_10207	364	556	84.8	yes	non-specific serine/threonine protein kinase
+Ck1a	LOTGI	LOTGI|V3ZIJ4|LOTGIDRAFT_204147	LOTGIDRAFT_204147	323	538	86.6	yes	non-specific serine/threonine protein kinase
+Ck1a	MAGGI	MAGGI|A0A8W8IGB7|		325	565	86.1	yes	non-specific serine/threonine protein kinase
+Ck1a	MIZYE	MIZYE|A0A210PE40|KP79_PYT14139	KP79_PYT14139	327	545	86.5	yes	non-specific serine/threonine protein kinase
+Ck1a	CAPTE	CAPTE|R7UQQ3|		326	568	91.2	yes	non-specific serine/threonine protein kinase
+Ck1a	DROME	DROME|E1JJI5|CkIalpha	CkIalpha	337	514	79.5	yes	non-specific serine/threonine protein kinase
+Ck1a	HUMAN	HUMAN|P48729|CSNK1A1	CSNK1A1	337	548	87.1	yes	Casein kinase I isoform alpha
+Ck2a	ELYCH	ELYCH|A0A433U6A5|EGW08_002881	EGW08_002881	383	761	92.3	yes	non-specific serine/threonine protein kinase
+Ck2a	PLAOC	PLAOC|A0AAV3Z5N6|PoB_001633700	PoB_001633700	477	734	99.7	yes	non-specific serine/threonine protein kinase
+Ck2a	ELYMA	ELYMA|A0AAV4HIP4|ElyMa_004492000	ElyMa_004492000	383	759	92.3	yes	non-specific serine/threonine protein kinase
+Ck2a	APLCA	APLCA|A0ABM0JWZ1|LOC101853332	LOC101853332	361	734	97.2	yes	non-specific serine/threonine protein kinase
+Ck2a	BIOGL	BIOGL|A0A9W3AUM7|LOC106079533	LOC106079533	383	741	89.4	yes	non-specific serine/threonine protein kinase
+Ck2a	POMCA	POMCA|A0A2T7NIR4|C0Q70_19220	C0Q70_19220	367	712	92.1	yes	non-specific serine/threonine protein kinase
+Ck2a	LOTGI	LOTGI|V3ZFM5|LOTGIDRAFT_184685	LOTGIDRAFT_184685	384	703	84.0	yes	non-specific serine/threonine protein kinase
+Ck2a	MAGGI	MAGGI|A0A8W8JWU2|		154	152	60.8	yes	non-specific serine/threonine protein kinase
+Ck2a	MIZYE	MIZYE|A0A210QGY6|KP79_PYT13927	KP79_PYT13927	387	687	82.7	yes	non-specific serine/threonine protein kinase
+Ck2a	CAPTE	CAPTE|R7UQI3|		387	681	90.1	yes	non-specific serine/threonine protein kinase
+Ck2a	DROME	DROME|A4V2B8|CkIIalpha	CkIIalpha	336	617	86.8	yes	Casein kinase II subunit alpha
+Ck2a	HUMAN	HUMAN|P68400|CSNK2A1	CSNK2A1	391	645	85.8	yes	Casein kinase II subunit alpha
+Ck2b	ELYCH	ELYCH|A0A433TC14|EGW08_013152	EGW08_013152	221	471	100.0	yes	Casein kinase II subunit beta
+Ck2b	PLAOC	PLAOC|A0AAV4DVW7|PoB_007494200	PoB_007494200	221	467	99.1	yes	Casein kinase II subunit beta
+Ck2b	ELYMA	ELYMA|A0AAV4EC82|ElyMa_005353400	ElyMa_005353400	204	434	100.0	yes	Casein kinase II subunit beta (Fragment)
+Ck2b	APLCA	APLCA|A0ABM0K799|LOC101851229	LOC101851229	221	470	99.5	yes	Casein kinase II subunit beta
+Ck2b	BIOGL	BIOGL|A0A9W3BEW0|LOC106062178	LOC106062178	221	469	99.5	yes	Casein kinase II subunit beta
+Ck2b	POMCA	POMCA|A0A2T7NKZ0|C0Q70_17636	C0Q70_17636	216	278	67.3	yes	Casein kinase II subunit beta
+Ck2b	LOTGI	LOTGI|V4AYP1|LOTGIDRAFT_225993	LOTGIDRAFT_225993	221	449	95.0	yes	Casein kinase II subunit beta
+Ck2b	MAGGI	MAGGI|A0A8W8KR16|		220	438	94.6	yes	Casein kinase II subunit beta
+Ck2b	MIZYE	MIZYE|A0A210QLV3|KP79_PYT04537	KP79_PYT04537	216	399	92.6	yes	Casein kinase II subunit beta
+Ck2b	CAPTE	CAPTE|R7TVA7|		223	429	91.5	yes	Casein kinase II subunit beta
+Ck2b	DROME	DROME|M9NGA3|CkIIbeta	CkIIbeta	233	412	87.2	yes	Casein kinase II subunit beta
+Ck2b	HUMAN	HUMAN|P67870|CSNK2B	CSNK2B	215	431	93.9	yes	Casein kinase II subunit beta
+Gsk3	ELYCH	ELYCH|A0A433TGW5|EGW08_011479	EGW08_011479	395	707	91.7	yes	Protein kinase domain-containing protein
+Gsk3	PLAOC	PLAOC|A0AAV4BCK4|PoB_004259900	PoB_004259900	422	797	96.0	yes	Glycogen synthase kinase 3-beta
+Gsk3	ELYMA	ELYMA|A0AAV4EHA1|ElyMa_001811900	ElyMa_001811900	422	806	97.4	yes	Glycogen synthase kinase-3
+Gsk3	APLCA	APLCA|A0ABM0K3H5|LOC100533534	LOC100533534	438	733	96.6	yes	Glycogen synthase kinase-3 beta
+Gsk3	BIOGL	BIOGL|A0A2C9JEK4|LOC106055186	LOC106055186	416	749	92.3	yes	Glycogen synthase kinase-3 beta-like isoform X1
+Gsk3	POMCA	POMCA|A0A2T7P2W8|C0Q70_12947	C0Q70_12947	438	667	91.3	yes	Protein kinase domain-containing protein
+Gsk3	LOTGI	LOTGI|V4B8P1|LOTGIDRAFT_185982	LOTGIDRAFT_185982	427	692	89.6	yes	Protein kinase domain-containing protein
+Gsk3	MAGGI	MAGGI|A0A8W8KRR2|		167	248	83.7	yes	Protein kinase domain-containing protein
+Gsk3	MIZYE	MIZYE|A0A210QP25|KP79_PYT22420	KP79_PYT22420	416	668	86.9	yes	Glycogen synthase kinase-3 beta
+Gsk3	CAPTE	CAPTE|R7TL52|		245	320	61.6	yes	Protein kinase domain-containing protein
+Gsk3	DROME	DROME|A4V3W2|sgg	sgg	514	608	79.5	yes	Shaggy, isoform C
+Gsk3	HUMAN	HUMAN|P49841|GSK3B	GSK3B	420	634	82.5	yes	Glycogen synthase kinase-3 beta
+Nemo	ELYCH	ELYCH|A0A3S0ZDX3|EGW08_016820	EGW08_016820	365	214	43.9	no	Mitogen-activated protein kinase
+Nemo	PLAOC	PLAOC|A0AAV4DGI0|PoB_006976000	PoB_006976000	300	333	61.2	yes	Mitogen-activated protein kinase
+Nemo	ELYMA	ELYMA|A0AAV4HKN4|ElyMa_000989000	ElyMa_000989000	145	263	99.2	yes	Mitogen-activated protein kinase
+Nemo	APLCA	APLCA|A0ABM1ADU2|LOC101858232	LOC101858232	234	434	81.2	yes	Serine/threonine-protein kinase NLK
+Nemo	BIOGL	BIOGL|A0A9W2YEF4|LOC106065260	LOC106065260	459	615	91.0	yes	Mitogen-activated protein kinase
+Nemo	POMCA	POMCA|A0A2T7PI62|C0Q70_08536	C0Q70_08536	479	463	75.6	yes	Mitogen-activated protein kinase
+Nemo	LOTGI	LOTGI|V4B1J6|LOTGIDRAFT_136702	LOTGIDRAFT_136702	408	441	71.7	yes	Mitogen-activated protein kinase
+Nemo	MAGGI	MAGGI|A0A8W8MNS7|		438	445	64.6	yes	Mitogen-activated protein kinase
+Nemo	MIZYE	MIZYE|A0A210PUY9|KP79_PYT16831	KP79_PYT16831	435	432	63.9	yes	Mitogen-activated protein kinase
+Nemo	CAPTE	CAPTE|R7UT54|		441	432	62.3	yes	Mitogen-activated protein kinase
+Nemo	DROME	DROME|Q8IQ91|nmo	nmo	430	414	60.7	yes	Mitogen-activated protein kinase
+Nemo	HUMAN	HUMAN|Q9UBE8|NLK	NLK	527	413	68.4	yes	Serine/threonine-protein kinase NLK
+Pp1a	ELYCH	ELYCH|A0A433SY21|EGW08_018039	EGW08_018039	340	648	99.4	yes	Serine/threonine-protein phosphatase (Fragment)
+Pp1a	PLAOC	PLAOC|A0AAV4CL69|PoB_005919500	PoB_005919500	328	686	100.0	yes	Serine/threonine-protein phosphatase
+Pp1a	ELYMA	ELYMA|A0AAV4H2I9|ElyMa_002617600	ElyMa_002617600	332	613	90.5	no	Serine/threonine-protein phosphatase
+Pp1a	APLCA	APLCA|A0ABM0K8A5|LOC101853897	LOC101853897	328	677	98.8	yes	Serine/threonine-protein phosphatase
+Pp1a	BIOGL	BIOGL|A0A9W2YEI2|LOC106068476	LOC106068476	328	677	98.8	yes	Serine/threonine-protein phosphatase
+Pp1a	POMCA	POMCA|A0A2T7PI72|C0Q70_08546	C0Q70_08546	328	676	98.5	yes	Serine/threonine-protein phosphatase
+Pp1a	LOTGI	LOTGI|V4B4S1|LOTGIDRAFT_200510	LOTGIDRAFT_200510	328	676	98.2	yes	Serine/threonine-protein phosphatase
+Pp1a	MAGGI	MAGGI|K1PXG6|		328	674	98.5	yes	Serine/threonine-protein phosphatase
+Pp1a	MIZYE	MIZYE|A0A210R013|KP79_PYT10451	KP79_PYT10451	335	615	89.3	no	Serine/threonine-protein phosphatase
+Pp1a	CAPTE	CAPTE|R7V4C6|		329	665	97.0	yes	Serine/threonine-protein phosphatase
+Pp1a	DROME	DROME|P48461|Pp1alpha-96A	Pp1alpha-96A	327	612	89.9	yes	Serine/threonine-protein phosphatase alpha-1 isoform
+Pp1a	HUMAN	HUMAN|P62136|PPP1CA	PPP1CA	330	637	93.0	yes	Serine/threonine-protein phosphatase PP1-alpha catalytic subunit
+Pp1b	ELYCH	ELYCH|A0A3S1H6J6|EGW08_018999	EGW08_018999	333	678	98.5	yes	Serine/threonine-protein phosphatase
+Pp1b	PLAOC	PLAOC|A0AAV4B290|PoB_003972200	PoB_003972200	333	674	97.6	yes	Serine/threonine-protein phosphatase
+Pp1b	ELYMA	ELYMA|A0AAV4H2I9|ElyMa_002617600	ElyMa_002617600	332	676	97.6	yes	Serine/threonine-protein phosphatase
+Pp1b	APLCA	APLCA|A0ABM0JWW4|LOC101857039	LOC101857039	332	668	96.7	yes	Serine/threonine-protein phosphatase
+Pp1b	BIOGL	BIOGL|A0A182YXE5|LOC106055415	LOC106055415	332	672	97.6	yes	Serine/threonine-protein phosphatase
+Pp1b	POMCA	POMCA|A0A2T7PI72|C0Q70_08546	C0Q70_08546	328	610	89.6	no	Serine/threonine-protein phosphatase
+Pp1b	LOTGI	LOTGI|V3ZG26|LOTGIDRAFT_192316	LOTGIDRAFT_192316	326	651	94.2	yes	Serine/threonine-protein phosphatase
+Pp1b	MAGGI	MAGGI|K1QB83|		327	652	94.8	yes	Serine/threonine-protein phosphatase
+Pp1b	MIZYE	MIZYE|A0A210R013|KP79_PYT10451	KP79_PYT10451	335	660	97.2	yes	Serine/threonine-protein phosphatase
+Pp1b	CAPTE	CAPTE|R7TZG7|		327	630	91.4	yes	Serine/threonine-protein phosphatase
+Pp1b	DROME	DROME|P48462|flw	flw	330	610	89.7	yes	Serine/threonine-protein phosphatase beta isoform
+Pp1b	HUMAN	HUMAN|P62140|PPP1CB	PPP1CB	327	647	95.6	yes	Serine/threonine-protein phosphatase PP1-beta catalytic subunit
+Pp2aC	ELYCH	ELYCH|A0A3S1A3S8|EGW08_010175	EGW08_010175	312	654	99.7	yes	Serine/threonine-protein phosphatase
+Pp2aC	PLAOC	PLAOC|A0AAV4C2C0|PoB_005201200	PoB_005201200	312	652	99.4	yes	Serine/threonine-protein phosphatase
+Pp2aC	ELYMA	ELYMA|A0AAV4IRG1|ElyMa_004861500	ElyMa_004861500	312	653	99.4	yes	Serine/threonine-protein phosphatase
+Pp2aC	APLCA	APLCA|A0ABM0JRZ3|LOC101854093	LOC101854093	312	652	99.0	yes	Serine/threonine-protein phosphatase
+Pp2aC	BIOGL	BIOGL|A0A9W2ZNT3|LOC106058733	LOC106058733	312	651	98.7	yes	Serine/threonine-protein phosphatase
+Pp2aC	POMCA	POMCA|A0A2T7PWT6|C0Q70_00460	C0Q70_00460	316	606	93.5	yes	Serine/threonine-protein phosphatase
+Pp2aC	LOTGI	LOTGI|V3ZIM9|LOTGIDRAFT_184125	LOTGIDRAFT_184125	310	632	95.8	yes	Serine/threonine-protein phosphatase
+Pp2aC	MAGGI	MAGGI|K1QNZ3|		312	641	96.8	yes	Serine/threonine-protein phosphatase
+Pp2aC	MIZYE	MIZYE|A0A210Q886|KP79_PYT01643	KP79_PYT01643	312	635	96.2	yes	Serine/threonine-protein phosphatase
+Pp2aC	CAPTE	CAPTE|R7UPA2|		309	624	94.5	yes	Serine/threonine-protein phosphatase
+Pp2aC	DROME	DROME|P23696|mts	mts	309	616	92.2	yes	Serine/threonine-protein phosphatase PP2A
+Pp2aC	HUMAN	HUMAN|P62714|PPP2CB	PPP2CB	309	625	94.2	yes	Serine/threonine-protein phosphatase 2A catalytic subunit beta isoform
+Pp2aB55	ELYCH	ELYCH|A0A433UCX0|EGW08_000688	EGW08_000688	444	893	99.3	yes	Serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B
+Pp2aB55	PLAOC	PLAOC|A0AAV3YC65|PoB_000699700	PoB_000699700	352	705	99.1	yes	Serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B (Fragment)
+Pp2aB55	ELYMA	ELYMA|A0AAV4HYG3|ElyMa_004621600	ElyMa_004621600	395	759	87.1	yes	Serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B
+Pp2aB55	APLCA	APLCA|A0ABM1AAG6|LOC101855526	LOC101855526	469	884	92.9	yes	Serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B
+Pp2aB55	BIOGL	BIOGL|A0A2C9JJW6|LOC106073396	LOC106073396	496	876	91.7	yes	Serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B
+Pp2aB55	POMCA	POMCA|A0A2T7P8J9|C0Q70_08996	C0Q70_08996	444	816	89.4	yes	Serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B
+Pp2aB55	LOTGI	LOTGI|V4ACN7|LOTGIDRAFT_191583	LOTGIDRAFT_191583	445	781	84.8	yes	Serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B
+Pp2aB55	MAGGI	MAGGI|K1QPJ9|		445	778	84.7	yes	Serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B
+Pp2aB55	MIZYE	MIZYE|A0A210R311|KP79_PYT17802	KP79_PYT17802	474	764	82.8	yes	Serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B
+Pp2aB55	CAPTE	CAPTE|R7TU01|		446	761	82.8	yes	Serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B
+Pp2aB55	DROME	DROME|A0A0B4LGZ3|tws	tws	499	714	76.6	yes	Serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B
+Pp2aB55	HUMAN	HUMAN|P63151|PPP2R2A	PPP2R2A	447	739	80.3	yes	Serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B alpha isoform
+Pp2aB56e	ELYCH	ELYCH|A0A3S1HF70|EGW08_014109	EGW08_014109	459	885	98.5	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56e	PLAOC	PLAOC|A0AAV4B5J5|PoB_004235500	PoB_004235500	459	892	99.3	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56e	ELYMA	ELYMA|A0AAV4I8A1|ElyMa_006528800	ElyMa_006528800	459	892	98.7	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56e	APLCA	APLCA|A0ABM1A9V5|LOC101850115	LOC101850115	458	835	93.5	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56e	BIOGL	BIOGL|A0A9W3A055|LOC106078840	LOC106078840	459	857	94.6	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56e	POMCA	POMCA|A0A2T7NW55|C0Q70_13061	C0Q70_13061	415	758	92.4	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56e	LOTGI	LOTGI|V3ZH72|LOTGIDRAFT_133243	LOTGIDRAFT_133243	430	769	89.1	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56e	MAGGI	MAGGI|A0A8W8HV33|		460	794	87.2	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56e	MIZYE	MIZYE|A0A210QVD0|KP79_PYT00583	KP79_PYT00583	460	781	84.8	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56e	CAPTE	CAPTE|R7THV5|		431	695	78.4	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56e	DROME	DROME|Q9VB23|wdb	wdb	524	709	81.2	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56e	HUMAN	HUMAN|Q16537|PPP2R5E	PPP2R5E	467	701	78.9	yes	Serine/threonine-protein phosphatase 2A 56 kDa regulatory subunit epsilon isoform
+Pp2aB56d	ELYCH	ELYCH|A0A3S1B0L7|EGW08_018998	EGW08_018998	598	793	92.5	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56d	PLAOC	PLAOC|A0AAV4B0W6|PoB_003972500	PoB_003972500	436	834	97.0	yes	Serine/threonine-protein phosphatase 2a 56 kDa regulatory subunit delta isoform (Fragment)
+Pp2aB56d	ELYMA	ELYMA|A0AAV4H8T7|ElyMa_000893100	ElyMa_000893100	593	799	93.6	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56d	APLCA	APLCA|A0ABM0JJ49|LOC101860798	LOC101860798	587	787	91.3	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56d	BIOGL	BIOGL|A0A2C9K7W7|LOC106056848	LOC106056848	586	786	92.0	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56d	POMCA	POMCA|A0A2T7NZ14|C0Q70_14087	C0Q70_14087	504	662	93.1	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56d	LOTGI	LOTGI|V4ASZ4|LOTGIDRAFT_201847	LOTGIDRAFT_201847	615	710	79.5	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56d	MAGGI	MAGGI|A0A8W8I206|		592	700	81.6	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56d	MIZYE	MIZYE|A0A210PFA4|KP79_PYT09647	KP79_PYT09647	555	660	84.7	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56d	CAPTE	CAPTE|R7VJ26|		491	633	91.0	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56d	DROME	DROME|B7Z0L6|wrd	wrd	703	600	70.0	yes	Serine/threonine protein phosphatase 2A regulatory subunit
+Pp2aB56d	HUMAN	HUMAN|Q14738|PPP2R5D	PPP2R5D	602	645	76.4	yes	Serine/threonine-protein phosphatase 2A 56 kDa regulatory subunit delta isoform
+Slimb	ELYCH	ELYCH|A0A3S1BJ18|EGW08_010299	EGW08_010299	886	84	28.3	no	F-box domain-containing protein
+Slimb	PLAOC	PLAOC|A0AAV4AZ74|PoB_003818400	PoB_003818400	506	473	94.2	yes	F-box/WD repeat-containing protein 1a
+Slimb	ELYMA	ELYMA|A0AAV4IMD1|ElyMa_004836800	ElyMa_004836800	520	502	95.4	yes	F-box/WD repeat-containing protein 1A
+Slimb	APLCA	APLCA|A0ABM1A6U4|LOC101853342	LOC101853342	495	144	71.7	yes	F-box/WD repeat-containing protein 1A
+Slimb	BIOGL	BIOGL|A0A9U8E6G0|LOC106061116	LOC106061116	513	387	82.3	yes	F-box/WD repeat-containing protein 1A-like
+Slimb	POMCA	POMCA|A0A2T7P961|C0Q70_09210	C0Q70_09210	496	388	82.8	yes	F-box domain-containing protein
+Slimb	LOTGI	LOTGI|V4AZA1|LOTGIDRAFT_238545	LOTGIDRAFT_238545	474	321	70.5	yes	F-box domain-containing protein
+Slimb	MAGGI	MAGGI|A0A8W8IUQ8|		524	356	70.9	yes	F-box domain-containing protein
+Slimb	MIZYE	MIZYE|A0A210Q584|KP79_PYT17615	KP79_PYT17615	518	356	73.7	yes	F-box/WD repeat-containing protein 1A
+Slimb	CAPTE	CAPTE|R7TD38|		520	347	66.2	yes	F-box domain-containing protein
+Slimb	DROME	DROME|Q9VDE3|slmb	slmb	510	316	63.4	yes	Supernumerary limbs, isoform A
+Slimb	HUMAN	HUMAN|Q9Y297|BTRC	BTRC	605	323	72.1	yes	F-box/WD repeat-containing protein 1A
+Jetlag	ELYCH	ELYCH|A0A433T7X7|EGW08_014537	EGW08_014537	314	290	79.3	yes	F-box domain-containing protein
+Jetlag	PLAOC	PLAOC|A0AAV4BAB9|PoB_004254000	PoB_004254000	318	306	79.8	yes	F-box/lrr-repeat protein 15-like
+Jetlag	ELYMA	ELYMA|A0AAV4F784|ElyMa_002032400	ElyMa_002032400	254	308	81.3	yes	F-box/LRR-repeat protein 15-like
+Jetlag	APLCA	APLCA|A0ABM0JTL5|LOC101853861	LOC101853861	347	189	59.5	yes	F-box/LRR-repeat protein 15 isoform X5
+Jetlag	BIOGL	BIOGL|A0A9W2ZPC1|LOC106051693	LOC106051693	338	218	64.5	yes	F-box/LRR-repeat protein 15-like
+Jetlag	LOTGI	LOTGI|V3ZRF0|LOTGIDRAFT_207352	LOTGIDRAFT_207352	282	95	38.0	yes	Uncharacterized protein
+Jetlag	MAGGI	MAGGI|K1P9I2|		202	105	34.5	yes	Uncharacterized protein
+Jetlag	MIZYE	MIZYE|A0A210PFI2|KP79_PYT05993	KP79_PYT05993	308	94	35.8	yes	F-box/LRR-repeat protein 15
+Jetlag	CAPTE	CAPTE|R7VDT7|		289	91	33.3	yes	F-box/LRR-repeat protein 15-like leucin rich repeat domain-containing protein
+Jetlag	DROME	DROME|Q0E8T8|jet	jet	313	69	32.7	yes	Jetlag, isoform B
+Jetlag	HUMAN	HUMAN|Q9H469|FBXL15	FBXL15	300	70	33.3	yes	F-box/LRR-repeat protein 15
+Sirt1	ELYCH	ELYCH|A0A433U8F0|EGW08_002135	EGW08_002135	710	822	56.1	yes	protein acetyllysine N-acetyltransferase
+Sirt1	PLAOC	PLAOC|A0AAV4D203|PoB_006458300	PoB_006458300	961	775	56.2	yes	protein acetyllysine N-acetyltransferase
+Sirt1	ELYMA	ELYMA|A0AAV4G0Y2|ElyMa_005862200	ElyMa_005862200	924	904	63.3	yes	protein acetyllysine N-acetyltransferase
+Sirt1	APLCA	APLCA|A0ABM0JJK1|LOC101852758	LOC101852758	922	602	77.3	yes	protein acetyllysine N-acetyltransferase
+Sirt1	BIOGL	BIOGL|A0A9U8DYY1|LOC106055258	LOC106055258	856	624	47.5	yes	protein acetyllysine N-acetyltransferase
+Sirt1	POMCA	POMCA|A0A2T7PY55|C0Q70_00950	C0Q70_00950	848	527	69.6	yes	protein acetyllysine N-acetyltransferase
+Sirt1	LOTGI	LOTGI|V3ZNN2|LOTGIDRAFT_108079	LOTGIDRAFT_108079	535	499	70.9	yes	protein acetyllysine N-acetyltransferase
+Sirt1	MAGGI	MAGGI|A0A8W8JZM8|		701	483	66.8	yes	protein acetyllysine N-acetyltransferase
+Sirt1	MIZYE	MIZYE|A0A210Q377|KP79_PYT06546	KP79_PYT06546	850	494	67.2	yes	protein acetyllysine N-acetyltransferase
+Sirt1	CAPTE	CAPTE|R7VG12|		550	464	62.9	yes	protein acetyllysine N-acetyltransferase
+Sirt1	DROME	DROME|Q9VK34|Sirt1	Sirt1	823	406	56.5	yes	NAD-dependent histone deacetylase sirtuin-1
+Sirt1	HUMAN	HUMAN|Q96EB6|SIRT1	SIRT1	747	461	65.9	yes	NAD-dependent protein deacetylase sirtuin-1
+Pdf	ELYCH	ELYCH|A0A433U366|EGW08_004030	EGW08_004030	105	148	87.8	yes	Uncharacterized protein
+Pdf	PLAOC	PLAOC|A0AAV4DAC1|PoB_006754000	PoB_006754000	124	107	61.8	yes	Uncharacterized protein
+Pdf	ELYMA	ELYMA|A0AAV4GHM1|ElyMa_004168300	ElyMa_004168300	103	147	82.0	yes	Cerebrin prohormone preproprotein
+Pdf	APLCA	APLCA|Q8T112|CBPH	CBPH	86	56	44.9	yes	Cerebrin prohormone
+Pdf	POMCA	POMCA|A0A2T7P8W7|C0Q70_09108	C0Q70_09108	78	45	38.2	yes	Uncharacterized protein
+Pdf	LOTGI	LOTGI|V4AC35|LOTGIDRAFT_239524	LOTGIDRAFT_239524	91	49	34.9	yes	Uncharacterized protein
+Pdfr	ELYCH	ELYCH|A0A433TKL1|EGW08_010147	EGW08_010147	560	800	82.3	yes	G-protein coupled receptors family 2 profile 2 domain-containing protein
+Pdfr	PLAOC	PLAOC|A0AAV4CMH1|PoB_005979500	PoB_005979500	565	681	68.0	yes	Pdf receptor-like
+Pdfr	ELYMA	ELYMA|A0AAV4IQR1|ElyMa_003071900	ElyMa_003071900	543	853	86.8	yes	PDF receptor-like (Fragment)
+Pdfr	APLCA	APLCA|A0ABM1AFW0|LOC101860000	LOC101860000	274	328	58.3	yes	PDF receptor
+Pdfr	BIOGL	BIOGL|A0A9W3ADX0|LOC106078586	LOC106078586	529	572	57.9	yes	PDF receptor-like isoform X1
+Pdfr	POMCA	POMCA|A0A2T7PBX8|C0Q70_10194	C0Q70_10194	660	224	44.3	yes	G-protein coupled receptors family 2 profile 2 domain-containing protein
+Pdfr	LOTGI	LOTGI|V4B2D2|LOTGIDRAFT_134519	LOTGIDRAFT_134519	367	402	51.4	yes	G-protein coupled receptors family 2 profile 2 domain-containing protein (Fragment)
+Pdfr	MAGGI	MAGGI|A0A8W8MRL9|		477	339	42.2	yes	PDF receptor
+Pdfr	MIZYE	MIZYE|A0A210PVL5|KP79_PYT19053	KP79_PYT19053	492	402	52.5	yes	PDF receptor
+Pdfr	CAPTE	CAPTE|X2APM1|		547	377	43.8	yes	G-protein coupled receptors family 2 profile 2 domain-containing protein
+Pdfr	DROME	DROME|Q9W4Y2|Pdfr	Pdfr	669	275	41.7	yes	PDF receptor
+Pdfr	HUMAN	HUMAN|Q13324|CRHR2	CRHR2	411	195	33.7	no	Corticotropin-releasing hormone receptor 2
+Lark	ELYCH	ELYCH|A0A3S1BBF1|EGW08_015555	EGW08_015555	165	262	75.8	yes	CCHC-type domain-containing protein
+Lark	PLAOC	PLAOC|A0AAV3ZY93|PoB_002738100	PoB_002738100	206	319	78.7	yes	RNA-binding protein 4 (Fragment)
+Lark	ELYMA	ELYMA|A0AAV4GR97|ElyMa_004247500	ElyMa_004247500	284	391	79.5	yes	RNA-binding protein 4
+Lark	APLCA	APLCA|A0ABM0JXD0|LOC101852195	LOC101852195	248	278	62.7	yes	RNA-binding protein lark isoform X1
+Lark	BIOGL	BIOGL|A0A9U8DVD7|LOC106052182	LOC106052182	234	325	69.4	yes	RNA-binding protein lark-like
+Lark	POMCA	POMCA|A0A2T7NYE1|C0Q70_13867	C0Q70_13867	205	127	43.1	yes	RNA-binding protein lark
+Lark	LOTGI	LOTGI|V3Z607|LOTGIDRAFT_129619	LOTGIDRAFT_129619	97	131	67.0	yes	RRM domain-containing protein
+Lark	MAGGI	MAGGI|A0A8W8HX80|		210	150	43.8	yes	RNA-binding protein 4
+Lark	MIZYE	MIZYE|A0A210QMN9|KP79_PYT10011	KP79_PYT10011	229	171	44.2	yes	RNA-binding protein lark
+Lark	CAPTE	CAPTE|R7V257|		454	66	44.3	no	RRM domain-containing protein
+Lark	DROME	DROME|Q94901|lark	lark	352	112	44.9	yes	RNA-binding protein lark
+Lark	HUMAN	HUMAN|Q9BWF3|RBM4	RBM4	364	106	45.2	yes	RNA-binding protein 4
+Atx2	ELYCH	ELYCH|A0A3S0ZM21|EGW08_014167	EGW08_014167	1073	1346	74.6	yes	LsmAD domain-containing protein
+Atx2	PLAOC	PLAOC|A0AAV4A0N4|PoB_002766400	PoB_002766400	1113	1031	63.0	yes	Ataxin-2
+Atx2	ELYMA	ELYMA|A0AAV4EJH9|ElyMa_005419200	ElyMa_005419200	1091	1150	70.0	yes	Ataxin-2
+Atx2	APLCA	APLCA|A0ABM0K4E3|LOC101856986	LOC101856986	1137	357	38.9	yes	Ataxin-2 isoform X3
+Atx2	BIOGL	BIOGL|A0A9W2YGB6|LOC106052969	LOC106052969	1009	462	42.3	yes	Ataxin-2-like isoform X3
+Atx2	POMCA	POMCA|A0A2T7PCL7|C0Q70_06579	C0Q70_06579	916	87	42.1	yes	LsmAD domain-containing protein
+Atx2	LOTGI	LOTGI|V4ARY8|LOTGIDRAFT_228257	LOTGIDRAFT_228257	885	94	32.5	yes	Sm domain-containing protein
+Atx2	MAGGI	MAGGI|A0A8W8K1B0|		877	88	30.5	yes	Sm domain-containing protein
+Atx2	MIZYE	MIZYE|A0A210QTX9|KP79_PYT15719	KP79_PYT15719	896	87	31.3	yes	Ataxin-2
+Atx2	CAPTE	CAPTE|R7V476|		904	86	31.6	yes	LsmAD domain-containing protein
+Atx2	DROME	DROME|Q8SWR8|Atx2	Atx2	1084	67	28.2	yes	Ataxin-2 homolog
+Atx2	HUMAN	HUMAN|Q99700|ATXN2	ATXN2	1313	99	32.0	yes	Ataxin-2
+Nocturnin	ELYCH	ELYCH|A0A433SQJ0|EGW08_020757	EGW08_020757	338	572	80.8	yes	Nocturnin
+Nocturnin	PLAOC	PLAOC|A0AAV3Z8V6|PoB_001809500	PoB_001809500	345	520	72.1	yes	Nocturnin
+Nocturnin	ELYMA	ELYMA|A0AAV4IS48|ElyMa_006687900	ElyMa_006687900	338	543	77.4	yes	Nocturnin
+Nocturnin	APLCA	APLCA|A0ABM0JTG0|LOC101846217	LOC101846217	346	364	51.9	yes	Nocturnin
+Nocturnin	BIOGL	BIOGL|A0A9W3B6U3|LOC106060053	LOC106060053	331	369	52.7	yes	Nocturnin
+Nocturnin	POMCA	POMCA|A0A2T7PNB6|C0Q70_06207	C0Q70_06207	337	320	48.6	yes	Nocturnin
+Nocturnin	LOTGI	LOTGI|V4AFP9|LOTGIDRAFT_95897	LOTGIDRAFT_95897	282	263	46.5	yes	Nocturnin (Fragment)
+Nocturnin	MAGGI	MAGGI|K1RAD7|		321	247	41.5	yes	Nocturnin
+Nocturnin	MIZYE	MIZYE|A0A210QFV4|KP79_PYT13065	KP79_PYT13065	321	278	44.2	yes	Nocturnin
+Nocturnin	CAPTE	CAPTE|R7VDM9|		283	234	43.2	yes	Nocturnin
+Nocturnin	DROME	DROME|A8JQX3|cu	cu	642	249	43.4	yes	Nocturnin
+Nocturnin	HUMAN	HUMAN|Q9UK39|NOCT	NOCT	431	255	47.9	yes	Nocturnin
+NonA	ELYCH	ELYCH|A0A433SVL0|EGW08_018883	EGW08_018883	690	961	88.1	yes	RRM domain-containing protein
+NonA	PLAOC	PLAOC|A0AAV4C787|PoB_005491900	PoB_005491900	460	478	72.6	yes	Non-pou domain-containing octamer-binding protein (Fragment)
+NonA	ELYMA	ELYMA|A0AAV4EIA3|ElyMa_003534000	ElyMa_003534000	688	912	84.3	yes	Splicing factor, proline-and glutamine-rich
+NonA	APLCA	APLCA|A0ABM1VTH5|LOC101860495	LOC101860495	1389	503	38.8	yes	Uncharacterized protein LOC101860495
+NonA	BIOGL	BIOGL|A0A9W3ARZ3|LOC106077773	LOC106077773	1359	598	39.7	yes	Uncharacterized protein LOC106077773 isoform X1
+NonA	POMCA	POMCA|A0A2T7P603|C0Q70_11457	C0Q70_11457	629	441	83.8	yes	RRM domain-containing protein
+NonA	LOTGI	LOTGI|V3ZNR2|LOTGIDRAFT_73646	LOTGIDRAFT_73646	297	369	71.5	yes	RRM domain-containing protein (Fragment)
+NonA	MAGGI	MAGGI|A0A8W8J2D8|		405	331	59.3	yes	RRM domain-containing protein
+NonA	MIZYE	MIZYE|A0A210QQC9|KP79_PYT07468	KP79_PYT07468	622	337	67.3	yes	Splicing factor, proline-and glutamine-rich
+NonA	CAPTE	CAPTE|R7UAP8|		431	302	58.3	yes	RRM domain-containing protein
+NonA	DROME	DROME|Q24113|nonA-l	nonA-l	630	230	50.6	yes	Protein no-on-transient A
+NonA	HUMAN	HUMAN|Q8WXF1|PSPC1	PSPC1	523	298	60.3	yes	Paraspeckle component 1
+Tipin	ELYCH	ELYCH|A0A433SXH9|EGW08_018272	EGW08_018272	435	513	69.0	yes	TIMELESS-interacting protein
+Tipin	PLAOC	PLAOC|A0AAV4BV80|PoB_005093100	PoB_005093100	334	228	77.0	yes	TIMELESS-interacting protein
+Tipin	ELYMA	ELYMA|A0AAV4JX35|ElyMa_001713100	ElyMa_001713100	436	432	66.5	yes	TIMELESS-interacting protein
+Tipin	APLCA	APLCA|A0ABM0JNY6|LOC101850168	LOC101850168	371	250	52.0	yes	TIMELESS-interacting protein
+Tipin	BIOGL	BIOGL|A0A9W3BFL1|LOC106052221	LOC106052221	345	231	52.5	yes	TIMELESS-interacting protein
+Tipin	POMCA	POMCA|A0A2T7NDF5|C0Q70_19691	C0Q70_19691	355	184	42.1	yes	TIMELESS-interacting protein
+Tipin	LOTGI	LOTGI|V3ZY86|LOTGIDRAFT_127617	LOTGIDRAFT_127617	200	161	44.5	yes	TIMELESS-interacting protein (Fragment)
+Tipin	MAGGI	MAGGI|A0A8W8I962|		441	175	41.3	yes	TIMELESS-interacting protein
+Tipin	MIZYE	MIZYE|A0A210QBP8|KP79_PYT14856	KP79_PYT14856	478	169	52.5	yes	TIMELESS-interacting protein
+Tipin	CAPTE	CAPTE|R7UD62|		307	140	44.5	yes	TIMELESS-interacting protein
+Tipin	DROME	DROME|Q8INX3|CG10336	CG10336	307	77	35.0	yes	Protein TIPIN homolog
+Tipin	HUMAN	HUMAN|Q9BVW5|TIPIN	TIPIN	301	122	36.5	yes	TIMELESS-interacting protein
+Ropsin1	ELYCH	ELYCH|A0A433TJL9|EGW08_010471	EGW08_010471	393	660	85.2	no	G-protein coupled receptors family 1 profile domain-containing protein (Fragment)
+Ropsin1	PLAOC	PLAOC|A0AAV4D2S0|PoB_006493800	PoB_006493800	476	744	83.2	yes	Rhodopsin
+Ropsin1	ELYMA	ELYMA|A0AAV4IUD0|ElyMa_006702900	ElyMa_006702900	461	755	74.4	yes	Rhodopsin
+Ropsin1	APLCA	APLCA|A0ABM1VZC7|LOC101845418	LOC101845418	370	310	65.6	yes	Rhodopsin-like
+Ropsin1	BIOGL	BIOGL|A0A9W2ZJZ3|LOC106069120	LOC106069120	529	705	68.3	yes	Rhodopsin-like
+Ropsin1	POMCA	POMCA|A0A2T7PVN7|C0Q70_00037	C0Q70_00037	380	562	73.1	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Ropsin1	LOTGI	LOTGI|V3ZSU7|LOTGIDRAFT_108602	LOTGIDRAFT_108602	327	438	63.6	yes	G-protein coupled receptors family 1 profile domain-containing protein (Fragment)
+Ropsin1	MAGGI	MAGGI|A0A8W8KMN2|		519	435	58.6	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Ropsin1	MIZYE	MIZYE|A0A210PWX3|KP79_PYT16018	KP79_PYT16018	513	415	55.5	yes	Rhodopsin, GQ-coupled
+Ropsin1	CAPTE	CAPTE|R7UDC5|		349	318	48.5	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Ropsin1	DROME	DROME|O01668|Rh6	Rh6	369	253	43.3	yes	Opsin Rh6
+Ropsin1	HUMAN	HUMAN|Q9UHM6|OPN4	OPN4	478	261	42.0	yes	Melanopsin
+Ropsin2	ELYCH	ELYCH|A0A433TJL9|EGW08_010471	EGW08_010471	393	749	94.7	yes	G-protein coupled receptors family 1 profile domain-containing protein (Fragment)
+Ropsin2	PLAOC	PLAOC|A0AAV4D2S0|PoB_006493800	PoB_006493800	476	614	70.0	no	Rhodopsin
+Ropsin2	ELYMA	ELYMA|A0AAV4IR25|ElyMa_006703100	ElyMa_006703100	476	832	83.2	yes	Rhodopsin
+Ropsin2	APLCA	APLCA|A0ABM1VZC7|LOC101845418	LOC101845418	370	301	62.3	yes	Rhodopsin-like
+Ropsin2	BIOGL	BIOGL|A0A9W2ZJZ3|LOC106069120	LOC106069120	529	703	71.0	yes	Rhodopsin-like
+Ropsin2	POMCA	POMCA|A0A2T7PVN7|C0Q70_00037	C0Q70_00037	380	555	70.6	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Ropsin2	LOTGI	LOTGI|V3ZSU7|LOTGIDRAFT_108602	LOTGIDRAFT_108602	327	432	63.0	yes	G-protein coupled receptors family 1 profile domain-containing protein (Fragment)
+Ropsin2	MAGGI	MAGGI|A0A8W8KMN2|		519	424	58.8	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Ropsin2	MIZYE	MIZYE|A0A210PWZ1|KP79_PYT16017	KP79_PYT16017	483	409	57.8	yes	Rhodopsin, GQ-coupled
+Ropsin2	CAPTE	CAPTE|R7UDC5|		349	324	48.8	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Ropsin2	DROME	DROME|O01668|Rh6	Rh6	369	247	41.7	yes	Opsin Rh6
+Ropsin2	HUMAN	HUMAN|Q9UHM6|OPN4	OPN4	478	258	41.6	yes	Melanopsin
+RopsinL1	ELYCH	ELYCH|A0A3S1HCG7|EGW08_015707	EGW08_015707	558	827	68.1	yes	G-protein coupled receptors family 1 profile domain-containing protein (Fragment)
+RopsinL1	PLAOC	PLAOC|A0AAV3Y5R1|PoB_000477400	PoB_000477400	615	617	60.1	yes	Melanopsin
+RopsinL1	ELYMA	ELYMA|A0AAV4JQ95|ElyMa_005170100	ElyMa_005170100	659	995	77.1	yes	Opsin
+RopsinL1	APLCA	APLCA|A0ABM1VQ94|LOC101857472	LOC101857472	598	378	39.2	yes	Rhodopsin
+RopsinL1	BIOGL	BIOGL|A0A9W2ZMU3|LOC106051285	LOC106051285	555	397	40.9	yes	Rhodopsin-like
+RopsinL1	POMCA	POMCA|A0A2T7Q0Q2|C0Q70_01879	C0Q70_01879	279	200	44.6	yes	G-protein coupled receptors family 1 profile domain-containing protein
+RopsinL1	LOTGI	LOTGI|V3ZSU7|LOTGIDRAFT_108602	LOTGIDRAFT_108602	327	178	38.9	no	G-protein coupled receptors family 1 profile domain-containing protein (Fragment)
+RopsinL1	MAGGI	MAGGI|A0A8W8JM11|		365	201	45.3	no	G-protein coupled receptors family 1 profile domain-containing protein
+RopsinL1	MIZYE	MIZYE|A0A210PWZ1|KP79_PYT16017	KP79_PYT16017	483	171	36.4	no	Rhodopsin, GQ-coupled
+RopsinL1	CAPTE	CAPTE|R7VDA5|		398	152	37.8	no	G-protein coupled receptors family 1 profile domain-containing protein
+RopsinL1	DROME	DROME|O01668|Rh6	Rh6	369	136	33.7	no	Opsin Rh6
+RopsinL1	HUMAN	HUMAN|Q9UHM6|OPN4	OPN4	478	149	37.1	no	Melanopsin
+RopsinL2	ELYCH	ELYCH|A0A3S0ZDT6|EGW08_019532	EGW08_019532	314	491	87.4	yes	G-protein coupled receptors family 1 profile domain-containing protein
+RopsinL2	PLAOC	PLAOC|A0AAV4BWP4|PoB_005004000	PoB_005004000	333	421	74.6	yes	Melanopsin
+RopsinL2	ELYMA	ELYMA|A0AAV4G2A4|ElyMa_004013000	ElyMa_004013000	294	479	86.0	yes	Melanopsin
+RopsinL2	APLCA	APLCA|A0ABM1A9W7|LOC101859669	LOC101859669	365	286	52.2	yes	Rhodopsin, GQ-coupled
+RopsinL2	BIOGL	BIOGL|A0A9W2ZMB4|LOC106068433	LOC106068433	354	270	54.1	yes	Rhodopsin, GQ-coupled-like
+RopsinL2	POMCA	POMCA|A0A2T7Q0Q0|C0Q70_01880	C0Q70_01880	266	177	39.9	yes	G-protein coupled receptors family 1 profile domain-containing protein
+RopsinL2	LOTGI	LOTGI|V4B0S4|LOTGIDRAFT_156440	LOTGIDRAFT_156440	333	166	35.4	no	G-protein coupled receptors family 1 profile domain-containing protein
+RopsinL2	MAGGI	MAGGI|A0A8W8JM11|		365	155	34.9	no	G-protein coupled receptors family 1 profile domain-containing protein
+RopsinL2	MIZYE	MIZYE|A0A210PWW1|KP79_PYT16016	KP79_PYT16016	457	166	36.9	no	Rhodopsin, GQ-coupled
+RopsinL2	CAPTE	CAPTE|R7UDC5|		349	125	30.3	no	G-protein coupled receptors family 1 profile domain-containing protein
+RopsinL2	DROME	DROME|P08099|Rh2	Rh2	381	116	30.0	no	Opsin Rh2
+RopsinL2	HUMAN	HUMAN|Q9UHM6|OPN4	OPN4	478	142	30.2	no	Melanopsin
+Xenopsin	ELYCH	ELYCH|A0A3S1AZT8|EGW08_020877	EGW08_020877	410	264	91.5	yes	G-protein coupled receptors family 1 profile domain-containing protein (Fragment)
+Xenopsin	PLAOC	PLAOC|A0AAV3Y696|PoB_000482200	PoB_000482200	538	228	78.2	yes	Melanopsin
+Xenopsin	ELYMA	ELYMA|A0AAV4FBA6|ElyMa_005638300	ElyMa_005638300	506	256	89.4	yes	Rhodopsin
+Xenopsin	APLCA	APLCA|A0ABM1A1M1|LOC101858557	LOC101858557	475	308	67.9	yes	Pinopsin-like
+Xenopsin	BIOGL	BIOGL|A0A9W3A5R7|LOC106056607	LOC106056607	361	327	64.6	yes	Visual pigment-like receptor peropsin isoform X1
+Xenopsin	POMCA	POMCA|A0A2T7NW38|C0Q70_15864	C0Q70_15864	516	241	51.1	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Xenopsin	LOTGI	LOTGI|V3ZWI5|LOTGIDRAFT_64356	LOTGIDRAFT_64356	276	229	52.4	yes	G-protein coupled receptors family 1 profile domain-containing protein (Fragment)
+Xenopsin	MAGGI	MAGGI|A0A8W8N0I7|		386	191	43.5	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Xenopsin	MIZYE	MIZYE|A0A210QHL3|KP79_PYT16615	KP79_PYT16615	409	211	48.4	yes	Visual pigment-like receptor peropsin
+Xenopsin	CAPTE	CAPTE|R7T3A9|		348	111	31.5	no	G-protein coupled receptors family 1 profile domain-containing protein
+Xenopsin	DROME	DROME|O01668|Rh6	Rh6	369	79	26.2	no	Opsin Rh6
+Xenopsin	HUMAN	HUMAN|O14718|RRH	RRH	337	112	30.5	no	Visual pigment-like receptor peropsin
+GoOpsin1	ELYCH	ELYCH|A0A3S1B4A2|EGW08_016542	EGW08_016542	399	662	91.1	yes	G-protein coupled receptors family 1 profile domain-containing protein
+GoOpsin1	PLAOC	PLAOC|A0AAV4D7N7|PoB_006676700	PoB_006676700	687	446	69.9	no	Histone-lysine N-methyltransferase SETMAR
+GoOpsin1	ELYMA	ELYMA|A0AAV4GP81|ElyMa_006080400	ElyMa_006080400	379	538	66.5	no	Opsin-5
+GoOpsin1	APLCA	APLCA|A0ABM1A1M1|LOC101858557	LOC101858557	475	150	29.7	no	Pinopsin-like
+GoOpsin1	BIOGL	BIOGL|A0A9W3AR53|LOC106057577	LOC106057577	370	392	55.4	yes	Opsin-5-like
+GoOpsin1	POMCA	POMCA|A0A2T7P567|C0Q70_11150	C0Q70_11150	382	206	33.0	yes	G-protein coupled receptors family 1 profile domain-containing protein
+GoOpsin1	LOTGI	LOTGI|V4C2D5|LOTGIDRAFT_116468	LOTGIDRAFT_116468	321	249	42.9	yes	G-protein coupled receptors family 1 profile domain-containing protein (Fragment)
+GoOpsin1	MAGGI	MAGGI|A0A8W8LQ29|		376	123	26.1	yes	G-protein coupled receptors family 1 profile domain-containing protein
+GoOpsin1	MIZYE	MIZYE|A0A210QA12|KP79_PYT07058	KP79_PYT07058	414	169	29.2	yes	Pinopsin
+GoOpsin1	CAPTE	CAPTE|R7UYK7|		269	96	26.0	no	G-protein coupled receptors family 1 profile domain-containing protein
+GoOpsin1	DROME	DROME|O01668|Rh6	Rh6	369	81	23.9	no	Opsin Rh6
+GoOpsin1	HUMAN	HUMAN|O14718|RRH	RRH	337	141	31.9	no	Visual pigment-like receptor peropsin
+GoOpsin2	ELYCH	ELYCH|A0A3S1B5V7|EGW08_016541	EGW08_016541	381	625	80.2	yes	G-protein coupled receptors family 1 profile domain-containing protein
+GoOpsin2	PLAOC	PLAOC|A0AAV4D7N7|PoB_006676700	PoB_006676700	687	479	77.0	yes	Histone-lysine N-methyltransferase SETMAR
+GoOpsin2	ELYMA	ELYMA|A0AAV4GP81|ElyMa_006080400	ElyMa_006080400	379	608	78.1	yes	Opsin-5
+GoOpsin2	APLCA	APLCA|A0ABM1A1M1|LOC101858557	LOC101858557	475	142	31.5	no	Pinopsin-like
+GoOpsin2	BIOGL	BIOGL|A0A9W3AR53|LOC106057577	LOC106057577	370	414	56.0	yes	Opsin-5-like
+GoOpsin2	POMCA	POMCA|A0A2T7P567|C0Q70_11150	C0Q70_11150	382	213	35.4	yes	G-protein coupled receptors family 1 profile domain-containing protein
+GoOpsin2	LOTGI	LOTGI|V4C2D5|LOTGIDRAFT_116468	LOTGIDRAFT_116468	321	266	43.8	yes	G-protein coupled receptors family 1 profile domain-containing protein (Fragment)
+GoOpsin2	MAGGI	MAGGI|A0A8W8N0I7|		386	136	29.5	no	G-protein coupled receptors family 1 profile domain-containing protein
+GoOpsin2	MIZYE	MIZYE|A0A210QHL3|KP79_PYT16615	KP79_PYT16615	409	172	34.6	no	Visual pigment-like receptor peropsin
+GoOpsin2	CAPTE	CAPTE|R7T3A9|		348	102	26.5	no	G-protein coupled receptors family 1 profile domain-containing protein
+GoOpsin2	DROME	DROME|O01668|Rh6	Rh6	369	80	23.1	no	Opsin Rh6
+GoOpsin2	HUMAN	HUMAN|O14718|RRH	RRH	337	158	33.5	yes	Visual pigment-like receptor peropsin
+Neuropsin	ELYCH	ELYCH|A0A3S1BAK2|EGW08_008477	EGW08_008477	307	547	87.0	yes	G-protein coupled receptors family 1 profile domain-containing protein (Fragment)
+Neuropsin	PLAOC	PLAOC|A0AAV4ANS7|PoB_003641500	PoB_003641500	332	190	76.9	yes	Opsin-5
+Neuropsin	ELYMA	ELYMA|A0AAV4FUS6|ElyMa_000487600	ElyMa_000487600	150	194	67.1	no	Opsin-5
+Neuropsin	APLCA	APLCA|A0ABM1AEC1|LOC106013842	LOC106013842	162	186	58.0	yes	Parapinopsin
+Neuropsin	BIOGL	BIOGL|A0A9W2YIE4|LOC106063629	LOC106063629	656	177	33.2	yes	Pineal opsin-like
+Neuropsin	POMCA	POMCA|A0A2T7PDV2|C0Q70_07011	C0Q70_07011	216	206	51.2	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Neuropsin	LOTGI	LOTGI|V4AAH1|LOTGIDRAFT_140119	LOTGIDRAFT_140119	319	246	44.1	yes	G-protein coupled receptors family 1 profile domain-containing protein (Fragment)
+Neuropsin	MAGGI	MAGGI|A0A8W8J997|		331	118	27.7	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Neuropsin	MIZYE	MIZYE|A0A210PWW1|KP79_PYT16016	KP79_PYT16016	457	127	33.6	no	Rhodopsin, GQ-coupled
+Neuropsin	CAPTE	CAPTE|R7T3A9|		348	141	27.9	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Neuropsin	DROME	DROME|Q9VTU7|Rh7	Rh7	483	91	26.1	no	Rhodopsin 7
+Neuropsin	HUMAN	HUMAN|Q6U736|OPN5	OPN5	354	163	30.6	yes	Opsin-5
+Retinochrome	ELYCH	ELYCH|A0A433U773|EGW08_002518	EGW08_002518	265	362	81.9	yes	G-protein coupled receptors family 1 profile domain-containing protein (Fragment)
+Retinochrome	PLAOC	PLAOC|A0AAV3Y783|PoB_000481700	PoB_000481700	321	479	78.8	yes	Visual pigment-like receptor peropsin
+Retinochrome	ELYMA	ELYMA|A0AAV4FM24|ElyMa_000428300	ElyMa_000428300	150	225	79.3	yes	Opsin
+Retinochrome	APLCA	APLCA|A0ABM1VQ98|LOC101863008	LOC101863008	339	347	57.0	yes	Retinochrome
+Retinochrome	BIOGL	BIOGL|A0A9U8EPJ6|LOC106080108	LOC106080108	321	362	59.9	yes	Retinochrome-like
+Retinochrome	POMCA	POMCA|A0A2T7PY95|C0Q70_00984	C0Q70_00984	380	207	48.7	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Retinochrome	LOTGI	LOTGI|V3ZDT4|LOTGIDRAFT_154374	LOTGIDRAFT_154374	298	210	38.5	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Retinochrome	MAGGI	MAGGI|A0A8W8ML66|		299	127	30.6	yes	G-protein coupled receptors family 1 profile domain-containing protein
+Retinochrome	MIZYE	MIZYE|A0A210QUL7|KP79_PYT00595	KP79_PYT00595	308	142	31.4	yes	Visual pigment-like receptor peropsin
+Retinochrome	CAPTE	CAPTE|R7UDC5|		349	86	26.4	no	G-protein coupled receptors family 1 profile domain-containing protein
+Retinochrome	DROME	DROME|O01668|Rh6	Rh6	369	75	27.6	no	Opsin Rh6
+Retinochrome	HUMAN	HUMAN|O14718|RRH	RRH	337	112	27.5	no	Visual pigment-like receptor peropsin

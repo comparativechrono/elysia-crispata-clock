@@ -1,0 +1,781 @@
+{
+ "sanger": [
+  {
+   "contig": "9",
+   "start": 2842019,
+   "end": 2847596,
+   "length": 5577,
+   "identity": 1.0,
+   "plastome": "OZ372796.1",
+   "plastome_desc": "Penicillus lamourouxii genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 2459,
+   "plastome_end": 6055,
+   "genes": [
+    "atpB",
+    "petB",
+    "petD",
+    "psaA",
+    "rps14"
+   ],
+   "left": {
+    "boundary": 2842019,
+    "nearest_break": "gap",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   },
+   "right": {
+    "boundary": 2847596,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 2,
+    "independent_molecules": 1
+   }
+  },
+  {
+   "contig": "1",
+   "start": 27252467,
+   "end": 27256169,
+   "length": 3702,
+   "identity": 0.9973,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 9563,
+   "plastome_end": 13273,
+   "genes": [
+    "atpB",
+    "atpE",
+    "petB",
+    "rps14"
+   ],
+   "left": {
+    "boundary": 27252467,
+    "nearest_break": "gap",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   },
+   "right": {
+    "boundary": 27256169,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   }
+  },
+  {
+   "contig": "4",
+   "start": 35236216,
+   "end": 35239714,
+   "length": 3498,
+   "identity": 1.0,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 8976,
+   "plastome_end": 12474,
+   "genes": [
+    "atpB",
+    "atpE",
+    "psbN",
+    "rps14"
+   ],
+   "left": {
+    "boundary": 35236216,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 35239714,
+    "nearest_break": "gap",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "6",
+   "start": 17830984,
+   "end": 17834019,
+   "length": 3035,
+   "identity": 0.9997,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 62775,
+   "plastome_end": 65811,
+   "genes": [
+    "accD",
+    "orf434",
+    "rps7",
+    "tufA"
+   ],
+   "left": {
+    "boundary": 17830984,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 17834019,
+    "nearest_break": "gap",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "6",
+   "start": 1304771,
+   "end": 1306640,
+   "length": 1869,
+   "identity": 0.9933,
+   "plastome": "OZ372796.1",
+   "plastome_desc": "Penicillus lamourouxii genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 3338,
+   "plastome_end": 4979,
+   "genes": [
+    "petB",
+    "petD",
+    "rps14"
+   ],
+   "left": {
+    "boundary": 1304771,
+    "nearest_break": "gap",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   },
+   "right": {
+    "boundary": 1306640,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   }
+  },
+  {
+   "contig": "3",
+   "start": 50389534,
+   "end": 50391382,
+   "length": 1848,
+   "identity": 0.9984,
+   "plastome": "OZ287723.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 23471,
+   "plastome_end": 25318,
+   "genes": [],
+   "left": {
+    "boundary": 50389534,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 50391382,
+    "nearest_break": "gap",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "11",
+   "start": 3088313,
+   "end": 3090133,
+   "length": 1820,
+   "identity": 0.9984,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 64340,
+   "plastome_end": 66161,
+   "genes": [
+    "orf434",
+    "tufA"
+   ],
+   "left": {
+    "boundary": 3088313,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 3090133,
+    "nearest_break": "gap",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "14",
+   "start": 9862870,
+   "end": 9864679,
+   "length": 1809,
+   "identity": 0.9972,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 11269,
+   "plastome_end": 13073,
+   "genes": [
+    "atpB",
+    "petB",
+    "rps14"
+   ],
+   "left": {
+    "boundary": 9862870,
+    "nearest_break": "gap",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   },
+   "right": {
+    "boundary": 9864679,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   }
+  },
+  {
+   "contig": "CAWKYH010001228.1",
+   "start": 160125,
+   "end": 161704,
+   "length": 1579,
+   "identity": 1.0,
+   "plastome": "OZ287723.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 57376,
+   "plastome_end": 58955,
+   "genes": [],
+   "left": {
+    "boundary": 160125,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 161704,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "14",
+   "start": 11487394,
+   "end": 11488888,
+   "length": 1494,
+   "identity": 0.998,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 13724,
+   "plastome_end": 15220,
+   "genes": [
+    "petD",
+    "psaA"
+   ],
+   "left": {
+    "boundary": 11487394,
+    "nearest_break": "gap",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   },
+   "right": {
+    "boundary": 11488888,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   }
+  },
+  {
+   "contig": "CAWKYH010000620.1",
+   "start": 98295,
+   "end": 99562,
+   "length": 1267,
+   "identity": 1.0,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 22789,
+   "plastome_end": 24056,
+   "genes": [
+    "atpA"
+   ],
+   "left": {
+    "boundary": 98295,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 99562,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "3",
+   "start": 4370341,
+   "end": 4371555,
+   "length": 1214,
+   "identity": 0.9992,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 7827,
+   "plastome_end": 9042,
+   "genes": [],
+   "left": {
+    "boundary": 4370341,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 4371555,
+    "nearest_break": "gap",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "CAWKYH010000836.1",
+   "start": 12447,
+   "end": 13518,
+   "length": 1071,
+   "identity": 0.9832,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 35791,
+   "plastome_end": 36877,
+   "genes": [
+    "ccs1",
+    "ycf1"
+   ],
+   "left": {
+    "boundary": 12447,
+    "nearest_break": "sequence end",
+    "distance": 12447,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 13518,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "9",
+   "start": 517682,
+   "end": 518692,
+   "length": 1010,
+   "identity": 1.0,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 60847,
+   "plastome_end": 61857,
+   "genes": [
+    "rbcL"
+   ],
+   "left": {
+    "boundary": 517682,
+    "nearest_break": "gap",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   },
+   "right": {
+    "boundary": 518692,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "10",
+   "start": 7606013,
+   "end": 7606448,
+   "length": 435,
+   "identity": 1.0,
+   "plastome": "OZ287723.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 72681,
+   "plastome_end": 73116,
+   "genes": [],
+   "left": {
+    "boundary": 7606013,
+    "nearest_break": "gap",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   },
+   "right": {
+    "boundary": 7606448,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   }
+  }
+ ],
+ "alt": [
+  {
+   "contig": "CAWKYI010000192.1",
+   "start": 0,
+   "end": 3187,
+   "length": 3187,
+   "identity": 0.9991,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 68875,
+   "plastome_end": 72064,
+   "genes": [
+    "rpoC1",
+    "rpoC2",
+    "rps9"
+   ],
+   "left": {
+    "boundary": 0,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   },
+   "right": {
+    "boundary": 3187,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   }
+  },
+  {
+   "contig": "CAWKYI010001489.1",
+   "start": 0,
+   "end": 2961,
+   "length": 2961,
+   "identity": 1.0,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 25994,
+   "plastome_end": 28955,
+   "genes": [
+    "chlI",
+    "psbA"
+   ],
+   "left": {
+    "boundary": 0,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   },
+   "right": {
+    "boundary": 2961,
+    "nearest_break": "sequence end",
+    "distance": 19159,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   }
+  },
+  {
+   "contig": "CAWKYI010013009.1",
+   "start": 268464,
+   "end": 270668,
+   "length": 2204,
+   "identity": 1.0,
+   "plastome": "OZ287723.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 11449,
+   "plastome_end": 13653,
+   "genes": [],
+   "left": {
+    "boundary": 268464,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 270668,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "CAWKYI010003135.1",
+   "start": 63621,
+   "end": 65506,
+   "length": 1885,
+   "identity": 1.0,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 55946,
+   "plastome_end": 57831,
+   "genes": [
+    "rpl14",
+    "rpl16",
+    "rpl2",
+    "rps19",
+    "rps3"
+   ],
+   "left": {
+    "boundary": 63621,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 65506,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "CAWKYI010005799.1",
+   "start": 18959,
+   "end": 20635,
+   "length": 1676,
+   "identity": 1.0,
+   "plastome": "OZ372796.1",
+   "plastome_desc": "Penicillus lamourouxii genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 61111,
+   "plastome_end": 62787,
+   "genes": [
+    "orf434",
+    "tufA"
+   ],
+   "left": {
+    "boundary": 18959,
+    "nearest_break": "sequence end",
+    "distance": 18959,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 20635,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "CAWKYI010006797.1",
+   "start": 24844,
+   "end": 26518,
+   "length": 1674,
+   "identity": 1.0,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 27681,
+   "plastome_end": 29355,
+   "genes": [
+    "psbA"
+   ],
+   "left": {
+    "boundary": 24844,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 26518,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "CAWKYI010003440.1",
+   "start": 0,
+   "end": 1657,
+   "length": 1657,
+   "identity": 1.0,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 32276,
+   "plastome_end": 33933,
+   "genes": [
+    "psbB",
+    "psbH",
+    "psbI",
+    "psbT",
+    "rpl20"
+   ],
+   "left": {
+    "boundary": 0,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   },
+   "right": {
+    "boundary": 1657,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   }
+  },
+  {
+   "contig": "CAWKYI010014291.1",
+   "start": 17690,
+   "end": 19313,
+   "length": 1623,
+   "identity": 0.9985,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 81940,
+   "plastome_end": 83255,
+   "genes": [],
+   "left": {
+    "boundary": 17690,
+    "nearest_break": "sequence end",
+    "distance": 17690,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 19313,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  },
+  {
+   "contig": "CAWKYI010002447.1",
+   "start": 0,
+   "end": 1449,
+   "length": 1449,
+   "identity": 0.9965,
+   "plastome": "OZ287723.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 12134,
+   "plastome_end": 13582,
+   "genes": [],
+   "left": {
+    "boundary": 0,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   },
+   "right": {
+    "boundary": 1449,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   }
+  },
+  {
+   "contig": "CAWKYI010014511.1",
+   "start": 0,
+   "end": 1307,
+   "length": 1307,
+   "identity": 0.9947,
+   "plastome": "OZ373742.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 56351,
+   "plastome_end": 57655,
+   "genes": [
+    "rpl16",
+    "rpl2",
+    "rps19",
+    "rps3"
+   ],
+   "left": {
+    "boundary": 0,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   },
+   "right": {
+    "boundary": 1307,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 1,
+    "independent_molecules": 1
+   }
+  },
+  {
+   "contig": "CAWKYI010006464.1",
+   "start": 43472,
+   "end": 44319,
+   "length": 847,
+   "identity": 1.0,
+   "plastome": "OZ287723.1",
+   "plastome_desc": "Penicillus capitatus genome assembly, organelle: plastid:chloroplast",
+   "plastome_start": 14975,
+   "plastome_end": 15822,
+   "genes": [],
+   "left": {
+    "boundary": 43472,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 2,
+    "independent_molecules": 1
+   },
+   "right": {
+    "boundary": 44319,
+    "nearest_break": "sequence end",
+    "distance": 0,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  }
+ ],
+ "purdue": [
+  {
+   "contig": "JAWDGP010005116.1",
+   "start": 367217,
+   "end": 367420,
+   "length": 203,
+   "identity": 0.9818,
+   "plastome": "AP014543.1",
+   "plastome_desc": "Poropsis sp. ID1_4 chloroplast DNA, nearly complete genome",
+   "plastome_start": 85264,
+   "plastome_end": 85318,
+   "genes": [],
+   "left": {
+    "boundary": 367217,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   },
+   "right": {
+    "boundary": 367420,
+    "nearest_break": "none within 20 kb",
+    "distance": null,
+    "reads_crossing": 0,
+    "independent_molecules": 0
+   }
+  }
+ ]
+}
