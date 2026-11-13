@@ -38,6 +38,7 @@ TIP_JS = '<script src="assets/pages.js"></script>'
 #                                    KLEPTOPLASTS
 # =====================================================================================
 if klepto:
+    KW = (hgt or {}).get("weak_reads") or {}
     L = klepto["library"]; C = klepto["classes"]; A = klepto["assignment"]
     tot_bp = L["bp"]
     f_cp, f_bac, f_mt = C["cp"]["bp"] / tot_bp, C["bac"]["bp"] / tot_bp, C["slugmt"]["bp"] / tot_bp
@@ -108,7 +109,7 @@ if klepto:
 <tr><td>{it("Udotea flabellum")}</td><td class="num">{num(udo["reads"])}</td><td class="num">{pct(udo["bp"] / conf_bp, 3)}</td><td>{klepto["minor"][0]["rbcL"]}</td><td>{klepto["minor"][0]["tufA"]}</td></tr>
 <tr><td>{it("Halimeda")} sp.</td><td class="num">{num(hal_reads)}</td><td class="num">{pct(hal_bp / conf_bp, 3)}</td><td>{klepto["minor"][1]["rbcL"]}</td><td>{klepto["minor"][1]["tufA"]}</td></tr>
 </tbody></table></div>
-<p class="small muted" style="margin-top:10px">A further {num(klepto["unassigned"].get("reads", 0))} reads matched a plastid genome only weakly or over a short stretch and are not counted as plastid. Aligned base by base, nearly all of them are slug nuclear reads that contain a short low-complexity stretch resembling plastid DNA.</p>
+<p class="small muted" style="margin-top:10px">A further {num(klepto["unassigned"].get("reads", 0))} reads matched a plastid genome only weakly or over a short stretch and are not counted as plastid. Aligned base by base, nearly all of them are slug nuclear reads that contain a short low-complexity stretch resembling plastid DNA. {KW.get("with_exact_piece", 0)} hold a short exact piece of kleptoplast DNA, and {sum(1 for d in KW.get("diverged", []) if not d["slug_bp"])} are plastid reads from further algae that have no close reference: one is 94% identical to {it("Caulerpa serrulata")} over 10 kb, the others are nearest to {it("Halimeda")} and {it("Udotea")}.</p>
 
 <h2>How sure are the names</h2>
 <div class="cols">
@@ -132,7 +133,7 @@ if klepto:
 <h2>For rhythm work</h2>
 <ul>
 <li>The plastid genomes to map kleptoplast transcripts against are OZ373742.1 ({it("P. capitatus")}) and OZ372796.1 ({it("P. lamourouxii")} type). They are not annotated in the archive; a homology-based gene table for both is in the <a href="methods.html#downloads">downloads</a>.</li>
-<li>The mix is a property of this one wild animal on the day it was collected (30 July 2020). {it("E. crispata")} eats many algae, so other animals, and cultured ones, will differ.</li>
+<li>The mix is a property of this one wild animal on the day it was collected (30 July 2020). {it("E. crispata")} eats many algae, so other animals, and cultured ones, will differ. The animal behind the Purdue assembly, for one, was carrying {it("Acetabularia")} chloroplasts (see <a href="gene-transfer.html#purdue">gene transfer</a>).</li>
 </ul>
 </div></section>
 """
@@ -152,7 +153,8 @@ if hgt:
     thr_mol = sum(f.get("through_molecules_boundary_pass") or 0 for f in placeable); div_mol = sum(f["diverging_molecules"] or 0 for f in placeable)
     pcr_copies = sum(1 for f in fr if (f["through_reads"] or 0) > (f["through_molecules"] or 0))
     rec_cp = P.get("cp+slug", {}).get("recurrent_clusters", 0); rec_bac = P.get("bac+slug", {}).get("recurrent_clusters", 0)
-    DV = hgt.get("diverged") or {}
+    DV = hgt.get("diverged") or {}; WR = hgt.get("weak_reads") or {}
+    WRL = next((d for d in WR.get("diverged", []) if d["slug_bp"]), {"slug_identity": 1, "identity": 1})
     _as = {a["taxon"]: a["fraction"] for a in (klepto or {}).get("assignment", [])}
     KS = f'{round(100 * _as.get("Penicillus capitatus", 0.86))}:{round(100 * _as.get("Penicillus lamourouxii", 0.14))}'
     AL = hgt.get("alien") or {}; cands = AL.get("candidates", [])
@@ -204,6 +206,7 @@ if hgt:
     if PS:
         T = PS.get("totals", {}); NM = PS.get("no_match", {}); FC = PS.get("foreign_contigs", [])
         pur = [r for r in FC if r["assembly"] == "purdue" and r["length"] > 10000]; small_bac = [r for r in FC if "bacterial" in r["reading"]]
+        pur_small = [r for r in FC if r["assembly"] == "purdue" and r["length"] <= 10000]
         n_foreign = T.get("alga-like", 0) + T.get("microbe-like", 0)
         def prow(r):
             span = r.get("read_cover_span")
@@ -213,17 +216,47 @@ if hgt:
                     f'<td class="num">{r["annotated_genes_with_protein_match"]} of {r["annotated_genes"]}</td><td>{reads}</td></tr>')
         pur_block = ""
         if pur:
-            n_rep = sum(1 for r in pur if r.get("read_alignments")); n_gm = sum(r["annotated_genes"] for r in pur)
+            FO = hgt.get("foreign") or {}; BL = FO.get("blast", []); JN = {j["contig"]: j for j in FO.get("joins", [])}; JR = FO.get("join_runs", {})
+            n_gm = sum(r["annotated_genes"] or 0 for r in pur); SG = FO.get("same_genes") or {"acetabulum": [0, 0], "n": 0}
+            pen = [b["identity"] for b in BL if "peniculus" in b["title"]]; ace = [b["identity"] for b in BL if "acetabulum" in b["title"]]
+            tuf = max((b["identity"] for b in BL if "TS1860" in b["title"]), default=None)
+            WHAT = {"JAWDGP010001375.1": "2.0 kb of a slug repeat, then <i>Acetabularia</i> chloroplast DNA",
+                    "JAWDGP010004663.1": "4.0 kb of AT-rich, repeat-like sequence, then <i>Acetabularia</i> chloroplast DNA",
+                    "JAWDGP010006093.1": "1.0 kb of slug-like sequence, then <i>Acetabularia</i> chloroplast DNA",
+                    "JAWDGP010001684.1": "0.5 kb of <i>Penicillus</i>-like chloroplast DNA at the start of the contig, a microsatellite, then slug DNA",
+                    "JAWDGP010006814.1": "control: a point inside another contig, in repeated DNA"}
+            def jrow(c):
+                j = JN.get(c)
+                if not j: return ""
+                return (f'<tr><td class="mono nowrap">{e(c)}</td><td>{WHAT.get(c, "")}</td><td class="num">{j["position"]:,}</td><td class="num">{j["reads_on_unique_side"]:,}</td>'
+                        f'<td class="num">{j["through_reads"]}</td><td class="num">{j["diverging_reads"]}</td></tr>')
+            join_rows = "".join(jrow(c) for c in WHAT)
+            tested = [JN[c] for c in WHAT if c in JN and not WHAT[c].startswith("control")]; ctl = next((JN[c] for c in WHAT if c in JN and WHAT[c].startswith("control")), None)
+            PR = ""
+            if tested:
+                one = all(j["through_reads"] <= 1 for j in tested)
+                PR = (f'{"Each of the " + str(len(tested)) + " joins is carried by a single Nanopore read" if one else "The joins are carried by " + ", ".join(str(j["through_reads"]) for j in tested) + " reads"}, '
+                      f'while {min(j["diverging_reads"] for j in tested)} to {max(j["diverging_reads"] for j in tested)} other reads arrive at the same point and continue as something else. '
+                      + (f'The control point is crossed by {ctl["through_reads"]}. ' if ctl else "")
+                      + 'This is the pattern of the xgElyCris1.1 fragments over again, and the likeliest explanation is the same: the assembler extended the end of a contig along one chimeric read. Nanopore libraries make such reads when unrelated fragments are ligated end to end. '
+                      'It would also explain why the <i>Penicillus</i>-like pieces are 85 to 96% identical to the plastid rather than exact: a contig end that rests on one Nanopore read keeps that read’s errors.')
+            n_rep = sum(1 for r in pur if r.get("read_alignments"))
             pur_block = f"""
-<h3>Eleven contigs of the Purdue assembly are not slug DNA</h3>
-<p>The Purdue assembly (GCA_033675545.1, a different animal) contains {len(pur)} contigs, {min(r["length"] for r in pur) / 1000:.0f} to {max(r["length"] for r in pur) / 1000:.0f} kb long and {sum(r["length"] for r in pur) / 1000:.0f} kb in total, that carry {sum(r["loci"] for r in pur)} chloroplast-type genes. They look like the DNA of another organism left in the assembly:</p>
+<h2 id="purdue">The Purdue assembly: chloroplast DNA of other algae, again at contig ends</h2>
+<p>The Purdue assembly (GCA_033675545.1) comes from a different animal and was built from Nanopore reads. The protein search finds {len(pur)} contigs in it, {min(r["length"] for r in pur) / 1000:.0f} to {max(r["length"] for r in pur) / 1000:.0f} kb long and {sum(r["length"] for r in pur) / 1000:.0f} kb in total, that carry chloroplast genes and no slug gene. They are chloroplast DNA of {it("Acetabularia")}, the mermaid’s wineglass, which that animal had evidently been eating.</p>
 <ul>
-<li>their G+C content is {100 * min(r["gc"] for r in pur):.0f} to {100 * max(r["gc"] for r in pur):.0f}%, against 37% for the assembly as a whole;</li>
-<li>none of the {n_gm} gene models annotated on them matches any animal, algal or bacterial protein, and none of the {len(pur)} contigs carries a recognisable slug gene;</li>
-<li>in two sequencing runs of the xgElyCris1 animal (25 Gb) no read matches them, apart from a repeated slug sequence at the very start of {n_rep} contigs. DNA that belongs to the species should be in every animal.</li>
+<li>Where GenBank has the same gene from {it("Acetabularia peniculus")}, the contigs match it at {min(pen):.0f} to {max(pen):.0f}% identity{f"; tufA is {tuf:.1f}% identical to an unnamed <i>Acetabularia</i> isolate" if tuf else ""}. The better-known {it("A. acetabulum")} is {SG["acetabulum"][0]:.0f} to {SG["acetabulum"][1]:.0f}% identical over the same {SG["n"]} genes. The species was not pinned down.</li>
+<li>{it("Acetabularia")} has a giant, gene-poor chloroplast genome that has never been assembled whole. That is why no plastid genome in the panel matched these contigs, why their genes sit tens of kilobases apart, and why none of the {n_gm} gene models annotated on them matches any known protein.</li>
+<li>Their G+C content is {100 * min(r["gc"] for r in pur):.0f} to {100 * max(r["gc"] for r in pur):.0f}%, against 37% for the assembly as a whole, and no read from the xgElyCris1 animal matches them (two runs, 25 Gb) apart from a repeated slug sequence at the very start of {n_rep} of them.</li>
 </ul>
-<p>The genes are {100 * min(r["identity_min"] for r in pur):.0f} to {100 * max(r["identity_max"] for r in pur):.0f}% identical to green-algal chloroplast proteins, too distant from any of the 241 plastid genomes in the panel to name the organism. For the {n_rep} contigs that begin with slug-like sequence, whether that join exists in the Purdue animal can only be tested with that animal’s own reads. Until then these contigs are best left out of any analysis of the Purdue assembly.</p>
-<div class="tablewrap"><table class="data"><thead><tr><th>Purdue contig</th><th class="num">Length, bp</th><th class="num">G+C</th><th>Chloroplast-type genes found</th><th class="num">Identity to query</th><th class="num" title="Annotated gene models on the contig that match any protein in the database">Gene models with a match</th><th>xgElyCris1 reads matching</th></tr></thead>
+<p>The enumeration of non-exact matches adds three more pieces of chloroplast DNA in this assembly: an 11 kb contig from a further siphonous alga (JAWDGP010006602.1; its nearest reference, {it("Boodleopsis")}, is 89% identical), and two short {it("Penicillus")}-like stretches that sit on contigs with slug DNA, 514 bp at 96% identity at the start of JAWDGP010001684.1 and 434 bp at 85% some 4 kb from the end of JAWDGP010005248.1.</p>
+<p>That makes five places in the Purdue assembly where chloroplast DNA and slug DNA meet in one contig. Four could be tested with that animal’s own reads ({len(JR.get("runs", []))} Nanopore runs, 38 Gb): reads lying on the single-copy side of each join either run on through it, or stop there and continue as something else. A control point in the middle of another contig shows what continuous DNA looks like.</p>
+<div class="tablewrap"><table class="data"><thead><tr><th>Purdue contig</th><th>What the contig joins</th><th class="num">Join at, bp</th><th class="num" title="Reads aligned over 1 kb or more of the single-copy side, near the join">Reads beside the join</th><th class="num">Run through it</th><th class="num">Stop at it and continue elsewhere</th></tr></thead>
+<tbody>{join_rows}</tbody></table></div>
+<p style="margin-top:16px">{PR}</p>
+<p>The fifth, in JAWDGP010005248.1, lies in repeated DNA where reads cannot be placed. It differs from the {it("P. capitatus")} plastid mostly by small insertions and deletions (19 of them in 434 bp, with 31 substitutions), which is the error pattern of a raw Nanopore read rather than of sequence that has diverged over time.</p>
+<h3>The <i>Acetabularia</i> contigs</h3>
+<div class="tablewrap"><table class="data"><thead><tr><th>Purdue contig</th><th class="num">Length, bp</th><th class="num">G+C</th><th>Chloroplast genes found</th><th class="num" title="Protein identity to the Udotea, Chlamydomonas or Bryopsidales query">Identity to query</th><th class="num" title="Annotated gene models on the contig that match any protein in the database">Gene models with a match</th><th>xgElyCris1 reads matching</th></tr></thead>
 <tbody>{"".join(prow(r) for r in pur)}</tbody></table></div>
 """
         prot_block = f"""
@@ -233,9 +266,9 @@ if hgt:
 <li><strong>{T.get("animal gene", 0)} are the slug’s own genes.</strong> Their best match is an animal protein: mitochondrial ATP synthase found with chloroplast atpB, for example.</li>
 <li><strong>{T.get("plastid fragment (assembly artefact)", 0)} lie on the chloroplast fragments described above</strong>, and {T.get("plastid-only contig", 0)} more on small contigs that are plastid DNA from end to end.</li>
 <li><strong>{NM.get("n", 0)} match no protein at all.</strong> {NM.get("low_complexity", 0)} are runs of one or two amino acids and {NM.get("short", 0)} are shorter than 120 residues.</li>
-<li><strong>{n_foreign} are algal or bacterial genes on contigs with no slug gene on them:</strong> {sum(r["loci"] for r in pur)} on {len(pur)} contigs of the Purdue assembly, described next, and {sum(r["loci"] for r in small_bac)} on {len(small_bac)} small bacterial contigs of the Tampa assembly.</li>
+<li><strong>{n_foreign} are algal or bacterial genes on contigs that are not slug DNA, or not obviously so:</strong> {sum(r["loci"] for r in pur)} on {len(pur)} contigs of the Purdue assembly and {sum(r["loci"] for r in pur_small)} at the start of one more ({", ".join(r["contig"] for r in pur_small)}), all described <a href="#purdue">below</a>, and {sum(r["loci"] for r in small_bac)} on {len(small_bac)} small bacterial contigs of the Tampa assembly.</li>
 </ul>
-<p>In none of the four assemblies does an algal gene sit among slug genes.</p>
+<p>In xgElyCris1.1, its alternate haplotype and the Tampa assembly, no algal gene sits among slug genes.</p>
 {pur_block}
 """
     body = f"""
@@ -246,6 +279,7 @@ if hgt:
 <p><strong>No inserted algal sequence was found.</strong> {num(P["cp+slug"]["reads"])} reads do join chloroplast DNA to slug DNA, but they do so at the same rate as reads that join bacterial DNA to slug DNA, and no chloroplast–slug junction is seen in two independent molecules. A real insertion would be crossed by dozens.</p>
 <p><strong>The reference assembly needs a warning.</strong> xgElyCris1.1 and its alternate haplotype contain {len(fr)} stretches of chloroplast DNA, up to {max(f["length"] for f in fr) / 1000:.1f} kb long and 98 to 100% identical to the animal’s kleptoplasts. All {len(fr)} sit at the end of a contig and trace back to a single chimeric molecule. They are assembly artefacts, not insertions. Searching the assembly with a plastid genome will find them, and the Ensembl annotation lists {sum(1 for c in cands if c.get("on_plastid_fragment"))} chloroplast genes on them as slug genes.</p>
 <p>That leaves nothing to compare with the kleptoplasts: there is no inserted algal sequence whose source could be traced. The artefacts themselves come from the two {it("Penicillus")} plastid types {n_cap} to {n_lam}, close to the {KS} mix of the kleptoplasts, as chimeras of kleptoplast DNA would.</p>
+<p>The Purdue assembly of another animal has the same kind of artefact, and also holds 646 kb of {it("Acetabularia")} chloroplast DNA as contigs of its own: that animal’s kleptoplasts, left in the assembly. <a href="#purdue">Details below</a>.</p>
 </div>
 </div></section>
 
@@ -281,14 +315,15 @@ if hgt:
 <p class="small muted" style="margin-top:10px">Coordinates are 1-based on the Ensembl sequence names (chr1 = OY973766.1 and so on). The {len(alt)} fragments in the alternate haplotype, and this table, are in the <a href="methods.html#downloads">downloads</a>. Mask these intervals before using the assembly for anything that involves plastid genes: they include pieces of rbcL, psbA, tufA, atpB and petB.</p>
 
 <h3>Nothing older</h3>
-<p>An insertion from a past meal, or from a different alga, would have drifted away from today’s kleptoplasts, so every match that is not an exact copy was listed and sorted. The primary assembly has {num(DV["sanger"]["non_exact_matches"])} such matches to the 241 plastid genomes and to algal mitochondrial and ribosomal DNA. All but {DV["sanger"]["loci"]} hit simple repeats such as (CTT)n, which AT-rich plastid genomes also contain. The {DV["sanger"]["loci"]} that remain are the slug’s own ribosomal RNA genes, about 81% identical to algal ones. The alternate haplotype ({DV["alt"]["loci"]} loci) and the Tampa assembly ({DV["tampa"]["loci"]}) give the same picture.</p>
-<p>So apart from the {len(fr)} exact copies, none of these three assemblies contains a stretch of 200 bp or more that resembles plastid DNA at 80% identity or better. The Purdue assembly does, and is dealt with <a href="#purdue">below</a>.</p>
+<p>An insertion from a past meal, or from a different alga, would have drifted away from today’s kleptoplasts, so every match that is not an exact copy was listed and sorted. The primary assembly has {num(DV["sanger"]["non_exact_matches"])} such matches to the 241 plastid genomes and to algal mitochondrial and ribosomal DNA. All but {DV["sanger"]["loci"]} are shorter than 200 bp, less than 80% identical, or fall on simple repeats such as (CTT)n, which AT-rich plastid genomes also contain. The {DV["sanger"]["loci"]} that remain are the slug’s own ribosomal RNA genes, about 81% identical to algal ones. The alternate haplotype ({DV["alt"]["loci"]} loci) and the Tampa assembly ({DV["tampa"]["loci"]}) give the same picture.</p>
+<p>So apart from the {len(fr)} exact copies and simple repeats, none of these three assemblies contains a stretch of 200 bp or more that resembles plastid DNA at 80% identity or better. The Purdue assembly does, and is dealt with <a href="#purdue">below</a>.</p>
+<p>The reads agree, including for the parts of the genome that no assembly covers. {num(WR.get("weak_reads", 0))} reads matched a plastid genome only weakly and were set aside. Aligned base by base, {WR.get("with_exact_piece", 0)} of them hold a short exact piece of kleptoplast DNA (ordinary chimeras, under 1 kb) and {len(WR.get("diverged", []))} hold plastid-like sequence that is 4 to 8% away from every reference. {sum(1 for d in WR.get("diverged", []) if not d["slug_bp"])} of those are plain plastid reads from trace algae that have no close reference; the other is a low-accuracy read whose slug part is just as far from the assembly ({100 * (1 - WRL["slug_identity"]):.1f}% against {100 * (1 - WRL["identity"]):.1f}%). No read joins diverged plastid-like DNA to slug DNA.</p>
 <p>The assemblies also keep a few small free-standing contigs of plastid or bacterial DNA, not joined to anything: {WH}. These are ordinary leftovers of decontamination.</p>
 {alien_block}
 {prot_block}
 <h2>What this cannot rule out</h2>
 <ul>
-<li>Inserts shorter than about 150 bp, or more than about 15% diverged at the DNA level, in parts of the genome that are not in any assembly. The DNA screens would miss them; the protein screens cover only what is assembled.</li>
+<li>Inserts shorter than about 200 bp, or more than about 20% diverged from every plastid genome in the panel. The DNA screens would miss them, and the protein screens cover only what is assembled.</li>
 <li>Insertions present in a small minority of cells. One molecule is indistinguishable from a library chimera.</li>
 <li>Regions the PCR-amplified library barely sampled. Several clock genes sit in such regions (see the <a href="index.html">gene catalogue</a>).</li>
 <li>Transfer from an alga with no sequenced relative, if the gene has no recognisable homologue in the algal proteomes used.</li>
@@ -311,6 +346,8 @@ add_dl(os.path.join(R, "clock_genes.json"), "clock_genes.json", "Everything abou
 add_dl(os.path.join(R, "plastid_fragments_in_assembly.tsv"), "plastid_fragments_in_assembly.tsv", "Chloroplast fragments in the assemblies (TSV)", "intervals to mask, with the read evidence for each")
 add_dl(os.path.join(R, "kleptoplast_barcodes.tsv"), "kleptoplast_barcodes.tsv", "Kleptoplast barcode haplotypes (TSV)", "rbcL and tufA sequences with read counts and GenBank matches")
 add_dl(os.path.join(R, "penicillus_plastome_genes.bed"), "penicillus_plastome_genes.bed", "Gene positions on the two Penicillus plastid genomes (BED)", "by protein homology to Udotea flabellum NC_039528")
+add_dl(os.path.join(R, "intermediate", "diverged_plastid_like_matches.tsv"), "diverged_plastid_like_matches.tsv", "Plastid-like matches that are not exact copies (TSV)", "every match left in the four assemblies after simple repeats are removed")
+add_dl(os.path.join(R, "intermediate", "protein_screen_loci.tsv"), "protein_screen_loci.tsv", "Protein screen of the assemblies (TSV)", "every place a plastid or photosynthesis protein aligned, and what it turned out to be")
 add_dl(os.path.join(R, "kleptoplast.json"), "kleptoplast.json", "Kleptoplast results (JSON)", "")
 add_dl(os.path.join(R, "hgt.json"), "hgt.json", "Gene-transfer results (JSON)", "")
 PSN = ((hgt or {}).get("protein_screen") or {}).get("n_queries", 471)
@@ -335,6 +372,8 @@ body = f"""
 <tr><td>Plastid genomes from this animal</td><td class="mono">OZ373742.1, OZ372796.1</td><td>assembled by the Sanger team; labelled <i>P. capitatus</i> and <i>P. lamourouxii</i></td></tr>
 <tr><td>Bacterial genomes from this animal</td><td class="mono">GCA_964289745, GCA_964291485, GCA_964291505, GCA_964291535</td><td><i>Ekhidna</i>, two <i>Kistimonas</i>, <i>Francisella</i>; used as the chimera baseline</td></tr>
 <tr><td>Other <i>E. crispata</i> assemblies</td><td class="mono">GCA_033675545.1 (Purdue), GCA_984581095.1 (Tampa)</td><td>different animals; the Purdue assembly has its own annotation</td></tr>
+<tr><td>Nanopore reads of the Purdue animal</td><td class="mono">PRJNA987316, 12 MinION runs</td><td>38 Gb; used only to test joins in the Purdue assembly</td></tr>
+<tr><td>Dasycladales plastid sequences</td><td class="mono">333 GenBank records</td><td>used to name the <i>Acetabularia</i> contigs in the Purdue assembly</td></tr>
 </tbody></table></div>
 <p style="margin-top:14px">The specimen (NSU0021201, clarki ecotype) was collected at Dove Cove, Key Largo, Florida on 30 July 2020. Genome paper: Middlebrooks et al. 2026, Wellcome Open Research 11:148.</p>
 
@@ -356,11 +395,14 @@ body = f"""
 <details class="method"><summary>7. Naming the algae</summary>
 <p>Plastid reads were assigned to their best-matching plastid genome (divergence 3% or less over 1 kb or more). rbcL and tufA were cut out of every read spanning them, identical sequences counted, and each haplotype compared with 6,453 GenBank barcodes of Bryopsidales. Script 13.</p></details>
 <details class="method"><summary>8. Chimeric reads</summary>
-<p>Reads with a panel match and 500 bp or more left unexplained were re-aligned base by base (minimap2 map-hifi) to the Sanger primary and alternate assemblies plus the panel, and the remainder to the Purdue and Tampa assemblies. A junction needs a slug segment next to a non-slug segment, each at least 300 bp at 97% identity or better. Read totals for each class use confident matches only (3% divergence or less over 1 kb or more). Two reads count as independent molecules only if both of their ends differ by more than 50 bp. Scripts 14, 15.</p></details>
+<p>Reads with a panel match and 500 bp or more left unexplained were re-aligned base by base (minimap2 map-hifi) to the Sanger primary and alternate assemblies plus the panel, and the remainder to the Purdue and Tampa assemblies. A junction needs a slug segment next to a non-slug segment, each at least 300 bp at 97% identity or better. Read totals for each class use confident matches only (3% divergence or less over 1 kb or more). Two reads count as independent molecules only if both of their ends differ by more than 50 bp. Reads set aside for matching a plastid genome only weakly were searched in the same alignments for plastid segments of 200 bp or more that are not simple repeats. Scripts 14, 15, 17.</p></details>
 <details class="method"><summary>9. Chloroplast DNA in the assemblies</summary>
 <p>All four assemblies were cut into 10 kb windows and aligned base by base to the same panel. Matches of 200 bp or more at 97% identity or better are the exact copies. The rest were filtered for simple repeats (trinucleotide entropy of the matched panel sequence below 4.5 bits, or a panel window hit by 15 or more assembly windows) and whatever remained at 80% identity or better was listed one by one. For each exact plastid copy, a window of the copy plus 8 kb of neighbouring slug DNA was cut out. Repeats in the slug part were found empirically (100 bp bins hit by 4 or more of 20,000 reads) and masked, and every read of two of the three runs (ERR12356115 and ERR12353011, 53% of the data) was mapped to the masked windows; reads landing within 1.5 kb of a boundary were then aligned base by base. A read carries the junction if one alignment spans it by 300 bp on each side. It contradicts the junction if it matches 1 kb or more of slug flank at 98% or better, stops within 50 bp of the boundary, and has 300 bp or more left over. Scripts 22 to 27.</p></details>
 <details class="method"><summary>10. Algal genes by protein similarity</summary>
 <p>Every annotated protein (longest isoform per Ensembl gene, and all Purdue proteins) was searched with DIAMOND (sensitive) against the animal, algal, bacterial and fungal proteins listed on the gene-transfer page. A protein is listed when its best match overall is not an animal, and called a strong candidate when that match beats the best non-sacoglossan animal match by 20% in bit score. Separately, {PSN} plastid and photosynthesis proteins were aligned to all four assemblies with miniprot; overlapping hits were merged into loci, and the translation of each locus was searched against the same database to tell an algal gene from the slug’s own homologue. Scripts 21, 28, 29.</p></details>
+
+<details class="method"><summary>11. Foreign contigs and joins in the Purdue assembly</summary>
+<p>Contigs carrying algal genes outside the known fragments were compared with the other assemblies (minimap2 asm20), with two runs of xgElyCris1 reads, and with the plastid sequences GenBank holds for Dasycladales (BLAST dc-megablast). Joins between chloroplast and slug DNA were tested with the Purdue animal’s Nanopore reads: every read was mapped to a 4 kb bait on the single-copy side of the join (repeats masked), and reads reaching the join were aligned to a window around it. A read runs through if one alignment extends 300 bp past the join on both sides; it stops at the join if its alignment ends within 150 bp of it with 200 bp or more of the read left over. Scripts 29.</p></details>
 
 <h2>Caveats</h2>
 <ul>

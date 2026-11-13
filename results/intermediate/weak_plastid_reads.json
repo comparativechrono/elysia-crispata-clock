@@ -1,0 +1,69 @@
+{
+ "weak_reads": 15276,
+ "realigned": 14169,
+ "with_exact_piece": 131,
+ "exact_with_slug": 111,
+ "diverged": [
+  {
+   "read": "ERR12356115.858086",
+   "read_length": 11154,
+   "plastid_like_bp": 10438,
+   "identity": 0.9406,
+   "plastome": "MK792749.1",
+   "plastome_species": "Caulerpa serrulata",
+   "slug_bp": 0,
+   "slug_identity": null
+  },
+  {
+   "read": "ERR11843472.2187740",
+   "read_length": 10489,
+   "plastid_like_bp": 2585,
+   "identity": 0.9229,
+   "plastome": "OZ373742.1",
+   "plastome_species": "Penicillus capitatus",
+   "slug_bp": 7836,
+   "slug_identity": 0.9224
+  },
+  {
+   "read": "ERR12356115.540535",
+   "read_length": 4916,
+   "plastid_like_bp": 2111,
+   "identity": 0.9471,
+   "plastome": "NC_065377.1",
+   "plastome_species": "Halimeda opuntia",
+   "slug_bp": 0,
+   "slug_identity": null
+  },
+  {
+   "read": "ERR12353011.682250",
+   "read_length": 10566,
+   "plastid_like_bp": 333,
+   "identity": 0.9641,
+   "plastome": "MH591112.1",
+   "plastome_species": "Udotea flabellum",
+   "slug_bp": 0,
+   "slug_identity": null
+  },
+  {
+   "read": "ERR11843472.1540618",
+   "read_length": 8764,
+   "plastid_like_bp": 320,
+   "identity": 0.9557,
+   "plastome": "NC_065377.1",
+   "plastome_species": "Halimeda opuntia",
+   "slug_bp": 0,
+   "slug_identity": null
+  },
+  {
+   "read": "ERR11843472.696365",
+   "read_length": 10495,
+   "plastid_like_bp": 320,
+   "identity": 0.9557,
+   "plastome": "ON584177.1",
+   "plastome_species": "Halimeda opuntia",
+   "slug_bp": 0,
+   "slug_identity": null
+  }
+ ],
+ "diverged_joined_to_slug": 0
+}

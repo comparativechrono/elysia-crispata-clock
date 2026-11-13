@@ -1,0 +1,462 @@
+[
+ {
+  "assembly": "purdue",
+  "contig": "JAWDGP010000296.1",
+  "length": 38656,
+  "gc": 0.4511,
+  "foreign_loci": [
+   {
+    "query": "UDOFL|rpoC1",
+    "start": 5315,
+    "end": 20232,
+    "identity": 0.4477,
+    "cls": "alga-like",
+    "frameshifts": 2
+   }
+  ],
+  "animal_loci": 0,
+  "annotated_genes": 4,
+  "annotated_genes_with_protein_match": 0,
+  "aligned_to_sanger": [],
+  "aligned_to_tampa": [],
+  "read_alignments": 0,
+  "bp_covered_by_reads": 0,
+  "read_cover_span": null
+ },
+ {
+  "assembly": "purdue",
+  "contig": "JAWDGP010001067.1",
+  "length": 130901,
+  "gc": 0.5366,
+  "foreign_loci": [
+   {
+    "query": "UDOFL|rps12",
+    "start": 56633,
+    "end": 56891,
+    "identity": 0.834,
+    "cls": "microbe-like",
+    "frameshifts": 1
+   },
+   {
+    "query": "BRYO|D0EVP7",
+    "start": 114025,
+    "end": 114510,
+    "identity": 0.8704,
+    "cls": "alga-like",
+    "frameshifts": 0
+   }
+  ],
+  "animal_loci": 0,
+  "annotated_genes": 28,
+  "annotated_genes_with_protein_match": 0,
+  "aligned_to_sanger": [],
+  "aligned_to_tampa": [],
+  "read_alignments": 0,
+  "bp_covered_by_reads": 0,
+  "read_cover_span": null
+ },
+ {
+  "assembly": "purdue",
+  "contig": "JAWDGP010001250.1",
+  "length": 76989,
+  "gc": 0.5293,
+  "foreign_loci": [
+   {
+    "query": "UDOFL|cysA",
+    "start": 49957,
+    "end": 50615,
+    "identity": 0.6373,
+    "cls": "alga-like",
+    "frameshifts": 2
+   },
+   {
+    "query": "UDOFL|accD",
+    "start": 56769,
+    "end": 57589,
+    "identity": 0.6971,
+    "cls": "alga-like",
+    "frameshifts": 1
+   }
+  ],
+  "animal_loci": 0,
+  "annotated_genes": 19,
+  "annotated_genes_with_protein_match": 0,
+  "aligned_to_sanger": [],
+  "aligned_to_tampa": [],
+  "read_alignments": 0,
+  "bp_covered_by_reads": 0,
+  "read_cover_span": null
+ },
+ {
+  "assembly": "purdue",
+  "contig": "JAWDGP010001375.1",
+  "length": 21862,
+  "gc": 0.5025,
+  "foreign_loci": [
+   {
+    "query": "UDOFL|psbN",
+    "start": 17674,
+    "end": 17805,
+    "identity": 0.8182,
+    "cls": "alga-like",
+    "frameshifts": 0
+   }
+  ],
+  "animal_loci": 0,
+  "annotated_genes": 5,
+  "annotated_genes_with_protein_match": 0,
+  "aligned_to_sanger": [
+   {
+    "start": 8,
+    "end": 1972,
+    "target": "1",
+    "tstart": 18043583,
+    "tend": 18045586,
+    "identity": 0.879
+   }
+  ],
+  "aligned_to_tampa": [
+   {
+    "start": 306,
+    "end": 1447,
+    "target": "CFHGKC010000834.1",
+    "tstart": 7,
+    "tend": 1152,
+    "identity": 0.955
+   }
+  ],
+  "read_alignments": 14268,
+  "bp_covered_by_reads": 1946,
+  "read_cover_span": [
+   17,
+   1963
+  ]
+ },
+ {
+  "assembly": "purdue",
+  "contig": "JAWDGP010001684.1",
+  "length": 4997,
+  "gc": 0.3494,
+  "foreign_loci": [
+   {
+    "query": "UDOFL|rpoC1",
+    "start": 73,
+    "end": 445,
+    "identity": 0.6568,
+    "cls": "alga-like",
+    "frameshifts": 3
+   }
+  ],
+  "animal_loci": 0,
+  "annotated_genes": 1,
+  "annotated_genes_with_protein_match": 0,
+  "aligned_to_sanger": [
+   {
+    "start": 1667,
+    "end": 2724,
+    "target": "14",
+    "tstart": 13622772,
+    "tend": 13623937,
+    "identity": 0.148
+   },
+   {
+    "start": 2026,
+    "end": 3345,
+    "target": "14",
+    "tstart": 13579719,
+    "tend": 13581105,
+    "identity": 0.104
+   }
+  ],
+  "aligned_to_tampa": [
+   {
+    "start": 1295,
+    "end": 4311,
+    "target": "CFHGKC010001022.1",
+    "tstart": 0,
+    "tend": 3020,
+    "identity": 0.977
+   },
+   {
+    "start": 4301,
+    "end": 4991,
+    "target": "CFHGKC010009548.1",
+    "tstart": 2367,
+    "tend": 3057,
+    "identity": 0.997
+   }
+  ],
+  "read_alignments": 18592,
+  "bp_covered_by_reads": 4701,
+  "read_cover_span": [
+   279,
+   4980
+  ]
+ },
+ {
+  "assembly": "purdue",
+  "contig": "JAWDGP010002135.1",
+  "length": 22502,
+  "gc": 0.5301,
+  "foreign_loci": [
+   {
+    "query": "UDOFL|rpoB_2",
+    "start": 19838,
+    "end": 22039,
+    "identity": 0.4631,
+    "cls": "alga-like",
+    "frameshifts": 17
+   }
+  ],
+  "animal_loci": 0,
+  "annotated_genes": 4,
+  "annotated_genes_with_protein_match": 0,
+  "aligned_to_sanger": [],
+  "aligned_to_tampa": [],
+  "read_alignments": 0,
+  "bp_covered_by_reads": 0,
+  "read_cover_span": null
+ },
+ {
+  "assembly": "purdue",
+  "contig": "JAWDGP010002183.1",
+  "length": 18025,
+  "gc": 0.5068,
+  "foreign_loci": [
+   {
+    "query": "UDOFL|chlB",
+    "start": 1438,
+    "end": 3123,
+    "identity": 0.7719,
+    "cls": "alga-like",
+    "frameshifts": 4
+   }
+  ],
+  "animal_loci": 0,
+  "annotated_genes": 4,
+  "annotated_genes_with_protein_match": 0,
+  "aligned_to_sanger": [],
+  "aligned_to_tampa": [],
+  "read_alignments": 0,
+  "bp_covered_by_reads": 0,
+  "read_cover_span": null
+ },
+ {
+  "assembly": "purdue",
+  "contig": "JAWDGP010004663.1",
+  "length": 58229,
+  "gc": 0.5097,
+  "foreign_loci": [
+   {
+    "query": "UDOFL|atpI",
+    "start": 16322,
+    "end": 18364,
+    "identity": 0.7642,
+    "cls": "alga-like",
+    "frameshifts": 1
+   },
+   {
+    "query": "BRYO|D0EVT4",
+    "start": 39292,
+    "end": 39481,
+    "identity": 0.754,
+    "cls": "alga-like",
+    "frameshifts": 1
+   }
+  ],
+  "animal_loci": 0,
+  "annotated_genes": 9,
+  "annotated_genes_with_protein_match": 0,
+  "aligned_to_sanger": [
+   {
+    "start": 637,
+    "end": 2941,
+    "target": "3",
+    "tstart": 15344142,
+    "tend": 15346431,
+    "identity": 0.101
+   }
+  ],
+  "aligned_to_tampa": [
+   {
+    "start": 1209,
+    "end": 2771,
+    "target": "CFHGKC010000448.1",
+    "tstart": 506292,
+    "tend": 507819,
+    "identity": 0.092
+   }
+  ],
+  "read_alignments": 172,
+  "bp_covered_by_reads": 3363,
+  "read_cover_span": [
+   2,
+   3365
+  ]
+ },
+ {
+  "assembly": "purdue",
+  "contig": "JAWDGP010005039.1",
+  "length": 68207,
+  "gc": 0.5008,
+  "foreign_loci": [
+   {
+    "query": "UDOFL|ftsH",
+    "start": 15349,
+    "end": 26870,
+    "identity": 0.282,
+    "cls": "alga-like",
+    "frameshifts": 4
+   },
+   {
+    "query": "BRYO|D0EVU6",
+    "start": 47788,
+    "end": 47922,
+    "identity": 0.8182,
+    "cls": "alga-like",
+    "frameshifts": 2
+   }
+  ],
+  "animal_loci": 0,
+  "annotated_genes": 19,
+  "annotated_genes_with_protein_match": 0,
+  "aligned_to_sanger": [],
+  "aligned_to_tampa": [],
+  "read_alignments": 0,
+  "bp_covered_by_reads": 0,
+  "read_cover_span": null
+ },
+ {
+  "assembly": "purdue",
+  "contig": "JAWDGP010005634.1",
+  "length": 30561,
+  "gc": 0.5116,
+  "foreign_loci": [
+   {
+    "query": "UDOFL|clpP",
+    "start": 5001,
+    "end": 5586,
+    "identity": 0.75,
+    "cls": "alga-like",
+    "frameshifts": 2
+   }
+  ],
+  "animal_loci": 0,
+  "annotated_genes": 4,
+  "annotated_genes_with_protein_match": 0,
+  "aligned_to_sanger": [],
+  "aligned_to_tampa": [],
+  "read_alignments": 0,
+  "bp_covered_by_reads": 0,
+  "read_cover_span": null
+ },
+ {
+  "assembly": "purdue",
+  "contig": "JAWDGP010006072.1",
+  "length": 157771,
+  "gc": 0.5254,
+  "foreign_loci": [
+   {
+    "query": "BRYO|A0A2P0QH85",
+    "start": 30903,
+    "end": 55591,
+    "identity": 0.7364,
+    "cls": "alga-like",
+    "frameshifts": 1
+   },
+   {
+    "query": "CHLRE|P59777",
+    "start": 61774,
+    "end": 61899,
+    "identity": 0.8293,
+    "cls": "alga-like",
+    "frameshifts": 0
+   },
+   {
+    "query": "CHLRE|O19930",
+    "start": 69737,
+    "end": 69865,
+    "identity": 0.8333,
+    "cls": "alga-like",
+    "frameshifts": 0
+   },
+   {
+    "query": "UDOFL|psbL",
+    "start": 76848,
+    "end": 76970,
+    "identity": 0.875,
+    "cls": "alga-like",
+    "frameshifts": 0
+   },
+   {
+    "query": "BRYO|A0A0D6E1E6",
+    "start": 79524,
+    "end": 79772,
+    "identity": 0.9268,
+    "cls": "alga-like",
+    "frameshifts": 0
+   },
+   {
+    "query": "UDOFL|rps4",
+    "start": 106724,
+    "end": 107346,
+    "identity": 0.4662,
+    "cls": "alga-like",
+    "frameshifts": 4
+   }
+  ],
+  "animal_loci": 0,
+  "annotated_genes": 44,
+  "annotated_genes_with_protein_match": 0,
+  "aligned_to_sanger": [],
+  "aligned_to_tampa": [],
+  "read_alignments": 0,
+  "bp_covered_by_reads": 0,
+  "read_cover_span": null
+ },
+ {
+  "assembly": "purdue",
+  "contig": "JAWDGP010006093.1",
+  "length": 22231,
+  "gc": 0.4433,
+  "foreign_loci": [
+   {
+    "query": "UDOFL|tufA",
+    "start": 11832,
+    "end": 13060,
+    "identity": 0.7891,
+    "cls": "alga-like",
+    "frameshifts": 3
+   }
+  ],
+  "animal_loci": 0,
+  "annotated_genes": 3,
+  "annotated_genes_with_protein_match": 0,
+  "aligned_to_sanger": [
+   {
+    "start": 13,
+    "end": 1001,
+    "target": "5",
+    "tstart": 24602570,
+    "tend": 24603555,
+    "identity": 0.7
+   }
+  ],
+  "aligned_to_tampa": [
+   {
+    "start": 13,
+    "end": 1001,
+    "target": "CFHGKC010000449.1",
+    "tstart": 92598,
+    "tend": 93583,
+    "identity": 0.732
+   }
+  ],
+  "read_alignments": 16,
+  "bp_covered_by_reads": 975,
+  "read_cover_span": [
+   13,
+   988
+  ]
+ }
+]

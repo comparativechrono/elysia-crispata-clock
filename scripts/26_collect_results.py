@@ -113,7 +113,9 @@ hgt = dict(
                  **(jload(os.path.join(H, "chimera", "chimera_extra.json"), {}))),
     fragments=fragments, assembly_screen=low, alien=alien, protein_screen=prot,
     diverged=jload(os.path.join(H, "asm_screen", "diverged_candidates.json"), {}).get("summary", {}),
-    foreign=dict(blast=jload(os.path.join(H, "protscreen", "purdue_foreign_blast.json"), []),
+    weak_reads=jload(os.path.join(H, "sel", "weak_plastid_reads.json"), {}),
+    foreign=dict(blast=jload(os.path.join(H, "protscreen", "purdue_foreign_vs_dasycladales.json"), {}).get("best", []),
+                 same_genes=jload(os.path.join(H, "protscreen", "purdue_foreign_vs_dasycladales.json"), {}).get("same_genes", {}),
                  joins=jload(os.path.join(H, "protscreen", "jointest", "join_test.json"), []),
                  join_runs=jload(os.path.join(H, "protscreen", "jointest", "runs.json"), {})),
 )

@@ -39,10 +39,15 @@ carries algal nuclear ribosomal DNA.
   from the same locus continue into different sequence. They are assembly artefacts. The Ensembl
   annotation lists six chloroplast genes on them as slug genes. Intervals to mask:
   `results/plastid_fragments_in_assembly.tsv`.
-- No annotated protein of either annotation is algal apart from those six, and aligning 471
-  plastid and photosynthesis proteins directly to all four assemblies finds no algal gene among
-  slug genes. Eleven contigs of the Purdue assembly (646 kb) carry chloroplast-type genes but
-  appear to be another organism's DNA; they are absent from the xgElyCris1 reads.
+- No annotated protein of either annotation is algal apart from those six. Aligning 471 plastid
+  and photosynthesis proteins directly to all four assemblies, and listing every plastid-like
+  DNA match that is neither an exact copy nor a simple repeat, finds no algal sequence among slug
+  DNA in xgElyCris1.1, its alternate haplotype or the Tampa assembly. The reads of the animal
+  contain no diverged plastid-like sequence joined to slug DNA either.
+- The Purdue assembly (a different animal, Nanopore reads) contains 11 contigs (646 kb) of
+  *Acetabularia* chloroplast DNA, evidently from that animal's kleptoplasts, an 11 kb contig from
+  a further alga, and a few places where chloroplast DNA meets slug DNA at the end of a contig.
+  These were tested with that animal's own reads; see the gene-transfer page of the website.
 
 The website gives the evidence, the caveats and what the screens cannot rule out.
 
@@ -63,11 +68,11 @@ The website gives the evidence, the caveats and what the screens cannot rule out
 |---|---|---|
 | Fetch | `00_fetch_reads.sh`, `00_fetch_proteomes.sh`, `00_fetch_algal_proteomes.sh`, `ncbi_fetch.py` | HiFi runs from the SRA open-data bucket as compressed FASTA; comparison proteomes from UniProt. |
 | Clock genes | `01`–`09`, `miniprot_parse.py`, `tree_report.py` | Reference proteins, DIAMOND searches, family alignments and trees, reciprocal best hits, choice of a protein model per gene, presence in each of four assemblies, Pfam domains, tree figures. |
-| Reads, pass 1 | `10`–`12`, `16` | Every HiFi read mapped to a panel of plastid, mitochondrial, rDNA and bacterial sequences plus clock-gene exons; reads classified and extracted; exon read support. |
+| Reads, pass 1 | `10`–`12`, `16`, `17` | Every HiFi read mapped to a panel of plastid, mitochondrial, rDNA and bacterial sequences plus clock-gene exons; reads classified and extracted; exon read support; a closer look at reads with only a weak plastid match. |
 | Kleptoplasts | `13` | rbcL and tufA haplotypes read out of the reads and compared with GenBank barcodes. |
 | Chimeric reads | `14`, `15` | Base-level re-alignment of reads with an unexplained part; junctions between slug, plastid and bacterial DNA, with PCR duplicates collapsed. |
 | RNA | `20` | salmon quantification of the head RNA-seq library. |
-| Assemblies | `21`–`25`, `27`–`29` | Annotated proteins tested for algal affinity; plastid DNA in the four assemblies; read evidence at each plastid/slug boundary; plastid and photosynthesis proteins aligned to the assemblies; checks on foreign contigs. |
+| Assemblies | `21`–`25`, `27`–`29` | Annotated proteins tested for algal affinity; plastid DNA in the four assemblies (exact copies, and every other match that is not a simple repeat); read evidence at each plastid/slug boundary; plastid and photosynthesis proteins aligned to the assemblies; foreign contigs named and their joins tested with reads. |
 | Collect and build | `07`, `26`, `30`, `31` | Results tables and the website. |
 
 The scripts were written for one working machine: tool locations
@@ -94,6 +99,7 @@ python3 -m http.server -d docs 8000
 | Plastid genomes assembled from this animal | OZ373742.1, OZ372796.1 |
 | Bacterial genomes assembled from this animal | GCA_964289745, GCA_964291485, GCA_964291505, GCA_964291535 |
 | Other *E. crispata* assemblies (other animals) | GCA_033675545.1 (Purdue, annotated), GCA_984581095.1 (Tampa) |
+| Nanopore reads of the Purdue animal (join tests only) | PRJNA987316, 12 MinION runs |
 
 The reference panel used to screen the reads (241 green-algal plastid genomes and others) is
 listed in `results/intermediate/panel.tsv`.
@@ -105,8 +111,11 @@ listed in `results/intermediate/panel.tsv`.
   lineage-specific exons.
 - Tree supports are FastTree local supports. Eleven gene names rest mainly on reciprocal best hits.
 - Expression values come from one head sample at one unknown time of day.
-- The boundary test and the check of the Purdue contigs used two of the three HiFi runs (53% of
-  the data).
+- The boundary test and the check of the Purdue contigs against xgElyCris1 reads used two of the
+  three HiFi runs (53% of the data).
+- The Purdue and Tampa assemblies were examined only as far as needed to interpret xgElyCris1;
+  the Purdue assembly very likely holds more *Acetabularia* chloroplast contigs than the ones
+  found through their genes.
 - The second kleptoplast species is named from a single 562-bp reference sequence.
 
 ## Credits
