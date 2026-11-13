@@ -1,0 +1,172 @@
+IQ-TREE 3.1.4 built Sep 29 2026
+
+Input file name: results/genus/concat.fa
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 539409
+
+REFERENCES
+----------
+
+To cite IQ-TREE 3 please use:
+
+Thomas K.F. Wong, Nhan Ly-Trong, Huaiyan Ren, Piyumal Demotte, Hector Banos,
+Andrew J. Roger, Edward Susko, Chris Bielow, Nicola De Maio, Nick Goldman,
+Matthew W. Hahn, Mario dos Reis, Le Sy Vinh, Gavin Huttley, Robert Lanfear, Bui Quang Minh (2026)
+IQ-TREE 3: Phylogenomic Inference Software using Complex Evolutionary Models.
+Molecular Biology and Evolution, msag117.
+https://doi.org/10.1093/molbev/msag117
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+NOTE: Alignment sequence type is auto-detected. If in doubt, specify it via -st option.
+Input data: 10 sequences with 21190 amino-acid sites
+Number of constant sites: 10706 (= 50.5238% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 10706 (= 50.5238% of all sites)
+Number of parsimony informative sites: 4949
+Number of distinct site patterns: 8788
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+F+G4
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.0613
+  pi(R) = 0.0563
+  pi(N) = 0.0461
+  pi(D) = 0.0549
+  pi(C) = 0.0171
+  pi(Q) = 0.0497
+  pi(E) = 0.0648
+  pi(G) = 0.0602
+  pi(H) = 0.0311
+  pi(I) = 0.0426
+  pi(L) = 0.0855
+  pi(K) = 0.0593
+  pi(M) = 0.0296
+  pi(F) = 0.0385
+  pi(P) = 0.0599
+  pi(S) = 0.0995
+  pi(T) = 0.0489
+  pi(W) = 0.0112
+  pi(Y) = 0.0278
+  pi(V) = 0.0558
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.4103
+
+ Category  Relative_rate  Proportion
+  1         0.0182         0.2500
+  2         0.1894         0.2500
+  3         0.7422         0.2500
+  4         3.0502         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -187787.6953 (s.e. 979.6385)
+Unconstrained log-likelihood (without tree): -148340.3858
+Number of free parameters (#branches + #model parameters): 37
+Akaike information criterion (AIC) score: 375649.3907
+Corrected Akaike information criterion (AICc) score: 375649.5236
+Bayesian information criterion (BIC) score: 375943.9582
+
+Total tree length (sum of branch lengths): 1.9122
+Sum of internal branch lengths: 0.5029 (26.2994% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'APLCA' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
+                                            +-----ELYCR
+                                        +---| (100)
+                                        |   +------------ELYCH
+                                     +--| (100)
+                                     |  |   +--------ELYMA
+                                     |  +---| (100)
+                                     |      |      +------ELYTI
+                                     |      |   +--| (100)
+                                     |      |   |  +-------ELYLE
+                                     |      +---| (100)
+                                     |          +----ELYAT
+                              +------| (100)
+                              |      +---------ELYPA
++-----------------------------| (100)
+|                             +------------------PLAOC
+|
++-------------------------------------APLCA
+|
++-----------------------------------BIOGL
+
+Tree in newick format:
+
+(((((ELYCR:0.0552266403,ELYCH:0.1195431319)100:0.0371101385,(ELYMA:0.0882799351,((ELYTI:0.0685619453,ELYLE:0.0761042341)100:0.0153140043,ELYAT:0.0490064944)100:0.0406436322)100:0.0430043182)100:0.0231581185,ELYPA:0.0924958441)100:0.0665564013,PLAOC:0.1763828750)100:0.2771229390,APLCA:0.3497734390,BIOGL:0.3339641575);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -187787.695337
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
+                                            +-----ELYCR
+                                        +---| (100)
+                                        |   +------------ELYCH
+                                     +--| (100)
+                                     |  |   +--------ELYMA
+                                     |  +---| (100)
+                                     |      |      +------ELYTI
+                                     |      |   +--| (100)
+                                     |      |   |  +-------ELYLE
+                                     |      +---| (100)
+                                     |          +----ELYAT
+                              +------| (100)
+                              |      +---------ELYPA
++-----------------------------| (100)
+|                             +------------------PLAOC
+|
++-------------------------------------APLCA
+|
++-----------------------------------BIOGL
+
+
+Consensus tree in newick format: 
+
+(((((ELYCR:0.0552293029,ELYCH:0.1195492028)100:0.0371117925,(ELYMA:0.0882852534,((ELYTI:0.0685663906,ELYLE:0.0761096066)100:0.0153148799,ELYAT:0.0490102404)100:0.0406450541)100:0.0430067976)100:0.0231563010,ELYPA:0.0925013986)100:0.0665468700,PLAOC:0.1763981564)100:0.2771323366,APLCA:0.3497848417,BIOGL:0.3339755958);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t results/genus/species_tree.treefile -m "LG+F+G4{0.410268}" --length 21190
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s results/genus/concat.fa --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s results/genus/concat.fa --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Fri Nov 13 22:00:40 2026
+Total CPU time used: 240.691516 seconds (0h:4m:0s)
+Total wall-clock time used: 122.073745 seconds (0h:2m:2s)
+

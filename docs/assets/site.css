@@ -310,3 +310,67 @@ footer.site p { max-width: 90ch; }
 .nowrap { white-space: nowrap; }
 
 table.data th.num { white-space: normal; }
+
+/* ---------- genus site: species bar, species cards, comparison */
+.subhead { border-bottom: 1px solid var(--rule); background: var(--surface); }
+.subhead .wrap { display: flex; align-items: center; gap: 22px; min-height: 50px; flex-wrap: wrap; }
+.subhead .sp { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 1.05rem; }
+.subhead nav { display: flex; gap: 2px; flex-wrap: wrap; margin-left: auto; }
+.subhead nav a { color: var(--ink-2); text-decoration: none; padding: 6px 12px; border-radius: 999px; font-size: 0.92rem; }
+.subhead nav a:hover { background: var(--accent-wash); color: var(--ink); }
+.subhead nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+.home-head { padding: 56px 0 6px; }
+.home-head h1 { max-width: 17ch; }
+.home-head .lede { font-size: 1.22rem; line-height: 1.42; margin-top: 22px; max-width: 60ch; color: var(--ink-2); }
+.sp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 22px; margin-top: 26px; }
+.sp-card { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+.sp-card .ph { aspect-ratio: 4 / 3; background: var(--grid); position: relative; display: block; }
+.sp-card .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sp-card .credit { position: absolute; right: 0; bottom: 0; font-size: 0.68rem; padding: 2px 8px; background: rgba(0, 0, 0, 0.58); color: #fff; border-top-left-radius: 8px; }
+.sp-card .credit a { color: inherit; }
+.sp-card .tx { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 11px; flex: 1; }
+.sp-card h3 { font-size: 1.24rem; font-style: italic; font-weight: 600; }
+.sp-card h3 a { color: var(--ink); text-decoration: none; }
+.sp-card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.sp-card .where { color: var(--ink-3); font-size: 0.88rem; margin-top: -6px; }
+.sp-card dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0; font-size: 0.9rem; }
+.sp-card dt { color: var(--ink-3); }
+.sp-card dd { margin: 0; }
+.statusbar { display: flex; height: 10px; gap: 2px; margin: 2px 0 4px; }
+.statusbar i { display: block; height: 100%; border-radius: 2px; min-width: 3px; }
+.statusbar .ok { background: var(--st-ok); }
+.statusbar .warn { background: var(--st-warn); }
+.statusbar .part { background: var(--st-serious); }
+.statusbar .miss { background: transparent; box-shadow: inset 0 0 0 1.6px var(--st-crit); }
+.sp-card .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px; }
+.sp-card .links a { font-size: 0.88rem; border: 1px solid var(--rule-strong); border-radius: 999px; padding: 4px 11px; text-decoration: none; color: var(--ink); }
+.sp-card .links a:hover { border-color: var(--ink); }
+table.matrix { border-collapse: collapse; font-size: 0.9rem; background: var(--surface); width: 100%; }
+table.matrix th { font-weight: 600; font-size: 0.82rem; color: var(--ink-2); padding: 9px 6px; text-align: center; vertical-align: bottom; border-bottom: 1px solid var(--rule-strong); }
+table.matrix th.g, table.matrix td.g { text-align: left; padding-left: 14px; }
+table.matrix td { padding: 5px 6px; border-bottom: 1px solid var(--rule); text-align: center; white-space: nowrap; }
+table.matrix td.g button { font: inherit; font-weight: 600; background: none; border: 0; color: var(--ink); cursor: pointer; padding: 0; text-decoration: underline; text-decoration-color: var(--rule-strong); text-underline-offset: 3px; }
+table.matrix tr.grp td { background: var(--paper); font-weight: 600; font-size: 0.8rem; color: var(--ink-3); text-align: left; padding: 6px 14px; }
+table.matrix .cell { display: inline-flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; color: var(--ink-2); font-size: 0.84rem; text-decoration: none; }
+table.matrix tbody tr:not(.grp):hover td { background: var(--accent-wash); }
+.aln-wrap { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; overflow-x: auto; padding: 12px 14px; }
+.aln { font-family: var(--mono); font-size: 0.78rem; line-height: 1.5; white-space: pre; }
+.aln .nm { display: inline-block; width: 17ch; overflow: hidden; text-overflow: ellipsis; vertical-align: bottom; color: var(--ink-2); font-family: var(--sans); font-style: italic; font-size: 0.8rem; position: sticky; left: 0; background: var(--surface); }
+.aln .v { background: var(--accent-wash); color: var(--ink); font-weight: 500; border-radius: 2px; }
+.aln .gp { color: var(--rule-strong); }
+.aln .ruler { color: var(--ink-3); }
+.aln .og { opacity: 0.7; }
+.gene-pick { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 10px 0 14px; }
+.gene-pick select { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--rule-strong); background: var(--surface); color: var(--ink); }
+.tree text { font-size: 13px; fill: var(--ink); }
+.tree .br { stroke: var(--tree-line); stroke-width: 1.6; fill: none; }
+.tree .sup { font-size: 10.5px; fill: var(--ink-3); }
+.tree .og { fill: var(--ink-3); }
+.cons text { font-size: 12px; fill: var(--ink-2); }
+.cons rect.bar { fill: var(--series-1); }
+.cons .val { fill: var(--ink); font-variant-numeric: tabular-nums; }
+.cons g.row { cursor: pointer; }
+.cons g.row:hover rect.bar { opacity: 0.8; }
+
+table.matrix th a { color: var(--ink); text-decoration: none; }
+table.matrix th a:hover { text-decoration: underline; }

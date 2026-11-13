@@ -1,17 +1,53 @@
-# Elysia crispata clock
+# Elysia clocks
 
-Circadian clock genes, kleptoplast identity and a test for algal gene transfer in the lettuce
-sea slug *Elysia crispata*, worked out from the public Sanger genome data for specimen
-xgElyCris1 (BioProject [PRJEB67629](https://www.ebi.ac.uk/ena/browser/view/PRJEB67629);
-Middlebrooks et al. 2026, [Wellcome Open Research 11:148](https://wellcomeopenresearch.org/articles/11-148)).
+Circadian clock genes, kleptoplast identity and tests for algal gene transfer in sea slugs of the
+genus *Elysia*, worked out from public genome data. The repository began with the lettuce sea
+slug *Elysia crispata* (Sanger specimen xgElyCris1, BioProject
+[PRJEB67629](https://www.ebi.ac.uk/ena/browser/view/PRJEB67629); Middlebrooks et al. 2026,
+[Wellcome Open Research 11:148](https://wellcomeopenresearch.org/articles/11-148)) and now covers
+every *Elysia* species with a nuclear genome assembly.
 
 The results are presented as a small website in `docs/`, served by GitHub Pages:
 **https://comparativechrono.github.io/elysia-crispata-clock/**
 
 Nothing here measures a rhythm. Gene roles are inferred from homology with flies and mammals,
-and the work has not been reviewed by the genome authors.
+and the work has not been reviewed by the authors of the genomes.
 
-## What was found
+## The genus
+
+Seven species have a nuclear genome. The 47 clock genes catalogued in *E. crispata* were located
+in each one (`scripts/genus/`), and their proteins aligned across species.
+
+| Species | Reference assembly | Intact | Whole, sequence does not translate cleanly | Partial or in pieces | Not found |
+|---|---|---|---|---|---|
+| *Elysia crispata* | GCA_963854125.1 (chromosome) | 30 | 4 | 5 | 8 |
+| *Elysia chlorotica* | GCA_003991915.1 (scaffold) | 39 | 5 | 3 | 0 |
+| *Elysia marginata* | GCA_019649035.1 (scaffold) | 33 | 8 | 4 | 2 |
+| *Elysia timida* | GCA_043644045.1 (chromosome) | 44 | 1 | 1 | 1 |
+| *Elysia leucolegnote* | GCA_052815195.1 (chromosome) | 43 | 1 | 2 | 1 |
+| *Elysia atroviridis* | GCA_059052615.1 (chromosome) | 44 | 1 | 1 | 1 |
+| *Elysia papillosa* | GCA_977015215.2 (contig) | 43 | 0 | 3 | 1 |
+
+- 27 of the 47 genes are whole in the reference assembly of all seven species, and every species
+  has the whole core loop. Where a gene is partial or missing, the assembly is usually the reason:
+  the two assemblies built mainly from short reads have the most such genes.
+- None of the genes that could not be found in *E. crispata* (Dec1/2, Fbxl3/21, Tyf, Cipc, Ciart,
+  Aanat, Asmt) turns up in any other species.
+- The number of Go-opsin genes differs between species (one to three); Go-opsin 1 of
+  *E. crispata* has a one-to-one counterpart only in *E. chlorotica*.
+- Of the 54 pairs of clock genes that share a chromosome in *E. crispata*, 53 also share one in
+  *E. timida*, *E. leucolegnote* and *E. atroviridis*.
+- A tree from 35 clock proteins (21,190 aligned positions) groups *E. crispata* with
+  *E. chlorotica*, and *E. timida* with *E. leucolegnote* and *E. atroviridis*; *E. papillosa*
+  branches first. All nodes have full support, but a tree from clock proteins alone is a guide,
+  not a phylogeny of the genus.
+
+Models for species without a public annotation (and for genes the annotation lacks) are the
+*E. crispata* protein aligned to the genome. They can miss exons that *E. crispata* does not have.
+The gene annotation of *E. timida* is not in GenBank and its server could not be reached, so all
+*E. timida* models are of this kind. The GenBank sequence of *E. leucolegnote* is 35% masked (N).
+
+## *Elysia crispata* in detail
 
 **Clock genes.** 47 genes are catalogued: the core loop (Clock, Bmal1, Period, Timeless, Timeout,
 Cry1, Cry2), the second loop (Pdp1, Vrille, E75, Hr3, Cwo), kinases, phosphatases, degradation
@@ -55,12 +91,13 @@ The website gives the evidence, the caveats and what the screens cannot rule out
 
 | Path | Contents |
 |---|---|
-| `docs/` | The website (static; `index.html`, `kleptoplasts.html`, `gene-transfer.html`, `methods.html`). Data are embedded in `docs/data/clock.js`; files offered for download are in `docs/downloads/`. |
-| `results/` | Final tables: `clock_genes.tsv` / `.json`, `sequences/` (proteins and coding sequences), `kleptoplast.json`, `kleptoplast_barcodes.tsv`, `hgt.json`, `plastid_fragments_in_assembly.tsv`, `penicillus_plastome_genes.bed`. |
+| `docs/` | The website (static). `index.html` lists the species, `compare.html` compares their clock proteins, and each species has a folder (`docs/elysia-crispata/`, …). Data are embedded in `docs/data/<species>.js` and `docs/data/genus.js`; files offered for download are in `docs/downloads/` and `docs/elysia-crispata/downloads/`. Photographs and their credits are in `docs/assets/photos/`. |
+| `results/` | *E. crispata* tables: `clock_genes.tsv` / `.json`, `sequences/` (proteins and coding sequences), `kleptoplast.json`, `kleptoplast_barcodes.tsv`, `hgt.json`, `plastid_fragments_in_assembly.tsv`, `penicillus_plastome_genes.bed`. |
+| `results/genus/` | One catalogue per further species (`<species>.clock.json`), the gene-by-species table (`clock_matrix.tsv`), protein alignments (`alignments/`), the concatenated alignment and species tree. |
 | `results/trees/` | Family alignments (trimmed) and FastTree trees in Newick format. |
 | `results/intermediate/` | Small intermediate tables: orthologue calls, model choice, read support, expression, the reference panel listing, chimeric-read junctions, boundary evidence, protein-screen inputs. |
-| `config/` | The curated inputs: reference clock proteins (`clock_seeds.tsv`), the gene catalogue with its anchors (`clock_catalogue.tsv`) and genes searched for but not found (`clock_not_found.tsv`). |
-| `scripts/` | The pipeline, numbered in the order it runs. |
+| `config/` | The curated inputs: reference clock proteins (`clock_seeds.tsv`), the gene catalogue with its anchors (`clock_catalogue.tsv`), genes searched for but not found (`clock_not_found.tsv`), the species and their assemblies (`species.tsv`), and the survey of public *Elysia* data (`species_catalogue.tsv`). |
+| `scripts/` | The *E. crispata* pipeline, numbered in the order it runs; `scripts/genus/` holds the steps that run over every species. |
 
 ## Scripts
 
@@ -75,16 +112,26 @@ The website gives the evidence, the caveats and what the screens cannot rule out
 | Assemblies | `21`–`25`, `27`–`29` | Annotated proteins tested for algal affinity; plastid DNA in the four assemblies (exact copies, and every other match that is not a simple repeat); read evidence at each plastid/slug boundary; plastid and photosynthesis proteins aligned to the assemblies; foreign contigs named and their joins tested with reads. |
 | Collect and build | `07`, `26`, `30`, `31` | Results tables and the website. |
 
+Steps that run over every species (`scripts/genus/`):
+
+| Step | Scripts | What they do |
+|---|---|---|
+| Fetch | `00_fetch_assemblies.sh`, `01_fetch_photos.py`, `02_choose_photos.py` | Assemblies (and annotation where GenBank has one) from NCBI; openly licensed photographs from iNaturalist with their credits. |
+| Clock genes | `09_clock_refs.sh`, `10_project_clock_genes.sh`, `11_clock_catalogue.py` | The 47 *E. crispata* proteins aligned to each genome with miniprot; annotated proteins added where available; a reciprocal test against all *E. crispata* proteins; one model per gene. |
+| Compare | `12_compare_species.py`, `13_domains.sh` | Protein alignments (MAFFT), completeness against the positions most sequences share, pairwise identity, the species tree (IQ-TREE), Pfam domains. |
+| Build | `chrome.py`, `20_build_genus_site.py` | Shared page frame; homepage, comparison page and the species pages. |
+
 The scripts were written for one working machine: tool locations
 (`/home/claude/tools/mamba/envs/bio/bin`, overridable with `BIO_BIN` where the script reads it)
 and working directories are passed on the command line or set at the top of each script. Each
 script states its usage in its header. Software used: minimap2, miniprot, DIAMOND, BLAST+, MAFFT,
-trimAl, FastTree, HMMER (Pfam-A), salmon, samtools, seqkit, sra-tools, Python 3 with Biopython.
+trimAl, FastTree, IQ-TREE, HMMER (Pfam-A), salmon, samtools, seqkit, sra-tools, Python 3 with Biopython.
 
 To rebuild the website from the results already in the repository:
 
 ```
-python3 scripts/30_build_site.py . results/trees/figures   # second argument optional
+python3 scripts/30_build_site.py . results/trees/figures   # E. crispata pages; second argument optional
+python3 scripts/genus/20_build_genus_site.py .             # homepage, comparison and the other species
 python3 -m http.server -d docs 8000
 ```
 
@@ -100,6 +147,10 @@ python3 -m http.server -d docs 8000
 | Bacterial genomes assembled from this animal | GCA_964289745, GCA_964291485, GCA_964291505, GCA_964291535 |
 | Other *E. crispata* assemblies (other animals) | GCA_033675545.1 (Purdue, annotated), GCA_984581095.1 (Tampa) |
 | Nanopore reads of the Purdue animal (join tests only) | PRJNA987316, 12 MinION runs |
+
+Assemblies of the other species: *E. chlorotica* GCA_003991915.1, *E. marginata* GCA_019649035.1,
+*E. timida* GCA_043644045.1, *E. leucolegnote* GCA_052815195.1, *E. atroviridis* GCA_059052615.1,
+*E. papillosa* GCA_977015215.2 (details in `config/species.tsv`).
 
 The reference panel used to screen the reads (241 green-algal plastid genomes and others) is
 listed in `results/intermediate/panel.tsv`.
@@ -120,7 +171,11 @@ listed in `results/intermediate/panel.tsv`.
 
 ## Credits
 
-Genome data: Wellcome Sanger Institute Tree of Life and the Aquatic Symbiosis Genomics project;
-please cite Middlebrooks et al. 2026 when using them. Analysis and website were produced with
+Genome data for *E. crispata* and *E. papillosa*: Wellcome Sanger Institute Tree of Life and the
+Aquatic Symbiosis Genomics project; please cite Middlebrooks et al. 2026 when using the
+*E. crispata* data, and the papers of the other genomes (Cai et al. 2019; Maeda et al. 2021;
+Guo & Kong 2026; and the submitters named in each GenBank record) when using theirs.
+Photographs are from iNaturalist under Creative Commons licences; each is credited on the site
+and in `docs/assets/photos/credits.json` (two are CC BY-NC, the rest CC BY). Analysis and website were produced with
 Claude (Anthropic) for the repository owner. Fonts in `docs/assets/fonts/`: Bricolage Grotesque
 and IBM Plex Mono, both under the SIL Open Font License 1.1.

@@ -3,84 +3,55 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Methods and data. Elysia crispata clock</title>
-<meta name="description" content="Circadian clock genes, kleptoplast identity and a test for algal gene transfer in the lettuce sea slug Elysia crispata, from the xgElyCris1 genome data.">
+<title>Methods and data. Elysia clocks</title>
+<meta name="description" content="Circadian clock genes, kleptoplast identity and tests for algal gene transfer in the sea slugs of the genus Elysia, from public genome data.">
 <link rel="preload" href="assets/fonts/BricolageGrotesque-300-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <header class="masthead"><div class="wrap">
-<a class="brand" href="index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia crispata</em> clock</span></a>
-<nav aria-label="Sections"><a href="index.html">Clock genes</a><a href="kleptoplasts.html">Whose chloroplasts</a><a href="gene-transfer.html">Gene transfer</a><a href="methods.html" aria-current="page">Methods and data</a></nav>
+<a class="brand" href="index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia</em> clocks</span></a>
+<nav aria-label="Site"><a href="index.html">Species</a><a href="compare.html">Compare</a><a href="methods.html" aria-current="page">Methods and data</a></nav>
 </div></header>
+
 <main>
 
 <section class="page-head"><div class="wrap">
 <h1>Methods and data</h1>
-<p class="lede">Everything here was computed from public files. The scripts are in the repository; the numbered steps below follow their order.</p>
+<p class="lede">How the genes were found in each genome and compared, and where the data came from. The <i>E. crispata</i> work is described in more detail on <a href="elysia-crispata/methods.html">its own methods page</a>.</p>
 </div></section>
 <section class="block article"><div class="wrap">
-<h2 id="downloads">Downloads</h2>
-<ul class="downloads"><li><a href="downloads/clock_genes.tsv" download>Clock gene table (TSV)</a><span>one row per gene: location, state in four assemblies, domains, orthologues</span></li><li><a href="downloads/clock_proteins.faa" download>Clock proteins (FASTA)</a><span>representative protein for each gene</span></li><li><a href="downloads/clock_cds.fna" download>Clock coding sequences (FASTA)</a><span>where a clean coding sequence could be extracted</span></li><li><a href="downloads/clock_genes.json" download>Everything about each gene (JSON)</a><span>models compared, exon coordinates, read support, expression</span></li><li><a href="downloads/plastid_fragments_in_assembly.tsv" download>Chloroplast fragments in the assemblies (TSV)</a><span>intervals to mask, with the read evidence for each</span></li><li><a href="downloads/kleptoplast_barcodes.tsv" download>Kleptoplast barcode haplotypes (TSV)</a><span>rbcL and tufA sequences with read counts and GenBank matches</span></li><li><a href="downloads/penicillus_plastome_genes.bed" download>Gene positions on the two Penicillus plastid genomes (BED)</a><span>by protein homology to Udotea flabellum NC_039528</span></li><li><a href="downloads/diverged_plastid_like_matches.tsv" download>Plastid-like matches that are not exact copies (TSV)</a><span>every match left in the four assemblies after simple repeats are removed</span></li><li><a href="downloads/protein_screen_loci.tsv" download>Protein screen of the assemblies (TSV)</a><span>every place a plastid or photosynthesis protein aligned, and what it turned out to be</span></li><li><a href="downloads/kleptoplast.json" download>Kleptoplast results (JSON)</a><span></span></li><li><a href="downloads/hgt.json" download>Gene-transfer results (JSON)</a><span></span></li></ul>
+<h2>Genomes used</h2>
+<div class="tablewrap"><table class="data"><thead><tr><th>Species</th><th>Assembly</th><th>Name</th><th>Level</th><th>Gene annotation</th><th>Clock gene models from</th></tr></thead><tbody><tr><td><i>Elysia crispata</i></td><td class="mono">GCA_963854125.1</td><td>xgElyCris1.1</td><td>chromosome-level</td><td>Ensembl rapid release</td><td>curated catalogue (four assemblies)</td></tr><tr><td><i>Elysia chlorotica</i></td><td class="mono">GCA_003991915.1</td><td>ElyChl2.0</td><td>scaffold-level</td><td>GenBank</td><td>annotated genes and aligned proteins</td></tr><tr><td><i>Elysia marginata</i></td><td class="mono">GCA_019649035.1</td><td>Ema_v1</td><td>scaffold-level</td><td>GenBank</td><td>annotated genes and aligned proteins</td></tr><tr><td><i>Elysia timida</i></td><td class="mono">GCA_043644045.1</td><td>ASM4364404v1</td><td>chromosome-level</td><td>authors’ site, not in GenBank</td><td>aligned proteins</td></tr><tr><td><i>Elysia leucolegnote</i></td><td class="mono">GCA_052815195.1</td><td>ASM5281519v1</td><td>chromosome-level</td><td>none public</td><td>aligned proteins</td></tr><tr><td><i>Elysia atroviridis</i></td><td class="mono">GCA_059052615.1</td><td>ASM5905261v1</td><td>chromosome-level</td><td>none public</td><td>aligned proteins</td></tr><tr><td><i>Elysia papillosa</i></td><td class="mono">GCA_977015215.2</td><td>xgElyPapi4.2</td><td>contig-level</td><td>none public</td><td>aligned proteins</td></tr></tbody></table></div>
+<p class="small muted" style="margin-top:10px">Species and data were taken from a survey of the public archives made on 13 November 2026.</p>
 
-<h2>Data used</h2>
-<div class="tablewrap"><table class="data">
-<thead><tr><th>What</th><th>Accession</th><th>Note</th></tr></thead>
-<tbody>
-<tr><td>Genome assembly, primary</td><td class="mono">GCA_963854125.1 (xgElyCris1.1)</td><td>542.6 Mb, 15 chromosomes, 8,217 gaps; Ensembl annotation 2024_05, 18,436 protein-coding genes</td></tr>
-<tr><td>Genome assembly, alternate haplotype</td><td class="mono">GCA_963854135.1</td><td>363.8 Mb in contigs</td></tr>
-<tr><td>PacBio HiFi reads (mid-body)</td><td class="mono">ERR11843472, ERR12353011, ERR12356115</td><td>5,516,672 reads, 46.85 Gb; ultra-low-input, PCR-amplified libraries</td></tr>
-<tr><td>RNA-seq (head, same animal)</td><td class="mono">ERR12342469</td><td>35.3 million read pairs, one library</td></tr>
-<tr><td>Plastid genomes from this animal</td><td class="mono">OZ373742.1, OZ372796.1</td><td>assembled by the Sanger team; labelled <i>P. capitatus</i> and <i>P. lamourouxii</i></td></tr>
-<tr><td>Bacterial genomes from this animal</td><td class="mono">GCA_964289745, GCA_964291485, GCA_964291505, GCA_964291535</td><td><i>Ekhidna</i>, two <i>Kistimonas</i>, <i>Francisella</i>; used as the chimera baseline</td></tr>
-<tr><td>Other <i>E. crispata</i> assemblies</td><td class="mono">GCA_033675545.1 (Purdue), GCA_984581095.1 (Tampa)</td><td>different animals; the Purdue assembly has its own annotation</td></tr>
-<tr><td>Nanopore reads of the Purdue animal</td><td class="mono">PRJNA987316, 12 MinION runs</td><td>38 Gb; used only to test joins in the Purdue assembly</td></tr>
-<tr><td>Dasycladales plastid sequences</td><td class="mono">333 GenBank records</td><td>used to name the <i>Acetabularia</i> contigs in the Purdue assembly</td></tr>
-</tbody></table></div>
-<p style="margin-top:14px">The specimen (NSU0021201, clarki ecotype) was collected at Dove Cove, Key Largo, Florida on 30 July 2020. Genome paper: Middlebrooks et al. 2026, Wellcome Open Research 11:148.</p>
+<h2>Finding the clock genes</h2>
+<details class="method" open><summary>1. Starting point</summary>
+<p>The 47 genes of the <i>E. crispata</i> catalogue, each identified there by reciprocal best hits and a family tree against fly, mammal and mollusc proteins.</p></details>
+<details class="method"><summary>2. Candidates in each genome</summary>
+<p>The 47 proteins were aligned to every genome with miniprot, allowing introns up to 500 kb and keeping weaker second alignments. Where GenBank has a gene annotation (<i>E. chlorotica</i>, <i>E. marginata</i>), the annotated proteins most similar to each catalogue protein were added as candidates.</p></details>
+<details class="method"><summary>3. Telling orthologues from paralogues</summary>
+<p>Each candidate was searched (DIAMOND) against every <i>E. crispata</i> protein of both annotations plus the 47 catalogue proteins. It was kept for a gene only if that gene was its best match among the catalogue and no other <i>E. crispata</i> protein fitted clearly better. The model for a gene is the kept candidate with the most residues identical to the <i>E. crispata</i> protein; an annotated gene is preferred when it is within 2% of the best alignment. Pieces of one protein that lie in order on one strand are joined as a gene with a long intron; pieces on different sequences count as a split gene.</p></details>
+<details class="method"><summary>4. Completeness</summary>
+<p>The models of all species were aligned (MAFFT) with the orthologues of three other gastropods. Completeness is the share of alignment positions present in at least half of the sequences that a model fills. Intact means 90% or more with no frameshift or stop in the genome alignment. This yardstick does not treat the <i>E. crispata</i> model as a gold standard, but a model aligned from <i>E. crispata</i> still cannot contain what the <i>E. crispata</i> model lacks.</p></details>
+<details class="method"><summary>5. Comparison and tree</summary>
+<p>Identity between two proteins is counted over the positions where both have a residue. The tree uses the proteins complete in every species, positions with at most 20% gaps, IQ-TREE with LG+F+G4 and 1,000 ultrafast bootstraps.</p></details>
+<details class="method"><summary>6. Domains</summary><p>Pfam-A, hmmsearch with gathering thresholds.</p></details>
+<p class="small muted">Scripts: <code>scripts/genus/</code> in the repository, numbered in the order they run.</p>
 
-<h2>Clock genes</h2>
-<details class="method" open><summary>1. Reference proteins and candidates</summary>
-<p>102 reference clock proteins (human, mouse, <i>Drosophila</i>, monarch, zebrafish, oyster, <i>Aplysia</i>, squid, scallop) were fetched from UniProt and searched with DIAMOND (very-sensitive) against the Ensembl proteins of xgElyCris1.1, the Purdue-assembly proteins and 16 comparison proteomes. Scripts 01 to 03.</p></details>
-<details class="method"><summary>2. Orthology</summary>
-<p>Each family was aligned with MAFFT, trimmed with trimAl and a tree built with FastTree (LG + gamma, SH-like supports). A gene is named when it falls in the clade of its reference proteins and is the reciprocal best hit of the human or fly gene. Opsins were additionally required to have the retinal-binding lysine. Scripts 04, 05, 09.</p></details>
-<details class="method"><summary>3. Choosing a protein model</summary>
-<p>For each gene the candidates were the Ensembl model, the Purdue model, and translations of the genome guided by orthologues from other sea slugs, <i>Aplysia</i> and <i>Biomphalaria</i> (miniprot). Annotated models that do not re-align cleanly to their own assembly were set aside. Candidates were scored by mean bit score against orthologues in four outgroup molluscs; an existing annotation was kept unless a guided translation beat it by 5% and 30 bits. Six genes ended up with guided translations. Script 06.</p></details>
-<details class="method"><summary>4. Presence in each assembly</summary>
-<p>The chosen protein was aligned to all four assemblies with miniprot. Intact: at least 97% of the protein in one locus at 95% identity or more, with no frameshift or stop. Whole, sequence differs: the same with a frameshift or stop. In pieces: at least 90% found but split across loci. Partial: less than that. Missing: no locus at 95% identity. Scripts 07, 08.</p></details>
-<details class="method"><summary>5. Reads and RNA</summary>
-<p>Exons of every gene (from the Purdue models, with 150 bp flanks, repeat-containing parts masked) were included as baits when all HiFi reads were screened; a read counts when it aligns over 150 bp at 95% or better. Head RNA-seq was quantified with salmon against the Purdue coding sequences (37.5% of pairs assigned). Scripts 16, 20.</p></details>
+<h2>Downloads</h2>
+<ul class="downloads"><li><a href="downloads/clock_matrix.tsv" download>Gene by species table (TSV)</a><span>state, completeness, identity to E. crispata and location of every gene in every species</span></li><li><a href="downloads/species_tree.nwk" download>Species tree (Newick)</a><span>from the clock proteins complete in every species</span></li><li><a href="downloads/elysia-chlorotica_clock_proteins.faa" download>Elysia chlorotica clock proteins (FASTA)</a><span></span></li><li><a href="downloads/elysia-chlorotica_clock_cds.fna" download>Elysia chlorotica coding sequences (FASTA)</a><span></span></li><li><a href="downloads/elysia-marginata_clock_proteins.faa" download>Elysia marginata clock proteins (FASTA)</a><span></span></li><li><a href="downloads/elysia-marginata_clock_cds.fna" download>Elysia marginata coding sequences (FASTA)</a><span></span></li><li><a href="downloads/elysia-timida_clock_proteins.faa" download>Elysia timida clock proteins (FASTA)</a><span></span></li><li><a href="downloads/elysia-timida_clock_cds.fna" download>Elysia timida coding sequences (FASTA)</a><span></span></li><li><a href="downloads/elysia-leucolegnote_clock_proteins.faa" download>Elysia leucolegnote clock proteins (FASTA)</a><span></span></li><li><a href="downloads/elysia-leucolegnote_clock_cds.fna" download>Elysia leucolegnote coding sequences (FASTA)</a><span></span></li><li><a href="downloads/elysia-atroviridis_clock_proteins.faa" download>Elysia atroviridis clock proteins (FASTA)</a><span></span></li><li><a href="downloads/elysia-atroviridis_clock_cds.fna" download>Elysia atroviridis coding sequences (FASTA)</a><span></span></li><li><a href="downloads/elysia-papillosa_clock_proteins.faa" download>Elysia papillosa clock proteins (FASTA)</a><span></span></li><li><a href="downloads/elysia-papillosa_clock_cds.fna" download>Elysia papillosa coding sequences (FASTA)</a><span></span></li></ul>
 
-<h2>Kleptoplasts and gene transfer</h2>
-<details class="method" open><summary>6. Screening every read</summary>
-<p>All reads were mapped (minimap2, k = 15) to a panel of 241 green-algal and 7 other plastid genomes, 117 algal mitochondrial genomes, 1,249 nuclear rDNA sequences of Bryopsidales, the four bacterial genomes, and the slug mitochondrion and rDNA. Fourteen low-complexity windows that attracted thousands of unrelated reads were masked. Scripts 10, 11.</p></details>
-<details class="method"><summary>7. Naming the algae</summary>
-<p>Plastid reads were assigned to their best-matching plastid genome (divergence 3% or less over 1 kb or more). rbcL and tufA were cut out of every read spanning them, identical sequences counted, and each haplotype compared with 6,453 GenBank barcodes of Bryopsidales. Script 13.</p></details>
-<details class="method"><summary>8. Chimeric reads</summary>
-<p>Reads with a panel match and 500 bp or more left unexplained were re-aligned base by base (minimap2 map-hifi) to the Sanger primary and alternate assemblies plus the panel, and the remainder to the Purdue and Tampa assemblies. A junction needs a slug segment next to a non-slug segment, each at least 300 bp at 97% identity or better. Read totals for each class use confident matches only (3% divergence or less over 1 kb or more). Two reads count as independent molecules only if both of their ends differ by more than 50 bp. Reads set aside for matching a plastid genome only weakly were searched in the same alignments for plastid segments of 200 bp or more that are not simple repeats. Scripts 14, 15, 17.</p></details>
-<details class="method"><summary>9. Chloroplast DNA in the assemblies</summary>
-<p>All four assemblies were cut into 10 kb windows and aligned base by base to the same panel. Matches of 200 bp or more at 97% identity or better are the exact copies. The rest were filtered for simple repeats (trinucleotide entropy of the matched panel sequence below 4.5 bits, or a panel window hit by 15 or more assembly windows) and whatever remained at 80% identity or better was listed one by one. For each exact plastid copy, a window of the copy plus 8 kb of neighbouring slug DNA was cut out. Repeats in the slug part were found empirically (100 bp bins hit by 4 or more of 20,000 reads) and masked, and every read of two of the three runs (ERR12356115 and ERR12353011, 53% of the data) was mapped to the masked windows; reads landing within 1.5 kb of a boundary were then aligned base by base. A read carries the junction if one alignment spans it by 300 bp on each side. It contradicts the junction if it matches 1 kb or more of slug flank at 98% or better, stops within 50 bp of the boundary, and has 300 bp or more left over. Scripts 22 to 27.</p></details>
-<details class="method"><summary>10. Algal genes by protein similarity</summary>
-<p>Every annotated protein (longest isoform per Ensembl gene, and all Purdue proteins) was searched with DIAMOND (sensitive) against the animal, algal, bacterial and fungal proteins listed on the gene-transfer page. A protein is listed when its best match overall is not an animal, and called a strong candidate when that match beats the best non-sacoglossan animal match by 20% in bit score. Separately, 471 plastid and photosynthesis proteins were aligned to all four assemblies with miniprot; overlapping hits were merged into loci, and the translation of each locus was searched against the same database to tell an algal gene from the slug’s own homologue. Scripts 21, 28, 29.</p></details>
-
-<details class="method"><summary>11. Foreign contigs and joins in the Purdue assembly</summary>
-<p>Contigs carrying algal genes outside the known fragments were compared with the other assemblies (minimap2 asm20), with two runs of xgElyCris1 reads, and with the plastid sequences GenBank holds for Dasycladales (BLAST dc-megablast). Joins between chloroplast and slug DNA were tested with the Purdue animal’s Nanopore reads: every read was mapped to a 4 kb bait on the single-copy side of the join (repeats masked), and reads reaching the join were aligned to a window around it. A read runs through if one alignment extends 300 bp past the join on both sides; it stops at the join if its alignment ends within 150 bp of it with 200 bp or more of the read left over. Scripts 29.</p></details>
-
-<h2>Caveats</h2>
-<ul>
-<li>Gene roles are inferred from homology with flies and mammals. Nothing here measures a rhythm.</li>
-<li>xgElyCris1.1 is incomplete (BUSCO 73.6% complete; about 60% of read k-mers represented). A gene missing from it is not missing from the animal, as the catalogue shows.</li>
-<li>Six protein models are translations guided by another species’ protein and may miss lineage-specific exons. The gene pages say which.</li>
-<li>Tree supports are FastTree local supports, not bootstraps. Where a clade is weakly supported the call rests on reciprocal best hits.</li>
-<li>Expression values come from one head sample at one unknown time of day.</li>
-<li>Independent work; not reviewed by the genome authors.</li>
-</ul>
+<h2 id="photos">Photographs</h2>
+<p>The photographs are not of the sequenced animals. They come from iNaturalist observations and are used under the licence shown. Two species had no photo under a fully open licence, so theirs carry a non-commercial licence.</p>
+<div class="tablewrap"><table class="data"><thead><tr><th>Species</th><th>Photographer</th><th>Licence</th><th>Where and when</th></tr></thead><tbody><tr><td><i>Elysia crispata</i></td><td><a href="https://www.inaturalist.org/observations/339101608">Dan Schofield</a></td><td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td><td>9HMM+576, Vixville Dr, West Bay, Cayman Islands, 2026-02-16</td></tr><tr><td><i>Elysia chlorotica</i></td><td><a href="https://www.inaturalist.org/observations/84354814">Ian Manning</a></td><td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td><td>Hants County, NS, Canada, 2021-06-24</td></tr><tr><td><i>Elysia marginata</i></td><td><a href="https://www.inaturalist.org/observations/181172853">Bernard Picton</a></td><td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td><td>Bima 2, Nusa Tenggara Barat, Indonesia, 2015-09-08</td></tr><tr><td><i>Elysia timida</i></td><td><a href="https://www.inaturalist.org/observations/383094713">Vsevolod Rudyi</a></td><td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td><td>Medes Islands, Girona, Spain, 2026-07-18</td></tr><tr><td><i>Elysia leucolegnote</i></td><td><a href="https://www.inaturalist.org/observations/341184855">arthur_ensis</a></td><td><a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></td><td>Thailand, 2026-02-28</td></tr><tr><td><i>Elysia atroviridis</i></td><td><a href="https://www.inaturalist.org/observations/344878140">fhvc</a></td><td><a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></td><td>Qingdao, CN-SD, CN, 2026-03-19</td></tr><tr><td><i>Elysia papillosa</i></td><td><a href="https://www.inaturalist.org/observations/202311872">Pauline Walsh Jacobson</a></td><td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td><td>Monroe County, FL, USA, 2019-08-15</td></tr></tbody></table></div>
 </div></section>
 
 </main>
 <footer class="site"><div class="wrap">
-<p>Built 2026-11-13 from public data: genome assembly xgElyCris1.1 and reads of BioProject PRJEB67629 (Middlebrooks et al. 2026, Wellcome Open Research 11:148; Aquatic Symbiosis Genomics, Wellcome Sanger Institute), released under the Tree of Life open data policy. The analysis here is independent of the genome authors and has not been peer reviewed.</p>
-<p>Scripts, tables and sequences are in the repository that hosts this site. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
+
+<p>Built 2026-11-13 from public genome data. The analysis is independent of the groups that produced the genomes and has not been peer reviewed. Gene roles are inferred from homology with flies and mammals; nothing here measures a rhythm.</p>
+<p>Scripts, tables and sequences are in the repository that hosts this site. Photographs are credited on the <a href="methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
 </div></footer>
 <script src="assets/pages.js"></script>
 </body>

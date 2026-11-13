@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Build the GitHub Pages site in docs/ from the result files.
+"""Build the Elysia crispata pages of the site (docs/elysia-crispata/) from the result files.
 
 usage: 30_build_site.py repo_dir [tree_svg_dir]
 Reads  results/clock_genes.json, results/kleptoplast.json, results/hgt.json (the last two optional)
-Writes docs/index.html, docs/kleptoplasts.html, docs/gene-transfer.html, docs/methods.html,
-       docs/data/clock.js and copies the downloadable tables into docs/downloads/.
+       and, when present, results/genus/genus.json (the same genes in the other species)
+Writes docs/elysia-crispata/{index,kleptoplasts,gene-transfer,methods}.html,
+       docs/data/elysia-crispata.js and copies the downloadable tables into
+       docs/elysia-crispata/downloads/. The home page, the comparison page and the pages of
+       the other species are written by scripts/genus/20_build_genus_site.py.
 Every number on the pages is taken from the result files, so re-running the analysis and
 then this script keeps the site in step with the data.
 """
@@ -12,9 +15,11 @@ import sys, os, json, shutil, html, datetime, glob
 
 repo = sys.argv[1]
 treedir = sys.argv[2] if len(sys.argv) > 2 else os.path.join(repo, "results", "trees", "figures")
-R = os.path.join(repo, "results"); DOCS = os.path.join(repo, "docs")
-os.makedirs(os.path.join(DOCS, "data"), exist_ok=True)
+R = os.path.join(repo, "results"); SITE = os.path.join(repo, "docs"); DOCS = os.path.join(SITE, "elysia-crispata")
+os.makedirs(os.path.join(SITE, "data"), exist_ok=True)
 os.makedirs(os.path.join(DOCS, "downloads"), exist_ok=True)
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "genus"))
+import chrome
 
 LABEL = {"Ck1de": "Ck1δ/ε", "Ck1a": "Ck1α", "Ck2a": "Ck2α", "Ck2b": "Ck2β", "Pp1a": "Pp1α", "Pp1b": "Pp1β", "Pp2aC": "Pp2a-C",
          "Pp2aB55": "Pp2a-B55", "Pp2aB56e": "Pp2a-B56ε", "Pp2aB56d": "Pp2a-B56δ", "Phr6-4": "Phr 6-4", "PhrCPD": "Phr CPD",
@@ -49,41 +54,32 @@ for g in genes:
     if os.path.exists(p): trees[g["symbol"]] = open(p).read()
 depths = [g["reads_support"]["median_reads"] for g in genes if g.get("reads_support")]
 meta = dict(built=today, typical_exon_depth=statistics.median(depths) if depths else 0)
+# the same genes in the other species (written by scripts/genus/12_compare_species.py)
+across = {}
+gp = os.path.join(R, "genus", "genus.json")
+if os.path.exists(gp):
+    GN = json.load(open(gp)); TAGS = {x["tag"]: x for x in GN["species"]}
+    for sym, gg in GN["genes"].items():
+        rows = []
+        for sp in GN["species"]:
+            if sp["slug"] == "elysia-crispata": continue
+            cp = os.path.join(R, "genus", sp["slug"] + ".clock.json")
+            if not os.path.exists(cp): continue
+            og = next(x for x in json.load(open(cp))["genes"] if x["symbol"] == sym)
+            rows.append(dict(name=sp["name"], href=f"../{sp['slug']}/index.html#gene/{sym}", status=og["status"], length=og.get("length", 0),
+                             identity=gg["identity"].get("|".join(sorted((sp["tag"], "ELYCR"))))))
+        across[sym] = rows
 data = dict(genes=genes, not_found=clock["not_found"], assemblies=ASM_SHORT, categories=CATS, species=SPECIES,
-            chromosomes=[dict(name=n, length=l) for n, l in CHROMS], trees=trees, meta=meta)
-with open(os.path.join(DOCS, "data", "clock.js"), "w") as fo:
+            chromosomes=[dict(name=n, length=l) for n, l in CHROMS], trees=trees, meta=meta, across=across, compare_href="../compare.html")
+with open(os.path.join(SITE, "data", "elysia-crispata.js"), "w") as fo:
     fo.write("window.CLOCK = " + json.dumps(data, separators=(",", ":")) + ";\n")
 
 # ------------------------------------------------------------------ shared chrome
+CRISPATA_SOURCES = ("<i>Elysia crispata</i>: genome assembly xgElyCris1.1 and reads of BioProject PRJEB67629 (Middlebrooks et al. 2026, Wellcome Open Research 11:148; "
+                    "Aquatic Symbiosis Genomics, Wellcome Sanger Institute), released under the Tree of Life open data policy.")
 def page(title, current, body, scripts=""):
-    nav = [("index.html", "Clock genes"), ("kleptoplasts.html", "Whose chloroplasts"), ("gene-transfer.html", "Gene transfer"), ("methods.html", "Methods and data")]
-    links = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h == current else ""}>{t}</a>' for h, t in nav)
-    return f"""<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{e(title)}</title>
-<meta name="description" content="Circadian clock genes, kleptoplast identity and a test for algal gene transfer in the lettuce sea slug Elysia crispata, from the xgElyCris1 genome data.">
-<link rel="preload" href="assets/fonts/BricolageGrotesque-300-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css">
-</head>
-<body>
-<header class="masthead"><div class="wrap">
-<a class="brand" href="index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia crispata</em> clock</span></a>
-<nav aria-label="Sections">{links}</nav>
-</div></header>
-<main>
-{body}
-</main>
-<footer class="site"><div class="wrap">
-<p>Built {today} from public data: genome assembly xgElyCris1.1 and reads of BioProject PRJEB67629 (Middlebrooks et al. 2026, Wellcome Open Research 11:148; Aquatic Symbiosis Genomics, Wellcome Sanger Institute), released under the Tree of Life open data policy. The analysis here is independent of the genome authors and has not been peer reviewed.</p>
-<p>Scripts, tables and sequences are in the repository that hosts this site. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
-</div></footer>
-{scripts}
-</body>
-</html>
-"""
+    return chrome.page(title, body, root="../", species="Elysia crispata", tabs=chrome.SPECIES_TABS, tab_current=current, scripts=scripts, today=today, sources=CRISPATA_SOURCES,
+                       description="Circadian clock genes, kleptoplast identity and a test for algal gene transfer in the lettuce sea slug Elysia crispata, from the xgElyCris1 genome data.")
 
 def status_counts():
     c = {}
@@ -156,7 +152,7 @@ index_body = f"""
 </div></section>
 <dialog class="gene" id="gene" aria-label="Gene details"></dialog>
 """
-open(os.path.join(DOCS, "index.html"), "w").write(page("Elysia crispata clock genes", "index.html", index_body, '<script src="data/clock.js"></script>\n<script src="assets/app.js"></script>'))
+open(os.path.join(DOCS, "index.html"), "w").write(page("Elysia crispata clock genes", "index.html", index_body, '<script src="../data/elysia-crispata.js"></script>\n<script src="../assets/app.js"></script>'))
 
 # downloads
 for f in ("clock_genes.tsv", "clock_genes.json"):

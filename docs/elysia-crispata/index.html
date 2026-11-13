@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elysia crispata clock genes</title>
+<meta name="description" content="Circadian clock genes, kleptoplast identity and a test for algal gene transfer in the lettuce sea slug Elysia crispata, from the xgElyCris1 genome data.">
+<link rel="preload" href="../assets/fonts/BricolageGrotesque-300-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+<a class="brand" href="../index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia</em> clocks</span></a>
+<nav aria-label="Site"><a href="../index.html">Species</a><a href="../compare.html">Compare</a><a href="../methods.html">Methods and data</a></nav>
+</div></header>
+<div class="subhead"><div class="wrap"><a class="sp" href="index.html"><i>Elysia crispata</i></a><nav aria-label="Pages for this species"><a href="index.html" aria-current="page">Clock genes</a><a href="kleptoplasts.html">Whose chloroplasts</a><a href="gene-transfer.html">Gene transfer</a><a href="methods.html">Methods for this species</a></nav></div></div>
+<main>
+
+<section class="intro"><div class="wrap">
+<h1>The lettuce sea slug’s clock, gene by gene</h1>
+<p class="lede"><i>Elysia crispata</i> keeps stolen chloroplasts photosynthesising for months. This is a catalogue of the circadian clock genes in its genome: where each one sits in the Sanger assembly xgElyCris1.1, whether the assembly has it whole, and the protein it encodes.</p>
+<div class="clockwork">
+<div id="schematic"></div>
+<div class="clockwork-list" id="schematic-list"></div>
+<div class="clockwork-legend" aria-label="Key to gene status in xgElyCris1.1">
+<span><i class="glyph ok"></i>intact in xgElyCris1.1</span>
+<span><i class="glyph warn"></i>whole, but the assembly sequence differs</span>
+<span><i class="glyph part"></i>partial or in pieces</span>
+<span><i class="glyph miss"></i>missing from the assembly</span>
+</div>
+</div>
+<p class="clockwork-caveat">Select a gene to open it. The wiring is the textbook fly and mouse clock; which gene does what in <i>Elysia</i> has not been tested, and one RNA sample cannot show rhythm.</p>
+</div></section>
+
+<section class="block"><div class="wrap">
+<div class="cols">
+<div><h3>A complete clock, by homology</h3>
+<p>47 genes: both halves of the core activator (Clock and Bmal1), the repressors Period, Timeless and a mammalian-type Cryptochrome, a light-sensitive Cryptochrome, the second loop (Pdp1, Vrille, E75, Hr3, Clockwork orange), fifteen kinases, phosphatases and degradation factors, ten opsins and four photolyases. Each call rests on reciprocal best hits and a family tree.</p></div>
+<div><h3>The assembly misses some of it</h3>
+<p>30 genes are intact in xgElyCris1.1 and 4 more are whole but with a frameshift or other mismatch in the assembly sequence. 5 are partial or scrambled (Bmal1, Timeout, Cwo, Nemo, Neuropsin) and 8 are absent (Pdp1, E75, Pp1α, Slimb, Pdfr, r-opsin 1, r-opsin 2, Xenopsin).</p></div>
+<div><h3>Missing from the assembly, not the animal</h3>
+<p>All 47 genes are whole in at least one of the two other <i>E. crispata</i> assemblies, and reads from the sequenced animal itself cover their exons. Several of them sit in stretches the sequencing library barely sampled: Xenopsin (8 reads per exon), Nemo (9 reads per exon), E75 (10 reads per exon), Bmal1 (16 reads per exon), Cwo (18 reads per exon), against 67 for a typical clock gene. The library was amplified by PCR from very little DNA, which leaves holes like these.</p></div>
+</div>
+</div></section>
+
+<section class="block"><div class="wrap">
+<h2>Where the genes sit</h2>
+<p>The 15 chromosome-scale scaffolds of xgElyCris1.1, drawn to scale. Each mark is a clock gene; select one to open it.</p>
+<div class="karyo-card"><div class="karyo" id="karyo"></div><div class="offmap" id="offmap"></div></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+<h2>All 47 genes</h2>
+<div class="filters" id="filters"></div>
+<div class="tablewrap"><table class="genes">
+<thead><tr><th>Gene</th><th>Role</th><th class="num">Protein, aa</th><th>In xgElyCris1.1</th><th>Other assemblies</th><th class="num" title="Median number of HiFi reads from the sequenced animal covering each exon">Reads per exon</th><th class="num" title="Transcripts per million in the head RNA-seq library">Head RNA, TPM</th></tr></thead>
+<tbody id="genes-body"></tbody></table></div>
+<p class="small muted" style="margin-top:12px;max-width:90ch">Other assemblies: the alternate haplotype of the same animal, and two independent assemblies of other individuals (Purdue, GCA_033675545.1; Tampa, GCA_984581095.1). Reads per exon counts PacBio HiFi reads from the sequenced animal. Head RNA is one library from the same animal.</p>
+
+<h3 style="margin-top:34px">Looked for and not found</h3>
+<div class="tablewrap" style="margin-top:10px"><table class="data">
+<thead><tr><th>Gene</th><th>Searched with</th><th>Reading</th></tr></thead>
+<tbody><tr><td><strong>Dec1/2</strong><br><span class="muted small">Bhlhe40 / Bhlhe41</span></td><td class="mono">HsBHLHE40, HsBHLHE41</td><td>no orthologue; closest bHLH-Orange genes are Hey and Clockwork orange</td></tr><tr><td><strong>Fbxl3/21</strong><br><span class="muted small">F-box/LRR protein 3 / 21</span></td><td class="mono">HsFBXL3, MmFbxl21</td><td>vertebrate-specific Cry ubiquitin ligases; no orthologue</td></tr><tr><td><strong>Tyf</strong><br><span class="muted small">Twenty-four</span></td><td class="mono">DmTyf</td><td>no homologue detected</td></tr><tr><td><strong>Cipc</strong><br><span class="muted small">Clock-interacting pacemaker</span></td><td class="mono">HsCIPC</td><td>no homologue detected</td></tr><tr><td><strong>Ciart</strong><br><span class="muted small">Chrono (Ciart)</span></td><td class="mono">HsCIART</td><td>vertebrate-specific; no homologue detected</td></tr><tr><td><strong>Aanat</strong><br><span class="muted small">Arylalkylamine N-acetyltransferase</span></td><td class="mono">HsAANAT, DmAANAT1</td><td>no homologue detected with vertebrate or insect seeds</td></tr><tr><td><strong>Asmt</strong><br><span class="muted small">Acetylserotonin O-methyltransferase (Hiomt)</span></td><td class="mono">HsASMT</td><td>no homologue detected</td></tr></tbody></table></div>
+</div></section>
+<dialog class="gene" id="gene" aria-label="Gene details"></dialog>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><i>Elysia crispata</i>: genome assembly xgElyCris1.1 and reads of BioProject PRJEB67629 (Middlebrooks et al. 2026, Wellcome Open Research 11:148; Aquatic Symbiosis Genomics, Wellcome Sanger Institute), released under the Tree of Life open data policy.</p>
+<p>Built 2026-11-13 from public genome data. The analysis is independent of the groups that produced the genomes and has not been peer reviewed. Gene roles are inferred from homology with flies and mammals; nothing here measures a rhythm.</p>
+<p>Scripts, tables and sequences are in the repository that hosts this site. Photographs are credited on the <a href="../methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
+</div></footer>
+<script src="../data/elysia-crispata.js"></script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,5 +1,7 @@
-/* Elysia crispata clock — gene browser (index page).
-   Data arrive as window.CLOCK from data/clock.js, which scripts/30_build_site.py writes. */
+/* Elysia clocks: gene browser for one species.
+   Data arrive as window.CLOCK from that species' data file, written by the site builders.
+   D.primary is the key of the assembly the page is about, D.others the further assemblies of
+   the same species (E. crispata has three), D.columns the table columns to show. */
 (function () {
   "use strict";
   const D = window.CLOCK;
@@ -7,6 +9,12 @@
   const byId = (id) => document.getElementById(id);
   const G = {};
   D.genes.forEach((g) => (G[g.symbol] = g));
+  const P = D.primary || "sanger";
+  const AN = D.primary_name || "xgElyCris1.1";
+  const OTHERS = D.others || [["alt", "alt", "the alternate haplotype"], ["purdue", "Purdue", "the Purdue assembly"], ["tampa", "Tampa", "the Tampa assembly"]];
+  const SPN = D.species_name || "Elysia crispata";
+  const PRE = D.prefix || "Ecr";
+  const COLS = D.columns || ["gene", "role", "aa", "status", "others", "reads", "rna"];
 
   function el(tag, attrs, kids) {
     const n = document.createElement(tag);
@@ -42,11 +50,11 @@
     divergent: { cls: "miss", word: "divergent copy only" },
     absent: { cls: "miss", word: "missing" },
   };
-  const stOf = (g, asm) => STATUS[g.assemblies[asm || "sanger"].status];
+  const stOf = (g, asm) => STATUS[g.assemblies[asm || P].status];
   function glyph(cls) { return el("i", { class: "glyph " + cls, "aria-hidden": "true" }); }
   function statusHtml(g, asm, withWord) {
     const s = stOf(g, asm);
-    const a = g.assemblies[asm || "sanger"];
+    const a = g.assemblies[asm || P];
     let word = s.word;
     if (a.status === "partial") word = "partial, " + Math.round(a.coverage * 100) + "%";
     return el("span", { class: "st" }, [glyph(s.cls), withWord === false ? el("span", { class: "sr", text: word }) : document.createTextNode(word)]);
@@ -85,9 +93,9 @@
     node.addEventListener("blur", hideTip);
   }
   function geneTip(g) {
-    const a = g.assemblies.sanger;
+    const a = g.assemblies[P];
     const loc = a.pieces.length ? a.pieces.map((p) => `${chrName(p.chrom)}:${fmt(p.start)}`).join(", ") : "not in the assembly";
-    return `<b>${g.label}</b><br>${g.name}<br>${fmt(g.length)} aa, ${stOf(g).word} in xgElyCris1.1<br>${loc}`;
+    return `<b>${g.label}</b><br>${g.name}<br>${fmt(g.length)} aa, ${stOf(g).word} in ${AN}<br>${loc}`;
   }
   const chrName = (c) => (/^\d+$/.test(c) ? "chr" + c : c);
 
@@ -130,7 +138,7 @@
   const pillW = (g) => Math.ceil(textW(g.label)) + 36;
   function pill(g, x, y) {
     const w = pillW(g);
-    const n = sv("g", { class: "pill", tabindex: 0, role: "button", "aria-label": `${g.label}: ${g.name}. ${stOf(g).word} in xgElyCris1.1`, transform: `translate(${x} ${y})` }, [
+    const n = sv("g", { class: "pill", tabindex: 0, role: "button", "aria-label": `${g.label}: ${g.name}. ${stOf(g).word} in ${AN}`, transform: `translate(${x} ${y})` }, [
       sv("rect", { x: 0, y: 0, width: w, height: PILL_H, rx: PILL_H / 2 }),
       svgGlyph(stOf(g).cls, 14, PILL_H / 2, 5),
       sv("text", { x: 25, y: 18.5, text: g.label }),
@@ -225,17 +233,17 @@
   }
   function chip(s) {
     const g = G[s];
-    return el("button", { class: "chip", type: "button", onclick: () => openGene(s), "aria-label": `${g.label}: ${stOf(g).word} in xgElyCris1.1` }, [glyph(stOf(g).cls), document.createTextNode(g.label)]);
+    return el("button", { class: "chip", type: "button", onclick: () => openGene(s), "aria-label": `${g.label}: ${stOf(g).word} in ${AN}` }, [glyph(stOf(g).cls), document.createTextNode(g.label)]);
   }
 
   /* ---------- karyotype */
   function renderKaryo() {
     const host = byId("karyo");
-    if (!host) return;
+    if (!host || !D.chromosomes || !D.chromosomes.length) return;
     const chrs = D.chromosomes, maxLen = Math.max(...chrs.map((c) => c.length));
     const X0 = 46, W = 1100, PW = W - X0 - 30, ROW = 56, TOP = 26;
     const H = TOP + chrs.length * ROW + 26;
-    const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "group", "aria-label": "Positions of clock genes on the 15 chromosomes of xgElyCris1.1" });
+    const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "group", "aria-label": `Positions of clock genes on the ${D.chromosomes.length} chromosomes of ${AN}` });
     const x = (bp) => X0 + (bp / maxLen) * PW;
     const axis = sv("g", { class: "axis" });
     for (let t = 0; t <= maxLen; t += 10e6) {
@@ -248,7 +256,7 @@
       svg.append(sv("text", { class: "chr-label", x: X0 - 10, y: y + 8, "text-anchor": "end", text: c.name }));
       svg.append(sv("rect", { class: "chr", x: X0, y, width: Math.max(4, x(c.length) - X0), height: 8, rx: 4 }));
       const marks = [];
-      D.genes.forEach((g) => g.assemblies.sanger.pieces.forEach((p, k) => { if (p.chrom === c.name && k === 0) marks.push({ g, bp: (p.start + p.end) / 2 }); }));
+      D.genes.forEach((g) => g.assemblies[P].pieces.forEach((p, k) => { if (p.chrom === c.name && k === 0) marks.push({ g, bp: (p.start + p.end) / 2 }); }));
       marks.sort((a, b) => a.bp - b.bp);
       const used = { up: -1e9, down: -1e9 };
       marks.forEach((m) => {
@@ -276,8 +284,8 @@
     host.replaceChildren(svg);
     const off = byId("offmap");
     if (off) {
-      const unplaced = D.genes.filter((g) => g.assemblies.sanger.pieces.length && !g.assemblies.sanger.pieces.some((p) => /^\d+$/.test(p.chrom)));
-      const none = D.genes.filter((g) => !g.assemblies.sanger.pieces.length);
+      const unplaced = D.genes.filter((g) => g.assemblies[P].pieces.length && !g.assemblies[P].pieces.some((p) => /^\d+$/.test(p.chrom)));
+      const none = D.genes.filter((g) => !g.assemblies[P].pieces.length);
       off.replaceChildren(
         el("div", {}, [el("h4", { text: `On scaffolds not yet placed on a chromosome (${unplaced.length})` }), el("div", { class: "chips" }, unplaced.map((g) => chip(g.symbol)))]),
         el("div", {}, [el("h4", { text: `Not in the assembly at all (${none.length})` }), el("div", { class: "chips" }, none.map((g) => chip(g.symbol)))])
@@ -294,8 +302,8 @@
     if (state.status === "intact" && cls !== "ok") return false;
     if (state.status === "problem" && cls === "ok") return false;
     if (state.q) {
-      const hay = [g.symbol, g.label, g.name, g.ensembl_overlap.join(" "), g.ensembl_genes.join(" "), g.purdue_proteins.map((p) => p.accession + " " + p.locus_tag).join(" "), g.domains.map((d) => d.name).join(" "),
-        g.orthologues.map((o) => o.gene).join(" ")].join(" ").toLowerCase();
+      const hay = [g.symbol, g.label, g.name, (g.ensembl_overlap || []).join(" "), (g.ensembl_genes || []).join(" "), (g.purdue_proteins || []).map((p) => p.accession + " " + p.locus_tag).join(" "), g.domains.map((d) => d.name).join(" "),
+        (g.orthologues || []).map((o) => o.gene).join(" "), (g.ids || []).join(" ")].join(" ").toLowerCase();
       if (!state.q.toLowerCase().split(/\s+/).every((w) => hay.includes(w))) return false;
     }
     return true;
@@ -307,7 +315,7 @@
       onclick: () => { state[group] = value; renderFilters(); renderTable(); } });
     host.replaceChildren(
       el("input", { type: "search", placeholder: "Search gene, ID or domain", "aria-label": "Search genes", value: state.q, oninput: (e) => { state.q = e.target.value; renderTable(); } }),
-      mk("status", "all", "All"), mk("status", "intact", "Intact in xgElyCris1.1"), mk("status", "problem", "Not intact"),
+      mk("status", "all", "All"), mk("status", "intact", "Intact in " + AN), mk("status", "problem", "Not intact"),
       el("span", { class: "muted small", text: "|" }),
       mk("cat", "all", "Every role"), ...Object.keys(CATS).map((c) => mk("cat", c, CATS[c])),
       el("span", { class: "count", id: "count" })
@@ -320,48 +328,58 @@
     const maxDepth = Math.max(...D.genes.map((g) => (g.reads_support ? g.reads_support.median_reads : 0)), 1);
     const maxTpm = Math.max(...D.genes.map((g) => (g.expression ? Math.log10(1 + g.expression.tpm) : 0)), 0.1);
     host.replaceChildren(...rows.map((g) => {
-      const a = g.assemblies.sanger;
+      const a = g.assemblies[P];
       const locus = a.pieces.length ? a.pieces.map((p) => `${chrName(p.chrom)}:${fmt(p.start)}–${fmt(p.end)}`).join("; ") : (a.best_other && a.status === "divergent" ? `closest: ${chrName(a.best_other.chrom)}:${fmt(a.best_other.start)}` : "");
-      const tr = el("tr", { onclick: () => openGene(g.symbol) }, [
-        el("td", { class: "sym" }, [el("button", { type: "button", text: g.label, "aria-label": `Open ${g.label}` }), el("span", { class: "gname", text: g.name })]),
-        el("td", { text: CATS[g.category] || g.category }),
-        el("td", { class: "num", text: fmt(g.length) }),
-        el("td", {}, [statusHtml(g, "sanger"), locus ? el("span", { class: "locus", text: locus }) : null]),
-        el("td", {}, [el("span", { class: "others" }, [["alt", "alt"], ["purdue", "Purdue"], ["tampa", "Tampa"]].map(([k, lab]) => {
+      const cells = {
+        gene: () => el("td", { class: "sym" }, [el("button", { type: "button", text: g.label, "aria-label": `Open ${g.label}` }), el("span", { class: "gname", text: g.name })]),
+        role: () => el("td", { text: CATS[g.category] || g.category }),
+        aa: () => el("td", { class: "num", text: g.length ? fmt(g.length) : "–" }),
+        status: () => el("td", {}, [statusHtml(g, P), locus ? el("span", { class: "locus", text: locus }) : null]),
+        others: () => el("td", {}, [el("span", { class: "others" }, OTHERS.map(([k, lab]) => {
           const s = el("span", {}, [glyph(stOf(g, k).cls), document.createTextNode(lab)]);
           s.title = `${D.assemblies[k]}: ${stOf(g, k).word}`;
           return s;
         }))]),
-        el("td", { class: "num" }, g.reads_support ? [el("i", { class: "minibar", style: `width:${Math.round((g.reads_support.median_reads / maxDepth) * 54)}px` }), document.createTextNode(Math.round(g.reads_support.median_reads))] : [document.createTextNode("–")]),
-        el("td", { class: "num" }, g.expression ? [el("i", { class: "minibar rna", style: `width:${Math.round((Math.log10(1 + g.expression.tpm) / maxTpm) * 54)}px` }), document.createTextNode(g.expression.tpm >= 10 ? g.expression.tpm.toFixed(0) : g.expression.tpm.toFixed(1))] : [document.createTextNode("–")]),
-      ]);
+        reads: () => el("td", { class: "num" }, g.reads_support ? [el("i", { class: "minibar", style: `width:${Math.round((g.reads_support.median_reads / maxDepth) * 54)}px` }), document.createTextNode(Math.round(g.reads_support.median_reads))] : [document.createTextNode("–")]),
+        rna: () => el("td", { class: "num" }, g.expression ? [el("i", { class: "minibar rna", style: `width:${Math.round((Math.log10(1 + g.expression.tpm) / maxTpm) * 54)}px` }), document.createTextNode(g.expression.tpm >= 10 ? g.expression.tpm.toFixed(0) : g.expression.tpm.toFixed(1))] : [document.createTextNode("–")]),
+        ident: () => el("td", { class: "num" }, g.identity_to_crispata ? [el("i", { class: "minibar", style: `width:${Math.round(Math.max(0, (g.identity_to_crispata - 0.4) / 0.6) * 54)}px` }), document.createTextNode(Math.round(g.identity_to_crispata * 100) + "%")] : [document.createTextNode("–")]),
+        model: () => el("td", { text: g.model_kind === "annotation" ? "annotated gene" : (g.model_kind === "projection" ? "aligned from E. crispata" : "–") }),
+      };
+      const tr = el("tr", { onclick: () => openGene(g.symbol) }, COLS.map((k) => cells[k]()));
       return tr;
     }));
-    if (!rows.length) host.append(el("tr", {}, [el("td", { colspan: 7, class: "empty", text: "No gene matches. Clear the search or pick another filter." })]));
+    if (!rows.length) host.append(el("tr", {}, [el("td", { colspan: COLS.length, class: "empty", text: "No gene matches. Clear the search or pick another filter." })]));
     const c = byId("count"); if (c) c.textContent = `${rows.length} of ${D.genes.length} genes`;
   }
 
   /* ---------- gene dialog */
   const dlg = byId("gene");
   function sentence(g) {
-    const a = g.assemblies.sanger, s = a.status;
+    const a = g.assemblies[P], s = a.status;
     const where = a.pieces.length ? a.pieces.map((p) => `${chrName(p.chrom)}:${fmt(p.start)}–${fmt(p.end)} (${p.strand} strand)`).join(" and ") : "";
-    const elsewhere = ["purdue", "tampa", "alt"].filter((k) => g.assemblies[k].status === "complete").map((k) => ({ purdue: "the Purdue assembly", tampa: "the Tampa assembly", alt: "the alternate haplotype" }[k]));
+    const elsewhere = OTHERS.filter((o) => g.assemblies[o[0]].status === "complete").map((o) => o[2]);
+    const multi = OTHERS.length > 0;
     const reads = g.reads_support ? ` HiFi reads from the sequenced animal cover ${g.reads_support.covered} of ${g.reads_support.segments} exon segments (median ${Math.round(g.reads_support.median_reads)} reads each).` : "";
-    if (s === "complete") return `Intact in xgElyCris1.1 at ${where}.`;
+    const breaks = (p) => `${p.fs ? p.fs + " frameshift" + (p.fs > 1 ? "s" : "") : ""}${p.fs && p.stop ? ", " : ""}${p.stop ? p.stop + " in-frame stop" + (p.stop > 1 ? "s" : "") : ""}`;
+    if (s === "complete") return `Intact in ${AN} at ${where}.${g.long_intron ? " The coding sequence is interrupted by a very long intron, so it was assembled from " + a.pieces.length + " alignments that lie in order on the same strand." : ""}`;
     if (s === "complete_discrepancy") {
-      const p = a.pieces[0];
-      return `The whole gene is in xgElyCris1.1 at ${where}, but the assembly sequence does not translate cleanly against the reference protein (${p.fs ? p.fs + " frameshift" + (p.fs > 1 ? "s" : "") : ""}${p.fs && p.stop ? ", " : ""}${p.stop ? p.stop + " in-frame stop" + (p.stop > 1 ? "s" : "") : ""}; ${(p.ident * 100).toFixed(1)}% identity). Treat the assembly sequence here with care; the protein below comes from ${g.model_kind === "ensembl" ? "the Ensembl model" : "another assembly"}.`;
+      const p = a.pieces[0], fs = a.pieces.reduce((n, x) => n + x.fs, 0), st = a.pieces.reduce((n, x) => n + x.stop, 0);
+      if (!multi) return `The whole gene is in ${AN} at ${where}, but the assembly sequence does not translate cleanly (${breaks({ fs, stop: st })}). That is more often an error in the assembly than a broken gene; the protein below is read through the break${fs + st > 1 ? "s" : ""}.`;
+      return `The whole gene is in ${AN} at ${where}, but the assembly sequence does not translate cleanly against the reference protein (${breaks(p)}; ${(p.ident * 100).toFixed(1)}% identity). Treat the assembly sequence here with care; the protein below comes from ${g.model_kind === "ensembl" ? "the Ensembl model" : "another assembly"}.`;
     }
-    if (s === "fragmented") return `All of the gene is in xgElyCris1.1 but in ${a.pieces.length} separate pieces (${where}) that are not in transcript order, so no single gene model can span it there. It is whole in ${elsewhere.join(" and ") || "no other assembly"}.`;
-    if (s === "partial") return `Only ${Math.round(a.coverage * 100)}% of the protein is encoded in xgElyCris1.1 (${where}). The rest is missing from the assembly, not from the animal: it is whole in ${elsewhere.join(" and ") || "no other assembly"}.${reads}`;
-    if (s === "divergent") return `xgElyCris1.1 has no clean copy. The closest locus (${chrName(a.best_other.chrom)}:${fmt(a.best_other.start)}–${fmt(a.best_other.end)}) is ${(a.best_other.ident * 100).toFixed(1)}% identical with ${a.best_other.fs} frameshift${a.best_other.fs === 1 ? "" : "s"}; the gene is whole in ${elsewhere.join(" and ") || "no other assembly"}.${reads}`;
-    return `Missing from xgElyCris1.1${a.best_other && a.best_other.paralogue_of ? ` (the nearest match there is the paralogue ${G[a.best_other.paralogue_of] ? G[a.best_other.paralogue_of].label : a.best_other.paralogue_of})` : ""}. It is missing from the assembly, not from the animal: the gene is whole in ${elsewhere.join(" and ") || "no other assembly"}.${reads}`;
+    if (s === "fragmented") return multi ? `All of the gene is in ${AN} but in ${a.pieces.length} separate pieces (${where}) that are not in transcript order, so no single gene model can span it there. It is whole in ${elsewhere.join(" and ") || "no other assembly"}.`
+      : `All of the gene is in ${AN}, but in ${a.pieces.length} pieces (${where}) that lie on different sequences or out of order. The assembly has split it; the protein below joins the pieces.`;
+    if (s === "partial") return multi ? `Only ${Math.round(a.coverage * 100)}% of the protein is encoded in ${AN} (${where}). The rest is missing from the assembly, not from the animal: it is whole in ${elsewhere.join(" and ") || "no other assembly"}.${reads}`
+      : `Only ${Math.round(a.coverage * 100)}% of the protein could be found in ${AN} (${where}). The rest may lie in a gap of the assembly, or be too different from the E. crispata protein to align. A partial model is not evidence that the gene is damaged.`;
+    if (s === "divergent") return `${AN} has no clean copy. The closest locus (${chrName(a.best_other.chrom)}:${fmt(a.best_other.start)}–${fmt(a.best_other.end)}) is ${(a.best_other.ident * 100).toFixed(1)}% identical with ${a.best_other.fs} frameshift${a.best_other.fs === 1 ? "" : "s"}; the gene is whole in ${elsewhere.join(" and ") || "no other assembly"}.${reads}`;
+    const para = a.best_other && a.best_other.paralogue_of ? ` (the nearest match there is the paralogue ${G[a.best_other.paralogue_of] ? G[a.best_other.paralogue_of].label : a.best_other.paralogue_of})` : "";
+    if (!multi) return `Not found in ${AN}${para}. With one assembly to go on, this can be a gap in the assembly as easily as a missing gene.`;
+    return `Missing from ${AN}${para}. It is missing from the assembly, not from the animal: the gene is whole in ${elsewhere.join(" and ") || "no other assembly"}.${reads}`;
   }
   function exonFigure(g) {
     // draw the locus where the gene is most complete: Sanger if intact, otherwise the first complete assembly
-    let key = "sanger";
-    if (!["complete", "complete_discrepancy"].includes(g.assemblies.sanger.status)) key = ["purdue", "tampa", "alt"].find((k) => g.assemblies[k].status === "complete") || "sanger";
+    let key = P;
+    if (!["complete", "complete_discrepancy"].includes(g.assemblies[P].status)) key = (OTHERS.map((o) => o[0]).find((k) => g.assemblies[k].status === "complete")) || P;
     const pcs = g.assemblies[key].pieces;
     if (!pcs.length) return null;
     const p = pcs[0], W = 760, X0 = 10, PW = W - 20, span = p.end - p.start + 1;
@@ -372,7 +390,7 @@
     svg.append(sv("text", { class: "lab", x: X0, y: 50, text: `${chrName(p.chrom)}:${fmt(p.strand === "-" ? p.end : p.start)}` }));
     svg.append(sv("text", { class: "lab", x: X0 + PW, y: 50, "text-anchor": "end", text: fmt(p.strand === "-" ? p.start : p.end) }));
     svg.append(sv("text", { class: "lab", x: X0 + PW / 2, y: 50, "text-anchor": "middle", text: `${p.exons.length} coding exons over ${fmt(span)} bp, drawn 5′ to 3′` }));
-    return el("figure", { class: "fig" }, [svg, el("figcaption", { text: `Coding exons in ${D.assemblies[key]}${key !== "sanger" ? " (the gene is not whole in xgElyCris1.1)" : ""}, drawn 5′ to 3′.` })]);
+    return el("figure", { class: "fig" }, [svg, el("figcaption", { text: `Coding exons in ${D.assemblies[key]}${key !== P ? " (the gene is not whole in " + AN + ")" : ""}${pcs.length > 1 ? "; first of " + pcs.length + " pieces" : ""}, drawn 5′ to 3′.` })]);
   }
   function domainFigure(g) {
     const W = 760, X0 = 10, PW = W - 20, L = g.length;
@@ -412,8 +430,8 @@
       tipFor(r, () => `<b>${s.reads} reads</b><br>exon segment ${i + 1} of ${n}<br>${s.segment}`);
       svg.append(r);
     });
-    svg.append(sv("text", { x: X0, y: H - 6, text: "exon segments, 5′ → 3′ of the Purdue-assembly gene model" }));
-    return el("figure", { class: "fig" }, [svg, el("figcaption", { text: `HiFi reads from the sequenced animal (xgElyCris1) overlapping each exon by at least 150 bp. ${rs.covered} of ${rs.segments} segments have three or more reads.` })]);
+    svg.append(sv("text", { x: X0, y: H - 6, text: D.meta.depth_axis || "exon segments, 5′ → 3′ of the Purdue-assembly gene model" }));
+    return el("figure", { class: "fig" }, [svg, el("figcaption", { text: `${D.meta.depth_reads || "HiFi reads from the sequenced animal (xgElyCris1)"} overlapping each exon by at least 150 bp. ${rs.covered} of ${rs.segments} segments have three or more reads.` })]);
   }
   function fasta(name, desc, seq) { return `>${name} ${desc}\n${seq.replace(/(.{60})/g, "$1\n")}\n`; }
   function seqBlock(title, name, desc, seq) {
@@ -427,34 +445,42 @@
     const g = G[sym]; if (!g || !dlg) return;
     hideTip();
     const A = g.assemblies;
-    const asmRows = ["sanger", "alt", "purdue", "tampa"].map((k) => {
+    const asmRows = [P].concat(OTHERS.map((o) => o[0])).map((k) => {
       const a = A[k];
       const where = a.pieces.length ? a.pieces.map((p) => `${p.chrom}:${fmt(p.start)}–${fmt(p.end)} (${p.strand}) aa ${p.qstart + 1}–${p.qend}, ${(p.ident * 100).toFixed(1)}% id${p.fs ? `, ${p.fs} frameshift${p.fs > 1 ? "s" : ""}` : ""}${p.stop ? `, ${p.stop} stop` : ""}`).join("\n")
         : (a.best_other ? `closest match ${a.best_other.chrom}:${fmt(a.best_other.start)}–${fmt(a.best_other.end)}, ${(a.best_other.ident * 100).toFixed(1)}% id${a.best_other.paralogue_of ? " (paralogue " + a.best_other.paralogue_of + ")" : ""}` : "no match");
       return el("tr", {}, [el("td", { text: D.assemblies[k] }), el("td", {}, [statusHtml(g, k)]), el("td", { class: "mono", style: "white-space:pre-line", text: where })]);
     });
-    const orth = g.orthologues.map((o) => el("tr", {}, [el("td", { html: `<i>${D.species[o.species] || o.species}</i>` }), el("td", { class: "mono", text: o.protein }), el("td", { text: o.gene || "" }), el("td", { class: "num", text: fmt(o.length) }), el("td", { class: "num", text: o.pident.toFixed(0) + "%" }), el("td", { text: o.reciprocal ? "yes" : "no" })]));
-    const cands = g.candidates.slice(0, 8).map((c) => el("tr", {}, [el("td", { class: "mono", text: c.candidate }), el("td", { class: "num", text: fmt(c.length) }), el("td", { class: "num", text: c.score.toFixed(0) }), el("td", { text: c.chosen ? "used" : (c.qc || "") })]));
+    const orth = (g.orthologues || []).map((o) => el("tr", {}, [el("td", { html: `<i>${D.species[o.species] || o.species}</i>` }), el("td", { class: "mono", text: o.protein }), el("td", { text: o.gene || "" }), el("td", { class: "num", text: fmt(o.length) }), el("td", { class: "num", text: o.pident.toFixed(0) + "%" }), el("td", { text: o.reciprocal ? "yes" : "no" })]));
+    const cands = (g.candidates || []).slice(0, 8).map((c) => el("tr", {}, [el("td", { class: "mono", text: c.candidate }), el("td", { class: "num", text: fmt(c.length) }), el("td", { class: "num", text: c.score.toFixed(0) }), el("td", { text: c.chosen ? "used" : (c.qc || "") })]));
     const tp = g.tree_placement;
     const treeText = tp ? `In the ${tp.tree} family tree ${g.label} groups with ${tp.seeds_in_clade.join(", ")}${tp.support !== null && tp.support !== undefined ? ` (clade of ${tp.clade_size} sequences, support ${tp.support > 1 ? Math.round(tp.support) + "%" : tp.support.toFixed(2)})` : ` (clade of ${tp.clade_size} sequences)`}.${tp.support !== null && tp.support !== undefined && (tp.support > 1 ? tp.support / 100 : tp.support) < 0.7 ? " That support is weak, so the name rests mainly on reciprocal best hits." : ""}` : "";
+    const across = (D.across && D.across[g.symbol]) || [];
     const ids = [];
-    if (g.ensembl_overlap.length) ids.push("Ensembl gene" + (g.ensembl_overlap.length > 1 ? "s " : " ") + g.ensembl_overlap.join(", "));
-    if (g.purdue_proteins.length) ids.push("Purdue " + g.purdue_proteins.map((p) => `${p.locus_tag} (${p.accession})`).join(", "));
+    (g.ids || []).forEach((x) => ids.push(x));
+    if ((g.ensembl_overlap || []).length) ids.push("Ensembl gene" + (g.ensembl_overlap.length > 1 ? "s " : " ") + g.ensembl_overlap.join(", "));
+    if ((g.purdue_proteins || []).length) ids.push("Purdue " + g.purdue_proteins.map((p) => `${p.locus_tag} (${p.accession})`).join(", "));
     const body = el("div", { class: "gene-body" }, [
       el("section", {}, [el("p", { class: "verdict", text: sentence(g) }), g.note ? el("p", { class: "muted", text: g.note.charAt(0).toUpperCase() + g.note.slice(1) + "." }) : null, ids.length ? el("p", { class: "small muted", text: ids.join("; ") }) : null]),
       el("section", {}, [el("h3", { text: "Where it is" }), exonFigure(g),
         el("table", { class: "kv" }, [el("thead", {}, [el("tr", {}, [el("th", { text: "Assembly" }), el("th", { text: "State" }), el("th", { text: "Location of the protein-coding alignment" })])]), el("tbody", {}, asmRows)])]),
-      el("section", {}, [el("h3", { text: "The protein" }), el("p", { class: "small muted", text: g.model_description + "." }), domainFigure(g),
-        seqBlock(`Protein, ${fmt(g.length)} aa`, "Ecr_" + g.symbol, g.name + " [Elysia crispata] " + g.model_source, g.protein),
-        g.cds ? seqBlock(`Coding sequence, ${fmt(g.cds.length)} nt`, "Ecr_" + g.symbol + "_cds", g.name + " [Elysia crispata] " + g.model_source, g.cds) : el("p", { class: "small muted", text: "No coding sequence is given for this model." })]),
-      el("section", {}, [el("h3", { text: "Why it is called " + g.label }), el("p", { text: treeText }),
+      el("section", {}, [el("h3", { text: "The protein" }), el("p", { class: "small muted", text: g.model_description + "." }), g.length ? domainFigure(g) : null,
+        g.protein ? seqBlock(`Protein, ${fmt(g.length)} aa`, PRE + "_" + g.symbol, g.name + " [" + SPN + "] " + g.model_source, g.protein) : null,
+        g.cds ? seqBlock(`Coding sequence, ${fmt(g.cds.length)} nt`, PRE + "_" + g.symbol + "_cds", g.name + " [" + SPN + "] " + g.model_source, g.cds) : el("p", { class: "small muted", text: "No coding sequence is given for this model." })]),
+      (tp || D.trees[g.symbol] || orth.length) ? el("section", {}, [el("h3", { text: "Why it is called " + g.label }), el("p", { text: treeText }),
         D.trees[g.symbol] ? el("figure", { class: "fig" }, [el("div", { html: D.trees[g.symbol] }), el("figcaption", { text: "Blue: this gene. Squares: reference proteins that define the family. Numbers are branch supports of 0.7 or more. The dashed branch is the neighbouring lineage, collapsed." })]) : null,
         el("h4", { text: "Best reciprocal hits in other species", style: "margin:16px 0 8px" }),
-        el("table", { class: "kv" }, [el("thead", {}, [el("tr", {}, [el("th", { text: "Species" }), el("th", { text: "Protein" }), el("th", { text: "Gene" }), el("th", { class: "num", text: "Length" }), el("th", { class: "num", text: "Identity" }), el("th", { text: "Reciprocal" })])]), el("tbody", {}, orth)])]),
-      el("section", {}, [el("h3", { text: "Evidence in the sequenced animal" }), depthFigure(g),
-        g.expression ? el("p", { text: `Head RNA-seq (one sample, one time point): ${g.expression.tpm.toFixed(1)} TPM${g.expression.per_locus.length > 1 ? " summed over " + g.expression.per_locus.map((x) => x.locus_tag + " " + x.tpm.toFixed(1)).join(", ") : ""}. A single library says the gene is transcribed; it says nothing about rhythm.` }) : el("p", { class: "muted", text: "No expression estimate." })]),
-      el("section", {}, [el("h3", { text: "Gene models compared" }), el("p", { class: "small muted", text: "Score is the mean DIAMOND bit score against orthologues in four outgroup molluscs; higher means more of the conserved protein is captured." }),
-        el("table", { class: "kv" }, [el("thead", {}, [el("tr", {}, [el("th", { text: "Candidate model" }), el("th", { class: "num", text: "aa" }), el("th", { class: "num", text: "Score" }), el("th", { text: "" })])]), el("tbody", {}, cands)])]),
+        el("table", { class: "kv" }, [el("thead", {}, [el("tr", {}, [el("th", { text: "Species" }), el("th", { text: "Protein" }), el("th", { text: "Gene" }), el("th", { class: "num", text: "Length" }), el("th", { class: "num", text: "Identity" }), el("th", { text: "Reciprocal" })])]), el("tbody", {}, orth)])])
+        : (g.identified ? el("section", {}, [el("h3", { text: "How it was identified" }), el("p", { text: g.identified })]) : null),
+      across.length ? el("section", {}, [el("h3", { text: "The same gene in the other species" }),
+        el("table", { class: "kv" }, [el("thead", {}, [el("tr", {}, [el("th", { text: "Species" }), el("th", { text: "State in its assembly" }), el("th", { class: "num", text: "Protein, aa" }), el("th", { class: "num", text: "Identity to this one" })])]),
+          el("tbody", {}, across.map((x) => el("tr", {}, [el("td", {}, [el("a", { href: x.href, html: `<i>${x.name}</i>` })]), el("td", {}, [el("span", { class: "st" }, [glyph((STATUS[x.status] || STATUS.absent).cls), document.createTextNode((STATUS[x.status] || STATUS.absent).word)])]),
+            el("td", { class: "num", text: x.length ? fmt(x.length) : "–" }), el("td", { class: "num", text: x.identity ? Math.round(x.identity * 100) + "%" : "–" })])))]),
+        el("p", { class: "small muted", html: 'Identity is counted over aligned residues. The <a href="' + (D.compare_href || "../compare.html") + '#gene/' + encodeURIComponent(g.symbol) + '">comparison page</a> has the alignment.' })]) : null,
+      (g.reads_support || g.expression) ? el("section", {}, [el("h3", { text: "Evidence in the sequenced animal" }), depthFigure(g),
+        g.expression ? el("p", { text: `Head RNA-seq (one sample, one time point): ${g.expression.tpm.toFixed(1)} TPM${g.expression.per_locus.length > 1 ? " summed over " + g.expression.per_locus.map((x) => x.locus_tag + " " + x.tpm.toFixed(1)).join(", ") : ""}. A single library says the gene is transcribed; it says nothing about rhythm.` }) : el("p", { class: "muted", text: "No expression estimate." })]) : null,
+      cands.length ? el("section", {}, [el("h3", { text: "Gene models compared" }), el("p", { class: "small muted", text: "Score is the mean DIAMOND bit score against orthologues in four outgroup molluscs; higher means more of the conserved protein is captured." }),
+        el("table", { class: "kv" }, [el("thead", {}, [el("tr", {}, [el("th", { text: "Candidate model" }), el("th", { class: "num", text: "aa" }), el("th", { class: "num", text: "Score" }), el("th", { text: "" })])]), el("tbody", {}, cands)])]) : null,
     ]);
     const head = el("div", { class: "gene-head" }, [el("div", {}, [el("h2", { text: g.label }), el("div", { class: "gname", text: g.name }), el("div", { class: "gcat", text: CATS[g.category] || g.category })]),
       el("button", { class: "close", type: "button", text: "Close", onclick: () => dlg.close() })]);

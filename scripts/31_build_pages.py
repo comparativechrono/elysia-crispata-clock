@@ -32,7 +32,7 @@ def splitbar(parts):
     segs = "".join(f'<i style="width:{max(0.6, 100 * f):.2f}%;background:var({c})" title="{e(l)}: {100 * f:.1f}%"></i>' for f, c, l in parts if f > 0)
     return f'<div class="splitbar" role="img" aria-label="{e(", ".join(f"{l} {100 * f:.1f}%" for f, c, l in parts))}">{segs}</div>'
 
-TIP_JS = '<script src="assets/pages.js"></script>'
+TIP_JS = '<script src="../assets/pages.js"></script>'
 
 # =====================================================================================
 #                                    KLEPTOPLASTS

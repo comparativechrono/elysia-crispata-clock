@@ -3,72 +3,147 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Elysia crispata clock genes</title>
-<meta name="description" content="Circadian clock genes, kleptoplast identity and a test for algal gene transfer in the lettuce sea slug Elysia crispata, from the xgElyCris1 genome data.">
+<title>Elysia clocks: circadian clock genes in the sea slug genus Elysia</title>
+<meta name="description" content="Circadian clock genes, kleptoplast identity and tests for algal gene transfer in the sea slugs of the genus Elysia, from public genome data.">
 <link rel="preload" href="assets/fonts/BricolageGrotesque-300-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <header class="masthead"><div class="wrap">
-<a class="brand" href="index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia crispata</em> clock</span></a>
-<nav aria-label="Sections"><a href="index.html" aria-current="page">Clock genes</a><a href="kleptoplasts.html">Whose chloroplasts</a><a href="gene-transfer.html">Gene transfer</a><a href="methods.html">Methods and data</a></nav>
+<a class="brand" href="index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia</em> clocks</span></a>
+<nav aria-label="Site"><a href="index.html" aria-current="page">Species</a><a href="compare.html">Compare</a><a href="methods.html">Methods and data</a></nav>
 </div></header>
+
 <main>
 
-<section class="intro"><div class="wrap">
-<h1>The lettuce sea slug’s clock, gene by gene</h1>
-<p class="lede"><i>Elysia crispata</i> keeps stolen chloroplasts photosynthesising for months. This is a catalogue of the circadian clock genes in its genome: where each one sits in the Sanger assembly xgElyCris1.1, whether the assembly has it whole, and the protein it encodes.</p>
-<div class="clockwork">
-<div id="schematic"></div>
-<div class="clockwork-list" id="schematic-list"></div>
-<div class="clockwork-legend" aria-label="Key to gene status in xgElyCris1.1">
-<span><i class="glyph ok"></i>intact in xgElyCris1.1</span>
-<span><i class="glyph warn"></i>whole, but the assembly sequence differs</span>
-<span><i class="glyph part"></i>partial or in pieces</span>
-<span><i class="glyph miss"></i>missing from the assembly</span>
+<section class="home-head"><div class="wrap">
+<h1>The circadian clock in seven <i>Elysia</i> genomes</h1>
+<p class="lede">Sea slugs of the genus <i>Elysia</i> keep chloroplasts taken from the algae they eat, some for months. This site catalogues the clock genes in every <i>Elysia</i> genome that has been sequenced, names the algae whose chloroplasts each sequenced animal carried, and tests whether any algal DNA has entered the slug genome.</p>
+</div></section>
+
+<section class="block"><div class="wrap">
+<h2>The species</h2>
+<p>Seven species have a nuclear genome assembly. Each card opens that species’ pages.</p>
+<div class="sp-grid">
+<article class="sp-card">
+<div style="position:relative"><a class="ph" href="elysia-crispata/index.html"><img src="assets/photos/elysia-crispata.jpg" alt="Elysia crispata" width="800" height="600" loading="lazy"></a><span class="credit">Photo: <a href="https://www.inaturalist.org/observations/339101608">Dan Schofield</a>, CC BY 4.0</span></div>
+<div class="tx">
+<h3><a href="elysia-crispata/index.html">Elysia crispata</a></h3>
+<p class="where">Sequenced animal: Key Largo, Florida, USA (clarki ecotype)</p>
+<div><div class="small" style="margin-bottom:3px"><strong>30</strong> of 47 clock genes intact in the assembly</div><div class="statusbar" role="img" aria-label="30 intact, 4 whole but with a break in the sequence, 5 partial or in pieces, 8 not found" title="30 intact, 4 whole but with a break in the sequence, 5 partial or in pieces, 8 not found"><i class="ok" style="flex:30"></i><i class="warn" style="flex:4"></i><i class="part" style="flex:5"></i><i class="miss" style="flex:8"></i></div></div>
+<dl>
+<dt>Assembly</dt><dd>chromosome-level, 543 Mb <span class="muted small">GCA_963854125.1</span></dd>
+<dt>Gene annotation</dt><dd>Ensembl</dd>
+<dt>Long reads</dt><dd>PacBio HiFi</dd>
+<dt>Chloroplasts from</dt><dd><i>Penicillus capitatus</i> 86%, <i>Penicillus lamourouxii</i> 14%</dd>
+</dl>
+<div class="links"><a href="elysia-crispata/index.html">Clock genes</a><a href="elysia-crispata/kleptoplasts.html">Whose chloroplasts</a><a href="elysia-crispata/gene-transfer.html">Gene transfer</a></div>
+</div></article><article class="sp-card">
+<div style="position:relative"><a class="ph" href="elysia-chlorotica/index.html"><img src="assets/photos/elysia-chlorotica.jpg" alt="Elysia chlorotica" width="800" height="600" loading="lazy"></a><span class="credit">Photo: <a href="https://www.inaturalist.org/observations/84354814">Ian Manning</a>, CC BY 4.0</span></div>
+<div class="tx">
+<h3><a href="elysia-chlorotica/index.html">Elysia chlorotica</a></h3>
+<p class="where">Sequenced animal: Martha&#x27;s Vineyard, Massachusetts, USA</p>
+<div><div class="small" style="margin-bottom:3px"><strong>39</strong> of 47 clock genes intact in the assembly</div><div class="statusbar" role="img" aria-label="39 intact, 5 whole but with a break in the sequence, 3 partial or in pieces, 0 not found" title="39 intact, 5 whole but with a break in the sequence, 3 partial or in pieces, 0 not found"><i class="ok" style="flex:39"></i><i class="warn" style="flex:5"></i><i class="part" style="flex:3"></i></div></div>
+<dl>
+<dt>Assembly</dt><dd>scaffold-level, 557 Mb <span class="muted small">GCA_003991915.1</span></dd>
+<dt>Gene annotation</dt><dd>in GenBank</dd>
+<dt>Long reads</dt><dd>PacBio RS (noisy)</dd>
+
+</dl>
+<div class="links"><a href="elysia-chlorotica/index.html">Clock genes</a></div>
+</div></article><article class="sp-card">
+<div style="position:relative"><a class="ph" href="elysia-marginata/index.html"><img src="assets/photos/elysia-marginata.jpg" alt="Elysia marginata" width="800" height="534" loading="lazy"></a><span class="credit">Photo: <a href="https://www.inaturalist.org/observations/181172853">Bernard Picton</a>, CC BY 4.0</span></div>
+<div class="tx">
+<h3><a href="elysia-marginata/index.html">Elysia marginata</a></h3>
+<p class="where">Sequenced animal: Kagoshima, Japan</p>
+<div><div class="small" style="margin-bottom:3px"><strong>33</strong> of 47 clock genes intact in the assembly</div><div class="statusbar" role="img" aria-label="33 intact, 8 whole but with a break in the sequence, 4 partial or in pieces, 2 not found" title="33 intact, 8 whole but with a break in the sequence, 4 partial or in pieces, 2 not found"><i class="ok" style="flex:33"></i><i class="warn" style="flex:8"></i><i class="part" style="flex:4"></i><i class="miss" style="flex:2"></i></div></div>
+<dl>
+<dt>Assembly</dt><dd>scaffold-level, 790 Mb <span class="muted small">GCA_019649035.1</span></dd>
+<dt>Gene annotation</dt><dd>in GenBank</dd>
+<dt>Long reads</dt><dd>none</dd>
+
+</dl>
+<div class="links"><a href="elysia-marginata/index.html">Clock genes</a></div>
+</div></article><article class="sp-card">
+<div style="position:relative"><a class="ph" href="elysia-timida/index.html"><img src="assets/photos/elysia-timida.jpg" alt="Elysia timida" width="800" height="601" loading="lazy"></a><span class="credit">Photo: <a href="https://www.inaturalist.org/observations/383094713">Vsevolod Rudyi</a>, CC BY 4.0</span></div>
+<div class="tx">
+<h3><a href="elysia-timida/index.html">Elysia timida</a></h3>
+<p class="where">Sequenced animal: Cadaques, Spain</p>
+<div><div class="small" style="margin-bottom:3px"><strong>44</strong> of 47 clock genes intact in the assembly</div><div class="statusbar" role="img" aria-label="44 intact, 1 whole but with a break in the sequence, 1 partial or in pieces, 1 not found" title="44 intact, 1 whole but with a break in the sequence, 1 partial or in pieces, 1 not found"><i class="ok" style="flex:44"></i><i class="warn" style="flex:1"></i><i class="part" style="flex:1"></i><i class="miss" style="flex:1"></i></div></div>
+<dl>
+<dt>Assembly</dt><dd>chromosome-level, 754 Mb <span class="muted small">GCA_043644045.1</span></dd>
+<dt>Gene annotation</dt><dd>not in GenBank</dd>
+<dt>Long reads</dt><dd>PacBio HiFi</dd>
+
+</dl>
+<div class="links"><a href="elysia-timida/index.html">Clock genes</a></div>
+</div></article><article class="sp-card">
+<div style="position:relative"><a class="ph" href="elysia-leucolegnote/index.html"><img src="assets/photos/elysia-leucolegnote.jpg" alt="Elysia leucolegnote" width="800" height="534" loading="lazy"></a><span class="credit">Photo: <a href="https://www.inaturalist.org/observations/341184855">arthur_ensis</a>, CC BY-NC 4.0</span></div>
+<div class="tx">
+<h3><a href="elysia-leucolegnote/index.html">Elysia leucolegnote</a></h3>
+<p class="where">Sequenced animal: Dongzhai Harbor, Hainan, China</p>
+<div><div class="small" style="margin-bottom:3px"><strong>43</strong> of 47 clock genes intact in the assembly</div><div class="statusbar" role="img" aria-label="43 intact, 1 whole but with a break in the sequence, 2 partial or in pieces, 1 not found" title="43 intact, 1 whole but with a break in the sequence, 2 partial or in pieces, 1 not found"><i class="ok" style="flex:43"></i><i class="warn" style="flex:1"></i><i class="part" style="flex:2"></i><i class="miss" style="flex:1"></i></div></div>
+<dl>
+<dt>Assembly</dt><dd>chromosome-level, 777 Mb <span class="muted small">GCA_052815195.1</span></dd>
+<dt>Gene annotation</dt><dd>none public</dd>
+<dt>Long reads</dt><dd>none</dd>
+
+</dl>
+<div class="links"><a href="elysia-leucolegnote/index.html">Clock genes</a></div>
+</div></article><article class="sp-card">
+<div style="position:relative"><a class="ph" href="elysia-atroviridis/index.html"><img src="assets/photos/elysia-atroviridis.jpg" alt="Elysia atroviridis" width="800" height="600" loading="lazy"></a><span class="credit">Photo: <a href="https://www.inaturalist.org/observations/344878140">fhvc</a>, CC BY-NC 4.0</span></div>
+<div class="tx">
+<h3><a href="elysia-atroviridis/index.html">Elysia atroviridis</a></h3>
+<p class="where">Sequenced animal: Qingdao, China</p>
+<div><div class="small" style="margin-bottom:3px"><strong>44</strong> of 47 clock genes intact in the assembly</div><div class="statusbar" role="img" aria-label="44 intact, 1 whole but with a break in the sequence, 1 partial or in pieces, 1 not found" title="44 intact, 1 whole but with a break in the sequence, 1 partial or in pieces, 1 not found"><i class="ok" style="flex:44"></i><i class="warn" style="flex:1"></i><i class="part" style="flex:1"></i><i class="miss" style="flex:1"></i></div></div>
+<dl>
+<dt>Assembly</dt><dd>chromosome-level, 829 Mb <span class="muted small">GCA_059052615.1</span></dd>
+<dt>Gene annotation</dt><dd>none public</dd>
+<dt>Long reads</dt><dd>PacBio HiFi</dd>
+
+</dl>
+<div class="links"><a href="elysia-atroviridis/index.html">Clock genes</a></div>
+</div></article><article class="sp-card">
+<div style="position:relative"><a class="ph" href="elysia-papillosa/index.html"><img src="assets/photos/elysia-papillosa.jpg" alt="Elysia papillosa" width="800" height="600" loading="lazy"></a><span class="credit">Photo: <a href="https://www.inaturalist.org/observations/202311872">Pauline Walsh Jacobson</a>, CC BY 4.0</span></div>
+<div class="tx">
+<h3><a href="elysia-papillosa/index.html">Elysia papillosa</a></h3>
+<p class="where">Sequenced animal: Tampa, Florida, USA</p>
+<div><div class="small" style="margin-bottom:3px"><strong>43</strong> of 47 clock genes intact in the assembly</div><div class="statusbar" role="img" aria-label="43 intact, 0 whole but with a break in the sequence, 3 partial or in pieces, 1 not found" title="43 intact, 0 whole but with a break in the sequence, 3 partial or in pieces, 1 not found"><i class="ok" style="flex:43"></i><i class="part" style="flex:3"></i><i class="miss" style="flex:1"></i></div></div>
+<dl>
+<dt>Assembly</dt><dd>contig-level, 1,024 Mb <span class="muted small">GCA_977015215.2</span></dd>
+<dt>Gene annotation</dt><dd>none public</dd>
+<dt>Long reads</dt><dd>PacBio HiFi</dd>
+
+</dl>
+<div class="links"><a href="elysia-papillosa/index.html">Clock genes</a></div>
+</div></article>
 </div>
-</div>
-<p class="clockwork-caveat">Select a gene to open it. The wiring is the textbook fly and mouse clock; which gene does what in <i>Elysia</i> has not been tested, and one RNA sample cannot show rhythm.</p>
 </div></section>
 
 <section class="block"><div class="wrap">
 <div class="cols">
-<div><h3>A complete clock, by homology</h3>
-<p>47 genes: both halves of the core activator (Clock and Bmal1), the repressors Period, Timeless and a mammalian-type Cryptochrome, a light-sensitive Cryptochrome, the second loop (Pdp1, Vrille, E75, Hr3, Clockwork orange), fifteen kinases, phosphatases and degradation factors, ten opsins and four photolyases. Each call rests on reciprocal best hits and a family tree.</p></div>
-<div><h3>The assembly misses some of it</h3>
-<p>30 genes are intact in xgElyCris1.1 and 4 more are whole but with a frameshift or other mismatch in the assembly sequence. 5 are partial or scrambled (Bmal1, Timeout, Cwo, Nemo, Neuropsin) and 8 are absent (Pdp1, E75, Pp1α, Slimb, Pdfr, r-opsin 1, r-opsin 2, Xenopsin).</p></div>
-<div><h3>Missing from the assembly, not the animal</h3>
-<p>All 47 genes are whole in at least one of the two other <i>E. crispata</i> assemblies, and reads from the sequenced animal itself cover their exons. Several of them sit in stretches the sequencing library barely sampled: Xenopsin (8 reads per exon), Nemo (9 reads per exon), E75 (10 reads per exon), Bmal1 (16 reads per exon), Cwo (18 reads per exon), against 67 for a typical clock gene. The library was amplified by PCR from very little DNA, which leaves holes like these.</p></div>
+<div><h3>One clock, seven genomes</h3>
+<p>27 of the 47 clock genes are whole in the reference assembly of every species. Every species has the whole core loop: Clock, Bmal1, Period, Timeless and two Cryptochromes (in <i>E. crispata</i>, Bmal1 is whole in another assembly of the species, not the reference). The <a href="compare.html">comparison page</a> has the gene-by-species table, the protein alignments and a tree of the species.</p></div>
+<div><h3>What a gap means</h3>
+<p>The assemblies differ in quality far more than the animals differ in genes. A gene shown as partial or missing is, in most cases, a hole in that assembly. Each species page says what its assembly can and cannot show.</p></div>
+<div><h3>What is not here</h3>
+<p>Nothing on this site measures a rhythm. Gene roles are inferred from flies and mammals, and each genome comes from a single animal.</p></div>
 </div>
 </div></section>
 
 <section class="block"><div class="wrap">
-<h2>Where the genes sit</h2>
-<p>The 15 chromosome-scale scaffolds of xgElyCris1.1, drawn to scale. Each mark is a clock gene; select one to open it.</p>
-<div class="karyo-card"><div class="karyo" id="karyo"></div><div class="offmap" id="offmap"></div></div>
+<h2>Other <i>Elysia</i> with sequence data but no genome</h2>
+<p>From a survey of the public archives on 13 November 2026. These species have RNA-seq or shotgun reads only, or a genome project that has not released data, so they have no pages here.</p>
+<div class="tablewrap"><table class="data"><thead><tr><th>Species</th><th>Genomic reads</th><th>RNA-seq</th><th>Genome project</th></tr></thead>
+<tbody><tr><td><i>Elysia bangtawaensis</i></td><td>Shotgun metagenome of whole-animal homogenate (PRJNA1459232)</td><td>–</td><td>–</td></tr><tr><td><i>Elysia cornigera</i></td><td>–</td><td>9 libraries, starvation / bleaching series (PRJNA261510); TSA GBRW00000000</td><td>–</td></tr><tr><td><i>Elysia diomedea</i></td><td>Illumina shotgun 3.9 Gb (PRJNA1150186); whole-animal metagenome 31.6 Gb (PRJNA610425)</td><td>–</td><td>–</td></tr><tr><td><i>Elysia hedgpethi</i></td><td>–</td><td>1 library (PRJNA802899)</td><td>–</td></tr><tr><td><i>Elysia ornata</i></td><td>none (the &#x27;E. ornata&#x27; reads in SRA are E. marginata)</td><td>–</td><td>–</td></tr><tr><td><i>Elysia pusilla</i></td><td>UCE target capture (PRJNA612319)</td><td>1 library (PRJNA802899)</td><td>–</td></tr><tr><td><i>Elysia rufescens</i></td><td>–</td><td>1 library (PRJNA802899)</td><td>–</td></tr><tr><td><i>Elysia sp. 26 KMK-2022</i></td><td>–</td><td>1 library (PRJNA802899)</td><td>–</td></tr><tr><td><i>Elysia subornata</i></td><td>–</td><td>1 library (PRJNA802899; NCBI taxon spelled &#x27;Elysia subornta&#x27;)</td><td>–</td></tr><tr><td><i>Elysia velutinus</i></td><td>–</td><td>1 library (PRJNA802899)</td><td>–</td></tr><tr><td><i>Elysia viridis</i></td><td>Low coverage: Illumina 4.9 Gb + Nanopore 4.8 Gb (PRJNA810987)</td><td>9 libraries, fed / starved light / starved dark (PRJNA810987); pooled reference (PRJNA549923); TSA GIWJ00000000</td><td>Darwin Tree of Life: data generation under way; ATLASea sample acquired</td></tr><tr><td><i>Elysia gordanae</i></td><td>–</td><td>–</td><td>ATLASea: sample acquired (GoaT)</td></tr><tr><td><i>Elysia margaritae</i></td><td>–</td><td>–</td><td>ATLASea: sample acquired (GoaT)</td></tr><tr><td><i>Elysia translucens</i></td><td>–</td><td>–</td><td>ATLASea: on long list (GoaT)</td></tr></tbody></table></div>
 </div></section>
-
-<section class="block"><div class="wrap">
-<h2>All 47 genes</h2>
-<div class="filters" id="filters"></div>
-<div class="tablewrap"><table class="genes">
-<thead><tr><th>Gene</th><th>Role</th><th class="num">Protein, aa</th><th>In xgElyCris1.1</th><th>Other assemblies</th><th class="num" title="Median number of HiFi reads from the sequenced animal covering each exon">Reads per exon</th><th class="num" title="Transcripts per million in the head RNA-seq library">Head RNA, TPM</th></tr></thead>
-<tbody id="genes-body"></tbody></table></div>
-<p class="small muted" style="margin-top:12px;max-width:90ch">Other assemblies: the alternate haplotype of the same animal, and two independent assemblies of other individuals (Purdue, GCA_033675545.1; Tampa, GCA_984581095.1). Reads per exon counts PacBio HiFi reads from the sequenced animal. Head RNA is one library from the same animal.</p>
-
-<h3 style="margin-top:34px">Looked for and not found</h3>
-<div class="tablewrap" style="margin-top:10px"><table class="data">
-<thead><tr><th>Gene</th><th>Searched with</th><th>Reading</th></tr></thead>
-<tbody><tr><td><strong>Dec1/2</strong><br><span class="muted small">Bhlhe40 / Bhlhe41</span></td><td class="mono">HsBHLHE40, HsBHLHE41</td><td>no orthologue; closest bHLH-Orange genes are Hey and Clockwork orange</td></tr><tr><td><strong>Fbxl3/21</strong><br><span class="muted small">F-box/LRR protein 3 / 21</span></td><td class="mono">HsFBXL3, MmFbxl21</td><td>vertebrate-specific Cry ubiquitin ligases; no orthologue</td></tr><tr><td><strong>Tyf</strong><br><span class="muted small">Twenty-four</span></td><td class="mono">DmTyf</td><td>no homologue detected</td></tr><tr><td><strong>Cipc</strong><br><span class="muted small">Clock-interacting pacemaker</span></td><td class="mono">HsCIPC</td><td>no homologue detected</td></tr><tr><td><strong>Ciart</strong><br><span class="muted small">Chrono (Ciart)</span></td><td class="mono">HsCIART</td><td>vertebrate-specific; no homologue detected</td></tr><tr><td><strong>Aanat</strong><br><span class="muted small">Arylalkylamine N-acetyltransferase</span></td><td class="mono">HsAANAT, DmAANAT1</td><td>no homologue detected with vertebrate or insect seeds</td></tr><tr><td><strong>Asmt</strong><br><span class="muted small">Acetylserotonin O-methyltransferase (Hiomt)</span></td><td class="mono">HsASMT</td><td>no homologue detected</td></tr></tbody></table></div>
-</div></section>
-<dialog class="gene" id="gene" aria-label="Gene details"></dialog>
 
 </main>
 <footer class="site"><div class="wrap">
-<p>Built 2026-11-13 from public data: genome assembly xgElyCris1.1 and reads of BioProject PRJEB67629 (Middlebrooks et al. 2026, Wellcome Open Research 11:148; Aquatic Symbiosis Genomics, Wellcome Sanger Institute), released under the Tree of Life open data policy. The analysis here is independent of the genome authors and has not been peer reviewed.</p>
-<p>Scripts, tables and sequences are in the repository that hosts this site. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
+
+<p>Built 2026-11-13 from public genome data. The analysis is independent of the groups that produced the genomes and has not been peer reviewed. Gene roles are inferred from homology with flies and mammals; nothing here measures a rhythm.</p>
+<p>Scripts, tables and sequences are in the repository that hosts this site. Photographs are credited on the <a href="methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
 </div></footer>
-<script src="data/clock.js"></script>
-<script src="assets/app.js"></script>
+<script src="assets/pages.js"></script>
 </body>
 </html>

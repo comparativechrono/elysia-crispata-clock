@@ -1,0 +1,4 @@
+# Notes on single genes that apply across the genus (symbol<TAB>text). Appended to the gene pages and the comparison page.
+GoOpsin1	Go-opsins differ in number across the genus: one gene in E. marginata, E. timida and E. leucolegnote, two in E. crispata and E. papillosa, and three places in the assemblies of E. chlorotica and E. atroviridis. Go-opsin 1 of E. crispata has a one-to-one counterpart only in E. chlorotica, its closest relative here; a quick family tree does not sort the others into two clean groups.
+GoOpsin2	Go-opsins differ in number across the genus (one to three per assembly), so one-to-one counterparts are not always clear; see Go-opsin 1.
+RopsinL1	The full protein, known from annotated genes in E. chlorotica, E. marginata and other gastropods, is about 550 to 660 residues long. The E. crispata model (249 residues) and the models aligned from it cover only the conserved core, so "partial" here describes the model, not the gene.
