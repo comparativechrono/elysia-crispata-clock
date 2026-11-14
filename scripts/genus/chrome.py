@@ -27,6 +27,21 @@ def long_date(iso):
 SITE_NAV = [("index.html", "Species"), ("compare.html", "Comparison"), ("methods.html", "Methods and data")]
 SPECIES_TABS = [("index.html", "Clock genes"), ("kleptoplasts.html", "Kleptoplasts"), ("gene-transfer.html", "Gene transfer"), ("methods.html", "Methods")]
 
+def has_other_individuals(repo, slug="elysia-crispata"):
+    """True when the page on the other sequenced individuals of a species is part of the site:
+    its results (39_collect_species.py) and its text (config/species_text.json) both exist."""
+    import json, os
+    if not os.path.exists(os.path.join(repo, "results", "genus", slug + ".other_animals.json")): return False
+    try: text = json.load(open(os.path.join(repo, "config", "species_text.json")))
+    except (OSError, ValueError): return False
+    return bool(text.get(slug, {}).get("other_answer"))
+
+def species_tabs(repo, slug="elysia-crispata"):
+    """the tabs of the E. crispata pages, with the page on its other individuals when that page exists"""
+    t = list(SPECIES_TABS)
+    if has_other_individuals(repo, slug): t.insert(3, ("other-individuals.html", "Other individuals"))
+    return t
+
 def page(title, body, root="", description="", site_current=None, species=None, tabs=None, tab_current=None, scripts="", today="", sources=""):
     """root: '' for pages at the top of the site, '../' for pages in a species folder.
     species: scientific name shown in the species bar; tabs: [(href, label)] within that folder."""

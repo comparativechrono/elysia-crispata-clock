@@ -4,13 +4,15 @@
 #   - organelle sequences that are part of the assembly (35_assembly_screen.py, "whole") are
 #     renamed CLASS|name so that they count as organelle, not slug
 #   - plastid-like stretches inside slug sequences (mask.bed) are hidden, so that a plastid read
-#     is not explained away by a plastid fragment that the assembler left in a slug sequence
+#     is not explained away by a plastid fragment that the assembler left in a slug sequence;
+#     so are stretches that the panel holds as records of their own ("hidden" in SCREEN.json)
 #   - of the alignment strings only those with an insertion of 30 bases or more are kept (cg tag):
 #     46_candidates.py looks inside them for organelle DNA too short to break an alignment
 # The index is built in parts (PASS2_INDEX_BASES, default 500M) to keep memory low.
 # The first pass must be finished: the script stops if a run of WORKDIR is still being screened.
 # usage: 33_pass2.sh WORKDIR GENOME.fa.gz PANEL.fa SCREEN.json hifi|clr|short [EXTRA_REF.fa]
 #        SAMPLE_ONLY=1   align only the random sample (RUN.sample.fa -> sample.paf)
+#        PASS2_PRESET=map-ont   another minimap2 preset than the one of the kind (Nanopore reads, with kind clr)
 set -euo pipefail
 export PATH=${BIO_BIN:-/home/claude/tools/mamba/envs/bio/bin}:$PATH
 W=$(realpath "$1"); G=$(realpath "$2"); PANEL=$(realpath "$3"); SCREEN=$(realpath "$4"); KIND=$5; EXTRA=${6:+$(realpath "$6")}
@@ -26,6 +28,8 @@ with open("relabel.tsv", "w") as fo:
 with open("mask.bed", "w") as fo:
     for L in s["loci"]:
         if L["cls"] == "plastid" and L["identity"] >= 0.90: fo.write(f"{L['contig']}\t{max(0, L['start'] - 20)}\t{L['end'] + 20}\n")
+    # stretches that the panel holds as records of their own (35b_hide_panel_extra.py)
+    for H in s.get("hidden", []): fo.write(f"{H['contig']}\t{H['start']}\t{H['end']}\n")
 PY
 zcat "$G" | sed 's/ .*//' | awk 'BEGIN{while((getline l < "relabel.tsv")>0){split(l,a,"\t"); r[a[1]]=a[2]}} /^>/{n=substr($0,2); if(n in r) print ">" r[n]; else print; next} {print}' > ref.genome.fa
 if [ -s mask.bed ]; then bedtools maskfasta -fi ref.genome.fa -bed mask.bed -fo ref.masked.fa && mv ref.masked.fa ref.genome.fa; fi
@@ -37,6 +41,7 @@ case "$KIND" in
   short) PRESET=sr ;;
   *) echo "unknown kind $KIND" >&2; exit 1 ;;
 esac
+PRESET=${PASS2_PRESET:-$PRESET}          # map-ont for Nanopore reads, which are otherwise treated like the older PacBio reads (clr)
 map(){ minimap2 -x $PRESET -c --secondary=no -t 2 -I ${PASS2_INDEX_BASES:-500M} --split-prefix p2tmp -K 200M ref.fa "$1" 2> "$2" | strip; }
 if [ "${SAMPLE_ONLY:-0}" != 1 ]; then
   map all_hits.fa pass2.log > pass2.paf.tmp || { echo "pass 2 failed (see pass2.log)" >&2; rm -f ref.fa pass2.paf.tmp p2tmp.*; exit 1; }

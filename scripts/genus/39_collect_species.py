@@ -3,6 +3,9 @@
 screen and the protein screen into two files per species:
   results/genus/<slug>.kleptoplast.json   whose chloroplasts the sequenced animals carried
   results/genus/<slug>.transfer.json      organelle-like DNA in the assembly and in the reads
+                                          (and in a second assembly of the species: other_assemblies)
+For E. crispata, which has its own pipeline, the libraries of its other sequenced animals are
+collected in the same form: results/genus/elysia-crispata.other_animals.json
 
 usage: 39_collect_species.py REPO READS_ROOT ASM_SCREEN_DIR [PROTSCREEN_DIR]
 READS_ROOT/<slug>[.<library>]/ holds analysis.json (long reads, 34_read_analysis.py) or pairs.json
@@ -18,6 +21,10 @@ prot_dir = sys.argv[4] if len(sys.argv) > 4 else None
 SP = list(csv.DictReader(open(os.path.join(repo, "config", "species.tsv")), delimiter="\t"))
 LIB = collections.defaultdict(list)
 for r in csv.DictReader(open(os.path.join(repo, "config", "species_reads.tsv")), delimiter="\t"): LIB[r["slug"]].append(r)
+OTHER_ASM = collections.defaultdict(list)
+_oa = os.path.join(repo, "config", "species_assemblies.tsv")
+if os.path.exists(_oa):
+    for r in csv.DictReader(open(_oa), delimiter="\t"): OTHER_ASM[r["slug"]].append(r)
 OUT = os.path.join(repo, "results", "genus"); os.makedirs(OUT, exist_ok=True)
 CACHE = os.path.join(screen_dir, "feature_tables"); os.makedirs(CACHE, exist_ok=True)
 ca = os.environ.get("SSL_CERT_FILE"); ctx = ssl.create_default_context(cafile=ca) if ca else ssl.create_default_context()
@@ -29,6 +36,11 @@ if os.path.exists(_pt):
     for _l in gzip.open(_pt, "rt"):
         _f = _l.rstrip("\n").split("\t")
         if len(_f) > 4: REF_NAME[_f[0]] = " ".join(re.sub(r" (chloroplast|plastid|genome assembly|DNA|strain|isolate|voucher|culture)\b.*|,.*", "", _f[4]).split()[:4])
+
+# the records that the panel of the E. crispata libraries holds in addition (30c_extend_panel.py)
+_px = os.path.join(repo, "config", "panel_extra.tsv")
+if os.path.exists(_px):
+    for _r in csv.DictReader(open(_px), delimiter="\t"): REF_NAME[_r["id"]] = " ".join(_r["description"].split(" (")[0].split()[:5])
 
 def contig_groups(rows):
     """Plastid contigs of a short-read library sorted into kinds: contigs within 5% of a reference
@@ -125,24 +137,8 @@ def long_read_shapes(d, mode):
     if R: out["recurrent_joins"] = R
     return out
 def load(p): return json.load(open(p)) if os.path.exists(p) else None
-for sp in SP:
-    slug = sp["slug"]
-    if slug == "elysia-crispata":
-        # E. crispata has its own pipeline (scripts/10 to 29). Two steps of this one were applied to it as well
-        # (run_screens.sh crispata): the search for short organelle pieces inside reads, and the library's own
-        # rate of joining, measured on a sample. They are collected here for scripts/31_build_pages.py.
-        d = libdir(slug, "main"); sh = long_read_shapes(d, "hifi")
-        if sh:
-            tn = os.path.join(d, "targeted.names")
-            sh["targeted_reads"] = sum(1 for l in open(tn) if l.strip()) if os.path.exists(tn) else None
-            # every read with a join between chloroplast DNA and slug DNA, fetched again and compared with the others (run_screens.sh crispata)
-            jd = libdir(slug, "joins"); rj = load(os.path.join(jd, "recurrent.json")); jn = os.path.join(jd, "joins.names")
-            if rj:
-                sh["joins_compared"] = dict(reads=sum(1 for l in open(jn) if l.strip()) if os.path.exists(jn) else None, joins=rj["joins_examined"], groups_of_copies=rj["groups_same_well_only"],
-                                            recurrent=rj["recurrent"], near=rj.get("near", []), same_join_means=rj.get("same_join_means"))
-            json.dump(sh, open(os.path.join(OUT, slug + ".shapes.json"), "w"), indent=1)
-            print(slug, "shapes of the targeted reads and the sample collected")
-        continue
+def collect_libraries(slug):
+    """the read libraries of a species listed in config/species_reads.tsv: (what they contain, the joins found in them)"""
     libs = []; tr_reads = []
     for L in LIB.get(slug, []):
         d = libdir(slug, L["library"])
@@ -158,14 +154,14 @@ for sp in SP:
         # a library of which only a sample of the matching pairs was analysed keeps the size of what was screened
         full = [os.path.join(d, r + ".count.full") for r in L["runs"].split(",")]
         screened = sum(int(open(f).read().split()[1]) for f in full if os.path.exists(f)) or a["bases"]
-        lib = dict(library=L["library"], label=L.get("label", ""), runs=L["runs"].split(","), kind=L["kind"], platform=L["platform"], animal=L["animal"], note=L["note"], reads=a["reads"], bases=a["bases"], bases_screened=screened,
+        lib = dict(library=L["library"], label=L.get("label", ""), runs=L["runs"].split(","), kind=L["kind"], platform=L["platform"], animal=L["animal"], note=L["note"], assembly=L.get("assembly") or "", reads=a["reads"], bases=a["bases"], bases_screened=screened,
                    plastid=part("cp"), mitochondrion=part("slugmt"), algal_mitochondrion=part("algmt"), algal_rdna=part("algrDNA"),
                    plastid_any_identity=a.get("plastid_any_identity"), other_taxa=a.get("other_taxa", {}), donors=a["donors"], barcodes=load(os.path.join(d, "barcodes", "barcodes.json")) or [], contigs=contigs,
                    hot_windows=[h for r in a["runs"] for h in r.get("hot_windows", [])][:8])
         libs.append(lib)
-        tr_reads.append(dict(library=L["library"], label=L.get("label", ""), runs=lib["runs"], kind=L["kind"], platform=L["platform"], animal=L["animal"], reads=a["reads"], bases=a["bases"], bases_screened=screened, chimera=a["chimera"],
+        tr_reads.append(dict(library=L["library"], label=L.get("label", ""), runs=lib["runs"], kind=L["kind"], platform=L["platform"], animal=L["animal"], assembly=L.get("assembly") or "", reads=a["reads"], bases=a["bases"], bases_screened=screened, chimera=a["chimera"],
                              min_identity=a.get("min_identity"), locus_tests=load(os.path.join(d, "locus_tests.json")),
-                             shapes=long_read_shapes(d, L["kind"]) if L["kind"] != "short" else None, sample=a.get("sample"), sensitivity=a.get("sensitivity"), note=L["note"],
+                             shapes=long_read_shapes(d, "clr" if L["kind"] == "ont" else L["kind"]) if L["kind"] != "short" else None, sample=a.get("sample"), sensitivity=a.get("sensitivity"), note=L["note"],
                              thinned=a.get("organelle_pairs_examined_one_in", 1), candidate_places=load(os.path.join(d, "candidate_places.json")), repeat_joins=load(os.path.join(d, "satellite_joins.json")),
                              end_piece_control=load(os.path.join(d, "end_piece_control.json"))))
     # the places of the insertion-shaped long reads, looked up in the short-read libraries of the species (other animals):
@@ -186,49 +182,84 @@ for sp in SP:
             rows.append(dict(read=c["read"], insert=c["insert"], sequence=t, position=pos, reads_crossing=thr,
                              joins_here=len(near), joins_here_same_organelle=sum(1 for j in near if j[2] == c["insert"]), joins=[dict(molecule=j[0], evidence=j[1], organelle=j[2], organelle_sequence=j[7], organelle_position=int(j[8])) for j in near[:10]]))
         R["candidate_places"] = dict(places=rows)
+    return libs, tr_reads
+def assembly_results(name, pdir):
+    """organelle-like DNA in an assembly (35_assembly_screen.py) and the protein screen of it, under the name it was screened by"""
+    scr = load(os.path.join(screen_dir, name + ".screen.json")); prot = None
+    if not scr: return None, None
+    for L in scr["loci"]: L["genes"] = genes_at(L["target"], L["tstart"], L["tend"])
+    for w in scr["whole"]: w.pop("covered", None)
+    prot = None
+    if pdir:
+        p = load(os.path.join(pdir, "protein_screen_raw.json"))
+        fs = load(os.path.join(pdir, "foreign_sequences.json")) or {}     # 43_foreign_sequences.py
+        census = {r["contig"]: r for r in fs.get("sequences", {}).get(name, [])}
+        if p and name in p["by_assembly"]:
+            loci = [l for l in p["loci"] if l["assembly"] == name]
+            keep = [l for l in loci if l["class"] not in ("animal gene",)]
+            whole_names = {w["contig"]: w["cls"] for w in scr["whole"]}
+            by = collections.defaultdict(list)
+            for l in keep:
+                if l["class"] != "no database match": by[l["contig"]].append(l)
+            contigs = []
+            for c, ls in by.items():
+                animal_here = sum(1 for l in loci if l["contig"] == c and l["class"] == "animal gene")
+                genes = []
+                for l in ls:
+                    g = l["query"].split("|", 1)[1] if l["query"].startswith("UDOFL|") else ((l["query_description"] or l["query"]).split()[0])
+                    g = g.split("_")[0]
+                    if g not in genes: genes.append(g)
+                row = dict(contig=c, length=ls[0]["contig_length"], loci=len(ls), classes=sorted({l["class"] for l in ls}), genes=genes, animal_loci_on_contig=animal_here,
+                           identity_min=round(min(l["identity"] for l in ls), 2), identity_max=round(max(l["identity"] for l in ls), 2), with_stops=sum(1 for l in ls if l["stops"]),
+                           multi_exon=sum(1 for l in ls if l["exons"] > 1), whole=whole_names.get(c),
+                           # places that the species' own published annotation lists as genes (its protein is the best match of all)
+                           listed_in_own_annotation=sum(1 for l in ls if l.get("own_annotation_bits", 0) > max(l["alga_bits"], l["microbe_bits"], l.get("met_bits", 0))))
+                k = census.get(c)
+                if k: row["census"] = dict(gc=k["gc"], examined_length=k["examined_length"], n_bases=k["n_bases"], stretches=k["stretches"], coding_bp=k["coding_bp"],
+                                           nearest_bacteria=k["nearest_bacteria"], bacterial_identity_median=k["bacterial_identity_median"])
+                contigs.append(row)
+            nm = [l for l in loci if l["class"] == "no database match"]
+            prot = dict(n_queries=p["n_queries"], summary=p["by_assembly"][name], genome_gc=fs.get("genome_gc", {}).get(name),
+                        non_animal_contigs=sorted(contigs, key=lambda x: (-x["length"] if "census" in x else 0, -x["loci"])),
+                        no_match=dict(n=len(nm), low_complexity=sum(1 for l in nm if l["peptide_entropy"] < 3.3), short=sum(1 for l in nm if l["peptide_entropy"] >= 3.3 and l["aligned_aa"] < 120),
+                                      other=[dict(contig=l["contig"], start=l["start"], end=l["end"], query=(l["query_description"] or l["query"])[:50], identity=round(l["identity"], 2), aligned_aa=l["aligned_aa"]) for l in nm if l["peptide_entropy"] >= 3.3 and l["aligned_aa"] >= 120]),
+                        non_animal=[{k: l.get(k) for k in ("contig", "contig_length", "start", "end", "class", "query", "query_description", "identity", "query_cover", "aligned_aa", "frameshifts", "stops", "animal_bits", "met_bits", "other_sacoglossan_bits", "own_annotation_bits", "alga_bits", "microbe_bits", "best_alga_hit", "peptide_entropy", "exons")} for l in keep])
+    return scr, prot
+for sp in SP:
+    slug = sp["slug"]
+    if slug == "elysia-crispata":
+        # E. crispata has its own pipeline (scripts/10 to 29). Two steps of this one were applied to it as well
+        # (run_screens.sh crispata): the search for short organelle pieces inside reads, and the library's own
+        # rate of joining, measured on a sample. They are collected here for scripts/31_build_pages.py.
+        d = libdir(slug, "main"); sh = long_read_shapes(d, "hifi")
+        if sh:
+            tn = os.path.join(d, "targeted.names")
+            sh["targeted_reads"] = sum(1 for l in open(tn) if l.strip()) if os.path.exists(tn) else None
+            # every read with a join between chloroplast DNA and slug DNA, fetched again and compared with the others (run_screens.sh crispata)
+            jd = libdir(slug, "joins"); rj = load(os.path.join(jd, "recurrent.json")); jn = os.path.join(jd, "joins.names")
+            if rj:
+                sh["joins_compared"] = dict(reads=sum(1 for l in open(jn) if l.strip()) if os.path.exists(jn) else None, joins=rj["joins_examined"], groups_of_copies=rj["groups_same_well_only"],
+                                            recurrent=rj["recurrent"], near=rj.get("near", []), same_join_means=rj.get("same_join_means"))
+            json.dump(sh, open(os.path.join(OUT, slug + ".shapes.json"), "w"), indent=1)
+            print(slug, "shapes of the targeted reads and the sample collected")
+        # the other sequenced animals of the species (run_screens.sh crispata_animals), each aligned to the assembly made from it
+        libs, tr_reads = collect_libraries(slug)
+        if libs:
+            json.dump(dict(slug=slug, species=sp["species"], libraries=libs, reads=tr_reads), open(os.path.join(OUT, slug + ".other_animals.json"), "w"), indent=1)
+            print(slug, "other animals:", [l["library"] for l in libs])
+        continue
+    libs, tr_reads = collect_libraries(slug)
     if libs:
         main = libs[0]
         head = [dict(name=d["name"], fraction=d["fraction"], median_identity=d["median_identity"]) for d in main["donors"] if d["fraction"] >= 0.01][:3]
         json.dump(dict(slug=slug, species=sp["species"], libraries=libs, donors=head, plastid_fraction=main["plastid"]["fraction"]), open(os.path.join(OUT, slug + ".kleptoplast.json"), "w"), indent=1)
-    scr = load(os.path.join(screen_dir, slug + ".screen.json"))
+    scr, prot = assembly_results(slug, prot_dir)
     if scr:
-        for L in scr["loci"]: L["genes"] = genes_at(L["target"], L["tstart"], L["tend"])
-        for w in scr["whole"]: w.pop("covered", None)
-        prot = None
-        if prot_dir:
-            p = load(os.path.join(prot_dir, "protein_screen_raw.json"))
-            fs = load(os.path.join(prot_dir, "foreign_sequences.json")) or {}     # 43_foreign_sequences.py
-            census = {r["contig"]: r for r in fs.get("sequences", {}).get(slug, [])}
-            if p and slug in p["by_assembly"]:
-                loci = [l for l in p["loci"] if l["assembly"] == slug]
-                keep = [l for l in loci if l["class"] not in ("animal gene",)]
-                whole_names = {w["contig"]: w["cls"] for w in scr["whole"]}
-                by = collections.defaultdict(list)
-                for l in keep:
-                    if l["class"] != "no database match": by[l["contig"]].append(l)
-                contigs = []
-                for c, ls in by.items():
-                    animal_here = sum(1 for l in loci if l["contig"] == c and l["class"] == "animal gene")
-                    genes = []
-                    for l in ls:
-                        g = l["query"].split("|", 1)[1] if l["query"].startswith("UDOFL|") else ((l["query_description"] or l["query"]).split()[0])
-                        g = g.split("_")[0]
-                        if g not in genes: genes.append(g)
-                    row = dict(contig=c, length=ls[0]["contig_length"], loci=len(ls), classes=sorted({l["class"] for l in ls}), genes=genes, animal_loci_on_contig=animal_here,
-                               identity_min=round(min(l["identity"] for l in ls), 2), identity_max=round(max(l["identity"] for l in ls), 2), with_stops=sum(1 for l in ls if l["stops"]),
-                               multi_exon=sum(1 for l in ls if l["exons"] > 1), whole=whole_names.get(c),
-                               # places that the species' own published annotation lists as genes (its protein is the best match of all)
-                               listed_in_own_annotation=sum(1 for l in ls if l.get("own_annotation_bits", 0) > max(l["alga_bits"], l["microbe_bits"], l.get("met_bits", 0))))
-                    k = census.get(c)
-                    if k: row["census"] = dict(gc=k["gc"], examined_length=k["examined_length"], n_bases=k["n_bases"], stretches=k["stretches"], coding_bp=k["coding_bp"],
-                                               nearest_bacteria=k["nearest_bacteria"], bacterial_identity_median=k["bacterial_identity_median"])
-                    contigs.append(row)
-                nm = [l for l in loci if l["class"] == "no database match"]
-                prot = dict(n_queries=p["n_queries"], summary=p["by_assembly"][slug], genome_gc=fs.get("genome_gc", {}).get(slug),
-                            non_animal_contigs=sorted(contigs, key=lambda x: (-x["length"] if "census" in x else 0, -x["loci"])),
-                            no_match=dict(n=len(nm), low_complexity=sum(1 for l in nm if l["peptide_entropy"] < 3.3), short=sum(1 for l in nm if l["peptide_entropy"] >= 3.3 and l["aligned_aa"] < 120),
-                                          other=[dict(contig=l["contig"], start=l["start"], end=l["end"], query=(l["query_description"] or l["query"])[:50], identity=round(l["identity"], 2), aligned_aa=l["aligned_aa"]) for l in nm if l["peptide_entropy"] >= 3.3 and l["aligned_aa"] >= 120]),
-                            non_animal=[{k: l.get(k) for k in ("contig", "contig_length", "start", "end", "class", "query", "query_description", "identity", "query_cover", "aligned_aa", "frameshifts", "stops", "animal_bits", "met_bits", "other_sacoglossan_bits", "own_annotation_bits", "alga_bits", "microbe_bits", "best_alga_hit", "peptide_entropy", "exons")} for l in keep])
-        json.dump(dict(slug=slug, species=sp["species"], assembly=dict(name=sp["asm_name"], accession=sp["accession"], level=sp["level"]), screen=scr, reads=tr_reads, protein_screen=prot),
+        # a second assembly of the species (config/species_assemblies.tsv; run_screens.sh other_assemblies)
+        others = []
+        for r in OTHER_ASM.get(slug, []):
+            scr2, prot2 = assembly_results(f"{slug}-{r['key']}", (prot_dir + "_" + r["key"]) if prot_dir else None)
+            if scr2: others.append(dict(key=r["key"], name=r["asm_name"], accession=r["accession"], level=r["level"], individual=r["individual"], phrase=r["phrase"], screen=scr2, protein_screen=prot2))
+        json.dump(dict(slug=slug, species=sp["species"], assembly=dict(name=sp["asm_name"], accession=sp["accession"], level=sp["level"]), screen=scr, reads=tr_reads, protein_screen=prot, other_assemblies=others),
                   open(os.path.join(OUT, slug + ".transfer.json"), "w"), indent=1)
     print(slug, "libraries:", [l["library"] for l in libs], "| screen:", bool(scr), "| loci:", len(scr["loci"]) if scr else None)

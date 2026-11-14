@@ -210,6 +210,7 @@
    "kind": "clr",
    "platform": "PacBio RS (older, error-prone long reads)",
    "animal": "an adult (isolate EC2010, Martha\u2019s Vineyard), the source of the long reads used for the assembly",
+   "assembly": "",
    "reads": 7717313,
    "bases": 9445445540,
    "bases_screened": 9445445540,
@@ -1243,6 +1244,7 @@
    "kind": "short",
    "platform": "Illumina HiSeq 2000 (paired-end; inserts of 170, 500 and 800 bp)",
    "animal": "a second adult, the source of the short reads used for the assembly",
+   "assembly": "",
    "reads": 1024996320,
    "bases": 102499632000,
    "bases_screened": 102499632000,
@@ -2907,6 +2909,7 @@
    "kind": "short",
    "platform": "Illumina Genome Analyzer IIx (paired-end)",
    "animal": "eggs (germline DNA; Bhattacharya et al. 2013), which contain no chloroplasts because the animals have not yet fed",
+   "assembly": "",
    "reads": 153333832,
    "bases": 22386739472,
    "bases_screened": 22386739472,
@@ -6730,5 +6733,6 @@
     "exons": 1
    }
   ]
- }
+ },
+ "other_assemblies": []
 }

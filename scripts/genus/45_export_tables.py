@@ -37,7 +37,7 @@ n = 0
 for d in sorted(glob.glob(os.path.join(reads_root, "elysia-*"))):
     if not os.path.isdir(d): continue
     lib = os.path.basename(d); slug = lib.split(".")[0]
-    if slug == "elysia-crispata": continue                      # its tables are made by scripts/26_collect_results.py
+    if lib in ("elysia-crispata", "elysia-crispata.joins"): continue          # the tables of its own pipeline are made by scripts/26_collect_results.py
     for old_name in (f"{lib}.junctions.tsv", f"{lib}.locus372.json"):          # tables of an earlier layout
         if os.path.exists(os.path.join(RG, old_name)): os.remove(os.path.join(RG, old_name))
     for src, dst in (("kcp.contigs.fa", f"{lib}.plastid_contigs.fa"), ("kcp.contigs.tsv", f"{lib}.plastid_contigs.tsv")):
@@ -56,7 +56,7 @@ for d in sorted(glob.glob(os.path.join(reads_root, "elysia-*"))):
         shutil.copy(os.path.join(RG, f"{lib}.junction_pairs.tsv.gz"), os.path.join(DL, tag + "_junction_pairs.tsv.gz")); n += 1
 # barcode sequences, with headers that say what they are (from the collected results of 39_collect_species.py)
 import json, re
-for kf in sorted(glob.glob(os.path.join(RG, "*.kleptoplast.json"))):
+for kf in sorted(glob.glob(os.path.join(RG, "*.kleptoplast.json")) + glob.glob(os.path.join(RG, "*.other_animals.json"))):
     K = json.load(open(kf)); slug = K["slug"]
     for L in K["libraries"]:
         if not L.get("barcodes"): continue
@@ -69,7 +69,7 @@ for kf in sorted(glob.glob(os.path.join(RG, "*.kleptoplast.json"))):
                 fo.write(re.sub(r"(.{70})", r"\1\n", b["sequence"]).rstrip("\n") + "\n")
         shutil.copy(out, os.path.join(DL, lib.replace(".", "_") + "_barcodes.fa")); n += 1
 # reads with the shape of an insertion, from the collected results
-for tf in sorted(glob.glob(os.path.join(RG, "*.transfer.json"))):
+for tf in sorted(glob.glob(os.path.join(RG, "*.transfer.json")) + glob.glob(os.path.join(RG, "*.other_animals.json"))):
     T = json.load(open(tf)); slug = T["slug"]
     for R in T.get("reads", []):
         S = R.get("shapes")

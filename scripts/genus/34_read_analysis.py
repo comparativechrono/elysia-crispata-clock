@@ -13,16 +13,26 @@ PacBio RS reads). A read is chimeric when two neighbouring confident segments ar
 kinds and overlap by <= 50 bp on the read. Junctions are clustered (both break points within
 25 bp); two reads count as independent molecules only if both of their outer ends differ by more
 than 50 bp (PCR copies of one amplified molecule share their ends).
+Where the first pass carried on only an even sample of the reads of one kind of organelle DNA
+(31_select_hits.py, thin.tsv), a read of the sample counts K times in the composition of the
+library, and the share of that kind joined to slug DNA is taken from the sample alone.
+With LONG_READ_PLATFORM=ont (Nanopore reads, analysed as kind clr) a junction is tested for the
+adapter of the ligation kit, which lies between two molecules that were read as one.
 """
 import sys, os, json, glob, collections, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from sam_segments import paf_segments, best_tiling, union, relabel_organelle_loci
+from sam_segments import paf_segments, best_tiling, union, relabel_organelle_loci, thinned_reads
 W, panel_tsv, kind, out = sys.argv[1:5]
 SCREEN = sys.argv[5] if len(sys.argv) > 5 else None
 MINID = 0.97 if kind == "hifi" else 0.82
 MINSEG = 300 if kind == "hifi" else 500
 CONF_LEN = 1000
 ADAPTER = "AAGCAGTGGTATCAACGCAGAGTACT"
+ONT = os.environ.get("LONG_READ_PLATFORM") == "ont"
+ONT_TOP = "AATGTACTTCGTTCAGTTACGTATTGCT"[-22:]; ONT_BOTTOM = "GCAATACGTAACTGAACGAAGT"      # read start (its last 22 bases) and read end
+THIN, THIN_K = thinned_reads(W)
+def wgt(r, c): return THIN_K[c] if THIN.get(r) == c else 1
+def counted(r, c): return c not in THIN_K or THIN.get(r) == c
 COMP = str.maketrans("ACGT", "TGCA"); ADAPTER_RC = ADAPTER.translate(COMP)[::-1]
 desc = {}
 for l in list(open(panel_tsv))[1:]:
@@ -56,13 +66,14 @@ for r, kept in tiles.items():
         if s["cls"] != "slug": by[s["cls"]] += s["qe"] - s["qs"]
         if s["cls"] in by_taxon and s["aln"] >= CONF_LEN: by_taxon[s["cls"]][taxon(s["t"])].append(s["ident"])
     for c, bp in by.items():
-        cls_bp[c] += bp
-        if any(s["cls"] == c and s["aln"] >= CONF_LEN for s in kept): cls_reads[c] += 1
+        cls_bp[c] += bp * wgt(r, c)
+        if any(s["cls"] == c and s["aln"] >= CONF_LEN for s in kept): cls_reads[c] += wgt(r, c)
     conf = [s for s in kept if s["cls"] != "slug" and s["aln"] >= CONF_LEN]
     if conf: main[r] = max(conf, key=lambda s: s["aln"])["cls"]
 # plastid DNA by the reference it matches best, at any identity >= 80% (a relative of the true donor still matches)
 don = collections.defaultdict(lambda: dict(reads=0, bp=0, ids=[], acc=collections.Counter()))
 cp_loose_bp = 0; cp_loose_reads = 0
+don_run = collections.defaultdict(collections.Counter)          # the same by run, to compare the runs (or flow cells) of a library
 for r, kept in loose.items():
     seen = set()
     for s in kept:
@@ -70,6 +81,7 @@ for r, kept in loose.items():
         if s["t"].startswith("asmcp|"): tx = "plastid sequence in the assembly"
         else: tx = taxon(s["t"])
         d = don[tx]; d["bp"] += s["qe"] - s["qs"]; d["ids"].append((s["ident"], s["aln"])); d["acc"][s["t"]] += s["aln"]
+        don_run[r.split(".")[0]][tx] += s["qe"] - s["qs"]
         cp_loose_bp += s["qe"] - s["qs"]
         if tx not in seen: d["reads"] += 1; seen.add(tx)
     if seen: cp_loose_reads += 1
@@ -108,16 +120,26 @@ def has_adapter(seq):
                     if mm > 3: break
             if mm <= 3: return True
     return False
+def edits(pat, text):
+    """smallest number of differences between pat and any stretch of text"""
+    prev = [0] * (len(text) + 1)
+    for i in range(1, len(pat) + 1):
+        cur = [i] + [0] * len(text)
+        for j in range(1, len(text) + 1):
+            cur[j] = min(prev[j - 1] + (pat[i - 1] != text[j - 1]), prev[j] + 1, cur[j - 1] + 1)
+        prev = cur
+    return min(prev)
+def has_ont_adapter(seq): return bool(seq) and (edits(ONT_TOP, seq) <= 5 or edits(ONT_BOTTOM, seq) <= 5)
 def bp(seg, side):
     if side == "right": return (seg["te"], seg["ts"]) if seg["strand"] == "+" else (seg["ts"], seg["te"])
     return (seg["ts"], seg["te"]) if seg["strand"] == "+" else (seg["te"], seg["ts"])
 rows = []
 for r, a, b in juncs:
     ja, oa = bp(a, "right"); jb, ob = bp(b, "left")
-    js = seqs.get(r, "")[max(0, a["qe"] - 40):b["qs"] + 40]
+    js = seqs.get(r, "")[max(0, a["qe"] - (30 if ONT else 40)):b["qs"] + (30 if ONT else 40)]
     rows.append(dict(read=r, pair="+".join(sorted([a["cls"], b["cls"]])), a_cls=a["cls"], a_t=a["t"], a_bp=ja, a_outer=oa, a_len=a["aln"], a_ident=round(a["ident"], 4), a_mapq=a.get("mapq", 0),
                      b_cls=b["cls"], b_t=b["t"], b_bp=jb, b_outer=ob, b_len=b["aln"], b_ident=round(b["ident"], 4), b_mapq=b.get("mapq", 0), gap=b["qs"] - a["qe"],
-                     adapter=has_adapter(js) if kind == "hifi" else False, n_segments=len(tiles[r])))
+                     adapter=has_adapter(js) if kind == "hifi" else has_ont_adapter(js) if ONT else False, n_segments=len(tiles[r])))
 def near(a, b, tol): return abs(a - b) <= tol
 TOL = 25 if kind == "hifi" else 150
 by_t = collections.defaultdict(list)
@@ -168,8 +190,9 @@ for row in rows:
 have = collections.Counter()
 for r, kept in tiles.items():
     for c in set(s["cls"] for s in kept):
-        if c != "slug": have[c] += 1
-rates = {c: dict(reads_with_segment=have[c], reads_also_with_slug=len(chim_by[c]), rate=round(len(chim_by[c]) / have[c], 5) if have[c] else None) for c in have}
+        if c != "slug" and counted(r, c): have[c] += 1
+for c in THIN_K: chim_by[c] = {r for r in chim_by[c] if counted(r, c)}
+rates = {c: dict(reads_with_segment=have[c], reads_also_with_slug=len(chim_by[c]), rate=round(len(chim_by[c]) / have[c], 5) if have[c] else None, **({"sample_one_in": THIN_K[c]} if c in THIN_K else {})) for c in have}
 # slug - organelle - slug at one slug locus
 flank = []
 for r, kept in tiles.items():
@@ -184,10 +207,10 @@ with open(os.path.join(W, "junctions.tsv"), "w") as fo:
     fo.write("\t".join(cols) + "\n")
     for row in rows: fo.write("\t".join(str(row[c]) for c in cols) + "\n")
 other_taxa = {k: [dict(name=t, segments=len(v), mean_identity=round(sum(v) / len(v), 4)) for t, v in sorted(d.items(), key=lambda kv: -len(kv[1]))[:8]] for k, d in by_taxon.items()}
-res = dict(kind=kind, min_identity=MINID, runs=runs, reads=tot_reads, bases=tot_bases, reads_examined=len(S), other_taxa=other_taxa,
+res = dict(kind=kind, min_identity=MINID, runs=runs, reads=tot_reads, bases=tot_bases, reads_examined=len(S), other_taxa=other_taxa, thinned=THIN_K, adapter_tested="nanopore ligation adapter" if ONT else "amplification adapter" if kind == "hifi" else None,
            classes={c: dict(reads=cls_reads[c], bp=cls_bp[c], fraction_of_bases=round(cls_bp[c] / max(1, tot_bases), 6)) for c in cls_bp},
            plastid_any_identity=dict(reads=cp_loose_reads, bp=cp_loose_bp, fraction_of_bases=round(cp_loose_bp / max(1, tot_bases), 6)),
-           donors=donors,
+           donors=donors, donors_by_run={run: dict(bp=sum(v.values()), donors=dict(v.most_common(12))) for run, v in sorted(don_run.items())},
            chimera=dict(pairs=[dict(pair=p, junctions=pairs[p], reads=len(pair_reads[p]), adapter_junctions=adap[p], recurrent_clusters=rec[p]) for p in sorted(pairs, key=lambda p: -pairs[p])],
                         rates=rates, recurrent=sorted(recurrent, key=lambda x: -x["independent_molecules"])[:60], flanked=flank[:60], n_flanked=len(flank)))
 json.dump(res, open(out, "w"), indent=1)

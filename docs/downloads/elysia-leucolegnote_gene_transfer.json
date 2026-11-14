@@ -75,6 +75,7 @@
    "kind": "short",
    "platform": "Illumina NovaSeq X Plus (paired-end)",
    "animal": "a different individual (isolate SZU-EL01, Shenzhen, China, 2025), not the one used for the assembly",
+   "assembly": "",
    "reads": 83046474,
    "bases": 12456971100,
    "bases_screened": 12456971100,
@@ -1223,6 +1224,7 @@
    "kind": "short",
    "platform": "Illumina HiSeq 2500 (paired-end)",
    "animal": "a different individual (genome-survey library, Hainan University), not the one used for the assembly",
+   "assembly": "",
    "reads": 169685414,
    "bases": 25452812100,
    "bases_screened": 25452812100,
@@ -3825,5 +3827,6 @@
     "exons": 1
    }
   ]
- }
+ },
+ "other_assemblies": []
 }

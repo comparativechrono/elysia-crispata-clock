@@ -12,6 +12,13 @@ completeness   Projected models can miss ends that are poorly conserved, and the
                the alignment columns in which at least half of all sequences have a residue.
                A model is complete when it fills >= 90 % of those columns.
 identity       pairwise, over the columns where both proteins have a residue.
+second assembly   Where a species has a further assembly (config/species_assemblies.tsv, with its catalogue
+               in clock_dir/<slug>-<key>.clock.json) and a gene that is not complete in the reference
+               assembly is complete in the other, the protein of the other assembly stands for the
+               species in the alignment, as the E. crispata proteins come from whichever of its
+               assemblies has the gene complete. The status of the gene remains that of the reference
+               assembly: its own model is added to the finished alignment (mafft --add --keeplength)
+               and scored against the same columns. The gene is marked compared_from = <key>.
 species tree   genes complete in every Elysia species and present in the outgroups are
                concatenated (consensus columns only) and analysed with IQ-TREE (LG+F+G4,
                1,000 ultrafast bootstraps), rooted on Aplysia.
@@ -30,6 +37,13 @@ cat = {}
 for s in slugs:
     p = os.path.join(clock_dir, s + ".clock.json")
     if s != "elysia-crispata" and os.path.exists(p): cat[s] = json.load(open(p))
+# further assemblies of a species
+alt = {}
+_oa = os.path.join(os.path.dirname(cfg), "species_assemblies.tsv")
+if os.path.exists(_oa):
+    for _l in list(open(_oa))[1:]:
+        _f = _l.rstrip("\n").split("\t"); _p = os.path.join(clock_dir, f"{_f[0]}-{_f[1]}.clock.json")
+        if _f[0] in cat and os.path.exists(_p): alt[(_f[0], _f[1])] = json.load(open(_p))
 # outgroup orthologue sequences
 want = {}
 for g in crisp["genes"]:
@@ -44,7 +58,25 @@ with open(allprot) as fh:
         elif name: oseq[name].append(l.strip())
 oseq = {k: "".join(v) for k, v in oseq.items()}
 
+def added_row(path, protein):
+    """a protein aligned to the finished alignment in path, in its columns"""
+    with open(path + ".new", "w") as fo: fo.write(f">NEW\n{protein}\n")
+    r = subprocess.run([BIN + "/mafft", "--quiet", "--add", path + ".new", "--keeplength", path], capture_output=True, text=True, check=True)
+    os.remove(path + ".new")
+    return "".join(x.strip() for x in r.stdout.split(">NEW\n", 1)[1].split("\n")).upper()
+def read_aln(path):
+    aln = {}; k = None
+    for l in open(path):
+        if l.startswith(">"): k = l[1:].strip(); aln[k] = []
+        elif k: aln[k].append(l.strip())
+    return {k: "".join(v).upper() for k, v in aln.items()}
 def mafft(seqs, path):
+    # An alignment whose sequences have not changed is kept as it is: MAFFT with two threads does not
+    # return exactly the same alignment every time, and the figures derived from it should not drift.
+    if os.path.exists(path):
+        old = read_aln(path)
+        if {k: v.replace("-", "") for k, v in old.items()} == {k: v.upper() for k, v in seqs.items()} and list(old) == list(seqs): return old
+    print("aligning", os.path.basename(path), flush=True)
     with open(path + ".in", "w") as fo:
         for k, v in seqs.items(): fo.write(f">{k}\n{v}\n")
     r = subprocess.run([BIN + "/mafft", "--auto", "--quiet", "--thread", "2", path + ".in"], capture_output=True, text=True, check=True)
@@ -58,17 +90,29 @@ def mafft(seqs, path):
         for k, v in aln.items(): fo.write(f">{k}\n{v}\n")
     return aln
 
-G = {}; concat = collections.defaultdict(list); used = []
+G = {}; concat = collections.defaultdict(list); used = []; own = {}
 for sym in symbols:
-    seqs = {"ELYCR": CG[sym]["protein"]}
+    seqs = {"ELYCR": CG[sym]["protein"]}; swapped = []
     for s, c in cat.items():
-        g = next(x for x in c["genes"] if x["symbol"] == sym)
-        if g["status"] != "absent" and g["protein"]: seqs[TAG[s]] = g["protein"]
+        g = next(x for x in c["genes"] if x["symbol"] == sym); use = g
+        g.pop("compared_from", None)
+        if g["status"] != "complete":
+            for (s2, key), c2 in alt.items():
+                g2 = next(x for x in c2["genes"] if x["symbol"] == sym)
+                if s2 == s and g2["status"] == "complete" and g2.get("protein"):
+                    use = g2; g["compared_from"] = key; swapped.append((s, g)); break
+        if use["status"] != "absent" and use["protein"]: seqs[TAG[s]] = use["protein"]
     for (t, pid), sy in want.items():
         if sy == sym and (t, pid) in oseq and t not in seqs: seqs[t] = oseq[(t, pid)]
     aln = mafft(seqs, os.path.join(out, "alignments", sym + ".aln.fa")) if len(seqs) > 1 else dict(seqs)
     n = len(aln); Lc = len(next(iter(aln.values())))
     core = [i for i in range(Lc) if sum(1 for v in aln.values() if v[i] != "-") >= math.ceil(0.5 * n)]
+    # the model of the reference assembly, where that of another assembly stands for the species in the alignment
+    for s, g in swapped:
+        if g["status"] == "absent" or not g.get("protein"): own[(s, sym)] = (0.0, None); continue
+        row = added_row(os.path.join(out, "alignments", sym + ".aln.fa"), g["protein"])
+        both = [(x, y) for x, y in zip(row, aln["ELYCR"]) if x != "-" and y != "-"]
+        own[(s, sym)] = (sum(1 for i in core if row[i] != "-") / len(core) if core else 0.0, round(sum(1 for x, y in both if x == y) / len(both), 4) if len(both) >= 30 else None)
     comp = {k: (sum(1 for i in core if v[i] != "-") / len(core) if core else 0.0) for k, v in aln.items()}
     ident = {}
     keys = list(aln)
@@ -92,14 +136,23 @@ for sym in symbols:
 matrix = []
 for s, c in cat.items():
     for g in c["genes"]:
-        cg = G[g["symbol"]]["completeness"].get(TAG[s], 0.0); g["consensus_coverage"] = round(cg, 4)
+        cg = G[g["symbol"]]["completeness"].get(TAG[s], 0.0)
         g["identity_to_crispata"] = G[g["symbol"]]["identity"].get("|".join(sorted((TAG[s], "ELYCR"))))
+        if (s, g["symbol"]) in own: cg, g["identity_to_crispata"] = own[(s, g["symbol"])]
+        g["consensus_coverage"] = round(cg, 4)
         if g["status"] != "absent":
             if cg >= 0.9 and g.get("collinear", True): g["status"] = "complete_discrepancy" if (g["frameshifts"] or g["stops"]) else "complete"
             elif cg >= 0.9: g["status"] = "fragmented"
             else: g["status"] = "partial"
     c["summary"] = dict(collections.Counter(g["status"] for g in c["genes"]))
-    json.dump(c, open(os.path.join(out, s + ".clock.json"), "w"), indent=1)
+    # a model whose protein has not changed keeps the Pfam domains found for it (13_domains.sh)
+    _f = os.path.join(out, s + ".clock.json")
+    if os.path.exists(_f):
+        _old = {x["symbol"]: x for x in json.load(open(_f))["genes"]}
+        for g in c["genes"]:
+            o = _old.get(g["symbol"])
+            if o and "domains" in o and o.get("protein") == g.get("protein"): g["domains"] = o["domains"]
+    json.dump(c, open(_f, "w"), indent=1)
 with open(os.path.join(out, "clock_matrix.tsv"), "w") as fo:
     fo.write("gene\t" + "\t".join(f"{NAME[s]} status\t{NAME[s]} consensus coverage\t{NAME[s]} identity to E. crispata\t{NAME[s]} location" for s in slugs if s in cat) + "\n")
     for sym in symbols:
@@ -113,10 +166,11 @@ with open(os.path.join(out, "clock_matrix.tsv"), "w") as fo:
 # ---- species tree
 tree = None
 if len(used) >= 5:
-    ph = os.path.join(out, "concat.fa")
-    with open(ph, "w") as fo:
-        for t, parts in concat.items(): fo.write(f">{t}\n{''.join(parts)}\n")
-    subprocess.run([BIN + "/iqtree", "-s", ph, "-m", "LG+F+G4", "-B", "1000", "-T", "2", "-o", "APLCA", "--prefix", os.path.join(out, "species_tree"), "-redo", "-quiet"], check=False)
+    ph = os.path.join(out, "concat.fa"); tf = os.path.join(out, "species_tree.treefile")
+    new_concat = "".join(f">{t}\n{''.join(parts)}\n" for t, parts in concat.items())
+    same = os.path.exists(ph) and os.path.exists(tf) and open(ph).read() == new_concat          # the tree of an unchanged alignment is kept
+    with open(ph, "w") as fo: fo.write(new_concat)
+    if not same: subprocess.run([BIN + "/iqtree", "-s", ph, "-m", "LG+F+G4", "-B", "1000", "-T", "2", "-o", "APLCA", "--prefix", os.path.join(out, "species_tree"), "-redo", "-quiet"], check=False)
     tf = os.path.join(out, "species_tree.treefile")
     if os.path.exists(tf):
         tree = open(tf).read().strip(); open(os.path.join(out, "species_tree.nwk"), "w").write(tree + "\n")

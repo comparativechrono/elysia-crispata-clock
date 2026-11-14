@@ -107,3 +107,14 @@ def relabel_organelle_loci(S, screen_json, extra=()):
                 ov = min(s["te"], b) - max(s["ts"], a)
                 if ov >= 0.8 * (s["te"] - s["ts"]): s["cls"] = c; n += 1; break
     return n
+
+def thinned_reads(workdir):
+    """Reads kept as an even sample of one kind of organelle DNA (31_select_hits.py, thin.tsv):
+    ({read: class}, {class: K}). A read of the sample stands for K reads of the library."""
+    import glob, os
+    names = {}; K = {}
+    for f in glob.glob(os.path.join(workdir, "*.thin.names")):
+        for l in open(f):
+            c = l.split()
+            if len(c) == 3: names[c[0]] = c[1]; K[c[1]] = int(c[2])
+    return names, K

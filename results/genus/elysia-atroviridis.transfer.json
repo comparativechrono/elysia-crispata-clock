@@ -110,6 +110,7 @@
    "kind": "hifi",
    "platform": "PacBio Sequel II (HiFi)",
    "animal": "the individual used for the assembly (adult, Qingdao, China, 2024)",
+   "assembly": "",
    "reads": 3514321,
    "bases": 30628534557,
    "bases_screened": 30628534557,
@@ -2524,5 +2525,6 @@
     "exons": 1
    }
   ]
- }
+ },
+ "other_assemblies": []
 }

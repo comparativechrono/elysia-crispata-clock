@@ -12,6 +12,7 @@
    "platform": "PacBio Revio (HiFi, amplified ultra-low-input library)",
    "animal": "the individuals used for the assembly (adults, Cadaqu\u00e9s, Spain)",
    "note": "The complete Revio run used for the assembly. The library was amplified by PCR.",
+   "assembly": "",
    "reads": 9552331,
    "bases": 53125525286,
    "bases_screened": 53125525286,

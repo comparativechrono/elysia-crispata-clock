@@ -56,7 +56,8 @@ with open(fa, "w") as fo:
                 acgt = sum(seq.count(x) for x in "ACGT")
                 meta[name] = dict(slug=slug, contig=c, offset=a, length=len(seq), contig_length=L, n=seq.count("N"), gc=round((seq.count("G") + seq.count("C")) / max(1, acgt), 4))
 tsv = os.path.join(wd, "blastx.tsv")
-if not (os.path.exists(tsv) and os.path.getmtime(tsv) > os.path.getmtime(os.path.join(pdir, "protein_screen_raw.json"))):
+if not meta: open(tsv, "w").close()          # no sequence with a non-animal match: nothing to translate
+elif not (os.path.exists(tsv) and os.path.getmtime(tsv) > os.path.getmtime(os.path.join(pdir, "protein_screen_raw.json"))):
     subprocess.run([BIN + "/diamond", "blastx", "-q", fa, "-d", db, "-o", tsv, "--sensitive", "-e", "1e-5", "-F", "15", "--range-culling", "-k", "25",
                     "--threads", "2", "--quiet", "--outfmt", "6", "qseqid", "sseqid", "pident", "length", "qstart", "qend", "evalue", "bitscore"], check=True)
 hits = collections.defaultdict(list)

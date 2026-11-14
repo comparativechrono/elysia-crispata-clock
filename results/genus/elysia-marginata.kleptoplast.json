@@ -13,6 +13,7 @@
    "platform": "Illumina HiSeq 2500 (paired-end; inserts of 250 and 500 bp)",
    "animal": "the individual used for the assembly (one animal, Kagoshima, Japan, 2013)",
    "note": "Both paired-end libraries used for the assembly, analysed in full. The reads are deposited in the archive under the name Elysia ornata. The mate-pair libraries were excluded.",
+   "assembly": "",
    "reads": 562732268,
    "bases": 84409840200,
    "bases_screened": 84409840200,

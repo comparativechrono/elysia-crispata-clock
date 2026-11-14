@@ -56,9 +56,13 @@
           const st = STATUS[g.status[s.slug]] || STATUS.absent;
           const id = s.tag === "ELYCR" ? null : g.identity[pair(s.tag, "ELYCR")];
           const comp = g.completeness[s.slug], copies = g.copies[s.slug];
-          const tip = `${s.name}: ${st.word}` + (comp ? `, covers ${Math.round(comp * 100)}% of the conserved alignment positions` : "") + (copies && copies > 1 ? `, ${copies} loci in the assembly` : "");
+          const also = (g.also && g.also[s.slug]) || [];
+          const list = (xs) => (xs.length < 3 ? xs.join(" and ") : xs.slice(0, -1).join(", ") + " and " + xs[xs.length - 1]);
+          const tip = also.length
+            ? `${s.name}: ${st.word} in the reference assembly; intact in ${list(also)}. The protein compared here is from an assembly in which the gene is intact.`
+            : `${s.name}: ${st.word}` + (comp ? `, covers ${Math.round(comp * 100)}% of the conserved alignment positions` : "") + (copies && copies > 1 ? `, ${copies} loci in the assembly` : "");
           return el("td", {}, [el("a", { class: "cell", href: `${s.slug}/index.html#gene/${encodeURIComponent(g.symbol)}`, title: tip, "aria-label": tip },
-            [glyph(st.cls), document.createTextNode(s.tag === "ELYCR" ? "" : (g.status[s.slug] === "absent" ? "" : pct(id)))])]);
+            [glyph(st.cls), also.length ? glyph("ok also") : null, document.createTextNode(s.tag === "ELYCR" ? "" : (g.status[s.slug] === "absent" ? "" : pct(id)))])]);
         });
         body.append(el("tr", {}, [el("td", { class: "g" }, [el("button", { type: "button", text: g.label, title: g.name, onclick: () => pick(g.symbol, true) })])].concat(cells)));
       });

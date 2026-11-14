@@ -12,6 +12,7 @@
    "platform": "PacBio Sequel II (HiFi)",
    "animal": "the individual used for the assembly (adult, Qingdao, China, 2024)",
    "note": "The single long-read run used for the assembly, analysed in full.",
+   "assembly": "",
    "reads": 3514321,
    "bases": 30628534557,
    "bases_screened": 30628534557,

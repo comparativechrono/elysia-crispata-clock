@@ -51,6 +51,35 @@ def status_of(slug, sym):
     if slug == "elysia-crispata": return CG[sym]["assemblies"]["sanger"]["status"]
     return next(g for g in CAT[slug]["genes"] if g["symbol"] == sym)["status"]
 def gene_of(slug, sym): return next(g for g in CAT[slug]["genes"] if g["symbol"] == sym)
+# Further assemblies of a species (config/species_assemblies.tsv). For E. crispata the status of a gene in each of
+# them is part of its own catalogue; for the others it comes from 14_other_assemblies.py.
+OTHER_ASM = collections.defaultdict(list)
+_oa = os.path.join(repo, "config", "species_assemblies.tsv")
+if os.path.exists(_oa):
+    for _r in csv.DictReader(open(_oa), delimiter="\t"): OTHER_ASM[_r["slug"]].append(_r)
+ALT = {}
+for _slug, _rows in OTHER_ASM.items():
+    for _r in _rows:
+        _j = jload(os.path.join(RG, f"{_slug}.{_r['key']}.clock.json"))
+        if _j: ALT[(_slug, _r["key"])] = dict(assembly=_j["assembly"], genes={g["symbol"]: g for g in _j["genes"]})
+RANK = ["complete", "complete_discrepancy", "fragmented", "partial", "divergent", "absent"]
+def asm_named(r):
+    """a further assembly as it is named in a sentence: 'the alternate haplotype of xgElyPapi4.2 (GCA_...)', 'the Purdue assembly (ASM3367554v1, GCA_...)'"""
+    suffix = " alternate haplotype"
+    if r["asm_name"].endswith(suffix): return f"the alternate haplotype of {e(r['asm_name'][:-len(suffix)])} ({e(r['accession'])})"
+    return f"{e(r['phrase'])} ({e(r['asm_name'])}, {e(r['accession'])})"
+def other_keys(slug):
+    if slug == "elysia-crispata": return [r for r in OTHER_ASM[slug] if r["key"] in CG[symbols[0]]["assemblies"]]
+    return [r for r in OTHER_ASM[slug] if (slug, r["key"]) in ALT]
+def status_in(slug, key, sym):
+    return CG[sym]["assemblies"][key]["status"] if slug == "elysia-crispata" else ALT[(slug, key)]["genes"][sym]["status"]
+def best_status(slug, sym):
+    """the best status of the gene among all assemblies of the species"""
+    return min([status_of(slug, sym)] + [status_in(slug, r["key"], sym) for r in other_keys(slug)], key=RANK.index)
+def intact_elsewhere(slug, sym):
+    """the other assemblies of the species in which the gene is intact, as phrases"""
+    return [r["phrase"] for r in other_keys(slug) if status_in(slug, r["key"], sym) == "complete"]
+def n_intact_any(slug): return sum(1 for sym in symbols if best_status(slug, sym) == "complete")
 def counts(slug):
     c = collections.Counter(STATUS_CLASS[status_of(slug, s)] for s in symbols)
     return c
@@ -63,6 +92,7 @@ def tabs_for(slug):
     # the pages of the other species are written by 21_build_species_pages.py, which runs first
     if slug == "elysia-crispata" or os.path.exists(os.path.join(SITE, slug, "kleptoplasts.html")): t.append(("kleptoplasts.html", "Kleptoplasts"))
     if slug == "elysia-crispata" or os.path.exists(os.path.join(SITE, slug, "gene-transfer.html")): t.append(("gene-transfer.html", "Gene transfer"))
+    if slug == "elysia-crispata" and chrome.has_other_individuals(repo): t.append(("other-individuals.html", "Other individuals"))
     if slug == "elysia-crispata": t.append(("methods.html", "Methods"))
     return t
 
@@ -76,6 +106,9 @@ CAVEAT = {
  "elysia-atroviridis": "This is a chromosome-level assembly built from PacBio HiFi reads. Because all gene models were derived from the <i>E. crispata</i> proteins, regions that are poorly conserved or that are absent from the <i>E. crispata</i> model may be missing from the models shown here.",
  "elysia-papillosa": "This is a contig-level assembly built from PacBio HiFi reads, which has not yet been scaffolded into chromosomes. Because all gene models were derived from the <i>E. crispata</i> proteins, regions that are poorly conserved or that are absent from the <i>E. crispata</i> model may be missing from the models shown here.",
 }
+def alt_asm(slug, key, sym):
+    g = ALT[(slug, key)]["genes"][sym]
+    return dict(status=g["status"], coverage=g.get("consensus_coverage", 0), pieces=g.get("pieces", []))
 def species_data(slug):
     c = CAT[slug]; sp = BYSLUG[slug]; A = c["assembly"]
     genes = []
@@ -100,9 +133,17 @@ def species_data(slug):
             ident_txt += (f" {word(nx).capitalize()} further {'loci' if nx > 1 else 'locus'} in the assembly also passed the test ({'; '.join(x['chrom'] + ':' + num(x['start']) + '–' + num(x['end']) for x in g['extra_loci'][:3])}). "
                           f"{'These may be additional copies' if nx > 1 else 'This may be a second copy'} of the gene, or the other haplotype retained in the assembly.")
         if sym in NOTES: ident_txt += " " + NOTES[sym]
-        genes.append(dict(symbol=sym, label=lab, name=m["name"], category=m["category"], note=m.get("note", ""), protein=g.get("protein", ""), length=g.get("length", 0), cds=g.get("cds", ""),
-                          model_kind=g.get("model_kind"), model_source=g.get("model_source", ""), model_description=(g.get("model_source") or "No model"),
-                          domains=g.get("domains", []), assemblies={"primary": asm}, identity_to_crispata=ident, identified=ident_txt, long_intron=g.get("long_intron", False),
+        # a gene that is complete only in another assembly of the species: the protein of that assembly is shown,
+        # as it is the one used in the comparison (12_compare_species.py)
+        shown = g; cf = g.get("compared_from")
+        if cf and (slug, cf) in ALT:
+            shown = ALT[(slug, cf)]["genes"][sym]; ph = next(r["phrase"] for r in other_keys(slug) if r["key"] == cf)
+            ident_txt += (f" These values refer to the gene model in {A['name']}. The gene is complete in {ph}, and the protein shown here, which is also the one used in the comparison between species, "
+                          f"is taken from that assembly; it is {round(100 * shown['identity_to_crispata']) if shown.get('identity_to_crispata') else '?'}% identical to the E. crispata protein.")
+            ident = shown.get("identity_to_crispata") or ident
+        genes.append(dict(symbol=sym, label=lab, name=m["name"], category=m["category"], note=m.get("note", ""), protein=shown.get("protein", ""), length=shown.get("length", 0), cds=shown.get("cds", ""),
+                          model_kind=shown.get("model_kind"), model_source=shown.get("model_source", ""), model_description=(shown.get("model_source") or "No model"),
+                          domains=shown.get("domains", []), assemblies=dict({"primary": asm}, **{r["key"]: alt_asm(slug, r["key"], sym) for r in other_keys(slug)}), identity_to_crispata=ident, identified=ident_txt, long_intron=g.get("long_intron", False),
                           ids=[f"GenBank protein {g['protein_id']}"] if g.get("protein_id") else []))
     across = {}
     for sym in symbols:
@@ -113,8 +154,10 @@ def species_data(slug):
             ln = len(CG[sym]["protein"]) if o["slug"] == "elysia-crispata" else gene_of(o["slug"], sym).get("length", 0)
             rows.append(dict(name=o["species"], href=f"../{o['slug']}/index.html#gene/{sym}", status=st, length=ln, identity=GG[sym]["identity"].get(pair(o["tag"], sp["tag"]))))
         across[sym] = rows
-    return dict(genes=genes, not_found=crisp["not_found"], assemblies={"primary": f"{A['name']} ({A['accession']})"}, primary="primary", primary_name=A["name"], others=[],
-                species_name=sp["species"], prefix=PRE[slug], columns=["gene", "role", "aa", "status", "ident", "model"], categories=CATS, species={},
+    oth = other_keys(slug)
+    return dict(genes=genes, not_found=crisp["not_found"], assemblies=dict({"primary": f"{A['name']} ({A['accession']})"}, **{r["key"]: f"{r['asm_name']} ({r['accession']})" for r in oth}),
+                primary="primary", primary_name=A["name"], others=[[r["key"], r["short"], r["phrase"]] for r in oth], others_same_individual=bool(oth) and all(r["individual"].startswith("the same individual") for r in oth),
+                species_name=sp["species"], prefix=PRE[slug], columns=["gene", "role", "aa", "status"] + (["others"] if oth else []) + ["ident", "model"], categories=CATS, species={},
                 chromosomes=[dict(name=x["name"], length=x["length"]) for x in A["chromosomes"]], trees={}, meta=dict(built=today, typical_exon_depth=0),
                 across=across, compare_href="../compare.html")
 
@@ -133,6 +176,16 @@ for slug, c in CAT.items():
     how = (f"Of the {n_ann + n_proj} gene models, {n_ann} are annotated genes of this species. The other {n_proj} were obtained by aligning the <i>E. crispata</i> protein to the genome, at loci where the annotation has no gene or only a shorter one."
            if n_ann else f"No gene annotation is available in GenBank for this assembly, so all {n_proj} gene models were obtained by aligning the <i>E. crispata</i> proteins to the genome.")
     specimen = "specimens" if slug == "elysia-timida" else "specimen"
+    # a second assembly of the species: how many genes are intact in it, which become intact, and which are found in neither
+    second = ""
+    for r in other_keys(slug):
+        k = r["key"]; a_ok = [g for g in G if status_in(slug, k, g["symbol"]) == "complete"]
+        gained = [g for g in G if g["status"] != "complete" and status_in(slug, k, g["symbol"]) == "complete"]
+        neither = [g for g in G if g["status"] == "absent" and status_in(slug, k, g["symbol"]) == "absent"]
+        second += (f"</p><p>A second assembly is available for this species: {asm_named(r)}, from {e(r['individual'])}. "
+                   f"Of the {n} genes, {len(a_ok)} are intact in it. "
+                   + (f"{names(gained)} {'is' if len(gained) == 1 else 'are'} intact there but not in {e(A['name'])}, so {n_intact_any(slug)} genes are intact in at least one of the two assemblies. " if gained else f"No further gene is intact there, so {n_intact_any(slug)} genes are intact in at least one of the two assemblies. ")
+                   + (f"{names(neither)} {'was' if len(neither) == 1 else 'were'} found in neither." if neither else ""))
     body = f"""
 <section class="intro"><div class="wrap">
 <h1 style="max-width:22ch">Circadian clock genes of {it(sp["species"]).replace(" ", "&nbsp;")}</h1>
@@ -153,7 +206,7 @@ for slug, c in CAT.items():
 <section class="block"><div class="wrap">
 <div class="cols">
 <div><h3>Genes found</h3>
-<p>Of the {n} genes, {len(ok)} are intact{f", and {word(len(disc))} more {'is' if len(disc) == 1 else 'are'} complete but {'contains' if len(disc) == 1 else 'contain'} a frameshift or stop codon in the assembly sequence ({names(disc)})" if disc else ""}. {f"{word(len(part)).capitalize()} {'is' if len(part) == 1 else 'are'} partial or fragmented ({names(part)})" if part else "No gene is partial or fragmented"}{f", and {word(len(miss))} {'was' if len(miss) == 1 else 'were'} not found ({names(miss)})" if miss else ""}.</p></div>
+<p>Of the {n} genes, {len(ok)} are intact{f", and {word(len(disc))} more {'is' if len(disc) == 1 else 'are'} complete but {'contains' if len(disc) == 1 else 'contain'} a frameshift or stop codon in the assembly sequence ({names(disc)})" if disc else ""}. {f"{word(len(part)).capitalize()} {'is' if len(part) == 1 else 'are'} partial or fragmented ({names(part)})" if part else "No gene is partial or fragmented"}{f", and {word(len(miss))} {'was' if len(miss) == 1 else 'were'} not found ({names(miss)})" if miss else ""}.{second}</p></div>
 <div><h3>Identification</h3>
 <p>{how} Each gene model was accepted only if it passed a reciprocal best-hit test against all <i>E. crispata</i> proteins, which distinguishes orthologues from paralogues. The proteins are {round(100 * min(ids))} to {round(100 * max(ids))}% identical to their <i>E. crispata</i> orthologues (median {round(100 * sorted(ids)[len(ids) // 2])}%).</p></div>
 <div><h3>Limitations of the assembly</h3>
@@ -171,7 +224,7 @@ for slug, c in CAT.items():
 <h2>All {n} genes</h2>
 <div class="filters" id="filters"></div>
 <div class="tablewrap"><table class="genes">
-<thead><tr><th>Gene</th><th>Category</th><th class="num">Protein length (aa)</th><th>Status in {e(A["name"])}</th><th class="num" title="Percentage of identical residues over the aligned part of the two proteins">Identity to <i>E. crispata</i></th><th>Gene model</th></tr></thead>
+<thead><tr><th>Gene</th><th>Category</th><th class="num">Protein length (aa)</th><th>Status in {e(A["name"])}</th>{f"<th>{e(other_keys(slug)[0]['phrase'].replace('the ', '', 1).capitalize()) if len(other_keys(slug)) == 1 else 'Other assemblies'}</th>" if other_keys(slug) else ""}<th class="num" title="Percentage of identical residues over the aligned part of the two proteins">Identity to <i>E. crispata</i></th><th>Gene model</th></tr></thead>
 <tbody id="genes-body"></tbody></table></div>
 <p class="small muted" style="margin-top:12px;max-width:90ch">A gene model is classed as intact when it covers at least 90% of the alignment positions that are present in most species and its coding sequence in the assembly contains no frameshift or stop codon. Models obtained by aligning the <i>E. crispata</i> protein may lack poorly conserved regions at the ends of a protein.</p>
 
@@ -189,10 +242,12 @@ for slug, c in CAT.items():
     # downloads
     with open(os.path.join(SITE, "downloads", f"{slug}_clock_proteins.faa"), "w") as fo:
         for g in G:
-            if g.get("protein"): fo.write(f">{PRE[slug]}_{g['symbol']} {CG[g['symbol']]['name']} [{sp['species']}] {g['status']} | {g['model_source']}\n" + re.sub(r"(.{60})", r"\1\n", g["protein"]).rstrip("\n") + "\n")
+            m_ = ALT[(slug, g["compared_from"])]["genes"][g["symbol"]] if g.get("compared_from") and (slug, g["compared_from"]) in ALT else g
+            if m_.get("protein"): fo.write(f">{PRE[slug]}_{g['symbol']} {CG[g['symbol']]['name']} [{sp['species']}] {m_['status']} | {m_['model_source']}\n" + re.sub(r"(.{60})", r"\1\n", m_["protein"]).rstrip("\n") + "\n")
     with open(os.path.join(SITE, "downloads", f"{slug}_clock_cds.fna"), "w") as fo:
         for g in G:
-            if g.get("cds"): fo.write(f">{PRE[slug]}_{g['symbol']}_cds {CG[g['symbol']]['name']} [{sp['species']}] {g['status']}\n" + re.sub(r"(.{60})", r"\1\n", g["cds"]).rstrip("\n") + "\n")
+            m_ = ALT[(slug, g["compared_from"])]["genes"][g["symbol"]] if g.get("compared_from") and (slug, g["compared_from"]) in ALT else g
+            if m_.get("cds"): fo.write(f">{PRE[slug]}_{g['symbol']}_cds {CG[g['symbol']]['name']} [{sp['species']}] {m_['status']}{' | ' + m_['model_source'] if m_ is not g else ''}\n" + re.sub(r"(.{60})", r"\1\n", m_["cds"]).rstrip("\n") + "\n")
 
 # ------------------------------------------------------------------ data for the comparison page
 order = [s for s in SP if s["slug"] == "elysia-crispata" or s["slug"] in CAT]
@@ -206,9 +261,10 @@ cmp_genes = []
 for sym in symbols:
     gg = GG[sym]
     st = {s["slug"]: status_of(s["slug"], sym) for s in order}
-    comp = {s["slug"]: gg["completeness"].get(s["tag"]) for s in order}
+    comp = {s["slug"]: (gene_of(s["slug"], sym).get("consensus_coverage") if s["slug"] in CAT and gene_of(s["slug"], sym).get("compared_from") else gg["completeness"].get(s["tag"])) for s in order}
     copies = {s["slug"]: (1 + len(gene_of(s["slug"], sym).get("extra_loci", [])) if s["slug"] in CAT and st[s["slug"]] != "absent" else None) for s in order}
-    cmp_genes.append(dict(symbol=sym, label=LABEL.get(sym, sym), name=CG[sym]["name"], category=CG[sym]["category"], status=st, completeness=comp, copies=copies,
+    also = {s["slug"]: intact_elsewhere(s["slug"], sym) for s in order if other_keys(s["slug"]) and st[s["slug"]] != "complete" and intact_elsewhere(s["slug"], sym)}
+    cmp_genes.append(dict(symbol=sym, label=LABEL.get(sym, sym), name=CG[sym]["name"], category=CG[sym]["category"], status=st, completeness=comp, copies=copies, also=also,
                           identity=gg["identity"], mean_identity=gg["mean_identity_elysia"], min_identity=gg["min_identity_elysia"], n_compared=gg["n_elysia_compared"],
                           alignment=gg["alignment"], chrom={s["slug"]: chrom_of(s["slug"], sym) for s in chromsp}, note=NOTES.get(sym, "")))
 OUTNAMES = {"PLAOC": "Plakobranchus ocellatus", "APLCA": "Aplysia californica", "BIOGL": "Biomphalaria glabrata"}
@@ -230,6 +286,12 @@ else: full = []
 
 # ------------------------------------------------------------------ comparison page
 all_intact = [sym for sym in symbols if all(STATUS_CLASS[status_of(s["slug"], sym)] in ("ok", "warn") for s in order)]
+# the same count when every assembly of a species is taken into account
+all_intact_any = [sym for sym in symbols if all(STATUS_CLASS[best_status(s["slug"], sym)] in ("ok", "warn") for s in order)]
+multi_sp = [s for s in order if other_keys(s["slug"])]
+def _asm_count(s): return f'{it(SHORT[s["slug"]])} ({word(1 + len(other_keys(s["slug"])))})'
+MULTI_TXT = ("" if not multi_sp else " More than one assembly is available for " + " and ".join(_asm_count(s) for s in multi_sp)
+             + f"; when a gene is counted as complete if it is complete in any assembly of the species, the number is {len(all_intact_any)}.")
 mi = sorted((g for g in cmp_genes if g["mean_identity"]), key=lambda g: g["mean_identity"])
 fast = mi[:5]; slow = mi[-5:][::-1]
 core = [g for g in cmp_genes if g["category"] == "core" and g["mean_identity"]]
@@ -247,6 +309,38 @@ HOME_CORE = ""
 if core_whole and cr_any:
     HOME_CORE = "The genes of the core loop (Clock, Bmal1, Period, Timeless and two Cryptochromes) are complete in every species"
     HOME_CORE += (f" (in <i>E. crispata</i>, {' and '.join(LABEL.get(x, x) for x in cr_ref_gap)} {'is' if len(cr_ref_gap) == 1 else 'are'} complete in another assembly of the species but not in the reference assembly)." if cr_ref_gap else ".")
+# the note under the gene-by-species table: what the cells of a species with several assemblies show
+def _multi_note():
+    if not multi_sp: return ""
+    parts = []
+    for s in multi_sp:
+        slug = s["slug"]; ref = "xgElyCris1.1" if slug == "elysia-crispata" else CAT[slug]["assembly"]["name"]
+        not_ok = [sym for sym in symbols if status_of(slug, sym) != "complete"]
+        res = [sym for sym in not_ok if intact_elsewhere(slug, sym)]
+        parts.append(f"for {it(SHORT[slug])} the status refers to {e(ref)}, and "
+                     + (f"all {len(not_ok)} genes that are not intact there are" if len(res) == len(not_ok) else f"{word(len(res))} of the {len(not_ok)} genes that are not intact there {'is' if len(res) == 1 else 'are'}")
+                     + " intact in another assembly of the species")
+    return ("Each cell shows the status in the reference assembly: " + "; ".join(parts) + ". These genes are marked with a small second dot.")
+MATRIX_NOTE = _multi_note()
+# methods: the records added to the panel for the E. crispata libraries, and the species with several assemblies
+_px = os.path.join(repo, "config", "panel_extra.tsv")
+PX = list(csv.DictReader(open(_px), delimiter="\t")) if os.path.exists(_px) else []
+_ace = [r for r in PX if r["description"].startswith("Acetabularia")]
+OTHER_IND = chrome.has_other_individuals(repo)        # the page on the other sequenced individuals of E. crispata is part of the site
+PX_TXT = "" if not (PX and OTHER_IND) else (f" For the libraries of the other <i>E. crispata</i> individuals, the panel also contained {word(len(PX))} chloroplast contigs of the Purdue assembly ({sum(int(r['length']) for r in PX) / 1000:,.0f} kb in total: "
+                            f"{word(len(_ace))} contigs of an <i>Acetabularia</i> species and {word(len(PX) - len(_ace))} of an unidentified siphonous alga). No complete plastid genome of <i>Acetabularia</i> is available, so these contigs are the only reference for the kleptoplasts of that animal.")
+READS_SCOPE_TXT = ('For the individual behind the <i>E. crispata</i> reference assembly, all 47 Gb of reads were analysed (see the <a href="elysia-crispata/methods.html">methods page for that species</a>). '
+                   'The read sets listed below, from the other species and from the other sequenced individuals of <i>E. crispata</i>, were analysed in full.') if OTHER_IND else \
+                  ('For <i>E. crispata</i>, all 47 Gb of reads were analysed (see the <a href="elysia-crispata/methods.html">methods page for that species</a>). For the other species, the read sets listed below were analysed in full.')
+OTHER_ALIGN_TXT = "" if not OTHER_IND else (" The reads of the other <i>E. crispata</i> individuals were aligned to the assembly made from the same DNA (the Purdue or the Tampa assembly); "
+                                            "in the Purdue assembly, the chloroplast contigs that are part of the panel were masked.")
+def _asm_list(slug):
+    rows = OTHER_ASM[slug]
+    xs = [f"{asm_named(r)}, from {e(r['individual'])}" for r in rows]
+    return xs[0] if len(xs) == 1 else "; ".join(xs[:-1]) + "; and " + xs[-1]
+MULTI_ASM_TXT = "" if not multi_sp else ("<p>More than one assembly is available for " + " and ".join(it(SHORT[x["slug"]]) for x in multi_sp) + ". "
+                 + " ".join(f"The further {'assemblies' if len(OTHER_ASM[x['slug']]) > 1 else 'assembly'} of {it(SHORT[x['slug']])} {'are' if len(OTHER_ASM[x['slug']]) > 1 else 'is'} {_asm_list(x['slug'])}." for x in multi_sp)
+                 + " All of them were searched for clock genes and for algal DNA.</p>")
 def idlist(gs):
     """'A (95%), B (94%) and C (93%)': mean identity of each protein among the Elysia species"""
     xs = [f'{g["label"]} ({round(100 * g["mean_identity"])}%)' for g in gs]
@@ -256,7 +350,7 @@ compare_body = f"""
 <h1>Comparison of clock genes across {word(len(order))} <i>Elysia</i> species</h1>
 <p class="lede">The 47 clock genes catalogued in <i>E. crispata</i> were searched for in every <i>Elysia</i> species with a genome assembly, and the encoded proteins were aligned and compared.</p>
 <div class="answer">
-<p><strong>The set of clock genes is conserved across the genus.</strong> Of the 47 genes, {len(all_intact)} are complete in the reference assembly of all {word(len(order))} species. {CORE_TXT}</p>
+<p><strong>The set of clock genes is conserved across the genus.</strong> Of the 47 genes, {len(all_intact)} are complete in the reference assembly of all {word(len(order))} species.{MULTI_TXT} {CORE_TXT}</p>
 <p><strong>Missing and partial genes mostly reflect the quality of the assemblies.</strong> {WORST_TXT} The exceptions are the Go-opsins, which vary in number between species, and r-opsin-like 1, for which the gene model is incomplete in <i>E. crispata</i> itself.</p>
 <p><strong>The proteins differ in their degree of conservation.</strong> The most conserved across the genus, by mean pairwise identity, are {idlist(slow[:3])}; the least conserved are {idlist(fast[:3])}. The values for the core loop are {idlist(sorted(core, key=lambda g: -g["mean_identity"]))}.</p>
 </div>
@@ -265,9 +359,9 @@ compare_body = f"""
 <section class="block"><div class="wrap">
 <h2>Gene status by species</h2>
 <p>Each cell shows the status of the gene in the reference assembly of that species and the identity of its protein to the <i>E. crispata</i> protein. Select a gene name to see the alignment, or a cell to see the gene in that species.</p>
-<div class="legend"><span><i class="glyph ok"></i>intact</span><span><i class="glyph warn"></i>complete, with a frameshift or stop codon</span><span><i class="glyph part"></i>partial or fragmented</span><span><i class="glyph miss"></i>not found</span></div>
+<div class="legend"><span><i class="glyph ok"></i>intact</span><span><i class="glyph warn"></i>complete, with a frameshift or stop codon</span><span><i class="glyph part"></i>partial or fragmented</span><span><i class="glyph miss"></i>not found</span>{'<span><i class="glyph ok also"></i>intact in another assembly of the species</span>' if multi_sp else ""}</div>
 <div class="tablewrap"><table class="matrix" id="matrix"></table></div>
-<p class="small muted" style="margin-top:12px;max-width:92ch">For <i>E. crispata</i> the status refers to the Sanger Institute assembly xgElyCris1.1; all 47 genes are complete in at least one other assembly of that species. A gene model is classed as intact when it covers at least 90% of the alignment positions that are present in most sequences and contains no frameshift or stop codon.</p>
+<p class="small muted" style="margin-top:12px;max-width:92ch">{MATRIX_NOTE} A gene model is classed as intact when it covers at least 90% of the alignment positions that are present in most sequences and contains no frameshift or stop codon.</p>
 </div></section>
 
 <section class="block"><div class="wrap">
@@ -320,7 +414,7 @@ def card(s):
 <div class="tx">
 <h3><a href="{slug}/index.html">{e(s["species"])}</a></h3>
 <p class="where">Sequenced specimen: {e(s["origin"])}</p>
-<div><div class="small" style="margin-bottom:3px"><strong>{c["ok"]}</strong> of 47 clock genes intact in the assembly</div>{statusbar(slug)}</div>
+<div><div class="small" style="margin-bottom:3px"><strong>{c["ok"]}</strong> of 47 clock genes intact in the {"reference assembly" if other_keys(slug) else "assembly"}</div>{statusbar(slug)}{f'<div class="small muted" style="margin-top:4px">{n_intact_any(slug)} of 47 intact in at least one of its {word(1 + len(other_keys(slug)))} assemblies</div>' if other_keys(slug) else ""}</div>
 <dl>
 <dt>Assembly</dt><dd>{LEVEL_NOTE[s["level"]]}, {A["span"] / 1e6:,.0f} Mb <span class="muted small">{e(A["accession"])}</span></dd>
 <dt>Gene annotation</dt><dd>{ann}</dd>
@@ -473,7 +567,7 @@ home = f"""
 <section class="block"><div class="wrap">
 <div class="cols">
 <div><h3>Clock genes across the genus</h3>
-<p>Of the 47 clock genes, {len(all_intact)} are complete in the reference assembly of every species. {HOME_CORE} The <a href="compare.html">comparison page</a> gives the status of every gene in every species, the protein alignments and a species tree.</p></div>
+<p>Of the 47 clock genes, {len(all_intact)} are complete in the reference assembly of every species{f", and {len(all_intact_any)} when the other assemblies of " + " and ".join(it(SHORT[x["slug"]]) for x in multi_sp) + " are taken into account" if multi_sp else ""}. {HOME_CORE} The <a href="compare.html">comparison page</a> gives the status of every gene in every species, the protein alignments and a species tree.</p></div>
 <div><h3>Interpreting missing genes</h3>
 <p>The assemblies differ far more in quality than the species differ in gene content. In most cases, a gene shown as partial or not found lies in a gap or a poorly assembled region of that assembly. The clock-gene page of each species describes the limitations of its assembly.</p></div>
 <div><h3>Scope and limitations</h3>
@@ -524,15 +618,15 @@ for s_ in order:
                          {"adult": "second adult, short reads", "hainan": "Hainan individual", "papi1": "second individual", None: ("Shenzhen individual" if s_["slug"] == "elysia-leucolegnote" else "")}.get(m.group(1), m.group(1) or "")))
 reads_methods = "" if not read_rows else f"""
 <h2 id="reads">Identification of the kleptoplasts from the reads</h2>
-<p>For <i>E. crispata</i>, all 47 Gb of reads were analysed (see the <a href="elysia-crispata/methods.html">methods page for that species</a>). For the other species, the read sets listed below were analysed in full.</p>
+<p>{READS_SCOPE_TXT}</p>
 <div class="tablewrap"><table class="data"><thead><tr><th>Species</th><th>Source of DNA</th><th>Platform</th><th>Runs</th><th class="num">Bases analysed</th></tr></thead><tbody>{read_rows}</tbody></table></div>
 <details class="method" open><summary>1. Reference panel</summary>
-<p>The reference panel consists of 1,271 algal plastid sequences (241 complete plastid genomes of green algae; plastid records of Dasycladales, Xanthophyceae and Cladophorales; and a land plant, a diatom, a red alga and a cyanobacterium to detect more distant matches), 117 algal mitochondrial genomes, 7,352 nuclear ribosomal DNA sequences of algae, six slug ribosomal DNA sequences and the mitochondrial genomes of nine <i>Elysia</i> species. Low-complexity sequence in the panel was masked for the first pass.</p></details>
+<p>The reference panel consists of 1,271 algal plastid sequences (241 complete plastid genomes of green algae; plastid records of Dasycladales, Xanthophyceae and Cladophorales; and a land plant, a diatom, a red alga and a cyanobacterium to detect more distant matches), 117 algal mitochondrial genomes, 7,352 nuclear ribosomal DNA sequences of algae, six slug ribosomal DNA sequences and the mitochondrial genomes of nine <i>Elysia</i> species. Low-complexity sequence in the panel was masked for the first pass.{PX_TXT}</p></details>
 <details class="method"><summary>2. First pass: mapping all reads to the panel</summary>
 <p>Every run was processed in full, in batches, and each read was mapped to the panel with minimap2 (k = 15 and w = 10 for long reads; the short-read preset for read pairs). Runs of up to 11 GB were downloaded from the SRA; larger runs were streamed from the archive in several parallel streams. Long reads with a match to the panel were retained. Two classes of read were subsampled: reads whose only match is a short local alignment to a panel window that attracts such alignments from very many reads (slug repeats that resemble part of a panel sequence), and reads that match only ribosomal DNA, at an identity typical of the slug’s own ribosomal DNA.</p>
 <p>Read pairs were mapped only to the organelle genomes of the panel and to the assembly loci under test (see below). Every pair with a match was retained, which includes every pair that could link organelle DNA to other DNA. The one exception is the library from the second adult of <i>E. chlorotica</i>, in which about one seventh of the DNA is chloroplast DNA, amounting to tens of millions of pairs. For this library every pair was mapped and counted, but only one in 50 of the pairs that match a single type of organelle genome and nothing else was retained, selected by its ordinal position in the run. All pairs that match a locus under test or two types of sequence were retained. In addition, one read in 100 to 1,000, selected by its ordinal position in the run, was retained irrespective of what it matched, to provide a random sample of each library.</p></details>
 <details class="method"><summary>3. Second pass: base-level alignment</summary>
-<p>The retained reads were aligned to the assembly of the species together with the panel. Each read was represented by its best set of non-overlapping alignments. A segment was classified as plastid, mitochondrial or nuclear when it matched at 97% identity or higher (82% for the older PacBio RS reads of <i>E. chlorotica</i>). Assembly sequences that consist entirely of organelle DNA were treated as organelle sequences, and plastid-like regions within other assembly sequences were masked for this step, so that a plastid read would not be assigned to the nuclear genome because of a plastid fragment retained in the assembly.</p></details>
+<p>The retained reads were aligned to the assembly of the species together with the panel.{OTHER_ALIGN_TXT} Each read was represented by its best set of non-overlapping alignments. A segment was classified as plastid, mitochondrial or nuclear when it matched at 97% identity or higher (82% for the older PacBio RS reads of <i>E. chlorotica</i>{", and for Nanopore reads, which were analysed with the same criteria throughout" if OTHER_IND else ""}). Assembly sequences that consist entirely of organelle DNA were treated as organelle sequences, and plastid-like regions within other assembly sequences were masked for this step, so that a plastid read would not be assigned to the nuclear genome because of a plastid fragment retained in the assembly.</p></details>
 <details class="method"><summary>4. Identification of the alga</summary>
 <p>Plastid reads were assigned to the reference sequence that they match best. Two barcode genes, rbcL and tufA, were then compared with 11,600 GenBank records of Ulvophyceae and Xanthophyceae. For PacBio HiFi libraries, the barcode sequence was extracted from every read that spans the gene, identical sequences were counted, and each distinct sequence was compared with the GenBank records. For short-read libraries, the plastid read pairs were first assembled into contigs with MEGAHIT, and the barcode sequences were extracted from the contigs.</p></details>
 
@@ -564,6 +658,7 @@ methods = f"""
 <h2>Genome assemblies</h2>
 <div class="tablewrap"><table class="data"><thead><tr><th>Species</th><th>Accession</th><th>Assembly name</th><th>Level</th><th>Gene annotation</th><th>Source of clock gene models</th></tr></thead><tbody>{rows}</tbody></table></div>
 <p class="small muted" style="margin-top:10px">The species and data sets were identified in a survey of the public sequence archives carried out on 13 November 2026.</p>
+{MULTI_ASM_TXT}
 
 <h2>Identification of clock genes</h2>
 <details class="method" open><summary>1. Reference gene set</summary>
@@ -577,6 +672,8 @@ methods = f"""
 <details class="method"><summary>5. Comparison and species tree</summary>
 <p>Identity between two proteins was calculated over the positions at which both have a residue. The species tree was inferred from the proteins that are complete in every species, using alignment positions with at most 20% gaps, with IQ-TREE under the LG+F+G4 model and 1,000 ultrafast bootstrap replicates.</p></details>
 <details class="method"><summary>6. Protein domains</summary><p>Protein domains were identified by searching Pfam-A with hmmsearch, using the gathering thresholds.</p></details>
+<details class="method"><summary>7. Species with more than one assembly</summary>
+<p>For <i>E. crispata</i>, every gene was searched for in all four assemblies of the species, and the protein of each gene was taken from an assembly in which the gene is complete (see the methods page for that species). The alternate haplotype of <i>E. papillosa</i> was analysed in the same way as the reference assemblies (steps 2 and 3). Each of its gene models was then added to the finished alignment of the gene without changing that alignment (MAFFT, <code>--add --keeplength</code>) and scored against the same conserved positions. Where a gene is complete in the alternate haplotype but not in the reference assembly, the protein from the alternate haplotype represents the species in the alignment, the identity values and the species tree. The status shown for a species is always that of its reference assembly; the comparison page and the page of the species also show whether the gene is intact in another assembly.</p></details>
 <p class="small muted">The scripts are in <code>scripts/genus/</code> in the repository and are numbered in the order in which they are run.</p>
 {reads_methods}
 

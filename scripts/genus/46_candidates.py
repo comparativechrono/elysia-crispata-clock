@@ -57,7 +57,7 @@ it without an insertion) is not an insertion in this animal: it is counted as "s
 """
 import sys, os, json, glob, collections, argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from sam_segments import paf_segments, best_tiling, relabel_organelle_loci
+from sam_segments import paf_segments, best_tiling, relabel_organelle_loci, thinned_reads
 ap = argparse.ArgumentParser()
 ap.add_argument("workdir"); ap.add_argument("kind", choices=["hifi", "clr"]); ap.add_argument("out"); ap.add_argument("screen", nargs="?")
 ap.add_argument("--paf"); ap.add_argument("--no-identity", action="store_true"); ap.add_argument("--no-p1", action="store_true")
@@ -173,9 +173,13 @@ def second_pass(t, i, j):
     return out
 
 shape_n = collections.Counter(); cand = []; reads_with = collections.Counter(); nuclear = collections.Counter(); nuc_rows = []; shared = collections.Counter(); strands = collections.Counter()
+# a kind of organelle DNA of which only an even sample of the reads was carried on (THIN_K): its counts are those of the sample
+THIN, THIN_K = thinned_reads(W) if not A.paf else ({}, {})
+def counted(r, k): return k not in THIN_K or THIN.get(r) == k
 for r, t in tiles.items():
     kinds = {s["cls"] for s in t}
-    for k in kinds: reads_with[k] += 1
+    for k in kinds:
+        if counted(r, k): reads_with[k] += 1
     if not t: continue
     n = len(t)
     # ---- insertion shapes between alignments: flanks i and j, everything between them of one other kind
@@ -292,7 +296,7 @@ reads_with_slug_join = collections.Counter()
 seen = collections.defaultdict(set)
 seen_placed = collections.defaultdict(set)
 for c in cand:
-    if c["shape"] == "element": continue
+    if c["shape"] == "element" or not counted(c["read"], c["insert"]): continue
     seen[c["insert"]].add(c["read"])
     q = c.get("slug_mapq") if "slug_mapq" in c else min(c["left"].get("mapq", 0), c["right"].get("mapq", 0)) if c["shape"] == "insertion" else max(m.get("mapq", 0) for m in c.get("middle", [{}]))
     if (q or 0) >= UNIQ: seen_placed[c["insert"]].add(c["read"])
@@ -372,7 +376,7 @@ if A.genome_bp:
 by_place = collections.Counter((x["left"]["t"], x["left"]["te"] // 2000) for x in nuc_rows)
 for x in nuc_rows: x["reads_at_place"] = by_place[(x["left"]["t"], x["left"]["te"] // 2000)]
 uniq = [x for x in nuc_rows if x["insert_mapq_min"] >= 30]
-res = dict(kind=kind, min_identity=MINID, min_segment=MINSEG, min_short_piece=MINSHORT, reads_examined=n_reads, depth=depth, reads_with_piece=dict(reads_with),
+res = dict(kind=kind, min_identity=MINID, min_segment=MINSEG, min_short_piece=MINSHORT, reads_examined=n_reads, depth=depth, reads_with_piece=dict(reads_with), thinned=THIN_K,
            reads_joining_slug=dict(reads_with_slug_join), reads_joined_to_placed_slug=reads_joined_to_placed_slug,
            shapes={f"{a}|{b}": v for (a, b), v in sorted(shape_n.items())},
            shared_with_assembly=dict(shared), second_pass={f"{a}|{b}": v for (a, b), v in sorted(strands.items())},

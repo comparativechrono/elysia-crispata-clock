@@ -20,10 +20,10 @@
    "All three long-read runs of the project were analysed: {bases} from the assembled individual and {papi1_bases} from the second individual."
   ],
   "card": "<i>Penicillus lamourouxii</i>",
-  "transfer_lede": "Algal DNA was searched for in the assembly and in the reads. For this species, reads are publicly available from two individuals: the one used for the assembly and a second animal.",
+  "transfer_lede": "Algal DNA was searched for in both assemblies of this species, the reference assembly and the alternate haplotype of the same individual, and in the reads. Reads are publicly available from two individuals: the one used for the assemblies and a second animal.",
   "transfer_answer": [
-   "<strong>There is no evidence of algal DNA in the genome.</strong> No sequence in the assembly joins algal DNA to slug nuclear DNA, and in the reads from two individuals no molecule contains chloroplast DNA flanked on both sides by nuclear DNA.",
-   "<strong>Assembly.</strong> The assembly contains no plastid DNA. One contig of 31 kb is a fragment of a green-algal mitochondrial genome, most likely from the alga in the gut of the animal. It is a separate contig and carries no slug gene.",
+   "<strong>There is no evidence of algal DNA in the genome.</strong> No sequence in either assembly joins algal DNA to slug nuclear DNA, and in the reads from two individuals no molecule contains chloroplast DNA flanked on both sides by nuclear DNA.",
+   "<strong>Assemblies.</strong> Neither the reference assembly nor the alternate haplotype contains plastid DNA. One contig of 31 kb in the reference assembly is a fragment of a green-algal mitochondrial genome, most likely from the alga in the gut of the animal. It is a separate contig and carries no slug gene, and the alternate haplotype contains no such sequence.",
    "<strong>Reads.</strong> In the assembled individual, {join_cp_any} of {join_cp_of} chloroplast reads and {join_mt_any} of {join_mt_of} reads of the slug’s own mitochondrial DNA are joined to nuclear DNA at one end; in the second individual, the numbers are {papi1_join_cp_any} of {papi1_join_cp_of} and {papi1_join_mt_any} of {papi1_join_mt_of}. Chloroplast DNA is thus joined to nuclear DNA no more frequently than mitochondrial DNA is. At a frequency of {per_cell} in the first individual, or {papi1_per_cell} in the second, about three reads with an insertion-like structure would have been expected. None was found."
   ],
   "transfer_assembly": [
@@ -47,7 +47,7 @@
   "transfer_caveats": [
    "The detection limits given here are averages over all the cells that contributed DNA to the library. Kleptoplasts are present only in cells of the digestive gland. If these made up one tenth of the cells of the animal, the limit for these cells alone would be ten times weaker.",
    "The analysis of the reads detects plastid DNA from the alga present in these animals and from the other algae in the panel. The protein search detects only genes that have a homologue among the 471 query proteins.",
-   "The assembly is still at the contig level, and sequence that is missing from it could not be searched."
+   "Both assemblies are still at the contig level, and sequence that is missing from both could not be searched."
   ],
   "klepto_rhythm": [
    "For animals with the same diet, kleptoplast transcripts should be mapped to OZ494339.1, the plastid genome assembled from the same individual (89,758 bp). This genome is not annotated in the archive. It is 99.4% identical, over nearly its whole length, to OZ372796.1, the second plastid genome from the <i>E. crispata</i> individual, for which gene coordinates derived by homology are available in the <a href=\"../elysia-crispata/methods.html\">downloads for that species</a>.",
@@ -57,6 +57,15 @@
    "The second individual, a whole adult from the same locality, was sequenced to greater depth from a library that had been amplified by PCR. It contained about one tenth as much chloroplast DNA as the first ({papi1_cp_pct} of the bases). Its reads were aligned to the assembly of the first individual.",
    "<strong>Reads with a single junction.</strong> Of the {papi1_join_cp_of} chloroplast reads, {papi1_join_cp_any} are joined to nuclear DNA at one end, as are {papi1_join_mt_any} of the {papi1_join_mt_of} mitochondrial reads. The amplification adapter lies between the two segments in all {papi1_cp_joins} chloroplast junctions and in {papi1_mt_adapter} of the {papi1_mt_joins} mitochondrial junctions, which shows that these chimeras formed during library preparation.",
    "<strong>Reads with an insertion-like structure.</strong> None was found. However, {papi1_unconfirmed} reads contain an additional segment that the first pass had matched to a plastid genome on the basis of a few seeds; 28 of these reads are from the same locus. Base-level alignment shows that the segment is not plastid DNA. At this locus the second individual has three more copies of a 45-base repeat than the assembled individual, and the repeat shares a single seed with a repeat in the plastid genome of an unrelated alga."
+  ],
+  "other_assembly_alt": [
+   "A second assembly of this species is public: the alternate haplotype of the individual used for the reference assembly (xgElyPapi4.2 alternate haplotype, GCA_977015365.2; 1,195 Mb in 23,904 contigs). It was searched in the same way as the reference assembly."
+  ],
+  "transfer_assembly_alt": [
+   "No sequence in the alternate haplotype consists of organelle DNA, and no region within its sequences matches plastid or mitochondrial DNA. The fragment of an algal mitochondrial genome that forms a separate contig in the reference assembly has no counterpart in this assembly."
+  ],
+  "transfer_proteins_alt": [
+   "No locus in the alternate haplotype has an algal or bacterial protein as its best match."
   ]
  },
  "elysia-atroviridis": {

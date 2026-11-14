@@ -47,7 +47,16 @@ def hbar(rows, unit="%", width=760, label_w=250, digits=2):
         out.append(f'<text class="val" x="{label_w + w + 8:.1f}" y="{y + 20}">{pct_auto(r[1] / 100) if unit == "%" else f"{r[1]:.{digits}f}{unit}"}</text>')
     return "\n".join(out) + "</svg>"
 TIP_JS = '<script src="../assets/pages.js"></script>'
-KIND = {"hifi": "PacBio HiFi reads", "clr": "PacBio RS reads", "short": "paired-end short reads"}
+KIND = {"hifi": "PacBio HiFi reads", "clr": "PacBio RS reads", "short": "paired-end short reads", "ont": "Nanopore reads"}
+def kind_label(L): return L.get("kind_label") or KIND[L["kind"]]
+# further assemblies (config/species_assemblies.tsv): a library of another animal is aligned to the assembly made from it
+ASM = {}
+_oa = os.path.join(repo, "config", "species_assemblies.tsv")
+if os.path.exists(_oa):
+    for _r in csv.DictReader(open(_oa), delimiter="\t"): ASM[(_r["slug"], _r["key"])] = _r
+def span_of(slug, R):
+    a = ASM.get((slug, R.get("assembly") or ""))
+    return int(a["span"]) if a and a.get("span") else SPAN.get(slug)
 CLS_WORD = {"cp": "plastid", "slugmt": "slug mitochondrial", "algmt": "algal mitochondrial", "algrDNA": "algal nuclear ribosomal", "bait": "bait"}
 
 def per_cell(k):
@@ -237,7 +246,7 @@ def lc(label):
     return label if label.split()[0] in ("Shenzhen", "Hainan") else label[0].lower() + label[1:]
 
 # =====================================================================================
-def klepto_page(sp, K, T):
+def klepto_page(sp, K, T, parts=False):
     slug = sp["slug"]; tx = TEXT.get(slug, {}); ctx = context(sp, K, T); libs = K["libraries"]; main = libs[0]
     lede = fmt(tx.get("klepto_lede", "The plastid DNA among the reads of {species} identifies the alga on which the sequenced animal had fed."), ctx)
     answer = "".join(f"<p>{fmt(p, ctx)}</p>" for p in tx.get("klepto_answer", []))
@@ -250,7 +259,7 @@ def klepto_page(sp, K, T):
         if L["algal_mitochondrion"]["bp"] and (L["kind"] != "short" or L["algal_mitochondrion"]["fraction"] >= 5e-6): rows.append(("Algal mitochondrial DNA", 100 * L["algal_mitochondrion"]["fraction"], f'{L["algal_mitochondrion"]["bp"] / 1e3:,.1f} kb'))
         if L["algal_rdna"]["bp"] and L["kind"] != "short": rows.append(("Algal nuclear ribosomal DNA", 100 * L["algal_rdna"]["fraction"], f'{L["algal_rdna"]["bp"] / 1e3:,.1f} kb'))
         digits = 2 if max(r[1] for r in rows) >= 0.1 else 4
-        charts += f'<div class="chart"><h3>{e(lib_label(L, len(libs))) + ": share of sequenced bases" if len(libs) > 1 else "Share of sequenced bases"}</h3><p class="sub">In total, {gb(L.get("bases_screened") or L["bases"])} of {e(KIND[L["kind"]])} were analysed. The chart shows the bases that match a reference sequence with at least {"97" if L["kind"] != "clr" else "82"}% identity. All other bases are slug nuclear DNA or match nothing in the panel.</p>{hbar(rows, digits=digits)}</div>'
+        charts += f'<div class="chart"><h3>{e(lib_label(L, len(libs))) + ": share of sequenced bases" if len(libs) > 1 else "Share of sequenced bases"}</h3><p class="sub">In total, {gb(L.get("bases_screened") or L["bases"])} of {e(kind_label(L))} were analysed. The chart shows the bases that match a reference sequence with at least {"97" if L["kind"] != "clr" else "82"}% identity. All other bases are slug nuclear DNA or match nothing in the panel.</p>{hbar(rows, digits=digits)}</div>'
     donor_tables = ""
     for L in libs:
         if not L["donors"] or L["plastid"]["bp"] < 5000: continue
@@ -302,6 +311,7 @@ def klepto_page(sp, K, T):
         if os.path.exists(os.path.join(SITE, "downloads", tag + "_barcodes.fa")): dls.append(f'<a href="../downloads/{tag}_barcodes.fa">barcode sequences{lab}</a>')
     rhythm = "".join(f"<p>{fmt(p, ctx)}</p>" for p in tx.get("klepto_rhythm", []))
     if rhythm and dls: rhythm += f'<p>Downloads: {", ".join(dls)}, and <a href="../downloads/{slug}_kleptoplast.json">all values shown on this page</a> (JSON).</p>'
+    if parts: return dict(rows_lib=rows_lib, charts=charts, which=which, donor_tables=donor_tables, bc_tables=bc_tables, nuc=nuc, notes=notes, rhythm=rhythm, answer=answer)
     body = f"""
 <section class="page-head"><div class="wrap">
 <h1>Algal source of the kleptoplasts in {it(sp["species"]).replace(" ", "&nbsp;")}</h1>
@@ -500,40 +510,44 @@ def tx_join(slug, x): return TEXT.get(slug, {}).get("join_notes", {}).get(f'{x["
 def tx_break(slug, x): return TEXT.get(slug, {}).get("break_notes", {}).get(f'{x["slug"]}:{x["slug_break"]}', "")
 def tx_place(slug, x): return TEXT.get(slug, {}).get("place_notes", {}).get(f'{x["slug"]}:{x["start"]}', "")
 
-def transfer_page(sp, K, T):
+def transfer_page(sp, K, T, parts=False):
     slug = sp["slug"]; tx = TEXT.get(slug, {}); ctx = context(sp, K, T); s = T["screen"]
     lede = fmt(tx.get("transfer_lede", "Algal DNA was searched for in the assembly and in the reads from which it was built."), ctx)
     answer = "".join(f"<p>{fmt(p, ctx)}</p>" for p in tx.get("transfer_answer", []))
     # ---- assembly
-    whole = ""
-    if s["whole"]:
-        rows = "".join(f'<tr><td class="mono">{e(w["contig"])}</td><td class="num">{num(w["length"])}</td><td>{e(w["cls"])}</td><td>{taxon_html(" ".join(w["best_target_desc"].split()[:2]))} <span class="mono muted">{e(w["best_target"].split("|", 1)[1])}</span></td><td class="num">{100 * w["median_identity"]:.1f}%</td></tr>' for w in s["whole"][:40])
-        whole = f'''<h3>Assembly sequences that consist entirely of organelle DNA</h3>
-<div class="tablewrap"><table class="data"><thead><tr><th>Sequence</th><th class="num">Length (bp)</th><th>Type</th><th>Best match</th><th class="num">Identity</th></tr></thead><tbody>{rows}</tbody></table></div>'''
-    loci = ""
-    if s["loci"]:
-        rows = "".join(f'<tr><td class="mono">{e(L["contig"])}:{num(L["start"])}–{num(L["end"])}</td><td class="num">{num(L["span"])}</td><td class="num">{100 * L["identity"]:.1f}%</td>'
-                       f'<td>{taxon_html(" ".join(L["target_desc"].replace("UNVERIFIED: ", "").split()[:2]))} {e(L["cls"].replace("algal ", "").replace("plastid", "plastid genome"))}{": " + e(", ".join(g for g in L.get("genes", []) if len(g) < 14)[:60]) if L.get("genes") else ""}</td>'
-                       f'<td>{locus_reading(L, tx)}</td></tr>' for L in sorted(s["loci"], key=lambda L: -L["identity"]))
-        loci = f'''<h3>Organelle-like regions within other assembly sequences</h3>
-<div class="tablewrap"><table class="data"><thead><tr><th>Position in the assembly</th><th class="num">Length (bp)</th><th class="num">Identity</th><th>Best match</th><th>Interpretation</th></tr></thead><tbody>{rows}</tbody></table></div>'''
-    numt = ""
-    if s["numt_like"]:
-        rows = "".join(f'<tr><td class="mono">{e(N["contig"])}:{num(N["start"])}–{num(N["end"])}</td><td class="num">{num(N["end"] - N["start"])}</td><td class="num">{100 * N["identity"]:.1f}%</td><td class="mono">{e(N["target"].split("|", 1)[1])}:{num(N["tstart"])}–{num(N["tend"])}</td></tr>' for N in s["numt_like"][:30])
-        numt = f'''<h3>Mitochondrial DNA in nuclear sequences</h3>
-<p>{fmt(tx.get("numt_text", "These regions within nuclear sequences match the slug’s own mitochondrial genome. Nuclear copies of mitochondrial DNA are common in animals; they are listed here because the search that detects them would also detect plastid DNA."), ctx)}</p>
-<div class="tablewrap"><table class="data"><thead><tr><th>Position in the assembly</th><th class="num">Length (bp)</th><th class="num">Identity</th><th>Region of the mitochondrial genome</th></tr></thead><tbody>{rows}</tbody></table></div>'''
+    def asm_tables(s):
+        """organelle-like DNA in one assembly: how it was searched, and the three tables"""
+        whole = ""
+        if s["whole"]:
+            rows = "".join(f'<tr><td class="mono">{e(w["contig"])}</td><td class="num">{num(w["length"])}</td><td>{e(w["cls"])}</td><td>{taxon_html(" ".join(w["best_target_desc"].split()[:2]))} <span class="mono muted">{e(w["best_target"].split("|", 1)[1])}</span></td><td class="num">{100 * w["median_identity"]:.1f}%</td></tr>' for w in s["whole"][:40])
+            whole = f'''<h3>Assembly sequences that consist entirely of organelle DNA</h3>
+    <div class="tablewrap"><table class="data"><thead><tr><th>Sequence</th><th class="num">Length (bp)</th><th>Type</th><th>Best match</th><th class="num">Identity</th></tr></thead><tbody>{rows}</tbody></table></div>'''
+        loci = ""
+        if s["loci"]:
+            rows = "".join(f'<tr><td class="mono">{e(L["contig"])}:{num(L["start"])}–{num(L["end"])}</td><td class="num">{num(L["span"])}</td><td class="num">{100 * L["identity"]:.1f}%</td>'
+                           f'<td>{taxon_html(" ".join(L["target_desc"].replace("UNVERIFIED: ", "").split()[:2]))} {e(L["cls"].replace("algal ", "").replace("plastid", "plastid genome"))}{": " + e(", ".join(g for g in L.get("genes", []) if len(g) < 14)[:60]) if L.get("genes") else ""}</td>'
+                           f'<td>{locus_reading(L, tx)}</td></tr>' for L in sorted(s["loci"], key=lambda L: -L["identity"]))
+            loci = f'''<h3>Organelle-like regions within other assembly sequences</h3>
+    <div class="tablewrap"><table class="data"><thead><tr><th>Position in the assembly</th><th class="num">Length (bp)</th><th class="num">Identity</th><th>Best match</th><th>Interpretation</th></tr></thead><tbody>{rows}</tbody></table></div>'''
+        numt = ""
+        if s["numt_like"]:
+            rows = "".join(f'<tr><td class="mono">{e(N["contig"])}:{num(N["start"])}–{num(N["end"])}</td><td class="num">{num(N["end"] - N["start"])}</td><td class="num">{100 * N["identity"]:.1f}%</td><td class="mono">{e(N["target"].split("|", 1)[1])}:{num(N["tstart"])}–{num(N["tend"])}</td></tr>' for N in s["numt_like"][:30])
+            numt = f'''<h3>Mitochondrial DNA in nuclear sequences</h3>
+    <p>{fmt(tx.get("numt_text", "These regions within nuclear sequences match the slug’s own mitochondrial genome. Nuclear copies of mitochondrial DNA are common in animals; they are listed here because the search that detects them would also detect plastid DNA."), ctx)}</p>
+    <div class="tablewrap"><table class="data"><thead><tr><th>Position in the assembly</th><th class="num">Length (bp)</th><th class="num">Identity</th><th>Region of the mitochondrial genome</th></tr></thead><tbody>{rows}</tbody></table></div>'''
+        removed = s["removed"]
+        asm_method = (f'The assembly was divided into 10 kb windows, and each window was compared with the same reference panel as the reads. '
+                      f'In total, {num(removed["repeat_like_matches"])} matches were excluded because they fall in panel regions that are hit from 15 or more loci in the assembly; these are slug repeats that happen to resemble a short region of a panel sequence. '
+                      f'A further {num(removed["low_complexity_matches"])} matches were to low-complexity sequence, and {num(removed["own_rdna_loci"]) if removed["own_rdna_loci"] else "none"} were to the slug’s own ribosomal DNA, which is 80 to 90% identical to algal ribosomal DNA.')
+        return asm_method, whole, loci, numt
+    asm_method, whole, loci, numt = asm_tables(s)
     asm_text = "".join(f"<p>{fmt(p, ctx)}</p>" for p in tx.get("transfer_assembly", []))
-    removed = s["removed"]
-    asm_method = (f'The assembly was divided into 10 kb windows, and each window was compared with the same reference panel as the reads. '
-                  f'In total, {num(removed["repeat_like_matches"])} matches were excluded because they fall in panel regions that are hit from 15 or more loci in the assembly; these are slug repeats that happen to resemble a short region of a panel sequence. '
-                  f'A further {num(removed["low_complexity_matches"])} matches were to low-complexity sequence, and {num(removed["own_rdna_loci"]) if removed["own_rdna_loci"] else "none"} were to the slug’s own ribosomal DNA, which is 80 to 90% identical to algal ribosomal DNA.')
     # ---- reads
     reads_html = ""
     for R in T["reads"]:
         key = "reads_" + R["library"]
         para = "".join(f"<p>{fmt(p, ctx)}</p>" for p in tx.get(key, []))
-        span = SPAN.get(slug); depth = (R.get("bases_screened") or R["bases"]) / span if span else None
+        span = span_of(slug, R); depth = (R.get("bases_screened") or R["bases"]) / span if span else None
         sens_ = R.get("sensitivity") or {}
         if R["kind"] == "short" and sens_.get("slug_fraction_of_bases"):          # short reads: depth of the slug DNA that can be placed
             depth = sens_["depth"]
@@ -541,7 +555,7 @@ def transfer_page(sp, K, T):
                    + (f"{depth:,.0f}" if depth >= 10 else f"{depth:,.1f}") + "-fold coverage of the genome.")
         else:
             sub = e(R["animal"][0].upper() + R["animal"][1:]) + "." + (f" The reads correspond to about {depth:,.0f}-fold coverage of the genome." if depth and depth >= 10 else (f" The reads correspond to about {depth:,.1f}-fold coverage of the genome." if depth else ""))
-        reads_html += f'''<h3>{e(R.get("label") or (R["animal"][0].upper() + R["animal"][1:]))}: {gb(R.get("bases_screened") or R["bases"])} of {e(KIND[R["kind"]])}</h3>
+        reads_html += f'''<h3>{e(R.get("label") or (R["animal"][0].upper() + R["animal"][1:]))}: {gb(R.get("bases_screened") or R["bases"])} of {e(kind_label(R))}</h3>
 <p class="small muted" style="margin:-4px 0 10px">{sub}</p>
 {long_reads_block(R, slug) if R["kind"] != "short" else short_reads_block(R, slug)}
 {para}'''
@@ -567,7 +581,7 @@ def transfer_page(sp, K, T):
                     return f'<td class="num"><strong>{num(thr)}</strong>{off}</td><td class="num">{num(v["stop_inside"] + v["stop_outside"])}</td>'
                 span = len(here)
                 head = (f'<td rowspan="{span}"><span class="mono">{e(L["contig"])}:{num(L["start"])}–{num(L["end"])}</span><br><span class="muted small">{"plastid-like" if L["kind"] == "plastid" else "mitochondrial"}, {num(L["end"] - L["start"])} bp</span></td>') if first else ""
-                rows += f'<tr>{head}<td>{e(R.get("label") or (R["animal"].split(" (")[0].capitalize() + ", " + KIND[R["kind"]]))}</td>{edge("left")}{edge("right")}</tr>'
+                rows += f'<tr>{head}<td>{e(R.get("label") or (R["animal"].split(" (")[0].capitalize() + ", " + kind_label(R)))}</td>{edge("left")}{edge("right")}</tr>'
                 first = False
         locus_html = f'''<h3>Read-based tests of the organelle-like regions in the assembly</h3>
 <p>{fmt(tx.get("locus_text", "For every organelle-like region within an assembly sequence, reads were aligned to the region together with 3 kb of flanking sequence on each side. At each boundary, a read that spans the boundary supports the junction between the region and its flank, whereas a read whose alignment ends there continues into different sequence."), ctx)}</p>
@@ -575,49 +589,59 @@ def transfer_page(sp, K, T):
 <tr><th class="num">reads spanning</th><th class="num">reads ending</th><th class="num">reads spanning</th><th class="num">reads ending</th></tr></thead><tbody>{rows}</tbody></table></div>'''
     reads_html += locus_html + "".join(f'<p{" style=\"margin-top:16px\"" if i == 0 else ""}>{fmt(p, ctx)}</p>' for i, p in enumerate(tx.get("locus_after", [])))
     # ---- proteins
-    prot = ""
-    P = T.get("protein_screen")
-    if P:
-        ps = P["summary"]
-        def census_of(c):
-            k = c.get("census")
-            if not k: return None
-            st = k["stretches"]; n = sum(v for kk, v in st.items() if kk != "own_only")
-            return dict(n=n, microbe=st.get("microbe", 0), alga=st.get("alga", 0), animal=st.get("animal", 0) + st.get("slug_only", 0),
-                        coding=k["coding_bp"] / max(1, k["examined_length"] - k["n_bases"]), gc=k["gc"])
-        def creading(c):
-            if c["contig"] in tx.get("protein_readings", {}): return tx["protein_readings"][c["contig"]]
-            if c.get("whole") == "plastid" or "plastid-only contig" in c["classes"]: return "Consists entirely of plastid DNA (listed above)."
-            if "plastid fragment (assembly artefact)" in c["classes"]: return "The plastid region described above."
-            k = census_of(c)
-            if k and k["microbe"] >= 3 and k["microbe"] >= 0.5 * k["n"]: return "Bacterial sequence."
-            if k: return "Too few genes to classify."
-            if c["loci"] >= 2 and not c["animal_loci_on_contig"]: return "Adjacent genes of bacterial type and no slug gene among the proteins searched: a bacterial sequence in the assembly."
-            if c["loci"] >= 2: return "Several genes of bacterial type: a bacterial sequence, or a sequence joined to one."
-            return "One gene of bacterial type."
-        def ccell(c):
-            k = census_of(c)
-            if not k: return '<td class="num muted">–</td><td class="num muted">–</td><td class="num muted">–</td><td class="num muted">–</td>'
-            return f'<td class="num">{100 * k["gc"]:.0f}%</td><td class="num">{k["n"]}</td><td class="num">{k["microbe"]}</td><td class="num">{round(100 * k["coding"])}%</td>'
-        cs = P.get("non_animal_contigs", [])
-        has_census = any("census" in c for c in cs)
-        rows = "".join(f'<tr><td class="mono">{e(c["contig"])}</td><td class="num">{num(c["length"])}</td>{ccell(c) if has_census else ""}<td>{e(", ".join(c["genes"][:7]))}{" …" if len(c["genes"]) > 7 else ""}</td>'
-                       f'<td>{creading(c)}</td></tr>' for c in cs[:40])
-        ptext = "".join(f"<p>{fmt(p, ctx)}</p>" for p in tx.get("transfer_proteins", []))
-        census_head = ('<th class="num">G+C</th><th class="num" title="Protein-coding regions found when the whole sequence is translated in all six reading frames">Coding regions</th>'
-                       '<th class="num">Of bacterial type</th><th class="num" title="Fraction of the sequence occupied by these coding regions">Coding fraction</th>') if has_census else ""
-        own = {"elysia-chlorotica": "<i>E. chlorotica</i>", "elysia-marginata": "<i>E. marginata</i>"}.get(slug)
-        own_note = (f" The published gene annotation of this assembly was not used as evidence that a locus is of animal origin, because it also includes genes on bacterial and plastid sequences, and such genes would otherwise support their own classification." if own else "")
-        nm = P["no_match"]; n_nm = ps.get("no database match", 0)
-        nomatch_text = ("these are short or weak alignments whose translations match no known protein" if not nm["low_complexity"] else
-                        f'{num(nm["low_complexity"])} of these are low-complexity alignments' + ("" if nm["low_complexity"] >= n_nm else ", and the remainder are short or weak alignments (25 to 40% identity, spliced together across several exons) whose translations match no known protein"))
-        census_note = (f'<p>Each assembly sequence that contains a locus of non-animal type was then translated in full, in all six reading frames, and every protein-coding region found on it was compared with the same protein database. The table gives the number of coding regions, the number that are of bacterial type, and the fraction of the sequence that they occupy. Bacterial DNA consists mostly of coding sequence, whereas a slug sequence of this size would contain only one or two genes. The G+C content of the genome as a whole is {100 * P["genome_gc"]:.0f}%.</p>' if has_census and P.get("genome_gc") else "")
-        prot = f'''<h2>Protein-level search for algal genes</h2>
-<p>A comparison at the DNA level can miss a gene from an alga that has no close relative among the reference sequences. A set of {num(P["n_queries"])} proteins was therefore aligned directly to the assembly: the plastid-encoded proteins of a green alga, photosynthesis proteins of <i>Chlamydomonas</i> and <i>Arabidopsis</i> (including those encoded in the nucleus), proteins of siphonous green algae, and all available proteins of <i>Vaucheria litorea</i>. Each matching locus was translated and compared with animal, algal and bacterial proteins.</p>
-<p>In total, {num(ps["loci"])} loci matched. Of these, {num(ps.get("animal gene", 0))} are slug genes, for which the best match is a protein from another animal (for example, the gene for mitochondrial ATP synthase is detected with the chloroplast ATP synthase as the query).{own_note} A further {num(ps.get("no database match", 0))} match no protein from any other organism; {nomatch_text}.</p>
-{census_note}
-{ptext}
-{f'<div class="tablewrap"><table class="data"><thead><tr><th>Sequence</th><th class="num">Length (bp)</th>{census_head}<th>Query proteins that matched</th><th>Interpretation</th></tr></thead><tbody>{rows}</tbody></table></div>' if rows else ""}'''
+    def prot_block(P, text_key="transfer_proteins", heading="Protein-level search for algal genes", first=True):
+        prot = ""
+        if P:
+            ps = P["summary"]
+            def census_of(c):
+                k = c.get("census")
+                if not k: return None
+                st = k["stretches"]; n = sum(v for kk, v in st.items() if kk != "own_only")
+                return dict(n=n, microbe=st.get("microbe", 0), alga=st.get("alga", 0), animal=st.get("animal", 0) + st.get("slug_only", 0),
+                            coding=k["coding_bp"] / max(1, k["examined_length"] - k["n_bases"]), gc=k["gc"])
+            def creading(c):
+                if c["contig"] in tx.get("protein_readings", {}): return tx["protein_readings"][c["contig"]]
+                if c.get("whole") == "plastid" or "plastid-only contig" in c["classes"]: return "Consists entirely of plastid DNA (listed above)."
+                if "plastid fragment (assembly artefact)" in c["classes"]: return "The plastid region described above."
+                k = census_of(c)
+                if k and k["microbe"] >= 3 and k["microbe"] >= 0.5 * k["n"]: return "Bacterial sequence."
+                if k: return "Too few genes to classify."
+                if c["loci"] >= 2 and not c["animal_loci_on_contig"]: return "Adjacent genes of bacterial type and no slug gene among the proteins searched: a bacterial sequence in the assembly."
+                if c["loci"] >= 2: return "Several genes of bacterial type: a bacterial sequence, or a sequence joined to one."
+                return "One gene of bacterial type."
+            def ccell(c):
+                k = census_of(c)
+                if not k: return '<td class="num muted">–</td><td class="num muted">–</td><td class="num muted">–</td><td class="num muted">–</td>'
+                return f'<td class="num">{100 * k["gc"]:.0f}%</td><td class="num">{k["n"]}</td><td class="num">{k["microbe"]}</td><td class="num">{round(100 * k["coding"])}%</td>'
+            cs = P.get("non_animal_contigs", [])
+            has_census = any("census" in c for c in cs)
+            rows = "".join(f'<tr><td class="mono">{e(c["contig"])}</td><td class="num">{num(c["length"])}</td>{ccell(c) if has_census else ""}<td>{e(", ".join(c["genes"][:7]))}{" …" if len(c["genes"]) > 7 else ""}</td>'
+                           f'<td>{creading(c)}</td></tr>' for c in cs[:40])
+            ptext = "".join(f"<p>{fmt(p, ctx)}</p>" for p in tx.get(text_key, []))
+            census_head = ('<th class="num">G+C</th><th class="num" title="Protein-coding regions found when the whole sequence is translated in all six reading frames">Coding regions</th>'
+                           '<th class="num">Of bacterial type</th><th class="num" title="Fraction of the sequence occupied by these coding regions">Coding fraction</th>') if has_census else ""
+            own = {"elysia-chlorotica": "<i>E. chlorotica</i>", "elysia-marginata": "<i>E. marginata</i>"}.get(slug)
+            own_note = (f" The published gene annotation of this assembly was not used as evidence that a locus is of animal origin, because it also includes genes on bacterial and plastid sequences, and such genes would otherwise support their own classification." if own else "")
+            nm = P["no_match"]; n_nm = ps.get("no database match", 0)
+            nomatch_text = ("these are short or weak alignments whose translations match no known protein" if not nm["low_complexity"] else
+                            f'{num(nm["low_complexity"])} of these are low-complexity alignments' + ("" if nm["low_complexity"] >= n_nm else ", and the remainder are short or weak alignments (25 to 40% identity, spliced together across several exons) whose translations match no known protein"))
+            census_note = (f'<p>Each assembly sequence that contains a locus of non-animal type was then translated in full, in all six reading frames, and every protein-coding region found on it was compared with the same protein database. The table gives the number of coding regions, the number that are of bacterial type, and the fraction of the sequence that they occupy. Bacterial DNA consists mostly of coding sequence, whereas a slug sequence of this size would contain only one or two genes. The G+C content of the genome as a whole is {100 * P["genome_gc"]:.0f}%.</p>' if has_census and P.get("genome_gc") else "")
+            intro_p = (f'''<p>A comparison at the DNA level can miss a gene from an alga that has no close relative among the reference sequences. A set of {num(P["n_queries"])} proteins was therefore aligned directly to the assembly: the plastid-encoded proteins of a green alga, photosynthesis proteins of <i>Chlamydomonas</i> and <i>Arabidopsis</i> (including those encoded in the nucleus), proteins of siphonous green algae, and all available proteins of <i>Vaucheria litorea</i>. Each matching locus was translated and compared with animal, algal and bacterial proteins.</p>''' if first else f'<p>The same {num(P["n_queries"])} proteins were aligned to this assembly, and each matching locus was classified in the same way.</p>')
+            prot = f'''<h2>{heading}</h2>
+{intro_p}
+    <p>In total, {num(ps["loci"])} loci matched. Of these, {num(ps.get("animal gene", 0))} are slug genes, for which the best match is a protein from another animal (for example, the gene for mitochondrial ATP synthase is detected with the chloroplast ATP synthase as the query).{own_note} A further {num(ps.get("no database match", 0))} match no protein from any other organism; {nomatch_text}.</p>
+    {census_note}
+    {ptext}
+    {f'<div class="tablewrap"><table class="data"><thead><tr><th>Sequence</th><th class="num">Length (bp)</th>{census_head}<th>Query proteins that matched</th><th>Interpretation</th></tr></thead><tbody>{rows}</tbody></table></div>' if rows else ""}'''
+        return "\n".join(l.lstrip() for l in prot.split("\n"))
+    prot = prot_block(T.get("protein_screen"))
+    # ---- a second assembly of the species
+    other_html = ""
+    for O in T.get("other_assemblies", []):
+        m2, w2, l2, n2 = asm_tables(O["screen"])
+        other_html += (f'<h2>Search of the second assembly</h2>' + "".join(f"<p>{fmt(p, ctx)}</p>" for p in tx.get("other_assembly_" + O["key"], []))
+                       + f"<p>{m2}</p>" + "".join(f"<p>{fmt(p, ctx)}</p>" for p in tx.get("transfer_assembly_" + O["key"], [])) + w2 + l2 + n2
+                       + prot_block(O.get("protein_screen"), "transfer_proteins_" + O["key"], "Protein-level search of the second assembly", first=False))
     caveats = "".join(f"<li>{fmt(p, ctx)}</li>" for p in tx.get("transfer_caveats", []))
     # tables written by 45_export_tables.py
     dls = []
@@ -625,7 +649,8 @@ def transfer_page(sp, K, T):
         tag = slug if R["library"] == "main" else f'{slug}_{R["library"]}'; lab = (" (" + lc(R.get("label") or R["animal"]) + ")") if len(T["reads"]) > 1 else ""
         for suffix, what in (("_insertion_shapes.tsv", "reads with an insertion-like structure"), ("_junctions.tsv.gz", "all junctions within reads"), ("_junction_pairs.tsv.gz", "all discordant pairs and split reads that join organelle DNA to nuclear DNA")):
             if os.path.exists(os.path.join(SITE, "downloads", tag + suffix)): dls.append(f'<a href="../downloads/{tag}{suffix}">{what}{e(lab)}</a>')
-    dl_html = f'<p class="small" style="margin-top:14px">Tables available for download: {"; ".join(dls)}; and <a href="../downloads/{slug}_gene_transfer.json">all values shown on this page</a> (JSON).</p>' if dls else ""
+    dl_html = f'<p class="small" style="margin-top:14px">Tables available for download: {"; ".join(dls)}; and <a href="../downloads/{T.get("download_json") or slug + "_gene_transfer.json"}">all values shown on this page</a> (JSON).</p>' if dls else ""
+    if parts: return dict(reads_html=reads_html, dl_html=dl_html, caveats=caveats, answer=answer)
     body = f"""
 <section class="page-head"><div class="wrap">
 <h1>Search for algal DNA in the {it(sp["species"]).replace(" ", "&nbsp;")} genome</h1>
@@ -645,6 +670,8 @@ def transfer_page(sp, K, T):
 
 {prot}
 
+{other_html}
+
 {"<h2>Limitations</h2><ul>" + caveats + "</ul>" if caveats else ""}
 </div></section>
 """
@@ -652,7 +679,67 @@ def transfer_page(sp, K, T):
     return chrome.page(f"Search for algal DNA in the {sp['species']} genome", body, root="../", species=sp["species"], tabs=tabs_for(slug), tab_current="gene-transfer.html", today=today, sources=src, scripts=TIP_JS,
                        description=f"A search for algal DNA in the genome of the sea slug {sp['species']}, based on its assembly and its sequencing reads.")
 
+def other_animals_page(sp, O):
+    """E. crispata: the reads of the other sequenced animals of the species, each aligned to the assembly made from it.
+    The page is put together from the parts of the kleptoplast and gene-transfer pages of the other species."""
+    slug = sp["slug"]; tx = TEXT.get(slug, {})
+    for L in O["libraries"] + O["reads"]:
+        if L["kind"] == "ont": L["kind_label"] = KIND["ont"]; L["kind"] = "clr"          # analysed, and described, like the older PacBio reads
+    K = dict(slug=slug, species=sp["species"], libraries=O["libraries"])
+    T = dict(slug=slug, species=sp["species"], reads=O["reads"], protein_screen=None, download_json="elysia-crispata_other_individuals.json",
+             screen=dict(whole=[], loci=[], numt_like=[], removed=dict(repeat_like_matches=0, low_complexity_matches=0, own_rdna_loci=0)))
+    kp = klepto_page(sp, K, T, parts=True); tp = transfer_page(sp, K, T, parts=True); ctx = context(sp, K, T)
+    lede = fmt(tx.get("other_lede", ""), ctx)
+    answer = "".join(f"<p>{fmt(p, ctx)}</p>" for p in tx.get("other_answer", []))
+    reads_intro = "".join(f"<p>{fmt(p, ctx)}</p>" for p in tx.get("other_reads_intro", []))
+    body = f"""
+<section class="page-head"><div class="wrap">
+<h1>Other sequenced individuals of {it(sp["species"]).replace(" ", "&nbsp;")}</h1>
+<p class="lede">{lede}</p>
+<div class="answer">{answer}</div>
+</div></section>
+
+<section class="block article"><div class="wrap">
+<h2>Sequencing reads</h2>
+<div class="tablewrap"><table class="data">
+<thead><tr><th>Source of DNA</th><th>Platform</th><th>Runs</th><th class="num">Bases analysed</th><th>Notes</th></tr></thead>
+<tbody>{kp["rows_lib"]}</tbody></table></div>
+<p class="small muted" style="margin-top:10px;max-width:90ch">{fmt(tx.get("other_panel_note", ""), ctx)}</p>
+
+<h2>Composition of the sequenced DNA</h2>
+{kp["charts"]}
+
+<h2>Identification of the algae</h2>
+{kp["which"]}
+{kp["donor_tables"]}
+<p class="small muted" style="margin-top:10px;max-width:90ch">Each read is assigned to the reference sequence that it matches best. An identity close to 100% indicates that the reference sequence is from the same species as the alga on which the animal had fed. A substantially lower identity means only that the reference is the closest sequenced relative.</p>
+
+{"<h2>Barcode genes (rbcL and tufA)</h2>" + kp["bc_tables"] if kp["bc_tables"] else ""}
+
+{"<h2>Algal nuclear and mitochondrial DNA</h2>" + kp["nuc"] if kp["nuc"] else ""}
+
+<h2>Search of the reads for algal DNA joined to nuclear DNA</h2>
+{reads_intro}
+{tp["reads_html"]}
+{tp["dl_html"]}
+
+{"<h2>Limitations</h2><ul>" + tp["caveats"] + "</ul>" if tp["caveats"] else ""}
+</div></section>
+"""
+    src = (f"Data for {it(sp['species'])}: reads {e(', '.join(r for L in O['libraries'] for r in L['runs']))}; assemblies "
+           + e(", ".join(f"{ASM[(slug, k)]['asm_name']} ({ASM[(slug, k)]['accession']})" for k in dict.fromkeys(L.get("assembly") for L in O["libraries"]) if (slug, k) in ASM))
+           + ". The methods and data sources are described on the <a href=\"../methods.html\">methods page</a>.")
+    return chrome.page(f"Other sequenced individuals of {sp['species']}", body, root="../", species=sp["species"], tabs=chrome.species_tabs(repo), tab_current="other-individuals.html", today=today, sources=src, scripts=TIP_JS,
+                       description=f"Kleptoplasts and tests for algal gene transfer in the other sequenced individuals of the sea slug {sp['species']}.")
+
 os.makedirs(os.path.join(SITE, "downloads"), exist_ok=True)
+# E. crispata: the page on its other sequenced animals (its other pages are written by scripts/30 and 31)
+_O = jload(os.path.join(RG, "elysia-crispata.other_animals.json"))
+if _O and chrome.has_other_individuals(repo):
+    _sp = next(x for x in SP if x["slug"] == "elysia-crispata")
+    open(os.path.join(SITE, "elysia-crispata", "other-individuals.html"), "w").write(other_animals_page(_sp, _O))
+    shutil.copy(os.path.join(RG, "elysia-crispata.other_animals.json"), os.path.join(SITE, "downloads", "elysia-crispata_other_individuals.json"))
+    print("elysia-crispata ['other-individuals.html']")
 for sp in SP:
     slug = sp["slug"]
     if slug == "elysia-crispata": continue

@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 """Baits for testing, with reads, the places where an assembly holds organelle-like DNA.
 
-usage: 40_locus_baits.py SCREEN.json GENOME.fa.gz OUT.fa [flank=3000] [contig:start-end:kind ...]
+usage: 40_locus_baits.py SCREEN.json|- GENOME.fa.gz OUT.fa [flank=3000] [contig:start-end:kind ...]
 One bait per locus of 35_assembly_screen.py (plastid-like loci of >= 90% identity and the
 mitochondrial NUMT-like loci, which serve as a positive control): the locus with FLANK bases
 either side. Bases that the submitters soft-masked as repeats (lower case) are replaced by N so
 that the bait collects reads of this locus only. Names: bait|contig:start-end|kind|locus_start-locus_end
 Further places can be given by hand (0-based start, kind plastid or numt), for stretches that the
-DNA screen reports below 90% identity or that were found in another way.
+DNA screen reports below 90% identity or that were found in another way. With "-" in place of
+SCREEN.json only the places given by hand are used.
 """
 import sys, json, subprocess, os
 screen, genome, out = sys.argv[1:4]; flank = int(sys.argv[4]) if len(sys.argv) > 4 else 3000
 extra = sys.argv[5:]
 ST = os.environ.get("BIO_BIN", "/home/claude/tools/mamba/envs/bio/bin") + "/samtools"
-s = json.load(open(screen)); loci = []
+s = json.load(open(screen)) if screen != "-" else dict(loci=[], numt_like=[]); loci = []
 for L in s["loci"]:
     if L["cls"] == "plastid" and L["identity"] >= 0.90: loci.append((L["contig"], L["start"], L["end"], "plastid", L["contig_length"]))
 for N in s["numt_like"]: loci.append((N["contig"], N["start"], N["end"], "numt", None))

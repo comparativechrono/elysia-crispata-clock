@@ -78,7 +78,7 @@ with open(os.path.join(SITE, "data", "elysia-crispata.js"), "w") as fo:
 CRISPATA_SOURCES = ("Data for <i>Elysia crispata</i>: genome assembly xgElyCris1.1 and sequencing reads from BioProject PRJEB67629 (Middlebrooks et al. 2026, Wellcome Open Research 11:148; "
                     "Aquatic Symbiosis Genomics project, Wellcome Sanger Institute), released under the Tree of Life open data policy.")
 def page(title, current, body, scripts=""):
-    return chrome.page(title, body, root="../", species="Elysia crispata", tabs=chrome.SPECIES_TABS, tab_current=current, scripts=scripts, today=today, sources=CRISPATA_SOURCES,
+    return chrome.page(title, body, root="../", species="Elysia crispata", tabs=chrome.species_tabs(repo), tab_current=current, scripts=scripts, today=today, sources=CRISPATA_SOURCES,
                        description="Circadian clock genes, the algal source of the kleptoplasts and a test for algal gene transfer in the lettuce sea slug Elysia crispata, based on the xgElyCris1 genome data.")
 
 def status_counts():
@@ -110,6 +110,24 @@ import collections
 ncat = collections.Counter(g["category"] for g in genes)
 n_ptm = ncat["kinase"] + ncat["phosphatase"] + ncat["degradation"] + ncat["modulator"]
 word = chrome.word
+# the gene in each of the four assemblies: how many are intact where, and which are intact in the reference assembly alone
+def _st(g, k): return g["assemblies"][k]["status"]
+n_intact = {k: sum(1 for g in genes if _st(g, k) == "complete") for k in ("sanger", "alt", "purdue", "tampa")}
+not_intact = [g for g in genes if _st(g, "sanger") != "complete"]
+n_rescued = sum(1 for g in not_intact if any(_st(g, k) == "complete" for k in ("purdue", "tampa")))
+only_ref = [g for g in genes if _st(g, "sanger") == "complete" and not any(_st(g, k) == "complete" for k in ("alt", "purdue", "tampa"))]
+assert all(any(_st(g, k) == "complete" for k in ("sanger", "alt", "purdue", "tampa")) for g in genes)
+def _only_ref_txt():
+    if not only_ref: return ""
+    out = []
+    for g in only_ref:
+        gaps = sorted({(p["qstart"], p["qend"]) for k in ("alt", "purdue", "tampa") for p in g["assemblies"][k].get("pieces", [])[:1]})
+        if len(gaps) == 1 and gaps[0][0] > 0 and gaps[0][1] == g["length"]:
+            out.append(f"{g['label']} is intact only in xgElyCris1.1: the first {gaps[0][0]} residues of the protein model do not align to any of the other three assemblies.")
+        else: out.append(f"{g['label']} is intact only in xgElyCris1.1.")
+    return " " + " ".join(out)
+rescued_txt = (f"Each of the {len(not_intact)} genes that are incomplete or missing in xgElyCris1.1 is intact in at least one of the other two <i>E. crispata</i> assemblies (Purdue and Tampa)"
+               if n_rescued == len(not_intact) else f"Of the {len(not_intact)} genes that are incomplete or missing in xgElyCris1.1, {n_rescued} are intact in at least one of the other two <i>E. crispata</i> assemblies (Purdue and Tampa)")
 
 index_body = f"""
 <section class="intro"><div class="wrap">
@@ -135,7 +153,8 @@ index_body = f"""
 <div><h3>Status in the reference assembly</h3>
 <p>In xgElyCris1.1, {n_ok} of the {n} genes are intact and {word(n_disc)} more are complete but contain a frameshift or stop codon in the assembly sequence. A further {word(len(partial))} are partial or fragmented ({names(partial)}), and {word(len(missing))} are missing from the assembly ({names(missing)}).</p></div>
 <div><h3>The missing genes are present in the genome</h3>
-<p>All {n} genes are complete in at least one of the other two <i>E. crispata</i> assemblies, and reads from the individual sequenced for xgElyCris1.1 cover their exons. The genes that are incomplete or missing in xgElyCris1.1 are therefore absent from the assembly, not from the genome. {lowtxt}</p></div>
+<p>{rescued_txt}, and reads from the individual sequenced for xgElyCris1.1 cover their exons. These genes are therefore absent from the assembly, not from the genome. {lowtxt}</p>
+<p>All four assemblies were searched for every gene: {n_intact["sanger"]} genes are intact in xgElyCris1.1, {n_intact["alt"]} in its alternate haplotype, {n_intact["purdue"]} in the Purdue assembly and {n_intact["tampa"]} in the Tampa assembly, and every gene is intact in at least one of them.{_only_ref_txt()}</p></div>
 </div>
 </div></section>
 

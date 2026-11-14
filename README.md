@@ -21,22 +21,35 @@ A nuclear genome assembly is available for seven species. The 47 clock genes cat
 *E. crispata* were searched for in each assembly (`scripts/genus/`), and the encoded proteins were
 aligned and compared.
 
+Two species have more than one assembly (checked at NCBI on 14 November 2026). *E. crispata* has
+four: xgElyCris1.1, its alternate haplotype, and two assemblies from other laboratories, referred
+to here as the Purdue and Tampa assemblies. *E. papillosa* has two: xgElyPapi4.2 and its alternate
+haplotype. Every assembly was searched for the clock genes and for algal DNA
+(`config/species_assemblies.tsv`). One assembly of each species serves as its reference, and the
+status of a gene always refers to that assembly; the site also shows whether the gene is intact in
+another assembly of the species.
+
 **Clock genes.** Number of genes of each status in the reference assembly of each species:
 
-| Species | Reference assembly | Intact | Complete, with a frameshift or stop codon | Partial or fragmented | Not found |
-|---|---|---|---|---|---|
-| *Elysia crispata* | GCA_963854125.1 (chromosome) | 30 | 4 | 5 | 8 |
-| *Elysia chlorotica* | GCA_003991915.1 (scaffold) | 39 | 5 | 3 | 0 |
-| *Elysia marginata* | GCA_019649035.1 (scaffold) | 33 | 8 | 4 | 2 |
-| *Elysia timida* | GCA_043644045.1 (chromosome) | 44 | 1 | 1 | 1 |
-| *Elysia leucolegnote* | GCA_052815195.1 (chromosome) | 43 | 1 | 2 | 1 |
-| *Elysia atroviridis* | GCA_059052615.1 (chromosome) | 44 | 1 | 1 | 1 |
-| *Elysia papillosa* | GCA_977015215.2 (contig) | 43 | 0 | 3 | 1 |
+| Species | Reference assembly | Intact | Complete, with a frameshift or stop codon | Partial or fragmented | Not found | Intact in at least one assembly |
+|---|---|---|---|---|---|---|
+| *Elysia crispata* | GCA_963854125.1 (chromosome) | 30 | 4 | 5 | 8 | 47 (four assemblies) |
+| *Elysia chlorotica* | GCA_003991915.1 (scaffold) | 39 | 5 | 3 | 0 | |
+| *Elysia marginata* | GCA_019649035.1 (scaffold) | 33 | 8 | 4 | 2 | |
+| *Elysia timida* | GCA_043644045.1 (chromosome) | 44 | 1 | 1 | 1 | |
+| *Elysia leucolegnote* | GCA_052815195.1 (chromosome) | 43 | 1 | 2 | 1 | |
+| *Elysia atroviridis* | GCA_059052615.1 (chromosome) | 44 | 1 | 1 | 1 | |
+| *Elysia papillosa* | GCA_977015215.2 (contig) | 43 | 0 | 3 | 1 | 44 (two assemblies) |
 
-- Of the 47 genes, 27 are complete in the reference assembly of all seven species, and the core
-  loop is complete in every species. Where a gene is partial or missing, the cause is usually the
+- Of the 47 genes, 27 are complete in the reference assembly of all seven species, and 35 when
+  the other assemblies of *E. crispata* and *E. papillosa* are taken into account. The core loop
+  is complete in every species. Where a gene is partial or missing, the cause is usually the
   assembly: the two assemblies built mainly from short reads contain the largest numbers of such
   genes.
+- In the alternate haplotype of *E. papillosa*, 38 genes are intact. Hr3, which is partial in the
+  reference assembly, is intact there, and its protein from the alternate haplotype is the one
+  used in the alignment, the identity values and the species tree. Nemo and r-opsin-like 1 are
+  incomplete in both assemblies, and Go-opsin 1 was found in neither.
 - None of the genes that could not be found in *E. crispata* (Dec1/2, Fbxl3/21, Tyf, Cipc, Ciart,
   Aanat, Asmt) was found in any other species.
 - The number of Go-opsin genes varies between species (one to three); Go-opsin 1 of
@@ -162,8 +175,10 @@ Foreign DNA in the assemblies:
   plastid DNA at that point (87 and 77 reads diverge from the assembly there, and none spans the
   junction). The reads of the assembled individual are not public, so the junction itself
   cannot be tested. Four sequences (1.9 Mb) are bacterial.
-- *E. papillosa*: contig CDRNNR020002991.1 (30.9 kb) is a fragment of an algal mitochondrial
-  genome.
+- *E. papillosa*: contig CDRNNR020002991.1 (30.9 kb) of the reference assembly is a fragment of
+  an algal mitochondrial genome. The alternate haplotype (GCA_977015365.2) contains no
+  organelle-like DNA and no gene of algal or bacterial type, and the algal mitochondrial contig
+  has no counterpart in it.
 - *E. timida* and *E. atroviridis*: no foreign DNA of these kinds was found in the assembly.
 
 In the protein-level search of these species, the gene set published with an assembly was not
@@ -178,10 +193,14 @@ degradation factors, output genes, photolyases and nine opsins. All 47 are prese
 species, but the Sanger Institute assembly xgElyCris1.1 is incomplete (BUSCO 73.6%): 30 genes
 are intact in it, 4 are complete but contain a frameshift or stop codon in the assembly
 sequence, 5 are partial or fragmented (only the 3′ exons of Bmal1 are present, on an unplaced
-scaffold) and 8 are missing or represented only by a divergent copy. Each of these genes is complete in at least one of the two other *E. crispata*
-assemblies, and HiFi reads from the sequenced individual cover their exons, so the missing genes
-reflect gaps in the assembly and not gene loss. The following genes were not found in any
-assembly: Dec1/2, Fbxl3/21, Tyf, Cipc, Ciart, Aanat and Asmt.
+scaffold) and 8 are missing or represented only by a divergent copy. Each of these 17 genes is
+intact in the Purdue or the Tampa assembly, and HiFi reads from the sequenced individual cover
+their exons, so the missing genes reflect gaps in the assembly and not gene loss. All four
+assemblies were searched for every gene: 30 genes are intact in xgElyCris1.1, 12 in its alternate
+haplotype, 46 in the Purdue assembly and 42 in the Tampa assembly, and every gene is intact in at
+least one of them. Cry2 is intact only in xgElyCris1.1; the first 25 residues of the protein
+model do not align to any of the other three assemblies. The following genes were not found in
+any assembly: Dec1/2, Fbxl3/21, Tyf, Cipc, Ciart, Aanat and Asmt.
 
 **Kleptoplasts.** About 2.4% of the sequenced bases are plastid DNA. Of this, 86% derives from
 *Penicillus capitatus* and 14% from a second *Penicillus* species, which matches the only
@@ -233,10 +252,10 @@ The website presents the evidence in full, together with the limitations of each
 |---|---|
 | `docs/` | The website (static). `index.html` lists the species, `compare.html` compares their clock proteins, and each species has its own folder (`docs/elysia-crispata/`, …). The data are embedded in `docs/data/<species>.js` and `docs/data/genus.js`; the files offered for download are in `docs/downloads/` and `docs/elysia-crispata/downloads/`. The photographs and their credits are in `docs/assets/photos/`. |
 | `results/` | Tables for *E. crispata*: `clock_genes.tsv` / `.json`, `sequences/` (proteins and coding sequences), `kleptoplast.json`, `kleptoplast_barcodes.tsv`, `hgt.json`, `plastid_fragments_in_assembly.tsv`, `penicillus_plastome_genes.bed`. |
-| `results/genus/` | For each of the other species: the clock-gene catalogue (`<species>.clock.json`), the composition of its reads (`<species>.kleptoplast.json`) and the gene-transfer analyses (`<species>.transfer.json`). Also the gene-by-species table (`clock_matrix.tsv`), protein alignments (`alignments/`), the concatenated alignment and species tree, and the intermediate tables of the read and assembly analyses: the reference panel (`panel.tsv.gz`), barcode records and sequences, plastid contigs, read junctions, every protein match (`protein_screen_loci.json.gz`) and every coding region on the bacterial and other foreign sequences (`foreign_sequences.json.gz`). |
+| `results/genus/` | For each of the other species: the clock-gene catalogue (`<species>.clock.json`; `elysia-papillosa.alt.clock.json` for the alternate haplotype), the composition of its reads (`<species>.kleptoplast.json`) and the gene-transfer analyses (`<species>.transfer.json`). Also the gene-by-species table (`clock_matrix.tsv`), protein alignments (`alignments/`), the concatenated alignment and species tree, and the intermediate tables of the read and assembly analyses: the reference panel (`panel.tsv.gz`), barcode records and sequences, plastid contigs, read junctions, every protein match (`protein_screen_loci.json.gz`) and every coding region on the bacterial and other foreign sequences (`foreign_sequences.json.gz`). |
 | `results/trees/` | Trimmed alignments of the gene families and FastTree trees in Newick format. |
 | `results/intermediate/` | Small intermediate tables: orthologue calls, choice of gene model, read support, expression, the list of sequences in the reference panel, chimeric-read junctions, boundary evidence and the inputs to the protein-level search. |
-| `config/` | Curated inputs: reference clock proteins (`clock_seeds.tsv`), the gene catalogue with its anchors (`clock_catalogue.tsv`), genes searched for but not found (`clock_not_found.tsv`), the species and their assemblies (`species.tsv`), the read sets analysed (`species_reads.tsv`), the text of the conclusions shown on the species pages (`species_text.json`), and the survey of public *Elysia* data (`species_catalogue.tsv`). |
+| `config/` | Curated inputs: reference clock proteins (`clock_seeds.tsv`), the gene catalogue with its anchors (`clock_catalogue.tsv`), genes searched for but not found (`clock_not_found.tsv`), the species and their reference assemblies (`species.tsv`), the further assemblies of *E. crispata* and *E. papillosa* (`species_assemblies.tsv`), the read sets analysed (`species_reads.tsv`), the text of the conclusions shown on the species pages (`species_text.json`), and the survey of public *Elysia* data (`species_catalogue.tsv`). |
 | `scripts/` | The *E. crispata* pipeline, numbered in the order in which it is run; `scripts/genus/` contains the steps that are run for every species. |
 
 ## Scripts
@@ -257,8 +276,8 @@ Steps that are run for every species (`scripts/genus/`):
 | Step | Scripts | Purpose |
 |---|---|---|
 | Download | `00_fetch_assemblies.sh`, `01_fetch_photos.py`, `02_choose_photos.py` | Assemblies (and annotations, where GenBank has one) from NCBI; openly licensed photographs from iNaturalist, with their credits. |
-| Clock genes | `09_clock_refs.sh`, `10_project_clock_genes.sh`, `11_clock_catalogue.py` | Alignment of the 47 *E. crispata* proteins to each genome with miniprot; addition of annotated proteins where available; a reciprocal best-hit test against all *E. crispata* proteins; selection of one model per gene. |
-| Comparison | `12_compare_species.py`, `13_domains.sh` | Protein alignments (MAFFT), completeness relative to the alignment positions present in most sequences, pairwise identity, the species tree (IQ-TREE), Pfam domains. |
+| Clock genes | `09_clock_refs.sh`, `10_project_clock_genes.sh`, `10b_miniprot_in_parts.sh`, `11_clock_catalogue.py` | Alignment of the 47 *E. crispata* proteins to each genome with miniprot (in parts, for a genome too large for the available memory); addition of annotated proteins where available; a reciprocal best-hit test against all *E. crispata* proteins; selection of one model per gene. |
+| Comparison | `12_compare_species.py`, `13_domains.sh`, `14_other_assemblies.py` | Protein alignments (MAFFT), completeness relative to the alignment positions present in most sequences, pairwise identity, the species tree (IQ-TREE), Pfam domains. For a second assembly of a species, each gene model is added to the finished alignment and scored against the same positions; where a gene is complete only in the second assembly, that protein represents the species. |
 | Reference panel | `30_build_panel.py`, `30b_mask_and_index.sh` | Plastid, mitochondrial and ribosomal DNA reference sequences for all species; masking of low-complexity sequence for the first pass. |
 | Reads | `fetch_ranges.py`, `31c_screen_run.py`, `31_select_hits.py`, `31b_slim_rdna.py`, `31d_sample_blocks.py`, `33_pass2.sh`, `sam_segments.py`, `49_analyse_library.sh`, `34_read_analysis.py`, `37_pair_analysis.py`, `55_end_piece_control.py` | Processing of each run in full, in batches, and mapping to the panel; base-level alignment of the reads with a match, and of a random sample of the library, to the assembly of the species and to the panel; composition of the library; every read or read pair in which two types of DNA are joined, with the same counts for mitochondrial DNA and for the random sample; the type of DNA at the end of the fragment in read pairs that span a junction. |
 | Single molecules | `46_candidates.py`, `51_recurrent_junctions.py`, `47_library_control.sh`, `47_shape_reads.py`, `52_fetch_reads.py`, `53_join_in_short_reads.py`, `54_internal_pieces.py` | Classification of long reads by structure (organelle DNA flanked by nuclear DNA, organelle DNA at one end, or the reciprocal structure), with short segments confirmed at base level; comparison of junctions between reads to find any that recur in independent molecules; PCR duplicates; the background rate of chimeras, measured on every read of a small run; retrieval of individual reads by name; search for a known junction in read pairs. |
@@ -266,7 +285,7 @@ Steps that are run for every species (`scripts/genus/`):
 | Assemblies | `35_assembly_screen.py`, `42_protein_screen_inputs.py`, `43_foreign_sequences.py` (with `scripts/22` and `scripts/28`) | Organelle-like DNA in each assembly; alignment of 471 algal proteins to each assembly; translation in full of every sequence with a non-animal match, and classification of its genes. |
 | Read-based tests of loci | `40_locus_baits.py`, `41_locus_test.py` | Reads that span, or end at, each boundary of an organelle-like region within an assembly sequence, and at the locus of each read in which organelle DNA is flanked by nuclear DNA. |
 | Collect and build | `39_collect_species.py`, `45_export_tables.py`, `chrome.py`, `21_build_species_pages.py`, `20_build_genus_site.py` | Result files and small tables; the shared page frame; the kleptoplast and gene-transfer pages of each species; the home page, comparison page, clock-gene pages and methods. |
-| Order of the analyses | `run_screens.sh` | The commands for the six additional species in the order in which they were run (`DRY=1` prints them). |
+| Order of the analyses | `run_screens.sh` | The commands for the six additional species and for the second assembly of *E. papillosa*, in the order in which they were run (`DRY=1` prints them). |
 
 The scripts were written for a single machine. The locations of the tools
 (`/home/claude/tools/mamba/envs/bio/bin`, which can be overridden with `BIO_BIN` in the scripts
@@ -299,7 +318,8 @@ python3 -m http.server -d docs 8000
 
 Assemblies of the other species: *E. chlorotica* GCA_003991915.1, *E. marginata* GCA_019649035.1,
 *E. timida* GCA_043644045.1, *E. leucolegnote* GCA_052815195.1, *E. atroviridis* GCA_059052615.1,
-*E. papillosa* GCA_977015215.2 (details in `config/species.tsv`).
+*E. papillosa* GCA_977015215.2 and its alternate haplotype GCA_977015365.2 (details in
+`config/species.tsv` and `config/species_assemblies.tsv`).
 
 Reads analysed for the other species (details in `config/species_reads.tsv`):
 

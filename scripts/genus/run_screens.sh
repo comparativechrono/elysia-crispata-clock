@@ -3,7 +3,7 @@
 # they were run. E. crispata has its own, earlier pipeline (scripts/10 to 29); the two steps of
 # this one that were applied to it as well are in crispata() below.
 #
-# usage: run_screens.sh STEP ...      STEP = panel | assembly | reads | controls | loci | proteins | crispata | collect | all
+# usage: run_screens.sh STEP ...      STEP = panel | assembly | reads | controls | loci | proteins | crispata | other_assemblies | crispata_animals | collect | all
 #        DRY=1 run_screens.sh all     prints the commands without running them
 #
 # Layout (all outside the repository; set with the variables below)
@@ -69,14 +69,16 @@ assembly(){        # organelle-like DNA in each assembly, as DNA
 
 # one library: first pass of every run, second pass, analysis
 #   lib DIR PANEL_NAME "RUN ..." long|short hifi|clr|short [options of 31c_screen_run.py]
+#   ASM=<slug>  the assembly the reads are aligned to, where it is not that of the species (DIR up to the first dot)
+#   PANEL=<dir> another panel directory;  PASS2_PRESET=map-ont  Nanopore reads (analysed like the older PacBio reads, mode clr)
 lib(){
   local dir=$1 pn=$2 runs=$3 kind=$4 mode=$5; shift 5
-  local slug=${dir%%.*} W=$WORK/reads/$dir r spots size src
+  local slug=${ASM:-${dir%%.*}} W=$WORK/reads/$dir r spots size src
   run mkdir -p "$W" "$DATA/genus_reads/tmp"
   for r in $runs; do
     [ -e "$W/$r.done" ] && continue
     spots=$(run_info "$r" spots); size=$(run_info "$r" size_MB); src=()
-    if [ "$size" -le 11000 ]; then                 # small enough to store while it is read
+    if [ "$size" -le "${STORE_MAX_MB:-11000}" ]; then                 # small enough to store while it is read
       run python3 "$HERE/fetch_ranges.py" "https://sra-pub-run-odp.s3.amazonaws.com/sra/$r/$r" "$DATA/genus_reads/tmp/$r.sra" 128 6
       src=(--src "$DATA/genus_reads/tmp/$r.sra")
     fi
@@ -90,11 +92,11 @@ lib(){
       run python3 "$HERE/31b_slim_rdna.py" "$W/$r.p1.paf" "$W/$r.allhits.fasta" "$W/$r.hits.fa"
     done
   fi
-  big bash "$HERE/33_pass2.sh" "$W" "$(genome "$slug")" "$PANEL/panel.fa" "$WORK/asm_screen/$slug.screen.json" "$mode"
+  big env ${PASS2_PRESET:+PASS2_PRESET=$PASS2_PRESET} bash "$HERE/33_pass2.sh" "$W" "$(genome "$slug")" "$PANEL/panel.fa" "$WORK/asm_screen/$slug.screen.json" "$mode"
   if [ "$kind" = short ]; then P1_INDEX=$PANEL/$pn.sr.mmi analyse "$dir" "$mode"; else analyse "$dir" "$mode"; fi
 }
 analyse(){
-  local dir=$1 mode=$2 slug=${1%%.*}
+  local dir=$1 mode=$2 slug=${ASM:-${1%%.*}}
   run env ${DEPTH_PAF:+DEPTH_PAF=$DEPTH_PAF} ${REPEAT_FA:+REPEAT_FA=$REPEAT_FA} ${P1_INDEX:+P1_INDEX=$P1_INDEX} ${EXTRA_ORGANELLE:+EXTRA_ORGANELLE=$EXTRA_ORGANELLE} bash "$HERE/49_analyse_library.sh" "$WORK/reads/$dir" "$(genome "$slug")" "$PANEL" "$WORK/asm_screen/$slug.screen.json" "$mode" "$BC"
 }
 # spots and size of a run: run_info RUN spots|size_MB   (E-utilities; the answers are kept in $WORK/runs.tsv)
@@ -207,6 +209,70 @@ crispata(){        # two steps of this pipeline applied to the E. crispata libra
   run python3 "$HERE/51_recurrent_junctions.py" "$Y/candidates.json" "$Y/all_hits.fa" "$Y/recurrent.json" hifi
 }
 
+other_assemblies(){   # a second assembly of a species (config/species_assemblies.tsv): the alternate haplotype of E. papillosa
+  # $DATA/asm/elysia-papillosa-alt/genome.fa.gz holds GCA_977015365.2 (bgzip + faidx). At 1.2 Gb the assembly is more
+  # than miniprot can index at once in 6 GB of memory, so it is searched in three parts (10b_miniprot_in_parts.sh).
+  local s=elysia-papillosa-alt G P=$WORK/protscreen_alt Q=$REPO/results/intermediate/protein_screen_queries.fa DB=$HGT/alien/alien_db.dmnd
+  G=$(genome $s)
+  # clock genes: the catalogue of this assembly, built and scored like that of the reference assembly
+  run bash "$HERE/10b_miniprot_in_parts.sh" "$G" "$WORK/queries.fa" "$WORK/clock/$s.mp.gff" 3 -G 500000 -p 0.15 --outs 0.15 -N 50
+  [ "${DRY:-0}" = 1 ] || { head -n 1 "$REPO/config/species.tsv"; printf '%s\tElysia papillosa\tELYPA\tGCA_977015365.2\txgElyPapi4.2 alternate haplotype\tcontig\tnone\tPacBio HiFi\tTampa, Florida, USA\n' $s; } > "$WORK/clock/species_alt.tsv"
+  run python3 "$HERE/11_clock_catalogue.py" $s "$WORK/clock/species_alt.tsv" "$DATA/asm" "$WORK/clock" "$WORK/refs" "$WORK/clock/$s.clock.json"
+  run python3 "$HERE/14_other_assemblies.py" "$REPO/config/species_assemblies.tsv" "$WORK/clock" "$REPO/results/genus"
+  # organelle-like DNA in the assembly, as DNA
+  run bash "$REPO/scripts/22_assembly_organelle_screen.sh" "$PANEL/panel.ont.mmi" "$WORK/asm_screen" "$s=$G"
+  run python3 "$HERE/35_assembly_screen.py" "$PANEL/panel.tsv" "$PANEL/panel.fa" "$G.fai" "$WORK/asm_screen/$s.paf" "$WORK/asm_screen/$s.screen.json"
+  # algal genes, as proteins (in a directory of its own, beside the screen of the reference assemblies)
+  run mkdir -p "$P"
+  run python3 "$HERE/42_protein_screen_inputs.py" "$WORK/asm_screen" "$P" $s
+  run bash "$HERE/10b_miniprot_in_parts.sh" "$G" "$Q" "$P/$s.gff" 3 -p 0.1 --outs=0.1 -N 200
+  run python3 "$REPO/scripts/28_protein_screen.py" "$P" "$DB" "$P/embedded_plastid.json" "$Q" "$s=x"
+  run python3 "$HERE/43_foreign_sequences.py" "$P" "$DB" "$P/foreign_sequences.json" "$s=$G"
+}
+
+# a library is done once: a second start goes on with the next one. ONLY=<dir> runs that library alone.
+once(){
+  local d=$WORK/reads/$1
+  if [ -n "${ONLY:-}" ] && [ "$ONLY" != "$1" ]; then return 0; fi
+  shift; [ -e "$d/lib.done" ] && return 0
+  "$@"; [ "${DRY:-0}" = 1 ] || touch "$d/lib.done"
+}
+
+crispata_animals(){   # the other sequenced animals of E. crispata, each aligned to the assembly made from it
+  # The panel for these libraries is the genus panel plus the chloroplast contigs of the Purdue assembly
+  # (config/panel_extra.tsv): about 650 kb of an Acetabularia chloroplast genome, for which no other reference exists.
+  local P=$WORK/panel_ecr s
+  run python3 "$HERE/30c_extend_panel.py" "$PANEL" "$REPO/config/panel_extra.tsv" "$DATA/asm" "$P"
+  run bash "$HERE/30b_mask_and_index.sh" "$P"
+  run bash "$HERE/30b_mask_and_index.sh" "$P" - org
+  # $DATA/asm/elysia-crispata-purdue and elysia-crispata-tampa hold GCA_033675545.1 and GCA_984581095.1 (bgzip + faidx)
+  for s in elysia-crispata-purdue elysia-crispata-tampa; do
+    run bash "$REPO/scripts/22_assembly_organelle_screen.sh" "$PANEL/panel.ont.mmi" "$WORK/asm_screen" "$s=$(genome "$s")"
+    run python3 "$HERE/35_assembly_screen.py" "$PANEL/panel.tsv" "$PANEL/panel.fa" "$(genome "$s").fai" "$WORK/asm_screen/$s.paf" "$WORK/asm_screen/$s.screen.json"
+  done
+  # the chloroplast contigs of the Purdue assembly are hidden in it: their reads are compared with the panel records
+  run python3 "$HERE/35b_hide_panel_extra.py" "$REPO/config/panel_extra.tsv" elysia-crispata-purdue "$WORK/asm_screen/elysia-crispata-purdue.screen.json"
+  # Places of the Purdue assembly at which chloroplast DNA meets other DNA within a contig, to be tested with
+  # the read pairs of the egg mass (panel.org.pur): the five places described on the gene-transfer page of
+  # E. crispata, four found with the reads of the adults (three of them at Nanopore adapter sequence in the
+  # contig, 56_adapter_in_assembly.py) and a place within slug DNA as a control
+  run python3 "$HERE/40_locus_baits.py" - "$(genome elysia-crispata-purdue)" "$WORK/reads/elysia-crispata.purdue/baits.fa" 3000 \
+      JAWDGP010001375.1:1975-4975:plastid JAWDGP010004663.1:3970-6970:plastid JAWDGP010006093.1:1001-4001:plastid JAWDGP010001684.1:0-514:plastid \
+      JAWDGP010005248.1:144410-144817:plastid JAWDGP010008029.1:16030-19030:plastid JAWDGP010003417.1:696-3696:plastid JAWDGP010003417.1:70552-73552:plastid \
+      JAWDGP010002183.1:14566-17566:plastid JAWDGP010004937.1:4000-7000:control
+  run bash "$HERE/30b_mask_and_index.sh" "$P" "$WORK/reads/elysia-crispata.purdue/baits.fa" org.pur
+  # Purdue (PRJNA987316, isolate ECLA1): Nanopore reads of a whole animal and of a brain, read pairs of an egg mass
+  PANEL=$P ASM=elysia-crispata-purdue PASS2_PRESET=map-ont STORE_MAX_MB=5500 once elysia-crispata.purdue lib elysia-crispata.purdue panel.dust \
+      "SRR25020508 SRR25020509 SRR25020510 SRR25020511 SRR25020513 SRR25020514 SRR25020515 SRR25020516 SRR25020517 SRR25020518 SRR25020522" long clr --sample 200
+  PANEL=$P ASM=elysia-crispata-purdue PASS2_PRESET=map-ont STORE_MAX_MB=5500 once elysia-crispata.brain lib elysia-crispata.brain panel.dust "SRR25020519" long clr --sample 50
+  # egg mass: one pair in 100 is kept as the random sample (0.8-fold coverage), which shows which contigs of the assembly are in the germline
+  PANEL=$P ASM=elysia-crispata-purdue STORE_MAX_MB=5500 once elysia-crispata.eggs lib elysia-crispata.eggs panel.org.pur "SRR25020525" short short --sample 100 --streams 10
+  # University of Tampa (PRJNA1337476): PacBio reads of an amplified library and read pairs; one read pair in sixteen
+  # is plastid DNA, so one in 20 of the pairs that match an organelle genome and nothing else is carried on
+  PANEL=$P ASM=elysia-crispata-tampa STORE_MAX_MB=5500 once elysia-crispata.tampa lib elysia-crispata.tampa panel.dust "SRR35727887" long hifi --sample 100
+  PANEL=$P ASM=elysia-crispata-tampa STORE_MAX_MB=5500 once elysia-crispata.tampa_short lib elysia-crispata.tampa_short panel.org "SRR35727888" short short --sample 800 --plain-keep 20 --match-keep 20 --streams 10
+}
+
 collect(){
   run python3 "$HERE/39_collect_species.py" "$REPO" "$WORK/reads" "$WORK/asm_screen" "$WORK/protscreen"
   run python3 "$HERE/45_export_tables.py" "$REPO" "$WORK"
@@ -218,8 +284,8 @@ collect(){
 [ $# -gt 0 ] || { sed -n 2,8p "$0"; exit 1; }
 for step in "$@"; do
   case $step in
-    all) panel; assembly; reads; controls; loci; proteins; crispata; collect ;;
-    panel|assembly|reads|controls|loci|proteins|crispata|collect) $step ;;
+    all) panel; assembly; reads; controls; loci; proteins; crispata; other_assemblies; crispata_animals; collect ;;
+    panel|assembly|reads|controls|loci|proteins|crispata|other_assemblies|crispata_animals|collect) $step ;;
     *) echo "unknown step: $step" >&2; exit 1 ;;
   esac
 done

@@ -337,7 +337,7 @@
         aa: () => el("td", { class: "num", text: g.length ? fmt(g.length) : "–" }),
         status: () => el("td", {}, [statusHtml(g, P), locus ? el("span", { class: "locus", text: locus }) : null]),
         others: () => el("td", {}, [el("span", { class: "others" }, OTHERS.map(([k, lab]) => {
-          const s = el("span", {}, [glyph(stOf(g, k).cls), document.createTextNode(lab)]);
+          const s = el("span", {}, [glyph(stOf(g, k).cls), document.createTextNode(OTHERS.length === 1 ? stOf(g, k).word : lab)]);
           s.title = `${D.assemblies[k]}: ${stOf(g, k).word}`;
           return s;
         }))]),
@@ -360,24 +360,35 @@
     const where = a.pieces.length ? a.pieces.map((p) => `${chrName(p.chrom)}:${fmt(p.start)}–${fmt(p.end)} (${p.strand} strand)`).join(" and ") : "";
     const elsewhere = OTHERS.filter((o) => g.assemblies[o[0]].status === "complete").map((o) => o[2]);
     const multi = OTHERS.length > 0;
+    const own = P === "sanger";          // E. crispata: the gene models were chosen among its four assemblies
+    const allAsm = OTHERS.length === 1 ? "both assemblies" : `all ${word(OTHERS.length + 1)} assemblies`;
     const reads = g.reads_support ? ` PacBio HiFi reads from the sequenced individual cover ${g.reads_support.covered === g.reads_support.segments ? "all " + word(g.reads_support.segments) : g.reads_support.covered + " of the " + g.reads_support.segments} exon segments (median ${Math.round(g.reads_support.median_reads)} reads per segment).` : "";
     const breaks = (p) => `${p.fs ? word(p.fs) + " frameshift" + (p.fs > 1 ? "s" : "") : ""}${p.fs && p.stop ? " and " : ""}${p.stop ? word(p.stop) + " in-frame stop codon" + (p.stop > 1 ? "s" : "") : ""}`;
     const inOthers = elsewhere.length ? `the gene is complete in ${elsewhere.join(" and ")}` : "";
-    const notLost = inOthers ? ` missing from the assembly, but not from the genome: ${inOthers}.` : " missing from all four assemblies.";
+    const cap = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+    const notElsewhere = OTHERS.length === 1 ? `It is not complete in ${OTHERS[0][2]} either.` : "It is not complete in any of the other assemblies.";
+    // what the other assemblies of the species add, for a gene that is not intact in the reference assembly
+    const other = !multi ? "" : " " + (inOthers ? cap(inOthers) + "." : notElsewhere);
+    const notLost = inOthers ? ` missing from the assembly, but not from the genome: ${inOthers}.` : ` missing from ${allAsm}.`;
     if (s === "complete") return `The gene is intact in ${AN}, at ${where}.${g.long_intron ? " The coding sequence is interrupted by a very long intron, so the gene model was built from " + word(a.pieces.length) + " alignments that lie in order on the same strand." : ""}`;
     if (s === "complete_discrepancy") {
       const p = a.pieces[0], fs = a.pieces.reduce((n, x) => n + x.fs, 0), st = a.pieces.reduce((n, x) => n + x.stop, 0);
-      if (!multi) return `The complete gene is present in ${AN}, at ${where}, but its coding sequence in the assembly contains ${breaks({ fs, stop: st })}. Such interruptions are more often errors in an assembly than real changes in a gene. The protein shown below was translated across the interruption${fs + st > 1 ? "s" : ""}.`;
+      if (!own) return `The complete gene is present in ${AN}, at ${where}, but its coding sequence in the assembly contains ${breaks({ fs, stop: st })}. Such interruptions are more often errors in an assembly than real changes in a gene. The protein shown below was translated across the interruption${fs + st > 1 ? "s" : ""}.${other}`;
       return `The complete gene is present in ${AN}, at ${where}, but its coding sequence in the assembly contains ${breaks(p)} when aligned with the reference protein (${(p.ident * 100).toFixed(1)}% identity). The assembly sequence at this locus should be treated with caution. The protein shown below is taken from ${g.model_kind === "ensembl" ? "the Ensembl gene model" : "another assembly"}.`;
     }
-    if (s === "fragmented") return multi ? `The whole coding sequence is present in ${AN}, but in ${word(a.pieces.length)} separate segments (${where}) that are not in the order of the transcript, so no single gene model can span it in this assembly. ${inOthers ? inOthers.charAt(0).toUpperCase() + inOthers.slice(1) + "." : "It is not complete in any of the other assemblies."}`
-      : `The whole coding sequence is present in ${AN}, but it is split into ${word(a.pieces.length)} segments (${where}) that lie on different scaffolds or in the wrong order. This reflects fragmentation of the assembly. The protein shown below was reconstructed by joining the segments.`;
-    if (s === "partial") return multi ? `Only ${Math.round(a.coverage * 100)}% of the protein is encoded in ${AN} (${where}). The remainder is${notLost}${reads}`
-      : `Only ${Math.round(a.coverage * 100)}% of the protein could be aligned to ${AN} (${where}). The remainder may lie in a gap in the assembly, or may be too divergent from the E. crispata protein to align. A partial gene model should not be taken as evidence that the gene is disrupted.`;
-    if (s === "divergent") return `${AN} does not contain an intact copy of this gene. The most similar locus (${chrName(a.best_other.chrom)}:${fmt(a.best_other.start)}–${fmt(a.best_other.end)}) is ${(a.best_other.ident * 100).toFixed(1)}% identical to the protein and contains ${word(a.best_other.fs)} frameshift${a.best_other.fs === 1 ? "" : "s"}. ${inOthers ? inOthers.charAt(0).toUpperCase() + inOthers.slice(1) + "." : "It is not complete in any of the other assemblies."}${reads}`;
+    if (s === "fragmented") return own ? `The whole coding sequence is present in ${AN}, but in ${word(a.pieces.length)} separate segments (${where}) that are not in the order of the transcript, so no single gene model can span it in this assembly. ${inOthers ? cap(inOthers) + "." : notElsewhere}`
+      : `The whole coding sequence is present in ${AN}, but it is split into ${word(a.pieces.length)} segments (${where}) that lie on different scaffolds or in the wrong order. This reflects fragmentation of the assembly. The protein shown below was reconstructed by joining the segments.${other}`;
+    if (s === "partial") {
+      if (own) return `Only ${Math.round(a.coverage * 100)}% of the protein is encoded in ${AN} (${where}). The remainder is${notLost}${reads}`;
+      if (inOthers) return `Only ${Math.round(a.coverage * 100)}% of the protein could be aligned to ${AN} (${where}). The remainder is missing from this assembly, but not from the genome: ${inOthers}.`;
+      return `Only ${Math.round(a.coverage * 100)}% of the protein could be aligned to ${AN} (${where}). The remainder may lie in a gap in the assembly, or may be too divergent from the E. crispata protein to align. A partial gene model should not be taken as evidence that the gene is disrupted.${other}`;
+    }
+    if (s === "divergent") return `${AN} does not contain an intact copy of this gene. The most similar locus (${chrName(a.best_other.chrom)}:${fmt(a.best_other.start)}–${fmt(a.best_other.end)}) is ${(a.best_other.ident * 100).toFixed(1)}% identical to the protein and contains ${word(a.best_other.fs)} frameshift${a.best_other.fs === 1 ? "" : "s"}. ${inOthers ? cap(inOthers) + "." : notElsewhere}${reads}`;
     const para = a.best_other && a.best_other.paralogue_of ? ` (the closest match in the assembly is the paralogue ${G[a.best_other.paralogue_of] ? G[a.best_other.paralogue_of].label : a.best_other.paralogue_of})` : "";
     if (!multi) return `The gene was not found in ${AN}${para}. Because only one assembly is available for this species, a gap in the assembly cannot be distinguished from a real loss of the gene.`;
-    return `The gene was not found in ${AN}${para}. It is${notLost}${reads}`;
+    if (own) return `The gene was not found in ${AN}${para}. It is${notLost}${reads}`;
+    if (inOthers) return `The gene was not found in ${AN}${para}, but it is present in the genome: ${inOthers}.`;
+    return `The gene was not found in ${AN}${para}, nor in ${OTHERS.length === 1 ? OTHERS[0][2] : "the other assemblies"}. Its absence from ${allAsm} is consistent with a real loss of the gene.${D.others_same_individual ? ` However, ${OTHERS.length === 1 ? "the two assemblies" : "these assemblies"} were built from the same reads, so a region that is difficult to assemble could be missing from ${OTHERS.length === 1 ? "both" : "all of them"}.` : ""}`;
   }
   function exonFigure(g) {
     // draw the locus where the gene is most complete: Sanger if intact, otherwise the first complete assembly
