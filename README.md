@@ -48,34 +48,99 @@ The gene annotation of *E. timida* is not in GenBank and its server could not be
 *E. timida* models are of this kind. The GenBank sequence of *E. leucolegnote* is 35% masked (N).
 
 **Whose chloroplasts.** The plastid DNA among the reads of each sequenced animal names the alga it
-had been eating. The read sets are listed in `config/species_reads.tsv`.
+had been eating. Every read of every library was examined; the read sets are listed in
+`config/species_reads.tsv`.
 
 | Species | Chloroplasts from | Reads from | Plastid share of sequenced bases |
 |---|---|---|---|
-| *E. chlorotica* | *Vaucheria litorea* | two adults, and eggs as a control | 3.5% and 14.1%; eggs: two reads in 76 million |
-| *E. marginata* | *Bryopsis* (*B. hypnoides* type, PQ652170.1) | the animal assembled | 0.27% |
-| *E. timida* | *Acetabularia acetabulum* | the animals assembled | 0.003% or more: only 49 kb of that plastid genome is public |
-| *E. leucolegnote* | a *Boodleopsis* (97–99% identical to NC_039521.1) and at least one further alga | two other animals | 0.095% and 0.075% or more |
-| *E. atroviridis* | *Bryopsis*, the same type, as two strains (95:5) | the animal assembled | 1.9% |
-| *E. papillosa* | *Penicillus lamourouxii* (OZ494339.1) | the animal assembled | 0.14% |
+| *E. chlorotica* | *Vaucheria litorea* | two adults, and eggs | 3.5% and 11.0%; eggs: 13 read pairs in 77 million |
+| *E. marginata* | *Bryopsis* (*B. hypnoides* type, PQ652170.1) | the animal assembled | 0.26% |
+| *E. timida* | *Acetabularia acetabulum* (rbcL and tufA match its GenBank records) | the animals assembled | 0.0054% or more: only 49 kb of that plastid genome is public |
+| *E. leucolegnote* | a *Boodleopsis* (97 to 99% identical to NC_039521.1) in both animals; an alga without a close reference at a quarter of its amount in the Shenzhen animal and about half in the Hainan animal; in the Hainan animal a third plastid genome, also without a reference, as plentiful as the *Boodleopsis* | two other animals | 0.28% and 0.074% or more |
+| *E. atroviridis* | *Bryopsis*, the same type, as two strains | the animal assembled | 1.9% |
+| *E. papillosa* | *Penicillus lamourouxii* (OZ494339.1), in both animals | the animal assembled and a second one | 0.12% and 0.014% |
 
-**Gene transfer.** No algal DNA inserted in a slug genome was found in any species. Reads that
-join plastid DNA to slug DNA are rare, scattered over the genome, and turn up at rates similar to
-joins of the slug's own mitochondrial DNA to its nuclear DNA, which library preparation makes.
+**Gene transfer.** None of these animals inherited algal DNA: no assembly holds algal DNA that its
+reads bear out, and egg DNA of *E. chlorotica* holds none. But chloroplasts sit in body cells, so an
+insertion would be carried by one cell or a few, and in the reads by single molecules; other reads
+from the same place that lack it do not count against it. Every read of every library was therefore
+searched for single molecules that join chloroplast DNA to slug DNA. They are listed, one molecule a
+row, in `results/genus/` and `docs/downloads/` (`*junctions.tsv`, `*junction_pairs.tsv.gz`,
+`*insertion_shapes.tsv`).
 
-- *E. chlorotica*: the assembly holds five small plastid scaffolds (8.3 kb), plastid stretches
-  inside two larger scaffolds (1.6 kb and 230 bp) and four stretches of mitochondrial DNA. No short
-  read from an adult or from eggs supports any of them; three long reads from two molecules cross
-  one edge, against 1,772 that stop there. Egg DNA holds almost no plastid DNA. None of the
-  *Vaucheria* nuclear genes reported in early studies (psbO, prk, lhc, chlD, chlG, chlH) matches
-  the assembly. Fourteen scaffolds (525 kb) come from a bacterium related to *Francisella*.
+| Library | Chloroplast reads (or pairs) joined to slug DNA | Mitochondrial ones | Slug DNA joined to unrelated slug DNA | Reads with chloroplast DNA inside slug DNA |
+|---|---|---|---|---|
+| *E. crispata*, accurate long reads (amplified) | 4,452 of 136,293 (3.3%) | bacterial DNA instead: 3.2% | 4.2% | 0 |
+| *E. chlorotica*, adult, old long reads | 2,397 of 43,514 (5.5%) | 113 of 2,116 (5.3%) | 5.3% | 9 |
+| *E. chlorotica*, second adult, read pairs (estimated from one pair in 50) | 71,401 of 57,986,168 (0.12%) | 976 of 1,113,806 (0.088%) | 0.99% | read pairs |
+| *E. chlorotica*, eggs, read pairs | 0 of 13 (0%) | 1 of 104,147 (0.001%) | 0.91% | read pairs |
+| *E. atroviridis*, accurate long reads | 14 of 69,026 (0.020%) | 0 of 2,125 (0%) | 2.3% | 0 |
+| *E. papillosa*, assembled animal, accurate long reads | 6 of 6,533 (0.092%) | 4 of 2,012 (0.20%) | 2.9% | 0 |
+| *E. papillosa*, second animal, accurate long reads (amplified) | 3 of 1,326 (0.23%) | 29 of 7,954 (0.36%) | 5.3% | 0 |
+| *E. timida*, accurate long reads (amplified) | 15 of 2,598 (0.58%) | 75 of 14,113 (0.53%) | 1.1% | 0 |
+| *E. marginata*, read pairs | 78 of 759,795 (0.010%) | 1 of 35,000 (0.0029%) | 1.7% | read pairs |
+| *E. leucolegnote*, Shenzhen animal, read pairs | 1,667 of 125,085 (1.3%) | 593 of 66,053 (0.90%) | 1.2% | read pairs |
+| *E. leucolegnote*, Hainan animal, read pairs | 491 of 68,603 (0.72%) | 166 of 32,441 (0.51%) | 0.83% | read pairs |
+
+- Every library holds such molecules, and every library joins DNA that has no business being
+  joined (the slug's mitochondrial DNA to its chromosomes, one chromosome to another). Preparing
+  DNA for sequencing makes such joins, and a real junction read once looks the same. In the
+  amplified libraries the amplification adapter lies in many of the joins.
+- Rates. In the long-read libraries chloroplast DNA is joined to slug DNA as often as
+  mitochondrial DNA is. In the read-pair libraries with enough of both to compare it is joined
+  1.3 to 1.5 times as often (pairs at the bacterial ribosomal RNA genes of *E. leucolegnote* left
+  out). Insertions in body cells would raise the rate in that way, but the mates that read
+  through a join point to the tube. Such a mate begins with the short piece at the end of its
+  fragment. That piece is chloroplast DNA in 98 of 170 chloroplast joins and mitochondrial DNA in
+  only 14 of 51 mitochondrial ones, where cutting at random out of a chromosome would give the
+  same share for both (two controls, `scripts/genus/55_end_piece_control.py`, put it near 45%).
+  The two kinds of DNA come in different pieces in those libraries, so joining in the tube does
+  not treat them alike, and the difference in rate cannot be read as insertions. Had all of it
+  been insertions, they would have numbered 10 to 150 in every cell of those animals.
+- Chloroplast DNA inside slug DNA, with the slug sequence carrying on where it left off, is the
+  one shape that joining end to end does not give. 9 reads have it, all in the old,
+  error-prone long reads of *E. chlorotica*, along with 2 that hold mitochondrial DNA in the
+  same way and 2 of the mirror shape (slug DNA inside chloroplast DNA). Each is a single
+  molecule at a place of its own. The accurate long reads of the other four species hold none.
+- No join is carried by two molecules in any long-read library; the reads were compared with each
+  other around every join, so that joins into repeats count too. Pairs of molecules whose joins lie
+  a few bases apart occur in *E. chlorotica* (two pairs, at a satellite repeat; one of them is the
+  join built into the assembly) and in *E. crispata* (three pairs, at simple repeats).
+- In the read-pair libraries, copies of one fragment are recognised by the reads themselves, and
+  two molecules count as carrying one join when both their slug sides and their organelle sides
+  lie within 1 kb of each other. Such joins are found at four places: three that are not organelle DNA (in both
+  animals of *E. leucolegnote* a transfer RNA gene of the slug at a gap of the assembly and the
+  ribosomal RNA genes of a bacterial sequence; in *E. marginata* a ribosomal RNA gene at a gap in
+  a bacterial sequence), and one in the egg library of *E. chlorotica*: 88 bases of mitochondrial
+  DNA between two neighbouring bases of RQTK01000018.1, read through by two molecules and absent
+  from the assembly. That is an inherited insertion of organelle DNA, of the mitochondrial kind,
+  and it shows that the test finds one. No such join involves chloroplast DNA.
+- What the libraries could show: reads long enough to hold an insertion with both flanks cover
+  each genome 29 to 68 times, which is 15 to 34 cells' worth of DNA. About three
+  insertion-shaped reads would be expected with one insertion in every 5 to 11 cells.
+  Rates like those measured in tobacco (about one pollen grain in 16,000, one leaf cell in five
+  million) are far out of reach of sequencing a whole animal. Among the read-pair libraries
+  *E. marginata* gives a limit of its own: it joins chloroplast DNA to slug DNA so seldom
+  (78 pairs in the library) that this is about what one insertion in every cell would add.
+
+In the assemblies:
+
+- *E. chlorotica*: five small plastid scaffolds (8.3 kb), plastid stretches inside two larger
+  scaffolds (1.6 kb and 230 bp) and four stretches of mitochondrial DNA. The 1.6 kb stretch, at
+  the start of RQTK01001031.1, is joined to a satellite repeat of the slug; one long read carries
+  that join and a second molecule has a join 47 bases away. No short read of the second adult or
+  of the eggs carries it. No read of any library crosses an edge of the 230 bp stretch, and two
+  long reads span the place without it. No short read crosses an edge of the mitochondrial
+  stretches. None of the *Vaucheria* nuclear genes reported in early studies (psbO,
+  prk, lhc, chlD, chlG, chlH) matches the assembly. Fourteen scaffolds (525 kb) come from a
+  bacterium related to *Francisella*.
 - *E. marginata*: one 3.7 kb scaffold is *Bryopsis* plastid DNA. About 2.0 Mb on 23 scaffolds is
   bacterial (mycoplasma-like, flavobacteria-like and others), and the gene set published with the
   assembly includes genes on them.
 - *E. leucolegnote*: the unplaced sequence JBQKML010000381.1 begins with 863 bp of plastid DNA
   joined to a slug repeat. In two other animals the same plastid sequence carries on as plastid
-  DNA at that point (46 and 13 reads stop, none runs through). Four sequences (1.9 Mb) are bacterial.
-  Reads of the assembled animal are not public.
+  DNA at that point (87 and 77 reads stop, none runs through). The reads of the assembled
+  animal are not public, so the join cannot be tested. Four sequences (1.9 Mb) are bacterial.
 - *E. papillosa*: contig CDRNNR020002991.1 (30.9 kb) is a piece of an algal mitochondrial genome.
 - *E. timida*, *E. atroviridis*: nothing of the kind in the assembly.
 
@@ -100,17 +165,26 @@ capitatus* and 14% a second *Penicillus* that matches the one available *P. lamo
 reference; *Udotea flabellum* (0.09%) and a *Halimeda* (0.04%) are present as traces. No read
 carries algal nuclear ribosomal DNA.
 
-**Gene transfer.** No algal sequence inserted in the slug genome was found.
+**Gene transfer.** Not in the genome this animal inherited. In single cells: nothing that stands
+above what the library makes by itself.
 
-- 4,452 reads join chloroplast DNA to slug DNA, but at the same rate (3.3%) as reads that join
-  bacterial DNA to slug DNA, and no chloroplast–slug junction recurs in two independent
-  molecules. The library was PCR-amplified (ultra-low-input protocol), which creates such chimeras.
-- xgElyCris1.1 and its alternate haplotype contain 26 fragments of kleptoplast DNA (up to 5.6 kb,
+- 4,452 reads join chloroplast DNA to slug DNA. An insertion in a body cell would be carried by
+  a single molecule, so each of these reads is a candidate, and reads from the same place that
+  lack the join do not count against it. But the library was amplified by PCR (ultra-low-input
+  protocol), which joins unrelated molecules: bacterial DNA is joined to slug DNA at the same
+  rate (3.24%, against 3.27%), and 165 of the chloroplast joins hold the amplification adapter.
+- No read holds chloroplast DNA inside slug DNA, the one shape that joining end to end does not
+  give. Reads long enough to show it cover the genome 68 times: 34 cells' worth of DNA.
+- No join is carried by two molecules. All 4,452 reads were fetched again and compared with each
+  other around the join, so that joins into repeats count too: 53 joins occur in more than one
+  read, each time as copies of one molecule. Three pairs of molecules have joins a few bases
+  apart, at simple repeats.
+- xgElyCris1.1 and its alternate haplotype contain 26 stretches of kleptoplast DNA (up to 5.6 kb,
   98–100% identical to the animal's kleptoplasts). Every one ends at an assembly gap or sequence
-  end and its one boundary with slug DNA is carried by a single molecule, while other molecules
-  from the same locus continue into different sequence. They are assembly artefacts. The Ensembl
-  annotation lists six chloroplast genes on them as slug genes. Intervals to mask:
-  `results/plastid_fragments_in_assembly.tsv`.
+  end and rests on a single molecule, one of the joins above, while other molecules from the
+  same place carry on into different sequence. They are not part of the inherited genome and do
+  not belong in a reference. The Ensembl annotation lists six chloroplast genes on them as slug
+  genes. Intervals to mask: `results/plastid_fragments_in_assembly.tsv`.
 - No annotated protein of either annotation is algal apart from those six. Aligning 471 plastid
   and photosynthesis proteins directly to all four assemblies, and listing every plastid-like
   DNA match that is neither an exact copy nor a simple repeat, finds no algal sequence among slug
@@ -156,10 +230,11 @@ Steps that run over every species (`scripts/genus/`):
 | Clock genes | `09_clock_refs.sh`, `10_project_clock_genes.sh`, `11_clock_catalogue.py` | The 47 *E. crispata* proteins aligned to each genome with miniprot; annotated proteins added where available; a reciprocal test against all *E. crispata* proteins; one model per gene. |
 | Compare | `12_compare_species.py`, `13_domains.sh` | Protein alignments (MAFFT), completeness against the positions most sequences share, pairwise identity, the species tree (IQ-TREE), Pfam domains. |
 | Reference panel | `30_build_panel.py`, `30b_mask_and_index.sh` | Plastid, mitochondrial and ribosomal DNA references for all species; low-complexity sequence masked for the first pass. |
-| Reads | `fetch_ranges.py`, `31_read_screen.sh`, `31_select_hits.py`, `31b_slim_rdna.py`, `33_pass2.sh`, `sam_segments.py`, `34_read_analysis.py`, `37_pair_analysis.py` | Each run fetched and mapped to the panel as a stream; reads with a match aligned base by base to the species' assembly and the panel; what the library contains; reads or read pairs that join two kinds of DNA. |
+| Reads | `fetch_ranges.py`, `31c_screen_run.py`, `31_select_hits.py`, `31b_slim_rdna.py`, `31d_sample_blocks.py`, `33_pass2.sh`, `sam_segments.py`, `49_analyse_library.sh`, `34_read_analysis.py`, `37_pair_analysis.py`, `55_end_piece_control.py` | Every run read in full, in pieces, and mapped to the panel; reads with a match, and a random sample of the library, aligned base by base to the species' assembly and the panel; what the library contains; every read or read pair that joins two kinds of DNA, with the same counts for mitochondrial DNA and for the sample; which kind of DNA lies at the end of the fragment in read pairs that cross a join. |
+| Single molecules | `46_candidates.py`, `51_recurrent_junctions.py`, `47_library_control.sh`, `47_shape_reads.py`, `52_fetch_reads.py`, `53_join_in_short_reads.py`, `54_internal_pieces.py` | Long reads sorted by shape (organelle DNA inside slug DNA, at one end, mirror image), short pieces confirmed base by base; joins compared between reads to find one carried by two molecules; copies of molecules; what a library makes by itself, on every read of a small run; named reads fetched again; a known join looked for in read pairs. |
 | Naming the alga | `36_barcodes.py`, `38_plastid_contigs.sh` | rbcL and tufA read out of long reads, or cut from plastid contigs assembled from short reads (MEGAHIT), and compared with GenBank. |
 | Assemblies | `35_assembly_screen.py`, `42_protein_screen_inputs.py`, `43_foreign_sequences.py` (with `scripts/22` and `scripts/28`) | Organelle-like DNA in each assembly; 471 algal proteins aligned to it; every sequence with a non-animal match translated as a whole and its genes classified. |
-| Places tested with reads | `40_locus_baits.py`, `41_locus_test.py`, `44_window_reads.sh` | Reads that run through, or stop at, each edge of an organelle-like stretch inside an assembly sequence. |
+| Places tested with reads | `40_locus_baits.py`, `41_locus_test.py` | Reads that run through, or stop at, each edge of an organelle-like stretch inside an assembly sequence, and at the place of each insertion-shaped read. |
 | Collect and build | `39_collect_species.py`, `45_export_tables.py`, `chrome.py`, `21_build_species_pages.py`, `20_build_genus_site.py` | Result files and small tables; shared page frame; the chloroplast and gene-transfer pages of each species; homepage, comparison page, clock pages and methods. |
 | Order of the screens | `run_screens.sh` | The commands for the six added species in the order they were run (`DRY=1` prints them). |
 
@@ -197,16 +272,20 @@ Assemblies of the other species: *E. chlorotica* GCA_003991915.1, *E. marginata*
 
 Reads screened for the other species (details in `config/species_reads.tsv`):
 
-| Species | Run | Kind | Examined |
+| Species | Runs | Kind | Examined |
 |---|---|---|---|
-| *E. papillosa* | ERR14842698 | PacBio HiFi, the animal assembled | 8.3 Gb (one of three runs) |
-| *E. atroviridis* | SRR34916404 | PacBio HiFi, the animal assembled | 30.6 Gb (all) |
-| *E. timida* | SRR30016879 | PacBio HiFi, amplified library, the animals assembled | first 20 Gb |
-| *E. chlorotica* | SRR7647856 | PacBio RS, an adult | 9.4 Gb (all) |
-| *E. chlorotica* | SRR7647851 | Illumina pairs, a second adult | first 6 Gb |
-| *E. chlorotica* | SRR768897 | Illumina pairs, eggs | 11.1 Gb (all) |
-| *E. marginata* | DRR238951 | Illumina pairs, the animal assembled | first 4.5 Gb |
-| *E. leucolegnote* | SRR41369319, SRR17036819 | Illumina pairs, two other animals | first 6 Gb and 5 Gb |
+| *E. papillosa* | ERR14842698, ERR14842697 | PacBio Revio (HiFi); the sequenced animal | 36.2 Gb |
+| *E. papillosa* | ERR14842696 | PacBio Revio (HiFi, amplified library); a second animal | 64.8 Gb |
+| *E. atroviridis* | SRR34916404 | PacBio Sequel II (HiFi); the sequenced animal | 30.6 Gb |
+| *E. timida* | SRR30016879 | PacBio Revio (HiFi, amplified ultra-low-input library); the sequenced animals | 53.1 Gb |
+| *E. chlorotica* | SRR7647856 | PacBio RS (older, error-prone long reads); an adult | 9.4 Gb |
+| *E. chlorotica* | SRR7647851, SRR7647852, SRR7647853, SRR7647854, SRR7647849, SRR7647850 | Illumina HiSeq 2000 (paired; inserts of 170, 500 and 800 bp); an adult used for the short reads of the assembly | 102.5 Gb |
+| *E. chlorotica* | SRR768897, SRR768899 | Illumina Genome Analyzer IIx (paired); eggs | 22.4 Gb |
+| *E. marginata* | DRR238951, DRR238952 | Illumina HiSeq 2500 (paired; inserts of 250 and 500 bp); the sequenced animal | 84.4 Gb |
+| *E. leucolegnote* | SRR41369319 | Illumina NovaSeq X Plus (paired); another animal | 12.5 Gb |
+| *E. leucolegnote* | SRR17036819 | Illumina HiSeq 2500 (paired); another animal | 25.5 Gb |
+
+Every run was read in full.
 
 The reference panel used to screen the *E. crispata* reads (241 green-algal plastid genomes and
 others) is listed in `results/intermediate/panel.tsv`; the wider panel used for the other species
@@ -228,10 +307,15 @@ and nine *Elysia* mitochondrial genomes) is listed in `results/genus/panel.tsv.g
 - The second kleptoplast species is named from a single 562-bp reference sequence.
 - Other species: *E. leucolegnote* was read from two animals that are not the one assembled, and
   algae without a close reference are under-counted there; the *E. timida* plastid share is a
-  floor; *E. papillosa* reads cover the genome about 8 times, so an insertion in a minority of
-  cells could be missed; short reads test a join only through read pairs. The protein screen
-  searches with 471 proteins, so it finds only the bacterial and foreign sequences that happen
-  to carry a relative of one of them.
+  floor. Every run was read in full, but in the second *E. chlorotica* adult, where a ninth of
+  the DNA is chloroplast DNA, the joins were analysed on one pair in 50 of those that match an
+  organelle genome. The protein screen searches with 471 proteins, so it finds only the
+  bacterial and foreign sequences that happen to carry a relative of one of them.
+- Insertions in body cells: sequencing a whole animal reads 1 to 34 cells' worth of DNA at each
+  place, so insertions carried by a small share of cells cannot be seen in any of these
+  libraries, and a single molecule that joins chloroplast DNA to slug DNA cannot be told from
+  one made when the library was prepared. The pages give, for each library, what it could have
+  shown.
 
 ## Credits
 

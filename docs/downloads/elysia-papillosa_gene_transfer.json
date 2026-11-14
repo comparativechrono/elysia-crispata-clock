@@ -114,22 +114,23 @@
  "reads": [
   {
    "library": "main",
-   "label": "",
+   "label": "The assembled animal",
    "runs": [
-    "ERR14842698"
+    "ERR14842698",
+    "ERR14842697"
    ],
    "kind": "hifi",
    "platform": "PacBio Revio (HiFi)",
    "animal": "the sequenced animal (specimen xgElyPapi4, Tampa, Florida, 2024)",
-   "reads": 1202224,
-   "bases": 8250209426,
-   "bases_screened": 8250209426,
+   "reads": 5406003,
+   "bases": 36247978396,
+   "bases_screened": 36247978396,
    "chimera": {
     "pairs": [
      {
       "pair": "cp+slug",
-      "junctions": 6,
-      "reads": 6,
+      "junctions": 7,
+      "reads": 7,
       "adapter_junctions": 0,
       "recurrent_clusters": 0
      },
@@ -137,6 +138,13 @@
       "pair": "slug+slugmt",
       "junctions": 4,
       "reads": 4,
+      "adapter_junctions": 0,
+      "recurrent_clusters": 0
+     },
+     {
+      "pair": "slug+slugrDNA",
+      "junctions": 2,
+      "reads": 1,
       "adapter_junctions": 0,
       "recurrent_clusters": 0
      },
@@ -150,14 +158,19 @@
     ],
     "rates": {
      "cp": {
-      "reads_with_segment": 1703,
-      "reads_also_with_slug": 6,
-      "rate": 0.00352
+      "reads_with_segment": 6533,
+      "reads_also_with_slug": 7,
+      "rate": 0.00107
      },
      "slugmt": {
-      "reads_with_segment": 821,
+      "reads_with_segment": 2012,
       "reads_also_with_slug": 4,
-      "rate": 0.00487
+      "rate": 0.00199
+     },
+     "slugrDNA": {
+      "reads_with_segment": 3,
+      "reads_also_with_slug": 1,
+      "rate": 0.33333
      },
      "algrDNA": {
       "reads_with_segment": 1,
@@ -166,11 +179,276 @@
      }
     },
     "recurrent": [],
+    "flanked": [
+     {
+      "read": "ERR14842697.2536384",
+      "slug": "CDRNNR020002055.1",
+      "left_bp": 14801,
+      "right_bp": 12978,
+      "insert_cls": "slugrDNA",
+      "insert_t": "slugrDNA|MK919695.1",
+      "insert_ts": 17,
+      "insert_te": 1280,
+      "insert_len": 1262,
+      "insert_ident": 0.9858
+     }
+    ],
+    "n_flanked": 1
+   },
+   "min_identity": 0.97,
+   "locus_tests": null,
+   "shapes": {
+    "min_identity": 0.97,
+    "min_segment": 300,
+    "min_short_piece": 100,
+    "reads_with_piece": {
+     "slug": 12407,
+     "cp": 6533,
+     "slugmt": 2012,
+     "slugrDNA": 3,
+     "algrDNA": 1
+    },
+    "reads_joining_slug": {
+     "cp": 7,
+     "slugmt": 4
+    },
+    "reads_joined_to_placed_slug": {
+     "cp": 6,
+     "slugmt": 4
+    },
+    "shapes": {
+     "insertion|slug_elsewhere": 22,
+     "one join|cp": 7,
+     "one join|slugmt": 4
+    },
+    "shared_with_assembly": {
+     "cp": 29
+    },
+    "second_pass": {},
+    "depth": {
+     "genome_bp": 1023596221,
+     "library_bases": 36247978396,
+     "library_reads": 5406003,
+     "depth": 35.41
+    },
+    "background": {
+     "source": "sample",
+     "reads": 10705,
+     "reads_slug_only": 9782,
+     "reads_slug_placed": 9198,
+     "joining_unrelated": 133,
+     "slug_pieces": 9331,
+     "slug_pieces_joined": 266,
+     "joining_unrelated_any": 596,
+     "folding_back": 3,
+     "cp_reads": 9,
+     "cp_joined": 0,
+     "mt_reads": 5,
+     "mt_joined": 0,
+     "depth": {
+      "genome_bp": 1023596221,
+      "library_bases": 36247978396,
+      "library_reads": 5406003,
+      "depth": 35.41,
+      "sample_one_in": 500,
+      "sample_reads_aligned": 10705,
+      "sample_bases_aligned": 71792890,
+      "spanning_depth": {
+       "100": 31.41,
+       "500": 29.32,
+       "1000": 26.71,
+       "3000": 16.77
+      },
+      "copies": {
+       "placed_reads": 9277,
+       "reads_with_a_copy_in_the_sample": 0,
+       "sample_fraction": 0.00198,
+       "copies_per_read": 0.0,
+       "copies_per_read_upper": 0.1633
+      }
+     },
+     "insertion_slug_elsewhere": {
+      "n": 53,
+      "unique": 14,
+      "unique_alone_at_place": 14
+     },
+     "shapes": {
+      "insertion|slug_elsewhere": 53
+     },
+     "second_pass": {}
+    },
+    "candidates": [],
+    "recurrent_joins": {
+     "joins_examined": 11,
+     "groups_same_well_only": 0,
+     "recurrent": [],
+     "near": [],
+     "joins_into_repeat": null,
+     "same_join_means": {
+      "runs_through_join_bases": 100,
+      "join_offset_max": 6,
+      "gap_max": 6,
+      "identity_min": 0.98
+     }
+    }
+   },
+   "sample": null,
+   "sensitivity": null,
+   "note": "Both long-read runs of this specimen, in full.",
+   "thinned": 1,
+   "candidate_places": null,
+   "repeat_joins": null,
+   "end_piece_control": null
+  },
+  {
+   "library": "papi1",
+   "label": "A second animal",
+   "runs": [
+    "ERR14842696"
+   ],
+   "kind": "hifi",
+   "platform": "PacBio Revio (HiFi, amplified library)",
+   "animal": "a second animal (specimen xgElyPapi1, a whole adult, Tampa, Florida, 2024)",
+   "reads": 10201468,
+   "bases": 64842836831,
+   "bases_screened": 64842836831,
+   "chimera": {
+    "pairs": [
+     {
+      "pair": "slug+slugmt",
+      "junctions": 31,
+      "reads": 31,
+      "adapter_junctions": 29,
+      "recurrent_clusters": 0
+     },
+     {
+      "pair": "cp+slug",
+      "junctions": 4,
+      "reads": 4,
+      "adapter_junctions": 4,
+      "recurrent_clusters": 0
+     }
+    ],
+    "rates": {
+     "slugmt": {
+      "reads_with_segment": 7954,
+      "reads_also_with_slug": 31,
+      "rate": 0.0039
+     },
+     "cp": {
+      "reads_with_segment": 1326,
+      "reads_also_with_slug": 4,
+      "rate": 0.00302
+     }
+    },
+    "recurrent": [],
     "flanked": [],
     "n_flanked": 0
    },
    "min_identity": 0.97,
-   "locus_tests": null
+   "locus_tests": null,
+   "shapes": {
+    "min_identity": 0.97,
+    "min_segment": 300,
+    "min_short_piece": 100,
+    "reads_with_piece": {
+     "slug": 9435,
+     "slugmt": 7954,
+     "cp": 1326
+    },
+    "reads_joining_slug": {
+     "cp": 4,
+     "slugmt": 31
+    },
+    "reads_joined_to_placed_slug": {
+     "cp": 3,
+     "slugmt": 29
+    },
+    "shapes": {
+     "insertion|slug_elsewhere": 5,
+     "one join|cp": 4,
+     "one join|slugmt": 31,
+     "short piece not confirmed base by base|cp": 29
+    },
+    "shared_with_assembly": {
+     "cp": 202,
+     "algmt": 3
+    },
+    "second_pass": {},
+    "depth": {
+     "genome_bp": 1023596221,
+     "library_bases": 64842836831,
+     "library_reads": 10201468,
+     "depth": 63.35
+    },
+    "background": {
+     "source": "sample",
+     "reads": 9351,
+     "reads_slug_only": 7900,
+     "reads_slug_placed": 7070,
+     "joining_unrelated": 191,
+     "slug_pieces": 7261,
+     "slug_pieces_joined": 382,
+     "joining_unrelated_any": 988,
+     "folding_back": 2,
+     "cp_reads": 1,
+     "cp_joined": 0,
+     "mt_reads": 7,
+     "mt_joined": 0,
+     "depth": {
+      "genome_bp": 1023596221,
+      "library_bases": 64842836831,
+      "library_reads": 10201468,
+      "depth": 63.35,
+      "sample_one_in": 1000,
+      "sample_reads_aligned": 9351,
+      "sample_bases_aligned": 59004087,
+      "spanning_depth": {
+       "100": 51.25,
+       "500": 47.6,
+       "1000": 43.03,
+       "3000": 24.77
+      },
+      "copies": {
+       "placed_reads": 7263,
+       "reads_with_a_copy_in_the_sample": 0,
+       "sample_fraction": 0.000917,
+       "copies_per_read": 0.0,
+       "copies_per_read_upper": 0.4506
+      }
+     },
+     "insertion_slug_elsewhere": {
+      "n": 57,
+      "unique": 14,
+      "unique_alone_at_place": 14
+     },
+     "shapes": {
+      "insertion|slug_elsewhere": 57
+     },
+     "second_pass": {}
+    },
+    "candidates": [],
+    "recurrent_joins": {
+     "joins_examined": 28,
+     "groups_same_well_only": 1,
+     "recurrent": [],
+     "near": [],
+     "joins_into_repeat": null,
+     "same_join_means": {
+      "runs_through_join_bases": 100,
+      "join_offset_max": 6,
+      "gap_max": 6,
+      "identity_min": 0.98
+     }
+    }
+   },
+   "sample": null,
+   "sensitivity": null,
+   "note": "The long-read run of the other specimen sequenced for the same project, in full.",
+   "thinned": 1,
+   "candidate_places": null,
+   "repeat_joins": null,
+   "end_piece_control": null
   }
  ],
  "protein_screen": {

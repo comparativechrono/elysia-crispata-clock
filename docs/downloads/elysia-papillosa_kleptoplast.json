@@ -4,26 +4,27 @@
  "libraries": [
   {
    "library": "main",
-   "label": "",
+   "label": "The assembled animal",
    "runs": [
-    "ERR14842698"
+    "ERR14842698",
+    "ERR14842697"
    ],
    "kind": "hifi",
    "platform": "PacBio Revio (HiFi)",
    "animal": "the sequenced animal (specimen xgElyPapi4, Tampa, Florida, 2024)",
-   "note": "One of the three runs behind the assembly, in full.",
-   "reads": 1202224,
-   "bases": 8250209426,
-   "bases_screened": 8250209426,
+   "note": "Both long-read runs of this specimen, in full.",
+   "reads": 5406003,
+   "bases": 36247978396,
+   "bases_screened": 36247978396,
    "plastid": {
-    "reads": 1700,
-    "bp": 11865877,
-    "fraction": 0.001438
+    "reads": 6528,
+    "bp": 43578653,
+    "fraction": 0.001202
    },
    "mitochondrion": {
-    "reads": 816,
-    "bp": 5542153,
-    "fraction": 0.000672
+    "reads": 2007,
+    "bp": 12179290,
+    "fraction": 0.000336
    },
    "algal_mitochondrion": {
     "reads": null,
@@ -36,9 +37,9 @@
     "fraction": 0.0
    },
    "plastid_any_identity": {
-    "reads": 1701,
-    "bp": 11864842,
-    "fraction_of_bases": 0.001438
+    "reads": 6531,
+    "bp": 43579938,
+    "fraction_of_bases": 0.001202
    },
    "other_taxa": {
     "algrDNA": [
@@ -53,20 +54,30 @@
    "donors": [
     {
      "name": "Penicillus lamourouxii",
-     "reads": 1701,
-     "bp": 11864842,
-     "fraction": 1.0,
-     "median_identity": 0.9996,
+     "reads": 6527,
+     "bp": 43548395,
+     "fraction": 0.99928,
+     "median_identity": 0.9995,
      "identity_q10": 0.9968,
      "identity_q90": 1.0,
      "accession": "OZ494339.1"
+    },
+    {
+     "name": "Penicillus capitatus",
+     "reads": 4,
+     "bp": 31543,
+     "fraction": 0.00072,
+     "median_identity": 0.998,
+     "identity_q10": 0.9977,
+     "identity_q90": 0.9984,
+     "accession": "OZ373742.1"
     }
    ],
    "barcodes": [
     {
      "barcode": "rbcL",
      "haplotype": "h1",
-     "reads": 95,
+     "reads": 334,
      "fraction": 1.0,
      "length": 1269,
      "top_hit": "Penicillus dumetosus [AY942175.1]",
@@ -86,7 +97,215 @@
     {
      "barcode": "tufA",
      "haplotype": "h1",
-     "reads": 101,
+     "reads": 345,
+     "fraction": 0.9426,
+     "length": 821,
+     "top_hit": "Penicillus dumetosus [MG784729.1]",
+     "identity": 98.54,
+     "alnlen": 821,
+     "species_near_best": "Penicillus dumetosus (3); Penicillus pyriformis (3)",
+     "sequence": "GGCGCTATTTTAGTGGTTTCCGGTGCTGATGGTCCAATGCCTCAAACCAAAGAACATATTTTATTAGCTCAACAAGTTGGAGTTCCAGCTATTGTTGTTTTTTTAAATAAAATTGATCAAGTTGATGATGAAGAATTGTTAGAACTTGTTGAATTAGAAATTAGAGAAACTTTAGATCTTTATGATTTTCCCGGGGATTCTATATTAATTATTAGAGGATCTGCTTTAGAGGCGGTAGAAGCACTTACAATGAATCCACAAATTCAAAGAGGTGAGAATGAATGGGTTGATCATATTCATAAATTAATGGATTGTGTTGACGAAGCAATTCCATTACCACAACGAAATGTTGAAAAAGATTTCTTAATGGCTATTGAAAATATAGTATCGATTACAGGTCGTGGGACAGTTGCTACAGGTCGTGTGGAACGTGGACAAATTAAAGTGGGAGAATCTATTGAAATTATTGGACTTAAAGATACTAAAGAAACAACTGTTATAGGACTTGAAATGTTTCAAAAAACATTAGATGAAAGTGTTGCTGGAGATAATGTTGGTGTTTTGTTAAGAGGAATACAAAAAAATGAAATACAACGAGGTATGGTTTTGGCTAAACCAGGTTCAATAACACCCCATCTTAAATTTAAGGCTCAAGTTTATATTTTAAAAAAAAGTGAAGGAGGTCGCCATACTTCTTTTGTTACTGGTTATAGACCACAATTTTATGTCCGAACAACTGATGTTACAGGAAGAATTGAATCTTTTCAAACTGATGATAATAGTAAAATGCGTATGGTTATGCCTGGTGATAGAGTTCAAAT",
+     "frame": "MG784729.1",
+     "most_similar": {
+      "identity": 98.602,
+      "records": 2,
+      "longest_alnlen": 821,
+      "species": "Penicillus dumetosus (2)",
+      "accession": "MG784729.1"
+     }
+    },
+    {
+     "barcode": "tufA",
+     "haplotype": "h2",
+     "reads": 21,
+     "fraction": 0.0574,
+     "length": 820,
+     "top_hit": "Penicillus dumetosus [MG784729.1]",
+     "identity": 98.42,
+     "alnlen": 821,
+     "species_near_best": "Penicillus dumetosus (3); Penicillus pyriformis (3)",
+     "sequence": "GGCGCTATTTTAGTGGTTTCCGGTGCTGATGGTCCAATGCCTCAAACCAAAGAACATATTTTATTAGCTCAACAAGTTGGAGTTCCAGCTATTGTTGTTTTTTTAAATAAAATTGATCAAGTTGATGATGAAGAATTGTTAGAACTTGTTGAATTAGAAATTAGAGAAACTTTAGATCTTTATGATTTTCCCGGGGATTCTATATTAATTATTAGAGGATCTGCTTTAGAGGCGGTAGAAGCACTTACAATGAATCCACAAATTCAAAGAGGTGAGAATGAATGGGTTGATCATATTCATAAATTAATGGATTGTGTTGACGAAGCAATTCCATTACCACAACGAAATGTTGAAAAAGATTTCTTAATGGCTATTGAAAATATAGTATCGATTACAGGTCGTGGGACAGTTGCTACAGGTCGTGTGGAACGTGGACAAATTAAAGTGGGAGAATCTATTGAAATTATTGGACTTAAAGATACTAAAGAAACAACTGTTATAGGACTTGAAATGTTTCAAAAAACATTAGATGAAAGTGTTGCTGGAGATAATGTTGGTGTTTTGTTAAGAGGAATACAAAAAAATGAAATACAACGAGGTATGGTTTTGGCTAAACCAGGTTCAATAACACCCCATCTTAAATTTAAGGCTCAAGTTTATATTTTAAAAAAAGTGAAGGAGGTCGCCATACTTCTTTTGTTACTGGTTATAGACCACAATTTTATGTCCGAACAACTGATGTTACAGGAAGAATTGAATCTTTTCAAACTGATGATAATAGTAAAATGCGTATGGTTATGCCTGGTGATAGAGTTCAAAT",
+     "frame": "MG784729.1",
+     "most_similar": {
+      "identity": 98.602,
+      "records": 1,
+      "longest_alnlen": 644,
+      "species": "Penicillus dumetosus (1)",
+      "accession": "MG784800.1"
+     }
+    }
+   ],
+   "contigs": null,
+   "hot_windows": [
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 400,
+     "end": 600,
+     "reads": 1558
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 0,
+     "end": 200,
+     "reads": 1299
+    },
+    {
+     "target": "algrDNA|AY206424.1",
+     "start": 200,
+     "end": 400,
+     "reads": 907
+    },
+    {
+     "target": "algrDNA|AY206425.1",
+     "start": 200,
+     "end": 400,
+     "reads": 869
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 200,
+     "end": 400,
+     "reads": 380
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 600,
+     "end": 800,
+     "reads": 1
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 400,
+     "end": 600,
+     "reads": 453
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 0,
+     "end": 200,
+     "reads": 280
+    }
+   ]
+  },
+  {
+   "library": "papi1",
+   "label": "A second animal",
+   "runs": [
+    "ERR14842696"
+   ],
+   "kind": "hifi",
+   "platform": "PacBio Revio (HiFi, amplified library)",
+   "animal": "a second animal (specimen xgElyPapi1, a whole adult, Tampa, Florida, 2024)",
+   "note": "The long-read run of the other specimen sequenced for the same project, in full.",
+   "reads": 10201468,
+   "bases": 64842836831,
+   "bases_screened": 64842836831,
+   "plastid": {
+    "reads": 1326,
+    "bp": 8817683,
+    "fraction": 0.000136
+   },
+   "mitochondrion": {
+    "reads": 7951,
+    "bp": 50787902,
+    "fraction": 0.000783
+   },
+   "algal_mitochondrion": {
+    "reads": null,
+    "bp": 0,
+    "fraction": 0.0
+   },
+   "algal_rdna": {
+    "reads": null,
+    "bp": 0,
+    "fraction": 0.0
+   },
+   "plastid_any_identity": {
+    "reads": 1345,
+    "bp": 8896424,
+    "fraction_of_bases": 0.000137
+   },
+   "other_taxa": {
+    "algrDNA": [],
+    "algmt": []
+   },
+   "donors": [
+    {
+     "name": "Penicillus lamourouxii",
+     "reads": 1322,
+     "bp": 8792389,
+     "fraction": 0.98831,
+     "median_identity": 0.9995,
+     "identity_q10": 0.996,
+     "identity_q90": 0.9999,
+     "accession": "OZ494339.1"
+    },
+    {
+     "name": "Arabidopsis thaliana",
+     "reads": 17,
+     "bp": 77784,
+     "fraction": 0.00874,
+     "median_identity": 0.9004,
+     "identity_q10": 0.8571,
+     "identity_q90": 0.9635,
+     "accession": "NC_000932.1"
+    },
+    {
+     "name": "Penicillus capitatus",
+     "reads": 3,
+     "bp": 19869,
+     "fraction": 0.00223,
+     "median_identity": 0.9983,
+     "identity_q10": 0.9971,
+     "identity_q90": 0.9984,
+     "accession": "OZ373742.1"
+    },
+    {
+     "name": "Phaeodactylum tricornutum",
+     "reads": 1,
+     "bp": 4697,
+     "fraction": 0.00053,
+     "median_identity": 0.8295,
+     "identity_q10": 0.8295,
+     "identity_q90": 0.8295,
+     "accession": "NC_008588.1"
+    },
+    {
+     "name": "Synechocystis sp.",
+     "reads": 2,
+     "bp": 1685,
+     "fraction": 0.00019,
+     "median_identity": 0.8627,
+     "identity_q10": 0.8627,
+     "identity_q90": 0.8693,
+     "accession": "NC_000911.1"
+    }
+   ],
+   "barcodes": [
+    {
+     "barcode": "rbcL",
+     "haplotype": "h1",
+     "reads": 71,
+     "fraction": 1.0,
+     "length": 1269,
+     "top_hit": "Penicillus dumetosus [AY942175.1]",
+     "identity": 97.79,
+     "alnlen": 1266,
+     "species_near_best": "Penicillus dumetosus (1)",
+     "sequence": "TTTAACATATTATACACCAAATTATCAAGTATCAGAAACGGATATTCTTGCAGCATTTCGAATGACACCCCAACCAGGTGTTCCTCCAGAAGAAGCAGGTGCTGCTGTTGCAGCAGAATCTTCAACAGGAACATGGACAACTGTATGGACAGATGGTCTTACAAGTTTAGATAGATATAAAGGACGTTGTTATGATATTGAAGCAGTTCCTGGTGAAGAAAATCAATTTATTGCGTATGTTGCATATCCATTAGATCTTTTTGAAGAAGGATCTGTTACAAATTTATTTACTTCTATTGTTGGAAATGTTTTCGGATTTAAAGCTTTACGAGCATTACGACTTGAAGATTTACGTATTCCTCCTTCATATATTAAAACTTTTGAAGGACCACCTCATGGAATTCAAGTTGAACGTGATAAACTAAATAAATATGGACGTCCATTTTTAGGTTGTACTATTAAACCTAAATTAGGTCTTTCTGCAAAAAATTATGGACGTGCAGTTTATGAAGGTTTACGTGGTGGACTTGATTTTACAAAAGATGATGAGAATGTTAATTCTCAGCCATTCATGCGTTGGCGTGATCGTTTTCTTTTTGTTGCAGAAGCTATTTATAAATCTCAAGCGGAGACAGGTGAAATTAAAGGACATTATTTAAATGCTACTGCTGGTCATTGTGATGAAATGATAAAAAGAGCTGAATGTGCAAAAGAATTAGGTGTACCTATTATCATGCATGATTATCTAACTGGAGGTTTTACAGCGAATACATCTCTTGCACATTATTGTCGAGATCACAGTTTATTATTACATATTCATCGTGCAATGCATGCTGTGATTGATCGTCAAAAAATTCATGGAATGCATTTTAGAGTTCTTGCAAAAGCTTTAAGACTTTCTGGTGGTGATCATTTACATGCAGGAACTGTTGTAGGTAAACTTGAAGGTGAACGTGAAGTAACTTTAGGTTTTGTAGATTTAATGCGCGATAATTTTTGTGAAAAAGATCGTAAGCGTGGGATTTACTTTACACAAGATTGGGTATCATTACCTGGGGTAATACCTGTTGCTTCTGGTGGTATTCATGTTTGGCATATGCCCGCATTAGTTGAAATTTTTGGAGATGACGCTTGTTTACAATTTGGTGGTGGAACATTAGGCCATCCTTGGGGAAATGCTCCGGGAGCTGCGGCGAACCGTATTGCCTGTGAGGTTTGTGTACAAGCACGTAATGAAGGACGTTCTCTTGCTTCCGAAGGTAATAACAT",
+     "frame": "AY942175.1",
+     "most_similar": {
+      "identity": 100.0,
+      "records": 4,
+      "longest_alnlen": 559,
+      "species": "Uncultured Bryopsidales (3); Penicillus lamourouxii (1)",
+      "accession": "MZ346586.1"
+     }
+    },
+    {
+     "barcode": "tufA",
+     "haplotype": "h1",
+     "reads": 89,
      "fraction": 1.0,
      "length": 821,
      "top_hit": "Penicillus dumetosus [MG784729.1]",
@@ -110,19 +329,19 @@
      "target": "slugrDNA|MK919695.1",
      "start": 400,
      "end": 600,
-     "reads": 453
+     "reads": 2356
     },
     {
      "target": "slugrDNA|MK919695.1",
      "start": 0,
      "end": 200,
-     "reads": 280
+     "reads": 1788
     },
     {
      "target": "slugrDNA|MK919695.1",
      "start": 200,
      "end": 400,
-     "reads": 70
+     "reads": 391
     }
    ]
   }
@@ -130,9 +349,9 @@
  "donors": [
   {
    "name": "Penicillus lamourouxii",
-   "fraction": 1.0,
-   "median_identity": 0.9996
+   "fraction": 0.99928,
+   "median_identity": 0.9995
   }
  ],
- "plastid_fraction": 0.001438
+ "plastid_fraction": 0.001202
 }

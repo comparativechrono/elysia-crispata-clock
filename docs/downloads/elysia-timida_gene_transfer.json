@@ -139,36 +139,36 @@
    "kind": "hifi",
    "platform": "PacBio Revio (HiFi, amplified ultra-low-input library)",
    "animal": "the sequenced animals (adults, Cadaqu\u00e9s, Spain)",
-   "reads": 3468033,
-   "bases": 20000001740,
-   "bases_screened": 20000001740,
+   "reads": 9552331,
+   "bases": 53125525286,
+   "bases_screened": 53125525286,
    "chimera": {
     "pairs": [
      {
       "pair": "slug+slugmt",
-      "junctions": 47,
-      "reads": 44,
-      "adapter_junctions": 34,
+      "junctions": 87,
+      "reads": 84,
+      "adapter_junctions": 65,
       "recurrent_clusters": 0
      },
      {
       "pair": "cp+slug",
-      "junctions": 6,
-      "reads": 6,
-      "adapter_junctions": 4,
+      "junctions": 16,
+      "reads": 16,
+      "adapter_junctions": 13,
       "recurrent_clusters": 0
      }
     ],
     "rates": {
-     "cp": {
-      "reads_with_segment": 391,
-      "reads_also_with_slug": 6,
-      "rate": 0.01535
-     },
      "slugmt": {
-      "reads_with_segment": 6176,
-      "reads_also_with_slug": 44,
-      "rate": 0.00712
+      "reads_with_segment": 14113,
+      "reads_also_with_slug": 84,
+      "rate": 0.00595
+     },
+     "cp": {
+      "reads_with_segment": 2598,
+      "reads_also_with_slug": 16,
+      "rate": 0.00616
      }
     },
     "recurrent": [],
@@ -176,7 +176,104 @@
     "n_flanked": 0
    },
    "min_identity": 0.97,
-   "locus_tests": null
+   "locus_tests": null,
+   "shapes": {
+    "min_identity": 0.97,
+    "min_segment": 300,
+    "min_short_piece": 100,
+    "reads_with_piece": {
+     "slugmt": 14113,
+     "slug": 10410,
+     "cp": 2598
+    },
+    "reads_joining_slug": {
+     "slugmt": 84,
+     "cp": 16
+    },
+    "reads_joined_to_placed_slug": {
+     "slugmt": 75,
+     "cp": 15
+    },
+    "shapes": {
+     "one join|cp": 16,
+     "one join|slugmt": 87
+    },
+    "shared_with_assembly": {},
+    "second_pass": {},
+    "depth": {
+     "genome_bp": 754417147,
+     "library_bases": 53125525286,
+     "library_reads": 9552331,
+     "depth": 70.42
+    },
+    "background": {
+     "source": "sample",
+     "reads": 11680,
+     "reads_slug_only": 11541,
+     "reads_slug_placed": 10252,
+     "joining_unrelated": 55,
+     "slug_pieces": 10307,
+     "slug_pieces_joined": 110,
+     "joining_unrelated_any": 175,
+     "folding_back": 4,
+     "cp_reads": 3,
+     "cp_joined": 0,
+     "mt_reads": 18,
+     "mt_joined": 0,
+     "depth": {
+      "genome_bp": 754417147,
+      "library_bases": 53125525286,
+      "library_reads": 9552331,
+      "depth": 70.42,
+      "sample_one_in": 800,
+      "sample_reads_aligned": 11680,
+      "sample_bases_aligned": 65013982,
+      "spanning_depth": {
+       "100": 60.27,
+       "500": 55.32,
+       "1000": 49.13,
+       "3000": 24.97
+      },
+      "copies": {
+       "placed_reads": 10157,
+       "reads_with_a_copy_in_the_sample": 0,
+       "sample_fraction": 0.001223,
+       "copies_per_read": 0.0,
+       "copies_per_read_upper": 0.2416
+      }
+     },
+     "insertion_slug_elsewhere": {
+      "n": 6,
+      "unique": 1,
+      "unique_alone_at_place": 1
+     },
+     "shapes": {
+      "insertion|slug_elsewhere": 6
+     },
+     "second_pass": {}
+    },
+    "candidates": [],
+    "recurrent_joins": {
+     "joins_examined": 81,
+     "groups_same_well_only": 2,
+     "recurrent": [],
+     "near": [],
+     "joins_into_repeat": null,
+     "same_join_means": {
+      "runs_through_join_bases": 100,
+      "join_offset_max": 6,
+      "gap_max": 6,
+      "identity_min": 0.98
+     }
+    }
+   },
+   "sample": null,
+   "sensitivity": null,
+   "note": "The whole Revio run behind the assembly. The library was amplified by PCR.",
+   "thinned": 1,
+   "candidate_places": null,
+   "repeat_joins": null,
+   "end_piece_control": null
   }
  ],
  "protein_screen": {

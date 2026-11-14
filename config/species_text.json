@@ -1,30 +1,31 @@
 {
  "elysia-papillosa": {
   "plastome_length": 89758,
-  "klepto_lede": "The animal sequenced for the genome came from Tampa, Florida, in 2024. The plastid DNA among its reads says which alga it had been eating.",
+  "klepto_lede": "Two animals from Tampa, Florida, were sequenced with long reads in 2024: the one behind the assembly and a second one. The plastid DNA among the reads of each says which alga it had been eating.",
   "klepto_answer": [
-   "<strong>One shaving-brush alga, <i>Penicillus lamourouxii</i>.</strong> All {cp_reads} plastid reads match a single plastid genome at a median identity of {donor1_id}. That genome, OZ494339.1, was assembled by the Sanger Institute from this same animal and filed as <i>P. lamourouxii</i>. Each of the two barcode genes occurs as one sequence only, so there is no second alga in the mix.",
-   "<strong>It is the lesser of the two algae found in the <i>E. crispata</i> animal.</strong> Against that plastid genome (OZ372796.1), rbcL is identical over 1,269 bases and tufA differs at one base in 821.",
-   "<strong>There is not much of it.</strong> Plastid DNA is {cp_pct} of the sequenced bases, about {depth_ratio} copies of the plastid genome for every copy of the slug genome. The <i>E. crispata</i> animal carried roughly 250."
+   "<strong>One shaving-brush alga, <i>Penicillus lamourouxii</i>.</strong> All {cp_reads} plastid reads of the assembled animal match a single plastid genome at a median identity of {donor1_id}. That genome, OZ494339.1, was assembled by the Sanger Institute from this same animal and filed as <i>P. lamourouxii</i>. The barcode gene rbcL occurs as one sequence. So does tufA, apart from 21 of 366 reads in which a run of eight A is one base short, a common reading error of this kind of sequencing. There is no second alga in the mix.",
+   "<strong>The second animal carried the same alga, and much less of it.</strong> {papi1_cp_reads} plastid reads against {cp_reads}, {papi1_cp_pct} of the sequenced bases against {cp_pct}. Its rbcL and tufA are the same two sequences. 17 of its reads are plastid DNA of a flowering plant instead, 86 to 96% identical to that of <i>Arabidopsis</i>: perhaps seagrass taken in with its food.",
+   "<strong>The second animal carried the same alga, and much less of it.</strong> {papi1_cp_reads} plastid reads against {cp_reads}, {papi1_cp_pct} of the sequenced bases against {cp_pct}. Its rbcL and tufA are the same two sequences. 17 of its reads are plastid DNA of a flowering plant instead, 86 to 96% identical to that of <i>Arabidopsis</i>: perhaps seagrass taken in with its food.",
+   "<strong>There is not much of it.</strong> In the assembled animal plastid DNA is {cp_pct} of the sequenced bases, about {depth_ratio} copies of the plastid genome for every copy of the slug genome. The <i>E. crispata</i> animal carried roughly 250."
   ],
   "klepto_which": [
    "Reads were assigned to whichever plastid reference they match best, and the two barcode genes were read directly out of every read that spans them."
   ],
   "klepto_nuclei": [
-   "Almost none. Reads that carry nuclear ribosomal DNA of a <i>Penicillus</i>: {rdna_reads} of {reads}. The match is about 99% to a <i>P. pyriformis</i> record across the variable spacers, where the slug’s own ribosomal DNA does not match at all. So a trace of algal nuclear DNA was in the sample, most likely from food still in the gut. No read matches an algal mitochondrial genome.",
+   "Almost none. In the assembled animal {rdna_reads} of {reads} reads carries nuclear ribosomal DNA of a <i>Penicillus</i>, and in the second animal none does. The match is about 99% to a <i>P. pyriformis</i> record across the variable spacers, where the slug’s own ribosomal DNA does not match at all. So a trace of algal nuclear DNA was in the sample, most likely from food still in the gut. No read matches an algal mitochondrial genome.",
    "This matters for the <a href=\"gene-transfer.html\">gene transfer question</a>. With algal nuclear DNA present, even as a trace, an algal gene among the reads would not by itself show that the gene is in the slug genome."
   ],
   "klepto_caveats": [
    "The name <i>P. lamourouxii</i> rests on one 562-base rbcL record in GenBank (DQ469333), which the reads match exactly, and on the name the Sanger Institute gave the plastid genome. There is no tufA record for the species. The nearest species with full-length barcodes, <i>P. dumetosus</i>, is {rbcL_id} (rbcL) and {tufA_id} (tufA) identical.",
-   "This is one animal on one day. <i>E. papillosa</i> may eat other algae as well.",
-   "{bases} of the 101 Gb of reads behind the assembly were examined."
+   "These are two animals from one place. <i>E. papillosa</i> may eat other algae as well.",
+   "All three long-read runs of the project were examined: {bases} from the assembled animal and {papi1_bases} from a second one."
   ],
   "card": "<i>Penicillus lamourouxii</i>",
-  "transfer_lede": "Two places to look: the assembly, and the reads it was built from.",
+  "transfer_lede": "Two places to look: the assembly, and the reads. For this species the reads of two animals are public, the one that was assembled and a second one.",
   "transfer_answer": [
-   "<strong>No.</strong> Nothing in the assembly or in the reads joins algal DNA to slug DNA.",
+   "<strong>No sign of it.</strong> Nothing in the assembly joins algal DNA to slug DNA, and in the reads of two animals no molecule holds chloroplast DNA inside slug DNA.",
    "<strong>In the assembly:</strong> there is no plastid DNA at all. One contig of 31 kb is a piece of a green-algal mitochondrial genome, most likely that of the alga in the animal’s gut. It stands alone and carries no slug gene.",
-   "<strong>In the reads:</strong> {cp_chim} of {cp_n} plastid reads also carry slug DNA ({cp_rate}). For the slug’s own mitochondrial reads it is {slugmt_chim} of {slugmt_n} ({slugmt_rate}). The rates are alike, which is what joins made during library preparation look like, and no join is seen twice."
+   "<strong>In the reads:</strong> in the assembled animal {join_cp_any} of {join_cp_of} chloroplast reads are joined to slug DNA at one end, and {join_mt_any} of {join_mt_of} reads of the slug’s own mitochondrial DNA; in the second animal, {papi1_join_cp_any} of {papi1_join_cp_of} and {papi1_join_mt_any} of {papi1_join_mt_of}. Chloroplast DNA is joined to slug DNA no more often than mitochondrial DNA is. Had the cells carried {per_cell} in the first animal, or {papi1_per_cell} in the second, about three insertion-shaped reads would be expected. There are none."
   ],
   "transfer_assembly": [
    "No sequence of the assembly is plastid DNA, as a whole or in part. The one match kept is 425 bp that resemble a mitochondrial ribosomal RNA gene of the green alga <i>Caulerpa</i>. It lies on the contig that the protein screen below identifies as algal mitochondrial DNA."
@@ -33,7 +34,10 @@
    "CDRNNR020002991.1:19089": "A mitochondrial ribosomal RNA gene on a contig of algal mitochondrial DNA (see the protein screen)."
   },
   "reads_main": [
-   "{bases} of reads cover each place in the genome about {screened_depth} times. An insertion carried by every cell would show up as that many reads with the same join. None of the {cp_chim} plastid joins shares its position with another."
+   "Both long-read runs of the assembled animal were read in full. The library was not amplified.",
+   "<strong>Single joins.</strong> {join_cp_any} of {join_cp_of} chloroplast reads are joined to slug DNA at one end ({join_cp} of them to slug DNA that can be placed), and so are {join_mt_any} of {join_mt_of} reads of the slug’s own mitochondrial DNA. Each read holds two pieces and no more, the organelle piece running to the end of the read. Mitochondrial DNA is joined to slug DNA at least as often as chloroplast DNA is, which is what joining in the tube gives and an insertion of chloroplast DNA does not. All of them are in the table of joins for download.",
+   "The comparison with slug DNA says little here: pieces of slug DNA go on with slug DNA from elsewhere far more often ({bg_rate}), nearly all of it real difference between this animal’s chromosomes and an assembly that is still in contigs.",
+   "<strong>Insertion shapes.</strong> None, for chloroplast or for mitochondrial DNA. The search went down to pieces of 100 bases lying inside a read that otherwise follows the slug sequence."
   ],
   "transfer_proteins": [
    "The one place where the best match is an algal protein is on contig CDRNNR020002991.1 (30.9 kb). Translated in all frames, that contig carries a row of mitochondrial genes (nad5, cox2, nad3, atpA, nad4) whose best matches are mitochondrial proteins of green algae, and atpA is split by introns. It is a piece of an algal mitochondrial genome, assembled as its own contig. Anyone using the assembly as slug sequence should set it aside."
@@ -42,13 +46,18 @@
    "CDRNNR020002991.1": "A piece of a green-algal mitochondrial genome: a row of mitochondrial genes and no slug gene."
   },
   "transfer_caveats": [
-   "{bases} of the 101 Gb of reads were examined. An insertion present in only some cells could be missed at this depth.",
-   "The read test recognises plastid DNA of the alga this animal carried and of the other algae in the panel. The protein screen finds only genes with a relative among the 471 proteins searched.",
+   "The limits given here are averages over every cell that went into the tube. Chloroplasts are held only in cells of the digestive gland. If those were a tenth of the animal’s cells, the limit for them alone is ten times weaker.",
+   "The read test recognises plastid DNA of the alga these animals carried and of the other algae in the panel. The protein screen finds only genes with a relative among the 471 proteins searched.",
    "The assembly is still in contigs. Sequence that is missing from it cannot be searched."
   ],
   "klepto_rhythm": [
    "To follow kleptoplast transcripts in animals like this one, map them to OZ494339.1, the plastid genome assembled from this same animal (89,758 bp). It has no gene annotation in the archive. It is 99.4% identical, along nearly its whole length, to OZ372796.1, the second plastid genome of the <i>E. crispata</i> animal, for which a gene table made by homology is among <a href=\"../elysia-crispata/methods.html\">that species’ downloads</a>.",
    "The alga in an animal changes with its meals. A transcript study should check what its own animals carry; the two barcode genes are enough for that."
+  ],
+  "reads_papi1": [
+   "The second animal, a whole adult from the same place, was sequenced more deeply, from a library that had been amplified by PCR. It held about a tenth as much chloroplast DNA as the first ({papi1_cp_pct} of the bases). Its reads were placed on the assembly of the first animal.",
+   "<strong>Single joins.</strong> {papi1_join_cp_any} of {papi1_join_cp_of} chloroplast reads are joined to slug DNA at one end, and {papi1_join_mt_any} of {papi1_join_mt_of} mitochondrial reads. The amplification adapter lies between the two pieces in all {papi1_cp_joins} chloroplast joins and in {papi1_mt_adapter} of the {papi1_mt_joins} mitochondrial ones: these were made in the tube.",
+   "<strong>Insertion shapes.</strong> None. {papi1_Unconfirmed} reads do carry an extra stretch that the first pass had matched to a plastid genome by a few seeds, 28 of them at one place. Base by base it is not plastid DNA: this animal has three more copies of a 45-base repeat there than the assembled one, and the repeat shares one seed with a repeat in the plastid genome of an unrelated alga."
   ]
  },
  "elysia-atroviridis": {
@@ -73,24 +82,28 @@
   "card": "<i>Bryopsis</i> (<i>B. hypnoides</i> type)",
   "transfer_lede": "Two places to look: the assembly, and the reads it was built from.",
   "transfer_answer": [
-   "<strong>No.</strong> Nothing in the assembly or in the reads joins algal DNA to slug DNA.",
+   "<strong>No sign of it, in the cleanest test on this site.</strong> Nothing in the assembly is algal, and among {join_cp_of} reads of chloroplast DNA not one holds chloroplast DNA inside slug DNA.",
    "<strong>In the assembly:</strong> there is no plastid DNA, and the protein screen finds no algal or bacterial gene.",
-   "<strong>In the reads:</strong> plastid DNA is plentiful, {cp_n} reads, and only {cp_chim} of them also carry slug DNA ({cp_rate}). None of those joins is seen twice, where a real insertion would be seen in about {screened_depth} reads."
+   "<strong>In the reads:</strong> {join_cp_any} chloroplast reads, two in every 10,000, are joined to slug DNA at one end. Each is a single molecule, as an insertion in one cell would be, but each holds just two pieces, as two fragments joined in the tube would. No read has the shape of an insertion. Had the cells carried {per_cell}, about three such reads would be expected."
   ],
   "transfer_assembly": [
    "No sequence of the assembly is plastid DNA, as a whole or in part. The one match kept is 214 bp on chromosome 6 that resemble a transfer RNA gene of a plastid genome at 85%."
   ],
   "reads_main": [
-   "This is the cleanest test among the species added here: accurate long reads, from the animal that was assembled, at {screened_depth} times coverage, with {cp_pct} of the DNA being plastid. If plastid DNA were inserted anywhere in the genome of this animal, some of the {cp_n} plastid reads would cross the join, and they would do so repeatedly at one place.",
-   "None of the {slugmt_n} reads of the slug’s own mitochondrial genome carries nuclear DNA either."
+   "This is the cleanest test among the species added here: accurate long reads, from a library that was not amplified, from the animal that was assembled, with {cp_pct} of the DNA being chloroplast DNA.",
+   "<strong>Single joins.</strong> {join_cp_any} of the {join_cp_of} chloroplast reads are joined to slug DNA at one end, {join_cp} of them to slug DNA that can be placed. Each is a single molecule at a place of its own, and all are in the table of joins for download. In every one the read holds two pieces and no more: a stretch of slug DNA, and chloroplast DNA that runs on to the end of the read, between 500 bases and 11 kb of it. A read like that shows one side of a join, so it cannot be told from the read alone whether the join was there in a cell or was made in the tube.",
+   "Two things can be said. They are few: at the same rate the {slugmt_n} reads of the slug’s own mitochondrial DNA would give less than one joined read, and they give none. And none shows the far side. An insertion shorter than the reads, which average 8.7 kb here, would mostly be read whole, as slug DNA, chloroplast DNA and slug DNA again; if these {join_cp_any} are insertions, they are of pieces longer than the reads. Two fragments joined end to end while the library was made give exactly this picture.",
+   "The comparison with slug DNA says little in this library. Pieces of slug DNA go on with slug DNA from elsewhere a hundred times more often ({bg_rate}), but that is nearly all real difference between this animal’s chromosomes and the assembly, not joining in the tube.",
+   "<strong>Insertion shapes.</strong> None. The search went down to pieces of 100 bases lying inside a read that otherwise follows the slug sequence without a break."
   ],
   "transfer_proteins": [
    "Nothing in this assembly has an algal or a bacterial protein as its best match."
   ],
   "transfer_caveats": [
+   "The limits given here are averages over every cell that went into the tube. Chloroplasts are held only in cells of the digestive gland. If those were a tenth of the animal’s cells, the limit for them alone is ten times weaker.",
    "The read test recognises plastid DNA of the alga this animal carried and of the other algae in the panel. An insertion of some other alga’s DNA would be found only by the assembly screens.",
    "The protein screen finds only genes with a relative among the 471 proteins searched.",
-   "Sequence that is missing from the assembly cannot be searched."
+   "Sequence that is missing from the assembly cannot be searched, and a piece of chloroplast DNA inside a repeat of the slug genome could not be placed."
   ],
   "klepto_rhythm": [
    "Map kleptoplast transcripts to PQ652170.1 (<i>Bryopsis hypnoides</i>, 139,745 bp, annotated in GenBank). The main plastid type in this animal is identical to it over both barcode genes, and the minor type differs by about 0.5%.",
@@ -114,14 +127,14 @@
   ],
   "klepto_caveats": [
    "<i>Bryopsis</i> species are hard to tell apart with rbcL and tufA. The match to PQ652170.1 is exact; the species name on that record is the submitters’.",
-   "{bases} were examined: the first part of one of the two short-insert libraries behind the assembly (37.6 Gb).",
+   "Both short-insert libraries behind the assembly were examined in full ({bases}).",
    "The reads are filed in the archive under the name <i>Elysia ornata</i>."
   ],
   "card": "<i>Bryopsis</i> (<i>B. hypnoides</i> type)",
   "transfer_lede": "Two places to look: the assembly, and the short reads it was built from.",
   "transfer_answer": [
-   "<strong>No.</strong> Nothing in the assembly or in the reads joins algal DNA to slug DNA.",
-   "<strong>One small sequence of the assembly is plastid DNA.</strong> BMAT01005342.1 (3.7 kb) is a stretch of the <i>Bryopsis</i> plastid genome that the reference genomes lack. Read pairs tie both of its ends to neighbouring parts of the plastid genome. It is kleptoplast DNA, not slug DNA.",
+   "<strong>Nothing that stands out, and the tightest limit that short reads give on this site.</strong> Nothing in the assembly joins algal DNA to slug DNA. In the reads, one chloroplast pair in ten thousand has its other mate in slug DNA: {cp_chim} pairs in the whole library, each a single molecule at a place of its own. One insertion in every cell, each cell with its own, would by itself add about that many. So the cells of this animal carried about one insertion each at most, even if every one of those pairs came from an insertion.",
+   "<strong>One small sequence of the assembly is plastid DNA.</strong> BMAT01005342.1 (3.7 kb) is a stretch of the <i>Bryopsis</i> plastid genome that the reference genomes lack. Read pairs tie both of its ends to neighbouring parts of the plastid genome, and it is covered as deeply as the plastid genome is. It is kleptoplast DNA, not slug DNA.",
    "<strong>About {bact_mb} Mb of the assembly is bacterial.</strong> The protein screen leads to {bact_n} sequences that are bacterial DNA along their length, from at least three kinds of bacteria. The gene set published with the assembly includes genes on them. None is algal."
   ],
   "transfer_assembly": [
@@ -132,8 +145,10 @@
    "BMAT01007826.1:4633": "A ribosomal RNA operon of bacterial type, 5 kb."
   },
   "reads_main": [
-   "{cp_chim} of {cp_n} plastid read pairs have a mate in what the assembly presents as slug DNA ({cp_rate}). None of {slugmt_n} mitochondrial pairs does.",
-   "32 of those {cp_chim} pairs lie on one small sequence, BMAT01005342.1: 16 at each end. Their plastid mates fall at two places about 4 kb apart on the reference plastid genome, which is what a 3.7 kb stretch of plastid DNA missing from the reference would give. Its last 227 bases are identical to the end of a plastid contig assembled from these reads. The pairs are plastid pairs, not joins. That leaves five plastid pairs with a mate elsewhere in slug DNA."
+   "Both paired-end libraries were read in full. {cp_chim} of {cp_n} chloroplast pairs have their other mate in slug DNA ({cp_rate}). Of {slugmt_n} mitochondrial pairs, one does: too few to compare the two organelles. In a random sample of the library {bg_rate} of slug pairs have their mates on unrelated sequences, most of them at the ends of assembly sequences. In {split_cp} more molecules a single mate reads from chloroplast DNA into slug DNA ({split_cp_rate} of chloroplast pairs, against {bg_split_rate} of slug pairs that read into an unrelated piece of slug DNA); five of the {split_cp} are the reads at the bacterial sequence listed above.",
+   "<strong>What that bounds.</strong> This library joins chloroplast DNA to slug DNA ten to a hundred times less often than the other short-read libraries on this site, and it covers the slug genome {slug_depth} times. That makes it the one short-read library in which the count itself is a limit: the pairs and mates it holds are about as many as one insertion in every cell would add (figures above). Averaged over all the cells that went into the tube, this animal carried about one insertion per cell at most, and fewer if the library made some of these joins, as every library does.",
+   "<strong>The small plastid sequence.</strong> BMAT01005342.1 (3.7 kb) matches no plastid reference, but the pairs say what it is. 225 pairs have one mate at its start and 948 at its end, with their other mates at two places 4 kb apart in the reference plastid genome, and reads run off its end into the plastid sequence that follows. It is covered about 1,500 times, as the plastid genome is, against {slug_depth} times for slug DNA. It is a stretch of this alga’s plastid genome that the references do not hold, left in the assembly, and its mates are counted as plastid DNA in the figures above.",
+   "Each of the pairs and mates is one molecule at a place of its own. They are in the junction table. A real junction read once would look the same."
   ],
   "transfer_proteins": [
    "The {prot_microbe} places of bacterial type lie on 24 sequences. Translated as a whole, {bact_n} of them are bacterial along their length: {bact_genes} protein-coding stretches of bacterial type, taking up between a quarter and nearly all of each sequence.",
@@ -141,14 +156,17 @@
    "Of the {prot_microbe} places, {bact_listed} are in the gene set published with the assembly, where the bacterial genes stand as genes of the slug. Anyone searching that gene set for genes shared with bacteria or algae will find them. These are bacteria that lived in or on the animal and were assembled along with it. None of the places has an algal protein as its best match."
   ],
   "transfer_caveats": [
-   "Short reads test a join only through read pairs that span it. {bases} cover each place in the genome about {screened_depth} times, so a real insertion would give only a handful of pairs. Three or more at one place would have been reported; fewer would not.",
+   "Short reads cannot show the shape of an insertion, so a single pair that joins chloroplast DNA to slug DNA cannot be told from one the library made. The limit above counts them all as if they were insertions.",
    "The assembly has 82 Mb of gaps. Sequence that is missing from it cannot be searched.",
    "The protein screen finds only genes with a relative among the 471 proteins searched. The bacterial sequences listed are the ones it happened to touch; the assembly may hold more."
   ],
   "klepto_rhythm": [
    "Map kleptoplast transcripts to PQ652170.1 (<i>Bryopsis hypnoides</i>, 139,745 bp, annotated in GenBank), which the plastid DNA of this animal matches exactly over both barcode genes. The plastid contigs assembled from its reads ({contigs} contigs, {contig_kb} kb) are in the downloads; they include a 3.7 kb stretch that the reference lacks.",
    "The reads are filed under the name <i>Elysia ornata</i>, and other animals of the species may carry other <i>Bryopsis</i>. The two barcode genes are enough to check."
-  ]
+  ],
+  "break_notes": {
+   "BMAT01004028.1:131228": "The place is a gap in one of the bacterial sequences of the assembly (below). The reads carry on into the end of that bacterium’s 16S ribosomal RNA gene, which the assembly lacks there, and 41 bases of it are the same in a cyanobacterial genome that the panel holds to catch distant matches. It is not chloroplast DNA."
+  }
  },
  "elysia-timida": {
   "klepto_lede": "The genome was assembled from adults collected at Cadaqués, Spain. <i>E. timida</i> is known to feed on the mermaid’s wineglass, <i>Acetabularia acetabulum</i>. The reads agree, as far as they can be read.",
@@ -158,7 +176,7 @@
    "<strong>Still, the load is light.</strong> The known pieces of the plastid genome are covered about {cp_depth} times over, against {nuc_depth} times for the slug’s own genome. In the <i>E. crispata</i> animal the plastid genome was covered roughly 250 times more deeply than the slug’s. Part of the difference may come from how the library was made (see below)."
   ],
   "klepto_which": [
-   "Reads were assigned to whichever plastid reference they match best. No read spans a whole barcode gene of a GenBank <i>Acetabularia</i> record, so there is no barcode table for this species."
+   "Reads were assigned to whichever plastid reference they match best. With the whole run read, both barcode genes are spanned by reads: tufA by {tufA_reads} reads, all one sequence, identical to the <i>A. acetabulum</i> record over 1,230 bases; rbcL by {rbcL_reads} reads, all one sequence, {rbcL_id} identical to it."
   ],
   "klepto_nuclei": [
    "No read matches algal nuclear ribosomal DNA across its variable spacers, and none matches an algal mitochondrial genome."
@@ -166,15 +184,15 @@
   "klepto_caveats": [
    "The plastid share is a minimum, for the reason given above. A complete <i>Acetabularia</i> plastid genome would be needed to measure it.",
    "The library was amplified by PCR from very little DNA, which distorts the proportions of what was sequenced.",
-   "The first {bases} of the 53 Gb run behind the assembly were examined."
+   "The whole run behind the assembly was examined ({bases})."
   ],
   "plastome_length": 49494,
   "card": "<i>Acetabularia acetabulum</i>",
   "transfer_lede": "Two places to look: the assembly, and the reads it was built from. For this species the read test is limited by how little of the alga’s plastid genome is known.",
   "transfer_answer": [
-   "<strong>No.</strong> Nothing in the assembly or in the reads joins algal DNA to slug DNA.",
+   "<strong>No sign of it, as far as this library can show.</strong> Nothing in the assembly is algal, and no read holds chloroplast DNA inside slug DNA.",
    "<strong>In the assembly:</strong> there is no plastid DNA, and the protein screen finds no algal or bacterial gene.",
-   "<strong>In the reads:</strong> {cp_chim} of {cp_n} reads with plastid DNA also carry slug DNA. Four of the six have the adapter of the amplification step sitting at the join, which marks them as products of the library preparation. The other two are each seen once."
+   "<strong>In the reads:</strong> {join_cp_any} of {join_cp_of} reads with chloroplast DNA are joined to slug DNA at one end, and {cp_adapter} of those joins have the adapter of the amplification step lying in them: they were made in the tube. Mitochondrial DNA is joined to slug DNA at the same rate. Only a small part of the alga’s plastid genome is known, so most of its DNA could not be recognised in a read at all."
   ],
   "transfer_assembly": [
    "No sequence of the assembly is plastid DNA, as a whole or in part. Two short stretches match algal ribosomal DNA at 94 and 97% over about 400 bp. That is the most conserved part of the ribosomal RNA genes, and the slug’s own ribosomal DNA is the simpler explanation."
@@ -184,21 +202,24 @@
    "JBHHFL010000219.1:27010": "The conserved core of a ribosomal RNA gene; most likely the slug’s own."
   },
   "reads_main": [
-   "The library was amplified by PCR from very little DNA, a method that joins unrelated molecules now and then: {slugmt_chim} of {slugmt_n} mitochondrial reads also carry nuclear DNA ({slugmt_rate}). The plastid figure rests on six reads, four of them marked by the adapter.",
-   "The two joins without an adapter put a piece of the plastid gene psaB next to chromosome 2 and a piece of the plastid gene accD next to chromosome 14. The reads examined cover each place in the genome about {screened_depth} times, so an insertion carried by every cell would be seen in about that many reads, not in one."
+   "The whole run was read. The library was amplified by PCR from very little DNA, a method that joins unrelated molecules now and then.",
+   "<strong>Single joins.</strong> {join_cp_any} of {join_cp_of} reads with chloroplast DNA are joined to slug DNA at one end ({cp_rate}), and {join_mt_any} of {join_mt_of} reads of the slug’s own mitochondrial DNA ({slugmt_rate}). The two rates are the same, as joining in the tube would have it. The amplification adapter lies between the two pieces in {cp_adapter} of the {cp_joins} chloroplast joins and in {mt_adapter} of the {mt_joins} mitochondrial ones, which settles where those were made.",
+   "That leaves {cp_no_adapter} chloroplast joins without an adapter, each a single molecule: a piece of psaB next to chromosome 2, a piece of accD next to chromosome 14, and a piece of rps14 next to chromosome 4. They are in the table of joins. Nothing sets them apart from the {mt_no_adapter} mitochondrial joins that also lack the adapter, and nothing could: a real junction read once from one side looks the same.",
+   "<strong>Insertion shapes.</strong> None. Three reads do carry an extra kilobase at one place on chromosome 1 that the first pass matched to a plastid genome, but it is a run of short repeats that resembles a repeat of that genome, not chloroplast DNA."
   ],
   "transfer_proteins": [
    "Nothing in this assembly has an algal or a bacterial protein as its best match."
   ],
   "transfer_caveats": [
    "Only 49 kb of the <i>Acetabularia</i> plastid genome is in GenBank. A read that joins slug DNA to any other part of that genome would not be recognised by the read test. The assembly screens do not have this limit for genes, since they search with the proteins of other algae.",
-   "The first {bases} of the 53 Gb run were examined.",
+   "The limits given here are averages over every cell that went into the tube. Chloroplasts are held only in cells of the digestive gland. If those were a tenth of the animal’s cells, the limit for them alone is ten times weaker.",
    "Sequence that is missing from the assembly cannot be searched."
   ],
   "klepto_rhythm": [
    "There is no complete <i>Acetabularia</i> plastid genome to map transcripts to. GenBank holds 51 pieces of the <i>A. acetabulum</i> plastid genome, 49 kb in all.",
    "A larger resource exists by accident. One assembly of <i>E. crispata</i> (the Purdue assembly, GCA_033675545.1) contains 646 kb of <i>Acetabularia</i> plastid DNA as contigs of its own, left from an animal that had eaten that alga (see the <a href=\"../elysia-crispata/gene-transfer.html\">gene transfer page of <i>E. crispata</i></a>). It comes from another species of <i>Acetabularia</i>: where the genes can be compared, they are 90 to 96% identical to those of <i>A. acetabulum</i>. So it is a guide to what the genome holds, and not a reference to count reads against."
-  ]
+  ],
+  "could_show_main": "For this species the figure is too kind: a piece could be recognised only if it comes from the 49 kb of the plastid genome that are known."
  },
  "elysia-leucolegnote": {
   "card": "<i>Boodleopsis</i> sp. and other algae (in two other animals)",
@@ -206,9 +227,10 @@
   "klepto_lede": "No reads of the animal behind the assembly are public. Two other animals of the species have been sequenced with short reads, one from Shenzhen and one from Hainan, and their plastid DNA was examined instead.",
   "klepto_answer": [
    "<strong>A <i>Boodleopsis</i>, in both animals.</strong> {donor1_pct} of the plastid DNA that could be recognised in the Shenzhen animal and {hainan_donor1_pct} in the Hainan animal matches the plastid genome of a <i>Boodleopsis</i> species. Contigs assembled from those reads are 97 to 99% identical to it. <i>Boodleopsis</i>, a tiny green alga of mangrove mud, is the food reported for this slug (<a href=\"https://www.science.nus.edu.sg/wp-content/uploads/sites/11/2024/07/59rbz029-037.pdf\">Swennen 2011</a>).",
-   "<strong>Not the <i>Boodleopsis</i> with a barcode in GenBank.</strong> The rbcL gene of the main alga is {rbcL_best_id} identical to the <i>B. pusilla</i> record in GenBank. The plastid genome it does match is filed as <i>Boodleopsis</i> sp. without a species name. The two animals carry plastid genomes about 1% apart from each other.",
-   "<strong>Other algae too, and more of them than the shares suggest.</strong> The rest of the recognised plastid DNA matches no reference closely (around 90%), and the Hainan animal yields several different rbcL sequences. These belong to further green algae that have no close relative in GenBank. A read is counted as plastid DNA only if it resembles a reference, so such algae are under-counted. One piece of a second plastid genome could be measured directly, because it turned up in the assembly (see the <a href=\"gene-transfer.html\">gene transfer page</a>): it is covered about 50 times in the Shenzhen animal and 29 times in the Hainan animal, against about 84 and 56 times for the <i>Boodleopsis</i> genome. The simplest reading is a second alga, more than half as plentiful as the <i>Boodleopsis</i> in both animals.",
-   "Recognised plastid DNA is {cp_pct} of the sequenced bases in the Shenzhen animal and {hainan_cp_pct} in the Hainan animal. Both figures are floors."
+   "<strong>Not the <i>Boodleopsis</i> with a barcode in GenBank.</strong> The rbcL gene of the main alga is {rbcL_best_id} identical to the <i>B. pusilla</i> record in GenBank. The plastid genome it does match is filed as <i>Boodleopsis</i> sp. without a species name. The plastid genomes of the two animals are 99.5% identical to each other over 71 kb.",
+   "<strong>Other algae too.</strong> In the Shenzhen animal the plastid contigs fall into kinds by how deeply the reads cover them (table below). The <i>Boodleopsis</i> genome is covered about {cg1_depth} times. {Cg2_n} contigs that match no reference closely ({cg2_id} identical to the nearest) are covered about {cg2_depth} times: a second alga with no close relative in GenBank, about a quarter as plentiful as the first. The piece of plastid DNA that turned up in the assembly (see the <a href=\"gene-transfer.html\">gene transfer page</a>) is covered {locus1_depth} times in this animal, as that alga’s contigs are. {Cg3_n} more contigs lie within 5% of another <i>Boodleopsis</i> plastid genome in GenBank, that of isolate FL1161, and are covered about {cg3_depth} times: a second <i>Boodleopsis</i>, in small amounts.",
+   "<strong>More of them in the Hainan animal.</strong> Its <i>Boodleopsis</i> genome is covered about {hainan_cg1_depth} times. The alga without a reference is there too, identical in sequence to that of the Shenzhen animal and covered 75 to 124 times. A third plastid genome, 86 to 89% identical to that one in the same genes and no closer to any reference, is covered 150 to 210 times: as plentiful as the <i>Boodleopsis</i>. So in this animal two algae that cannot be named held more plastid DNA than the one that can.",
+   "Recognised plastid DNA is {cp_pct} of the sequenced bases in the Shenzhen animal and {hainan_cp_pct} in the Hainan animal. A read is counted as plastid DNA only if it resembles a reference, so algae without a close reference count for less in these figures and in the shares than they should: both figures are floors."
   ],
   "klepto_which": [
    "These are short reads, so a single read cannot span a barcode gene. Each read pair was assigned to the plastid reference it matches best, and the plastid pairs were assembled into contigs from which the barcode genes were cut. The Shenzhen animal gives {contigs} contigs ({contig_kb} kb in all, the longest {contig_longest_kb} kb), the Hainan animal {hainan_contigs} ({hainan_contig_kb} kb)."
@@ -220,12 +242,12 @@
    "Neither animal is the one whose genome was assembled (isolate GZ-2025, Dongzhai Harbor, Hainan). What that animal carried is not known, apart from the one piece of plastid DNA in its assembly.",
    "The name rests on a plastid genome filed without a species name. The match is close but not exact, so the alga eaten may be a different species of the same genus.",
    "Shares are of the plastid DNA that resembles a reference in the panel. Algae with no close reference count for less than they should.",
-   "{bases} of the Shenzhen library and {hainan_bases} of the Hainan library were examined."
+   "Both libraries were examined in full: {bases} from the Shenzhen animal and {hainan_bases} from the Hainan animal."
   ],
-  "transfer_lede": "This is the weakest test on the site. No reads of the assembled animal are public, and the public assembly has a third of its bases blanked out. The assembly was searched as it stands, and the reads of two other animals were checked for joins against it.",
+  "transfer_lede": "This is the weakest test on the site. No reads of the assembled animal are public, and the public assembly has a third of its bases blanked out. The assembly was searched as it stands, and the reads of two other animals were checked against it.",
   "transfer_answer": [
-   "<strong>Nothing that holds up, with less power to find it.</strong> One place in the assembly joins plastid DNA to slug DNA, and the reads of two other animals contradict it. In those animals no place in the genome collects read pairs that join plastid DNA to slug DNA.",
-   "<strong>One small sequence begins with plastid genes.</strong> JBQKML010000381.1 (9.4 kb, unplaced) starts with 863 bases of plastid DNA, parts of the genes chlL and chlN, and goes on as slug DNA. Both other animals hold the same plastid sequence, covered four to six times more deeply than slug DNA, and in them it carries on as plastid DNA past base 863: 46 and 13 reads stop following the assembly there, and none runs through. It is plastid DNA of an alga the animals had eaten.",
+   "<strong>Nothing that stands out, with little power to find it.</strong> In two other animals, read pairs join chloroplast DNA to slug DNA about as often as they join one piece of slug DNA to an unrelated one, and somewhat more often than they join mitochondrial DNA to slug DNA. The long-read libraries on this site show no such difference, and the reads that cross a join show that the tube does not treat the two organelles alike (below), so it cannot be read as insertions. Short reads could not show an insertion in a few cells.",
+   "<strong>One small sequence begins with plastid genes.</strong> JBQKML010000381.1 (9.4 kb, unplaced) starts with 863 bases of plastid DNA, parts of the genes chlL and chlN, and goes on as slug DNA. Both other animals hold the same plastid sequence, covered several times more deeply than slug DNA, and in them it carries on as plastid DNA past base 863: {locus1_right_stop} and {hainan_locus1_right_stop} reads stop following the assembly there, and none runs through. In those animals it is plastid DNA of an alga they had eaten. The join stands in the assembly alone, and the animal behind the assembly cannot be tested.",
    "<strong>{Bact_n} sequences are bacterial,</strong> {bact_mb} Mb together. None of this is algal DNA in the slug genome."
   ],
   "transfer_assembly": [
@@ -235,38 +257,51 @@
    "JBQKML010000381.1:294": "The plastid gene chlN, within the first 863 bases of a 9.4 kb unplaced sequence that goes on as slug DNA. Tested with reads below.",
    "JBQKML010000169.1:81064": "A small-subunit ribosomal RNA gene of bacterial type, on a bacterial sequence."
   },
-  "transfer_reads": [
-   "Short reads test a join through read pairs that span it. The two libraries cover each place in the genome about {screened_depth} and {hainan_screened_depth} times."
-  ],
+  "transfer_reads": [],
   "reads_main": [
-   "{cp_chim} of {cp_n} plastid pairs have a mate in slug DNA ({cp_rate}), against {slugmt_chim} of {slugmt_n} mitochondrial pairs ({slugmt_rate}). The plastid rate is the higher by half, but the pairs are scattered: no place in the genome collects three."
+   "The whole library was read. {cp_chim} of {cp_n} chloroplast pairs have their other mate in slug DNA ({cp_rate}). For mitochondrial pairs the rate is {slugmt_rate}, and in a random sample of the library {bg_rate} of slug pairs have their two mates on unrelated sequences. In {split_cp} more molecules a single mate reads from chloroplast DNA into slug DNA: {split_cp_rate} of chloroplast pairs, against {split_mt_rate} for mitochondrial DNA and {bg_split_rate} of slug pairs that read into an unrelated piece of slug DNA.",
+   "<strong>Rates.</strong> Chloroplast DNA is joined to slug DNA about as often as slug DNA is joined to unrelated slug DNA, and {cp_mt_ratio} times as often as mitochondrial DNA is. The Hainan animal shows the same order. The second <i>E. chlorotica</i> adult points the same way, on too few mitochondrial pairs to be sure, and <i>E. marginata</i> has a single mitochondrial join. In the long-read libraries on this site chloroplast DNA is not ahead: it is joined to slug DNA as often as mitochondrial DNA is, and in <i>E. crispata</i> as often as bacterial DNA. Real insertions in body cells would raise the chloroplast rate in just this way, so the difference was looked into.",
+   "<strong>Which piece is the short one.</strong> A mate that reads through a join begins at the end of its fragment, so the piece it begins with is short and the other piece runs on. A join inside a chromosome is cut at random, and would begin with the organelle piece equally often whichever organelle it is: in about {end_mt_expected} of the mitochondrial joins and {end_cp_expected} of the chloroplast ones as this method sees them. (Two controls give those figures. The first and the last {endpass_piece} bases of a mate pass the identity test nearly equally often, slug DNA {endpass_slug_start} and {endpass_slug_end}. And of made-up mates that begin with a short piece of organelle DNA and go on as slug DNA, the first pass finds {fp_mt} for mitochondrial DNA and {fp_cp} for chloroplast DNA.) Where two fragments were stuck end to end in the tube, the end piece is a short fragment, and a kind of DNA that comes in few short fragments is seldom the end piece and is joined less often altogether.",
+   "In the chloroplast joins of this animal the end piece is chloroplast DNA in {end_cp_org} of {end_cp_n} molecules. In the mitochondrial joins it is mitochondrial DNA in {end_mt_org} of {end_mt_n}. In the Hainan animal the figures are {hainan_end_cp_org} of {hainan_end_cp_n} and {hainan_end_mt_org} of {hainan_end_mt_n}. So the two organelles differ in which piece is the short one. Cutting at random cannot give that, and joining of fragments can: short pieces of mitochondrial DNA are scarcer in the tube than short pieces of chloroplast DNA. Mitochondrial DNA then takes part in fewer joins, and it is a low measure of what the tube does to chloroplast DNA. The difference between the two organelles cannot be read as insertions. Had it been insertions, it would have meant about {excess_per_cell} in every cell of this animal, each cell with its own.",
+   "<strong>The joins themselves.</strong> The sequencer read many fragments twice, and the {cp_chim} pairs come from {mix_cp_mol} different molecules. They are spread over the chromosomes in proportion to their length and along the whole plastid genome, each at a place of its own, and all are in the junction table. Nothing marks any of them as different from the library’s own joins, and nothing could: a real junction read once looks the same."
   ],
   "reads_hainan": [
-   "{hainan_cp_chim} of {hainan_cp_n} plastid pairs have a mate in slug DNA ({hainan_cp_rate}), against {hainan_slugmt_chim} of {hainan_slugmt_n} mitochondrial pairs ({hainan_slugmt_rate}). One place collects pairs: the ribosomal RNA genes of the bacterial sequence JBQKML010000169.1, where mates match plastid ribosomal RNA genes because the two are related. The bacterium was present in this animal too. No place on a slug sequence collects pairs."
+   "The whole library was read. {hainan_cp_chim} of {hainan_cp_n} chloroplast pairs have their other mate in slug DNA ({hainan_cp_rate}), against {hainan_slugmt_rate} of mitochondrial pairs and {hainan_bg_rate} of slug pairs in the sample. {hainan_split_cp} mates read through a join ({hainan_split_cp_rate}, against {hainan_split_mt_rate} for mitochondrial DNA and {hainan_bg_split_rate} for slug DNA).",
+   "A tenth of these pairs lie at the ribosomal RNA genes of the bacterial sequence (above). Without them chloroplast DNA is joined to slug DNA {hainan_cp_mt_ratio} times as often as mitochondrial DNA is, the same order as in the Shenzhen animal, and the mates that read through a join give the same reason for it: the piece at the end of the fragment is mitochondrial DNA in {hainan_end_mt_org} of {hainan_end_mt_n} mitochondrial joins. In the chloroplast joins it is chloroplast DNA in {hainan_end_cp_org} of {hainan_end_cp_n}, well above the {hainan_end_cp_expected} that cutting at random would show: in this library short pieces of chloroplast DNA are plentiful, which points to fragments stuck together and not to insertions. Had the whole difference been insertions, it would have meant about {hainan_excess_per_cell} in every cell. Apart from the two places listed, which are the same two as in the Shenzhen animal, no join is carried by two molecules."
   ],
   "transfer_proteins": [
    "The places of bacterial type lie on four unplaced sequences. Translated as a whole, each is bacterial along its length: {bact_genes} protein-coding stretches of bacterial type on {bact_mb} Mb, most of it on JBQKML010000180.1 (1.09 Mb) and JBQKML010000169.1 (747 kb). Their GC content is 46 to 48%, against {genome_gc} for the genome. The nearest proteins are those of well-studied bacteria at about 40% identity, so this bacterium has no close relative among the reference proteins. It lived in or on the animal and was assembled along with it.",
    "The only plastid genes are chlL and chlN at the start of JBQKML010000381.1, at 77% protein identity to those of <i>Udotea</i>. One further place has an algal protein as its best match by a hair: a ferredoxin reductase on the largest bacterial sequence, one of that bacterium’s own genes."
   ],
   "protein_readings": {
-   "JBQKML010000381.1": "Parts of the plastid genes chlL and chlN in its first 863 bases, then slug DNA. Reads of two other animals do not support the join (see above)."
+   "JBQKML010000381.1": "Parts of the plastid genes chlL and chlN in its first 863 bases, then slug DNA. The join stands in the assembly alone; the reads of the assembled animal are not public (see above)."
   },
   "transfer_caveats": [
    "The reads are from other animals. A join present in the assembled animal alone could not be seen, and what that animal carried could not be named.",
    "35% of the public assembly is N. Anything in the blanked parts cannot be searched, by DNA or by protein.",
-   "With short reads at this depth, a real insertion would give only a handful of pairs. Three or more at one place would have been reported; fewer would not.",
+   "Short reads from animals full of chloroplast DNA cannot show an insertion in a few cells. The library joins chloroplast DNA to slug DNA by itself, and a real insertion in one cell adds a single molecule to that.",
    "The read test recognises plastid DNA that resembles a reference in the panel. Much of the plastid DNA of the minor algae in these animals matches the panel at only about 90%."
   ],
   "locus_text": "The start of JBQKML010000381.1 was tested with every read of the two other animals, not only the reads that resemble a reference. Its plastid part is the first 863 bases: the end of chlL and the first half of chlN. Then come 35 bases, a stretch the submitters blanked out, and a repeated element of the slug genome. A read that runs through base 863 joins the plastid DNA to what follows in the assembly. A read that stops there carries the plastid DNA on into something else.",
   "locus_after": [
    "No read runs through. The reads that stop at base 863 go on with the same bases in both animals, and those bases continue chlN in its reading frame: the rest of the gene, as in any plastid genome. Read pairs tie both ends of the 863 bases to more plastid DNA.",
-   "The plastid sequence is covered about 50 times in the Shenzhen animal and 29 times in the Hainan animal. Single-copy slug DNA is covered about 8 and 6 times. DNA that plentiful is plastid DNA from the animals’ food and not a piece of the slug genome. The repeated element after the gap is covered about 30 times more deeply than single-copy DNA in both animals, as a repeat with some 30 copies would be.",
-   "So in two other animals this is ordinary plastid DNA of an alga they had eaten. In the assembly it sits at the very end of a sequence, and it is joined to slug DNA at a point inside a gene where other animals’ reads carry on with the gene. The assembly artefacts of <i>E. crispata</i> look the same. The animal that was assembled cannot be tested, because its reads are not public."
+   "The plastid sequence is covered about {locus1_depth} times in the Shenzhen animal and {hainan_locus1_depth} times in the Hainan animal, against about {slug_depth} and {hainan_slug_depth} times for the slug genome. DNA that plentiful is plastid DNA from the animals’ food and not a piece of the slug genome.",
+   "So in two other animals this is ordinary plastid DNA of an alga they had eaten. In the assembly it sits at the very end of a sequence, and it is joined to slug DNA at a point inside a gene where other animals’ reads carry on with the gene. That is what one molecule joining plastid DNA to slug DNA looks like once an assembler has built on it, as in <i>E. crispata</i>. Whether that molecule was made in the tube or came from a cell of the animal cannot be told, because the reads of the assembled animal are not public. It is not a sequence that the species carries."
   ],
   "klepto_rhythm": [
    "The nearest reference is NC_039521.1 (<i>Boodleopsis</i> sp., 75,962 bp, annotated in GenBank), 97 to 99% identical to the main plastid type of the two animals examined. The plastid contigs of both animals are in the downloads.",
    "Transcripts from the other algae these animals carried will map poorly or not at all to that reference. A share of plastid-like reads that will not map is to be expected, and is not noise."
-  ]
+  ],
+  "place_notes": {
+   "JBQKML010000169.1:77000": "The place is the ribosomal RNA genes of one of the bacterial sequences in the assembly (below). The other mates match plastid ribosomal RNA genes because the two are related. The bacterium was present in this animal too.",
+   "JBQKML010000169.1:78000": "The place is the ribosomal RNA genes of one of the bacterial sequences in the assembly (below). The other mates match plastid ribosomal RNA genes because the two are related.",
+   "JBQKML010000169.1:79000": "The same ribosomal RNA genes of the bacterial sequence.",
+   "JBQKML010000169.1:80000": "The same ribosomal RNA genes of the bacterial sequence.",
+   "JBQKML010000169.1:81000": "The same ribosomal RNA genes of the bacterial sequence."
+  },
+  "break_notes": {
+   "CM127901.1:11338221": "The place is a gap in the assembly, 67 bases of N. The reads carry on into a transfer RNA gene of the slug that the assembly lacks there, and transfer RNA genes resemble each other across slugs and plastids."
+  }
  },
  "elysia-chlorotica": {
   "card": "<i>Vaucheria litorea</i>",
@@ -275,7 +310,7 @@
   "klepto_answer": [
    "<strong><i>Vaucheria litorea</i>, in both adults.</strong> {donor1_pct} of the plastid DNA in the long reads and {adult_donor1_pct} in the short reads matches the <i>V. litorea</i> plastid genome. The barcode gene rbcL, cut from plastid contigs assembled out of the short reads, is {adult_rbcL_best_id} identical to <i>V. litorea</i> records over {adult_rbcL_best_len} bases.",
    "<strong>A heavy load.</strong> Plastid DNA is {cp_pct} of the sequenced bases in one adult and {adult_cp_pct} in the other: about {depth_ratio} and {adult_depth_ratio} copies of the plastid genome for every copy of the slug genome.",
-   "<strong>None in the eggs.</strong> In {eggs_bases} of egg DNA, {eggs_cp_reads} read pairs match a plastid sequence of any kind, and two single reads match <i>Vaucheria</i>. Eggs have not fed, so this is the germ line on its own. It is the control for the <a href=\"gene-transfer.html\">gene transfer question</a>."
+   "<strong>None in the eggs.</strong> In {eggs_bases} of egg DNA, {eggs_cp_reads} read pairs match a plastid sequence of any kind, and two single reads match <i>Vaucheria</i>. Eggs have not fed, so this is the germ line on its own. It shows what the slug inherits, and says nothing about what happens later in the body cells of an adult (see the <a href=\"gene-transfer.html\">gene transfer page</a>)."
   ],
   "klepto_which": [
    "Reads and read pairs were assigned to whichever plastid reference they match best. The long reads of this species are of an older, error-prone kind, about 92% accurate, so their identity to the reference reflects the reads and not the alga. The short reads match at 100%.",
@@ -285,44 +320,56 @@
    "The panel holds one nuclear ribosomal DNA record of <i>V. litorea</i> that includes a variable spacer. No long read matches it. Short reads cannot settle the question, because they match algal ribosomal DNA records only in the conserved parts that the slug’s own genes share."
   ],
   "klepto_caveats": [
-   "The two adults are different animals: a wild-caught one (isolate EC2010, Martha’s Vineyard) for the long reads and one from a laboratory culture for the short reads. Their loads differ fourfold.",
-   "Of the short reads of the adult, the first {adult_bases} of one library were screened and a tenth of the matching pairs analysed in detail.",
-   "One of the two runs of the egg library was used."
+   "The two adults are different animals: a wild-caught one (isolate EC2010, Martha’s Vineyard) for the long reads and one from a laboratory culture for the short reads. Their loads differ: {cp_pct} of the bases against {adult_cp_pct}.",
+   "All six paired-end libraries of the second adult were read ({adult_bases}). So much of it is chloroplast DNA that one in 50 of the matching pairs was analysed in detail; the plastid contigs were assembled from those.",
+   "Both runs of the egg library were read ({eggs_bases})."
   ],
-  "transfer_lede": "<i>E. chlorotica</i> is where the idea of algal genes in a slug genome began (<a href=\"https://doi.org/10.1073/pnas.0804968105\">Rumpho et al. 2008</a>), and where egg DNA later failed to show them (<a href=\"https://doi.org/10.1093/molbev/mst084\">Bhattacharya et al. 2013</a>). The assembly and three sets of reads were put through the same screens as the other species.",
+  "transfer_lede": "<i>E. chlorotica</i> is where the idea of algal genes in a slug genome began (<a href=\"https://doi.org/10.1073/pnas.0804968105\">Rumpho et al. 2008</a>), and where egg DNA later failed to show them (<a href=\"https://doi.org/10.1093/molbev/mst084\">Bhattacharya et al. 2013</a>). The assembly and three sets of reads, from two adults and from eggs, were put through the same screens as the other species. Every read of all three sets was examined.",
   "transfer_answer": [
-   "<strong>No. The assembly holds pieces of chloroplast DNA, but reads do not join them to slug DNA, and egg DNA holds almost no chloroplast DNA: two reads in 76 million match <i>Vaucheria</i>.</strong>",
-   "<strong>In the assembly:</strong> {whole_n} small sequences ({whole_bp} bp together) are <i>Vaucheria</i> plastid DNA from end to end. Two longer sequences each contain a stretch of it, 1,600 and 230 bp, both from the RNA polymerase genes rpoB and rpoC1. Four more contain stretches of the slug’s own mitochondrial genome.",
-   "<strong>In the reads:</strong> short reads from an adult cover the plastid stretches hundreds of times over and none runs from a stretch into its flank. Egg reads cover the flank of one and stop at its edges; no egg read carries either stretch. No short read supports the four mitochondrial stretches either. These look like pieces of organelle DNA that the assembly process placed inside slug sequences.",
-   "<strong>As protein:</strong> none of the <i>Vaucheria</i> nuclear genes once reported in the slug (psbO, prk, the light-harvesting genes, chlD, chlG, chlH) matches anywhere in the assembly. The search does lead to {bact_n} bacterial sequences, {bact_kb} kb together."
+   "<strong>Not in the germ line. In the body of one adult there are molecules of the kind an insertion would leave, and on these data they cannot be told from products of the library.</strong>",
+   "<strong>Germ line:</strong> egg DNA holds next to no chloroplast DNA ({eggs_cp_reads} read pairs in {eggs_bases}), and none of the pieces of chloroplast DNA in the assembly is found in it. The same reads do show a piece of mitochondrial DNA built into a chromosome, carried by two molecules, so an inherited piece of organelle DNA can be found in them. None of the <i>Vaucheria</i> nuclear genes once reported in the slug (psbO, prk, the light-harvesting genes, chlD, chlG, chlH) matches anywhere in the assembly.",
+   "<strong>Body cells:</strong> among the long reads of an adult, {ins_cp} molecules hold a piece of chloroplast DNA inside slug DNA. Each is alone at its place, and other reads cross the place without it. That is what insertions in single cells would look like. But {mirror} molecules have the mirror shape, slug DNA inside chloroplast DNA, which no insertion into a chromosome can give, and the library joins unrelated DNA in {bg_rate} of its long reads. It makes such molecules by itself, and nothing sets the {ins_cp} apart from that.",
+   "<strong>No join is carried by two molecules.</strong> One pair comes close. The join built into the assembly at the start of RQTK01001031.1, chloroplast DNA next to a satellite repeat of the slug, rests on a single long read, and a second molecule joins the same stretch of chloroplast DNA to the same repeat 47 bases away. Egg reads do not carry either join, so neither is inherited.",
+   "<strong>In the assembly:</strong> {whole_n} small sequences ({whole_bp} bp together) are <i>Vaucheria</i> plastid DNA from end to end, two longer sequences each contain a stretch of it, four contain stretches of the slug’s own mitochondrial genome, and the protein search leads to {bact_n} bacterial sequences, {bact_kb} kb together."
   ],
   "transfer_assembly": [
    "The five small sequences are 94 to 98% identical to the published <i>V. litorea</i> plastid genome over their whole length. They are kleptoplast DNA assembled on its own and left in the assembly."
   ],
   "loci_readings": {
-   "RQTK01001031.1:3": "The first 1.6 kb of this 174 kb sequence is <i>Vaucheria</i> plastid DNA: most of rpoB and the end of rpoC1. Not supported by short reads or by egg DNA; three long reads cross its edge (see below).",
-   "RQTK01001326.1:53256": "230 bp of rpoC1 inside a 111 kb sequence. No read of any kind crosses either edge, and egg reads stop at both.",
+   "RQTK01001031.1:3": "The first 1.6 kb of this 174 kb sequence is <i>Vaucheria</i> plastid DNA: most of rpoB and the end of rpoC1, joined to a satellite repeat of the slug. One long read carries the join (see below).",
+   "RQTK01001326.1:53256": "230 bp of rpoC1 inside a 111 kb sequence. No read of any kind crosses either edge, and two long reads span the place without it.",
    "RQTK01001610.1:44383": "A ribosomal RNA gene of bacterial type; the protein screen finds bacterial genes on other sequences of this assembly."
   },
-  "numt_text": "Four stretches of the slug’s own mitochondrial genome, 0.5 to 1.2 kb and 99% identical to it, sit inside nuclear sequences. Copies of mitochondrial DNA in the nucleus are real in many animals, so these were tested with reads in the same way as the plastid stretches. No short read, from the adult or from eggs, runs through any of their edges; three long reads do, at two of them (see the table further down).",
-  "transfer_reads": [
-   "Three questions were put to the reads. How often does a molecule carry both plastid and slug DNA, compared with how often it carries both mitochondrial and slug DNA? Is any such join seen in more than one molecule? And do reads support the organelle stretches that sit inside assembly sequences?"
-  ],
+  "numt_text": "Four stretches of the slug’s own mitochondrial genome, 0.5 to 1.2 kb and 99% identical to it, sit inside nuclear sequences. Copies of mitochondrial DNA in the nucleus are real in many animals, so these were tested with reads in the same way as the plastid stretches (see the table further down).",
+  "transfer_reads": [],
   "reads_main": [
-   "These older long reads join unrelated molecules at a steady rate: {cp_rate} of plastid reads and {slugmt_rate} of mitochondrial reads also carry slug DNA. Equal rates are what joins made in the library look like. No join is seen in two molecules, once the several passes of one molecule are counted as one.",
-   "Four single reads read slug, plastid, slug at one place. Each is alone among the roughly {screened_depth} reads that cover any place in the genome, and each plastid part matches at only 83 to 88%, close to the floor for these reads."
+   "<strong>Rates.</strong> Counted in one way over every read of 2 kb or more, {join_cp_rate} of the reads with chloroplast DNA are joined to slug DNA, {join_mt_rate} of the reads with mitochondrial DNA, and {bg_rate} of the reads of slug DNA are joined to an unrelated piece of slug DNA. Another {bg_fold_rate} of slug reads turn round and read their own sequence backwards. This old library is full of joined and folded molecules, and it joins chloroplast DNA to slug DNA exactly as often as it joins anything to anything. At this rate about a hundred real junction reads would go unnoticed.",
+   "<strong>Shape.</strong> {Ins_cp} reads hold a piece of chloroplast DNA, 160 to 1,700 bases long, with slug DNA on both sides that carries on where it left off. Each is a single molecule at a place of its own, and at all but two of the places three or four other long reads cross without the piece. In two of the reads the slug sequence runs on without a break and the piece is simply extra. That is the picture an insertion in one cell would give, and the search could have found it only if such insertions are common: the reads that are long enough cover each place in the genome less than three times.",
+   "<strong>What speaks for the library.</strong> Two reads have the mirror shape, found by the same steps: a piece of slug DNA from one clear place, with chloroplast DNA on both sides that carries on where it left off. Chloroplast DNA entering a chromosome cannot make that; something that swaps a piece of one molecule into another can, and would make both shapes equally often. They are equally frequent, as far as two against four of the same size can show. Read SRR7647856.5712567 goes through its chloroplast piece, turns round and reads the same stretch of slug DNA a second time, and the second reading crosses the join in plain slug sequence: the chloroplast piece is on one strand of that molecule only, which is not how a chromosome is built. Read SRR7647856.1389423 holds its short piece inside slug DNA and then ends in more chloroplast DNA from the same 1,200 bases of the plastid genome, read in both directions.",
+   "<strong>What cannot be said.</strong> None of this shows the other reads to be products of the library. With reads this error-prone and a library this given to joining, a molecule from a cell with an insertion and a molecule made in the tube look the same. Two reads hold a piece of mitochondrial DNA inside slug DNA in the same way; copies of mitochondrial DNA in the nucleus are real in animals, so those two may be real, and they cannot be told from library products either. These molecules cannot be looked at again: an insertion in one body cell of this animal exists nowhere else. What better data could show is whether accurate long reads of an adult hold reads of this shape at all. The accurate long-read libraries on this site, from four other species, hold none.",
+   "<strong>The same join twice.</strong> The reads with one join were compared with each other base by base, so that joins into repeated DNA are found too. {rec_groups} joins are seen in more than one read, and in every case the reads come from one sequencing well: the several passes over one molecule. No join is shared by two molecules.",
+   "Two pairs of molecules come close, both at the 358-base satellite repeat that makes up about 1% of the slug genome. {rep_cp} molecules join chloroplast DNA to this satellite. In one pair the joins lie 40 bases apart on the plastid genome (positions 78,759 and 78,799) and at different points of the repeat. Among {rep_cp} joins chance gives about {rep_expected} pairs that close, so this pair is unremarkable.",
+   "The other pair is at the join that the assembly holds, at the start of RQTK01001031.1. Read SRR7647856.731470 carries that join. A second molecule, read twice (SRR7647856.279702 and .279703, which agree), has chloroplast DNA that begins 34 bases further along the plastid genome and a repeat that ends 13 bases earlier: a join of its own, 47 bases off. In both molecules the chloroplast DNA then runs about 1.5 kb to the end of the molecule, and the two ends lie within 100 bases of each other. Two unrelated accidents would fall this close about once in fifty libraries like this one, so it may be chance, but more likely something ties the two together. The amplified library of <i>E. crispata</i> shows the same thing three times: chloroplast DNA joined to a simple repeat of the slug at points a few bases apart in two molecules. There the likely cause is a polymerase that stalls in the repeat and carries on along another molecule. The archive does not say how this library was made, and nothing else in it points to copying: among {copies_placed} reads of slug DNA, {copies_pairs} pairs from different wells share both ends to within 30 bases, and {copies_next} pairs share one end and miss the other by 30 to 60, which is what chance gives. Two insertions side by side in related cells would look the same. The reads cannot tell these apart, and the short reads of the other animals add nothing (see below)."
   ],
   "reads_adult": [
-   "{adult_cp_rate} of plastid pairs have a mate in slug DNA, against {adult_slugmt_rate} of mitochondrial pairs.",
-   "One place collects such pairs: an 86-base stretch of RQTK01000372.1 that is 92% identical to a spacer of the plastid genome next to the gene ilvH. The pairs there are plastid pairs whose second mate matches that stretch a little better than it matches the reference plastid genome. They are not joins. All egg reads were then aligned to this place. They cover both sides of the stretch thinly, about three reads deep, and none covers the stretch or crosses into it. With so few reads that is weak evidence by itself, but it agrees with the pairs: nothing shows this piece of plastid-like DNA to be part of the germ line."
+   "All six paired-end libraries of this adult were read, {adult_bases} in all. This animal was full of chloroplasts: {adult_cp_pct} of the bases are chloroplast DNA.",
+   "<strong>Rates.</strong> {adult_cp_rate} of chloroplast pairs have their other mate in slug DNA and {adult_slugmt_rate} of mitochondrial pairs. The second figure rests on {adult_slugmt_chim_examined} pairs, too few to tell the two rates apart. In the two libraries of <a href=\"../elysia-leucolegnote/gene-transfer.html\"><i>E. leucolegnote</i></a> chloroplast DNA is ahead by a like margin, and the reads there show why that cannot be read as insertions. In the random sample {adult_bg_rate} of slug pairs have their mates on unrelated sequences (the assembly is in scaffolds, which adds to that figure). A single mate reads through a join in {adult_split_cp_rate} of chloroplast pairs. In numbers, the library holds about {adult_cp_chim_about} pairs that join chloroplast DNA to slug DNA. An insertion in one cell would add one.",
+   "<strong>The same join twice.</strong> Among the pairs examined, no place in the slug genome collects such pairs, no break is read through in two molecules, and no two molecules that are not copies of each other have the same join.",
+   "<strong>The places of the insertion-shaped long reads.</strong> This is another animal, so an insertion in a body cell of the first adult is not expected here. The test shows only whether any of the places holds chloroplast DNA in every animal. The reads of this adult cross the nine places {adult_cand_cross} times each in plain slug sequence, and no mate reads from any of them into chloroplast DNA. Within 1 kb of the places, {adult_cand_joins_any} pair has its other mate in chloroplast DNA, in a part of the plastid genome 12 and 50 kb away from the two pieces in that long read. At the rate above, about {adult_cand_expected} such pairs are expected near nine places by chance.",
+   "<strong>The joins to the satellite.</strong> Mates were looked for that leave the plastid genome where the long reads do and go on into the satellite: none, at those positions or at control positions around them. Only the one chloroplast pair in 50 that was examined could be searched, so a join carried by every cell of this animal could have been missed."
   ],
   "reads_eggs": [
-   "Egg DNA is the decisive library. It contains the slug’s mitochondrial DNA ({eggs_mt_pct} of bases) and next to no plastid DNA: two reads match <i>Vaucheria</i>. {eggs_slugmt_chim} of {eggs_slugmt_n} mitochondrial pairs have a mate in nuclear DNA."
+   "Egg DNA speaks for the germ line and for nothing else. Eggs hold no chloroplasts, so nothing in them could enter a chromosome, and what happens in the body cells of an adult leaves no trace here. Both runs were read in full.",
+   "{eggs_cp_reads} pairs match a plastid genome of any kind, two single reads among them <i>Vaucheria</i>. No pair and no read joins chloroplast DNA to slug DNA. Mitochondrial DNA is {eggs_mt_pct} of the bases. One of {eggs_slugmt_n} mitochondrial pairs has its other mate in nuclear DNA, and that one is no accident of the library (below). The libraries of the second adult join about one mitochondrial pair in a thousand to slug DNA.",
+   "<strong>What an inherited insertion looks like.</strong> That pair and a second molecule, which is not a copy of it, hold the same thing: 88 bases of mitochondrial DNA (positions 6,201 to 6,288 of the mitochondrial genome) between two neighbouring bases of the slug sequence RQTK01000018.1, at 1,186,043. Each is read from slug DNA through the whole piece and on into the slug DNA that follows. The assembly runs through the place without the piece. Some of these eggs therefore carry a piece of mitochondrial DNA in a chromosome: a young nuclear copy of mitochondrial DNA, of the kind known from many animals. It was found by the test for the same join in two molecules, which an inherited piece of chloroplast DNA would have passed in the same way.",
+   "The egg reads cross the places of the nine insertion-shaped long reads {eggs_cand_cross} times in plain slug sequence, and none of them joins a place to chloroplast DNA. No mate goes from the plastid genome into the satellite. So none of the candidates, and neither of the joins to the satellite, is inherited. That was to be expected and takes nothing from them as events in body cells."
   ],
   "locus_text": "For every organelle stretch inside an assembly sequence, reads were aligned to the stretch and 3 kb either side. At each edge, a read that runs through joins the stretch to its flank. A read that stops there continues into something else: organelle reads carry on as organelle DNA, flank reads carry on as other slug DNA.",
   "locus_after": [
-   "At one edge reads do run through: the right edge of the 1.6 kb plastid stretch at the start of RQTK01001031.1, crossed by three long reads from two molecules. Against them, 1,772 plastid reads stop at that edge and carry on as plastid DNA, 14 reads from the flank side stop there too, and no short read from the other adult or from eggs crosses. The assembly was built with these same long reads, so a chimeric molecule among them is the likely source of the join in the assembly.",
-   "Egg reads cover neither plastid stretch. If the 1.6 kb stretch were in the germ line, egg reads would cover it as they cover other single-copy DNA, six to ten deep, which is about a hundred reads. None does."
+   "<strong>The plastid stretch at the start of RQTK01001031.1.</strong> One long read carries the join as the assembly has it, and a second molecule has a join of its own 47 bases away (see above). The {locus1_right_stop_in} long reads that reach the edge from inside the stretch are reads of the plastid genome, which carries on there; they say nothing about the join. No short read of the second adult or of the eggs crosses it. For the second adult that says little: the assembly was built from a few error-prone reads here and is only 94% right, and one chloroplast pair in 50 was examined. The eggs settle the germ line. If these 1.6 kb were inherited, 70 to 150 egg reads would be plastid DNA from them, and the whole egg library holds {eggs_cp_reads} pairs that match any plastid genome.",
+   "<strong>The 230 bases of rpoC1 in RQTK01001326.1.</strong> No read of any library runs through either edge. Plastid reads cover the stretch and carry on as plastid DNA. Reads that come from the slug side stop at its edges ({eggs_locus2_left_stop_out} and {eggs_locus2_right_stop_out} of them in the eggs) and carry on with slug sequence that the assembly does not have there, on one side more copies of a 33-base repeat. Two long reads of the first adult span the place: they lack the stretch and 270 bases next to it. The stretch is in none of the three sets of reads. It looks like a patch the assembler made where a repeat would not close.",
+   "<strong>The four mitochondrial stretches.</strong> Mitochondrial reads cover them hundreds of times over and carry on as mitochondrial DNA. No short read of the second adult or of the eggs runs through any of the eight edges; a copy carried by every cell of the second adult would be crossed some forty times at each. Reads from the flanks stop at the edges of the stretches in RQTK01000434.1 and RQTK01000515.1 (2 to 32 at an edge in the second adult, 2 to 4 in the eggs). At RQTK01000432.1 the slug sequence before the stretch occurs a second time 1.8 kb further on, and there every read that passes its end carries on into slug DNA. The stretch in RQTK01002715.1 lies between two repeats found at some 60 places of the assembly, whose reads end at its edges in hundreds. So none of the four is a copy of mitochondrial DNA that the second adult or the eggs carry. Among the long reads of the first adult, one molecule, read twice, runs through one edge of the stretch in RQTK01000432.1, and one crosses an edge of the stretch in RQTK01002715.1 with 82 bases missing. That leaves the same two readings as for the chloroplast joins: a mitochondrial read that the assembler built into a nuclear sequence, as it did with plastid reads, or a join in some cells of that animal.",
+   "<strong>The 86 bases in RQTK01000372.1</strong> are 92% identical to a spacer of the plastid genome. Reads of the second adult match them exactly and carry on as plastid DNA on both sides: the alga that adult had eaten differs from the reference there. The reads that cross the right edge, {adult_locus7_right_through} of the second adult and {eggs_locus7_right_through} of the eggs, all begin in the run of C at the end of the stretch and hold none of the part that is recognisably plastid DNA. No long read covers the place."
   ],
   "transfer_proteins": [
    "The six places on plastid pieces are the pieces described above. The places of bacterial type lie on fourteen sequences of 18 to 76 kb. Translated as a whole, each is bacterial along its length: {bact_genes} protein-coding stretches of bacterial type on {bact_kb} kb, at 30 to 35% GC against {genome_gc} for the genome. On twelve of the fourteen the nearest matches are proteins of <i>Francisella</i>, typically about 50% identical. So they come from a bacterium related to that genus, which lived in or on the animal and was assembled along with it. They are not algal.",
@@ -333,13 +380,27 @@
    "RQTK01001031.1": "The 1.6 kb plastid stretch at the start of this sequence (rpoB)."
   },
   "transfer_caveats": [
+   "The long reads are error-prone, and in reads long enough to show an insertion they cover each place less than three times: about one cell’s worth of DNA. Only insertions carried by most cells could have been seen.",
+   "The two adults and the eggs are different animals. An insertion in body cells of one cannot be looked for in another.",
    "A gene with no relative among the 471 proteins searched would be missed by the protein screen, and anything in a part of the genome missing from the assembly would be missed by both assembly screens. The bacterial sequences listed are the ones the search happened to touch; the assembly may hold more.",
-   "The long reads are error-prone and cover each place only about {screened_depth} times, and the two adults are single animals. An insertion present in a small share of an animal’s cells is beyond what this can exclude.",
    "None of this addresses RNA or protein passing from alga to slug without DNA entering the genome."
   ],
   "klepto_rhythm": [
    "Map kleptoplast transcripts to NC_011600.1, the plastid genome of <i>Vaucheria litorea</i> (115,341 bp, annotated). The short reads of the second adult match it at 100%.",
    "The assembly of the slug itself should be used with the plastid pieces and bacterial sequences set aside (they are listed on the <a href=\"gene-transfer.html\">gene transfer page</a>). Otherwise plastid transcripts will map to them and look like transcripts of slug genes."
-  ]
+  ],
+  "candidate_notes": {
+   "SRR7647856.5712567": "After the piece the read turns round and reads the slug DNA again; the second reading crosses the place in slug sequence, without the piece.",
+   "SRR7647856.1389423": "The read follows the slug sequence without a break; the piece is extra. It then ends in more chloroplast DNA from the same part of the plastid genome.",
+   "SRR7647856.3206590": "Two pieces from different parts of the plastid genome lie side by side (psaM–chlI and 107 bases from 62,005).",
+   "SRR7647856.5673304": "The read also lacks 2.2 kb of the slug sequence next to the piece.",
+   "SRR7647856.6932495": "The flanks meet to the base: 450 bases of chloroplast DNA, nothing lost and nothing else added.",
+   "SRR7647856.4239938": "The flanks meet; the piece is the only extra DNA.",
+   "SRR7647856.2428127": "Mirror image: 509 bases of slug DNA between two neighbouring bases of the plastid genome.",
+   "SRR7647856.3762789": "Mirror image: slug DNA between plastid positions 64 bases apart."
+  },
+  "join_notes": {
+   "RQTK01000018.1:1185941": "Both are read from slug DNA through 88 bases of mitochondrial DNA and on into the neighbouring slug base: an insertion of mitochondrial DNA in a chromosome that some of the eggs carry and the assembly lacks (see below)."
+  }
  }
 }

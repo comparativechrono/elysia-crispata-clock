@@ -11,19 +11,19 @@
    "kind": "hifi",
    "platform": "PacBio Revio (HiFi, amplified ultra-low-input library)",
    "animal": "the sequenced animals (adults, Cadaqu\u00e9s, Spain)",
-   "note": "The first 20 Gb of the Revio run behind the assembly. The library was amplified by PCR.",
-   "reads": 3468033,
-   "bases": 20000001740,
-   "bases_screened": 20000001740,
+   "note": "The whole Revio run behind the assembly. The library was amplified by PCR.",
+   "reads": 9552331,
+   "bases": 53125525286,
+   "bases_screened": 53125525286,
    "plastid": {
-    "reads": 151,
-    "bp": 504982,
-    "fraction": 2.5e-05
+    "reads": 835,
+    "bp": 2850993,
+    "fraction": 5.4e-05
    },
    "mitochondrion": {
-    "reads": 6174,
-    "bp": 34986121,
-    "fraction": 0.001749
+    "reads": 14106,
+    "bp": 75703701,
+    "fraction": 0.001425
    },
    "algal_mitochondrion": {
     "reads": null,
@@ -36,9 +36,9 @@
     "fraction": 0.0
    },
    "plastid_any_identity": {
-    "reads": 326,
-    "bp": 488941,
-    "fraction_of_bases": 2.4e-05
+    "reads": 2100,
+    "bp": 2729354,
+    "fraction_of_bases": 5.1e-05
    },
    "other_taxa": {
     "algrDNA": [],
@@ -47,95 +47,156 @@
    "donors": [
     {
      "name": "Acetabularia acetabulum",
-     "reads": 269,
-     "bp": 447702,
-     "fraction": 0.91566,
-     "median_identity": 0.9977,
-     "identity_q10": 0.9945,
+     "reads": 1648,
+     "bp": 2386872,
+     "fraction": 0.87452,
+     "median_identity": 0.9974,
+     "identity_q10": 0.9941,
      "identity_q90": 1.0,
      "accession": "HG518438.1"
     },
     {
+     "name": "Batophora oerstedii",
+     "reads": 262,
+     "bp": 187910,
+     "fraction": 0.06885,
+     "median_identity": 0.895,
+     "identity_q10": 0.8731,
+     "identity_q90": 0.9412,
+     "accession": "MH545238.1"
+    },
+    {
+     "name": "Acetabularia mediterranea",
+     "reads": 131,
+     "bp": 113305,
+     "fraction": 0.04151,
+     "median_identity": 0.9804,
+     "identity_q10": 0.8905,
+     "identity_q90": 0.9813,
+     "accession": "X05806.1"
+    },
+    {
      "name": "Neomeris sp.",
-     "reads": 36,
-     "bp": 23817,
-     "fraction": 0.04871,
+     "reads": 61,
+     "bp": 40220,
+     "fraction": 0.01474,
      "median_identity": 0.9018,
      "identity_q10": 0.9005,
      "identity_q90": 0.9018,
      "accession": "KY495864.1"
     },
     {
-     "name": "Batophora oerstedii",
-     "reads": 17,
-     "bp": 13545,
-     "fraction": 0.0277,
-     "median_identity": 0.876,
-     "identity_q10": 0.8731,
-     "identity_q90": 0.9029,
-     "accession": "MH545238.1"
+     "name": "Sykidion marinum",
+     "reads": 1,
+     "bp": 526,
+     "fraction": 0.00019,
+     "median_identity": 0.8783,
+     "identity_q10": 0.8783,
+     "identity_q90": 0.8783,
+     "accession": "KY407657.1"
     },
     {
-     "name": "Acetabularia mediterranea",
-     "reads": 5,
-     "bp": 3877,
-     "fraction": 0.00793,
-     "median_identity": 0.9811,
-     "identity_q10": 0.9796,
-     "identity_q90": 0.9817,
-     "accession": "X05806.1"
+     "name": "Chlorella vulgaris",
+     "reads": 1,
+     "bp": 521,
+     "fraction": 0.00019,
+     "median_identity": 0.881,
+     "identity_q10": 0.881,
+     "identity_q90": 0.881,
+     "accession": "NC_001865.1"
     }
    ],
-   "barcodes": [],
+   "barcodes": [
+    {
+     "barcode": "rbcL",
+     "haplotype": "h1",
+     "reads": 28,
+     "fraction": 1.0,
+     "length": 1458,
+     "top_hit": "Acetabularia acetabulum [HG518454.1]",
+     "identity": 99.59,
+     "alnlen": 1458,
+     "species_near_best": "Acetabularia acetabulum (2)",
+     "sequence": "ATGATCGAGGTTTTTAAAAATTATTATAAAAATATGGGACAAACAGAAACAAAAGCAGGTGCTGGGTTTAAAGCTGGTGTAAAAGATTATCGTCTAACGTACTATACGCCAGACTATCAAGTACTAGATACAGATGTTTTAGCGGCATTTCGAATGACGCCGCAGCCAGGAGTTCCAGCGGAAGAATGTGCTGCTGCCGTTGCTGCAGAATCTTCAACAGGTACTTGGACAACTGTATGGACAGATGGATTAACTTCTCTTGATCGTTATAAAGGTCGATGTTATGACGTTGAACCAGTTCCAGGAGAAGAAAACCAATATATTGCATATGTAGCTTATCCTCTTCCTTTATTTGAAGAAGGATCAGTAACTAATTTATTTACATCAATTGTTGGTAACGTTTTTGGATTTAAAGCTCTTCGTGCTCTTCGTTTAGAAGATCTTCGTATTCCACAATCCTTCGTAACAACATTCTTAGGTCCTCCTCATGGTATCCAAGTTGAACGTGATAAATTAAACAAATATGGTCGTAGTTTATTAGGTTGTACAATCAAACCAAAACTTGGACTTTCAGCTAAAAACTATGGACGTGCTTGTTATGAATGTTTACGTGGTGGTCTTGATTTTACAAAAGATGATGAAAATGTAAACTCTCAACCATTTATGCGTTGGCGTGATCGATTCTTATTTGTTGCCGAAGCAATTTATAAATCACAAGCAGAAACAGGAGAAATTAAAGGACATTATTTAAATGCAACTGCTCCAACTAGTGAAACAATGCTTCAGCGTGCAGAAGTAGCAAAACATTTAGGAGTACCTATTGTTATGCACGATTATTTAACAGCTGGTTTTACAGCTAATACATCATTAGCTAATTATTGTCGTGACCACGGGTTATTACTACATATTCACCGTGCAATGCACGCTGTTATTGACCGTCAACGAAATCATGGTATGCACTTCCGTGTTTTAGCTAAAGCATTACGTTTATCAGGTGGTGACCATTTACATTCTGGTACTGTAGTAGGAAAATTAGAAGGTGACCGAGAAGTAACTATGGGGTTTGTCGACCTCATGCGCGATGATTATATTGAAAAAGATCGTAGTCGTGGAATTTATTTCACTCAAGATTGGGTTGGACGCGGAGGTGTTTTCCCTGTAGCTTCGGGAGGAATTCACGTATGGCATATGCCGGCATTAGTTGAAATTTTTGGTGATGATGCTTGTCTTCAATTTGGAGGTGGAACACTAGGTCATCCATGGGGTAATGCTCCTGGAGCTGTTGCTAACCGTGTAGCTTTAGAAGCTTGTGTTCAAGCACGAAATGAAGGTCGTAATTTAGCACGTGAAGGAGGTGATATTATTCGAGATGCTGCAAAATGGTCTCCAGAATTAGCAGCAGCTTGTGAAGTTTGGAAAGAAATTAAATTCGAATTTGATATCGTTGATAAACTATAA",
+     "frame": "HG518454.1",
+     "most_similar": {
+      "identity": 99.81,
+      "records": 6,
+      "longest_alnlen": 526,
+      "species": "Acetabularia acetabulum (6)",
+      "accession": "PP114090.1"
+     }
+    },
+    {
+     "barcode": "tufA",
+     "haplotype": "h1",
+     "reads": 55,
+     "fraction": 1.0,
+     "length": 1230,
+     "top_hit": "Acetabularia acetabulum [HG518471.1]",
+     "identity": 100.0,
+     "alnlen": 1230,
+     "species_near_best": "Acetabularia acetabulum (1)",
+     "sequence": "ATGGCTAGAGAAAAATTTGAACGTAATAAACCGCATTTAAATATTGGAACAATTGGTCATGTTGATCATGGCAAAACGACTTTAACAGCTGCTATAACAATGGCCCTGGCTGCTTTATCAGGAAATAAAGGAAAAAAATATGATGAAATCGATTCTGCTCCTGAAGAAAAAGCTCGAGGAATTACAATTAATACAGCTCACGTTGAATACGAAACTGAAAATCGTCATTATGCTCACGTTGATTGTCCAGGTCACGCTGATTATGTCAAAAATATGATTACAGGAGCAGCACAAATGGATGGAGCAATTCTTGTAGTTTCTGGTGCAGATGGTCCAATGCCTCAAACAAAAGAACATTTATTATTAGCAAAACAAGTTGGCGTTCCTCAAATTGTAGTCTTTTTAAATAAAGAAGATCAAGTAGATGACCCAGAATTATTAGAACTTGTTGAATTAGAAATTCGTGAAACTTTAGATAATTATGAATTTGAAGGTGATGCAATTCCAATTGTATCCGGGTCTGCTTTATTAGCCTTAGAAAATTTAATAGAAAACCCACAAGTTAAAAAAGGTGAAAATCAATGGATTGATAAAATTTATGAATTAATGAATCAAGTTGATACTTATATTCCAACTCCAGAAAGACAAACAGAGAAACCATTTTTAATGGCTGTTGAAGATGTTTTTTCTATTACTGGTCGAGGAACAGTAGCAACGGGTCGTGTAGAACGAGGAACTATTAAAGTTGGTGATTCTATTGATATCGTAGGATTAAAACAAACACAAAATACAACTGTAACAGGTTTAGAAATGTTTCAAAAAACACTTGATGAAAGTGTTGCAGGAGATAATGTAGGAGTATTATTAAGAGGTGTCCAAAAAGATGATATTGAACGTGGTATGGTATTATCAAAACCTGGATCAATTACTCCACATACAAAATTTGAATCACAAGTATATGTTTTAAATAAAGAAGAAGGCGGAAGACATACACCATTTTTTCAAGGATATCGTCCCCAATTTTATGTACGAACTACTGATGTAACAGGTAAAATTGATTCATTTCGCGCCGATGATGATAGTGAAACACAAATGGTAATGCCAGGGGATCGAGTAAAAATGATTGTTGAATTAATTCAACCAATTGCAATTGAACAAGGAATGCGATTTGCTATTCGCGAAGGGGGTAGAACTGTAGGTGCTGGAGTTGTTTCAACAATTCTTGAATAA",
+     "frame": "HG518471.1",
+     "most_similar": {
+      "identity": 100.0,
+      "records": 2,
+      "longest_alnlen": 1230,
+      "species": "Acetabularia acetabulum (2)",
+      "accession": "HG518471.1"
+     }
+    }
+   ],
    "contigs": null,
    "hot_windows": [
-    {
-     "target": "algrDNA|Y07979.1",
-     "start": 3000,
-     "end": 3200,
-     "reads": 21057
-    },
     {
      "target": "algrDNA|AY206425.1",
      "start": 200,
      "end": 400,
-     "reads": 7876
+     "reads": 65062
     },
     {
      "target": "algrDNA|AY206424.1",
      "start": 200,
      "end": 400,
-     "reads": 7784
+     "reads": 64799
     },
     {
-     "target": "slugrDNA|MK919695.1",
-     "start": 0,
-     "end": 200,
-     "reads": 4562
+     "target": "algrDNA|Y07979.1",
+     "start": 3000,
+     "end": 3200,
+     "reads": 32905
     },
     {
      "target": "algrDNA|KY271671.1",
      "start": 200,
      "end": 400,
-     "reads": 2519
+     "reads": 14356
     },
     {
      "target": "slugrDNA|MK919695.1",
-     "start": 200,
-     "end": 400,
-     "reads": 1916
+     "start": 0,
+     "end": 200,
+     "reads": 11672
     },
     {
      "target": "slugrDNA|MK919695.1",
      "start": 1000,
      "end": 1200,
-     "reads": 1577
+     "reads": 7765
     },
     {
      "target": "algrDNA|MH894190.1",
      "start": 800,
      "end": 1000,
-     "reads": 1179
+     "reads": 6124
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 200,
+     "end": 400,
+     "reads": 6110
     }
    ]
   }
@@ -143,19 +204,19 @@
  "donors": [
   {
    "name": "Acetabularia acetabulum",
-   "fraction": 0.91566,
-   "median_identity": 0.9977
-  },
-  {
-   "name": "Neomeris sp.",
-   "fraction": 0.04871,
-   "median_identity": 0.9018
+   "fraction": 0.87452,
+   "median_identity": 0.9974
   },
   {
    "name": "Batophora oerstedii",
-   "fraction": 0.0277,
-   "median_identity": 0.876
+   "fraction": 0.06885,
+   "median_identity": 0.895
+  },
+  {
+   "name": "Acetabularia mediterranea",
+   "fraction": 0.04151,
+   "median_identity": 0.9804
   }
  ],
- "plastid_fraction": 2.5e-05
+ "plastid_fraction": 5.4e-05
 }

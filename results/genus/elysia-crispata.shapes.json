@@ -1,0 +1,214 @@
+{
+ "min_identity": 0.97,
+ "min_segment": 300,
+ "min_short_piece": 100,
+ "reads_with_piece": {
+  "slug": 94,
+  "slugmt": 13,
+  "cp": 78
+ },
+ "reads_joining_slug": {
+  "slugmt": 8,
+  "cp": 47
+ },
+ "reads_joined_to_placed_slug": {
+  "slugmt": 5,
+  "cp": 45
+ },
+ "shapes": {
+  "one join|cp": 73,
+  "one join|slugmt": 8
+ },
+ "shared_with_assembly": {
+  "cp": 7,
+  "algmt": 1
+ },
+ "second_pass": {},
+ "depth": {
+  "genome_bp": 542570831,
+  "library_bases": 46846578728,
+  "library_reads": 5516672,
+  "depth": 86.34
+ },
+ "background": {
+  "source": "sample",
+  "reads": 49989,
+  "reads_slug_only": 41512,
+  "reads_slug_placed": 36787,
+  "joining_unrelated": 788,
+  "slug_pieces": 37575,
+  "slug_pieces_joined": 1576,
+  "joining_unrelated_any": 1766,
+  "folding_back": 21,
+  "cp_reads": 1397,
+  "cp_joined": 30,
+  "mt_reads": 18,
+  "mt_joined": 1,
+  "depth": {
+   "genome_bp": 542570831,
+   "library_bases": 46846578728,
+   "library_reads": 5516672,
+   "depth": 86.34,
+   "sample_one_in": 100,
+   "sample_reads_aligned": 49989,
+   "sample_bases_aligned": 425623748,
+   "spanning_depth": {
+    "100": 72.0,
+    "500": 68.31,
+    "1000": 63.7,
+    "3000": 45.29
+   },
+   "copies": {
+    "placed_reads": 34822,
+    "reads_with_a_copy_in_the_sample": 24,
+    "sample_fraction": 0.009061,
+    "copies_per_read": 0.0761,
+    "copies_per_read_upper": 0.1166
+   }
+  },
+  "insertion_slug_elsewhere": {
+   "n": 25,
+   "unique": 12,
+   "unique_alone_at_place": 12
+  },
+  "shapes": {
+   "insertion|slug_elsewhere": 25,
+   "one join|cp": 33,
+   "one join|slugmt": 1
+  },
+  "second_pass": {}
+ },
+ "candidates": [],
+ "targeted_reads": 186,
+ "joins_compared": {
+  "reads": 4452,
+  "joins": 3265,
+  "groups_of_copies": 53,
+  "recurrent": [],
+  "near": [
+   {
+    "insert": "cp",
+    "organelle_positions_apart": 0,
+    "alignment": {
+     "runs_through_the_join": true,
+     "longest_gap_near_join": 1,
+     "join_offset": 0,
+     "identity_organelle_side": 1.0,
+     "identity_slug_side": 0.802
+    },
+    "members": [
+     {
+      "read": "ERR12356115.1248412",
+      "join_at": 1353,
+      "organelle": "cp|OZ373742.1",
+      "organelle_position": 54133,
+      "organelle_from": 52806,
+      "organelle_to": 54133,
+      "organelle_strand": "+",
+      "slug": "CAWKYH010002242.1",
+      "slug_from": 78396,
+      "slug_to": 83982,
+      "slug_mapq": 60
+     },
+     {
+      "read": "ERR12356115.14497",
+      "join_at": 6753,
+      "organelle": "cp|OZ373742.1",
+      "organelle_position": 54133,
+      "organelle_from": 50580,
+      "organelle_to": 54133,
+      "organelle_strand": "-",
+      "slug": "OY973774.1",
+      "slug_from": 10550084,
+      "slug_to": 10556813,
+      "slug_mapq": 14
+     }
+    ]
+   },
+   {
+    "insert": "cp",
+    "organelle_positions_apart": 3747,
+    "alignment": {
+     "runs_through_the_join": true,
+     "longest_gap_near_join": 3,
+     "join_offset": 13,
+     "identity_organelle_side": 0.934,
+     "identity_slug_side": 0.98
+    },
+    "members": [
+     {
+      "read": "ERR12356115.1133128",
+      "join_at": 4887,
+      "organelle": "cp|OZ373742.1",
+      "organelle_position": 18104,
+      "organelle_from": 18104,
+      "organelle_to": 22966,
+      "organelle_strand": "-",
+      "slug": "OY973770.1",
+      "slug_from": 21714388,
+      "slug_to": 21715724,
+      "slug_mapq": 1
+     },
+     {
+      "read": "ERR12356115.469183",
+      "join_at": 3026,
+      "organelle": "cp|OZ287723.1",
+      "organelle_position": 21851,
+      "organelle_from": 18838,
+      "organelle_to": 21851,
+      "organelle_strand": "+",
+      "slug": "OY973770.1",
+      "slug_from": 21712093,
+      "slug_to": 21714631,
+      "slug_mapq": 1
+     }
+    ]
+   },
+   {
+    "insert": "cp",
+    "organelle_positions_apart": 3882,
+    "alignment": {
+     "runs_through_the_join": true,
+     "longest_gap_near_join": 3,
+     "join_offset": 13,
+     "identity_organelle_side": 0.786,
+     "identity_slug_side": 0.748
+    },
+    "members": [
+     {
+      "read": "ERR12356115.1208583",
+      "join_at": 8066,
+      "organelle": "cp|OZ372796.1",
+      "organelle_position": 67247,
+      "organelle_from": 59282,
+      "organelle_to": 67247,
+      "organelle_strand": "+",
+      "slug": "OY973767.1",
+      "slug_from": 70992473,
+      "slug_to": 70995823,
+      "slug_mapq": 50
+     },
+     {
+      "read": "ERR12356115.631187",
+      "join_at": 3250,
+      "organelle": "cp|OZ373742.1",
+      "organelle_position": 71129,
+      "organelle_from": 67881,
+      "organelle_to": 71129,
+      "organelle_strand": "+",
+      "slug": "OY973772.1",
+      "slug_from": 18917792,
+      "slug_to": 18920322,
+      "slug_mapq": 60
+     }
+    ]
+   }
+  ],
+  "same_join_means": {
+   "runs_through_join_bases": 100,
+   "join_offset_max": 6,
+   "gap_max": 6,
+   "identity_min": 0.98
+  }
+ }
+}

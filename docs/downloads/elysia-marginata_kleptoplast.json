@@ -6,131 +6,122 @@
    "library": "main",
    "label": "",
    "runs": [
-    "DRR238951"
+    "DRR238951",
+    "DRR238952"
    ],
    "kind": "short",
-   "platform": "Illumina HiSeq 2500 (paired, 250 bp inserts)",
+   "platform": "Illumina HiSeq 2500 (paired; inserts of 250 and 500 bp)",
    "animal": "the sequenced animal (one individual, Kagoshima, Japan, 2013)",
-   "note": "The first 4.5 Gb of the short-insert library behind the assembly. The reads are filed in the archive as Elysia ornata.",
-   "reads": 30000000,
-   "bases": 4500000000,
-   "bases_screened": 4500000000,
+   "note": "Both paired-end libraries behind the assembly, in full. The reads are filed in the archive as Elysia ornata. The mate-pair libraries were left out.",
+   "reads": 562732268,
+   "bases": 84409840200,
+   "bases_screened": 84409840200,
    "plastid": {
-    "reads": 41946,
-    "bp": 12249047,
-    "fraction": 0.002722
+    "reads": 759795,
+    "bp": 220506104,
+    "fraction": 0.002612
    },
    "mitochondrion": {
-    "reads": 1188,
-    "bp": 192478,
-    "fraction": 4.3e-05
+    "reads": 35000,
+    "bp": 5622589,
+    "fraction": 6.7e-05
    },
    "algal_mitochondrion": {
-    "reads": 235,
-    "bp": 66875,
-    "fraction": 1.5e-05
+    "reads": 4169,
+    "bp": 1176010,
+    "fraction": 1.4e-05
    },
    "algal_rdna": {
-    "reads": 1249,
-    "bp": 200151,
-    "fraction": 4.4e-05
+    "reads": 2,
+    "bp": 295,
+    "fraction": 0.0
    },
    "plastid_any_identity": {
-    "bp": 12400999,
-    "fraction_of_bases": 0.002756
+    "bp": 223965522,
+    "fraction_of_bases": 0.002653
    },
    "other_taxa": {
     "algrDNA": [
      {
-      "name": "Ulva laetevirens",
-      "mates": 273,
-      "mean_identity": 0.9877
-     },
-     {
-      "name": "Batophora occidentalis",
-      "mates": 151,
-      "mean_identity": 0.9808
-     },
-     {
-      "name": "Ulva compressa",
-      "mates": 145,
-      "mean_identity": 0.9901
-     },
-     {
-      "name": "Ulva australis",
-      "mates": 139,
-      "mean_identity": 0.9892
-     },
-     {
       "name": "Ulva flexuosa",
-      "mates": 127,
-      "mean_identity": 0.9878
+      "mates": 1,
+      "mean_identity": 0.9867
      },
      {
-      "name": "Ulva prolifera",
-      "mates": 125,
-      "mean_identity": 0.9895
-     },
-     {
-      "name": "Ulva meridionalis",
-      "mates": 125,
-      "mean_identity": 0.9894
-     },
-     {
-      "name": "Lithochloron capricornicum",
-      "mates": 70,
-      "mean_identity": 0.9991
+      "name": "Ulva laetevirens",
+      "mates": 1,
+      "mean_identity": 0.9793
      }
     ],
     "algmt": [
      {
       "name": "Bryopsis hypnoides",
-      "mates": 442,
-      "mean_identity": 0.9983
+      "mates": 7692,
+      "mean_identity": 0.9978
      },
      {
       "name": "Bryopsis sp.",
-      "mates": 8,
-      "mean_identity": 0.9992
+      "mates": 179,
+      "mean_identity": 0.9976
+     },
+     {
+      "name": "Boodlea composita",
+      "mates": 1,
+      "mean_identity": 0.9803
+     },
+     {
+      "name": "Halimeda cylindracea",
+      "mates": 1,
+      "mean_identity": 0.9867
      }
     ]
    },
    "donors": [
     {
      "name": "Bryopsis hypnoides",
-     "reads": 83139,
-     "bp": 12347733,
-     "fraction": 0.9957,
+     "reads": 1499581,
+     "bp": 222764676,
+     "fraction": 0.99464,
      "median_identity": 1.0,
-     "identity_q10": 1.0,
+     "identity_q10": 0.9933,
      "identity_q90": 1.0,
      "accession": "PQ652170.1"
     },
     {
-     "name": "Bryopsis sp.",
-     "reads": 182,
-     "bp": 27189,
-     "fraction": 0.00219,
+     "name": "plastid sequence in the assembly",
+     "reads": 2934,
+     "bp": 396378,
+     "fraction": 0.00177,
      "median_identity": 1.0,
-     "identity_q10": 1.0,
+     "identity_q10": 0.9933,
      "identity_q90": 1.0,
-     "accession": "LC914692.1"
+     "accession": "BMAT01005342.1"
+    },
+    {
+     "name": "Bryopsis sp.",
+     "reads": 2619,
+     "bp": 391634,
+     "fraction": 0.00175,
+     "median_identity": 1.0,
+     "identity_q10": 0.9933,
+     "identity_q90": 1.0,
+     "accession": "LC768901.1"
     },
     {
      "name": "Bryopsis plumosa",
-     "reads": 88,
-     "bp": 13090,
-     "fraction": 0.00106,
+     "reads": 1448,
+     "bp": 216612,
+     "fraction": 0.00097,
      "median_identity": 1.0,
-     "identity_q10": 1.0,
+     "identity_q10": 0.9933,
      "identity_q90": 1.0,
-     "accession": "NC_026795.1"
+     "accession": "LN810504.1"
     },
     {
      "name": "Lambia antarctica",
-     "reads": 61,
-     "bp": 9150,
-     "fraction": 0.00074,
+     "reads": 906,
+     "bp": 135419,
+     "fraction": 0.0006,
      "median_identity": 1.0,
      "identity_q10": 0.9933,
      "identity_q90": 1.0,
@@ -138,68 +129,78 @@
     },
     {
      "name": "Porphyra purpurea",
-     "reads": 10,
-     "bp": 923,
-     "fraction": 7e-05,
+     "reads": 185,
+     "bp": 18660,
+     "fraction": 8e-05,
      "median_identity": 0.9714,
-     "identity_q10": 0.9634,
+     "identity_q10": 0.9623,
      "identity_q90": 1.0,
      "accession": "NC_000925.1"
     },
     {
      "name": "Synechocystis sp.",
-     "reads": 8,
-     "bp": 782,
-     "fraction": 6e-05,
+     "reads": 96,
+     "bp": 9403,
+     "fraction": 4e-05,
      "median_identity": 0.9495,
      "identity_q10": 0.934,
-     "identity_q90": 0.9634,
+     "identity_q90": 0.9565,
      "accession": "NC_000911.1"
     },
     {
-     "name": "Pseudobryopsis hainanensis",
-     "reads": 2,
-     "bp": 300,
+     "name": "Derbesia sp.",
+     "reads": 32,
+     "bp": 4590,
      "fraction": 2e-05,
      "median_identity": 1.0,
-     "identity_q10": 1.0,
+     "identity_q10": 0.9394,
+     "identity_q90": 1.0,
+     "accession": "NC_031367.1"
+    },
+    {
+     "name": "Pseudobryopsis hainanensis",
+     "reads": 21,
+     "bp": 2783,
+     "fraction": 1e-05,
+     "median_identity": 1.0,
+     "identity_q10": 0.954,
      "identity_q90": 1.0,
      "accession": "MH591091.1"
     },
     {
      "name": "Derbesia tenuissima",
-     "reads": 2,
-     "bp": 300,
-     "fraction": 2e-05,
+     "reads": 18,
+     "bp": 2700,
+     "fraction": 1e-05,
      "median_identity": 1.0,
      "identity_q10": 1.0,
      "identity_q90": 1.0,
      "accession": "OZ495726.1"
     },
     {
+     "name": "Hazenia capsulata",
+     "reads": 21,
+     "bp": 2435,
+     "fraction": 1e-05,
+     "median_identity": 0.886,
+     "identity_q10": 0.875,
+     "identity_q90": 0.887,
+     "accession": "KY407661.1"
+    },
+    {
      "name": "Gloeotilopsis sterilis",
-     "reads": 3,
-     "bp": 269,
-     "fraction": 2e-05,
-     "median_identity": 0.956,
-     "identity_q10": 0.9506,
-     "identity_q90": 0.9588,
+     "reads": 23,
+     "bp": 2257,
+     "fraction": 1e-05,
+     "median_identity": 0.9551,
+     "identity_q10": 0.9398,
+     "identity_q90": 0.9592,
      "accession": "KM462877.1"
     },
     {
-     "name": "Cephaleuros karstenii",
-     "reads": 2,
-     "bp": 200,
-     "fraction": 2e-05,
-     "median_identity": 0.967,
-     "identity_q10": 0.9432,
-     "identity_q90": 0.967,
-     "accession": "NC_060534.1"
-    },
-    {
      "name": "Derbesia marina",
-     "reads": 1,
-     "bp": 150,
+     "reads": 14,
+     "bp": 2100,
      "fraction": 1e-05,
      "median_identity": 1.0,
      "identity_q10": 1.0,
@@ -207,57 +208,37 @@
      "accession": "OZ496968.1"
     },
     {
-     "name": "Sphaerosorus coelastroides",
-     "reads": 1,
-     "bp": 150,
-     "fraction": 1e-05,
-     "median_identity": 0.8792,
-     "identity_q10": 0.8792,
-     "identity_q90": 0.8792,
-     "accession": "PV826133.1"
-    },
-    {
-     "name": "Dichotomosiphon tuberosus",
-     "reads": 1,
-     "bp": 150,
-     "fraction": 1e-05,
-     "median_identity": 1.0,
-     "identity_q10": 1.0,
-     "identity_q90": 1.0,
-     "accession": "MH591082.1"
-    },
-    {
-     "name": "Rhexinema sarcinoideum",
-     "reads": 1,
-     "bp": 126,
+     "name": "Monostroma angicava",
+     "reads": 11,
+     "bp": 1346,
      "fraction": 1e-05,
      "median_identity": 0.881,
      "identity_q10": 0.881,
-     "identity_q90": 0.881,
-     "accession": "KX306821.1"
+     "identity_q90": 0.886,
+     "accession": "OL856096.1"
     },
     {
-     "name": "Gloeotilopsis planctonica",
-     "reads": 1,
-     "bp": 114,
+     "name": "Cephaleuros karstenii",
+     "reads": 14,
+     "bp": 1309,
      "fraction": 1e-05,
-     "median_identity": 0.886,
-     "identity_q10": 0.886,
-     "identity_q90": 0.886,
-     "accession": "KX306824.1"
+     "median_identity": 0.9709,
+     "identity_q10": 0.9432,
+     "identity_q90": 1.0,
+     "accession": "NC_060534.1"
     }
    ],
    "barcodes": [
     {
      "barcode": "rbcL",
-     "haplotype": "kcp|k141_5:26600-27440",
+     "haplotype": "kcp|k141_7:73979-74819",
      "length": 841,
-     "contig_length": 101417,
+     "contig_length": 102515,
      "top_hit": "Bryopsis sp. [HF583420.1]",
      "identity": 99.868,
      "alnlen": 755,
      "species_near_best": "Bryopsis sp. (5); Bryopsis maxima (1)",
-     "sequence": "AAATATCTACTAAATACAGCGACTTTCGTGTCGCACGTCATGCATTATGATAGGCACACCTAATTCTTTAGCACATTGTGCACGTTGAAGCATAGCTTCACAAGTTGCTGCAGTTGCATTTAAGTAATGACCTTTAATTTCACCTGTTTCTGCTTGAGATTTATAAATTGCTTCAGCAACAAATAAGAAACGATCACGCCAACGCATAAAAGGTTGTGAATTTACATTCTCATCATCTTTGGTGAAATCAAGACCACCTCGTAAACATTCATAAACTGCTCGACCATAATTTTTAGCTGATAACCCTAATTTAGGCTTAATTGTACAACCAAGTAATGGACGTCCATATTTATTTAATTTGTCACGCTCGACTTCAATACCATGTGGAGGACCTTGGAATGTTTTAGCATAAGCAACTGAAATACGTAAATCTTCCAAACGAAGAGCTCGTAAGGCTTTAAAACCAAATACGTTTCCAACAATTGATGTAAATAAGTTTGTTACCGAGCCTTCTTCAAATAAATCAAGTGGATACGCAACATACGCGATATACTGATTTTCTTCACCTTTTACAGGTTCTAAATCATAACAACGACCTTTATAACGATCTAAACTTGTTAAACCGTCAGTCCACACGGTAGTCCATGTACCTGTTGAAGATTCTGCTGCAACAGCTGCCCCACATTCTTCTGGTGGAACACCAGGTTGTGGAGTCATACGAAAGGCGGCAAGAATATCTGTATCTTTTACTTGGTAATCAGGTGTGTAATAAGTTAGACGATAGTCTTTTACCCCTGCTTTAAATCCTGCACCTGCTTTTGTTTCAGTTTTTGGAGCCATT",
+     "sequence": "AATGGCTCCAAAAACTGAAACAAAAGCAGGTGCAGGATTTAAAGCAGGGGTAAAAGACTATCGTCTAACTTATTACACACCTGATTACCAAGTAAAAGATACAGATATTCTTGCCGCCTTTCGTATGACTCCACAACCTGGTGTTCCACCAGAAGAATGTGGGGCAGCTGTTGCAGCAGAATCTTCAACAGGTACATGGACTACCGTGTGGACTGACGGTTTAACAAGTTTAGATCGTTATAAAGGTCGTTGTTATGATTTAGAACCTGTAAAAGGTGAAGAAAATCAGTATATCGCGTATGTTGCGTATCCACTTGATTTATTTGAAGAAGGCTCGGTAACAAACTTATTTACATCAATTGTTGGAAACGTATTTGGTTTTAAAGCCTTACGAGCTCTTCGTTTGGAAGATTTACGTATTTCAGTTGCTTATGCTAAAACATTCCAAGGTCCTCCACATGGTATTGAAGTCGAGCGTGACAAATTAAATAAATATGGACGTCCATTACTTGGTTGTACAATTAAGCCTAAATTAGGGTTATCAGCTAAAAATTATGGTCGAGCAGTTTATGAATGTTTACGAGGTGGTCTTGATTTCACCAAAGATGATGAGAATGTAAATTCACAACCTTTTATGCGTTGGCGTGATCGTTTCTTATTTGTTGCTGAAGCAATTTATAAATCTCAAGCAGAAACAGGTGAAATTAAAGGTCATTACTTAAATGCAACTGCAGCAACTTGTGAAGCTATGCTTCAACGTGCACAATGTGCTAAAGAATTAGGTGTGCCTATCATAATGCATGACGTGCGACACGAAAGTCGCTGTATTTAGTAGATATTT",
      "most_similar": {
       "identity": 100.0,
       "records": 1,
@@ -268,14 +249,14 @@
     },
     {
      "barcode": "tufA",
-     "haplotype": "kcp|k141_5:82232-83468",
+     "haplotype": "kcp|k141_7:17950-19186",
      "length": 1237,
-     "contig_length": 101417,
+     "contig_length": 102515,
      "top_hit": "Bryopsis hypnoides [GU136484.1]",
      "identity": 99.43,
      "alnlen": 1228,
      "species_near_best": "Bryopsis hypnoides (1)",
-     "sequence": "AATCTAAAATAGTGGATACAACACCAGCACCCACAGTTCTGCCTCCTTCTCTAATCGCAAATCGCATACCCTTTTCAATCGCTATAGGTTGAATAAGCTCTACATTCATTTTGATCCGATCTCCAGGCATCACCATTTTAATTTCCACATTATCATCTGATTGAAATGAATTAATCTTACCCGTAACATCGGTTGTTCGTACATAAAATTGTGGTCTATAGCCAGCAAAAAAGGAAGTATGGCGCCCACCCTCTTCTTTTTTCAAAATATAAACTTGAGCTTCAAATTGCTTATGTGGTGTAATCGATCCAGGTTTTGCAAGTACCATTCCACGTTCAACATCTTCTTTTTGAATTCCACGTAGTAAGACTCCAACATTATCGCCAGCCACACTTTTTTCTAATGTTTTTTGAAACATTTCTAAACCTGTAATTGTGGCTTGTCGTGTTTCTTTCAATCCTACAATTTCAATATTATCACCAACCTCTACAGCCCCACGCTCGACTCGACCTGTGGTTACCGTACCGCGACCCGTAATAGATACGACATTCTCTATGGCCATTAAAAAAGGTTTATCCGTATCTCGGGTTGGAAGTGGTATATAATTATCAACTTCATTCATTAAATCGTAAATTTTTTTAACCCATGGATCCTCCGTTCCACTCGTATCCGGGTTATCCATAAGGGCCTCTAACGCGAGTAGTGCAGAGCCAGAAGTTATTGGGATATCATCCCCCGGAAATTCATATTCATTTAACGTTTCGCGAACCTCTAATTCTACTAATTCTAAAAGTTCTTCATCATCAACTTGATCAGCTTTATTTAAAAAAACAACAATAGAAGGAACACCAACTTGCTTTGCTAATAAAATATGCTCTTTTGTTTGTGGCATTGGACCATCCGCACCCGAAACTACGAGAATTGCACCATCCATTTGAGCTGCTCCAGTAATCATATTTTTAACATAATCAGCGTGTCCTGGGCAATCTACATGTGCGTAATGTCGATTTTCTGTTTCATATTCTACATGAGCCGTATTTATTGTAATGCCTCTTGCTTTTTCTTCTGGAGCCGAATCAATATCATTGTAATCTTTTGGTTTTGCTTGACCTATAGCCGCTAAGGCCATCGTAATGGCAGCCGTTAATGTTGTTTTTCCGTGATCGACGTGCCCAATAGTTCCAATATTTAAATGCGGTTTTGTTCTCTCAAATTTTTCACGTACCATATTTATATT",
+     "sequence": "AATATAAATATGGTACGTGAAAAATTTGAGAGAACAAAACCGCATTTAAATATTGGAACTATTGGGCACGTCGATCACGGAAAAACAACATTAACGGCTGCCATTACGATGGCCTTAGCGGCTATAGGTCAAGCAAAACCAAAAGATTACAATGATATTGATTCGGCTCCAGAAGAAAAAGCAAGAGGCATTACAATAAATACGGCTCATGTAGAATATGAAACAGAAAATCGACATTACGCACATGTAGATTGCCCAGGACACGCTGATTATGTTAAAAATATGATTACTGGAGCAGCTCAAATGGATGGTGCAATTCTCGTAGTTTCGGGTGCGGATGGTCCAATGCCACAAACAAAAGAGCATATTTTATTAGCAAAGCAAGTTGGTGTTCCTTCTATTGTTGTTTTTTTAAATAAAGCTGATCAAGTTGATGATGAAGAACTTTTAGAATTAGTAGAATTAGAGGTTCGCGAAACGTTAAATGAATATGAATTTCCGGGGGATGATATCCCAATAACTTCTGGCTCTGCACTACTCGCGTTAGAGGCCCTTATGGATAACCCGGATACGAGTGGAACGGAGGATCCATGGGTTAAAAAAATTTACGATTTAATGAATGAAGTTGATAATTATATACCACTTCCAACCCGAGATACGGATAAACCTTTTTTAATGGCCATAGAGAATGTCGTATCTATTACGGGTCGCGGTACGGTAACCACAGGTCGAGTCGAGCGTGGGGCTGTAGAGGTTGGTGATAATATTGAAATTGTAGGATTGAAAGAAACACGACAAGCCACAATTACAGGTTTAGAAATGTTTCAAAAAACATTAGAAAAAAGTGTGGCTGGCGATAATGTTGGAGTCTTACTACGTGGAATTCAAAAAGAAGATGTTGAACGTGGAATGGTACTTGCAAAACCTGGATCGATTACACCACATAAGCAATTTGAAGCTCAAGTTTATATTTTGAAAAAAGAAGAGGGTGGGCGCCATACTTCCTTTTTTGCTGGCTATAGACCACAATTTTATGTACGAACAACCGATGTTACGGGTAAGATTAATTCATTTCAATCAGATGATAATGTGGAAATTAAAATGGTGATGCCTGGAGATCGGATCAAAATGAATGTAGAGCTTATTCAACCTATAGCGATTGAAAAGGGTATGCGATTTGCGATTAGAGAAGGAGGCAGAACTGTGGGTGCTGGTGTTGTATCCACTATTTTAGATT",
      "most_similar": {
       "identity": 100.0,
       "records": 1,
@@ -286,98 +267,63 @@
     }
    ],
    "contigs": {
-    "n": 4,
-    "bp": 135566,
-    "longest": 101417,
+    "n": 3,
+    "bp": 136474,
+    "longest": 102515,
+    "groups": [
+     {
+      "kind": "close",
+      "label": "Bryopsis hypnoides",
+      "n": 3,
+      "bp": 136474,
+      "depth": 1325.4574143705029,
+      "identity_min": 0.9542,
+      "identity_max": 0.9998,
+      "depth_min": 1233.3642,
+      "depth_max": 1384.9983,
+      "references": [
+       {
+        "id": "cp|PQ652170.1",
+        "name": "Bryopsis hypnoides",
+        "bp": 136474
+       }
+      ],
+      "relative": 1.0
+     }
+    ],
     "top": [
      {
-      "contig": "kcp|k141_5",
-      "length": 101417,
-      "depth": 76.0145,
+      "contig": "kcp|k141_7",
+      "length": 102515,
+      "depth": 1341.8605,
       "best_panel_match": "cp|PQ652170.1",
-      "identity": 0.9546
+      "identity": 0.9542
      },
      {
-      "contig": "kcp|k141_3",
-      "length": 24160,
-      "depth": 68.5041,
+      "contig": "kcp|k141_2",
+      "length": 24424,
+      "depth": 1233.3642,
       "best_panel_match": "cp|PQ652170.1",
       "identity": 0.9998
      },
      {
-      "contig": "kcp|k141_0",
-      "length": 8844,
-      "depth": 85.7851,
-      "best_panel_match": "cp|GQ892829.1",
-      "identity": 0.9975
-     },
-     {
-      "contig": "kcp|k141_4",
-      "length": 1145,
-      "depth": 66.5319,
+      "contig": "kcp|k141_6",
+      "length": 9535,
+      "depth": 1384.9983,
       "best_panel_match": "cp|PQ652170.1",
-      "identity": 1.0
+      "identity": 0.9975
      }
     ]
    },
-   "hot_windows": [
-    {
-     "target": "slugrDNA|MK919695.1",
-     "start": 200,
-     "end": 400,
-     "reads": 1190
-    },
-    {
-     "target": "slugrDNA|MK919695.1",
-     "start": 400,
-     "end": 600,
-     "reads": 995
-    },
-    {
-     "target": "slugrDNA|OR177832.1",
-     "start": 1200,
-     "end": 1400,
-     "reads": 682
-    },
-    {
-     "target": "slugrDNA|MK919695.1",
-     "start": 0,
-     "end": 200,
-     "reads": 616
-    },
-    {
-     "target": "algrDNA|KY401415.1",
-     "start": 1800,
-     "end": 2000,
-     "reads": 484
-    },
-    {
-     "target": "slugrDNA|OR177832.1",
-     "start": 800,
-     "end": 1000,
-     "reads": 473
-    },
-    {
-     "target": "algrDNA|MF034603.1",
-     "start": 0,
-     "end": 200,
-     "reads": 453
-    },
-    {
-     "target": "slugmt|NC_030537.1",
-     "start": 2600,
-     "end": 2800,
-     "reads": 436
-    }
-   ]
+   "hot_windows": []
   }
  ],
  "donors": [
   {
    "name": "Bryopsis hypnoides",
-   "fraction": 0.9957,
+   "fraction": 0.99464,
    "median_identity": 1.0
   }
  ],
- "plastid_fraction": 0.002722
+ "plastid_fraction": 0.002612
 }

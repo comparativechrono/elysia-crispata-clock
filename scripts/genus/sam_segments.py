@@ -40,12 +40,28 @@ def paf_segments(path, minlen=200):
         c = line.rstrip("\n").split("\t")
         al = int(c[10])
         if al < minlen: continue
-        de = 0.0
+        de = 0.0; cg = None
         for t in c[12:]:
-            if t.startswith("de:f:"): de = float(t[5:]); break
-        S[c[0]].append(dict(qlen=int(c[1]), qs=int(c[2]), qe=int(c[3]), strand=c[4], t=c[5], ts=int(c[7]), te=int(c[8]), aln=al, ident=1 - de,
-                            mapq=int(c[11]), cls=c[5].split("|")[0] if "|" in c[5] else "slug"))
+            if t.startswith("de:f:"): de = float(t[5:])
+            elif t.startswith("cg:Z:"): cg = t[5:]
+        d = dict(qlen=int(c[1]), qs=int(c[2]), qe=int(c[3]), strand=c[4], t=c[5], tlen=int(c[6]), ts=int(c[7]), te=int(c[8]), aln=al, ident=1 - de,
+                 mapq=int(c[11]), cls=c[5].split("|")[0] if "|" in c[5] else "slug")
+        if cg: d["ins"] = cigar_insertions(cg, d["strand"], d["qs"], d["qe"], d["ts"])
+        S[c[0]].append(d)
     return S
+
+def cigar_insertions(cg, strand, qs, qe, ts, minlen=30):
+    """read bases that an alignment skips as an insertion of >= minlen: (read_start, read_end, target_position).
+    33_pass2.sh keeps the alignment string of an alignment only when it holds such an insertion."""
+    out = []; q = 0; t = ts
+    for n, o in CIG.findall(cg):
+        n = int(n)
+        if o in "M=X": q += n; t += n
+        elif o == "I":
+            if n >= minlen: out.append((qs + q, qs + q + n, t) if strand == "+" else (qe - q - n, qe - q, t))
+            q += n
+        elif o in "DN": t += n
+    return out
 
 def union(iv):
     iv = sorted(iv); tot = 0; cur = None
@@ -70,13 +86,16 @@ def best_tiling(segs, max_overlap=50):
 def revcomp(s): return s.translate(COMP)[::-1]
 
 
-def relabel_organelle_loci(S, screen_json):
+def relabel_organelle_loci(S, screen_json, extra=()):
     """Alignments that fall inside a mitochondrial-like stretch of an assembly sequence
     (35_assembly_screen.py, numt_like) are counted as mitochondrial, not slug: organelle reads
-    often match such a stretch as well as they match the organelle genome itself."""
+    often match such a stretch as well as they match the organelle genome itself.
+    extra: further stretches given by hand as (sequence, start, end, kind), for organelle DNA in an
+    assembly that the DNA screen could not recognise because no reference holds it."""
     import json, collections
-    if not screen_json: return 0
-    scr = json.load(open(screen_json)); loci = collections.defaultdict(list)
+    if not screen_json and not extra: return 0
+    scr = json.load(open(screen_json)) if screen_json else {}; loci = collections.defaultdict(list)
+    for c_, a_, b_, k_ in extra: loci[c_].append((a_, b_, k_))
     for N in scr.get("numt_like", []): loci[N["contig"]].append((N["start"], N["end"], "slugmt"))
     for L in scr.get("loci", []):
         if L["cls"] == "plastid" and L["identity"] >= 0.90: loci[L["contig"]].append((L["start"], L["end"], "cp"))

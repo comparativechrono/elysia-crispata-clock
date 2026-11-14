@@ -3,7 +3,7 @@
 Executed by 30_build_site.py, which supplies: repo, R, DOCS, page(), e(), genes, klepto, hgt, today, meta.
 All figures in the text are read from results/kleptoplast.json and results/hgt.json.
 """
-import os, shutil, glob
+import os, shutil, glob, json
 
 def pct(x, d=1): return f"{100 * x:.{d}f}%"
 def num(x): return f"{x:,.0f}"
@@ -158,6 +158,41 @@ if hgt:
     _as = {a["taxon"]: a["fraction"] for a in (klepto or {}).get("assignment", [])}
     KS = f'{round(100 * _as.get("Penicillus capitatus", 0.86))}:{round(100 * _as.get("Penicillus lamourouxii", 0.14))}'
     AL = hgt.get("alien") or {}; cands = AL.get("candidates", [])
+    GENOME_BP = 542_570_831                                   # span of xgElyCris1.1 (primary assembly)
+    LIB = (klepto or {}).get("library") or {}
+    DEPTH = LIB.get("bp", 0) / GENOME_BP; MEAN_READ = LIB.get("bp", 0) / max(1, LIB.get("reads", 1))
+    SPAN_DEPTH = DEPTH * max(0.0, 1 - 1100 / MEAN_READ) if MEAN_READ else 0     # reads that hold a 500-base piece with 300 bases either side
+    PER_CELL = round(SPAN_DEPTH / 6) if SPAN_DEPTH else 0                        # one insertion in this many cells gives about three such reads
+    # two steps of the pipeline for the other species, applied to this library as well (scripts/genus/run_screens.sh crispata)
+    _sp = os.path.join(repo, "results", "genus", "elysia-crispata.shapes.json")
+    SH = json.load(open(_sp)) if os.path.exists(_sp) else None
+    shapes_block = ""; COPIES = ""; JOINS_COMPARED = ""
+    if SH:
+        bg = SH.get("background") or {}; cand_ins = [c for c in SH.get("candidates", []) if c["shape"] == "insertion"]
+        sd = (bg.get("depth") or {}).get("spanning_depth") or {}
+        if sd.get("500"): SPAN_DEPTH = sd["500"]; PER_CELL = round(SPAN_DEPTH / 6)
+        jc = SH.get("joins_compared")          # every read with a chloroplast-slug join, compared with every other around the join
+        if jc:
+            nr = len(jc.get("near", []))
+            near_txt = ""
+            if nr:
+                near_txt = ({1: "One pair", 2: "Two pairs", 3: "Three pairs", 4: "Four pairs"}.get(nr, f"{nr} pairs") + ' of reads come close without sharing a join: '
+                            'chloroplast DNA breaks at the same point, or within 20 bases of it, and goes on into a simple repeat of the slug genome, at two different places or at two points of one repeat. '
+                            'Simple repeats are where a polymerase stalls during amplification, and an unfinished copy can then carry on along another molecule. Chloroplast DNA entering chromosomes at such repeats in more than one cell would look the same; either way these are separate joins, not one join seen twice. ')
+            JOINS_COMPARED = (f'That comparison fails where the slug DNA is a repeat, and where two reads were placed on different assemblies of one stretch. So all {num(jc["reads"])} reads were fetched again and their joins compared with each other base by base: '
+                              f'{num(jc["groups_of_copies"] + len(jc["recurrent"]))} joins occur in more than one read, '
+                              + ("each time as copies of one molecule, and none in two molecules. " if not jc["recurrent"] else f'{len(jc["recurrent"])} of them in two molecules that share no end. ') + near_txt)
+        cps = (bg.get("depth") or {}).get("copies") or {}          # copies made by the amplification, estimated on the sample
+        if cps.get("copies_per_read"):
+            COPIES = (f', or a little less: the library was amplified, and about one read in {round(1 / cps["copies_per_read"])} is a copy of another '
+                      f'({cps["reads_with_a_copy_in_the_sample"]} of {num(cps["placed_reads"])} sample reads have their copy in the sample, which is {100 * cps["sample_fraction"]:.1f}% of the library)')
+        found = ("None of them holds a piece of chloroplast or mitochondrial DNA of 100 bases or more inside slug DNA." if not cand_ins else
+                 f"{len(cand_ins)} of them {'holds' if len(cand_ins) == 1 else 'hold'} a piece of organelle DNA of 100 bases or more inside slug DNA; they are listed in the downloads.")
+        shapes_block = (f'<p><strong>Shorter pieces.</strong> A piece of a few hundred bases does not break the alignment of a read to the slug sequence, and the search above would pass over it. So every read in which the first pass had found an organelle piece of 60 bases or more, '
+                        f'at 95% identity or better, away from both ends of the read and outside the stretches that slug repeats resemble, was fetched again: {num(SH["targeted_reads"])} reads. Each was aligned base by base to the assembly and searched for a piece that lies inside one continuous stretch of slug DNA. {found}</p>'
+                        + (f'<p><strong>The library’s own rate, measured on slug DNA.</strong> One read in a hundred of each run was aligned in the same way. Of {num(bg["reads_slug_placed"])} reads of slug DNA that lie at one clear place, {num(bg["joining_unrelated"])} go on with a piece of slug DNA that lies at another, on a different sequence or more than 50 kb away. '
+                           f'Each such read holds two pieces of slug DNA, so of the pieces {pct(bg["slug_pieces_joined"] / bg["slug_pieces"], 1)} are joined to an unrelated one. That figure takes in real differences between this animal’s chromosomes and the assembly as well as joins made in the tube, so for the tube it is a ceiling. '
+                           f'In the same sample, {num(bg["cp_joined"])} of {num(bg["cp_reads"])} chloroplast reads are joined to slug DNA at one clear place ({pct(bg["cp_joined"] / bg["cp_reads"], 1)}). Chloroplast DNA is joined to slug DNA no more often than slug DNA is joined to slug DNA.</p>' if bg.get("reads_slug_placed") and bg.get("cp_reads") else ""))
     def wh(a, label):
         w = hgt["assembly_screen"].get(a, {}).get("whole_contigs", {}); parts = []
         if w.get("cp"): parts.append(f'{w["cp"]["n"]} plastid ({w["cp"]["bp"] / 1000:.0f} kb)')
@@ -198,7 +233,7 @@ if hgt:
 <ul>
 <li><strong>{len(onfrag)} are chloroplast genes that the Ensembl annotation lists as slug genes.</strong> Each sits on one of the chloroplast fragments above. Anyone counting “algal genes in the slug genome” from the annotation will count these.</li>
 <li><strong>The other {len(rest)} are not algal.</strong> Their animal homologues score within 20% of the algal match: reverse transcriptases of mobile elements, a short conserved peptide, and one low-complexity protein.</li>
-<li>The Purdue annotation, made from an assembly without the artefacts, has no protein that matches an alga or a bacterium clearly better than it matches an animal.</li>
+<li>The Purdue annotation, made from an assembly without these stretches, has no protein that matches an alga or a bacterium clearly better than it matches an animal.</li>
 </ul>
 <div class="tablewrap"><table class="data"><thead><tr><th>Gene or protein</th><th>Annotation</th><th class="num">aa</th><th>Location in xgElyCris1.1</th><th style="min-width:13em">Best non-animal match</th><th class="num">Identity</th><th class="num">Bit score</th><th class="num">Best animal bit score</th><th style="min-width:10em">Reading</th></tr></thead><tbody>{"".join(arow(c) for c in cands)}</tbody></table></div>
 """
@@ -231,15 +266,17 @@ if hgt:
                 return (f'<tr><td class="mono nowrap">{e(c)}</td><td>{WHAT.get(c, "")}</td><td class="num">{j["position"]:,}</td><td class="num">{j["reads_on_unique_side"]:,}</td>'
                         f'<td class="num">{j["through_reads"]}</td><td class="num">{j["diverging_reads"]}</td></tr>')
             join_rows = "".join(jrow(c) for c in WHAT)
-            tested = [JN[c] for c in WHAT if c in JN and not WHAT[c].startswith("control")]; ctl = next((JN[c] for c in WHAT if c in JN and WHAT[c].startswith("control")), None)
+            # (named ptested: "tested" is the list of the xgElyCris1.1 stretches, used again further down)
+            ptested = [JN[c] for c in WHAT if c in JN and not WHAT[c].startswith("control")]; ctl = next((JN[c] for c in WHAT if c in JN and WHAT[c].startswith("control")), None)
             PR = ""
-            if tested:
-                one = all(j["through_reads"] <= 1 for j in tested)
-                PR = (f'{"Each of the " + str(len(tested)) + " joins is carried by a single Nanopore read" if one else "The joins are carried by " + ", ".join(str(j["through_reads"]) for j in tested) + " reads"}, '
-                      f'while {min(j["diverging_reads"] for j in tested)} to {max(j["diverging_reads"] for j in tested)} other reads arrive at the same point and continue as something else. '
+            if ptested:
+                one = all(j["through_reads"] <= 1 for j in ptested)
+                PR = (f'{"Each of the " + str(len(ptested)) + " joins is carried by a single Nanopore read" if one else "The joins are carried by " + ", ".join(str(j["through_reads"]) for j in ptested) + " reads"}. '
+                      f'The other reads that arrive at the same point, {min(j["diverging_reads"] for j in ptested)} to {max(j["diverging_reads"] for j in ptested)} of them, continue as something else. '
                       + (f'The control point is crossed by {ctl["through_reads"]}. ' if ctl else "")
-                      + 'This is the pattern of the xgElyCris1.1 fragments over again, and the likeliest explanation is the same: the assembler extended the end of a contig along one chimeric read. Nanopore libraries make such reads when unrelated fragments are ligated end to end. '
-                      'It would also explain why the <i>Penicillus</i>-like pieces are 85 to 96% identical to the plastid rather than exact: a contig end that rests on one Nanopore read keeps that read’s errors.')
+                      + 'This is the pattern of the xgElyCris1.1 stretches over again: the assembler extended the end of a contig along one read that joins chloroplast DNA to slug DNA, so the join is not part of the genome that animal inherited. '
+                      'Whether that one molecule came from a cell with an insertion, or was made when unrelated fragments were ligated end to end, as Nanopore libraries do, a single read cannot say. '
+                      'A contig end that rests on one Nanopore read keeps that read’s errors, which is why the <i>Penicillus</i>-like pieces are 85 to 96% identical to the plastid and not exact.')
             n_rep = sum(1 for r in pur if r.get("read_alignments"))
             pur_block = f"""
 <h2 id="purdue">The Purdue assembly: chloroplast DNA of other algae, again at contig ends</h2>
@@ -276,39 +313,43 @@ if hgt:
 <h1>Is algal DNA inserted in the slug genome?</h1>
 <p class="lede">Long reads can show a foreign sequence sitting inside host DNA in a single molecule. They can also manufacture that picture. Here is what the xgElyCris1 reads show once the two are told apart.</p>
 <div class="answer">
-<p><strong>No inserted algal sequence was found.</strong> {num(P["cp+slug"]["reads"])} reads do join chloroplast DNA to slug DNA, but they do so at the same rate as reads that join bacterial DNA to slug DNA, and no chloroplast–slug junction is seen in two independent molecules. A real insertion would be crossed by dozens.</p>
-<p><strong>The reference assembly needs a warning.</strong> xgElyCris1.1 and its alternate haplotype contain {len(fr)} stretches of chloroplast DNA, up to {max(f["length"] for f in fr) / 1000:.1f} kb long and 98 to 100% identical to the animal’s kleptoplasts. All {len(fr)} sit at the end of a contig and trace back to a single chimeric molecule. They are assembly artefacts, not insertions. Searching the assembly with a plastid genome will find them, and the Ensembl annotation lists {sum(1 for c in cands if c.get("on_plastid_fragment"))} chloroplast genes on them as slug genes.</p>
-<p>That leaves nothing to compare with the kleptoplasts: there is no inserted algal sequence whose source could be traced. The artefacts themselves come from the two {it("Penicillus")} plastid types {n_cap} to {n_lam}, close to the {KS} mix of the kleptoplasts, as chimeras of kleptoplast DNA would.</p>
-<p>The Purdue assembly of another animal has the same kind of artefact, and also holds 646 kb of {it("Acetabularia")} chloroplast DNA as contigs of its own: that animal’s kleptoplasts, left in the assembly. <a href="#purdue">Details below</a>.</p>
+<p><strong>Not in the genome this animal inherited. In single cells: nothing that stands above what the library makes by itself.</strong> {num(P["cp+slug"]["reads"])} reads join chloroplast DNA to slug DNA. Chloroplasts are held in body cells, so an insertion would sit in one cell or a few and be carried by a single molecule: each of these reads is a candidate, and it does not count against one that other reads from the same place lack the join. But this library was amplified by PCR, which joins unrelated molecules. It joins bacterial DNA to slug DNA just as often ({pct(CH["rate_bac_slug"], 2)}, against {pct(CH["rate_cp_slug"], 2)} for chloroplast DNA), and {P["cp+slug"]["adapter_junctions"]} of the chloroplast joins have the amplification adapter sitting in them. No read holds chloroplast DNA inside slug DNA, which is the one shape that joining in the tube does not make.</p>
+<p><strong>The reference assembly needs a warning.</strong> xgElyCris1.1 and its alternate haplotype contain {len(fr)} stretches of chloroplast DNA, up to {max(f["length"] for f in fr) / 1000:.1f} kb long and 98 to 100% identical to the animal’s kleptoplasts. All {len(fr)} sit at the end of a contig, and each rests on a single molecule, one of the joins just described. Reads that arrive from the slug side run on into other DNA, so these stretches are not part of the inherited genome and do not belong in a reference. Searching the assembly with a plastid genome will find them, and the Ensembl annotation lists {sum(1 for c in cands if c.get("on_plastid_fragment"))} chloroplast genes on them as slug genes.</p>
+<p>The {len(fr)} stretches come from the two {it("Penicillus")} plastid types {n_cap} to {n_lam}, close to the {KS} mix of the kleptoplasts, as any sample of this animal’s kleptoplast DNA would.</p>
+<p>The Purdue assembly of another animal has stretches of the same kind, and also holds 646 kb of {it("Acetabularia")} chloroplast DNA as contigs of its own: that animal’s kleptoplasts, left in the assembly. <a href="#purdue">Details below</a>.</p>
 </div>
 </div></section>
 
 <section class="block article"><div class="wrap">
-<h2>Why a single read proves nothing here</h2>
-<p>The genome was sequenced from very little DNA, so the library was amplified by PCR before sequencing (PacBio’s ultra-low-input protocol). Amplification joins unrelated molecules now and then, and it copies each joined molecule many times. A read with slug DNA at one end and chloroplast DNA at the other is therefore expected even if no such molecule existed in the animal.</p>
+<h2>What a single read can show</h2>
+<p>A slug takes chloroplasts into cells of its gut, not into its eggs or sperm. If a piece of chloroplast DNA were built into a chromosome, that would happen in one body cell, and only that cell and its daughters would carry it. In DNA from a whole animal such an insertion is carried by a few molecules, perhaps by one, and the other molecules from the same place do not have it. So single reads are where to look, and reads that disagree with them are expected. What has to be asked of each such read is what else could have made it.</p>
+<p>Here there is an obvious answer. The genome was sequenced from very little DNA, so the library was amplified by PCR before sequencing (PacBio’s ultra-low-input protocol). Amplification joins unrelated molecules now and then, and it copies each joined molecule many times. A read with slug DNA at one end and chloroplast DNA at the other is expected even if no such molecule existed in the animal.</p>
 <p>The bacteria living in the slug give a baseline. Nobody expects <i>Kistimonas</i> chromosomes to be spliced into slug chromosomes, so reads joining bacterial and slug DNA measure how often the library invents a junction.</p>
 <div class="chart"><h3>Reads that also carry slug nuclear DNA</h3>
 <p class="sub">Share of all reads of each kind. Chloroplast reads are joined to slug DNA no more often than bacterial reads are.</p>
 {hbar([("Chloroplast reads", 100 * CH["rate_cp_slug"], f"{num(P['cp+slug']['reads'])} of {num(ct['cp'])} chloroplast reads"), ("Bacterial reads (baseline)", 100 * CH["rate_bac_slug"], f"{num(P['bac+slug']['reads'])} of {num(ct['bac'])} bacterial reads", "bar muted")], maxv=5)}
 </div>
-<p>Three further checks point the same way.</p>
+<p>Real insertions would come on top of the baseline, and nothing does. The difference between the two rates amounts to {abs(round((CH["rate_cp_slug"] - CH["rate_bac_slug"]) * ct["cp"]))} reads among {num(ct["cp"])}. The reads cover each place in the genome about {DEPTH:.0f} times, so one insertion in every cell, each cell with its own, would add something like {DEPTH:.0f} reads that cross one of its two ends. A few insertions per cell would have shown; fewer would be lost among the {num(P["cp+slug"]["reads"])} joins the library makes.</p>
+<p>Four further checks.</p>
 <ul>
+<li><strong>The adapter.</strong> {P["cp+slug"]["adapter_junctions"]} of the {num(P["cp+slug"]["junctions"])} chloroplast–slug joins, and {P["bac+slug"]["adapter_junctions"]} of the {num(P["bac+slug"]["junctions"])} bacterium–slug joins, have the adapter of the amplification step lying between the two pieces. Those molecules were joined in the tube.</li>
 <li><strong>Chloroplast joined to bacterium.</strong> If junctions form at random, chloroplast reads should pick up a bacterial partner in proportion to how much bacterial DNA is in the library: about {min(CH["expected_cp_bac"], CH["expected_cp_bac_from_bacteria"]):.0f} to {max(CH["expected_cp_bac"], CH["expected_cp_bac_from_bacteria"]):.0f} reads, depending on which side the estimate starts from. There are {CH["observed_cp_bac"]}.</li>
-<li><strong>No junction repeats.</strong> Of {num(P["cp+slug"]["junctions"])} chloroplast–slug junctions, {rec_cp} are found in two molecules with different ends. (Reads sharing an end are PCR copies of one molecule and count once.) The same test does find {rec_bac} repeated bacterium–slug junction, which turns out to be a stretch of bacterial sequence at the edge of a small unplaced scaffold: the method can see a real, recurring junction when there is one.</li>
-<li><strong>Junctions fall everywhere.</strong> They are spread over all 15 slug chromosomes roughly in proportion to chromosome length and along the whole plastid genome, and {round(100 * CH["partner_species"]["capitatus"] / (CH["partner_species"]["capitatus"] + CH["partner_species"]["lamourouxii"]))}% involve the {it("P. capitatus")} plastid, the same share it has among the kleptoplasts.</li>
+<li><strong>The same join twice.</strong> Of {num(P["cp+slug"]["junctions"])} chloroplast–slug joins, {rec_cp} are found in two molecules with different ends when they are compared by their place on the assembly. (Reads sharing an end are PCR copies of one molecule and count once.) {JOINS_COMPARED}A join seen twice would mean a clone of cells or an inherited insertion; an insertion in a single cell cannot pass this test and does not have to. The comparison by place does find {rec_bac} repeated bacterium–slug join, which turns out to be a stretch of bacterial sequence at the edge of a small unplaced scaffold, so it can see a recurring join when there is one.</li>
+<li><strong>Where the joins fall.</strong> They are spread over all 15 slug chromosomes roughly in proportion to chromosome length and along the whole plastid genome, and {round(100 * CH["partner_species"]["capitatus"] / (CH["partner_species"]["capitatus"] + CH["partner_species"]["lamourouxii"]))}% involve the {it("P. capitatus")} plastid, the same share it has among the kleptoplasts. Joining at random gives this picture. So would insertions at random, which is why the rate above is the test and this is not.</li>
 </ul>
-<p>And no read carries chloroplast DNA with slug DNA from one locus on both sides of it.</p>
+<p><strong>The shape that the tube does not make.</strong> A fragment that sits in a chromosome has slug DNA on both sides of it, and the two sides are neighbours in the genome. Joining two molecules end to end cannot give that. No read has this shape: none carries a piece of chloroplast DNA of 300 bases or more with slug DNA from one place on both sides. Reads long enough to show such a piece with its flanks cover each place about {SPAN_DEPTH:.0f} times. Each read comes from one cell, so that is about {SPAN_DEPTH / 2:.0f} cells’ worth of DNA{COPIES}. Had the cells carried one insertion for every {PER_CELL} cells, averaged over all the cells that went into the tube, about three such reads would be expected. Insertions much rarer than that could not be seen in a library of this size (see <a href="../methods.html#transfer">what a library could show</a>).</p>
+{shapes_block}
 
 <h2>The chloroplast DNA inside xgElyCris1.1</h2>
 <p>Cutting the assemblies into windows and matching them to the plastid genomes turns up exact copies of kleptoplast DNA: {len(prim)} in the primary assembly ({num(sum(f["length"] for f in prim))} bp, on chromosomes {", ".join(sorted({f["contig"] for f in prim if f["contig"].isdigit()}, key=int))} and three unplaced scaffolds) and {len(alt)} in the alternate haplotype ({num(sum(f["length"] for f in alt))} bp). The two other assemblies of the species, made from other animals without PCR amplification, have none.</p>
-<p>Each copy was tested against the reads themselves. If chloroplast DNA really sat at one of these spots, on one or both copies of the chromosome, then half or all of the reads arriving from the slug side would run straight on into it. Instead:</p>
+<p>Each copy was tested against the reads themselves. If chloroplast DNA sat at one of these spots in the genome the animal inherited, on one or both copies of the chromosome, then half or all of the reads arriving from the slug side would run straight on into it. Instead:</p>
 <ul>
 <li>all {len(fr)} copies end at an assembly gap or at the end of a sequence, so only one side of each touches slug DNA;</li>
 <li>every one of those {len(tested)} boundaries is carried by {"a single molecule" if single == len(tested) else "at most one molecule"}{f" (at {pcr_copies} it was sequenced twice, as PCR copies)" if pcr_copies else ""};</li>
 <li>at the {len(placeable)} boundaries where the neighbouring slug DNA is unique enough to place reads, {thr_mol} molecules carry the junction and {div_mol} independent molecules arrive from the slug side and continue into something else. That count comes from two of the three sequencing runs (53% of the reads). At {contradicted} of the {len(placeable)}, two or more molecules contradict the assembly;</li>
 <li>the other {len(fr) - len(placeable)} lie in repeats, where reads cannot be assigned to one place.</li>
 </ul>
-<p>The assembler extended a contig along one chimeric read, the contig stopped where that read stopped, and scaffolding left a gap beside it.</p>
+<p>The assembler extended a contig along one read that joins chloroplast DNA to slug DNA, the contig stopped where that read stopped, and scaffolding left a gap beside it. Each of these reads is one of the single joins counted above: most likely a molecule joined during amplification, conceivably the DNA of one cell. Neither is the genome of the animal, and a reference assembly should not carry them.</p>
 <div class="tablewrap"><table class="data">
 <thead><tr><th>Location in xgElyCris1.1</th><th class="num">Length, bp</th><th class="num">Identity to plastid</th><th>Alga</th><th style="min-width:9em">Plastid genes carried</th><th>Other end abuts</th><th class="num" title="Independent molecules in which one alignment runs from slug DNA into the chloroplast DNA as assembled (all three runs)">Molecules with the junction</th><th class="num" title="Independent molecules that follow the slug DNA up to the boundary and then continue into something other than chloroplast DNA (two of three runs)">Molecules against it</th></tr></thead>
 <tbody>{"".join(frow(f) for f in prim)}</tbody></table></div>
@@ -317,14 +358,15 @@ if hgt:
 <h3>Nothing older</h3>
 <p>An insertion from a past meal, or from a different alga, would have drifted away from today’s kleptoplasts, so every match that is not an exact copy was listed and sorted. The primary assembly has {num(DV["sanger"]["non_exact_matches"])} such matches to the 241 plastid genomes and to algal mitochondrial and ribosomal DNA. All but {DV["sanger"]["loci"]} are shorter than 200 bp, less than 80% identical, or fall on simple repeats such as (CTT)n, which AT-rich plastid genomes also contain. The {DV["sanger"]["loci"]} that remain are the slug’s own ribosomal RNA genes, about 81% identical to algal ones. The alternate haplotype ({DV["alt"]["loci"]} loci) and the Tampa assembly ({DV["tampa"]["loci"]}) give the same picture.</p>
 <p>So apart from the {len(fr)} exact copies and simple repeats, none of these three assemblies contains a stretch of 200 bp or more that resembles plastid DNA at 80% identity or better. The Purdue assembly does, and is dealt with <a href="#purdue">below</a>.</p>
-<p>The reads agree, including for the parts of the genome that no assembly covers. {num(WR.get("weak_reads", 0))} reads matched a plastid genome only weakly and were set aside. Aligned base by base, {WR.get("with_exact_piece", 0)} of them hold a short exact piece of kleptoplast DNA (ordinary chimeras, under 1 kb) and {len(WR.get("diverged", []))} hold plastid-like sequence that is 4 to 8% away from every reference. {sum(1 for d in WR.get("diverged", []) if not d["slug_bp"])} of those are plain plastid reads from trace algae that have no close reference; the other is a low-accuracy read whose slug part is just as far from the assembly ({100 * (1 - WRL["slug_identity"]):.1f}% against {100 * (1 - WRL["identity"]):.1f}%). No read joins diverged plastid-like DNA to slug DNA.</p>
+<p>The reads agree, including for the parts of the genome that no assembly covers. {num(WR.get("weak_reads", 0))} reads matched a plastid genome only weakly and were set aside. Aligned base by base, {WR.get("with_exact_piece", 0)} of them hold a short exact piece of kleptoplast DNA (single joins like the others, with a piece under 1 kb) and {len(WR.get("diverged", []))} hold plastid-like sequence that is 4 to 8% away from every reference. {sum(1 for d in WR.get("diverged", []) if not d["slug_bp"])} of those are plain plastid reads from trace algae that have no close reference; the other is a low-accuracy read whose slug part is just as far from the assembly ({100 * (1 - WRL["slug_identity"]):.1f}% against {100 * (1 - WRL["identity"]):.1f}%). No read joins diverged plastid-like DNA to slug DNA.</p>
 <p>The assemblies also keep a few small free-standing contigs of plastid or bacterial DNA, not joined to anything: {WH}. These are ordinary leftovers of decontamination.</p>
 {alien_block}
 {prot_block}
 <h2>What this cannot rule out</h2>
 <ul>
 <li>Inserts shorter than about 200 bp, or more than about 20% diverged from every plastid genome in the panel. The DNA screens would miss them, and the protein screens cover only what is assembled.</li>
-<li>Insertions present in a small minority of cells. One molecule is indistinguishable from a library chimera.</li>
+<li>An insertion in a single cell of which the read shows only one end. Such a read looks exactly like a join made during amplification, and this library holds thousands of those. A library that was not amplified would set a far lower floor.</li>
+<li>Insertions shorter than {100 if SH else 300} bases inside a read. Below about 100 bases the pieces that match a plastid genome are transfer RNA genes, which mobile elements of the slug genome carry too.</li>
 <li>Regions the PCR-amplified library barely sampled. Several clock genes sit in such regions (see the <a href="index.html">gene catalogue</a>).</li>
 <li>Transfer from an alga with no sequenced relative, if the gene has no recognisable homologue in the algal proteomes used.</li>
 </ul>
@@ -394,8 +436,10 @@ body = f"""
 <p>All reads were mapped (minimap2, k = 15) to a panel of 241 green-algal and 7 other plastid genomes, 117 algal mitochondrial genomes, 1,249 nuclear rDNA sequences of Bryopsidales, the four bacterial genomes, and the slug mitochondrion and rDNA. Fourteen low-complexity windows that attracted thousands of unrelated reads were masked. Scripts 10, 11.</p></details>
 <details class="method"><summary>7. Naming the algae</summary>
 <p>Plastid reads were assigned to their best-matching plastid genome (divergence 3% or less over 1 kb or more). rbcL and tufA were cut out of every read spanning them, identical sequences counted, and each haplotype compared with 6,453 GenBank barcodes of Bryopsidales. Script 13.</p></details>
-<details class="method"><summary>8. Chimeric reads</summary>
-<p>Reads with a panel match and 500 bp or more left unexplained were re-aligned base by base (minimap2 map-hifi) to the Sanger primary and alternate assemblies plus the panel, and the remainder to the Purdue and Tampa assemblies. A junction needs a slug segment next to a non-slug segment, each at least 300 bp at 97% identity or better. Read totals for each class use confident matches only (3% divergence or less over 1 kb or more). Two reads count as independent molecules only if both of their ends differ by more than 50 bp. Reads set aside for matching a plastid genome only weakly were searched in the same alignments for plastid segments of 200 bp or more that are not simple repeats. Scripts 14, 15, 17.</p></details>
+<details class="method"><summary>8. Reads that join two kinds of DNA</summary>
+<p>Reads with a panel match and 500 bp or more left unexplained were re-aligned base by base (minimap2 map-hifi) to the Sanger primary and alternate assemblies plus the panel, and the remainder to the Purdue and Tampa assemblies. A junction needs a slug segment next to a non-slug segment, each at least 300 bp at 97% identity or better. Read totals for each class use confident matches only (3% divergence or less over 1 kb or more). Two reads count as independent molecules only if both of their ends differ by more than 50 bp. Reads set aside for matching a plastid genome only weakly were searched in the same alignments for plastid segments of 200 bp or more that are not simple repeats. Scripts 14, 15, 17.</p>
+<p>Two steps of the pipeline built later for the other species were applied to this library as well (scripts/genus/run_screens.sh, step crispata). Reads in which the first pass had found a plastid or mitochondrial piece of 60 to 5,000 bases at 95% identity or better, with 200 bases or more of the read on both sides, and not in a stretch of the panel that more than six such reads match (slug repeats that resemble it), were fetched again from the archive, aligned base by base to the primary assembly and the panel, and searched for an organelle piece of 100 bases or more that lies inside one continuous stretch of slug DNA, either between two alignments or as an insertion within one. And 40 evenly spaced blocks of each run, one read in a hundred, were aligned in the same way to count how often a read of slug DNA is joined to a piece of slug DNA from another sequence or more than 50 kb away, and how many reads are copies of another read (they share both ends). Scripts genus/54, 52, 31d, 33, 46.</p>
+<p>Last, every read with a join between chloroplast DNA and slug DNA was fetched again and the joins were compared with each other, read against read: 400 bases either side of each join, aligned between all reads. Two reads share a join when the alignment runs through it for 100 bases on both sides, puts the join of one on the join of the other within 6 bases, has no gap of that size beside it, and is 98% identical on both sides. Reads that share an end are copies of one molecule. This finds a join into repeated slug DNA, which no comparison by place can, and a join whose two reads were placed on different assemblies. Scripts genus/52, 33, 46, 51.</p></details>
 <details class="method"><summary>9. Chloroplast DNA in the assemblies</summary>
 <p>All four assemblies were cut into 10 kb windows and aligned base by base to the same panel. Matches of 200 bp or more at 97% identity or better are the exact copies. The rest were filtered for simple repeats (trinucleotide entropy of the matched panel sequence below 4.5 bits, or a panel window hit by 15 or more assembly windows) and whatever remained at 80% identity or better was listed one by one. For each exact plastid copy, a window of the copy plus 8 kb of neighbouring slug DNA was cut out. Repeats in the slug part were found empirically (100 bp bins hit by 4 or more of 20,000 reads) and masked, and every read of two of the three runs (ERR12356115 and ERR12353011, 53% of the data) was mapped to the masked windows; reads landing within 1.5 kb of a boundary were then aligned base by base. A read carries the junction if one alignment spans it by 300 bp on each side. It contradicts the junction if it matches 1 kb or more of slug flank at 98% or better, stops within 50 bp of the boundary, and has 300 bp or more left over. Scripts 22 to 27.</p></details>
 <details class="method"><summary>10. Algal genes by protein similarity</summary>

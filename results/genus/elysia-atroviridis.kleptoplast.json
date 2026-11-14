@@ -11,7 +11,7 @@
    "kind": "hifi",
    "platform": "PacBio Sequel II (HiFi)",
    "animal": "the sequenced animal (adult, Qingdao, China, 2024)",
-   "note": "The only long-read run behind the assembly.",
+   "note": "The only long-read run behind the assembly, in full.",
    "reads": 3514321,
    "bases": 30628534557,
    "bases_screened": 30628534557,

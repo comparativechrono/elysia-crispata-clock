@@ -441,7 +441,106 @@
     "n_flanked": 0
    },
    "min_identity": 0.97,
-   "locus_tests": null
+   "locus_tests": null,
+   "shapes": {
+    "min_identity": 0.97,
+    "min_segment": 300,
+    "min_short_piece": 100,
+    "reads_with_piece": {
+     "slug": 8233,
+     "cp": 69026,
+     "slugmt": 2125,
+     "algmt": 14,
+     "slugrDNA": 43
+    },
+    "reads_joining_slug": {
+     "cp": 16
+    },
+    "reads_joined_to_placed_slug": {
+     "cp": 14
+    },
+    "shapes": {
+     "insertion|slug_elsewhere": 3,
+     "one join|cp": 16
+    },
+    "shared_with_assembly": {
+     "algmt": 1
+    },
+    "second_pass": {},
+    "depth": {
+     "genome_bp": 828644843,
+     "library_bases": 30628534557,
+     "library_reads": 3514321,
+     "depth": 36.96
+    },
+    "background": {
+     "source": "sample",
+     "reads": 9962,
+     "reads_slug_only": 7918,
+     "reads_slug_placed": 7481,
+     "joining_unrelated": 88,
+     "slug_pieces": 7569,
+     "slug_pieces_joined": 176,
+     "joining_unrelated_any": 353,
+     "folding_back": 1,
+     "cp_reads": 134,
+     "cp_joined": 0,
+     "mt_reads": 9,
+     "mt_joined": 0,
+     "depth": {
+      "genome_bp": 828644843,
+      "library_bases": 30628534557,
+      "library_reads": 3514321,
+      "depth": 36.96,
+      "sample_one_in": 352,
+      "sample_reads_aligned": 9962,
+      "sample_bases_aligned": 85868011,
+      "spanning_depth": {
+       "100": 33.51,
+       "500": 31.83,
+       "1000": 29.73,
+       "3000": 21.52
+      },
+      "copies": {
+       "placed_reads": 8568,
+       "reads_with_a_copy_in_the_sample": 0,
+       "sample_fraction": 0.002835,
+       "copies_per_read": 0.0,
+       "copies_per_read_upper": 0.1235
+      }
+     },
+     "insertion_slug_elsewhere": {
+      "n": 30,
+      "unique": 13,
+      "unique_alone_at_place": 10
+     },
+     "shapes": {
+      "insertion|slug_elsewhere": 30
+     },
+     "second_pass": {}
+    },
+    "candidates": [],
+    "recurrent_joins": {
+     "joins_examined": 16,
+     "groups_same_well_only": 0,
+     "recurrent": [],
+     "near": [],
+     "joins_into_repeat": null,
+     "same_join_means": {
+      "runs_through_join_bases": 100,
+      "join_offset_max": 6,
+      "gap_max": 6,
+      "identity_min": 0.98
+     }
+    }
+   },
+   "sample": null,
+   "sensitivity": null,
+   "note": "The only long-read run behind the assembly, in full.",
+   "thinned": 1,
+   "candidate_places": null,
+   "repeat_joins": null,
+   "end_piece_control": null
   }
  ],
  "protein_screen": {

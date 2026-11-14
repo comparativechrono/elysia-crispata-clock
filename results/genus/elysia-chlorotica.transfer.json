@@ -342,7 +342,17 @@
        },
        "right": {
         "position": 1603,
-        "through": 3,
+        "through": 1,
+        "through_reads": [
+         "SRR7647856.731470"
+        ],
+        "through_with_gap": 2,
+        "through_with_gap_reads": {
+         "SRR7647856.279702": 47,
+         "SRR7647856.279703": 46
+        },
+        "through_molecules": 1,
+        "through_with_gap_molecules": 1,
         "stop_inside": 1772,
         "stop_outside": 14
        }
@@ -362,12 +372,22 @@
        "left": {
         "position": 53256,
         "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
         "stop_inside": 0,
         "stop_outside": 5
        },
        "right": {
         "position": 53486,
         "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
         "stop_inside": 0,
         "stop_outside": 0
        }
@@ -387,12 +407,25 @@
        "left": {
         "position": 362826,
         "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
         "stop_inside": 0,
         "stop_outside": 0
        },
        "right": {
         "position": 363302,
         "through": 2,
+        "through_reads": [
+         "SRR7647856.1569551",
+         "SRR7647856.1569552"
+        ],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 1,
+        "through_with_gap_molecules": 0,
         "stop_inside": 0,
         "stop_outside": 0
        }
@@ -412,12 +445,22 @@
        "left": {
         "position": 12447,
         "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
         "stop_inside": 655,
         "stop_outside": 1
        },
        "right": {
         "position": 12948,
         "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
         "stop_inside": 678,
         "stop_outside": 2
        }
@@ -437,12 +480,22 @@
        "left": {
         "position": 170867,
         "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
         "stop_inside": 626,
         "stop_outside": 1
        },
        "right": {
         "position": 171473,
         "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
         "stop_inside": 623,
         "stop_outside": 0
        }
@@ -462,501 +515,1624 @@
        "left": {
         "position": 2600,
         "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
         "stop_inside": 623,
         "stop_outside": 2159
        },
        "right": {
         "position": 3794,
-        "through": 1,
+        "through": 0,
+        "through_reads": [],
+        "through_with_gap": 1,
+        "through_with_gap_reads": {
+         "SRR7647856.6125998": 82
+        },
+        "through_molecules": 0,
+        "through_with_gap_molecules": 1,
         "stop_inside": 638,
+        "stop_outside": 0
+       }
+      }
+     },
+     {
+      "name": "bait|RQTK01000372.1:349485-355571|plastid|352485-352571",
+      "contig": "RQTK01000372.1",
+      "start": 352485,
+      "end": 352571,
+      "kind": "plastid",
+      "reads_aligned": 0,
+      "depth_locus": 0.0,
+      "depth_left_flank": 0.0,
+      "depth_right_flank": 0.0,
+      "edges": {
+       "left": {
+        "position": 352485,
+        "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 0,
+        "stop_outside": 0
+       },
+       "right": {
+        "position": 352571,
+        "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 0,
         "stop_outside": 0
        }
       }
      }
     ]
-   }
+   },
+   "shapes": {
+    "min_identity": 0.82,
+    "min_segment": 500,
+    "min_short_piece": 150,
+    "reads_with_piece": {
+     "cp": 245246,
+     "slugmt": 11440,
+     "slug": 16821,
+     "slugrDNA": 4
+    },
+    "reads_joining_slug": {
+     "cp": 4579,
+     "slugmt": 211,
+     "slug_in_cp": 2
+    },
+    "reads_joined_to_placed_slug": {
+     "cp": 3948,
+     "slugmt": 175,
+     "slug_in_cp": 1
+    },
+    "shapes": {
+     "fold-back|cp": 14,
+     "fold-back|slugmt": 2,
+     "insertion|cp": 8,
+     "insertion|slug_elsewhere": 3,
+     "insertion|slugmt": 2,
+     "insertion (short piece)|cp": 4,
+     "insertion (short piece)|slugmt": 2,
+     "mirror|slug_in_cp": 2,
+     "one join|cp": 4634,
+     "one join|slugmt": 211
+    },
+    "shared_with_assembly": {
+     "cp": 39,
+     "algmt": 30
+    },
+    "second_pass": {},
+    "depth": {
+     "genome_bp": 557480303,
+     "library_bases": 9445445540,
+     "library_reads": 7717313,
+     "depth": 16.94
+    },
+    "background": {
+     "source": "all reads",
+     "reads": 1140091,
+     "reads_slug_only": 1026560,
+     "reads_slug_placed": 902018,
+     "joining_unrelated": 24718,
+     "slug_pieces": 926736,
+     "slug_pieces_joined": 49436,
+     "joining_unrelated_any": 64939,
+     "folding_back": 82660,
+     "cp_reads": 43514,
+     "cp_joined": 2397,
+     "mt_reads": 2116,
+     "mt_joined": 113,
+     "depth": {
+      "genome_bp": 557480303,
+      "library_bases": 9445445540,
+      "library_reads": 7717313,
+      "depth": 16.94,
+      "sample_one_in": 1,
+      "sample_reads_aligned": 1140091,
+      "sample_bases_aligned": 3128807759,
+      "spanning_depth": {
+       "100": 3.36,
+       "500": 2.54,
+       "1000": 1.52,
+       "3000": 0.09
+      },
+      "copies": {
+       "placed_reads": 434213,
+       "reads_with_a_copy_in_the_sample": 1575,
+       "pairs_sharing_both_ends": 853,
+       "pairs_sharing_one_end_and_just_missing_the_other": 791,
+       "tolerance": 30,
+       "sample_fraction": 0.147732,
+       "copies_per_read": 0.0246,
+       "copies_per_read_upper": 0.0258
+      }
+     },
+     "insertion_slug_elsewhere": {
+      "n": 835,
+      "unique": 234,
+      "unique_alone_at_place": 225
+     },
+     "shapes": {
+      "insertion|cp": 7,
+      "insertion|slug_elsewhere": 835,
+      "insertion|slugmt": 1,
+      "insertion (short piece)|cp": 3,
+      "insertion (short piece)|slugmt": 1,
+      "mirror|slug_in_cp": 2,
+      "one join|cp": 268,
+      "one join|slugmt": 10
+     },
+     "second_pass": {
+      "slug_elsewhere|insert on both strands": 8
+     }
+    },
+    "candidates": [
+     {
+      "read": "SRR7647856.5712567",
+      "read_length": 4311,
+      "shape": "insertion",
+      "insert": "cp",
+      "how": "between alignments",
+      "flank_sequence": "RQTK01000407.1",
+      "left_from": 281395,
+      "left_to": 281878,
+      "right_from": 282570,
+      "right_to": 283400,
+      "flank_strand": "+",
+      "flank_mapq": 60,
+      "flank_identity": 0.8628,
+      "reference_gap": 692,
+      "read_gap": 2067,
+      "piece_sequence": "EU912438.1",
+      "piece_from": 64751,
+      "piece_to": 66358,
+      "piece_bp": 1707,
+      "piece_pieces": 1,
+      "piece_identity": 0.8783,
+      "place": {
+       "sequence": "RQTK01000407.1",
+       "position": 282570
+      },
+      "other_reads_crossing": 4,
+      "assembly_locus": null,
+      "second_pass": null,
+      "folds_back": true,
+      "piece_genes": [
+       "rrl_1"
+      ]
+     },
+     {
+      "read": "SRR7647856.4239938",
+      "read_length": 3724,
+      "shape": "insertion",
+      "insert": "cp",
+      "how": "between alignments",
+      "flank_sequence": "RQTK01001142.1",
+      "left_from": 51172,
+      "left_to": 52235,
+      "right_from": 52936,
+      "right_to": 53507,
+      "flank_strand": "+",
+      "flank_mapq": 58,
+      "flank_identity": 0.8531,
+      "reference_gap": 701,
+      "read_gap": 1931,
+      "piece_sequence": "NC_011600.1",
+      "piece_from": 62953,
+      "piece_to": 63883,
+      "piece_bp": 1160,
+      "piece_pieces": 1,
+      "piece_identity": 0.8324,
+      "place": {
+       "sequence": "RQTK01001142.1",
+       "position": 52936
+      },
+      "other_reads_crossing": 4,
+      "assembly_locus": null,
+      "second_pass": null,
+      "folds_back": false,
+      "piece_genes": [
+       "trnI_gau",
+       "tRNA-Ile",
+       "trnA_ugc",
+       "tRNA-Ala"
+      ]
+     },
+     {
+      "read": "SRR7647856.1570216",
+      "read_length": 3980,
+      "shape": "insertion",
+      "insert": "cp",
+      "how": "between alignments",
+      "flank_sequence": "RQTK01000223.1",
+      "left_from": 438937,
+      "left_to": 439567,
+      "right_from": 439998,
+      "right_to": 441877,
+      "flank_strand": "+",
+      "flank_mapq": 56,
+      "flank_identity": 0.842,
+      "reference_gap": 431,
+      "read_gap": 1524,
+      "piece_sequence": "NC_011600.1",
+      "piece_from": 19754,
+      "piece_to": 20226,
+      "piece_bp": 530,
+      "piece_pieces": 1,
+      "piece_identity": 0.8765,
+      "place": {
+       "sequence": "RQTK01000223.1",
+       "position": 439998
+      },
+      "other_reads_crossing": 3,
+      "assembly_locus": null,
+      "second_pass": null,
+      "folds_back": false,
+      "piece_genes": [
+       "rpoC1",
+       "RNA polymerase beta' subunit"
+      ]
+     },
+     {
+      "read": "SRR7647856.3206590",
+      "read_length": 3194,
+      "shape": "insertion",
+      "insert": "cp",
+      "how": "between alignments",
+      "flank_sequence": "RQTK01000317.1",
+      "left_from": 349938,
+      "left_to": 350513,
+      "right_from": 348691,
+      "right_to": 349246,
+      "flank_strand": "-",
+      "flank_mapq": 31,
+      "flank_identity": 0.8664,
+      "reference_gap": 692,
+      "read_gap": 1470,
+      "piece_sequence": "EU912438.1",
+      "piece_from": 27,
+      "piece_to": 445,
+      "piece_bp": 516,
+      "piece_pieces": 1,
+      "piece_identity": 0.838,
+      "place": {
+       "sequence": "RQTK01000317.1",
+       "position": 349246
+      },
+      "other_reads_crossing": 4,
+      "assembly_locus": null,
+      "second_pass": null,
+      "folds_back": false,
+      "piece_genes": [
+       "psaM",
+       "M protein of photosystem I",
+       "chlI",
+       "ATP-binding subunit of protochlorophyllide reductase"
+      ]
+     },
+     {
+      "read": "SRR7647856.5673304",
+      "read_length": 4654,
+      "shape": "insertion",
+      "insert": "cp",
+      "how": "between alignments (short piece)",
+      "flank_sequence": "RQTK01000080.1",
+      "left_from": 821524,
+      "left_to": 822441,
+      "right_from": 817810,
+      "right_to": 818801,
+      "flank_strand": "-",
+      "flank_mapq": 55,
+      "flank_identity": 0.8542,
+      "reference_gap": 2723,
+      "read_gap": 1804,
+      "piece_sequence": "NC_011600.1",
+      "piece_from": 6447,
+      "piece_to": 6864,
+      "piece_bp": 478,
+      "piece_pieces": 1,
+      "piece_identity": 0.9081,
+      "place": {
+       "sequence": "RQTK01000080.1",
+       "position": 821524
+      },
+      "other_reads_crossing": 0,
+      "assembly_locus": null,
+      "second_pass": null,
+      "folds_back": false,
+      "piece_genes": [
+       "urf-1",
+       "unidentified reading frame 1"
+      ]
+     },
+     {
+      "read": "SRR7647856.6932495",
+      "read_length": 4203,
+      "shape": "insertion",
+      "insert": "cp",
+      "how": "between alignments (short piece)",
+      "flank_sequence": "RQTK01000046.1",
+      "left_from": 111991,
+      "left_to": 113057,
+      "right_from": 110128,
+      "right_to": 111206,
+      "flank_strand": "-",
+      "flank_mapq": 44,
+      "flank_identity": 0.8327,
+      "reference_gap": 785,
+      "read_gap": 1443,
+      "piece_sequence": "NC_011600.1",
+      "piece_from": 60027,
+      "piece_to": 60460,
+      "piece_bp": 436,
+      "piece_pieces": 1,
+      "piece_identity": 0.9024,
+      "place": {
+       "sequence": "RQTK01000046.1",
+       "position": 111206
+      },
+      "other_reads_crossing": 3,
+      "assembly_locus": null,
+      "second_pass": null,
+      "folds_back": false,
+      "piece_genes": [
+       "dnaK",
+       "heat shock protein 70"
+      ]
+     },
+     {
+      "read": "SRR7647856.2542386",
+      "read_length": 2553,
+      "shape": "insertion",
+      "insert": "cp",
+      "how": "inside one alignment",
+      "flank_sequence": "RQTK01000662.1",
+      "left_from": 98245,
+      "left_to": 100091,
+      "right_from": 98245,
+      "right_to": 100091,
+      "flank_strand": "+",
+      "flank_mapq": 60,
+      "flank_identity": 0.8585,
+      "reference_gap": 0,
+      "read_gap": 232,
+      "piece_sequence": "EU912438.1",
+      "piece_from": 97101,
+      "piece_to": 97280,
+      "piece_bp": 194,
+      "piece_pieces": 1,
+      "piece_identity": 0.9128,
+      "place": {
+       "sequence": "RQTK01000662.1",
+       "position": 99526
+      },
+      "other_reads_crossing": 3,
+      "assembly_locus": null,
+      "second_pass": null,
+      "folds_back": false,
+      "piece_genes": [
+       "psaD",
+       "PSI reaction center subunit II"
+      ]
+     },
+     {
+      "read": "SRR7647856.3776782",
+      "read_length": 4628,
+      "shape": "insertion",
+      "insert": "cp",
+      "how": "between alignments (short piece)",
+      "flank_sequence": "RQTK01000339.1",
+      "left_from": 318994,
+      "left_to": 319551,
+      "right_from": 316682,
+      "right_to": 318401,
+      "flank_strand": "-",
+      "flank_mapq": 60,
+      "flank_identity": 0.8541,
+      "reference_gap": 593,
+      "read_gap": 1589,
+      "piece_sequence": "EU912438.1",
+      "piece_from": 92273,
+      "piece_to": 92429,
+      "piece_bp": 166,
+      "piece_pieces": 1,
+      "piece_identity": 0.9212,
+      "place": {
+       "sequence": "RQTK01000339.1",
+       "position": 318401
+      },
+      "other_reads_crossing": 1,
+      "assembly_locus": null,
+      "second_pass": null,
+      "folds_back": false,
+      "piece_genes": [
+       "ftrC",
+       "ferredoxin-thioredoxin reductase catalytic chain"
+      ]
+     },
+     {
+      "read": "SRR7647856.1389423",
+      "read_length": 3780,
+      "shape": "insertion",
+      "insert": "cp",
+      "how": "inside one alignment",
+      "flank_sequence": "RQTK01000070.1",
+      "left_from": 474940,
+      "left_to": 476687,
+      "right_from": 474940,
+      "right_to": 476687,
+      "flank_strand": "-",
+      "flank_mapq": 60,
+      "flank_identity": 0.8294,
+      "reference_gap": 0,
+      "read_gap": 168,
+      "piece_sequence": "EU912438.1",
+      "piece_from": 38735,
+      "piece_to": 38891,
+      "piece_bp": 158,
+      "piece_pieces": 1,
+      "piece_identity": 0.9379,
+      "place": {
+       "sequence": "RQTK01000070.1",
+       "position": 476498
+      },
+      "other_reads_crossing": 4,
+      "assembly_locus": null,
+      "second_pass": null,
+      "folds_back": false,
+      "piece_genes": [
+       "rpl11",
+       "ribosomal protein L11"
+      ]
+     },
+     {
+      "read": "SRR7647856.6311928",
+      "read_length": 3193,
+      "shape": "insertion",
+      "insert": "slugmt",
+      "how": "between alignments (short piece)",
+      "flank_sequence": "RQTK01000321.1",
+      "left_from": 188432,
+      "left_to": 189456,
+      "right_from": 187030,
+      "right_to": 187603,
+      "flank_strand": "-",
+      "flank_mapq": 20,
+      "flank_identity": 0.8532,
+      "reference_gap": 829,
+      "read_gap": 1543,
+      "piece_sequence": "NC_010567.1",
+      "piece_from": 8558,
+      "piece_to": 8964,
+      "piece_bp": 434,
+      "piece_pieces": 1,
+      "piece_identity": 0.8902,
+      "place": {
+       "sequence": "RQTK01000321.1",
+       "position": 187603
+      },
+      "other_reads_crossing": 3,
+      "assembly_locus": null,
+      "second_pass": null,
+      "folds_back": false,
+      "piece_genes": [
+       "tRNA-Leu",
+       "ATP8",
+       "ATP synthase F0 subunit 8",
+       "tRNA-Asn",
+       "tRNA-Cys",
+       "ATP6"
+      ]
+     },
+     {
+      "read": "SRR7647856.3402594",
+      "read_length": 2938,
+      "shape": "insertion",
+      "insert": "slugmt",
+      "how": "inside one alignment",
+      "flank_sequence": "RQTK01000299.1",
+      "left_from": 9380,
+      "left_to": 11474,
+      "right_from": 9380,
+      "right_to": 11474,
+      "flank_strand": "+",
+      "flank_mapq": 60,
+      "flank_identity": 0.8324,
+      "reference_gap": 0,
+      "read_gap": 211,
+      "piece_sequence": "NC_010567.1",
+      "piece_from": 6390,
+      "piece_to": 6547,
+      "piece_bp": 159,
+      "piece_pieces": 1,
+      "piece_identity": 0.9506,
+      "place": {
+       "sequence": "RQTK01000299.1",
+       "position": 10800
+      },
+      "other_reads_crossing": 3,
+      "assembly_locus": null,
+      "second_pass": null,
+      "folds_back": false,
+      "piece_genes": [
+       "ND4L",
+       "NADH dehydrogenase subunit 4L",
+       "CYTB",
+       "cytochrome b"
+      ]
+     },
+     {
+      "read": "SRR7647856.3762789",
+      "read_length": 2457,
+      "shape": "mirror",
+      "insert": "slug_in_cp",
+      "how": "between alignments",
+      "flank_sequence": "cp|NC_011600.1",
+      "left_from": 110759,
+      "left_to": 111583,
+      "right_from": 110029,
+      "right_to": 110695,
+      "flank_strand": "-",
+      "flank_mapq": 0,
+      "flank_identity": 0.8677,
+      "reference_gap": 64,
+      "read_gap": 718,
+      "piece_sequence": "RQTK01001802.1",
+      "piece_from": 5592,
+      "piece_to": 6203,
+      "piece_bp": 686,
+      "piece_pieces": 1,
+      "piece_identity": 0.8358,
+      "place": null,
+      "other_reads_crossing": null,
+      "assembly_locus": null,
+      "second_pass": null,
+      "folds_back": false,
+      "flank_genes": [
+       "rps14",
+       "ribosomal protein S14",
+       "rrf_2",
+       "5S ribosomal RNA",
+       "rrl_2",
+       "23S ribosomal RNA"
+      ]
+     },
+     {
+      "read": "SRR7647856.2428127",
+      "read_length": 3189,
+      "shape": "mirror",
+      "insert": "slug_in_cp",
+      "how": "between alignments",
+      "flank_sequence": "cp|EU912438.1",
+      "left_from": 47121,
+      "left_to": 47578,
+      "right_from": 47580,
+      "right_to": 48669,
+      "flank_strand": "+",
+      "flank_mapq": 0,
+      "flank_identity": 0.8497,
+      "reference_gap": 2,
+      "read_gap": 1102,
+      "piece_sequence": "RQTK01000045.1",
+      "piece_from": 290031,
+      "piece_to": 290438,
+      "piece_bp": 509,
+      "piece_pieces": 1,
+      "piece_identity": 0.8337,
+      "place": null,
+      "other_reads_crossing": null,
+      "assembly_locus": null,
+      "second_pass": null,
+      "folds_back": false,
+      "flank_genes": [
+       "rps7",
+       "ribosomal protein S7",
+       "rps12",
+       "ribosomal protein S12",
+       "rpl31",
+       "ribosomal protein L31"
+      ]
+     }
+    ],
+    "recurrent_joins": {
+     "joins_examined": 3275,
+     "groups_same_well_only": 308,
+     "recurrent": [],
+     "near": [
+      {
+       "insert": "cp",
+       "organelle_positions_apart": 31,
+       "alignment": {
+        "runs_through_the_join": false,
+        "longest_gap_near_join": 1,
+        "join_offset": null,
+        "identity_organelle_side": 0.817,
+        "identity_slug_side": 0.0
+       },
+       "members": [
+        {
+         "read": "SRR7647856.5156998",
+         "join_at": 2196,
+         "organelle": "cp|EU912438.1",
+         "organelle_position": 78790,
+         "organelle_from": 77563,
+         "organelle_to": 78790,
+         "organelle_strand": "-",
+         "slug": "RQTK01000473.1",
+         "slug_from": 239,
+         "slug_to": 2467,
+         "slug_mapq": 1
+        },
+        {
+         "read": "SRR7647856.5897724",
+         "join_at": 1123,
+         "organelle": "cp|NC_011600.1",
+         "organelle_position": 78759,
+         "organelle_from": 77505,
+         "organelle_to": 78759,
+         "organelle_strand": "-",
+         "slug": "RQTK01000473.1",
+         "slug_from": 841,
+         "slug_to": 1936,
+         "slug_mapq": 1
+        }
+       ]
+      }
+     ],
+     "joins_into_repeat": {
+      "file": "satellite.fa",
+      "molecules": {
+       "cp": 59,
+       "slugmt": 5
+      },
+      "pairs_within_40_bases": [
+       {
+        "insert": "cp",
+        "positions": [
+         78759,
+         78790
+        ],
+        "reads": [
+         "SRR7647856.5897724",
+         "SRR7647856.5156998"
+        ]
+       }
+      ],
+      "pairs_expected_by_chance": {
+       "cp": 0.59,
+       "slugmt": 0.03
+      }
+     },
+     "same_join_means": {
+      "runs_through_join_bases": 100,
+      "join_offset_max": 15,
+      "gap_max": 15,
+      "identity_min": 0.7
+     }
+    }
+   },
+   "sample": null,
+   "sensitivity": null,
+   "note": "The whole run.",
+   "thinned": 1,
+   "candidate_places": null,
+   "repeat_joins": null,
+   "end_piece_control": null
   },
   {
    "library": "adult",
    "label": "Second adult, short reads",
    "runs": [
-    "SRR7647851"
+    "SRR7647851",
+    "SRR7647852",
+    "SRR7647853",
+    "SRR7647854",
+    "SRR7647849",
+    "SRR7647850"
    ],
    "kind": "short",
-   "platform": "Illumina HiSeq 2000 (paired, 500 bp inserts)",
+   "platform": "Illumina HiSeq 2000 (paired; inserts of 170, 500 and 800 bp)",
    "animal": "an adult used for the short reads of the assembly",
-   "reads": 6000000,
-   "bases": 600000000,
-   "bases_screened": 6000000000,
+   "reads": 1024996320,
+   "bases": 102499632000,
+   "bases_screened": 102499632000,
    "chimera": {
     "rates": {
      "cp": {
-      "pairs_with_mate": 438580,
-      "pairs_also_with_slug": 2420,
-      "rate": 0.00552
+      "pairs_with_mate": 57986168,
+      "pairs_also_with_slug": 71401,
+      "molecules": 1464,
+      "rate": 0.001231,
+      "split_mates": 6952,
+      "split_molecules": 152,
+      "split_rate": 0.00012,
+      "examined": {
+       "pairs_with_mate": 1199241,
+       "pairs_also_with_slug": 1476,
+       "split_mates": 160
+      }
      },
      "slugmt": {
-      "pairs_with_mate": 11373,
-      "pairs_also_with_slug": 42,
-      "rate": 0.00369
-     },
-     "slugrDNA": {
-      "pairs_with_mate": 340,
-      "pairs_also_with_slug": 4,
-      "rate": 0.01176
-     },
-     "algrDNA": {
-      "pairs_with_mate": 69,
-      "pairs_also_with_slug": 2,
-      "rate": 0.02899
+      "pairs_with_mate": 1113806,
+      "pairs_also_with_slug": 976,
+      "molecules": 31,
+      "rate": 0.000876,
+      "split_mates": 7,
+      "split_molecules": 4,
+      "split_rate": 6e-06,
+      "examined": {
+       "pairs_with_mate": 76432,
+       "pairs_also_with_slug": 36,
+       "split_mates": 7
+      }
      },
      "algmt": {
-      "pairs_with_mate": 20,
+      "pairs_with_mate": 1240,
       "pairs_also_with_slug": 0,
-      "rate": 0.0
+      "molecules": 0,
+      "rate": 0.0,
+      "split_mates": 0,
+      "split_molecules": 0,
+      "split_rate": 0.0,
+      "examined": {
+       "pairs_with_mate": 67,
+       "pairs_also_with_slug": 0,
+       "split_mates": 0
+      }
+     },
+     "slugrDNA": {
+      "pairs_with_mate": 1,
+      "pairs_also_with_slug": 0,
+      "molecules": 0,
+      "rate": 0.0,
+      "split_mates": 0,
+      "split_molecules": 0,
+      "split_rate": 0.0,
+      "examined": {
+       "pairs_with_mate": 1,
+       "pairs_also_with_slug": 0,
+       "split_mates": 0
+      }
      }
     },
-    "recurrent": [
-     {
-      "kind": "cp",
-      "slug": "RQTK01000372.1",
-      "start": 352000,
-      "pairs": 6,
-      "distinct_pairs": 4,
-      "other_targets": [
-       "cp|EU912438.1",
-       "cp|NC_011600.1"
-      ],
-      "other_positions": [
-       41095,
-       67875,
-       67895,
-       67896,
-       67901,
-       67917
-      ]
-     },
-     {
-      "kind": "slugrDNA",
-      "slug": "RQTK01004700.1",
-      "start": 0,
-      "pairs": 3,
-      "distinct_pairs": 3,
-      "other_targets": [
-       "slugrDNA|GQ996635.1",
-       "slugrDNA|OR177832.1"
-      ],
-      "other_positions": [
-       239,
-       295,
-       327
-      ]
-     }
-    ],
+    "recurrent": [],
+    "recurrent_breaks": [],
+    "same_join": [],
+    "same_join_groups": 0,
+    "same_join_within": 1000,
+    "same_join_expected_by_chance": {
+     "cp": 0.0837,
+     "slugmt": 0.0003
+    },
     "split_mates": {
-     "cp": 105,
-     "slugmt": 1
+     "cp": 160,
+     "slugmt": 7
+    },
+    "split_end_piece": {
+     "cp": {
+      "organelle": 58,
+      "slug": 94
+     },
+     "slugmt": {
+      "organelle": 2,
+      "slug": 2
+     }
+    },
+    "plain_pairs_that_look_mixed": {},
+    "organelle_side_is_simple_sequence": {
+     "algmt": 26,
+     "cp": 6
     },
     "split_examples": [
      {
-      "read": "SRR7647851.61122.2",
+      "read": "SRR7647849.2123382.1",
       "other": "cp",
-      "slug": "RQTK01002418.1",
-      "slug_pos": 3970,
+      "slug": "RQTK01001261.1",
+      "slug_break": 122642,
+      "slug_strand": "-",
       "other_t": "cp|NC_011600.1",
-      "other_pos": 14169,
-      "slug_len": 54,
-      "other_len": 46
+      "other_break": 21605,
+      "other_strand": "+",
+      "other_ts": 21555,
+      "other_te": 21605,
+      "slug_len": 47,
+      "other_len": 50,
+      "bases_between": 3,
+      "slug_mapq": 25,
+      "read_start": 122595,
+      "slug_far": 122595,
+      "end_piece": "organelle",
+      "w": 1.0
      },
      {
-      "read": "SRR7647851.61126.2",
+      "read": "SRR7647849.2124750.1",
       "other": "cp",
-      "slug": "RQTK01002418.1",
-      "slug_pos": 3970,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 14169,
-      "slug_len": 54,
-      "other_len": 46
-     },
-     {
-      "read": "SRR7647851.139340.1",
-      "other": "cp",
-      "slug": "RQTK01000401.1",
-      "slug_pos": 261002,
+      "slug": "RQTK01000116.1",
+      "slug_break": 622130,
+      "slug_strand": "+",
       "other_t": "cp|NC_011600.1",
-      "other_pos": 69650,
-      "slug_len": 54,
-      "other_len": 46
-     },
-     {
-      "read": "SRR7647851.203570.2",
-      "other": "cp",
-      "slug": "RQTK01000255.1",
-      "slug_pos": 271800,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 3223,
-      "slug_len": 46,
-      "other_len": 54
-     },
-     {
-      "read": "SRR7647851.481630.1",
-      "other": "cp",
-      "slug": "RQTK01000384.1",
-      "slug_pos": 65803,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 79278,
-      "slug_len": 51,
-      "other_len": 53
-     },
-     {
-      "read": "SRR7647851.526090.1",
-      "other": "cp",
-      "slug": "RQTK01000045.1",
-      "slug_pos": 886844,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 20940,
-      "slug_len": 51,
-      "other_len": 49
-     },
-     {
-      "read": "SRR7647851.721080.2",
-      "other": "cp",
-      "slug": "RQTK01001483.1",
-      "slug_pos": 17115,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 21791,
-      "slug_len": 56,
-      "other_len": 44
-     },
-     {
-      "read": "SRR7647851.1052380.1",
-      "other": "cp",
-      "slug": "RQTK01001125.1",
-      "slug_pos": 23961,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 54222,
-      "slug_len": 59,
-      "other_len": 41
-     },
-     {
-      "read": "SRR7647851.1224760.2",
-      "other": "cp",
-      "slug": "RQTK01000828.1",
-      "slug_pos": 4222,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 33775,
-      "slug_len": 57,
-      "other_len": 43
-     },
-     {
-      "read": "SRR7647851.1469276.2",
-      "other": "cp",
-      "slug": "RQTK01000350.1",
-      "slug_pos": 90725,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 21217,
-      "slug_len": 46,
-      "other_len": 54
-     },
-     {
-      "read": "SRR7647851.1499570.2",
-      "other": "cp",
-      "slug": "RQTK01000495.1",
-      "slug_pos": 92442,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 107071,
-      "slug_len": 59,
-      "other_len": 42
-     },
-     {
-      "read": "SRR7647851.2008230.1",
-      "other": "cp",
-      "slug": "RQTK01005869.1",
-      "slug_pos": 529,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 2916,
-      "slug_len": 43,
-      "other_len": 57
-     },
-     {
-      "read": "SRR7647851.2123530.1",
-      "other": "cp",
-      "slug": "RQTK01000184.1",
-      "slug_pos": 425739,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 105848,
-      "slug_len": 46,
-      "other_len": 56
-     },
-     {
-      "read": "SRR7647851.2598960.2",
-      "other": "cp",
-      "slug": "RQTK01000301.1",
-      "slug_pos": 60220,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 41696,
-      "slug_len": 48,
-      "other_len": 52
-     },
-     {
-      "read": "SRR7647851.2782660.1",
-      "other": "cp",
-      "slug": "RQTK01000386.1",
-      "slug_pos": 297573,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 78889,
-      "slug_len": 58,
-      "other_len": 42
-     },
-     {
-      "read": "SRR7647851.3190530.1",
-      "other": "cp",
-      "slug": "RQTK01000159.1",
-      "slug_pos": 594491,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 101610,
-      "slug_len": 59,
-      "other_len": 42
-     },
-     {
-      "read": "SRR7647851.3210700.1",
-      "other": "cp",
-      "slug": "RQTK01000617.1",
-      "slug_pos": 71912,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 86132,
-      "slug_len": 55,
-      "other_len": 45
-     },
-     {
-      "read": "SRR7647851.3662040.1",
-      "other": "cp",
-      "slug": "RQTK01000151.1",
-      "slug_pos": 447300,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 22471,
-      "slug_len": 43,
-      "other_len": 57
-     },
-     {
-      "read": "SRR7647851.3833475.2",
-      "other": "slugmt",
-      "slug": "RQTK01001455.1",
-      "slug_pos": 47513,
-      "other_t": "RQTK01000434.1",
-      "other_pos": 12471,
-      "slug_len": 60,
-      "other_len": 40
-     },
-     {
-      "read": "SRR7647851.3876380.1",
-      "other": "cp",
-      "slug": "RQTK01000241.1",
-      "slug_pos": 209324,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 79158,
-      "slug_len": 56,
-      "other_len": 44
-     },
-     {
-      "read": "SRR7647851.4859470.2",
-      "other": "cp",
-      "slug": "RQTK01000079.1",
-      "slug_pos": 395833,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 40595,
-      "slug_len": 45,
-      "other_len": 57
-     },
-     {
-      "read": "SRR7647851.5173210.1",
-      "other": "cp",
-      "slug": "RQTK01000221.1",
-      "slug_pos": 114474,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 37518,
+      "other_break": 21132,
+      "other_strand": "-",
+      "other_ts": 21083,
+      "other_te": 21132,
       "slug_len": 52,
-      "other_len": 48
+      "other_len": 49,
+      "bases_between": -1,
+      "slug_mapq": 25,
+      "read_start": 622078,
+      "slug_far": 622078,
+      "end_piece": "slug",
+      "w": 49.864576435141686
      },
      {
-      "read": "SRR7647851.5473280.1",
+      "read": "SRR7647849.2144000.2",
       "other": "cp",
-      "slug": "RQTK01000560.1",
-      "slug_pos": 166187,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 19893,
-      "slug_len": 60,
-      "other_len": 40
-     },
-     {
-      "read": "SRR7647851.5594390.1",
-      "other": "cp",
-      "slug": "RQTK01000313.1",
-      "slug_pos": 296953,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 610,
-      "slug_len": 46,
-      "other_len": 55
-     },
-     {
-      "read": "SRR7647851.5995250.1",
-      "other": "cp",
-      "slug": "RQTK01000280.1",
-      "slug_pos": 317241,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 18687,
-      "slug_len": 59,
-      "other_len": 41
-     },
-     {
-      "read": "SRR7647851.6031660.1",
-      "other": "cp",
-      "slug": "RQTK01000039.1",
-      "slug_pos": 964542,
+      "slug": "RQTK01000472.1",
+      "slug_break": 157517,
+      "slug_strand": "+",
       "other_t": "cp|EU912438.1",
-      "other_pos": 54109,
-      "slug_len": 58,
-      "other_len": 43
+      "other_break": 91966,
+      "other_strand": "+",
+      "other_ts": 91917,
+      "other_te": 91966,
+      "slug_len": 51,
+      "other_len": 49,
+      "bases_between": 0,
+      "slug_mapq": 33,
+      "read_start": 157517,
+      "slug_far": 157568,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
      },
      {
-      "read": "SRR7647851.6422195.2",
+      "read": "SRR7647849.2155700.2",
       "other": "cp",
-      "slug": "RQTK01000285.1",
-      "slug_pos": 159915,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 19423,
-      "slug_len": 61,
-      "other_len": 40
-     },
-     {
-      "read": "SRR7647851.6970290.1",
-      "other": "cp",
-      "slug": "RQTK01000200.1",
-      "slug_pos": 438201,
+      "slug": "RQTK01001084.1",
+      "slug_break": 114090,
+      "slug_strand": "+",
       "other_t": "cp|NC_011600.1",
-      "other_pos": 22031,
-      "slug_len": 56,
-      "other_len": 45
-     },
-     {
-      "read": "SRR7647851.7193280.2",
-      "other": "cp",
-      "slug": "RQTK01000127.1",
-      "slug_pos": 216789,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 31369,
-      "slug_len": 55,
-      "other_len": 47
-     },
-     {
-      "read": "SRR7647851.7452700.1",
-      "other": "cp",
-      "slug": "RQTK01000058.1",
-      "slug_pos": 216498,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 84368,
-      "slug_len": 42,
-      "other_len": 55
-     },
-     {
-      "read": "SRR7647851.7463910.1",
-      "other": "cp",
-      "slug": "RQTK01001371.1",
-      "slug_pos": 100822,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 107966,
-      "slug_len": 60,
-      "other_len": 41
-     },
-     {
-      "read": "SRR7647851.7838930.2",
-      "other": "cp",
-      "slug": "RQTK01000452.1",
-      "slug_pos": 94843,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 33062,
-      "slug_len": 58,
-      "other_len": 43
-     },
-     {
-      "read": "SRR7647851.7974000.2",
-      "other": "cp",
-      "slug": "RQTK01000459.1",
-      "slug_pos": 383798,
-      "other_t": "cp|AF207527.1",
-      "other_pos": 1732,
-      "slug_len": 49,
-      "other_len": 52
-     },
-     {
-      "read": "SRR7647851.8920020.2",
-      "other": "cp",
-      "slug": "RQTK01000075.1",
-      "slug_pos": 481381,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 84319,
-      "slug_len": 40,
-      "other_len": 60
-     },
-     {
-      "read": "SRR7647851.9101190.2",
-      "other": "cp",
-      "slug": "RQTK01000366.1",
-      "slug_pos": 9185,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 105342,
-      "slug_len": 56,
-      "other_len": 46
-     },
-     {
-      "read": "SRR7647851.9566759.2",
-      "other": "cp",
-      "slug": "RQTK01002418.1",
-      "slug_pos": 3970,
-      "other_t": "cp|NC_011600.1",
-      "other_pos": 14169,
-      "slug_len": 54,
-      "other_len": 46
-     },
-     {
-      "read": "SRR7647851.9809360.2",
-      "other": "cp",
-      "slug": "RQTK01000198.1",
-      "slug_pos": 423761,
-      "other_t": "cp|EU912438.1",
-      "other_pos": 113539,
+      "other_break": 69052,
+      "other_strand": "+",
+      "other_ts": 69052,
+      "other_te": 69095,
       "slug_len": 57,
-      "other_len": 43
+      "other_len": 43,
+      "bases_between": 0,
+      "slug_mapq": 48,
+      "read_start": 114033,
+      "slug_far": 114033,
+      "end_piece": "slug",
+      "w": 49.864576435141686
      },
      {
-      "read": "SRR7647851.9987140.1",
+      "read": "SRR7647849.8100100.2",
       "other": "cp",
-      "slug": "RQTK01000041.1",
-      "slug_pos": 186360,
+      "slug": "RQTK01000124.1",
+      "slug_break": 576394,
+      "slug_strand": "+",
       "other_t": "cp|NC_011600.1",
-      "other_pos": 24252,
-      "slug_len": 58,
-      "other_len": 42
+      "other_break": 93053,
+      "other_strand": "-",
+      "other_ts": 93010,
+      "other_te": 93053,
+      "slug_len": 48,
+      "other_len": 43,
+      "bases_between": 9,
+      "slug_mapq": 36,
+      "read_start": 576346,
+      "slug_far": 576346,
+      "end_piece": "slug",
+      "w": 49.864576435141686
      },
      {
-      "read": "SRR7647851.10064290.1",
+      "read": "SRR7647849.20027900.1",
       "other": "cp",
-      "slug": "RQTK01001093.1",
-      "slug_pos": 59975,
+      "slug": "RQTK01000210.1",
+      "slug_break": 60855,
+      "slug_strand": "-",
       "other_t": "cp|EU912438.1",
-      "other_pos": 32370,
+      "other_break": 22265,
+      "other_strand": "+",
+      "other_ts": 22265,
+      "other_te": 22321,
+      "slug_len": 46,
+      "other_len": 56,
+      "bases_between": -2,
+      "slug_mapq": 23,
+      "read_start": 60855,
+      "slug_far": 60901,
+      "end_piece": "slug",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.20028150.1",
+      "other": "cp",
+      "slug": "RQTK01000272.1",
+      "slug_break": 57532,
+      "slug_strand": "+",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 46732,
+      "other_strand": "-",
+      "other_ts": 46732,
+      "other_te": 46774,
+      "slug_len": 47,
+      "other_len": 42,
+      "bases_between": 7,
+      "slug_mapq": 29,
+      "read_start": 57532,
+      "slug_far": 57579,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.20030650.1",
+      "other": "cp",
+      "slug": "RQTK01000624.1",
+      "slug_break": 49484,
+      "slug_strand": "+",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 2508,
+      "other_strand": "+",
+      "other_ts": 2464,
+      "other_te": 2508,
+      "slug_len": 53,
+      "other_len": 44,
+      "bases_between": 3,
+      "slug_mapq": 21,
+      "read_start": 49484,
+      "slug_far": 49537,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.20043950.1",
+      "other": "cp",
+      "slug": "RQTK01000516.1",
+      "slug_break": 323141,
+      "slug_strand": "-",
+      "other_t": "cp|EU912438.1",
+      "other_break": 18697,
+      "other_strand": "-",
+      "other_ts": 18651,
+      "other_te": 18697,
       "slug_len": 49,
-      "other_len": 51
+      "other_len": 46,
+      "bases_between": 5,
+      "slug_mapq": 31,
+      "read_start": 323141,
+      "slug_far": 323190,
+      "end_piece": "slug",
+      "w": 49.864576435141686
      },
      {
-      "read": "SRR7647851.10145170.2",
+      "read": "SRR7647849.20052900.1",
       "other": "cp",
-      "slug": "RQTK01001022.1",
-      "slug_pos": 47633,
+      "slug": "RQTK01000242.1",
+      "slug_break": 494979,
+      "slug_strand": "-",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 87982,
+      "other_strand": "-",
+      "other_ts": 87982,
+      "other_te": 88040,
+      "slug_len": 43,
+      "other_len": 58,
+      "bases_between": -1,
+      "slug_mapq": 21,
+      "read_start": 494936,
+      "slug_far": 494936,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.20079850.2",
+      "other": "cp",
+      "slug": "RQTK01000001.1",
+      "slug_break": 1455890,
+      "slug_strand": "-",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 17941,
+      "other_strand": "+",
+      "other_ts": 17941,
+      "other_te": 17986,
+      "slug_len": 50,
+      "other_len": 45,
+      "bases_between": 5,
+      "slug_mapq": 26,
+      "read_start": 1455890,
+      "slug_far": 1455940,
+      "end_piece": "slug",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.20100150.2",
+      "other": "cp",
+      "slug": "RQTK01001333.1",
+      "slug_break": 93676,
+      "slug_strand": "+",
       "other_t": "cp|EU912438.1",
-      "other_pos": 79855,
-      "slug_len": 56,
-      "other_len": 44
+      "other_break": 52418,
+      "other_strand": "+",
+      "other_ts": 52418,
+      "other_te": 52458,
+      "slug_len": 61,
+      "other_len": 40,
+      "bases_between": -1,
+      "slug_mapq": 34,
+      "read_start": 93615,
+      "slug_far": 93615,
+      "end_piece": "slug",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.20207850.2",
+      "other": "cp",
+      "slug": "RQTK01000181.1",
+      "slug_break": 370537,
+      "slug_strand": "-",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 55433,
+      "other_strand": "-",
+      "other_ts": 55433,
+      "other_te": 55476,
+      "slug_len": 50,
+      "other_len": 43,
+      "bases_between": 7,
+      "slug_mapq": 21,
+      "read_start": 370487,
+      "slug_far": 370487,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.20217506.2",
+      "other": "slugmt",
+      "slug": "RQTK01000538.1",
+      "slug_break": 223941,
+      "slug_strand": "-",
+      "other_t": "RQTK01000515.1",
+      "other_break": 171380,
+      "other_strand": "-",
+      "other_ts": 171329,
+      "other_te": 171380,
+      "slug_len": 46,
+      "other_len": 51,
+      "bases_between": 3,
+      "slug_mapq": 25,
+      "read_start": 223941,
+      "slug_far": 223987,
+      "end_piece": "slug",
+      "w": 1.0
+     },
+     {
+      "read": "SRR7647849.20228450.2",
+      "other": "cp",
+      "slug": "RQTK01001560.1",
+      "slug_break": 60444,
+      "slug_strand": "+",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 106877,
+      "other_strand": "+",
+      "other_ts": 106877,
+      "other_te": 106917,
+      "slug_len": 54,
+      "other_len": 40,
+      "bases_between": 2,
+      "slug_mapq": 33,
+      "read_start": 60390,
+      "slug_far": 60390,
+      "end_piece": "slug",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.25727550.1",
+      "other": "cp",
+      "slug": "RQTK01000091.1",
+      "slug_break": 782849,
+      "slug_strand": "+",
+      "other_t": "cp|EU912438.1",
+      "other_break": 108290,
+      "other_strand": "-",
+      "other_ts": 108249,
+      "other_te": 108290,
+      "slug_len": 60,
+      "other_len": 41,
+      "bases_between": -1,
+      "slug_mapq": 49,
+      "read_start": 782789,
+      "slug_far": 782789,
+      "end_piece": "slug",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.26039600.2",
+      "other": "cp",
+      "slug": "RQTK01000318.1",
+      "slug_break": 204512,
+      "slug_strand": "+",
+      "other_t": "cp|EU912438.1",
+      "other_break": 25432,
+      "other_strand": "+",
+      "other_ts": 25432,
+      "other_te": 25481,
+      "slug_len": 51,
+      "other_len": 49,
+      "bases_between": 0,
+      "slug_mapq": 28,
+      "read_start": 204461,
+      "slug_far": 204461,
+      "end_piece": "slug",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.38188238.1",
+      "other": "slugmt",
+      "slug": "RQTK01000795.1",
+      "slug_break": 143252,
+      "slug_strand": "-",
+      "other_t": "slugmt|NC_010567.1",
+      "other_break": 3499,
+      "other_strand": "+",
+      "other_ts": 3458,
+      "other_te": 3499,
+      "slug_len": 60,
+      "other_len": 41,
+      "bases_between": -1,
+      "slug_mapq": 31,
+      "read_start": 143192,
+      "slug_far": 143192,
+      "end_piece": "organelle",
+      "w": 1.0
+     },
+     {
+      "read": "SRR7647849.38193700.1",
+      "other": "cp",
+      "slug": "RQTK01000005.1",
+      "slug_break": 812504,
+      "slug_strand": "-",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 16968,
+      "other_strand": "+",
+      "other_ts": 16916,
+      "other_te": 16968,
+      "slug_len": 48,
+      "other_len": 52,
+      "bases_between": 0,
+      "slug_mapq": 21,
+      "read_start": 812456,
+      "slug_far": 812456,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.38199250.1",
+      "other": "cp",
+      "slug": "RQTK01000049.1",
+      "slug_break": 897805,
+      "slug_strand": "+",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 42168,
+      "other_strand": "+",
+      "other_ts": 42168,
+      "other_te": 42214,
+      "slug_len": 52,
+      "other_len": 46,
+      "bases_between": 2,
+      "slug_mapq": 31,
+      "read_start": 897753,
+      "slug_far": 897753,
+      "end_piece": "slug",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.38209500.1",
+      "other": "cp",
+      "slug": "RQTK01000283.1",
+      "slug_break": 536318,
+      "slug_strand": "-",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 18161,
+      "other_strand": "-",
+      "other_ts": 18161,
+      "other_te": 18205,
+      "slug_len": 51,
+      "other_len": 44,
+      "bases_between": 5,
+      "slug_mapq": 22,
+      "read_start": 536267,
+      "slug_far": 536267,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.38211900.1",
+      "other": "cp",
+      "slug": "RQTK01002130.1",
+      "slug_break": 14714,
+      "slug_strand": "-",
+      "other_t": "cp|EU912438.1",
+      "other_break": 4997,
+      "other_strand": "-",
+      "other_ts": 4997,
+      "other_te": 5042,
+      "slug_len": 45,
+      "other_len": 45,
+      "bases_between": 10,
+      "slug_mapq": 20,
+      "read_start": 14669,
+      "slug_far": 14669,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.38214850.1",
+      "other": "cp",
+      "slug": "RQTK01000550.1",
+      "slug_break": 285510,
+      "slug_strand": "-",
+      "other_t": "cp|EU912438.1",
+      "other_break": 86917,
+      "other_strand": "+",
+      "other_ts": 86917,
+      "other_te": 86963,
+      "slug_len": 46,
+      "other_len": 46,
+      "bases_between": 8,
+      "slug_mapq": 22,
+      "read_start": 285510,
+      "slug_far": 285556,
+      "end_piece": "slug",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.38216850.1",
+      "other": "cp",
+      "slug": "RQTK01000112.1",
+      "slug_break": 178295,
+      "slug_strand": "-",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 109525,
+      "other_strand": "-",
+      "other_ts": 109481,
+      "other_te": 109525,
+      "slug_len": 54,
+      "other_len": 44,
+      "bases_between": 2,
+      "slug_mapq": 36,
+      "read_start": 178295,
+      "slug_far": 178349,
+      "end_piece": "slug",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.38226150.2",
+      "other": "cp",
+      "slug": "RQTK01000317.1",
+      "slug_break": 465286,
+      "slug_strand": "+",
+      "other_t": "cp|EU912438.1",
+      "other_break": 21742,
+      "other_strand": "+",
+      "other_ts": 21699,
+      "other_te": 21742,
+      "slug_len": 57,
+      "other_len": 43,
+      "bases_between": 0,
+      "slug_mapq": 37,
+      "read_start": 465286,
+      "slug_far": 465343,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.38226550.1",
+      "other": "cp",
+      "slug": "RQTK01000107.1",
+      "slug_break": 499473,
+      "slug_strand": "+",
+      "other_t": "cp|EU912438.1",
+      "other_break": 64817,
+      "other_strand": "-",
+      "other_ts": 64772,
+      "other_te": 64817,
+      "slug_len": 55,
+      "other_len": 45,
+      "bases_between": 0,
+      "slug_mapq": 20,
+      "read_start": 499418,
+      "slug_far": 499418,
+      "end_piece": "slug",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.38226780.1",
+      "other": "cp",
+      "slug": "RQTK01003077.1",
+      "slug_break": 1757,
+      "slug_strand": "+",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 90754,
+      "other_strand": "+",
+      "other_ts": 90754,
+      "other_te": 90794,
+      "slug_len": 54,
+      "other_len": 40,
+      "bases_between": 6,
+      "slug_mapq": 40,
+      "read_start": 1703,
+      "slug_far": 1703,
+      "end_piece": "slug",
+      "w": 1.0
+     },
+     {
+      "read": "SRR7647849.38264483.1",
+      "other": "cp",
+      "slug": "RQTK01000174.1",
+      "slug_break": 603317,
+      "slug_strand": "-",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 19391,
+      "other_strand": "+",
+      "other_ts": 19391,
+      "other_te": 19441,
+      "slug_len": 46,
+      "other_len": 50,
+      "bases_between": 4,
+      "slug_mapq": 21,
+      "read_start": 603317,
+      "slug_far": 603363,
+      "end_piece": "slug",
+      "w": 1.0
+     },
+     {
+      "read": "SRR7647849.38367850.2",
+      "other": "cp",
+      "slug": "RQTK01000104.1",
+      "slug_break": 518357,
+      "slug_strand": "+",
+      "other_t": "cp|EU912438.1",
+      "other_break": 78855,
+      "other_strand": "+",
+      "other_ts": 78804,
+      "other_te": 78855,
+      "slug_len": 50,
+      "other_len": 51,
+      "bases_between": -1,
+      "slug_mapq": 23,
+      "read_start": 518357,
+      "slug_far": 518407,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.44296050.2",
+      "other": "cp",
+      "slug": "RQTK01000398.1",
+      "slug_break": 101228,
+      "slug_strand": "+",
+      "other_t": "cp|EU912438.1",
+      "other_break": 109838,
+      "other_strand": "+",
+      "other_ts": 109838,
+      "other_te": 109881,
+      "slug_len": 53,
+      "other_len": 43,
+      "bases_between": 0,
+      "slug_mapq": 33,
+      "read_start": 101175,
+      "slug_far": 101175,
+      "end_piece": "slug",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.56380450.1",
+      "other": "cp",
+      "slug": "RQTK01007773.1",
+      "slug_break": 458,
+      "slug_strand": "-",
+      "other_t": "cp|EU912438.1",
+      "other_break": 1043,
+      "other_strand": "-",
+      "other_ts": 1043,
+      "other_te": 1085,
+      "slug_len": 50,
+      "other_len": 42,
+      "bases_between": 8,
+      "slug_mapq": 26,
+      "read_start": 408,
+      "slug_far": 408,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.56393250.1",
+      "other": "cp",
+      "slug": "RQTK01001603.1",
+      "slug_break": 3679,
+      "slug_strand": "+",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 103663,
+      "other_strand": "-",
+      "other_ts": 103616,
+      "other_te": 103663,
+      "slug_len": 53,
+      "other_len": 47,
+      "bases_between": 0,
+      "slug_mapq": 31,
+      "read_start": 3626,
+      "slug_far": 3626,
+      "end_piece": "slug",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.56396050.1",
+      "other": "cp",
+      "slug": "RQTK01001107.1",
+      "slug_break": 84508,
+      "slug_strand": "-",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 39070,
+      "other_strand": "+",
+      "other_ts": 39029,
+      "other_te": 39070,
+      "slug_len": 53,
+      "other_len": 41,
+      "bases_between": 6,
+      "slug_mapq": 25,
+      "read_start": 84455,
+      "slug_far": 84455,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.56406458.1",
+      "other": "slugmt",
+      "slug": "RQTK01000877.1",
+      "slug_break": 183948,
+      "slug_strand": "+",
+      "other_t": "slugmt|NC_010567.1",
+      "other_break": 13325,
+      "other_strand": "-",
+      "other_ts": 13325,
+      "other_te": 13369,
+      "slug_len": 50,
+      "other_len": 44,
+      "bases_between": 6,
+      "slug_mapq": 25,
+      "read_start": 183948,
+      "slug_far": 183998,
+      "end_piece": "organelle",
+      "w": 1.0
+     },
+     {
+      "read": "SRR7647849.56414700.1",
+      "other": "cp",
+      "slug": "RQTK01000099.1",
+      "slug_break": 213524,
+      "slug_strand": "+",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 45554,
+      "other_strand": "+",
+      "other_ts": 45554,
+      "other_te": 45594,
+      "slug_len": 55,
+      "other_len": 40,
+      "bases_between": 5,
+      "slug_mapq": 40,
+      "read_start": 213469,
+      "slug_far": 213469,
+      "end_piece": "slug",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.56423700.1",
+      "other": "cp",
+      "slug": "RQTK01000470.1",
+      "slug_break": 185019,
+      "slug_strand": "+",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 20308,
+      "other_strand": "+",
+      "other_ts": 20255,
+      "other_te": 20308,
+      "slug_len": 49,
+      "other_len": 53,
+      "bases_between": -2,
+      "slug_mapq": 34,
+      "read_start": 185019,
+      "slug_far": 185068,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.56435050.2",
+      "other": "cp",
+      "slug": "RQTK01000644.1",
+      "slug_break": 220959,
+      "slug_strand": "+",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 14867,
+      "other_strand": "-",
+      "other_ts": 14867,
+      "other_te": 14917,
+      "slug_len": 48,
+      "other_len": 50,
+      "bases_between": 2,
+      "slug_mapq": 24,
+      "read_start": 220959,
+      "slug_far": 221007,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.56437500.2",
+      "other": "cp",
+      "slug": "RQTK01000082.1",
+      "slug_break": 43143,
+      "slug_strand": "+",
+      "other_t": "cp|MW266050.1",
+      "other_break": 99,
+      "other_strand": "+",
+      "other_ts": 59,
+      "other_te": 99,
+      "slug_len": 65,
+      "other_len": 40,
+      "bases_between": -5,
+      "slug_mapq": 55,
+      "read_start": 43143,
+      "slug_far": 43208,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.56440200.2",
+      "other": "cp",
+      "slug": "RQTK01000755.1",
+      "slug_break": 81348,
+      "slug_strand": "-",
+      "other_t": "cp|EU912438.1",
+      "other_break": 36995,
+      "other_strand": "-",
+      "other_ts": 36995,
+      "other_te": 37041,
+      "slug_len": 52,
+      "other_len": 46,
+      "bases_between": 2,
+      "slug_mapq": 24,
+      "read_start": 81296,
+      "slug_far": 81296,
+      "end_piece": "organelle",
+      "w": 49.864576435141686
+     },
+     {
+      "read": "SRR7647849.56443230.2",
+      "other": "cp",
+      "slug": "RQTK01001177.1",
+      "slug_break": 117270,
+      "slug_strand": "-",
+      "other_t": "cp|NC_011600.1",
+      "other_break": 18724,
+      "other_strand": "+",
+      "other_ts": 18724,
+      "other_te": 18771,
+      "slug_len": 53,
+      "other_len": 47,
+      "bases_between": 0,
+      "slug_mapq": 40,
+      "read_start": 117270,
+      "slug_far": 117323,
+      "end_piece": "slug",
+      "w": 1.0
      }
     ]
    },
@@ -971,10 +2147,10 @@
       "start": 3,
       "end": 1603,
       "kind": "plastid",
-      "reads_aligned": 5231,
-      "depth_locus": 310.9,
+      "reads_aligned": 15769,
+      "depth_locus": 956.89,
       "depth_left_flank": 0.0,
-      "depth_right_flank": 6.83,
+      "depth_right_flank": 5.05,
       "edges": {
        "left": {
         "note": "the locus reaches the end of the assembly sequence here; there is no flank to test"
@@ -982,7 +2158,12 @@
        "right": {
         "position": 1603,
         "through": 0,
-        "stop_inside": 163,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 421,
         "stop_outside": 0
        }
       }
@@ -993,22 +2174,32 @@
       "start": 53256,
       "end": 53486,
       "kind": "plastid",
-      "reads_aligned": 2669,
-      "depth_locus": 1030.05,
-      "depth_left_flank": 3.7,
-      "depth_right_flank": 1.97,
+      "reads_aligned": 46271,
+      "depth_locus": 18068.45,
+      "depth_left_flank": 67.5,
+      "depth_right_flank": 52.01,
       "edges": {
        "left": {
         "position": 53256,
         "through": 0,
-        "stop_inside": 157,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 1067,
         "stop_outside": 0
        },
        "right": {
         "position": 53486,
         "through": 0,
-        "stop_inside": 95,
-        "stop_outside": 0
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 332,
+        "stop_outside": 10
        }
       }
      },
@@ -1018,21 +2209,31 @@
       "start": 362826,
       "end": 363302,
       "kind": "numt",
-      "reads_aligned": 1166,
-      "depth_locus": 198.57,
-      "depth_left_flank": 3.4,
-      "depth_right_flank": 1.61,
+      "reads_aligned": 16571,
+      "depth_locus": 2710.14,
+      "depth_left_flank": 46.14,
+      "depth_right_flank": 51.65,
       "edges": {
        "left": {
         "position": 362826,
         "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
         "stop_inside": 0,
         "stop_outside": 0
        },
        "right": {
         "position": 363302,
         "through": 0,
-        "stop_inside": 3,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 43,
         "stop_outside": 0
        }
       }
@@ -1043,22 +2244,32 @@
       "start": 12447,
       "end": 12948,
       "kind": "numt",
-      "reads_aligned": 1510,
-      "depth_locus": 213.68,
-      "depth_left_flank": 8.34,
-      "depth_right_flank": 6.54,
+      "reads_aligned": 16737,
+      "depth_locus": 1909.99,
+      "depth_left_flank": 132.37,
+      "depth_right_flank": 150.05,
       "edges": {
        "left": {
         "position": 12447,
         "through": 0,
-        "stop_inside": 57,
-        "stop_outside": 1
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 268,
+        "stop_outside": 32
        },
        "right": {
         "position": 12948,
         "through": 0,
-        "stop_inside": 19,
-        "stop_outside": 0
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 287,
+        "stop_outside": 12
        }
       }
      },
@@ -1068,22 +2279,32 @@
       "start": 170867,
       "end": 171473,
       "kind": "numt",
-      "reads_aligned": 2139,
-      "depth_locus": 306.52,
-      "depth_left_flank": 3.97,
-      "depth_right_flank": 5.31,
+      "reads_aligned": 24056,
+      "depth_locus": 3123.91,
+      "depth_left_flank": 59.33,
+      "depth_right_flank": 46.88,
       "edges": {
        "left": {
         "position": 170867,
         "through": 0,
-        "stop_inside": 14,
-        "stop_outside": 0
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 52,
+        "stop_outside": 2
        },
        "right": {
         "position": 171473,
         "through": 0,
-        "stop_inside": 17,
-        "stop_outside": 0
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 280,
+        "stop_outside": 18
        }
       }
      },
@@ -1093,218 +2314,733 @@
       "start": 2600,
       "end": 3794,
       "kind": "numt",
-      "reads_aligned": 31907,
-      "depth_locus": 289.43,
-      "depth_left_flank": 1217.55,
-      "depth_right_flank": 396.42,
+      "reads_aligned": 589553,
+      "depth_locus": 3477.04,
+      "depth_left_flank": 24992.76,
+      "depth_right_flank": 6600.7,
       "edges": {
        "left": {
         "position": 2600,
         "through": 0,
-        "stop_inside": 73,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 284,
         "stop_outside": 0
        },
        "right": {
         "position": 3794,
         "through": 0,
-        "stop_inside": 49,
-        "stop_outside": 27
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 472,
+        "stop_outside": 484
+       }
+      }
+     },
+     {
+      "name": "bait|RQTK01000372.1:349485-355571|plastid|352485-352571",
+      "contig": "RQTK01000372.1",
+      "start": 352485,
+      "end": 352571,
+      "kind": "plastid",
+      "reads_aligned": 5904,
+      "depth_locus": 376.64,
+      "depth_left_flank": 65.84,
+      "depth_right_flank": 69.25,
+      "edges": {
+       "left": {
+        "position": 352485,
+        "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 148,
+        "stop_outside": 0
+       },
+       "right": {
+        "position": 352571,
+        "through": 15,
+        "through_reads": [
+         "SRR7647849.27880819.1",
+         "SRR7647849.27880842.1",
+         "SRR7647849.55850330.1",
+         "SRR7647850.11903569.1",
+         "SRR7647850.27841096.1",
+         "SRR7647850.40077125.2",
+         "SRR7647850.58185867.2",
+         "SRR7647850.6981772.1",
+         "SRR7647850.88961241.1",
+         "SRR7647851.39167945.1",
+         "SRR7647851.42626028.1",
+         "SRR7647852.10828279.2",
+         "SRR7647852.75421232.1",
+         "SRR7647853.39994601.1",
+         "SRR7647854.95175636.1"
+        ],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 15,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 138,
+        "stop_outside": 0
        }
       }
      }
     ]
+   },
+   "shapes": null,
+   "sample": {
+    "reads": 1281242,
+    "mates_with_an_alignment": 751315,
+    "counts": {
+     "pairs_with_slug": 379429,
+     "slug_pairs_together": 222267,
+     "pairs_with_cp": 73294,
+     "slug_pairs_apart": 3753,
+     "slug_pairs_apart_mapq50": 2241,
+     "pairs_with_slugmt": 1393,
+     "slug_pairs_apart_near_an_end": 1395,
+     "pairs_slug_and_cp": 89,
+     "pairs_with_algrDNA": 55,
+     "pairs_with_algmt": 22,
+     "pairs_with_slugrDNA": 104,
+     "pairs_slug_and_algmt": 3,
+     "pairs_slug_and_slugmt": 1,
+     "pairs_slug_and_slugrDNA": 1
+    },
+    "insert_median": 463,
+    "fraction_of_bases": {
+     "slug": 0.469928,
+     "cp": 0.111541,
+     "slugmt": 0.002042,
+     "algrDNA": 4.6e-05,
+     "algmt": 1.7e-05,
+     "slugrDNA": 8.5e-05
+    },
+    "slug_rate": 0.009891,
+    "slug_rate_away_from_ends": 0.006215,
+    "split_mates_joining_unrelated_slug": 17,
+    "split_rate": 4.5e-05
+   },
+   "sensitivity": {
+    "genome_bp": 557480303,
+    "genome_acgt": 540551973,
+    "depth": 89.11,
+    "depth_all_bases": 183.86,
+    "slug_fraction_of_bases": 0.469928,
+    "read_length": 100.0,
+    "insert_median": 463,
+    "mixed_pairs_per_insertion_per_cell": 135.0,
+    "split_mates_per_insertion_per_cell": 17.82
+   },
+   "note": "All six paired-end libraries of this adult, in full. The mate-pair libraries, made from other animals, were left out.",
+   "thinned": 50,
+   "candidate_places": {
+    "places": [
+     {
+      "read": "SRR7647856.5712567",
+      "insert": "cp",
+      "sequence": "RQTK01000407.1",
+      "position": 282570,
+      "reads_crossing": 23,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.4239938",
+      "insert": "cp",
+      "sequence": "RQTK01001142.1",
+      "position": 52936,
+      "reads_crossing": 4,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.1570216",
+      "insert": "cp",
+      "sequence": "RQTK01000223.1",
+      "position": 439998,
+      "reads_crossing": 12,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.3206590",
+      "insert": "cp",
+      "sequence": "RQTK01000317.1",
+      "position": 349246,
+      "reads_crossing": 82,
+      "joins_here": 1,
+      "joins_here_same_organelle": 1,
+      "joins": [
+       {
+        "molecule": "SRR7647849.61811412",
+        "evidence": "mixed pair",
+        "organelle": "cp",
+        "organelle_sequence": "cp|EU912438.1",
+        "organelle_position": 50469
+       }
+      ]
+     },
+     {
+      "read": "SRR7647856.5673304",
+      "insert": "cp",
+      "sequence": "RQTK01000080.1",
+      "position": 821524,
+      "reads_crossing": 72,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.6932495",
+      "insert": "cp",
+      "sequence": "RQTK01000046.1",
+      "position": 111206,
+      "reads_crossing": 45,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.2542386",
+      "insert": "cp",
+      "sequence": "RQTK01000662.1",
+      "position": 99526,
+      "reads_crossing": 71,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.3776782",
+      "insert": "cp",
+      "sequence": "RQTK01000339.1",
+      "position": 318401,
+      "reads_crossing": 77,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.1389423",
+      "insert": "cp",
+      "sequence": "RQTK01000070.1",
+      "position": 476498,
+      "reads_crossing": 41,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.6311928",
+      "insert": "slugmt",
+      "sequence": "RQTK01000321.1",
+      "position": 187603,
+      "reads_crossing": 42,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.3402594",
+      "insert": "slugmt",
+      "sequence": "RQTK01000299.1",
+      "position": 10800,
+      "reads_crossing": 22,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     }
+    ]
+   },
+   "repeat_joins": {
+    "repeat": "RQTK01001031.1:1604-3400",
+    "mates_with_plastid_alignment": 2358328,
+    "positions": [
+     {
+      "plastid_position": 20865,
+      "at_the_join": {
+       "mates_going_on": 3,
+       "into_the_repeat": 0,
+       "molecules_into_the_repeat": 0
+      },
+      "controls": [
+       {
+        "offset": -300,
+        "mates_going_on": 3,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 300,
+        "mates_going_on": 14,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -600,
+        "mates_going_on": 6,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 600,
+        "mates_going_on": 3,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -900,
+        "mates_going_on": 8,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 900,
+        "mates_going_on": 5,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1200,
+        "mates_going_on": 4,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1200,
+        "mates_going_on": 3,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1500,
+        "mates_going_on": 39,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1500,
+        "mates_going_on": 1,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       }
+      ],
+      "reads_into_the_repeat": [],
+      "controls_mean_into_the_repeat": 0.0,
+      "controls_max_into_the_repeat": 0
+     },
+     {
+      "plastid_position": 20899,
+      "at_the_join": {
+       "mates_going_on": 4,
+       "into_the_repeat": 0,
+       "molecules_into_the_repeat": 0
+      },
+      "controls": [
+       {
+        "offset": -300,
+        "mates_going_on": 3,
+        "into_the_repeat": 1,
+        "molecules_into_the_repeat": 1
+       },
+       {
+        "offset": 300,
+        "mates_going_on": 91,
+        "into_the_repeat": 1,
+        "molecules_into_the_repeat": 1
+       },
+       {
+        "offset": -600,
+        "mates_going_on": 4,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 600,
+        "mates_going_on": 23,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -900,
+        "mates_going_on": 9,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 900,
+        "mates_going_on": 3,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1200,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1200,
+        "mates_going_on": 4,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1500,
+        "mates_going_on": 46,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1500,
+        "mates_going_on": 4,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       }
+      ],
+      "reads_into_the_repeat": [],
+      "controls_mean_into_the_repeat": 0.2,
+      "controls_max_into_the_repeat": 1
+     },
+     {
+      "plastid_position": 78759,
+      "at_the_join": {
+       "mates_going_on": 5,
+       "into_the_repeat": 0,
+       "molecules_into_the_repeat": 0
+      },
+      "controls": [
+       {
+        "offset": -300,
+        "mates_going_on": 4,
+        "into_the_repeat": 1,
+        "molecules_into_the_repeat": 1
+       },
+       {
+        "offset": 300,
+        "mates_going_on": 2,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -600,
+        "mates_going_on": 10,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 600,
+        "mates_going_on": 1,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -900,
+        "mates_going_on": 3,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 900,
+        "mates_going_on": 1,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1200,
+        "mates_going_on": 1,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1200,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1500,
+        "mates_going_on": 3,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1500,
+        "mates_going_on": 1,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       }
+      ],
+      "reads_into_the_repeat": [],
+      "controls_mean_into_the_repeat": 0.1,
+      "controls_max_into_the_repeat": 1
+     },
+     {
+      "plastid_position": 78799,
+      "at_the_join": {
+       "mates_going_on": 2,
+       "into_the_repeat": 0,
+       "molecules_into_the_repeat": 0
+      },
+      "controls": [
+       {
+        "offset": -300,
+        "mates_going_on": 5,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 300,
+        "mates_going_on": 7,
+        "into_the_repeat": 1,
+        "molecules_into_the_repeat": 1
+       },
+       {
+        "offset": -600,
+        "mates_going_on": 3,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 600,
+        "mates_going_on": 2,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -900,
+        "mates_going_on": 2,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 900,
+        "mates_going_on": 4,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1200,
+        "mates_going_on": 1,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1200,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1500,
+        "mates_going_on": 3,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1500,
+        "mates_going_on": 2,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       }
+      ],
+      "reads_into_the_repeat": [],
+      "controls_mean_into_the_repeat": 0.1,
+      "controls_max_into_the_repeat": 1
+     }
+    ]
+   },
+   "end_piece_control": {
+    "piece": 45,
+    "pass_rule": "40 bases or more aligned at 97% identity or better",
+    "mates": {
+     "slug": {
+      "mates": 20000,
+      "start_passes": 16314,
+      "end_passes": 14855
+     },
+     "slugmt": {
+      "mates": 20000,
+      "start_passes": 17362,
+      "end_passes": 16720
+     },
+     "cp": {
+      "mates": 20000,
+      "start_passes": 19636,
+      "end_passes": 18781
+     }
+    },
+    "expected_share_organelle_first": {
+     "slugmt": 0.486,
+     "cp": 0.4877
+    },
+    "first_pass_finds_short_organelle_piece": {
+     "slugmt": 0.8326,
+     "cp": 0.8085
+    },
+    "expected_share_organelle_first_found": {
+     "slugmt": 0.4405,
+     "cp": 0.4349
+    }
    }
   },
   {
    "library": "eggs",
    "label": "Eggs, short reads",
    "runs": [
-    "SRR768897"
+    "SRR768897",
+    "SRR768899"
    ],
    "kind": "short",
    "platform": "Illumina Genome Analyzer IIx (paired)",
    "animal": "eggs (germ line; Bhattacharya et al. 2013), which have not yet fed and hold no chloroplasts",
-   "reads": 75872306,
-   "bases": 11077356676,
-   "bases_screened": 11077356676,
+   "reads": 153333832,
+   "bases": 22386739472,
+   "bases_screened": 22386739472,
    "chimera": {
     "rates": {
      "slugmt": {
-      "pairs_with_mate": 40733,
-      "pairs_also_with_slug": 0,
-      "rate": 0.0
-     },
-     "algrDNA": {
-      "pairs_with_mate": 2982,
-      "pairs_also_with_slug": 22,
-      "rate": 0.00738
-     },
-     "slugrDNA": {
-      "pairs_with_mate": 549,
-      "pairs_also_with_slug": 7,
-      "rate": 0.01275
+      "pairs_with_mate": 104147,
+      "pairs_also_with_slug": 1,
+      "molecules": 1,
+      "rate": 1e-05,
+      "split_mates": 1,
+      "split_molecules": 1,
+      "split_rate": 1e-05,
+      "examined": {
+       "pairs_with_mate": 104147,
+       "pairs_also_with_slug": 1,
+       "split_mates": 1
+      }
      },
      "algmt": {
-      "pairs_with_mate": 12,
+      "pairs_with_mate": 23,
       "pairs_also_with_slug": 0,
-      "rate": 0.0
+      "molecules": 0,
+      "rate": 0.0,
+      "split_mates": 0,
+      "split_molecules": 0,
+      "split_rate": 0.0,
+      "examined": {
+       "pairs_with_mate": 23,
+       "pairs_also_with_slug": 0,
+       "split_mates": 0
+      }
      },
      "cp": {
-      "pairs_with_mate": 8,
+      "pairs_with_mate": 13,
       "pairs_also_with_slug": 0,
-      "rate": 0.0
+      "molecules": 0,
+      "rate": 0.0,
+      "split_mates": 0,
+      "split_molecules": 0,
+      "split_rate": 0.0,
+      "examined": {
+       "pairs_with_mate": 13,
+       "pairs_also_with_slug": 0,
+       "split_mates": 0
+      }
+     },
+     "slugrDNA": {
+      "pairs_with_mate": 1,
+      "pairs_also_with_slug": 0,
+      "molecules": 0,
+      "rate": 0.0,
+      "split_mates": 0,
+      "split_molecules": 0,
+      "split_rate": 0.0,
+      "examined": {
+       "pairs_with_mate": 1,
+       "pairs_also_with_slug": 0,
+       "split_mates": 0
+      }
      }
     },
-    "recurrent": [
+    "recurrent": [],
+    "recurrent_breaks": [],
+    "same_join": [
      {
-      "kind": "algrDNA",
-      "slug": "RQTK01002724.1",
-      "start": 2000,
-      "pairs": 9,
-      "distinct_pairs": 8,
-      "other_targets": [
-       "algrDNA|MZ596061.1",
-       "algrDNA|MZ596062.1",
-       "algrDNA|MZ596089.1",
-       "algrDNA|MZ596094.1"
+      "kind": "slugmt",
+      "slug": "RQTK01000018.1",
+      "slug_from": 1185941,
+      "slug_to": 1186046,
+      "other_t": "slugmt|NC_010567.1",
+      "other_from": 6244,
+      "other_to": 6288,
+      "molecules": 2,
+      "copies": 0,
+      "read_through": 1,
+      "lowest_mapq": 27,
+      "evidence": [
+       {
+        "molecule": "SRR768899.12285751",
+        "evidence": "mixed pair",
+        "slug_pos": 1185941,
+        "slug_far": 1185868,
+        "other_pos": 6244
+       },
+       {
+        "molecule": "SRR768899.36023984",
+        "evidence": "split mate",
+        "slug_pos": 1186046,
+        "slug_far": 1185990,
+        "other_pos": 6288
+       }
       ],
-      "other_positions": [
-       2173,
-       2177,
-       2183,
-       2184,
-       2197,
-       4500,
-       4509,
-       4515,
-       5174
-      ]
-     },
-     {
-      "kind": "algrDNA",
-      "slug": "RQTK01002883.1",
-      "start": 0,
-      "pairs": 4,
-      "distinct_pairs": 4,
-      "other_targets": [
-       "algrDNA|KY401415.1",
-       "algrDNA|MZ596073.1",
-       "algrDNA|MZ596124.1",
-       "algrDNA|MZ596132.1"
-      ],
-      "other_positions": [
-       2189,
-       2211,
-       4539,
-       4547
-      ]
-     },
-     {
-      "kind": "algrDNA",
-      "slug": "RQTK01002682.1",
-      "start": 3000,
-      "pairs": 5,
-      "distinct_pairs": 3,
-      "other_targets": [
-       "algrDNA|MZ596072.1",
-       "algrDNA|MZ596078.1",
-       "algrDNA|MZ596095.1",
-       "algrDNA|MZ596138.1"
-      ],
-      "other_positions": [
-       2187,
-       2188,
-       2194,
-       4504,
-       4533
-      ]
-     },
-     {
-      "kind": "algrDNA",
-      "slug": "RQTK01002804.1",
-      "start": 0,
-      "pairs": 3,
-      "distinct_pairs": 3,
-      "other_targets": [
-       "algrDNA|KY350852.1",
-       "algrDNA|MZ596138.1",
-       "algrDNA|MZ596140.1"
-      ],
-      "other_positions": [
-       2167,
-       4497,
-       4515
-      ]
-     },
-     {
-      "kind": "slugrDNA",
-      "slug": "RQTK01000750.1",
-      "start": 56000,
-      "pairs": 3,
-      "distinct_pairs": 3,
-      "other_targets": [
-       "slugrDNA|MK919695.1"
-      ],
-      "other_positions": [
-       958,
-       1000,
-       1080
-      ]
+      "at_assembly_gap": false
      }
     ],
+    "same_join_groups": 1,
+    "same_join_within": 1000,
+    "same_join_expected_by_chance": {
+     "slugmt": 0.0
+    },
     "split_mates": {
-     "algrDNA": 5
+     "slugmt": 1
+    },
+    "split_end_piece": {
+     "slugmt": {
+      "organelle": 1,
+      "slug": 0
+     }
+    },
+    "plain_pairs_that_look_mixed": {},
+    "organelle_side_is_simple_sequence": {
+     "cp": 1
     },
     "split_examples": [
      {
-      "read": "SRR768897.311087.2",
-      "other": "algrDNA",
-      "slug": "RQTK01003160.1",
-      "slug_pos": 617,
-      "other_t": "algrDNA|MZ596060.1",
-      "other_pos": 2214,
-      "slug_len": 65,
-      "other_len": 83
-     },
-     {
-      "read": "SRR768897.2267873.2",
-      "other": "algrDNA",
-      "slug": "RQTK01002934.1",
-      "slug_pos": 1647,
-      "other_t": "algrDNA|MZ596160.1",
-      "other_pos": 4539,
+      "read": "SRR768899.36023984.1",
+      "other": "slugmt",
+      "slug": "RQTK01000018.1",
+      "slug_break": 1186046,
+      "slug_strand": "-",
+      "other_t": "slugmt|NC_010567.1",
+      "other_break": 6288,
+      "other_strand": "+",
+      "other_ts": 6200,
+      "other_te": 6288,
       "slug_len": 56,
-      "other_len": 94
-     },
-     {
-      "read": "SRR768897.5937584.1",
-      "other": "algrDNA",
-      "slug": "RQTK01000350.1",
-      "slug_pos": 447905,
-      "other_t": "algrDNA|PZ302429.1",
-      "other_pos": 512,
-      "slug_len": 94,
-      "other_len": 42
-     },
-     {
-      "read": "SRR768897.24916799.2",
-      "other": "algrDNA",
-      "slug": "RQTK01002589.1",
-      "slug_pos": 4388,
-      "other_t": "algrDNA|PZ520012.1",
-      "other_pos": 5993,
-      "slug_len": 73,
-      "other_len": 75
-     },
-     {
-      "read": "SRR768897.37081891.1",
-      "other": "algrDNA",
-      "slug": "RQTK01001917.1",
-      "slug_pos": 13861,
-      "other_t": "algrDNA|MN017042.1",
-      "other_pos": 5541,
-      "slug_len": 88,
-      "other_len": 59
+      "other_len": 88,
+      "bases_between": -1,
+      "slug_mapq": 27,
+      "read_start": 1185990,
+      "slug_far": 1185990,
+      "end_piece": "organelle",
+      "w": 1.0
      }
     ]
    },
@@ -1330,6 +3066,11 @@
        "right": {
         "position": 1603,
         "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
         "stop_inside": 0,
         "stop_outside": 0
        }
@@ -1341,22 +3082,32 @@
       "start": 53256,
       "end": 53486,
       "kind": "plastid",
-      "reads_aligned": 105,
+      "reads_aligned": 226,
       "depth_locus": 0.0,
-      "depth_left_flank": 0.95,
-      "depth_right_flank": 7.3,
+      "depth_left_flank": 3.36,
+      "depth_right_flank": 11.95,
       "edges": {
        "left": {
         "position": 53256,
         "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
         "stop_inside": 0,
-        "stop_outside": 2
+        "stop_outside": 4
        },
        "right": {
         "position": 53486,
         "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
         "stop_inside": 0,
-        "stop_outside": 6
+        "stop_outside": 11
        }
       }
      },
@@ -1366,21 +3117,31 @@
       "start": 362826,
       "end": 363302,
       "kind": "numt",
-      "reads_aligned": 1137,
-      "depth_locus": 306.01,
-      "depth_left_flank": 0.21,
-      "depth_right_flank": 6.57,
+      "reads_aligned": 2482,
+      "depth_locus": 667.85,
+      "depth_left_flank": 0.44,
+      "depth_right_flank": 11.51,
       "edges": {
        "left": {
         "position": 362826,
         "through": 0,
-        "stop_inside": 1,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 2,
         "stop_outside": 0
        },
        "right": {
         "position": 363302,
         "through": 0,
-        "stop_inside": 1,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 5,
         "stop_outside": 0
        }
       }
@@ -1391,21 +3152,31 @@
       "start": 12447,
       "end": 12948,
       "kind": "numt",
-      "reads_aligned": 3054,
-      "depth_locus": 747.04,
-      "depth_left_flank": 5.59,
-      "depth_right_flank": 5.82,
+      "reads_aligned": 7198,
+      "depth_locus": 1755.24,
+      "depth_left_flank": 11.02,
+      "depth_right_flank": 12.48,
       "edges": {
        "left": {
         "position": 12447,
         "through": 0,
-        "stop_inside": 322,
-        "stop_outside": 0
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 826,
+        "stop_outside": 3
        },
        "right": {
         "position": 12948,
         "through": 0,
-        "stop_inside": 295,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 736,
         "stop_outside": 2
        }
       }
@@ -1416,22 +3187,32 @@
       "start": 170867,
       "end": 171473,
       "kind": "numt",
-      "reads_aligned": 2949,
-      "depth_locus": 580.66,
-      "depth_left_flank": 6.39,
-      "depth_right_flank": 10.02,
+      "reads_aligned": 7278,
+      "depth_locus": 1443.69,
+      "depth_left_flank": 11.88,
+      "depth_right_flank": 17.19,
       "edges": {
        "left": {
         "position": 170867,
         "through": 0,
-        "stop_inside": 336,
-        "stop_outside": 1
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 718,
+        "stop_outside": 4
        },
        "right": {
         "position": 171473,
         "through": 0,
-        "stop_inside": 261,
-        "stop_outside": 1
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 938,
+        "stop_outside": 4
        }
       }
      },
@@ -1441,26 +3222,560 @@
       "start": 2600,
       "end": 3794,
       "kind": "numt",
-      "reads_aligned": 57853,
-      "depth_locus": 655.84,
-      "depth_left_flank": 3960.69,
-      "depth_right_flank": 594.1,
+      "reads_aligned": 163937,
+      "depth_locus": 1439.49,
+      "depth_left_flank": 10170.05,
+      "depth_right_flank": 1274.6,
       "edges": {
        "left": {
         "position": 2600,
         "through": 0,
-        "stop_inside": 417,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 914,
         "stop_outside": 0
        },
        "right": {
         "position": 3794,
         "through": 0,
-        "stop_inside": 292,
-        "stop_outside": 90
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 710,
+        "stop_outside": 197
+       }
+      }
+     },
+     {
+      "name": "bait|RQTK01000372.1:349485-355571|plastid|352485-352571",
+      "contig": "RQTK01000372.1",
+      "start": 352485,
+      "end": 352571,
+      "kind": "plastid",
+      "reads_aligned": 512,
+      "depth_locus": 0.44,
+      "depth_left_flank": 6.08,
+      "depth_right_flank": 4.36,
+      "edges": {
+       "left": {
+        "position": 352485,
+        "through": 0,
+        "through_reads": [],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 0,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 0,
+        "stop_outside": 0
+       },
+       "right": {
+        "position": 352571,
+        "through": 1,
+        "through_reads": [
+         "SRR768899.33611.1"
+        ],
+        "through_with_gap": 0,
+        "through_with_gap_reads": {},
+        "through_molecules": 1,
+        "through_with_gap_molecules": 0,
+        "stop_inside": 0,
+        "stop_outside": 0
        }
       }
      }
     ]
+   },
+   "shapes": null,
+   "sample": {
+    "reads": 383332,
+    "mates_with_an_alignment": 128027,
+    "counts": {
+     "pairs_with_slug": 86093,
+     "slug_pairs_together": 40617,
+     "slug_pairs_apart": 785,
+     "slug_pairs_apart_mapq50": 395,
+     "pairs_with_slugmt": 233,
+     "slug_pairs_apart_near_an_end": 275,
+     "pairs_with_algrDNA": 22,
+     "pairs_with_slugrDNA": 55,
+     "pairs_with_algmt": 17,
+     "pairs_slug_and_slugrDNA": 1,
+     "pairs_with_cp": 4,
+     "pairs_slug_and_cp": 1
+    },
+    "insert_median": 304,
+    "fraction_of_bases": {
+     "slug": 0.322493,
+     "slugmt": 0.001104,
+     "algrDNA": 5.8e-05,
+     "slugrDNA": 0.000141,
+     "algmt": 4.8e-05,
+     "cp": 6e-06
+    },
+    "slug_rate": 0.009118,
+    "slug_rate_away_from_ends": 0.005924,
+    "split_mates_joining_unrelated_slug": 44,
+    "split_rate": 0.000511
+   },
+   "sensitivity": {
+    "genome_bp": 557480303,
+    "genome_acgt": 540551973,
+    "depth": 13.36,
+    "depth_all_bases": 40.16,
+    "slug_fraction_of_bases": 0.322493,
+    "read_length": 146.0,
+    "insert_median": 304,
+    "mixed_pairs_per_insertion_per_cell": 6.59,
+    "split_mates_per_insertion_per_cell": 6.04
+   },
+   "note": "Both runs of the egg DNA library.",
+   "thinned": 1,
+   "candidate_places": {
+    "places": [
+     {
+      "read": "SRR7647856.5712567",
+      "insert": "cp",
+      "sequence": "RQTK01000407.1",
+      "position": 282570,
+      "reads_crossing": 10,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.4239938",
+      "insert": "cp",
+      "sequence": "RQTK01001142.1",
+      "position": 52936,
+      "reads_crossing": 3,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.1570216",
+      "insert": "cp",
+      "sequence": "RQTK01000223.1",
+      "position": 439998,
+      "reads_crossing": 1,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.3206590",
+      "insert": "cp",
+      "sequence": "RQTK01000317.1",
+      "position": 349246,
+      "reads_crossing": 4,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.5673304",
+      "insert": "cp",
+      "sequence": "RQTK01000080.1",
+      "position": 821524,
+      "reads_crossing": 8,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.6932495",
+      "insert": "cp",
+      "sequence": "RQTK01000046.1",
+      "position": 111206,
+      "reads_crossing": 6,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.2542386",
+      "insert": "cp",
+      "sequence": "RQTK01000662.1",
+      "position": 99526,
+      "reads_crossing": 19,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.3776782",
+      "insert": "cp",
+      "sequence": "RQTK01000339.1",
+      "position": 318401,
+      "reads_crossing": 7,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.1389423",
+      "insert": "cp",
+      "sequence": "RQTK01000070.1",
+      "position": 476498,
+      "reads_crossing": 0,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.6311928",
+      "insert": "slugmt",
+      "sequence": "RQTK01000321.1",
+      "position": 187603,
+      "reads_crossing": 11,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     },
+     {
+      "read": "SRR7647856.3402594",
+      "insert": "slugmt",
+      "sequence": "RQTK01000299.1",
+      "position": 10800,
+      "reads_crossing": 6,
+      "joins_here": 0,
+      "joins_here_same_organelle": 0,
+      "joins": []
+     }
+    ]
+   },
+   "repeat_joins": {
+    "repeat": "RQTK01001031.1:1604-3400",
+    "mates_with_plastid_alignment": 105,
+    "positions": [
+     {
+      "plastid_position": 20865,
+      "at_the_join": {
+       "mates_going_on": 0,
+       "into_the_repeat": 0,
+       "molecules_into_the_repeat": 0
+      },
+      "controls": [
+       {
+        "offset": -300,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 300,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -600,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 600,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -900,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 900,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1200,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1200,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1500,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1500,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       }
+      ],
+      "reads_into_the_repeat": [],
+      "controls_mean_into_the_repeat": 0.0,
+      "controls_max_into_the_repeat": 0
+     },
+     {
+      "plastid_position": 20899,
+      "at_the_join": {
+       "mates_going_on": 0,
+       "into_the_repeat": 0,
+       "molecules_into_the_repeat": 0
+      },
+      "controls": [
+       {
+        "offset": -300,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 300,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -600,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 600,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -900,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 900,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1200,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1200,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1500,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1500,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       }
+      ],
+      "reads_into_the_repeat": [],
+      "controls_mean_into_the_repeat": 0.0,
+      "controls_max_into_the_repeat": 0
+     },
+     {
+      "plastid_position": 78759,
+      "at_the_join": {
+       "mates_going_on": 0,
+       "into_the_repeat": 0,
+       "molecules_into_the_repeat": 0
+      },
+      "controls": [
+       {
+        "offset": -300,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 300,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -600,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 600,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -900,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 900,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1200,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1200,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1500,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1500,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       }
+      ],
+      "reads_into_the_repeat": [],
+      "controls_mean_into_the_repeat": 0.0,
+      "controls_max_into_the_repeat": 0
+     },
+     {
+      "plastid_position": 78799,
+      "at_the_join": {
+       "mates_going_on": 0,
+       "into_the_repeat": 0,
+       "molecules_into_the_repeat": 0
+      },
+      "controls": [
+       {
+        "offset": -300,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 300,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -600,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 600,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -900,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 900,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1200,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1200,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": -1500,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       },
+       {
+        "offset": 1500,
+        "mates_going_on": 0,
+        "into_the_repeat": 0,
+        "molecules_into_the_repeat": 0
+       }
+      ],
+      "reads_into_the_repeat": [],
+      "controls_mean_into_the_repeat": 0.0,
+      "controls_max_into_the_repeat": 0
+     }
+    ]
+   },
+   "end_piece_control": {
+    "piece": 60,
+    "pass_rule": "40 bases or more aligned at 97% identity or better",
+    "mates": {
+     "slug": {
+      "mates": 20000,
+      "start_passes": 12226,
+      "end_passes": 9151
+     },
+     "slugmt": {
+      "mates": 20000,
+      "start_passes": 18250,
+      "end_passes": 15639
+     },
+     "cp": {
+      "mates": 12,
+      "start_passes": 6,
+      "end_passes": 3
+     }
+    },
+    "expected_share_organelle_first": {
+     "slugmt": 0.4662
+    },
+    "first_pass_finds_short_organelle_piece": {
+     "slugmt": 0.9217
+    },
+    "expected_share_organelle_first_found": {
+     "slugmt": 0.446
+    }
    }
   }
  ],
