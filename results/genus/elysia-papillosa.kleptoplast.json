@@ -1,0 +1,138 @@
+{
+ "slug": "elysia-papillosa",
+ "species": "Elysia papillosa",
+ "libraries": [
+  {
+   "library": "main",
+   "label": "",
+   "runs": [
+    "ERR14842698"
+   ],
+   "kind": "hifi",
+   "platform": "PacBio Revio (HiFi)",
+   "animal": "the sequenced animal (specimen xgElyPapi4, Tampa, Florida, 2024)",
+   "note": "One of the three runs behind the assembly, in full.",
+   "reads": 1202224,
+   "bases": 8250209426,
+   "bases_screened": 8250209426,
+   "plastid": {
+    "reads": 1700,
+    "bp": 11865877,
+    "fraction": 0.001438
+   },
+   "mitochondrion": {
+    "reads": 816,
+    "bp": 5542153,
+    "fraction": 0.000672
+   },
+   "algal_mitochondrion": {
+    "reads": null,
+    "bp": 0,
+    "fraction": 0.0
+   },
+   "algal_rdna": {
+    "reads": 1,
+    "bp": 2210,
+    "fraction": 0.0
+   },
+   "plastid_any_identity": {
+    "reads": 1701,
+    "bp": 11864842,
+    "fraction_of_bases": 0.001438
+   },
+   "other_taxa": {
+    "algrDNA": [
+     {
+      "name": "Penicillus pyriformis",
+      "segments": 1,
+      "mean_identity": 0.9878
+     }
+    ],
+    "algmt": []
+   },
+   "donors": [
+    {
+     "name": "Penicillus lamourouxii",
+     "reads": 1701,
+     "bp": 11864842,
+     "fraction": 1.0,
+     "median_identity": 0.9996,
+     "identity_q10": 0.9968,
+     "identity_q90": 1.0,
+     "accession": "OZ494339.1"
+    }
+   ],
+   "barcodes": [
+    {
+     "barcode": "rbcL",
+     "haplotype": "h1",
+     "reads": 95,
+     "fraction": 1.0,
+     "length": 1269,
+     "top_hit": "Penicillus dumetosus [AY942175.1]",
+     "identity": 97.79,
+     "alnlen": 1266,
+     "species_near_best": "Penicillus dumetosus (1)",
+     "sequence": "TTTAACATATTATACACCAAATTATCAAGTATCAGAAACGGATATTCTTGCAGCATTTCGAATGACACCCCAACCAGGTGTTCCTCCAGAAGAAGCAGGTGCTGCTGTTGCAGCAGAATCTTCAACAGGAACATGGACAACTGTATGGACAGATGGTCTTACAAGTTTAGATAGATATAAAGGACGTTGTTATGATATTGAAGCAGTTCCTGGTGAAGAAAATCAATTTATTGCGTATGTTGCATATCCATTAGATCTTTTTGAAGAAGGATCTGTTACAAATTTATTTACTTCTATTGTTGGAAATGTTTTCGGATTTAAAGCTTTACGAGCATTACGACTTGAAGATTTACGTATTCCTCCTTCATATATTAAAACTTTTGAAGGACCACCTCATGGAATTCAAGTTGAACGTGATAAACTAAATAAATATGGACGTCCATTTTTAGGTTGTACTATTAAACCTAAATTAGGTCTTTCTGCAAAAAATTATGGACGTGCAGTTTATGAAGGTTTACGTGGTGGACTTGATTTTACAAAAGATGATGAGAATGTTAATTCTCAGCCATTCATGCGTTGGCGTGATCGTTTTCTTTTTGTTGCAGAAGCTATTTATAAATCTCAAGCGGAGACAGGTGAAATTAAAGGACATTATTTAAATGCTACTGCTGGTCATTGTGATGAAATGATAAAAAGAGCTGAATGTGCAAAAGAATTAGGTGTACCTATTATCATGCATGATTATCTAACTGGAGGTTTTACAGCGAATACATCTCTTGCACATTATTGTCGAGATCACAGTTTATTATTACATATTCATCGTGCAATGCATGCTGTGATTGATCGTCAAAAAATTCATGGAATGCATTTTAGAGTTCTTGCAAAAGCTTTAAGACTTTCTGGTGGTGATCATTTACATGCAGGAACTGTTGTAGGTAAACTTGAAGGTGAACGTGAAGTAACTTTAGGTTTTGTAGATTTAATGCGCGATAATTTTTGTGAAAAAGATCGTAAGCGTGGGATTTACTTTACACAAGATTGGGTATCATTACCTGGGGTAATACCTGTTGCTTCTGGTGGTATTCATGTTTGGCATATGCCCGCATTAGTTGAAATTTTTGGAGATGACGCTTGTTTACAATTTGGTGGTGGAACATTAGGCCATCCTTGGGGAAATGCTCCGGGAGCTGCGGCGAACCGTATTGCCTGTGAGGTTTGTGTACAAGCACGTAATGAAGGACGTTCTCTTGCTTCCGAAGGTAATAACAT",
+     "frame": "AY942175.1",
+     "most_similar": {
+      "identity": 100.0,
+      "records": 4,
+      "longest_alnlen": 559,
+      "species": "Uncultured Bryopsidales (3); Penicillus lamourouxii (1)",
+      "accession": "MZ346586.1"
+     }
+    },
+    {
+     "barcode": "tufA",
+     "haplotype": "h1",
+     "reads": 101,
+     "fraction": 1.0,
+     "length": 821,
+     "top_hit": "Penicillus dumetosus [MG784729.1]",
+     "identity": 98.54,
+     "alnlen": 821,
+     "species_near_best": "Penicillus dumetosus (3); Penicillus pyriformis (3)",
+     "sequence": "GGCGCTATTTTAGTGGTTTCCGGTGCTGATGGTCCAATGCCTCAAACCAAAGAACATATTTTATTAGCTCAACAAGTTGGAGTTCCAGCTATTGTTGTTTTTTTAAATAAAATTGATCAAGTTGATGATGAAGAATTGTTAGAACTTGTTGAATTAGAAATTAGAGAAACTTTAGATCTTTATGATTTTCCCGGGGATTCTATATTAATTATTAGAGGATCTGCTTTAGAGGCGGTAGAAGCACTTACAATGAATCCACAAATTCAAAGAGGTGAGAATGAATGGGTTGATCATATTCATAAATTAATGGATTGTGTTGACGAAGCAATTCCATTACCACAACGAAATGTTGAAAAAGATTTCTTAATGGCTATTGAAAATATAGTATCGATTACAGGTCGTGGGACAGTTGCTACAGGTCGTGTGGAACGTGGACAAATTAAAGTGGGAGAATCTATTGAAATTATTGGACTTAAAGATACTAAAGAAACAACTGTTATAGGACTTGAAATGTTTCAAAAAACATTAGATGAAAGTGTTGCTGGAGATAATGTTGGTGTTTTGTTAAGAGGAATACAAAAAAATGAAATACAACGAGGTATGGTTTTGGCTAAACCAGGTTCAATAACACCCCATCTTAAATTTAAGGCTCAAGTTTATATTTTAAAAAAAAGTGAAGGAGGTCGCCATACTTCTTTTGTTACTGGTTATAGACCACAATTTTATGTCCGAACAACTGATGTTACAGGAAGAATTGAATCTTTTCAAACTGATGATAATAGTAAAATGCGTATGGTTATGCCTGGTGATAGAGTTCAAAT",
+     "frame": "MG784729.1",
+     "most_similar": {
+      "identity": 98.602,
+      "records": 2,
+      "longest_alnlen": 821,
+      "species": "Penicillus dumetosus (2)",
+      "accession": "MG784729.1"
+     }
+    }
+   ],
+   "contigs": null,
+   "hot_windows": [
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 400,
+     "end": 600,
+     "reads": 453
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 0,
+     "end": 200,
+     "reads": 280
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 200,
+     "end": 400,
+     "reads": 70
+    }
+   ]
+  }
+ ],
+ "donors": [
+  {
+   "name": "Penicillus lamourouxii",
+   "fraction": 1.0,
+   "median_identity": 0.9996
+  }
+ ],
+ "plastid_fraction": 0.001438
+}

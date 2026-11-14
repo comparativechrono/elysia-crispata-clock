@@ -1,0 +1,3864 @@
+{
+ "slug": "elysia-marginata",
+ "species": "Elysia marginata",
+ "assembly": {
+  "name": "Ema_v1",
+  "accession": "GCA_019649035.1",
+  "level": "scaffold"
+ },
+ "screen": {
+  "whole": [],
+  "loci": [
+   {
+    "contig": "BMAT01004790.1",
+    "start": 296870,
+    "end": 297959,
+    "cls": "plastid",
+    "target": "cp|NC_000925.1",
+    "tstart": 151215,
+    "tend": 152310,
+    "length": 1115,
+    "identity": 0.8007,
+    "target_entropy": 5.9,
+    "matches": 1,
+    "span": 1089,
+    "contig_length": 305179,
+    "target_desc": "Porphyra purpurea chloroplast, complete genome",
+    "genes": [
+     "rrlA",
+     "23S ribosomal RNA"
+    ]
+   },
+   {
+    "contig": "BMAT01007826.1",
+    "start": 4633,
+    "end": 9613,
+    "cls": "algal mitochondrial",
+    "target": "algmt|OZ556570.1",
+    "tstart": 281978,
+    "tend": 286950,
+    "length": 5298,
+    "identity": 0.8092,
+    "target_entropy": 5.93,
+    "matches": 2,
+    "span": 4980,
+    "contig_length": 13856,
+    "target_desc": "Halimeda cylindracea genome assembly, organelle: mitochondrion",
+    "genes": []
+   }
+  ],
+  "numt_like": [],
+  "removed": {
+   "repeat_like_matches": 193,
+   "low_complexity_matches": 5,
+   "repeat_like_panel_sequences": 5,
+   "own_rdna_loci": 0
+  },
+  "repeats": [
+   {
+    "target": "cp|AP014543.1",
+    "target_desc": "Poropsis sp. ID1_4 chloroplast DNA, nearly complete genome",
+    "places": 2312
+   },
+   {
+    "target": "cp|OZ372796.1",
+    "target_desc": "Penicillus lamourouxii genome assembly, organelle: plastid:chloroplast",
+    "places": 254
+   },
+   {
+    "target": "cp|OZ494339.1",
+    "target_desc": "Penicillus lamourouxii genome assembly, organelle: plastid:chloroplast",
+    "places": 137
+   },
+   {
+    "target": "cp|OL684341.1",
+    "target_desc": "Ulva tepida chloroplast, complete genome",
+    "places": 69
+   },
+   {
+    "target": "cp|NC_067776.1",
+    "target_desc": "Ulva tepida chloroplast, complete genome",
+    "places": 58
+   }
+  ]
+ },
+ "reads": [
+  {
+   "library": "main",
+   "label": "",
+   "runs": [
+    "DRR238951"
+   ],
+   "kind": "short",
+   "platform": "Illumina HiSeq 2500 (paired, 250 bp inserts)",
+   "animal": "the sequenced animal (one individual, Kagoshima, Japan, 2013)",
+   "reads": 30000000,
+   "bases": 4500000000,
+   "bases_screened": 4500000000,
+   "chimera": {
+    "rates": {
+     "cp": {
+      "pairs_with_mate": 41946,
+      "pairs_also_with_slug": 37,
+      "rate": 0.00088
+     },
+     "slugrDNA": {
+      "pairs_with_mate": 753,
+      "pairs_also_with_slug": 0,
+      "rate": 0.0
+     },
+     "slugmt": {
+      "pairs_with_mate": 1188,
+      "pairs_also_with_slug": 0,
+      "rate": 0.0
+     },
+     "algrDNA": {
+      "pairs_with_mate": 1249,
+      "pairs_also_with_slug": 0,
+      "rate": 0.0
+     },
+     "algmt": {
+      "pairs_with_mate": 235,
+      "pairs_also_with_slug": 0,
+      "rate": 0.0
+     }
+    },
+    "recurrent": [
+     {
+      "kind": "cp",
+      "slug": "BMAT01005342.1",
+      "start": 3000,
+      "pairs": 16,
+      "distinct_pairs": 11,
+      "other_targets": [
+       "cp|GQ892829.1",
+       "cp|NC_013359.1",
+       "cp|PQ652170.1"
+      ],
+      "other_positions": [
+       107687,
+       107688,
+       107691,
+       107692,
+       107710,
+       107713,
+       107713,
+       107714,
+       107716,
+       107733,
+       135739,
+       135764,
+       135781,
+       135782,
+       135782,
+       135806
+      ]
+     },
+     {
+      "kind": "cp",
+      "slug": "BMAT01005342.1",
+      "start": 0,
+      "pairs": 16,
+      "distinct_pairs": 10,
+      "other_targets": [
+       "cp|GQ892829.1",
+       "cp|NC_013359.1",
+       "cp|PQ652170.1"
+      ],
+      "other_positions": [
+       103639,
+       103640,
+       103641,
+       103657,
+       103657,
+       103657,
+       103662,
+       131687,
+       131689,
+       131689,
+       131689,
+       131689,
+       131689,
+       131702,
+       131705,
+       131710
+      ]
+     }
+    ],
+    "split_mates": {
+     "slugmt": 1,
+     "cp": 2
+    },
+    "split_examples": [
+     {
+      "read": "DRR238951.2553554.2",
+      "other": "slugmt",
+      "slug": "BMAT01000071.1",
+      "slug_pos": 150254,
+      "other_t": "slugmt|NC_030537.1",
+      "other_pos": 2541,
+      "slug_len": 64,
+      "other_len": 91
+     },
+     {
+      "read": "DRR238951.3235803.2",
+      "other": "cp",
+      "slug": "BMAT01003775.1",
+      "slug_pos": 501029,
+      "other_t": "cp|NC_013359.1",
+      "other_pos": 106246,
+      "slug_len": 66,
+      "other_len": 44
+     },
+     {
+      "read": "DRR238951.11311733.2",
+      "other": "cp",
+      "slug": "BMAT01004028.1",
+      "slug_pos": 131264,
+      "other_t": "cp|NC_000911.1",
+      "other_pos": 3326510,
+      "slug_len": 73,
+      "other_len": 41
+     }
+    ]
+   },
+   "min_identity": null,
+   "locus_tests": null
+  }
+ ],
+ "protein_screen": {
+  "n_queries": 471,
+  "summary": {
+   "loci": 197,
+   "animal gene": 91,
+   "no database match": 55,
+   "microbe-like": 51
+  },
+  "genome_gc": 0.3646,
+  "non_animal_contigs": [
+   {
+    "contig": "BMAT01007964.1",
+    "length": 498232,
+    "loci": 4,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "tkt",
+     "ftsH",
+     "rpl2",
+     "rpl14"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.33,
+    "identity_max": 0.52,
+    "with_stops": 2,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.2747,
+     "examined_length": 498232,
+     "n_bases": 35696,
+     "stretches": {
+      "microbe": 267,
+      "slug_only": 1,
+      "alga": 3,
+      "animal": 6,
+      "own_only": 4
+     },
+     "coding_bp": 251086,
+     "nearest_bacteria": [
+      [
+       "Mycoplasmopsis",
+       59
+      ],
+      [
+       "Bacillus",
+       34
+      ],
+      [
+       "Mycoplasma",
+       33
+      ],
+      [
+       "Mycoplasmoides",
+       33
+      ],
+      [
+       "Metamycoplasma",
+       11
+      ]
+     ],
+     "bacterial_identity_median": 43.5
+    }
+   },
+   {
+    "contig": "BMAT01004790.1",
+    "length": 305179,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "GapC2"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.61,
+    "identity_max": 0.61,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.3673,
+     "examined_length": 305179,
+     "n_bases": 10457,
+     "stretches": {
+      "microbe": 117,
+      "animal": 23,
+      "own_only": 23,
+      "alga": 11
+     },
+     "coding_bp": 182934,
+     "nearest_bacteria": [
+      [
+       "Bacillus",
+       12
+      ],
+      [
+       "Flavobacterium",
+       8
+      ],
+      [
+       "Christiangramia",
+       6
+      ],
+      [
+       "Escherichia",
+       4
+      ],
+      [
+       "Haemophilus",
+       3
+      ]
+     ],
+     "bacterial_identity_median": 38.1
+    }
+   },
+   {
+    "contig": "BMAT01004542.1",
+    "length": 199701,
+    "loci": 4,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "atpB",
+     "hsp70",
+     "ATPase",
+     "CA"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.48,
+    "identity_max": 0.62,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 4,
+    "census": {
+     "gc": 0.3657,
+     "examined_length": 199701,
+     "n_bases": 13278,
+     "stretches": {
+      "own_only": 20,
+      "microbe": 69,
+      "alga": 11,
+      "animal": 12,
+      "slug_only": 1
+     },
+     "coding_bp": 119274,
+     "nearest_bacteria": [
+      [
+       "Christiangramia",
+       6
+      ],
+      [
+       "Bacillus",
+       5
+      ],
+      [
+       "Haemophilus",
+       4
+      ],
+      [
+       "Flavobacterium",
+       2
+      ],
+      [
+       "Bacteroides",
+       2
+      ]
+     ],
+     "bacterial_identity_median": 38.1
+    }
+   },
+   {
+    "contig": "BMAT01004028.1",
+    "length": 171461,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "cpn60"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.46,
+    "identity_max": 0.46,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.3761,
+     "examined_length": 171461,
+     "n_bases": 8970,
+     "stretches": {
+      "own_only": 10,
+      "microbe": 80,
+      "animal": 13,
+      "alga": 3
+     },
+     "coding_bp": 114306,
+     "nearest_bacteria": [
+      [
+       "Escherichia",
+       4
+      ],
+      [
+       "Bacillus",
+       4
+      ],
+      [
+       "Haemophilus",
+       3
+      ],
+      [
+       "Christiangramia",
+       3
+      ],
+      [
+       "Bacteroides",
+       2
+      ]
+     ],
+     "bacterial_identity_median": 36.9
+    }
+   },
+   {
+    "contig": "BMAT01004631.1",
+    "length": 167860,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "accD"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.41,
+    "identity_max": 0.41,
+    "with_stops": 0,
+    "multi_exon": 1,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.3633,
+     "examined_length": 167860,
+     "n_bases": 7546,
+     "stretches": {
+      "microbe": 68,
+      "own_only": 17,
+      "animal": 10,
+      "alga": 7
+     },
+     "coding_bp": 107481,
+     "nearest_bacteria": [
+      [
+       "Haemophilus",
+       5
+      ],
+      [
+       "Bacillus",
+       5
+      ],
+      [
+       "Bacteroides",
+       3
+      ],
+      [
+       "Flavobacterium",
+       3
+      ],
+      [
+       "Christiangramia",
+       3
+      ]
+     ],
+     "bacterial_identity_median": 37.5
+    }
+   },
+   {
+    "contig": "BMAT01004494.1",
+    "length": 117125,
+    "loci": 7,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "rpl14",
+     "rps3",
+     "rps19",
+     "rpl2",
+     "rps12",
+     "tkt",
+     "atpA"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.37,
+    "identity_max": 0.7,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 6,
+    "census": {
+     "gc": 0.3806,
+     "examined_length": 117125,
+     "n_bases": 6653,
+     "stretches": {
+      "microbe": 85,
+      "animal": 6,
+      "own_only": 5,
+      "alga": 6
+     },
+     "coding_bp": 92271,
+     "nearest_bacteria": [
+      [
+       "Flavobacterium",
+       9
+      ],
+      [
+       "Christiangramia",
+       9
+      ],
+      [
+       "Chloroherpeton",
+       3
+      ],
+      [
+       "Parabacteroides",
+       2
+      ],
+      [
+       "Bacteroides",
+       2
+      ]
+     ],
+     "bacterial_identity_median": 52.8
+    }
+   },
+   {
+    "contig": "BMAT01003247.1",
+    "length": 96942,
+    "loci": 9,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "rps12",
+     "rpoB",
+     "rpoC1",
+     "rpoC2",
+     "rps9",
+     "hsp70",
+     "atpA",
+     "atpB"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.29,
+    "identity_max": 0.64,
+    "with_stops": 6,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 0,
+    "census": {
+     "gc": 0.2944,
+     "examined_length": 96942,
+     "n_bases": 9371,
+     "stretches": {
+      "microbe": 41,
+      "own_only": 3,
+      "slug_only": 1
+     },
+     "coding_bp": 44161,
+     "nearest_bacteria": [
+      [
+       "Mycoplasma",
+       11
+      ],
+      [
+       "Mycoplasmopsis",
+       10
+      ],
+      [
+       "Bacillus",
+       6
+      ],
+      [
+       "Mycoplasmoides",
+       4
+      ],
+      [
+       "Methanocaldococcus",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 51.2
+    }
+   },
+   {
+    "contig": "BMAT01006000.1",
+    "length": 85382,
+    "loci": 5,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "rpoC2",
+     "rpoC1",
+     "rpoB",
+     "tufA"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.29,
+    "identity_max": 0.66,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 5,
+    "census": {
+     "gc": 0.3808,
+     "examined_length": 85382,
+     "n_bases": 6409,
+     "stretches": {
+      "microbe": 37,
+      "alga": 7,
+      "animal": 7,
+      "own_only": 6
+     },
+     "coding_bp": 54251,
+     "nearest_bacteria": [
+      [
+       "Flavobacterium",
+       4
+      ],
+      [
+       "Haemophilus",
+       3
+      ],
+      [
+       "Geobacillus",
+       1
+      ],
+      [
+       "Bacillus",
+       1
+      ],
+      [
+       "Christiangramia",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 49.4
+    }
+   },
+   {
+    "contig": "BMAT01006657.1",
+    "length": 80029,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "GapC1"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.43,
+    "identity_max": 0.43,
+    "with_stops": 1,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 0,
+    "census": {
+     "gc": 0.2787,
+     "examined_length": 80029,
+     "n_bases": 2204,
+     "stretches": {
+      "microbe": 53,
+      "animal": 2
+     },
+     "coding_bp": 56582,
+     "nearest_bacteria": [
+      [
+       "Mycoplasmopsis",
+       19
+      ],
+      [
+       "Bacillus",
+       10
+      ],
+      [
+       "Mycoplasmoides",
+       5
+      ],
+      [
+       "Mycoplasma",
+       4
+      ],
+      [
+       "Staphylococcus",
+       4
+      ]
+     ],
+     "bacterial_identity_median": 41.1
+    }
+   },
+   {
+    "contig": "BMAT01010395.1",
+    "length": 68860,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "ATPase"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.44,
+    "identity_max": 0.44,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.3666,
+     "examined_length": 68860,
+     "n_bases": 1270,
+     "stretches": {
+      "microbe": 15,
+      "own_only": 14,
+      "alga": 2,
+      "animal": 4
+     },
+     "coding_bp": 35500,
+     "nearest_bacteria": [
+      [
+       "Flavobacterium",
+       2
+      ],
+      [
+       "Christiangramia",
+       1
+      ],
+      [
+       "Porphyromonas",
+       1
+      ],
+      [
+       "Lactococcus",
+       1
+      ],
+      [
+       "Thermodesulfovibrio",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 48.8
+    }
+   },
+   {
+    "contig": "BMAT01004643.1",
+    "length": 52790,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "cysA"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.3,
+    "identity_max": 0.3,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 0,
+    "census": {
+     "gc": 0.3929,
+     "examined_length": 52790,
+     "n_bases": 4671,
+     "stretches": {
+      "microbe": 24,
+      "own_only": 2,
+      "alga": 2,
+      "animal": 4
+     },
+     "coding_bp": 38279,
+     "nearest_bacteria": [
+      [
+       "Christiangramia",
+       3
+      ],
+      [
+       "Porphyromonas",
+       2
+      ],
+      [
+       "Bacillus",
+       2
+      ],
+      [
+       "Haemophilus",
+       2
+      ],
+      [
+       "Phocaeicola",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 46.3
+    }
+   },
+   {
+    "contig": "BMAT01013518.1",
+    "length": 26861,
+    "loci": 2,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "atpA",
+     "atpB"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.4,
+    "identity_max": 0.44,
+    "with_stops": 0,
+    "multi_exon": 1,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.2826,
+     "examined_length": 26861,
+     "n_bases": 3037,
+     "stretches": {
+      "microbe": 11
+     },
+     "coding_bp": 8335,
+     "nearest_bacteria": [
+      [
+       "Mycoplasmopsis",
+       3
+      ],
+      [
+       "Ureaplasma",
+       2
+      ],
+      [
+       "Mycoplasma",
+       1
+      ],
+      [
+       "Brachyspira",
+       1
+      ],
+      [
+       "Metamycoplasma",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 50.3
+    }
+   },
+   {
+    "contig": "BMAT01011217.1",
+    "length": 25437,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "ftsH"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.44,
+    "identity_max": 0.44,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.3761,
+     "examined_length": 25437,
+     "n_bases": 948,
+     "stretches": {
+      "microbe": 12,
+      "animal": 4,
+      "alga": 1
+     },
+     "coding_bp": 13354,
+     "nearest_bacteria": [
+      [
+       "Phocaeicola",
+       1
+      ],
+      [
+       "Bacillus",
+       1
+      ],
+      [
+       "Christiangramia",
+       1
+      ],
+      [
+       "Flavobacterium",
+       1
+      ],
+      [
+       "Alkalihalophilus",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 36.3
+    }
+   },
+   {
+    "contig": "BMAT01003553.1",
+    "length": 25110,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "tufA"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.6,
+    "identity_max": 0.6,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.2817,
+     "examined_length": 25110,
+     "n_bases": 3816,
+     "stretches": {
+      "microbe": 6
+     },
+     "coding_bp": 5956,
+     "nearest_bacteria": [
+      [
+       "Mycoplasmoides",
+       2
+      ],
+      [
+       "Mycoplasma",
+       1
+      ],
+      [
+       "Ruminiclostridium",
+       1
+      ],
+      [
+       "Mycoplasmopsis",
+       1
+      ],
+      [
+       "Carboxydothermus",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 55.7
+    }
+   },
+   {
+    "contig": "BMAT01004359.1",
+    "length": 20703,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "trpAB"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.55,
+    "identity_max": 0.55,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.3661,
+     "examined_length": 20703,
+     "n_bases": 0,
+     "stretches": {
+      "microbe": 15,
+      "own_only": 1,
+      "alga": 2
+     },
+     "coding_bp": 13381,
+     "nearest_bacteria": [
+      [
+       "Flavobacterium",
+       2
+      ],
+      [
+       "Christiangramia",
+       1
+      ],
+      [
+       "Methanocaldococcus",
+       1
+      ],
+      [
+       "Methanosarcina",
+       1
+      ],
+      [
+       "Haemophilus",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 40.2
+    }
+   },
+   {
+    "contig": "BMAT01013213.1",
+    "length": 17930,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "tkt"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.43,
+    "identity_max": 0.43,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.4519,
+     "examined_length": 17930,
+     "n_bases": 5249,
+     "stretches": {
+      "animal": 2,
+      "microbe": 5,
+      "alga": 2,
+      "own_only": 6
+     },
+     "coding_bp": 8886,
+     "nearest_bacteria": [
+      [
+       "Alcanivorax",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 76.0
+    }
+   },
+   {
+    "contig": "BMAT01000876.1",
+    "length": 11621,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "hsp70"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.48,
+    "identity_max": 0.48,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.5013,
+     "examined_length": 11621,
+     "n_bases": 5413,
+     "stretches": {
+      "microbe": 6,
+      "own_only": 2,
+      "animal": 1
+     },
+     "coding_bp": 4527,
+     "nearest_bacteria": [
+      [
+       "Pseudomonas",
+       2
+      ],
+      [
+       "Escherichia",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 55.8
+    }
+   },
+   {
+    "contig": "BMAT01005358.1",
+    "length": 8666,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "chlL"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.37,
+    "identity_max": 0.37,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.4804,
+     "examined_length": 8666,
+     "n_bases": 1256,
+     "stretches": {
+      "microbe": 2,
+      "own_only": 3,
+      "alga": 1
+     },
+     "coding_bp": 5292,
+     "nearest_bacteria": [],
+     "bacterial_identity_median": null
+    }
+   },
+   {
+    "contig": "BMAT01004867.1",
+    "length": 8580,
+    "loci": 2,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "infA",
+     "ATPase"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.34,
+    "identity_max": 0.52,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.4967,
+     "examined_length": 8580,
+     "n_bases": 783,
+     "stretches": {
+      "microbe": 8
+     },
+     "coding_bp": 6595,
+     "nearest_bacteria": [
+      [
+       "Pseudomonas",
+       2
+      ],
+      [
+       "Aromatoleum",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 50.9
+    }
+   },
+   {
+    "contig": "BMAT01010535.1",
+    "length": 8333,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "ATPase"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.49,
+    "identity_max": 0.49,
+    "with_stops": 1,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.2664,
+     "examined_length": 8333,
+     "n_bases": 399,
+     "stretches": {
+      "microbe": 4
+     },
+     "coding_bp": 2486,
+     "nearest_bacteria": [
+      [
+       "Bacillus",
+       1
+      ],
+      [
+       "Streptococcus",
+       1
+      ],
+      [
+       "Mesomycoplasma",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 47.7
+    }
+   },
+   {
+    "contig": "BMAT01010330.1",
+    "length": 7182,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "rps11"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.5,
+    "identity_max": 0.5,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.5181,
+     "examined_length": 7182,
+     "n_bases": 2550,
+     "stretches": {
+      "microbe": 8
+     },
+     "coding_bp": 3982,
+     "nearest_bacteria": [
+      [
+       "Pseudomonas",
+       1
+      ],
+      [
+       "Yersinia",
+       1
+      ],
+      [
+       "Saccharophagus",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 86.0
+    }
+   },
+   {
+    "contig": "BMAT01005572.1",
+    "length": 5930,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "tufA"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.64,
+    "identity_max": 0.64,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.5135,
+     "examined_length": 5930,
+     "n_bases": 0,
+     "stretches": {
+      "microbe": 8
+     },
+     "coding_bp": 4956,
+     "nearest_bacteria": [
+      [
+       "Stutzerimonas",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 89.0
+    }
+   },
+   {
+    "contig": "BMAT01008604.1",
+    "length": 4259,
+    "loci": 2,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "rps3",
+     "rpl14"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.39,
+    "identity_max": 0.56,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 2,
+    "census": {
+     "gc": 0.5407,
+     "examined_length": 4259,
+     "n_bases": 0,
+     "stretches": {
+      "microbe": 9,
+      "animal": 1
+     },
+     "coding_bp": 3872,
+     "nearest_bacteria": [
+      [
+       "Alcanivorax",
+       1
+      ],
+      [
+       "Azotobacter",
+       1
+      ],
+      [
+       "Cellvibrio",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 76.2
+    }
+   },
+   {
+    "contig": "BMAT01005144.1",
+    "length": 2344,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "rps11"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.5,
+    "identity_max": 0.5,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 1,
+    "census": {
+     "gc": 0.3754,
+     "examined_length": 2344,
+     "n_bases": 0,
+     "stretches": {
+      "microbe": 7
+     },
+     "coding_bp": 2216,
+     "nearest_bacteria": [
+      [
+       "Christiangramia",
+       3
+      ],
+      [
+       "Flavobacterium",
+       2
+      ],
+      [
+       "Chlamydia",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 83.9
+    }
+   }
+  ],
+  "no_match": {
+   "n": 55,
+   "low_complexity": 52,
+   "short": 1,
+   "other": [
+    {
+     "contig": "BMAT01003683.1",
+     "start": 156896,
+     "end": 258664,
+     "query": "CHLRE_11g477625v5 magnesium chelatase",
+     "identity": 0.29,
+     "aligned_aa": 259
+    },
+    {
+     "contig": "BMAT01011932.1",
+     "start": 34466,
+     "end": 61293,
+     "query": "CHLRE_11g477625v5 magnesium chelatase",
+     "identity": 0.26,
+     "aligned_aa": 361
+    }
+   ]
+  },
+  "non_animal": [
+   {
+    "contig": "BMAT01000291.1",
+    "contig_length": 149751,
+    "start": 28248,
+    "end": 132554,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.4338,
+    "query_cover": 0.1565017261219793,
+    "aligned_aa": 136,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.2,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01000636.1",
+    "contig_length": 1540588,
+    "start": 442188,
+    "end": 457382,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.3252,
+    "query_cover": 0.1380897583429229,
+    "aligned_aa": 120,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.72,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01000679.1",
+    "contig_length": 359928,
+    "start": 140055,
+    "end": 163758,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.3926,
+    "query_cover": 0.1518987341772152,
+    "aligned_aa": 132,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 1.15,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01000687.1",
+    "contig_length": 674985,
+    "start": 127358,
+    "end": 189794,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.3238,
+    "query_cover": 0.2243958573072497,
+    "aligned_aa": 195,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.52,
+    "exons": 4
+   },
+   {
+    "contig": "BMAT01000876.1",
+    "contig_length": 11621,
+    "start": 5,
+    "end": 1129,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB83",
+    "query_description": "hsp70 Heat shock 70 kDa protein",
+    "identity": 0.4763,
+    "query_cover": 0.5629742033383915,
+    "aligned_aa": 371,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 723.0,
+    "alga_bits": 0,
+    "microbe_bits": 644.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.0,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01000929.1",
+    "contig_length": 1140695,
+    "start": 422323,
+    "end": 422472,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DKD7",
+    "query_description": "CHLRE_07g339000v5 Uncharacterized protein",
+    "identity": 0.28,
+    "query_cover": 0.1466275659824047,
+    "aligned_aa": 50,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 1.21,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01001012.1",
+    "contig_length": 275255,
+    "start": 71843,
+    "end": 139126,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.5133,
+    "query_cover": 0.13003452243958574,
+    "aligned_aa": 113,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 1.83,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01001839.1",
+    "contig_length": 308162,
+    "start": 39872,
+    "end": 40032,
+    "class": "no database match",
+    "query": "ARATH|P56782",
+    "query_description": "psbK Photosystem II reaction center protein K",
+    "identity": 0.3333,
+    "query_cover": 0.819672131147541,
+    "aligned_aa": 50,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.99,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01001855.1",
+    "contig_length": 301066,
+    "start": 24960,
+    "end": 48591,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3D8F4",
+    "query_description": "CHLRE_11g477625v5 magnesium chelatase",
+    "identity": 0.2629,
+    "query_cover": 0.13768513439385627,
+    "aligned_aa": 251,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.95,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01002127.1",
+    "contig_length": 699626,
+    "start": 81702,
+    "end": 81881,
+    "class": "no database match",
+    "query": "ARATH|Q94BS2",
+    "query_description": "MET1 Protein MET1, chloroplastic",
+    "identity": 0.25,
+    "query_cover": 0.16417910447761194,
+    "aligned_aa": 55,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.17,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01002495.1",
+    "contig_length": 284749,
+    "start": 161887,
+    "end": 184268,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DKD7",
+    "query_description": "CHLRE_07g339000v5 Uncharacterized protein",
+    "identity": 0.2561,
+    "query_cover": 0.2404692082111437,
+    "aligned_aa": 82,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.1,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01002950.1",
+    "contig_length": 941904,
+    "start": 113060,
+    "end": 210358,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.408,
+    "query_cover": 0.23130034522439585,
+    "aligned_aa": 201,
+    "frameshifts": 2,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.47,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01003097.1",
+    "contig_length": 104523,
+    "start": 8136,
+    "end": 96375,
+    "class": "no database match",
+    "query": "CHLRE|A8I531",
+    "query_description": "CHLRE_05g242000v5 Mg-protoporphyrin IX chelatase",
+    "identity": 0.35,
+    "query_cover": 0.10430247718383312,
+    "aligned_aa": 80,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.08,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01003247.1",
+    "contig_length": 96942,
+    "start": 12678,
+    "end": 13082,
+    "class": "microbe-like",
+    "query": "UDOFL|rps12",
+    "query_description": "",
+    "identity": 0.637,
+    "query_cover": 1.0,
+    "aligned_aa": 122,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 227.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.97,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01003247.1",
+    "contig_length": 96942,
+    "start": 41474,
+    "end": 43444,
+    "class": "microbe-like",
+    "query": "UDOFL|rpoB",
+    "query_description": "",
+    "identity": 0.2871,
+    "query_cover": 0.8944099378881988,
+    "aligned_aa": 720,
+    "frameshifts": 0,
+    "stops": 2,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 744.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.04,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01003247.1",
+    "contig_length": 96942,
+    "start": 43535,
+    "end": 44875,
+    "class": "microbe-like",
+    "query": "UDOFL|rpoB_2",
+    "query_description": "",
+    "identity": 0.3514,
+    "query_cover": 0.8725165562913907,
+    "aligned_aa": 527,
+    "frameshifts": 0,
+    "stops": 2,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 601.0,
+    "alga_bits": 0,
+    "microbe_bits": 670.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.05,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01003247.1",
+    "contig_length": 96942,
+    "start": 45637,
+    "end": 46680,
+    "class": "microbe-like",
+    "query": "UDOFL|rpoC1",
+    "query_description": "",
+    "identity": 0.4197,
+    "query_cover": 0.4117647058823529,
+    "aligned_aa": 343,
+    "frameshifts": 0,
+    "stops": 3,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 495.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.0,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01003247.1",
+    "contig_length": 96942,
+    "start": 47338,
+    "end": 48309,
+    "class": "microbe-like",
+    "query": "UDOFL|rpoC2",
+    "query_description": "",
+    "identity": 0.4315,
+    "query_cover": 0.18028169014084508,
+    "aligned_aa": 320,
+    "frameshifts": 0,
+    "stops": 1,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 343.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.05,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01003247.1",
+    "contig_length": 96942,
+    "start": 64798,
+    "end": 65190,
+    "class": "microbe-like",
+    "query": "UDOFL|rps9",
+    "query_description": "",
+    "identity": 0.3312,
+    "query_cover": 1.0,
+    "aligned_aa": 154,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 181.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.75,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01003247.1",
+    "contig_length": 96942,
+    "start": 80763,
+    "end": 82475,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB83",
+    "query_description": "hsp70 Heat shock 70 kDa protein",
+    "identity": 0.4526,
+    "query_cover": 0.9195751138088012,
+    "aligned_aa": 606,
+    "frameshifts": 0,
+    "stops": 2,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 750.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.93,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01003247.1",
+    "contig_length": 96942,
+    "start": 85766,
+    "end": 87259,
+    "class": "microbe-like",
+    "query": "UDOFL|atpA",
+    "query_description": "",
+    "identity": 0.5491,
+    "query_cover": 0.9840954274353877,
+    "aligned_aa": 495,
+    "frameshifts": 0,
+    "stops": 1,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 632.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.0,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01003247.1",
+    "contig_length": 96942,
+    "start": 88295,
+    "end": 88753,
+    "class": "microbe-like",
+    "query": "UDOFL|atpB",
+    "query_description": "",
+    "identity": 0.526,
+    "query_cover": 0.3276595744680851,
+    "aligned_aa": 154,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 206.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.95,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01003553.1",
+    "contig_length": 25110,
+    "start": 3348,
+    "end": 4533,
+    "class": "microbe-like",
+    "query": "UDOFL|tufA",
+    "query_description": "",
+    "identity": 0.5961,
+    "query_cover": 0.9951100244498777,
+    "aligned_aa": 407,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 591.0,
+    "alga_bits": 0,
+    "microbe_bits": 590.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.1,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01003629.1",
+    "contig_length": 325422,
+    "start": 9435,
+    "end": 53226,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.3562,
+    "query_cover": 0.2520138089758343,
+    "aligned_aa": 219,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.65,
+    "exons": 4
+   },
+   {
+    "contig": "BMAT01003683.1",
+    "contig_length": 313812,
+    "start": 156896,
+    "end": 258664,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3D8F4",
+    "query_description": "CHLRE_11g477625v5 magnesium chelatase",
+    "identity": 0.2885,
+    "query_cover": 0.14207350521119033,
+    "aligned_aa": 259,
+    "frameshifts": 0,
+    "stops": 1,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.37,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01004028.1",
+    "contig_length": 171461,
+    "start": 21293,
+    "end": 22909,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB82",
+    "query_description": "cpn60 Chaperonin",
+    "identity": 0.4627,
+    "query_cover": 0.9249146757679181,
+    "aligned_aa": 542,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 1012.0,
+    "alga_bits": 0,
+    "microbe_bits": 845.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.9,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004221.1",
+    "contig_length": 385490,
+    "start": 243860,
+    "end": 244155,
+    "class": "no database match",
+    "query": "VAULI|H6WBA2",
+    "query_description": "RRM domain-containing protein",
+    "identity": 0.4375,
+    "query_cover": 0.15384615384615385,
+    "aligned_aa": 48,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.0,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01004293.1",
+    "contig_length": 6350,
+    "start": 5315,
+    "end": 5449,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DKD7",
+    "query_description": "CHLRE_07g339000v5 Uncharacterized protein",
+    "identity": 0.2766,
+    "query_cover": 0.1378299120234604,
+    "aligned_aa": 47,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.1,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004359.1",
+    "contig_length": 20703,
+    "start": 18151,
+    "end": 19293,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB94",
+    "query_description": "trpAB Tryptophan synthase",
+    "identity": 0.5478,
+    "query_cover": 0.5913978494623656,
+    "aligned_aa": 385,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 423.0,
+    "met_bits": 423.0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 738.0,
+    "alga_bits": 459.0,
+    "microbe_bits": 526.0,
+    "best_alga_hit": "ALG|BRYSP|GMH33821.1",
+    "peptide_entropy": 4.14,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004494.1",
+    "contig_length": 117125,
+    "start": 4589,
+    "end": 4957,
+    "class": "microbe-like",
+    "query": "UDOFL|rpl14",
+    "query_description": "",
+    "identity": 0.5484,
+    "query_cover": 1.0,
+    "aligned_aa": 124,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 236.0,
+    "alga_bits": 0,
+    "microbe_bits": 206.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.93,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004494.1",
+    "contig_length": 117125,
+    "start": 5952,
+    "end": 6554,
+    "class": "microbe-like",
+    "query": "UDOFL|rps3",
+    "query_description": "",
+    "identity": 0.3714,
+    "query_cover": 0.9541284403669725,
+    "aligned_aa": 208,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 395.0,
+    "alga_bits": 0,
+    "microbe_bits": 328.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.96,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004494.1",
+    "contig_length": 117125,
+    "start": 7009,
+    "end": 7275,
+    "class": "microbe-like",
+    "query": "UDOFL|rps19",
+    "query_description": "",
+    "identity": 0.5506,
+    "query_cover": 0.956989247311828,
+    "aligned_aa": 89,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 161.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.01,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004494.1",
+    "contig_length": 117125,
+    "start": 7300,
+    "end": 8001,
+    "class": "microbe-like",
+    "query": "UDOFL|rpl2",
+    "query_description": "",
+    "identity": 0.5021,
+    "query_cover": 0.9631147540983607,
+    "aligned_aa": 235,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 458.0,
+    "alga_bits": 0,
+    "microbe_bits": 351.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.01,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004494.1",
+    "contig_length": 117125,
+    "start": 12664,
+    "end": 13029,
+    "class": "microbe-like",
+    "query": "UDOFL|rps12",
+    "query_description": "",
+    "identity": 0.6967,
+    "query_cover": 1.0,
+    "aligned_aa": 122,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 244.0,
+    "alga_bits": 194.0,
+    "microbe_bits": 218.0,
+    "best_alga_hit": "ALG|MICPC|C1KRB5",
+    "peptide_entropy": 3.93,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004494.1",
+    "contig_length": 117125,
+    "start": 67658,
+    "end": 69592,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB79",
+    "query_description": "tkt transketolase",
+    "identity": 0.4121,
+    "query_cover": 0.9019337016574586,
+    "aligned_aa": 653,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 1311.0,
+    "alga_bits": 602.0,
+    "microbe_bits": 646.0,
+    "best_alga_hit": "ALG|BRYSP|GMH36617.1",
+    "peptide_entropy": 4.18,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004494.1",
+    "contig_length": 117125,
+    "start": 101409,
+    "end": 102956,
+    "class": "microbe-like",
+    "query": "UDOFL|atpA",
+    "query_description": "",
+    "identity": 0.5532,
+    "query_cover": 0.9761431411530815,
+    "aligned_aa": 491,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 989.0,
+    "alga_bits": 587.0,
+    "microbe_bits": 832.0,
+    "best_alga_hit": "ALG|CHOCR|R7QMR3",
+    "peptide_entropy": 3.99,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004542.1",
+    "contig_length": 199701,
+    "start": 80761,
+    "end": 82242,
+    "class": "microbe-like",
+    "query": "UDOFL|atpB",
+    "query_description": "",
+    "identity": 0.6215,
+    "query_cover": 0.9914893617021276,
+    "aligned_aa": 466,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 618.0,
+    "met_bits": 618.0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 869.0,
+    "alga_bits": 619.0,
+    "microbe_bits": 844.0,
+    "best_alga_hit": "ALG|CHLRE|A8IQU3",
+    "peptide_entropy": 4.06,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004542.1",
+    "contig_length": 199701,
+    "start": 115401,
+    "end": 117092,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB83",
+    "query_description": "hsp70 Heat shock 70 kDa protein",
+    "identity": 0.5009,
+    "query_cover": 0.8710166919575114,
+    "aligned_aa": 574,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 1015.0,
+    "alga_bits": 0,
+    "microbe_bits": 910.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.99,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004542.1",
+    "contig_length": 199701,
+    "start": 129472,
+    "end": 132009,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB90",
+    "query_description": "ATPase",
+    "identity": 0.4773,
+    "query_cover": 0.9651162790697675,
+    "aligned_aa": 830,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 1457.0,
+    "alga_bits": 851.0,
+    "microbe_bits": 1040.0,
+    "best_alga_hit": "ALG|ARATH|Q8VYJ7",
+    "peptide_entropy": 4.01,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004542.1",
+    "contig_length": 199701,
+    "start": 196900,
+    "end": 197514,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB75",
+    "query_description": "CA_beta Carbonic anhydrase",
+    "identity": 0.5,
+    "query_cover": 0.6666666666666666,
+    "aligned_aa": 206,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 320.0,
+    "alga_bits": 207.0,
+    "microbe_bits": 244.0,
+    "best_alga_hit": "ALG|ECTSI|D8LR72",
+    "peptide_entropy": 4.11,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004631.1",
+    "contig_length": 167860,
+    "start": 75122,
+    "end": 85700,
+    "class": "microbe-like",
+    "query": "UDOFL|accD",
+    "query_description": "",
+    "identity": 0.409,
+    "query_cover": 0.9766763848396501,
+    "aligned_aa": 335,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 228.0,
+    "met_bits": 228.0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 511.0,
+    "alga_bits": 228.0,
+    "microbe_bits": 387.0,
+    "best_alga_hit": "CYA|SYNY3|Q57417",
+    "peptide_entropy": 4.07,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01004643.1",
+    "contig_length": 52790,
+    "start": 22661,
+    "end": 23317,
+    "class": "microbe-like",
+    "query": "UDOFL|cysA",
+    "query_description": "",
+    "identity": 0.2991,
+    "query_cover": 0.9177489177489178,
+    "aligned_aa": 212,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 201.0,
+    "met_bits": 201.0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 195.0,
+    "microbe_bits": 207.0,
+    "best_alga_hit": "CYA|SYNY3|P73239",
+    "peptide_entropy": 4.01,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004774.1",
+    "contig_length": 96970,
+    "start": 54891,
+    "end": 93696,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3D8F4",
+    "query_description": "CHLRE_11g477625v5 magnesium chelatase",
+    "identity": 0.3294,
+    "query_cover": 0.13658804168952277,
+    "aligned_aa": 249,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.02,
+    "exons": 6
+   },
+   {
+    "contig": "BMAT01004790.1",
+    "contig_length": 305179,
+    "start": 186462,
+    "end": 187358,
+    "class": "microbe-like",
+    "query": "VAULI|B9ZZR6",
+    "query_description": "GapC2 Glyceraldehyde-3-phosphate dehydrogenase (Fragment)",
+    "identity": 0.6118,
+    "query_cover": 1.0,
+    "aligned_aa": 304,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 388.0,
+    "met_bits": 388.0,
+    "other_sacoglossan_bits": 385.0,
+    "own_annotation_bits": 584.0,
+    "alga_bits": 383.0,
+    "microbe_bits": 400.0,
+    "best_alga_hit": "ALG|ARATH|Q9SAJ6",
+    "peptide_entropy": 4.04,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004867.1",
+    "contig_length": 8580,
+    "start": 2553,
+    "end": 2765,
+    "class": "microbe-like",
+    "query": "UDOFL|infA",
+    "query_description": "",
+    "identity": 0.5211,
+    "query_cover": 0.9466666666666667,
+    "aligned_aa": 71,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 137.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.96,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004867.1",
+    "contig_length": 8580,
+    "start": 2844,
+    "end": 4987,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB90",
+    "query_description": "ATPase",
+    "identity": 0.3353,
+    "query_cover": 0.9441860465116279,
+    "aligned_aa": 812,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 1283.0,
+    "alga_bits": 496.0,
+    "microbe_bits": 887.0,
+    "best_alga_hit": "ALG|CHLVA|E1ZP98",
+    "peptide_entropy": 4.11,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01004921.1",
+    "contig_length": 834341,
+    "start": 591305,
+    "end": 630483,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.3243,
+    "query_cover": 0.15535097813578827,
+    "aligned_aa": 135,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.32,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01005144.1",
+    "contig_length": 2344,
+    "start": 806,
+    "end": 1135,
+    "class": "microbe-like",
+    "query": "UDOFL|rps11",
+    "query_description": "",
+    "identity": 0.4956,
+    "query_cover": 0.7902097902097902,
+    "aligned_aa": 113,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 215.0,
+    "alga_bits": 0,
+    "microbe_bits": 185.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.96,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01005209.1",
+    "contig_length": 245645,
+    "start": 168880,
+    "end": 177826,
+    "class": "no database match",
+    "query": "VAULI|H6WBA2",
+    "query_description": "RRM domain-containing protein",
+    "identity": 0.3333,
+    "query_cover": 0.2403846153846154,
+    "aligned_aa": 75,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.12,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01005358.1",
+    "contig_length": 8666,
+    "start": 7120,
+    "end": 7275,
+    "class": "microbe-like",
+    "query": "CHLRE|Q00469",
+    "query_description": "chlL Light-independent protochlorophyllide reductase iron-sulfur ATP-binding protein",
+    "identity": 0.3654,
+    "query_cover": 0.16723549488054607,
+    "aligned_aa": 49,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 54.7,
+    "met_bits": 54.7,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 102.0,
+    "alga_bits": 56.2,
+    "microbe_bits": 87.8,
+    "best_alga_hit": "ALG|CHOCR|R7Q4I6",
+    "peptide_entropy": 3.7,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01005384.1",
+    "contig_length": 672327,
+    "start": 51802,
+    "end": 52037,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DKD7",
+    "query_description": "CHLRE_07g339000v5 Uncharacterized protein",
+    "identity": 0.2625,
+    "query_cover": 0.23460410557184752,
+    "aligned_aa": 80,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.19,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01005572.1",
+    "contig_length": 5930,
+    "start": 355,
+    "end": 1548,
+    "class": "microbe-like",
+    "query": "UDOFL|tufA",
+    "query_description": "",
+    "identity": 0.6406,
+    "query_cover": 1.0,
+    "aligned_aa": 409,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 789.0,
+    "alga_bits": 0,
+    "microbe_bits": 726.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.06,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01005973.1",
+    "contig_length": 258251,
+    "start": 122528,
+    "end": 155860,
+    "class": "no database match",
+    "query": "VAULI|H6WBA2",
+    "query_description": "RRM domain-containing protein",
+    "identity": 0.4024,
+    "query_cover": 0.26282051282051283,
+    "aligned_aa": 82,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.27,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01006000.1",
+    "contig_length": 85382,
+    "start": 67010,
+    "end": 68275,
+    "class": "microbe-like",
+    "query": "UDOFL|rpoC2",
+    "query_description": "",
+    "identity": 0.3827,
+    "query_cover": 0.2428169014084507,
+    "aligned_aa": 431,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 815.0,
+    "alga_bits": 0,
+    "microbe_bits": 635.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.0,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01006000.1",
+    "contig_length": 85382,
+    "start": 68531,
+    "end": 70084,
+    "class": "microbe-like",
+    "query": "UDOFL|rpoC1",
+    "query_description": "",
+    "identity": 0.3504,
+    "query_cover": 0.8235294117647058,
+    "aligned_aa": 686,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 773.0,
+    "met_bits": 773.0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 1019.0,
+    "alga_bits": 0,
+    "microbe_bits": 904.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.1,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01006000.1",
+    "contig_length": 85382,
+    "start": 70200,
+    "end": 71876,
+    "class": "microbe-like",
+    "query": "UDOFL|rpoB_2",
+    "query_description": "",
+    "identity": 0.3565,
+    "query_cover": 0.8609271523178808,
+    "aligned_aa": 520,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 1099.0,
+    "alga_bits": 0,
+    "microbe_bits": 904.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.06,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01006000.1",
+    "contig_length": 85382,
+    "start": 71904,
+    "end": 73949,
+    "class": "microbe-like",
+    "query": "UDOFL|rpoB",
+    "query_description": "",
+    "identity": 0.2888,
+    "query_cover": 0.9391304347826087,
+    "aligned_aa": 756,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 1338.0,
+    "alga_bits": 0,
+    "microbe_bits": 1137.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.1,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01006000.1",
+    "contig_length": 85382,
+    "start": 77155,
+    "end": 78342,
+    "class": "microbe-like",
+    "query": "UDOFL|tufA",
+    "query_description": "",
+    "identity": 0.6634,
+    "query_cover": 1.0,
+    "aligned_aa": 409,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 779.0,
+    "alga_bits": 0,
+    "microbe_bits": 727.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.07,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01006111.1",
+    "contig_length": 10887,
+    "start": 485,
+    "end": 1140,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.3445,
+    "query_cover": 0.26237054085155354,
+    "aligned_aa": 228,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.16,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01006491.1",
+    "contig_length": 289674,
+    "start": 155241,
+    "end": 255263,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3D8F4",
+    "query_description": "CHLRE_11g477625v5 magnesium chelatase",
+    "identity": 0.2679,
+    "query_cover": 0.1453647833241909,
+    "aligned_aa": 265,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.22,
+    "exons": 6
+   },
+   {
+    "contig": "BMAT01006657.1",
+    "contig_length": 80029,
+    "start": 53952,
+    "end": 54836,
+    "class": "microbe-like",
+    "query": "VAULI|B9ZZR5",
+    "query_description": "GapC1 Glyceraldehyde-3-phosphate dehydrogenase (Fragment)",
+    "identity": 0.43,
+    "query_cover": 1.0,
+    "aligned_aa": 300,
+    "frameshifts": 0,
+    "stops": 1,
+    "animal_bits": 310.0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 310.0,
+    "own_annotation_bits": 261.0,
+    "alga_bits": 0,
+    "microbe_bits": 327.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.98,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01007073.1",
+    "contig_length": 431066,
+    "start": 235185,
+    "end": 336378,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3D8F4",
+    "query_description": "CHLRE_11g477625v5 magnesium chelatase",
+    "identity": 0.3522,
+    "query_cover": 0.13549094898518924,
+    "aligned_aa": 247,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 82.4,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.16,
+    "exons": 7
+   },
+   {
+    "contig": "BMAT01007188.1",
+    "contig_length": 820140,
+    "start": 54473,
+    "end": 150011,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.4015,
+    "query_cover": 0.19677790563866512,
+    "aligned_aa": 171,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.11,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01007650.1",
+    "contig_length": 195269,
+    "start": 184140,
+    "end": 184523,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.4028,
+    "query_cover": 0.1472957422324511,
+    "aligned_aa": 128,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 1.94,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01007964.1",
+    "contig_length": 498232,
+    "start": 16997,
+    "end": 26106,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB79",
+    "query_description": "tkt transketolase",
+    "identity": 0.3308,
+    "query_cover": 0.8895027624309392,
+    "aligned_aa": 644,
+    "frameshifts": 0,
+    "stops": 3,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 301.0,
+    "alga_bits": 305.0,
+    "microbe_bits": 410.0,
+    "best_alga_hit": "ALG|VOLCA|D8U4Q1",
+    "peptide_entropy": 4.04,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01007964.1",
+    "contig_length": 498232,
+    "start": 286814,
+    "end": 288301,
+    "class": "microbe-like",
+    "query": "VAULI|B7T1V0",
+    "query_description": "ftsH ATP-dependent zinc metalloprotease FtsH",
+    "identity": 0.4801,
+    "query_cover": 0.7763975155279503,
+    "aligned_aa": 500,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 911.0,
+    "alga_bits": 464.0,
+    "microbe_bits": 618.0,
+    "best_alga_hit": "ALG|CYAME|M1VKT1",
+    "peptide_entropy": 4.0,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01007964.1",
+    "contig_length": 498232,
+    "start": 419175,
+    "end": 419885,
+    "class": "microbe-like",
+    "query": "UDOFL|rpl2",
+    "query_description": "",
+    "identity": 0.519,
+    "query_cover": 0.9631147540983607,
+    "aligned_aa": 235,
+    "frameshifts": 0,
+    "stops": 2,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 365.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.91,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01007964.1",
+    "contig_length": 498232,
+    "start": 422051,
+    "end": 422419,
+    "class": "microbe-like",
+    "query": "UDOFL|rpl14",
+    "query_description": "",
+    "identity": 0.5,
+    "query_cover": 1.0,
+    "aligned_aa": 124,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 192.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.82,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01008104.1",
+    "contig_length": 373217,
+    "start": 254676,
+    "end": 338584,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.4045,
+    "query_cover": 0.2807825086306099,
+    "aligned_aa": 244,
+    "frameshifts": 2,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.89,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01008265.1",
+    "contig_length": 179926,
+    "start": 21243,
+    "end": 116319,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.404,
+    "query_cover": 0.22784810126582278,
+    "aligned_aa": 198,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.23,
+    "exons": 4
+   },
+   {
+    "contig": "BMAT01008446.1",
+    "contig_length": 449272,
+    "start": 46596,
+    "end": 235819,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.4222,
+    "query_cover": 0.25891829689298046,
+    "aligned_aa": 225,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.34,
+    "exons": 5
+   },
+   {
+    "contig": "BMAT01008465.1",
+    "contig_length": 330864,
+    "start": 179756,
+    "end": 188676,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.4322,
+    "query_cover": 0.18296892980437285,
+    "aligned_aa": 159,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 1.89,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01008604.1",
+    "contig_length": 4259,
+    "start": 131,
+    "end": 763,
+    "class": "microbe-like",
+    "query": "UDOFL|rps3",
+    "query_description": "",
+    "identity": 0.3864,
+    "query_cover": 1.0,
+    "aligned_aa": 218,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 417.0,
+    "alga_bits": 0,
+    "microbe_bits": 372.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.03,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01008604.1",
+    "contig_length": 4259,
+    "start": 1765,
+    "end": 2133,
+    "class": "microbe-like",
+    "query": "UDOFL|rpl14",
+    "query_description": "",
+    "identity": 0.5565,
+    "query_cover": 1.0,
+    "aligned_aa": 124,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 238.0,
+    "alga_bits": 0,
+    "microbe_bits": 217.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.94,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01009246.1",
+    "contig_length": 304335,
+    "start": 3846,
+    "end": 59846,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3D8F4",
+    "query_description": "CHLRE_11g477625v5 magnesium chelatase",
+    "identity": 0.2996,
+    "query_cover": 0.13549094898518924,
+    "aligned_aa": 247,
+    "frameshifts": 3,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.98,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01009377.1",
+    "contig_length": 72068,
+    "start": 33070,
+    "end": 66769,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG1",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.4673,
+    "query_cover": 0.15922798552472858,
+    "aligned_aa": 132,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 1.41,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01009445.1",
+    "contig_length": 8279,
+    "start": 6803,
+    "end": 7009,
+    "class": "no database match",
+    "query": "VAULI|H6WBA2",
+    "query_description": "RRM domain-containing protein",
+    "identity": 0.338,
+    "query_cover": 0.22756410256410256,
+    "aligned_aa": 71,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.05,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01009512.1",
+    "contig_length": 114593,
+    "start": 1577,
+    "end": 12711,
+    "class": "no database match",
+    "query": "VAULI|H6WBA2",
+    "query_description": "RRM domain-containing protein",
+    "identity": 0.4407,
+    "query_cover": 0.1891025641025641,
+    "aligned_aa": 59,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.58,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01009626.1",
+    "contig_length": 1310618,
+    "start": 959979,
+    "end": 992711,
+    "class": "no database match",
+    "query": "VAULI|H6WBA2",
+    "query_description": "RRM domain-containing protein",
+    "identity": 0.4167,
+    "query_cover": 0.26282051282051283,
+    "aligned_aa": 82,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.58,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01009635.1",
+    "contig_length": 541781,
+    "start": 24780,
+    "end": 25255,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.3855,
+    "query_cover": 0.17261219792865362,
+    "aligned_aa": 150,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 1.98,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01010330.1",
+    "contig_length": 7182,
+    "start": 898,
+    "end": 1230,
+    "class": "microbe-like",
+    "query": "UDOFL|rps11",
+    "query_description": "",
+    "identity": 0.5,
+    "query_cover": 0.7972027972027972,
+    "aligned_aa": 114,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 222.0,
+    "alga_bits": 0,
+    "microbe_bits": 211.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.96,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01010395.1",
+    "contig_length": 68860,
+    "start": 46234,
+    "end": 48231,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB90",
+    "query_description": "ATPase",
+    "identity": 0.4426,
+    "query_cover": 0.8465116279069768,
+    "aligned_aa": 728,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 1274.0,
+    "alga_bits": 656.0,
+    "microbe_bits": 701.0,
+    "best_alga_hit": "ALG|VOLCA|D8U1R3",
+    "peptide_entropy": 4.01,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01010426.1",
+    "contig_length": 324865,
+    "start": 86287,
+    "end": 178820,
+    "class": "no database match",
+    "query": "VAULI|H6WBA2",
+    "query_description": "RRM domain-containing protein",
+    "identity": 0.4444,
+    "query_cover": 0.20192307692307693,
+    "aligned_aa": 63,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 1.96,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01010535.1",
+    "contig_length": 8333,
+    "start": 7018,
+    "end": 8331,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB90",
+    "query_description": "ATPase",
+    "identity": 0.4876,
+    "query_cover": 0.513953488372093,
+    "aligned_aa": 442,
+    "frameshifts": 0,
+    "stops": 2,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 514.0,
+    "alga_bits": 390.0,
+    "microbe_bits": 395.0,
+    "best_alga_hit": "CYA|SYNY3|P74361",
+    "peptide_entropy": 3.9,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01010545.1",
+    "contig_length": 297712,
+    "start": 14802,
+    "end": 102849,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.4629,
+    "query_cover": 0.19102416570771003,
+    "aligned_aa": 166,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.18,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01010772.1",
+    "contig_length": 130429,
+    "start": 85154,
+    "end": 113093,
+    "class": "no database match",
+    "query": "VAULI|H6WBA2",
+    "query_description": "RRM domain-containing protein",
+    "identity": 0.4348,
+    "query_cover": 0.22115384615384615,
+    "aligned_aa": 69,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.6,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01010914.1",
+    "contig_length": 445727,
+    "start": 150958,
+    "end": 202214,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DKD7",
+    "query_description": "CHLRE_07g339000v5 Uncharacterized protein",
+    "identity": 0.3409,
+    "query_cover": 0.24633431085043989,
+    "aligned_aa": 84,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.11,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01011217.1",
+    "contig_length": 25437,
+    "start": 3285,
+    "end": 4820,
+    "class": "microbe-like",
+    "query": "VAULI|B7T1V0",
+    "query_description": "ftsH ATP-dependent zinc metalloprotease FtsH",
+    "identity": 0.4398,
+    "query_cover": 0.8012422360248447,
+    "aligned_aa": 516,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 527.0,
+    "met_bits": 527.0,
+    "other_sacoglossan_bits": 517.0,
+    "own_annotation_bits": 977.0,
+    "alga_bits": 542.0,
+    "microbe_bits": 681.0,
+    "best_alga_hit": "ALG|BRYSP|GMH37425.1",
+    "peptide_entropy": 4.04,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01011218.1",
+    "contig_length": 301841,
+    "start": 25279,
+    "end": 25518,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG1",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.5301,
+    "query_cover": 0.10012062726176116,
+    "aligned_aa": 83,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 1.81,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01011808.1",
+    "contig_length": 414371,
+    "start": 136058,
+    "end": 189435,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.4609,
+    "query_cover": 0.12888377445339472,
+    "aligned_aa": 112,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.36,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01011867.1",
+    "contig_length": 1155207,
+    "start": 221688,
+    "end": 313274,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.3915,
+    "query_cover": 0.22324510932105868,
+    "aligned_aa": 194,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 44.3,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 1.98,
+    "exons": 3
+   },
+   {
+    "contig": "BMAT01011932.1",
+    "contig_length": 199223,
+    "start": 34466,
+    "end": 61293,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3D8F4",
+    "query_description": "CHLRE_11g477625v5 magnesium chelatase",
+    "identity": 0.2624,
+    "query_cover": 0.19802523313219966,
+    "aligned_aa": 361,
+    "frameshifts": 2,
+    "stops": 1,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.46,
+    "exons": 5
+   },
+   {
+    "contig": "BMAT01012117.1",
+    "contig_length": 215319,
+    "start": 16014,
+    "end": 103439,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3D8F4",
+    "query_description": "CHLRE_11g477625v5 magnesium chelatase",
+    "identity": 0.2996,
+    "query_cover": 0.14097641250685683,
+    "aligned_aa": 257,
+    "frameshifts": 2,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.19,
+    "exons": 5
+   },
+   {
+    "contig": "BMAT01012162.1",
+    "contig_length": 44540,
+    "start": 38200,
+    "end": 38295,
+    "class": "no database match",
+    "query": "ARATH|Q9LQC0",
+    "query_description": "HO4 Heme oxygenase 4, chloroplastic",
+    "identity": 0.3415,
+    "query_cover": 0.14487632508833923,
+    "aligned_aa": 41,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.85,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01012262.1",
+    "contig_length": 184970,
+    "start": 5729,
+    "end": 90857,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3D8F4",
+    "query_description": "CHLRE_11g477625v5 magnesium chelatase",
+    "identity": 0.3022,
+    "query_cover": 0.14755896873285793,
+    "aligned_aa": 269,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.11,
+    "exons": 5
+   },
+   {
+    "contig": "BMAT01012530.1",
+    "contig_length": 221160,
+    "start": 161259,
+    "end": 161408,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DKD7",
+    "query_description": "CHLRE_07g339000v5 Uncharacterized protein",
+    "identity": 0.42,
+    "query_cover": 0.1466275659824047,
+    "aligned_aa": 50,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 1.94,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01012706.1",
+    "contig_length": 145809,
+    "start": 33393,
+    "end": 33551,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DKD7",
+    "query_description": "CHLRE_07g339000v5 Uncharacterized protein",
+    "identity": 0.3966,
+    "query_cover": 0.17008797653958943,
+    "aligned_aa": 58,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.16,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01012748.1",
+    "contig_length": 202825,
+    "start": 105907,
+    "end": 106241,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.4579,
+    "query_cover": 0.14499424626006904,
+    "aligned_aa": 126,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 0.98,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01012806.1",
+    "contig_length": 480233,
+    "start": 187579,
+    "end": 235875,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG1",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.3458,
+    "query_cover": 0.2810615199034982,
+    "aligned_aa": 233,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 1.45,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01013213.1",
+    "contig_length": 17930,
+    "start": 11754,
+    "end": 12326,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB79",
+    "query_description": "tkt transketolase",
+    "identity": 0.4315,
+    "query_cover": 0.2610497237569061,
+    "aligned_aa": 189,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 202.0,
+    "met_bits": 202.0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 328.0,
+    "alga_bits": 188.0,
+    "microbe_bits": 303.0,
+    "best_alga_hit": "ALG|VOLCA|D8U4Q1",
+    "peptide_entropy": 4.06,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01013244.1",
+    "contig_length": 442230,
+    "start": 103553,
+    "end": 103708,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DKD7",
+    "query_description": "CHLRE_07g339000v5 Uncharacterized protein",
+    "identity": 0.3091,
+    "query_cover": 0.16129032258064516,
+    "aligned_aa": 55,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 1.5,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01013518.1",
+    "contig_length": 26861,
+    "start": 5535,
+    "end": 10182,
+    "class": "microbe-like",
+    "query": "UDOFL|atpA",
+    "query_description": "",
+    "identity": 0.4015,
+    "query_cover": 0.7972166998011928,
+    "aligned_aa": 401,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 307.0,
+    "alga_bits": 297.0,
+    "microbe_bits": 301.0,
+    "best_alga_hit": "ALG|CHOCR|M5DBY2",
+    "peptide_entropy": 3.97,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01013518.1",
+    "contig_length": 26861,
+    "start": 10542,
+    "end": 11789,
+    "class": "microbe-like",
+    "query": "UDOFL|atpB",
+    "query_description": "",
+    "identity": 0.4434,
+    "query_cover": 0.9042553191489362,
+    "aligned_aa": 425,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 347.0,
+    "microbe_bits": 369.0,
+    "best_alga_hit": "ALG|CHLRE|P06541",
+    "peptide_entropy": 4.02,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01013585.1",
+    "contig_length": 424856,
+    "start": 231184,
+    "end": 249543,
+    "class": "no database match",
+    "query": "VAULI|H6WBA2",
+    "query_description": "RRM domain-containing protein",
+    "identity": 0.4286,
+    "query_cover": 0.24358974358974358,
+    "aligned_aa": 76,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.52,
+    "exons": 2
+   },
+   {
+    "contig": "BMAT01013801.1",
+    "contig_length": 126565,
+    "start": 35380,
+    "end": 35547,
+    "class": "no database match",
+    "query": "VAULI|H6WBA2",
+    "query_description": "RRM domain-containing protein",
+    "identity": 0.4107,
+    "query_cover": 0.17307692307692307,
+    "aligned_aa": 54,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.79,
+    "exons": 1
+   },
+   {
+    "contig": "BMAT01014059.1",
+    "contig_length": 52936,
+    "start": 42878,
+    "end": 44518,
+    "class": "no database match",
+    "query": "VAULI|H6WBA2",
+    "query_description": "RRM domain-containing protein",
+    "identity": 0.3333,
+    "query_cover": 0.3141025641025641,
+    "aligned_aa": 98,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 2.61,
+    "exons": 3
+   }
+  ]
+ }
+}

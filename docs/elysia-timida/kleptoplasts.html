@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Whose chloroplasts? Elysia timida</title>
+<meta name="description" content="Which alga&#x27;s chloroplasts the sequenced Elysia timida carried, worked out from the plastid DNA among its genome reads.">
+<link rel="preload" href="../assets/fonts/BricolageGrotesque-300-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+<a class="brand" href="../index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia</em> clocks</span></a>
+<nav aria-label="Site"><a href="../index.html">Species</a><a href="../compare.html">Compare</a><a href="../methods.html">Methods and data</a></nav>
+</div></header>
+<div class="subhead"><div class="wrap"><a class="sp" href="index.html"><i>Elysia timida</i></a><nav aria-label="Pages for this species"><a href="index.html">Clock genes</a><a href="kleptoplasts.html" aria-current="page">Whose chloroplasts</a><a href="gene-transfer.html">Gene transfer</a></nav></div></div>
+<main>
+
+<section class="page-head"><div class="wrap">
+<h1>Whose chloroplasts was this slug carrying?</h1>
+<p class="lede">The genome was assembled from adults collected at Cadaqués, Spain. <i>E. timida</i> is known to feed on the mermaid’s wineglass, <i>Acetabularia acetabulum</i>. The reads agree, as far as they can be read.</p>
+<div class="answer"><p><strong><i>Acetabularia acetabulum</i>.</strong> 91.6% of the plastid DNA that could be recognised matches GenBank records of that alga at a median identity of 99.8%. The rest matches plastid genes of other algae of the same order at around 90%: these are <i>Acetabularia</i> genes for which GenBank has no <i>A. acetabulum</i> sequence.</p><p><strong>Most of the plastid DNA could not be recognised.</strong> No complete plastid genome of <i>Acetabularia</i> has been published. GenBank holds 51 pieces of it, 49 kb in all, which is only part of the genome. Only reads that touch one of those pieces, or a similar gene of a related alga, count here, so the 0.003% of sequenced bases is a floor.</p><p><strong>Still, the load is light.</strong> The known pieces of the plastid genome are covered about 10 times over, against 27 times for the slug’s own genome. In the <i>E. crispata</i> animal the plastid genome was covered roughly 250 times more deeply than the slug’s. Part of the difference may come from how the library was made (see below).</p></div>
+</div></section>
+
+<section class="block article"><div class="wrap">
+<h2>The reads</h2>
+<div class="tablewrap"><table class="data">
+<thead><tr><th>DNA from</th><th>Sequencing</th><th>Runs</th><th class="num">Examined</th><th>Note</th></tr></thead>
+<tbody><tr><td>The sequenced animals (adults, Cadaqués, Spain)</td><td>PacBio Revio (HiFi, amplified ultra-low-input library)</td><td class="mono">SRR30016879</td><td class="num">20.0 Gb</td><td>The first 20 Gb of the Revio run behind the assembly. The library was amplified by PCR.</td></tr></tbody></table></div>
+<p class="small muted" style="margin-top:10px;max-width:90ch">Every read was compared with a panel of 1,271 algal plastid sequences (241 whole plastid genomes of green algae, plastid records of Dasycladales, Xanthophyceae and Cladophorales, and distant plastids to catch anything else), 117 algal mitochondrial genomes, 7,352 nuclear ribosomal DNA sequences of algae and the mitochondrial genomes of nine <i>Elysia</i> species. Reads with a match were then aligned base by base to the panel and to this species’ own assembly.</p>
+
+<h2>How much of the DNA is not slug</h2>
+<div class="chart"><h3>Share of sequenced bases</h3><p class="sub">20.0 Gb of accurate long reads examined. Counted here: bases that match the reference at 97% or better. Everything else is slug nuclear DNA or matches nothing in the panel.</p><svg viewBox="0 0 760 82" role="img" aria-label="Algal plastid DNA: 0.00%; Slug mitochondrion: 0.17%">
+<line class="gridline" x1="250" x2="250" y1="8" y2="76"/>
+<text class="lbl" x="240" y="28" text-anchor="end">Algal plastid DNA</text>
+<rect class="bar" x="250" y="15" width="5.1" height="18" rx="4" data-tip="151 reads, 0.50 Mb" tabindex="0"><title>151 reads, 0.50 Mb</title></rect>
+<text class="val" x="263.1" y="28">0.003%</text>
+<text class="lbl" x="240" y="62" text-anchor="end">Slug mitochondrion</text>
+<rect class="bar" x="250" y="49" width="355.9" height="18" rx="4" data-tip="6,174 reads, 34.99 Mb" tabindex="0"><title>6,174 reads, 34.99 Mb</title></rect>
+<text class="val" x="613.9" y="62">0.17%</text></svg></div>
+
+<h2>Which alga</h2>
+<p>Reads were assigned to whichever plastid reference they match best. No read spans a whole barcode gene of a GenBank <i>Acetabularia</i> record, so there is no barcode table for this species.</p>
+<div class="tablewrap"><table class="data">
+<thead><tr><th>Plastid reference matched best</th><th class="num">Share of plastid DNA</th><th class="num">Reads</th><th class="num">Identity, median</th><th class="num">Middle 80%</th></tr></thead>
+<tbody><tr><td><i>Acetabularia acetabulum</i> <span class="mono muted">HG518438.1</span></td><td class="num">91.6%</td><td class="num">269</td><td class="num">99.8%</td><td class="num">99.5 to 100.0%</td></tr><tr><td><i>Neomeris sp.</i> <span class="mono muted">KY495864.1</span></td><td class="num">4.87%</td><td class="num">36</td><td class="num">90.2%</td><td class="num">90.0 to 90.2%</td></tr><tr><td><i>Batophora oerstedii</i> <span class="mono muted">MH545238.1</span></td><td class="num">2.77%</td><td class="num">17</td><td class="num">87.6%</td><td class="num">87.3 to 90.3%</td></tr><tr><td><i>Acetabularia mediterranea</i> <span class="mono muted">X05806.1</span></td><td class="num">0.79%</td><td class="num">5</td><td class="num">98.1%</td><td class="num">98.0 to 98.2%</td></tr></tbody></table></div>
+<p class="small muted" style="margin-top:10px;max-width:90ch">A read is assigned to the reference it matches best. Identity near 100% means the reference is the alga eaten, or one of its own species; identity well below that means only that the nearest sequenced relative is named.</p>
+
+
+
+<h2>Did algal nuclei come along?</h2><p>No read matches algal nuclear ribosomal DNA across its variable spacers, and none matches an algal mitochondrial genome.</p>
+
+<h2>For rhythm work</h2><p>There is no complete <i>Acetabularia</i> plastid genome to map transcripts to. GenBank holds 51 pieces of the <i>A. acetabulum</i> plastid genome, 49 kb in all.</p><p>A larger resource exists by accident. One assembly of <i>E. crispata</i> (the Purdue assembly, GCA_033675545.1) contains 646 kb of <i>Acetabularia</i> plastid DNA as contigs of its own, left from an animal that had eaten that alga (see the <a href="../elysia-crispata/gene-transfer.html">gene transfer page of <i>E. crispata</i></a>). It comes from another species of <i>Acetabularia</i>: where the genes can be compared, they are 90 to 96% identical to those of <i>A. acetabulum</i>. So it is a guide to what the genome holds, and not a reference to count reads against.</p>
+
+<h2>What to keep in mind</h2><ul><li>The plastid share is a minimum, for the reason given above. A complete <i>Acetabularia</i> plastid genome would be needed to measure it.</li><li>The library was amplified by PCR from very little DNA, which distorts the proportions of what was sequenced.</li><li>The first 20.0 Gb of the 53 Gb run behind the assembly were examined.</li></ul>
+</div></section>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><i>Elysia timida</i>: reads SRR30016879; assembly ASM4364404v1 (GCA_043644045.1). Methods and sources are on the <a href="../methods.html">methods page</a>.</p>
+<p>Built 2026-11-14 from public genome data. The analysis is independent of the groups that produced the genomes and has not been peer reviewed. Gene roles are inferred from homology with flies and mammals; nothing here measures a rhythm.</p>
+<p>Scripts, tables and sequences are in the repository that hosts this site. Photographs are credited on the <a href="../methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
+</div></footer>
+<script src="../assets/pages.js"></script>
+</body>
+</html>

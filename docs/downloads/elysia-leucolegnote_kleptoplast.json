@@ -1,0 +1,869 @@
+{
+ "slug": "elysia-leucolegnote",
+ "species": "Elysia leucolegnote",
+ "libraries": [
+  {
+   "library": "main",
+   "label": "Shenzhen animal",
+   "runs": [
+    "SRR41369319"
+   ],
+   "kind": "short",
+   "platform": "Illumina NovaSeq X Plus (paired)",
+   "animal": "another animal (isolate SZU-EL01, Shenzhen, China, 2025), not the one assembled",
+   "note": "The first 6 Gb of the shotgun library used for the mitochondrial genome QB170827.",
+   "reads": 40000000,
+   "bases": 6000000000,
+   "bases_screened": 6000000000,
+   "plastid": {
+    "reads": 20757,
+    "bp": 5700842,
+    "fraction": 0.00095
+   },
+   "mitochondrion": {
+    "reads": 10491,
+    "bp": 3091596,
+    "fraction": 0.000515
+   },
+   "algal_mitochondrion": {
+    "reads": null,
+    "bp": 0,
+    "fraction": 0.0
+   },
+   "algal_rdna": {
+    "reads": 262,
+    "bp": 39146,
+    "fraction": 7e-06
+   },
+   "plastid_any_identity": {
+    "bp": 6903509,
+    "fraction_of_bases": 0.001151
+   },
+   "other_taxa": {
+    "algrDNA": [
+     {
+      "name": "Ulva laetevirens",
+      "mates": 70,
+      "mean_identity": 0.9997
+     },
+     {
+      "name": "Ulva prolifera",
+      "mates": 40,
+      "mean_identity": 1.0
+     },
+     {
+      "name": "Ulva flexuosa",
+      "mates": 29,
+      "mean_identity": 0.9993
+     },
+     {
+      "name": "Ulva australis",
+      "mates": 28,
+      "mean_identity": 1.0
+     },
+     {
+      "name": "Ulva meridionalis",
+      "mates": 25,
+      "mean_identity": 0.9995
+     },
+     {
+      "name": "Ulva compressa",
+      "mates": 21,
+      "mean_identity": 1.0
+     },
+     {
+      "name": "Ulva linza",
+      "mates": 12,
+      "mean_identity": 1.0
+     },
+     {
+      "name": "Ulva torta",
+      "mates": 10,
+      "mean_identity": 0.9993
+     }
+    ],
+    "algmt": []
+   },
+   "donors": [
+    {
+     "name": "Boodleopsis sp.",
+     "reads": 42689,
+     "bp": 6364976,
+     "fraction": 0.92199,
+     "median_identity": 0.9933,
+     "identity_q10": 0.9667,
+     "identity_q90": 1.0,
+     "accession": "MH591104.1"
+    },
+    {
+     "name": "Udotea flabellum",
+     "reads": 280,
+     "bp": 35604,
+     "fraction": 0.00516,
+     "median_identity": 0.9217,
+     "identity_q10": 0.8667,
+     "identity_q90": 0.9586,
+     "accession": "MH591112.1"
+    },
+    {
+     "name": "Pseudochlorodesmis sp.",
+     "reads": 259,
+     "bp": 34212,
+     "fraction": 0.00496,
+     "median_identity": 0.9062,
+     "identity_q10": 0.88,
+     "identity_q90": 0.9733,
+     "accession": "MH591097.1"
+    },
+    {
+     "name": "Halimeda micronesica",
+     "reads": 171,
+     "bp": 23112,
+     "fraction": 0.00335,
+     "median_identity": 0.9034,
+     "identity_q10": 0.8667,
+     "identity_q90": 0.9292,
+     "accession": "MH591087.1"
+    },
+    {
+     "name": "Chlorodesmis fastigiata",
+     "reads": 158,
+     "bp": 21414,
+     "fraction": 0.0031,
+     "median_identity": 0.9322,
+     "identity_q10": 0.881,
+     "identity_q90": 0.9716,
+     "accession": "KY819064.1"
+    },
+    {
+     "name": "Penicillus lamourouxii",
+     "reads": 152,
+     "bp": 20615,
+     "fraction": 0.00299,
+     "median_identity": 0.9133,
+     "identity_q10": 0.8867,
+     "identity_q90": 0.9621,
+     "accession": "OZ494339.1"
+    },
+    {
+     "name": "Poropsis sp.",
+     "reads": 140,
+     "bp": 19709,
+     "fraction": 0.00285,
+     "median_identity": 0.9298,
+     "identity_q10": 0.8933,
+     "identity_q90": 0.9462,
+     "accession": "AP014543.1"
+    },
+    {
+     "name": "Tydemania expeditionis",
+     "reads": 148,
+     "bp": 19659,
+     "fraction": 0.00285,
+     "median_identity": 0.9272,
+     "identity_q10": 0.8779,
+     "identity_q90": 0.9517,
+     "accession": "NC_026796.1"
+    },
+    {
+     "name": "Callipsygma wilsonis",
+     "reads": 143,
+     "bp": 19181,
+     "fraction": 0.00278,
+     "median_identity": 0.9007,
+     "identity_q10": 0.8647,
+     "identity_q90": 0.939,
+     "accession": "NC_039522.1"
+    },
+    {
+     "name": "Glaukea argentea",
+     "reads": 151,
+     "bp": 18420,
+     "fraction": 0.00267,
+     "median_identity": 0.8976,
+     "identity_q10": 0.8667,
+     "identity_q90": 0.9412,
+     "accession": "MH591111.1"
+    },
+    {
+     "name": "Udotea argentea",
+     "reads": 135,
+     "bp": 16711,
+     "fraction": 0.00242,
+     "median_identity": 0.9,
+     "identity_q10": 0.8733,
+     "identity_q90": 0.949,
+     "accession": "NC_039527.1"
+    },
+    {
+     "name": "Halimeda minima",
+     "reads": 120,
+     "bp": 15719,
+     "fraction": 0.00228,
+     "median_identity": 0.904,
+     "identity_q10": 0.8806,
+     "identity_q90": 0.9266,
+     "accession": "MH591101.1"
+    },
+    {
+     "name": "Halimeda borneensis",
+     "reads": 123,
+     "bp": 15283,
+     "fraction": 0.00221,
+     "median_identity": 0.9048,
+     "identity_q10": 0.8759,
+     "identity_q90": 0.94,
+     "accession": "AP012291.1"
+    },
+    {
+     "name": "Halimeda opuntia",
+     "reads": 108,
+     "bp": 14491,
+     "fraction": 0.0021,
+     "median_identity": 0.9067,
+     "identity_q10": 0.8811,
+     "identity_q90": 0.9333,
+     "accession": "ON584177.1"
+    },
+    {
+     "name": "Ostreobium quekettii",
+     "reads": 115,
+     "bp": 13752,
+     "fraction": 0.00199,
+     "median_identity": 0.9341,
+     "identity_q10": 0.8667,
+     "identity_q90": 0.9535,
+     "accession": "OK189528.1"
+    }
+   ],
+   "barcodes": [
+    {
+     "barcode": "rbcL",
+     "haplotype": "kcp|k141_27:10934-12361",
+     "length": 1428,
+     "contig_length": 69240,
+     "top_hit": "Halimeda cylindracea [KM820145.1]",
+     "identity": 87.079,
+     "alnlen": 1424,
+     "species_near_best": "Halimeda cylindracea (2); Halimeda borneensis (2); Halimeda minima (2); Halimeda kanaloana (1); Halimeda heteromorpha (1); Halimeda macroloba (1)",
+     "sequence": "TTATAAAGTATCAATTGTATCAAATTCAAATTTAATTTCTTTCCAAACAGCACAAGCTGCTGCAAGCTCTGGACTCCATTTAGCAGCATCACGAATAATTTCATTTCCTTGAGCAGCTAAAGAAATTCCTTCGTTTCTAGCTTGAACACAAGCTTCACAAGCAATACGATTTGCTGCAGCACCTGGAGCATTTCCCCAAGGATGACCTAAAGTACCACCACCAAATTGTAAACAAGCATCATCTCCAAAAATTTCAACTAATGCTGGCATATGCCATACATGAATGCCACCTGAAGCTACTGGTATTACACCAGGAAGTGAAACCCAGTCTTGAGTAAAATAAATACCACGAGAACGATCTTTTTCAGAAAAATTATCGCGCATTAAGTCTACAAAACCTAACGTAACTTCACGTTCACCTTCAAGCTTACCCACAACTGTACCAGAATGTAAATGATCTCCACCAGATAAACGTAAAGCTTTCGCTAAAACTCTGAAATGCATACCATGTATTTTTTGTCTATCAAGTACAGCATGCATTGCACGATGGATGTGTAATAATAATGCATTATCTCGACAATAGTGTGCAAGAGAAGTATTCGCTGTGAATCCACCAGTCAAATAATCGTGCATAATAATAGGCATACCTAATTCTTTTGCACATTGTGCTCTTTTTATCATTTCATCGCAATGCCCTGCAGTTGCATTTAGATAATGACCTTTGATTTCGCCAGTTTCTGCTTGAGATTTATAAATAGCTTCAGCTACAAAAAGAAAACGATCTCTCCAACGCATAAATGGTTGAGAATTTACATTTTCATCATCTTTTGTAAAATCAAGCCCACCTCTTAAACACTCATAAACGGCACGGCCGTAGTTTTTAGCAGAAAGTCCTAATTTTGGTTTAATTGTACAACCTAATAATGGACGTCCATACTTATTCAATTTGTCACGTTCAGATTGTATACCATGTGGTGGTCCTTGAAAAGTTTTAACATATGATGTAGGAATTCGTAAATCTTCAAGACGTAGTGCTCTCAATGCTTTAAAACCAAAAACATTTCCAACAATAGAAGTAAATAAATTAGTTACAGAACCTTCTTCGAAAAGATCTAATGGATAAGCTACATATGCAATATATTGATTTTCTTCACCAGTTACTGCTTCAATATCATAACAACGACCTTTATATTTATCTAAGCTTGTTAATCCATCAGTCCATACTGTTGTCCATGTACCTGTTGACGATTCAGCAGCTACTGCAGCACCAGCTTCTTCTGCGGGAACACCTGGTTGAGGTGTCATTCTAAATGCTGCTAAAACATCTGTATCTAATGTTTGATATTCTGGAGTGTAATATGTTATACGATAATCTTTAACACCTGCTTTAAATCCAGCACCTGCTTTAGTTTCTGTTTGTGGTCCCAT",
+     "most_similar": {
+      "identity": 90.925,
+      "records": 1,
+      "longest_alnlen": 562,
+      "species": "Boodleopsis pusilla (1)",
+      "accession": "DQ469320.1"
+     }
+    }
+   ],
+   "contigs": {
+    "n": 15,
+    "bp": 100747,
+    "longest": 69240,
+    "top": [
+     {
+      "contig": "kcp|k141_27",
+      "length": 69240,
+      "depth": 68.4473,
+      "best_panel_match": "cp|MH591104.1",
+      "identity": 0.9798
+     },
+     {
+      "contig": "kcp|k141_33",
+      "length": 5822,
+      "depth": 67.7405,
+      "best_panel_match": "cp|MH591104.1",
+      "identity": 0.9832
+     },
+     {
+      "contig": "kcp|k141_19",
+      "length": 5141,
+      "depth": 22.0,
+      "best_panel_match": "cp|AP014543.1",
+      "identity": 0.8347
+     },
+     {
+      "contig": "kcp|k141_35",
+      "length": 3689,
+      "depth": 17.6251,
+      "best_panel_match": "cp|ON584177.1",
+      "identity": 0.8603
+     },
+     {
+      "contig": "kcp|k141_12",
+      "length": 2836,
+      "depth": 19.0,
+      "best_panel_match": "cp|AP012291.1",
+      "identity": 0.8526
+     },
+     {
+      "contig": "kcp|k141_23",
+      "length": 2518,
+      "depth": 16.2011,
+      "best_panel_match": "cp|MH591101.1",
+      "identity": 0.8324
+     },
+     {
+      "contig": "kcp|k141_18",
+      "length": 2025,
+      "depth": 16.0,
+      "best_panel_match": "cp|OZ556571.1",
+      "identity": 0.8419
+     },
+     {
+      "contig": "kcp|k141_1",
+      "length": 1656,
+      "depth": 16.7677,
+      "best_panel_match": "cp|OZ494339.1",
+      "identity": 0.8903
+     }
+    ]
+   },
+   "hot_windows": [
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 400,
+     "end": 600,
+     "reads": 3096
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 200,
+     "end": 400,
+     "reads": 3052
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 0,
+     "end": 200,
+     "reads": 1740
+    },
+    {
+     "target": "algrDNA|MF034603.1",
+     "start": 0,
+     "end": 200,
+     "reads": 1663
+    },
+    {
+     "target": "slugrDNA|OR177832.1",
+     "start": 800,
+     "end": 1000,
+     "reads": 1562
+    },
+    {
+     "target": "algrDNA|KY401415.1",
+     "start": 1800,
+     "end": 2000,
+     "reads": 1447
+    },
+    {
+     "target": "slugrDNA|OR177832.1",
+     "start": 1200,
+     "end": 1400,
+     "reads": 1371
+    },
+    {
+     "target": "slugrDNA|GQ996635.1",
+     "start": 600,
+     "end": 800,
+     "reads": 1347
+    }
+   ]
+  },
+  {
+   "library": "hainan",
+   "label": "Hainan animal",
+   "runs": [
+    "SRR17036819"
+   ],
+   "kind": "short",
+   "platform": "Illumina HiSeq 2500 (paired)",
+   "animal": "another animal (genome-survey library, Hainan University), not the one assembled",
+   "note": "The first 5 Gb. No reads of the assembled animal are public.",
+   "reads": 33333334,
+   "bases": 5000000100,
+   "bases_screened": 5000000100,
+   "plastid": {
+    "reads": 13661,
+    "bp": 3773512,
+    "fraction": 0.000755
+   },
+   "mitochondrion": {
+    "reads": 5764,
+    "bp": 1563652,
+    "fraction": 0.000313
+   },
+   "algal_mitochondrion": {
+    "reads": 10,
+    "bp": 1179,
+    "fraction": 0.0
+   },
+   "algal_rdna": {
+    "reads": 373,
+    "bp": 56452,
+    "fraction": 1.1e-05
+   },
+   "plastid_any_identity": {
+    "bp": 6136311,
+    "fraction_of_bases": 0.001227
+   },
+   "other_taxa": {
+    "algrDNA": [
+     {
+      "name": "Ulva laetevirens",
+      "mates": 110,
+      "mean_identity": 0.9996
+     },
+     {
+      "name": "Ulva prolifera",
+      "mates": 49,
+      "mean_identity": 0.9992
+     },
+     {
+      "name": "Ulva compressa",
+      "mates": 42,
+      "mean_identity": 0.9994
+     },
+     {
+      "name": "Ulva australis",
+      "mates": 40,
+      "mean_identity": 0.9992
+     },
+     {
+      "name": "Ulva meridionalis",
+      "mates": 38,
+      "mean_identity": 0.9995
+     },
+     {
+      "name": "Ulva flexuosa",
+      "mates": 31,
+      "mean_identity": 0.9994
+     },
+     {
+      "name": "Ulva intestinalis",
+      "mates": 19,
+      "mean_identity": 1.0
+     },
+     {
+      "name": "Ulva tepida",
+      "mates": 18,
+      "mean_identity": 0.9996
+     }
+    ],
+    "algmt": [
+     {
+      "name": "Boodlea composita",
+      "mates": 8,
+      "mean_identity": 0.9766
+     },
+     {
+      "name": "Halimeda cylindracea",
+      "mates": 2,
+      "mean_identity": 0.9833
+     }
+    ]
+   },
+   "donors": [
+    {
+     "name": "Boodleopsis sp.",
+     "reads": 28506,
+     "bp": 4238615,
+     "fraction": 0.69074,
+     "median_identity": 0.9933,
+     "identity_q10": 0.96,
+     "identity_q90": 1.0,
+     "accession": "NC_039521.1"
+    },
+    {
+     "name": "Pseudochlorodesmis sp.",
+     "reads": 969,
+     "bp": 127975,
+     "fraction": 0.02086,
+     "median_identity": 0.911,
+     "identity_q10": 0.8867,
+     "identity_q90": 0.9634,
+     "accession": "MH591096.1"
+    },
+    {
+     "name": "Penicillus capitatus",
+     "reads": 636,
+     "bp": 88957,
+     "fraction": 0.0145,
+     "median_identity": 0.92,
+     "identity_q10": 0.88,
+     "identity_q90": 0.9467,
+     "accession": "OZ373742.1"
+    },
+    {
+     "name": "Udotea flabellum",
+     "reads": 681,
+     "bp": 87542,
+     "fraction": 0.01427,
+     "median_identity": 0.92,
+     "identity_q10": 0.8808,
+     "identity_q90": 0.9527,
+     "accession": "NC_039528.1"
+    },
+    {
+     "name": "Halimeda minima",
+     "reads": 611,
+     "bp": 81691,
+     "fraction": 0.01331,
+     "median_identity": 0.9139,
+     "identity_q10": 0.8803,
+     "identity_q90": 0.9538,
+     "accession": "MH591101.1"
+    },
+    {
+     "name": "Tydemania expeditionis",
+     "reads": 507,
+     "bp": 67653,
+     "fraction": 0.01103,
+     "median_identity": 0.9137,
+     "identity_q10": 0.875,
+     "identity_q90": 0.9467,
+     "accession": "NC_026796.1"
+    },
+    {
+     "name": "Penicillus lamourouxii",
+     "reads": 463,
+     "bp": 61632,
+     "fraction": 0.01004,
+     "median_identity": 0.9133,
+     "identity_q10": 0.8794,
+     "identity_q90": 0.957,
+     "accession": "OZ372796.1"
+    },
+    {
+     "name": "Caulerpa lentillifera",
+     "reads": 457,
+     "bp": 60409,
+     "fraction": 0.00984,
+     "median_identity": 0.8966,
+     "identity_q10": 0.876,
+     "identity_q90": 0.9267,
+     "accession": "MN201587.1"
+    },
+    {
+     "name": "Callipsygma wilsonis",
+     "reads": 447,
+     "bp": 58531,
+     "fraction": 0.00954,
+     "median_identity": 0.9067,
+     "identity_q10": 0.8675,
+     "identity_q90": 0.9464,
+     "accession": "MH591105.1"
+    },
+    {
+     "name": "Chlorodesmis fastigiata",
+     "reads": 433,
+     "bp": 58016,
+     "fraction": 0.00945,
+     "median_identity": 0.9328,
+     "identity_q10": 0.8867,
+     "identity_q90": 0.9733,
+     "accession": "NC_037364.1"
+    },
+    {
+     "name": "Halimeda micronesica",
+     "reads": 436,
+     "bp": 56884,
+     "fraction": 0.00927,
+     "median_identity": 0.9037,
+     "identity_q10": 0.8667,
+     "identity_q90": 0.9292,
+     "accession": "MH591087.1"
+    },
+    {
+     "name": "Pseudocodium devriesii",
+     "reads": 399,
+     "bp": 52653,
+     "fraction": 0.00858,
+     "median_identity": 0.9272,
+     "identity_q10": 0.8943,
+     "identity_q90": 0.9808,
+     "accession": "NC_039525.1"
+    },
+    {
+     "name": "Poropsis sp.",
+     "reads": 369,
+     "bp": 49348,
+     "fraction": 0.00804,
+     "median_identity": 0.9252,
+     "identity_q10": 0.8889,
+     "identity_q90": 0.957,
+     "accession": "AP014543.1"
+    },
+    {
+     "name": "Boodleopsis pusilla",
+     "reads": 345,
+     "bp": 48916,
+     "fraction": 0.00797,
+     "median_identity": 0.9533,
+     "identity_q10": 0.8844,
+     "identity_q90": 0.9867,
+     "accession": "NC_039520.1"
+    },
+    {
+     "name": "Dichotomosiphon tuberosus",
+     "reads": 353,
+     "bp": 46040,
+     "fraction": 0.0075,
+     "median_identity": 0.8989,
+     "identity_q10": 0.8582,
+     "identity_q90": 0.9176,
+     "accession": "MH591082.1"
+    }
+   ],
+   "barcodes": [
+    {
+     "barcode": "rbcL",
+     "haplotype": "kcp|k141_0:670-2094",
+     "length": 1425,
+     "contig_length": 2799,
+     "top_hit": "Chlorodesmis fastigiata [AB700352.1]",
+     "identity": 85.22,
+     "alnlen": 1387,
+     "species_near_best": "Chlorodesmis sp. (12); Udotea javensis (7); Halimeda minima (4); Udotea flabellum (4); Halimeda opuntia (3); Halimeda borneensis (3)",
+     "sequence": "TAAAGTGTCAATTGTATCAAATTCAAATTTAATTTCTTTCCAAACAACACTCGCCGCAGCCAATTCAGGACTCCATTCAGCAGCTTCTCTAATAATATTATTACCTTCTGCAGCTAAAGAACGTCCCTCATTTCTTGCTTGAACACAAGCTTCACATGCAATACGATTTGCTGCTGCACCCGGTGCATTTCCCCAAGGATGTCCTAAAGTACCACCTCCAAATTGTAAACATGCGTCATCTCCAAAAATCTCTACTAAAGCAGGCATATGCCAAACATGAATTCCACCAGATGCTACTGGAATTACCCCAGGTAGAGAAACCCAATCTTGAGTAAAATAGATACCTCGTTGACGATCTTTTTCACTGTAATTATCTCTCATTAAATCTACAAAACCTAAAGTAACTTCTCGTTCACCTTCTAATTTTCCTACAACTGTACCTGAATGTAAATGATCTCCTCCCGAAAGACGTAAAGCTTTCGCTAAAACTCTAAAATGCATTCCGTGAATTTTTTGACGATCTATAACAGCATGCATTGCTCGGTGAATATGTAATAATAAACTATGATCCCTACAAAAATAAGCTAAAGTAGTATTCGCAGTAAAACCACCCGTTAAATAATCATGCATAATAATAGGCACCCCTAATTCTTTTGCACATTCAGCTCTTTTTATCATTTCATCGCAATGTCCAGCTGTTGCATTTAAATAATGTCCTTTTATTTCACCTGTTTCTGCTTGTGATTTATAAATAGCTTCAGTAACAAATAAAAAGCGATCGCGCCAACGCATAAAAGGCTGTGAGTTTACATTTTCATCATCTTTTGTAAAATCCAAACCTCCTCGTAAACATTCATAGCAAGCTCGGCCGTAATTCTTTGCTGAAAGGCCTAATTTTGGTTTAATTGTACAACCTAAAAAAGGACGTCCATATTTATTAAGTTTATCGCGCTCTACTTGAATACCATGAGGCGGCCCTTGAAAAGTTTTAACGTAAGCTGGCGGTATACGTAAATCTTCCAAACGTAAGGCTCTTAAAGCTTTAAAACCAAAAACATTTCCTACAATAGAAGTGAATAAGTTGGTAACAGAGCCTTCTTCAAACAAGTCTAAAGGATAAGCAACATATGCTATATATTGGTTTTCCTCTCCCGTTACGGGTTCAATATCATAACAACGCCCTTTATATCTATCCAAACTTGTCAAACCATCTGTCCAAACCGTTGTCCATGTTCCAGTTGAAGATTCCGCGGCTACAGCAGCACCTGCTTCATCCGGAGGAACATTAGCTTGTGGTGTCATTCTAAATGCTGCAAGAATATCAGTATCTGATACTTGATAATCTGGTGTATAATACGTTAAACGGTATTCTTTAACACCCGCTTTAAATCCAGCACCAACTTTAGTTTCCGTTTGTGGTCCCAT",
+     "most_similar": {
+      "identity": 87.027,
+      "records": 1,
+      "longest_alnlen": 555,
+      "species": "Uncultured Ulvophyceae (1)",
+      "accession": "KJ138327.1"
+     }
+    },
+    {
+     "barcode": "rbcL",
+     "haplotype": "kcp|k141_24:743-2170",
+     "length": 1428,
+     "contig_length": 2934,
+     "top_hit": "Halimeda cylindracea [KM820145.1]",
+     "identity": 85.545,
+     "alnlen": 1432,
+     "species_near_best": "Halimeda minima (3); Halimeda cylindracea (2); Halimeda borneensis (2); Pseudochlorodesmis sp. (2); Halimeda opuntia (2); Halimeda gracilis (2)",
+     "sequence": "ATGGGACCACAAACAGAAACAAAAGTAGGTGCTGGATTTAAAGCAGGTGTTAAAGAATATCGTTTAACTTATTTTACACCCGAATATAAGGTGTTAGATACAGATATTCTTGCTGCATTTAGAATGACACCACAAGCCAATGTCCCTCCCGAAGAAGCTGGTGCTGCGGTAGCTGCAGAATCTTCAACAGGGACATGGACTACCGTTTGGACCGATGGTCTTACAAGTTTAGACAGATATAAAGGACGTTGCTATGATATTGAACCTGTTGCCGGGGAAGAAAATCAATTTATAGCTTATGTTGCGTATCCTTTAGATCTTTTCGAAGAAGGATCCGTTACAAATCTATTTACTTCAATTGTAGGAAACGTTTTTGGTTTTAAAGCTTTAAGAGCTTTACGTTTAGAAGATTTACGTATACCACCAGCATACGTTAAAACTTTCCAAGGTCCTCCTCATGGTATTCAAGTAGAGCGTGATAAATTAAATAAATATGGACGTCCTTTCCTAGGTTGTACAATTAAACCTAAATTAGGACTTTCTGCAAAAAATTACGGTCGAGCTTGCTATGAGTGTTTAAGAGGAGGTCTAGATTTTACAAAAGATGATGAAAACGTAAATTCACAACCTTTTATGCGTTGGCGTGATCGTTTTTTATTTGTAACTGAAGCTCTTTACAAATCACAAGCAGAAACAGGTGAAATAAAAGGGCACTACTTAAATGCAACAGCAGGTAATTGTGATGAAATGATAAAAAGAGCAGAATGTGCAAAAGAATTAGGAGTTCCTATTATTATGCATGATTATTTAACAGGTGGATTTACAGCCAATACTTCTTTAGCTTATTATTGTAGAGATAATGGTTTGTTATTACATATTCACCGAGCAATGCACGCCGTTATTGATCGTCAAAAAATTCATGGAATGCATTTTAGAGTTTTAGCAAAAGCTTTACGTCTTTCAGGTGGAGATCATCTACACTCGGGAACAGTAGTAGGTAAACTTGAAGGTGAAAGAGAAGTTACTTTAGGTTTTGTTGATCTAATGCGTGATAACTATAGTGAAAAAGACCGTCAACGAGGAATTTACTTTACTCAAGATTGGGTTTCTTTACCGGGAGTAATTCCAGTAGCTTCTGGCGGAATTCACGTTTGGCATATGCCTGCTTTAGTAGAAATTTTTGGGGATGATGCATGTTTACAATTTGGTGGTGGTACTCTAGGACATCCTTGGGGAAATGCTCCAGGAGCCGCAGCGAATCGTATTGCATGTGAAGCTTGTGTTCAAGCAAGAAATGAAGGTCGTTCATTAGCAGCCGAAGGTAATGATATTATTAGAGATGCAGCTAAATGGAGTCCAGAATTAGCAGCTGCGAGCATTGTTTGGAAAGAAATTAAATTTGAATTTGATACAATTGATACCCTTTAA",
+     "most_similar": {
+      "identity": 86.419,
+      "records": 2,
+      "longest_alnlen": 1156,
+      "species": "Callipsygma brevis (1); Halimeda macroloba (1)",
+      "accession": "MT783124.1"
+     }
+    },
+    {
+     "barcode": "rbcL",
+     "haplotype": "kcp|k141_42:1-556",
+     "length": 556,
+     "contig_length": 599,
+     "top_hit": "Halimeda cylindracea [KM820145.1]",
+     "identity": 88.669,
+     "alnlen": 556,
+     "species_near_best": "Udotea flabellum (14); Udotea dotyi (5); Udotea dixonii (4); Halimeda cylindracea (1); Halimeda borneensis (1); Udotea sp. (1)",
+     "sequence": "CATATCCATCGTGCAATGCACGCTGTACTTGATCGACAAAAAATTCATGGAATGCATTTTAGAGTTTTAGCGAAAGCTTTACGCCTTTCTGGAGGAGATCACTTACACTCTGGAACAGTTGTAGGTAAACTTGAAGGTGAACGTGAAGTTACTTTAGGTTTCGTAGATTTAATGCGTGATAACTTTTCTGAAAAAGATCGATCTCGTGGAATTTATTTTACTCAGGATTGGGTATCATTACCTGGAGTAATACCTGTTGCATCAGGAGGTATTCATGTATGGCATATGCCAGCACTAGTTGAAATTTTTGGAGATGATGCTTGTTTACAATTTGGTGGTGGTACTTTAGGTCATCCTTGGGGAAATGCTCCGGGTGCTGCAGCAAATAGAATCGCTTGTGAAGCTTGTGTTCAAGCTCGTAATGAGGGACGTTCTTTAGCTGCAGAAGGTAATGACATAATTCGTGATGCTGCTAAATGGAGTCCTGAACTTGCAGCTGCATGTGCAGTTTGGAAAGAAATTAAATTCGAATTTGAAACTATTGATACACTATAAA",
+     "most_similar": {
+      "identity": 90.408,
+      "records": 2,
+      "longest_alnlen": 417,
+      "species": "Halimeda opuntia (1); Halimeda borneensis (1)",
+      "accession": "AB700355.1"
+     }
+    },
+    {
+     "barcode": "rbcL",
+     "haplotype": "kcp|k141_58:1-725",
+     "length": 725,
+     "contig_length": 728,
+     "top_hit": "Halimeda gracilis [FJ624491.1]",
+     "identity": 89.379,
+     "alnlen": 725,
+     "species_near_best": "Penicillus capitatus (7); Udotea sp. (6); Rhipocephalus phoenix (3); Chlorodesmis sp. (2); Penicillus dumetosus (2); Halimeda gracilis (1)",
+     "sequence": "CACCAGTTAAATAATCGTGCATAACAATAGGTACACCTAGTTCTTTTGCACATTCTGCTCTTTTTAGCATTTCATCACAGTGTCCAGCAGTAGCATTTAAATAATGTCCTTTTATTTCACCTGTTTCTGCTTGAGACTTATAAATAGCTTCAGCTACAAATAAAAAGCGATCTCTCCAACGCATAAATGGTTGAGAGTTTACATTTTCATCATCTTTTGTAAAATCAAGACCACCTCTTAAACATTCATAACATGCACGTCCATAATTTTTTGCAGAAAGTCCTAATTTTGGTTTAATTGTACAACCTAATAATGGACGGCCATATTTATTAAGTTTATCGCGTTCAACTTGTATTCCATGTGGAGGTCCTTGAAAAGTTTTAACATATGATGGAGGAATACGTAAATCTTCAAGACGTAATGCTCTTAAAGCTTTAAATCCAAAAACATTTCCAACAATAGAAGTAAATAAGTTTGTTACAGAGCCTTCTTCAAAGAGATCTAAAGGATACGCAACATAAGCAATATATTGATTTTCTTCACCAGGAACTGCTTCAATATCATAACAACGACCTTTATATTTATCTAAACTAGTTAATCCATCAGTCCAAACTGTTGTCCATGTACCCGTAGATGATTCAGCAGCTACTGCAGCACCTGCTTCTTCTGACGGAACACCTGGTTGAGGTGTCATTCGGAAAGCTGCTAAAATATCTGTATCTAAT",
+     "most_similar": {
+      "identity": 94.867,
+      "records": 1,
+      "longest_alnlen": 526,
+      "species": "Boodleopsis pusilla (1)",
+      "accession": "DQ469320.1"
+     }
+    },
+    {
+     "barcode": "rbcL",
+     "haplotype": "kcp|k141_60:3-632",
+     "length": 630,
+     "contig_length": 632,
+     "top_hit": "Rhipiliella verticillata [MT783242.1]",
+     "identity": 89.825,
+     "alnlen": 629,
+     "species_near_best": "Rhipiliella verticillata (10); Rhipiliopsis sp. (3); Rhipiliopsis profunda (1)",
+     "sequence": "CACCCAATCTTGAGTAAAGTAAATACCACGAGAACGATCTTTTTCACTAAAGTTATCACGCATTAAATCGACAAATCCTAAAGTAACTTCGCGGTCTCCTTCTAATTTACCAACCACTGTTCCTGAATGTAAATGATCACCTCCTGAAAGACGTAAAGCTTTTGCTAAAACACGAAAATGCATTCCATGAATTTTTTGTCGATCAATTACAGCGTGCATCGCACGATGAATGTGAAGTAATAAACTATTATCTCGACAATAATGAGCAAGAGTTGTATTAGCTGTAAAACCTCCTGTTAAATAGTCGTGCATAATAATTGGTACACCAAGTTCTTTTGCACATTTGGCTCTTTTTAACATTTCATCGCAATTTCCAGCAGTTGCATTTAAATAATGACCTTTAATTTCACCTGTTTCCGCTTGTGATTTATAAAGAGCTTCAGCAACAAAAAGAAAACGATCGCGCCAACGCATGAAAGGTTGTGAATTTACATTTTCATCATCTTTTGTAAAATCAAGACCTCCTCTTAAACATTCATAACATGCACGACCGTAGTTTTTTGCTGAAAGCCCTAATTTTGGTTTAATAGTACAACCTAAAAAAGGACGTCCATATTTGTTAAGTTTGTC",
+     "most_similar": {
+      "identity": 89.825,
+      "records": 12,
+      "longest_alnlen": 629,
+      "species": "Rhipiliella verticillata (9); Rhipiliopsis sp. (2); Rhipiliopsis profunda (1)",
+      "accession": "MT783242.1"
+     }
+    },
+    {
+     "barcode": "rbcL",
+     "haplotype": "kcp|k141_74:2574-4001",
+     "length": 1428,
+     "contig_length": 9878,
+     "top_hit": "Halimeda cylindracea [KM820145.1]",
+     "identity": 87.079,
+     "alnlen": 1424,
+     "species_near_best": "Halimeda cylindracea (2); Halimeda borneensis (2); Halimeda minima (2); Halimeda kanaloana (1); Halimeda heteromorpha (1); Halimeda macroloba (1)",
+     "sequence": "TTATAAAGTATCAATTGTATCAAATTCAAATTTAATTTCTTTCCAAACAGCACAAGCTGCTGCAAGCTCTGGACTCCATTTAGCAGCATCACGAATAATTTCATTTCCTTGAGCAGCTAAAGAAATTCCTTCGTTTCTAGCTTGAACACAAGCTTCACAAGCAATACGATTTGCTGCAGCACCTGGAGCATTTCCCCAAGGATGACCTAAAGTACCACCACCAAATTGTAAACAAGCATCATCTCCAAAAATTTCAACTAATGCTGGCATATGCCATACATGAATGCCACCTGAAGCTACTGGTATTACACCAGGAAGTGAAACCCAGTCTTGAGTAAAATAAATACCACGAGAACGATCTTTTTCAGAAAAATTATCGCGCATTAAGTCTACAAAACCTAACGTAACTTCACGTTCACCTTCAAGCTTACCCACAACTGTACCAGAATGTAAATGATCTCCACCAGATAAACGTAAAGCTTTCGCTAAAACTCTGAAATGCATACCATGTATTTTTTGTCTATCAAGTACAGCATGCATTGCACGATGGATGTGTAATAATAATGCATTATCTCGACAATAGTGTGCAAGAGAAGTATTCGCTGTGAATCCACCAGTCAAATAATCGTGCATAATAATAGGCATACCTAATTCTTTTGCACATTGTGCTCTTTTTATCATTTCATCGCAATGCCCTGCAGTTGCATTTAGATAATGACCTTTGATTTCGCCAGTTTCTGCTTGAGATTTATAAATAGCTTCAGCTACAAAAAGAAAACGATCTCTCCAACGCATAAATGGTTGAGAATTTACATTTTCATCATCTTTTGTAAAATCAAGCCCACCTCTTAAACACTCATAAACGGCACGGCCGTAGTTTTTAGCAGAAAGTCCTAATTTTGGTTTAATTGTACAACCTAATAATGGACGTCCATACTTATTCAATTTGTCACGTTCAGATTGTATACCATGTGGTGGTCCTTGAAAAGTTTTAACATATGATGTAGGAATTCGTAAATCTTCAAGACGTAGTGCTCTCAATGCTTTAAAACCAAAAACATTTCCAACAATAGAAGTAAATAAATTAGTTACAGAACCTTCTTCGAAAAGATCTAATGGATAAGCTACATATGCAATATATTGATTTTCTTCACCAGTTACTGCTTCAATATCATAACAACGACCTTTATATTTATCTAAGCTTGTTAATCCATCAGTCCATACTGTTGTCCATGTACCTGTTGACGATTCAGCAGCTACTGCAGCACCAGCTTCTTCTGCGGGAACACCTGGTTGAGGTGTCATTCTAAATGCTGCTAAAACATCTGTATCTAATGTTTGATATTCTGGAGTGTAATATGTTATACGATAATCTTTAACACCTGCTTTAAATCCAGCACCTGCTTTAGTTTCTGTTTGTGGTCCCAT",
+     "most_similar": {
+      "identity": 90.925,
+      "records": 1,
+      "longest_alnlen": 562,
+      "species": "Boodleopsis pusilla (1)",
+      "accession": "DQ469320.1"
+     }
+    },
+    {
+     "barcode": "tufA",
+     "haplotype": "kcp|k141_5:1088-2318",
+     "length": 1231,
+     "contig_length": 7899,
+     "top_hit": "Caulerpa brownii [MG721694.1]",
+     "identity": 78.047,
+     "alnlen": 1239,
+     "species_near_best": "Caulerpa brownii (1)",
+     "sequence": "ATGGCAAGAGAAAAATTTGAACGAACAAAACCTCATGTAAATATTGGTACTATAGGTCACGTAGATCATGGAAAAACTACATTAACTGCAGCTATTACTATGACATTAGCAGCTTCTGGGTCAGCAAAAGCTAAAAGTTATAGTGATATTGATTCAGCTCCAGAGGAAAAAGCTCGTGGAATTACAATTAATACTGCTCATGTAGAATATGAAACCGAAAAACGCCATTATGCTCACGTAGATTGTCCTGGACATGCTGATTATATAAAGAATATGATTACGGGAGCTGCACAAATGGATGGAGCAATTTTGGTTGTTTCAGCAGCAGATGGCACAATGCCTCAAACAAAAGAACATATTTTATTAGCTCAACAAGTTGGCGTTCCAGCTATTGTTGTGTTTTTAAATAAAATTGATCAAGTAAACGATAAAGAACTACTTGAGTTAGTCGATTTAGAAATAAGAGAAATGCTAAATCGTTATAATTTTCCAGGAAATTCTATATCAGTTATTAAAGGATCAGCGCTTTTAGCTGTTGAAGCGCTTACAGAAAAACCAATAATAAAAAGAAACGAAAACGAATGGGTTGACAAAATTTATGAGCTAATGGATGCCGTAGATAAAGAAATACCTTTACCTGAACGTGATATAGATAAAGACTTTTTAATGGCTATAGAAAGCGTTGTATCTATTACTGGTCGTGGAACTGTAGCAACAGGACGTGTAGAACGTGGCAAAATAAAACTTAATGAACCGGTTGAAATTGTAGGATTGCAAGACACTAAACAAACAACAGTTACTGGTTTAGAAATGTTTCAAAAAACATTGGATGAGAGCGTTGCAGGAGACAATGTTGGAATTTTATTGCGCGGAATTCAAAAAAATGAAATCAAACGCGGTATGGTTGTAGCAAAGCCGGGAACAATTACTCCACATAATCGTTTTAAAGCTCAAGTTTATATTTTAAAAAAAAATGAAGGTGGTAGACATACTTCTTTCGTTGTGGGATATAGACCACAATTTTTTGTTAGAACAACAGATGTTACAGGAAAAATTGAATCTTTTGAAACAGAAAATGAAAAAAAAAGTAATAAAATTCGTATGGTAATGCCGGGAGATAATGTAAAAATGTTAGTTGAATTAATTCAACCTATTGCGATTGAACGTGGTATGCGATTTGCAATAAGAGAAGGCGGTAAAACAGTTGGAGCTGGGGTGGTATCAGAAATTT",
+     "most_similar": {
+      "identity": 80.379,
+      "records": 6,
+      "longest_alnlen": 776,
+      "species": "Chlorodesmis fastigiata (3); Chlorodesmis sp. (2); Rhipidosiphon sp. (1)",
+      "accession": "MT340472.1"
+     }
+    }
+   ],
+   "contigs": {
+    "n": 39,
+    "bp": 136553,
+    "longest": 19679,
+    "top": [
+     {
+      "contig": "kcp|k141_20",
+      "length": 19679,
+      "depth": 38.2969,
+      "best_panel_match": "cp|MH591104.1",
+      "identity": 0.9753
+     },
+     {
+      "contig": "kcp|k141_62",
+      "length": 14130,
+      "depth": 47.0,
+      "best_panel_match": "cp|NC_039521.1",
+      "identity": 0.989
+     },
+     {
+      "contig": "kcp|k141_54",
+      "length": 12397,
+      "depth": 39.2302,
+      "best_panel_match": "cp|NC_039521.1",
+      "identity": 0.9888
+     },
+     {
+      "contig": "kcp|k141_74",
+      "length": 9878,
+      "depth": 43.0,
+      "best_panel_match": "cp|NC_039521.1",
+      "identity": 0.9831
+     },
+     {
+      "contig": "kcp|k141_5",
+      "length": 7899,
+      "depth": 38.0,
+      "best_panel_match": "cp|NC_039521.1",
+      "identity": 0.9715
+     },
+     {
+      "contig": "kcp|k141_47",
+      "length": 5081,
+      "depth": 32.8929,
+      "best_panel_match": "cp|MH591105.1",
+      "identity": 0.8345
+     },
+     {
+      "contig": "kcp|k141_36",
+      "length": 4268,
+      "depth": 41.7814,
+      "best_panel_match": "cp|AP014542.1",
+      "identity": 0.8521
+     },
+     {
+      "contig": "kcp|k141_4",
+      "length": 4225,
+      "depth": 47.0,
+      "best_panel_match": "cp|MH591104.1",
+      "identity": 0.9816
+     }
+    ]
+   },
+   "hot_windows": [
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 200,
+     "end": 400,
+     "reads": 1576
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 400,
+     "end": 600,
+     "reads": 1385
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 0,
+     "end": 200,
+     "reads": 979
+    },
+    {
+     "target": "slugrDNA|OR177832.1",
+     "start": 1200,
+     "end": 1400,
+     "reads": 798
+    },
+    {
+     "target": "algrDNA|MF034603.1",
+     "start": 0,
+     "end": 200,
+     "reads": 677
+    },
+    {
+     "target": "slugrDNA|OR177832.1",
+     "start": 800,
+     "end": 1000,
+     "reads": 641
+    },
+    {
+     "target": "algrDNA|KY401415.1",
+     "start": 1800,
+     "end": 2000,
+     "reads": 577
+    },
+    {
+     "target": "algrDNA|MH894179.1",
+     "start": 600,
+     "end": 800,
+     "reads": 467
+    }
+   ]
+  }
+ ],
+ "donors": [
+  {
+   "name": "Boodleopsis sp.",
+   "fraction": 0.92199,
+   "median_identity": 0.9933
+  }
+ ],
+ "plastid_fraction": 0.00095
+}

@@ -1,0 +1,813 @@
+{
+ "slug": "elysia-chlorotica",
+ "species": "Elysia chlorotica",
+ "libraries": [
+  {
+   "library": "main",
+   "label": "Adult, long reads",
+   "runs": [
+    "SRR7647856"
+   ],
+   "kind": "clr",
+   "platform": "PacBio RS (older, error-prone long reads)",
+   "animal": "an adult (isolate EC2010, Martha's Vineyard) used for the long reads of the assembly",
+   "note": "The whole run.",
+   "reads": 7717313,
+   "bases": 9445445540,
+   "bases_screened": 9445445540,
+   "plastid": {
+    "reads": 169152,
+    "bp": 332517254,
+    "fraction": 0.035204
+   },
+   "mitochondrion": {
+    "reads": 7644,
+    "bp": 15362104,
+    "fraction": 0.001626
+   },
+   "algal_mitochondrion": {
+    "reads": null,
+    "bp": 0,
+    "fraction": 0.0
+   },
+   "algal_rdna": {
+    "reads": null,
+    "bp": 0,
+    "fraction": 0.0
+   },
+   "plastid_any_identity": {
+    "reads": 246586,
+    "bp": 334982174,
+    "fraction_of_bases": 0.035465
+   },
+   "other_taxa": {
+    "algrDNA": [],
+    "algmt": []
+   },
+   "donors": [
+    {
+     "name": "Vaucheria litorea",
+     "reads": 245428,
+     "bp": 333787476,
+     "fraction": 0.99643,
+     "median_identity": 0.9163,
+     "identity_q10": 0.8621,
+     "identity_q90": 0.9459,
+     "accession": "NC_011600.1"
+    },
+    {
+     "name": "plastid sequence in the assembly",
+     "reads": 821,
+     "bp": 835291,
+     "fraction": 0.00249,
+     "median_identity": 0.9123,
+     "identity_q10": 0.8575,
+     "identity_q90": 0.9457,
+     "accession": "RQTK01003255.1"
+    },
+    {
+     "name": "Uncultured xanthophyte",
+     "reads": 346,
+     "bp": 304722,
+     "fraction": 0.00091,
+     "median_identity": 0.9121,
+     "identity_q10": 0.8584,
+     "identity_q90": 0.943,
+     "accession": "PQ213021.1"
+    },
+    {
+     "name": "Sphaerosorus coelastroides",
+     "reads": 17,
+     "bp": 20777,
+     "fraction": 6e-05,
+     "median_identity": 0.846,
+     "identity_q10": 0.8066,
+     "identity_q90": 0.8791,
+     "accession": "PV826133.1"
+    },
+    {
+     "name": "Vaucheria compacta",
+     "reads": 18,
+     "bp": 19118,
+     "fraction": 6e-05,
+     "median_identity": 0.9189,
+     "identity_q10": 0.8784,
+     "identity_q90": 0.9364,
+     "accession": "MW266047.1"
+    },
+    {
+     "name": "Vaucheria sp.",
+     "reads": 7,
+     "bp": 6756,
+     "fraction": 2e-05,
+     "median_identity": 0.8452,
+     "identity_q10": 0.8039,
+     "identity_q90": 0.9293,
+     "accession": "MW266049.1"
+    },
+    {
+     "name": "Vaucheria coronata",
+     "reads": 1,
+     "bp": 1612,
+     "fraction": 0.0,
+     "median_identity": 0.9204,
+     "identity_q10": 0.9204,
+     "identity_q90": 0.9204,
+     "accession": "AF476928.1"
+    },
+    {
+     "name": "Vaucheria longicaulis",
+     "reads": 2,
+     "bp": 1382,
+     "fraction": 0.0,
+     "median_identity": 0.8272,
+     "identity_q10": 0.8272,
+     "identity_q90": 0.8296,
+     "accession": "MW266051.1"
+    }
+   ],
+   "barcodes": [],
+   "contigs": null,
+   "hot_windows": [
+    {
+     "target": "bait|RQTK01002715.1:0-3919|numt|2600-3794",
+     "start": 2200,
+     "end": 2400,
+     "reads": 284
+    },
+    {
+     "target": "bait|RQTK01002715.1:0-3919|numt|2600-3794",
+     "start": 600,
+     "end": 800,
+     "reads": 270
+    },
+    {
+     "target": "bait|RQTK01002715.1:0-3919|numt|2600-3794",
+     "start": 2000,
+     "end": 2200,
+     "reads": 201
+    },
+    {
+     "target": "bait|RQTK01002715.1:0-3919|numt|2600-3794",
+     "start": 400,
+     "end": 600,
+     "reads": 115
+    },
+    {
+     "target": "bait|RQTK01002715.1:0-3919|numt|2600-3794",
+     "start": 800,
+     "end": 1000,
+     "reads": 89
+    },
+    {
+     "target": "bait|RQTK01002715.1:0-3919|numt|2600-3794",
+     "start": 2400,
+     "end": 2600,
+     "reads": 36
+    }
+   ]
+  },
+  {
+   "library": "adult",
+   "label": "Second adult, short reads",
+   "runs": [
+    "SRR7647851"
+   ],
+   "kind": "short",
+   "platform": "Illumina HiSeq 2000 (paired, 500 bp inserts)",
+   "animal": "an adult used for the short reads of the assembly",
+   "note": "The first 6 Gb of one of six adult libraries.",
+   "reads": 6000000,
+   "bases": 600000000,
+   "bases_screened": 6000000000,
+   "plastid": {
+    "reads": 438580,
+    "bp": 84872930,
+    "fraction": 0.141455
+   },
+   "mitochondrion": {
+    "reads": 11373,
+    "bp": 2144111,
+    "fraction": 0.003574
+   },
+   "algal_mitochondrion": {
+    "reads": 20,
+    "bp": 1932,
+    "fraction": 3e-06
+   },
+   "algal_rdna": {
+    "reads": 69,
+    "bp": 6819,
+    "fraction": 1.1e-05
+   },
+   "plastid_any_identity": {
+    "bp": 86043308,
+    "fraction_of_bases": 0.143406
+   },
+   "other_taxa": {
+    "algrDNA": [
+     {
+      "name": "Ulva laetevirens",
+      "mates": 14,
+      "mean_identity": 0.9929
+     },
+     {
+      "name": "Ulva compressa",
+      "mates": 12,
+      "mean_identity": 0.9915
+     },
+     {
+      "name": "Ulva australis",
+      "mates": 7,
+      "mean_identity": 0.9929
+     },
+     {
+      "name": "Ulva flexuosa",
+      "mates": 6,
+      "mean_identity": 0.9933
+     },
+     {
+      "name": "Dasycladus sp.",
+      "mates": 6,
+      "mean_identity": 0.9967
+     },
+     {
+      "name": "Ulva prolifera",
+      "mates": 5,
+      "mean_identity": 0.998
+     },
+     {
+      "name": "Ulva meridionalis",
+      "mates": 4,
+      "mean_identity": 0.995
+     },
+     {
+      "name": "Mischococcus sphaerocephalus",
+      "mates": 2,
+      "mean_identity": 0.9894
+     }
+    ],
+    "algmt": [
+     {
+      "name": "Boodlea composita",
+      "mates": 20,
+      "mean_identity": 0.9819
+     }
+    ]
+   },
+   "donors": [
+    {
+     "name": "Vaucheria litorea",
+     "reads": 842815,
+     "bp": 84166314,
+     "fraction": 0.97819,
+     "median_identity": 1.0,
+     "identity_q10": 0.99,
+     "identity_q90": 1.0,
+     "accession": "NC_011600.1"
+    },
+    {
+     "name": "plastid sequence in the assembly",
+     "reads": 12511,
+     "bp": 1250283,
+     "fraction": 0.01453,
+     "median_identity": 1.0,
+     "identity_q10": 1.0,
+     "identity_q90": 1.0,
+     "accession": "RQTK01003255.1"
+    },
+    {
+     "name": "Uncultured xanthophyte",
+     "reads": 3731,
+     "bp": 372083,
+     "fraction": 0.00432,
+     "median_identity": 1.0,
+     "identity_q10": 0.99,
+     "identity_q90": 1.0,
+     "accession": "PQ213021.1"
+    },
+    {
+     "name": "Sphaerosorus coelastroides",
+     "reads": 1053,
+     "bp": 104357,
+     "fraction": 0.00121,
+     "median_identity": 1.0,
+     "identity_q10": 0.97,
+     "identity_q90": 1.0,
+     "accession": "PV826133.1"
+    },
+    {
+     "name": "Porphyra purpurea",
+     "reads": 291,
+     "bp": 28729,
+     "fraction": 0.00033,
+     "median_identity": 0.99,
+     "identity_q10": 0.96,
+     "identity_q90": 1.0,
+     "accession": "NC_000925.1"
+    },
+    {
+     "name": "Phaeodactylum tricornutum",
+     "reads": 283,
+     "bp": 27997,
+     "fraction": 0.00033,
+     "median_identity": 1.0,
+     "identity_q10": 0.97,
+     "identity_q90": 1.0,
+     "accession": "NC_008588.1"
+    },
+    {
+     "name": "Vaucheria sp.",
+     "reads": 160,
+     "bp": 15956,
+     "fraction": 0.00019,
+     "median_identity": 1.0,
+     "identity_q10": 0.99,
+     "identity_q90": 1.0,
+     "accession": "ON711408.1"
+    },
+    {
+     "name": "Tribonema regulare",
+     "reads": 79,
+     "bp": 7829,
+     "fraction": 9e-05,
+     "median_identity": 0.99,
+     "identity_q10": 0.95,
+     "identity_q90": 1.0,
+     "accession": "MT582013.1"
+    },
+    {
+     "name": "Vaucheria longicaulis",
+     "reads": 55,
+     "bp": 5491,
+     "fraction": 6e-05,
+     "median_identity": 1.0,
+     "identity_q10": 1.0,
+     "identity_q90": 1.0,
+     "accession": "OR359634.1"
+    },
+    {
+     "name": "Xanthonema sp.",
+     "reads": 54,
+     "bp": 5356,
+     "fraction": 6e-05,
+     "median_identity": 1.0,
+     "identity_q10": 0.97,
+     "identity_q90": 1.0,
+     "accession": "PV115088.1"
+    },
+    {
+     "name": "Tribonema sp.",
+     "reads": 52,
+     "bp": 5188,
+     "fraction": 6e-05,
+     "median_identity": 1.0,
+     "identity_q10": 0.98,
+     "identity_q90": 1.0,
+     "accession": "MK005118.1"
+    },
+    {
+     "name": "Vaucheria medusa",
+     "reads": 35,
+     "bp": 3493,
+     "fraction": 4e-05,
+     "median_identity": 1.0,
+     "identity_q10": 1.0,
+     "identity_q90": 1.0,
+     "accession": "AF476936.1"
+    },
+    {
+     "name": "Xanthonema bristolianum",
+     "reads": 34,
+     "bp": 3347,
+     "fraction": 4e-05,
+     "median_identity": 1.0,
+     "identity_q10": 0.9659,
+     "identity_q90": 1.0,
+     "accession": "PV115079.1"
+    },
+    {
+     "name": "Xanthonema exile",
+     "reads": 29,
+     "bp": 2873,
+     "fraction": 3e-05,
+     "median_identity": 1.0,
+     "identity_q10": 0.99,
+     "identity_q90": 1.0,
+     "accession": "PV115085.1"
+    },
+    {
+     "name": "Vaucheria cf.",
+     "reads": 28,
+     "bp": 2762,
+     "fraction": 3e-05,
+     "median_identity": 1.0,
+     "identity_q10": 0.9444,
+     "identity_q90": 1.0,
+     "accession": "LC791471.1"
+    }
+   ],
+   "barcodes": [
+    {
+     "barcode": "rbcL",
+     "haplotype": "kcp|k119_0:6425-8602",
+     "length": 2178,
+     "contig_length": 16146,
+     "top_hit": "Vaucheria litorea [MW266050.1]",
+     "identity": 99.954,
+     "alnlen": 2178,
+     "species_near_best": "Vaucheria litorea (1)",
+     "sequence": "TTAGGTATGGAAGTAATGCATGAACGTAATGCGCACAACTTCCCATTAGATTTAGCTGCTGGTGAAATTCTTCCTGTAGCAGTAACTGCTCCAGTAATAGCTGGTTAAGGTTTAATCTTATCTTTTATATTTGAATTAAATTTATAAGAATTATTCAAGTTTTTCAATTAAGAAAAACTTGAATAATTCTTTAATTTCTCACCATTATAATTCTAAAATGTATAAAAAGCTATTAAAATAGATTAAAGTTTTTAAAACTTTAATCTATTTTAATAGCTTTTTAAAATTTGCTTATGTTATAATCAAACTAGCATAATTAAAGCAATTTTAAACTAAACCTCTTTAACTTTATGTTATTATCTCAAAAATAGTAGGATCAAAAAATATAATATTAAAATATCCAAATTATTTAAAAAAACATTAAATAAATAAAAAAATTAAGTTTAATTTTAACCAGATTATTAATTATCTTGTTTCTAAAGTCAAAATTATTAATATTTTGCTACCTTAAAGGAGGTATTCACCATGTCTAAGTCTGTACAAGAGCGTACTCGAATTAAAAGCCAACGTTATGAATCTGGTGTAATTCCTTATGCGAAAATGGGTTATTGGGATGCATTTTATAATGTAAAACATACGGATGTATTAGCGTTATTTCGTATTACTCCGCAACCTGGTGTAGATCCTGTAGAAGCAGCAGCAGCTGTTGCTGGTGAATCTTCAACTGCGACTTGGACAGTAGTATGGACTGATTTATTAACTGCTTGTGATATTTATCGTGCAAAAGCATATCGTGTAGATCCAGTTCCTGGAACAACTGATCAATATTTTGCATATATTTCATATCAAATTGAATTATTTGAAGAAGGGTCATTAGCAAATTTAACTGCATCAATCATTGGTAATGTTTTTGGATTTAAAGCTGTTAAAGCTTTACGTTTAGAAGATATGCGAATTCCTTTTGCATATTTAAAAACTTTTCAAGGTCCTGCTACAGGTTTAGTTGTAGAAAGAGAAAGAATGGATAAATTTGGACGTCCATTATTAGGAGCTACGGTAAAACCGAAATTAGGTCTTTCAGGTAAAAACTATGGTCGTGTAGTATATGAAGGACTTCGTGGTGGTTTAGATTTCTTAAAAGATGATGAGAATATTAATTCTCAACCATTTATGCGTTGGAGAGAGCGTTTTCTTTACTGTATGGAAGGTGTTAATCGTGCAGTAGCAGCTAGTGGTGAAGTTAAAGGTTCATACCTTAATACAACTGCAGGTACAATGGAAGAGATGTATGAACGTGCAGAATATGCTAAAAGTATAGGCTCAATTATTGTAATGATTGACCTTGTAATTGGTTATACTGCTATTCAATCTATGTCAATTTGGGCTAGAAAAGCTGATATGATTTTACATTTACACCGTGCAGGTAATTCTACATATGCACGTCAAAAAAATCATGGGATCAATTTCCGTGTAATTTGTAAATGGATGCGTATGGCAGGTGTAGATCACATTCATGCTGGTACTGTTGTAGGTAAATTAGAAGGTGACCCTTTAATGGTTAAAGGCTTTTATAATACATTATTATTAACGAAATTAGAAATTAATCTTTCTCAAGGTGTATTTTTTGAAATGGATTGGGCAGCATTACGTAAAACTGTACCTGTAGCATCTGGTGGTATTCACTGTGGACAATTACATCAATTACTTTATTATTTAGGTGATGATGTTGTACTTCAATTTGGTGGTGGTACTATTGGACATCCAGATGGTATCCAAGCAGGTGCTACTGCTAATCGTGTAGCTTTAGAAGCTATGGTATTAGCACGTAATGAAGGCCGTGATTATATGAATGAAGGACCACAAATTTTACGTGATGCTGCTAAAACTTGTGGACCGTTAAAAACTGCATTAGACTTATGGAAAGATATTACTTTTGATTACACTTCTACTGATACCCCAGATTTCGTAGAAACGGCAACACAAAGTAGATAATTAGTCTAAGTTCAATAAATAATTAAAAAAAATTTATCTAAATAAAATAAAGGAGTATTTGAATAGTGAGAGTTACACAAGGCTGTTTTTCATTTTTACCTGACTTAAGTGATGAGCAAATCAAAAAACAAATAGAGTATGCTGTAAATAAAGGTTGGGCTATTAGTATTGAGTGGAGTGATGATC",
+     "most_similar": {
+      "identity": 100.0,
+      "records": 5,
+      "longest_alnlen": 2178,
+      "species": "Vaucheria litorea (3); Uncultured xanthophyte (2)",
+      "accession": "MW266050.1"
+     }
+    },
+    {
+     "barcode": "tufA",
+     "haplotype": "kcp|k119_5:2085-3312",
+     "length": 1228,
+     "contig_length": 35959,
+     "top_hit": "Michococcus sphaerocephalus [AF038001.1]",
+     "identity": 82.507,
+     "alnlen": 1109,
+     "species_near_best": "Michococcus sphaerocephalus (1)",
+     "sequence": "ATGGCTCGGGAAAAATTTGAACGTAAAAAACCTCATGTAAATATAGGTACCATTGGACATGTTGATCATGGTAAGACAACATTAACAGCTGCTATTAGTGCTACACTTGCTTTAGGGTCAAGTAATGCTGTTGCTAAAAAATTTGAAGATATCGATGCTGCTCCAGAAGAACGTGCTCGTGGTATTACAATTAATACTGCTCATGTTGAATATGAAACAGAAAATAGACATTATGCACATGTAGATTGTCCAGGTCATGCAGATTATGTAAAAAATATGATTACTGGTGCAGCTCAAATGGATGGTGCAATTTTAGTTGTATCTGCAGCAGATGGTCCTATGCCTCAAACTCGTGAACATATTTTATTAGCAAAACAGGTAGGAGTACCTAGTATTGTTGTATTTTTAAATAAAGAAGATCAAGTAGATGATGTAGAATTACTTGAATTAGTAGAATTAGAAGTTCGTGAATTATTAAATAATTATGATTTTTCTGGTGATACTATTCCTATTTGCCCAGGTTCAGCTTTACAAGCTTTAAATGCTATCTTAGCTAATTCAAATATTAATAAAGGGGATAATGAATGGGTAGATAAAATTTTTAAATTAATGAATGCTGTAGATGAATATATTCCAACACCAGTACGTGATGTTGATAAAGCGTTTTTAATGGCCGTGGAAGATGTATTTTCTATTACTGGACGAGGGACTGTAGCTACTGGTCGTATTGAACGAGGAATTGTAAAAGTAGGTGAAACAGTTGAAATTGTAGGTCTTTTAGATACACGTACAACAACAGTTACTGGTGTTGAAATGTTTCAAAAAACACTTGATGAAGGTCTTGCAGGAGATAATGTAGGTATTCTTTTACGAGGCGTACAAAAAGATGATATTCAACGTGGAATGGTTTTATCTAAACCAGGAACAATTACTCCTCATAAAGGTTTTGAAGGAGAAGTGTATATTTTAACAAAAGAAGAAGGTGGTCGTCATACACCATTTTTTGCTGGTTACCGTCCACAATTTTATGTACGTACAACAGACGTTACAGGGCAAATTAAATTTTTTACTGCTGATGATGGTTCCAATGTAGAAATGGTAATGCCAGGTGATCGAATTAAAATGAATGCAGAGTTAATTTCTCCAATTGCTATTGAAGAAGGTTCTAGATTTGCTATTCGTGAAGGTGGTCGTACAATAGGTGCAGGTATTGTTTCTAAAATTCTAG",
+     "most_similar": {
+      "identity": 83.593,
+      "records": 1,
+      "longest_alnlen": 707,
+      "species": "Vaucheria bursata (1)",
+      "accession": "U09448.1"
+     }
+    }
+   ],
+   "contigs": {
+    "n": 7,
+    "bp": 110168,
+    "longest": 35959,
+    "top": [
+     {
+      "contig": "kcp|k119_5",
+      "length": 35959,
+      "depth": 651.0,
+      "best_panel_match": "cp|EU912438.1",
+      "identity": 0.992
+     },
+     {
+      "contig": "kcp|k119_2",
+      "length": 21783,
+      "depth": 463.0,
+      "best_panel_match": "cp|EU912438.1",
+      "identity": 0.9998
+     },
+     {
+      "contig": "kcp|k119_0",
+      "length": 16146,
+      "depth": 582.2737,
+      "best_panel_match": "cp|EU912438.1",
+      "identity": 1.0
+     },
+     {
+      "contig": "kcp|k119_4",
+      "length": 13385,
+      "depth": 572.1376,
+      "best_panel_match": "cp|EU912438.1",
+      "identity": 1.0
+     },
+     {
+      "contig": "kcp|k119_3",
+      "length": 12602,
+      "depth": 494.2085,
+      "best_panel_match": "cp|EU912438.1",
+      "identity": 0.9999
+     },
+     {
+      "contig": "kcp|k119_1",
+      "length": 5358,
+      "depth": 886.6062,
+      "best_panel_match": "cp|EU912438.1",
+      "identity": 0.9998
+     },
+     {
+      "contig": "kcp|k119_6",
+      "length": 4935,
+      "depth": 1074.0,
+      "best_panel_match": "cp|EU912438.1",
+      "identity": 1.0
+     }
+    ]
+   },
+   "hot_windows": []
+  },
+  {
+   "library": "eggs",
+   "label": "Eggs, short reads",
+   "runs": [
+    "SRR768897"
+   ],
+   "kind": "short",
+   "platform": "Illumina Genome Analyzer IIx (paired)",
+   "animal": "eggs (germ line; Bhattacharya et al. 2013), which have not yet fed and hold no chloroplasts",
+   "note": "One of the two runs of the egg DNA library.",
+   "reads": 75872306,
+   "bases": 11077356676,
+   "bases_screened": 11077356676,
+   "plastid": {
+    "reads": 8,
+    "bp": 948,
+    "fraction": 0.0
+   },
+   "mitochondrion": {
+    "reads": 40733,
+    "bp": 11113991,
+    "fraction": 0.001003
+   },
+   "algal_mitochondrion": {
+    "reads": 12,
+    "bp": 1529,
+    "fraction": 0.0
+   },
+   "algal_rdna": {
+    "reads": 2982,
+    "bp": 427570,
+    "fraction": 3.9e-05
+   },
+   "plastid_any_identity": {
+    "bp": 5053,
+    "fraction_of_bases": 0.0
+   },
+   "other_taxa": {
+    "algrDNA": [
+     {
+      "name": "Ulva laetevirens",
+      "mates": 746,
+      "mean_identity": 0.9936
+     },
+     {
+      "name": "Ulva australis",
+      "mates": 421,
+      "mean_identity": 0.9932
+     },
+     {
+      "name": "Ulva meridionalis",
+      "mates": 347,
+      "mean_identity": 0.994
+     },
+     {
+      "name": "Ulva flexuosa",
+      "mates": 335,
+      "mean_identity": 0.9928
+     },
+     {
+      "name": "Ulva compressa",
+      "mates": 334,
+      "mean_identity": 0.993
+     },
+     {
+      "name": "Ulva prolifera",
+      "mates": 333,
+      "mean_identity": 0.9945
+     },
+     {
+      "name": "Ulva linza",
+      "mates": 129,
+      "mean_identity": 0.9936
+     },
+     {
+      "name": "Ulva tepida",
+      "mates": 105,
+      "mean_identity": 0.9928
+     }
+    ],
+    "algmt": [
+     {
+      "name": "Halimeda cylindracea",
+      "mates": 8,
+      "mean_identity": 0.9778
+     },
+     {
+      "name": "Boodlea composita",
+      "mates": 6,
+      "mean_identity": 0.9767
+     }
+    ]
+   },
+   "donors": [
+    {
+     "name": "Synechocystis sp.",
+     "reads": 7,
+     "bp": 833,
+     "fraction": 0.16485,
+     "median_identity": 0.9364,
+     "identity_q10": 0.8971,
+     "identity_q90": 0.954,
+     "accession": "NC_000911.1"
+    },
+    {
+     "name": "Aegagropila linnaei",
+     "reads": 5,
+     "bp": 613,
+     "fraction": 0.12131,
+     "median_identity": 0.9474,
+     "identity_q10": 0.9111,
+     "identity_q90": 0.9583,
+     "accession": "MF683076.1"
+    },
+    {
+     "name": "Oltmannsiellopsis viridis",
+     "reads": 5,
+     "bp": 557,
+     "fraction": 0.11023,
+     "median_identity": 0.9533,
+     "identity_q10": 0.9495,
+     "identity_q90": 0.963,
+     "accession": "DQ291132.1"
+    },
+    {
+     "name": "Porphyra purpurea",
+     "reads": 5,
+     "bp": 552,
+     "fraction": 0.10924,
+     "median_identity": 0.9727,
+     "identity_q10": 0.9167,
+     "identity_q90": 0.973,
+     "accession": "NC_000925.1"
+    },
+    {
+     "name": "Arabidopsis thaliana",
+     "reads": 2,
+     "bp": 292,
+     "fraction": 0.05779,
+     "median_identity": 0.9795,
+     "identity_q10": 0.9362,
+     "identity_q90": 0.9795,
+     "accession": "NC_000932.1"
+    },
+    {
+     "name": "Blidingia minima",
+     "reads": 2,
+     "bp": 288,
+     "fraction": 0.057,
+     "median_identity": 0.9315,
+     "identity_q10": 0.9296,
+     "identity_q90": 0.9315,
+     "accession": "MK408749.1"
+    },
+    {
+     "name": "Hazenia capsulata",
+     "reads": 3,
+     "bp": 285,
+     "fraction": 0.0564,
+     "median_identity": 0.9388,
+     "identity_q10": 0.9205,
+     "identity_q90": 0.951,
+     "accession": "NC_034714.1"
+    },
+    {
+     "name": "Vaucheria litorea",
+     "reads": 2,
+     "bp": 284,
+     "fraction": 0.0562,
+     "median_identity": 0.9932,
+     "identity_q10": 0.9493,
+     "identity_q90": 0.9932,
+     "accession": "EU912438.1"
+    },
+    {
+     "name": "Ostreobium quekettii",
+     "reads": 3,
+     "bp": 271,
+     "fraction": 0.05363,
+     "median_identity": 0.9753,
+     "identity_q10": 0.9182,
+     "identity_q90": 0.9875,
+     "accession": "OK189527.1"
+    },
+    {
+     "name": "Sykidion marinum",
+     "reads": 2,
+     "bp": 201,
+     "fraction": 0.03978,
+     "median_identity": 0.9643,
+     "identity_q10": 0.906,
+     "identity_q90": 0.9643,
+     "accession": "KY407657.1"
+    },
+    {
+     "name": "Sphaerosorus coelastroides",
+     "reads": 1,
+     "bp": 146,
+     "fraction": 0.02889,
+     "median_identity": 0.8562,
+     "identity_q10": 0.8562,
+     "identity_q90": 0.8562,
+     "accession": "PV826133.1"
+    },
+    {
+     "name": "Ulva sp.",
+     "reads": 1,
+     "bp": 130,
+     "fraction": 0.02573,
+     "median_identity": 0.9015,
+     "identity_q10": 0.9015,
+     "identity_q90": 0.9015,
+     "accession": "MT179352.1"
+    },
+    {
+     "name": "Gloeotilopsis sterilis",
+     "reads": 1,
+     "bp": 126,
+     "fraction": 0.02494,
+     "median_identity": 0.9206,
+     "identity_q10": 0.9206,
+     "identity_q90": 0.9206,
+     "accession": "KM462877.1"
+    },
+    {
+     "name": "Capsosiphon fulvescens",
+     "reads": 1,
+     "bp": 107,
+     "fraction": 0.02118,
+     "median_identity": 0.8972,
+     "identity_q10": 0.8972,
+     "identity_q90": 0.8972,
+     "accession": "MG727869.1"
+    },
+    {
+     "name": "Ulva tepida",
+     "reads": 1,
+     "bp": 106,
+     "fraction": 0.02098,
+     "median_identity": 0.8962,
+     "identity_q10": 0.8962,
+     "identity_q90": 0.8962,
+     "accession": "OL684341.1"
+    }
+   ],
+   "barcodes": [],
+   "contigs": null,
+   "hot_windows": [
+    {
+     "target": "bait|RQTK01002715.1:0-3919|numt|2600-3794",
+     "start": 1600,
+     "end": 1800,
+     "reads": 13238
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 400,
+     "end": 600,
+     "reads": 12147
+    },
+    {
+     "target": "bait|RQTK01002715.1:0-3919|numt|2600-3794",
+     "start": 1800,
+     "end": 2000,
+     "reads": 9084
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 200,
+     "end": 400,
+     "reads": 8940
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 0,
+     "end": 200,
+     "reads": 5952
+    },
+    {
+     "target": "bait|RQTK01002715.1:0-3919|numt|2600-3794",
+     "start": 800,
+     "end": 1000,
+     "reads": 5885
+    },
+    {
+     "target": "bait|RQTK01002715.1:0-3919|numt|2600-3794",
+     "start": 1000,
+     "end": 1200,
+     "reads": 5297
+    },
+    {
+     "target": "algrDNA|MF034603.1",
+     "start": 0,
+     "end": 200,
+     "reads": 5041
+    }
+   ]
+  }
+ ],
+ "donors": [
+  {
+   "name": "Vaucheria litorea",
+   "fraction": 0.99643,
+   "median_identity": 0.9163
+  }
+ ],
+ "plastid_fraction": 0.035204
+}

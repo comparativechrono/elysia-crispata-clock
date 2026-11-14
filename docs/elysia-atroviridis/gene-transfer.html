@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gene transfer? Elysia atroviridis</title>
+<meta name="description" content="A test for algal DNA in the genome of the sea slug Elysia atroviridis: its assembly and its reads searched for plastid and algal sequences.">
+<link rel="preload" href="../assets/fonts/BricolageGrotesque-300-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+<a class="brand" href="../index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia</em> clocks</span></a>
+<nav aria-label="Site"><a href="../index.html">Species</a><a href="../compare.html">Compare</a><a href="../methods.html">Methods and data</a></nav>
+</div></header>
+<div class="subhead"><div class="wrap"><a class="sp" href="index.html"><i>Elysia atroviridis</i></a><nav aria-label="Pages for this species"><a href="index.html">Clock genes</a><a href="kleptoplasts.html">Whose chloroplasts</a><a href="gene-transfer.html" aria-current="page">Gene transfer</a></nav></div></div>
+<main>
+
+<section class="page-head"><div class="wrap">
+<h1>Has algal DNA entered this slug’s genome?</h1>
+<p class="lede">Two places to look: the assembly, and the reads it was built from.</p>
+<div class="answer"><p><strong>No.</strong> Nothing in the assembly or in the reads joins algal DNA to slug DNA.</p><p><strong>In the assembly:</strong> there is no plastid DNA, and the protein screen finds no algal or bacterial gene.</p><p><strong>In the reads:</strong> plastid DNA is plentiful, 69,026 reads, and only 16 of them also carry slug DNA (0.023%). None of those joins is seen twice, where a real insertion would be seen in about 37 reads.</p></div>
+</div></section>
+
+<section class="block article"><div class="wrap">
+<h2>In the assembly</h2>
+<p>The assembly was cut into 10 kb windows and each window compared with the same panel as the reads. 2,591 matches were set aside because they fall on stretches of the panel that are hit from 15 or more places in the assembly: slug repeats that happen to resemble a short piece of a panel sequence. 16 more were to low-complexity sequence, and 11 were the slug’s own ribosomal DNA, which resembles algal ribosomal DNA at 80 to 90%.</p>
+<p>No sequence of the assembly is plastid DNA, as a whole or in part. The one match kept is 214 bp on chromosome 6 that resemble a transfer RNA gene of a plastid genome at 85%.</p>
+
+<h3>Organelle-like stretches inside other sequences</h3>
+<div class="tablewrap"><table class="data"><thead><tr><th>Place in the assembly</th><th class="num">Length, bp</th><th class="num">Identity</th><th>Matches</th><th>Reading</th></tr></thead><tbody><tr><td class="mono">CM180493.1:13,702,602–13,702,816</td><td class="num">214</td><td class="num">85.4%</td><td><i>Ulva tepida</i> plastid genome: trnE(uuc), tRNA-Glu</td><td>A ribosomal or transfer RNA gene. These are conserved across bacteria, mitochondria and plastids, so a match at this identity does not point to an alga.</td></tr></tbody></table></div>
+
+
+<h2>In the reads</h2><h3>The sequenced animal (adult, Qingdao, China, 2024): 30.6 Gb of accurate long reads</h3>
+
+<div class="tablewrap"><table class="data"><thead><tr><th>Kind of DNA</th><th class="num">Reads that carry it</th><th class="num">Of these, also carrying slug DNA</th><th class="num">Rate</th></tr></thead><tbody><tr><td>Plastid DNA</td><td class="num">69,026</td><td class="num">16</td><td class="num">0.023%</td></tr><tr><td>Slug mitochondrial DNA</td><td class="num">2,125</td><td class="num">0</td><td class="num">0%</td></tr></tbody></table></div>
+<p class="small muted" style="margin-top:8px;max-width:90ch">A read counts as carrying both when it has two neighbouring stretches, each of 300 bases or more, one matching slug DNA and one matching organelle DNA. Joins seen in two or more independent molecules: 0 for plastid DNA, 0 for mitochondrial DNA.</p>
+<p>This is the cleanest test among the species added here: accurate long reads, from the animal that was assembled, at 37 times coverage, with 1.87% of the DNA being plastid. If plastid DNA were inserted anywhere in the genome of this animal, some of the 69,026 plastid reads would cross the join, and they would do so repeatedly at one place.</p><p>None of the 2,125 reads of the slug’s own mitochondrial genome carries nuclear DNA either.</p>
+
+<h2>Algal genes, searched as proteins</h2>
+<p>DNA comparison can miss a gene from an alga that has no close relative among the references. So 471 proteins were aligned straight to the assembly: the plastid-encoded proteins of a green alga, photosynthesis proteins of <i>Chlamydomonas</i> and <i>Arabidopsis</i> (including those encoded in the nucleus), proteins of siphonous green algae, and every available protein of <i>Vaucheria litorea</i>. Each place that matched was translated and compared with animal, algal and bacterial proteins.</p>
+<p>188 places matched. Of these, 103 are the slug’s own genes: a protein of another animal is the best match, as when mitochondrial ATP synthase is found with the chloroplast one. Another 85 match no protein of any other organism: 79 are low-complexity alignments and the rest are short or weak ones (25 to 40% identity, stitched together across several exons) whose translation matches nothing.</p>
+
+<p>Nothing in this assembly has an algal or a bacterial protein as its best match.</p>
+
+
+<h2>What this cannot rule out</h2><ul><li>The read test recognises plastid DNA of the alga this animal carried and of the other algae in the panel. An insertion of some other alga’s DNA would be found only by the assembly screens.</li><li>The protein screen finds only genes with a relative among the 471 proteins searched.</li><li>Sequence that is missing from the assembly cannot be searched.</li></ul>
+</div></section>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><i>Elysia atroviridis</i>: assembly ASM5905261v1 (GCA_059052615.1); reads SRR34916404. Methods and sources are on the <a href="../methods.html">methods page</a>.</p>
+<p>Built 2026-11-14 from public genome data. The analysis is independent of the groups that produced the genomes and has not been peer reviewed. Gene roles are inferred from homology with flies and mammals; nothing here measures a rhythm.</p>
+<p>Scripts, tables and sequences are in the repository that hosts this site. Photographs are credited on the <a href="../methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
+</div></footer>
+<script src="../assets/pages.js"></script>
+</body>
+</html>

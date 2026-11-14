@@ -44,6 +44,7 @@ if os.path.exists(np_):
 KLEPTO = {s["slug"]: jload(os.path.join(RG, s["slug"] + ".kleptoplast.json")) for s in SP}
 TRANSFER = {s["slug"]: jload(os.path.join(RG, s["slug"] + ".transfer.json")) for s in SP}
 ck = jload(os.path.join(R, "kleptoplast.json"))
+STEXT = jload(os.path.join(repo, "config", "species_text.json"), {})
 
 def pair(a, b): return "|".join(sorted((a, b)))
 def status_of(slug, sym):
@@ -59,8 +60,9 @@ def statusbar(slug):
     return f'<div class="statusbar" role="img" aria-label="{lab}" title="{lab}">' + "".join(f'<i class="{k}" style="flex:{c[k]}"></i>' for k in ("ok", "warn", "part", "miss") if c[k]) + "</div>"
 def tabs_for(slug):
     t = [("index.html", "Clock genes")]
-    if slug == "elysia-crispata" or KLEPTO.get(slug): t.append(("kleptoplasts.html", "Whose chloroplasts"))
-    if slug == "elysia-crispata" or TRANSFER.get(slug): t.append(("gene-transfer.html", "Gene transfer"))
+    # the pages of the other species are written by 21_build_species_pages.py, which runs first
+    if slug == "elysia-crispata" or os.path.exists(os.path.join(SITE, slug, "kleptoplasts.html")): t.append(("kleptoplasts.html", "Whose chloroplasts"))
+    if slug == "elysia-crispata" or os.path.exists(os.path.join(SITE, slug, "gene-transfer.html")): t.append(("gene-transfer.html", "Gene transfer"))
     if slug == "elysia-crispata": t.append(("methods.html", "Methods for this species"))
     return t
 
@@ -305,7 +307,7 @@ def card(s):
     k = KLEPTO.get(slug); kl = ""
     if slug == "elysia-crispata" and ck:
         top = ck["assignment"][:2]; kl = ", ".join(f'{it(a["taxon"])} {round(100 * a["fraction"])}%' for a in top)
-    elif k and k.get("donors"): kl = ", ".join(f'{it(d["name"])}{" " + str(round(100 * d["fraction"])) + "%" if d.get("fraction") else ""}' for d in k["donors"][:2])
+    elif k and STEXT.get(slug, {}).get("card"): kl = STEXT[slug]["card"]
     links = "".join(f'<a href="{slug}/{h}">{t}</a>' for h, t in tabs_for(slug) if h != "methods.html")
     return f"""<article class="sp-card">
 <div style="position:relative">{photo}{credit}</div>
@@ -331,6 +333,43 @@ for r in csv.DictReader(open(os.path.join(repo, "config", "species_catalogue.tsv
         if dna.strip().lower() in ("none", "") and "metagenome" in r["Other omics / associated resources"].lower(): dna = r["Other omics / associated resources"]
         others.append(f'<tr><td>{it(r["Species"])}</td><td>{cl(dna)}</td><td>{cl(r["RNA-seq and transcriptome assemblies"])}</td><td>{cl(r["Sequencing-project status"])}</td></tr>')
 n_sp = len(order)
+# ---- what each sequenced animal carried, and the gene-transfer result, across species
+def pct_small(x):
+    v = 100 * x
+    return f"{v:.1f}%" if v >= 1 else (f"{v:.2f}%" if v >= 0.1 else f"{v:.3f}%")
+carried_rows = ""
+all_transfer = all(os.path.exists(os.path.join(SITE, s_["slug"], "gene-transfer.html")) for s_ in order)
+for s_ in order:
+    slug = s_["slug"]
+    if slug == "elysia-crispata" and ck:
+        cp = ck["classes"]["cp"]["bp"] / ck["library"]["bp"]
+        dp = sum(a["bp"] / pl for a, pl in zip(ck["assignment"][:2], (84040, 89458))); dn = ck["library"]["bp"] / 892.65e6
+        carried_rows += (f'<tr><td><a href="{slug}/kleptoplasts.html">{it(s_["species"])}</a></td><td>{it("Penicillus capitatus")} and {it("P. lamourouxii")}</td><td>the animal assembled</td>'
+                         f'<td class="num">{pct_small(cp)}</td><td class="num">{dp / dn:,.0f}</td></tr>')
+        continue
+    K = KLEPTO.get(slug); tx = STEXT.get(slug, {})
+    if not K or not os.path.exists(os.path.join(SITE, slug, "kleptoplasts.html")): continue
+    cells_f = []; cells_d = []
+    span = CAT[slug]["assembly"]["span"]; pl = tx.get("plastome_length")
+    for L in K["libraries"]:
+        if L["plastid"]["bp"] < 5000: continue
+        cells_f.append(pct_small(L["plastid"]["fraction"]))
+        if pl:
+            r = (L["plastid"]["bp"] / pl) / (L["bases"] / span); cells_d.append(f"{r:,.0f}" if r >= 10 else f"{r:.1f}")
+    who = {"elysia-leucolegnote": "two other animals", "elysia-chlorotica": "two adults", "elysia-timida": "the animals assembled"}.get(slug, "the animal assembled")
+    floor = " or more" if slug in ("elysia-timida", "elysia-leucolegnote") else ""
+    carried_rows += (f'<tr><td><a href="{slug}/kleptoplasts.html">{it(s_["species"])}</a></td><td>{re.sub(r" [(]in two other animals[)]", "", tx.get("card", ""))}</td><td>{who}</td>'
+                     f'<td class="num">{" and ".join(cells_f)}{floor}</td><td class="num">{" and ".join(cells_d)}</td></tr>')
+carried_html = "" if not carried_rows else f"""
+<section class="block"><div class="wrap">
+<h2>What the sequenced animals were carrying</h2>
+<p>The plastid DNA among the reads of each animal names the alga it had been eating, and shows how much chloroplast DNA it held when it was sequenced.</p>
+<div class="tablewrap"><table class="data"><thead><tr><th>Species</th><th>Chloroplasts from</th><th>Reads from</th><th class="num">Plastid share of sequenced DNA</th><th class="num">Plastid genomes per slug genome</th></tr></thead>
+<tbody>{carried_rows}</tbody></table></div>
+<p class="small muted" style="margin-top:10px;max-width:92ch">The last column divides how deeply the plastid genome is covered by how deeply the slug genome is covered. It depends on which tissue was sequenced and on when the animal last fed. For <i>E. timida</i> only 49 kb of the alga’s plastid genome is known, so the figures are for that part. For <i>E. leucolegnote</i> they count the plastid DNA that resembles a reference, which leaves out much of what the other algae contributed.</p>
+{'<p style="margin-top:18px;max-width:80ch"><strong>No algal DNA was found inserted in any slug genome.</strong> In every species, reads that join chloroplast DNA to slug DNA are rare and scattered across the genome, and they turn up at rates similar to joins that cannot be real, such as the slug’s mitochondrial DNA joined to its nuclear DNA. Library preparation makes such joins. Where an assembly shows chloroplast DNA inside or at the end of a slug sequence (<i>E. crispata</i>, <i>E. chlorotica</i>, <i>E. leucolegnote</i>), reads do not bear the join out. The assemblies also hold chloroplast DNA as sequences of its own (<i>E. chlorotica</i>, <i>E. marginata</i>), a piece of an algal mitochondrial genome (<i>E. papillosa</i>) and bacterial DNA, as much as 2 Mb of it (<i>E. chlorotica</i>, <i>E. marginata</i>, <i>E. leucolegnote</i>). Each species has a gene-transfer page with the evidence and its limits.</p>' if all_transfer else ''}
+</div></section>
+"""
 home = f"""
 <section class="home-head"><div class="wrap">
 <h1>The circadian clock in {word(n_sp)} <i>Elysia</i> genomes</h1>
@@ -345,6 +384,7 @@ home = f"""
 </div>
 </div></section>
 
+{carried_html}
 <section class="block"><div class="wrap">
 <div class="cols">
 <div><h3>One clock, {word(n_sp)} genomes</h3>
@@ -378,10 +418,50 @@ dl = [("clock_matrix.tsv", "Gene by species table (TSV)", "state, completeness, 
 for s in order:
     if s["slug"] in CAT:
         dl.append((f"{s['slug']}_clock_proteins.faa", f"{s['species']} clock proteins (FASTA)", "")); dl.append((f"{s['slug']}_clock_cds.fna", f"{s['species']} coding sequences (FASTA)", ""))
+read_rows = ""
+rp = os.path.join(repo, "config", "species_reads.tsv")
+if os.path.exists(rp):
+    for r in csv.DictReader(open(rp), delimiter="\t"):
+        K = KLEPTO.get(r["slug"]) or {}
+        L = next((x for x in K.get("libraries", []) if x["library"] == r["library"]), None)
+        if not L: continue
+        read_rows += (f'<tr><td>{it(BYSLUG[r["slug"]]["species"])}</td><td>{e(r["animal"][0].upper() + r["animal"][1:])}</td><td>{e(r["platform"])}</td><td class="mono">{e(r["runs"].replace(",", ", "))}</td>'
+                      f'<td class="num">{L["bases"] / 1e9:.1f} Gb</td></tr>')
+for s_ in order:
+    for suffix, label in (("_kleptoplast.json", "chloroplast results (JSON)"), ("_gene_transfer.json", "gene-transfer results (JSON)")):
+        if os.path.exists(os.path.join(SITE, "downloads", s_["slug"] + suffix)): dl.append((s_["slug"] + suffix, f"{s_['species']} {label}", ""))
+    for f in sorted(os.listdir(os.path.join(SITE, "downloads"))):       # plastid contigs and barcode sequences (45_export_tables.py)
+        m = re.match(re.escape(s_["slug"]) + r"(?:_(\w+?))?_(plastid_contigs|barcodes)\.fa$", f)
+        if m: dl.append((f, f"{s_['species']} {'plastid contigs' if m.group(2) == 'plastid_contigs' else 'rbcL and tufA sequences'} (FASTA)",
+                         {"adult": "second adult, short reads", "hainan": "Hainan animal", None: ("Shenzhen animal" if s_["slug"] == "elysia-leucolegnote" else "")}.get(m.group(1), m.group(1) or "")))
+reads_methods = "" if not read_rows else f"""
+<h2 id="reads">Whose chloroplasts: reading the reads</h2>
+<p>For <i>E. crispata</i> all 47 Gb of reads were examined (see <a href="elysia-crispata/methods.html">its methods page</a>). For the other species the read sets below were used.</p>
+<div class="tablewrap"><table class="data"><thead><tr><th>Species</th><th>DNA from</th><th>Sequencing</th><th>Runs</th><th class="num">Examined</th></tr></thead><tbody>{read_rows}</tbody></table></div>
+<details class="method" open><summary>1. Reference panel</summary>
+<p>1,271 algal plastid sequences (241 whole plastid genomes of green algae; plastid records of Dasycladales, Xanthophyceae and Cladophorales; a land plant, a diatom, a red alga and a cyanobacterium to catch anything else), 117 algal mitochondrial genomes, 7,352 nuclear ribosomal DNA sequences of algae, six slug ribosomal DNA sequences and the mitochondrial genomes of nine <i>Elysia</i> species. Low-complexity sequence in the panel is masked for the first pass.</p></details>
+<details class="method"><summary>2. First pass: every read against the panel</summary>
+<p>Each run was fetched from the SRA, converted and mapped to the panel as one stream (minimap2; k 15, w 10 for long reads, the short-read preset for read pairs). Reads with a match were kept, both mates of a pair if either matched. Two kinds of read were thinned to a sample: reads whose only match is a short local one to a panel window that collects such matches from very many reads (slug repeats that resemble a stretch of a panel sequence), and reads that match nothing but ribosomal DNA at slug-like identity.</p></details>
+<details class="method"><summary>3. Second pass: base by base</summary>
+<p>The kept reads were aligned to the species’ own assembly together with the panel. Each read is described by its best set of non-overlapping alignments. A stretch counts as plastid, mitochondrial or slug when it matches at 97% or better (82% for the older PacBio RS reads of <i>E. chlorotica</i>). Sequences of an assembly that are organelle DNA from end to end are counted as organelle, and plastid-like stretches inside other sequences are hidden for this step, so that a plastid read is not explained away by a plastid fragment left in the assembly.</p></details>
+<details class="method"><summary>4. Naming the alga</summary>
+<p>Plastid reads are assigned to the reference they match best. Two barcode genes, rbcL and tufA, are then compared with 11,600 GenBank records of Ulvophyceae and Xanthophyceae. With accurate long reads, every read that spans a barcode contributes its own sequence, identical sequences are counted, and each distinct sequence is compared. With short reads, the plastid pairs are first assembled into contigs (MEGAHIT) and the barcodes are cut from the contigs.</p></details>
+
+<h2 id="transfer">Gene transfer: where algal DNA was looked for</h2>
+<details class="method" open><summary>1. In the assembly, as DNA</summary>
+<p>Each assembly was cut into 10 kb windows (1 kb overlap) and compared with the panel. Sequences covered 50% or more by organelle matches are reported as organelle DNA. Elsewhere, every match of 200 bases or more at 80% identity or better is listed, after removing matches to low-complexity sequence, matches to panel windows hit from 15 or more places in the assembly, and the slug’s own ribosomal DNA.</p></details>
+<details class="method"><summary>2. In the assembly, as protein</summary>
+<p>471 proteins were aligned to each assembly with miniprot, keeping weak and partial matches: the plastid-encoded proteins of <i>Udotea flabellum</i>, photosynthesis proteins of <i>Chlamydomonas</i> and <i>Arabidopsis</i> (nuclear and plastid), UniProt proteins of siphonous green algae and all proteins of <i>Vaucheria litorea</i>. Each matching place was translated and compared with animal, algal, cyanobacterial, bacterial and fungal proteins (DIAMOND). A place is the slug’s own gene when the best match among animals other than sea slugs is at least as good as the best algal or microbial match, or within 10% of it while a protein of another sea slug beats both (very conserved proteins such as GAPDH). The gene set published with an assembly is never counted as animal evidence for that assembly: the published gene sets of <i>E. chlorotica</i> and <i>E. marginata</i> include genes on bacterial and plastid sequences, and such a gene would otherwise vouch for itself.</p>
+<p>Every sequence on which a place of another kind was found was then translated as a whole in all six frames (DIAMOND blastx with frameshifts and range culling) and each protein-coding stretch classified in the same way. A sequence is called bacterial when three or more stretches, and at least half of all, are of bacterial type. The nearest bacterial genera come from the Swiss-Prot entries matched best; they name relatives, not species.</p></details>
+<details class="method"><summary>3. In the reads</summary>
+<p>A long read is chimeric when two neighbouring stretches of 300 bases or more are of different kinds, for example plastid and slug. A read pair is mixed when its mates are of different kinds. The rate for plastid DNA is compared with the rate for the slug’s own mitochondrial DNA, which measures how often the library joins unrelated molecules. A real insertion would be seen in many independent molecules at one place; joins are grouped by position and molecules sharing both ends are counted once.</p></details>
+<details class="method"><summary>4. Testing a place in an assembly with reads</summary>
+<p>Where an assembly holds an organelle-like stretch inside another sequence, reads were aligned to that place with 3 kb either side. At each edge the reads that run through are counted against the reads that stop there and continue into something else. For <i>E. chlorotica</i> the reads tested were those that matched the panel, to which the places had been added. For the one place in <i>E. leucolegnote</i>, whose plastid part is too unlike the panel for that, every read of both libraries was compared with the place itself.</p></details>
+"""
 methods = f"""
 <section class="page-head"><div class="wrap">
 <h1>Methods and data</h1>
-<p class="lede">How the genes were found in each genome and compared, and where the data came from. The <i>E. crispata</i> work is described in more detail on <a href="elysia-crispata/methods.html">its own methods page</a>.</p>
+<p class="lede">How the genes were found in each genome and compared, how the reads and assemblies were searched for algal DNA, and where the data came from. The <i>E. crispata</i> work is described in more detail on <a href="elysia-crispata/methods.html">its own methods page</a>.</p>
 </div></section>
 <section class="block article"><div class="wrap">
 <h2>Genomes used</h2>
@@ -401,6 +481,7 @@ methods = f"""
 <p>Identity between two proteins is counted over the positions where both have a residue. The tree uses the proteins complete in every species, positions with at most 20% gaps, IQ-TREE with LG+F+G4 and 1,000 ultrafast bootstraps.</p></details>
 <details class="method"><summary>6. Domains</summary><p>Pfam-A, hmmsearch with gathering thresholds.</p></details>
 <p class="small muted">Scripts: <code>scripts/genus/</code> in the repository, numbered in the order they run.</p>
+{reads_methods}
 
 <h2>Downloads</h2>
 <ul class="downloads">{"".join(f'<li><a href="downloads/{n}" download>{e(l)}</a><span>{e(t)}</span></li>' for n, l, t in dl)}</ul>

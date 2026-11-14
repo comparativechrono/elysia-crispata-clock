@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Whose chloroplasts? Elysia papillosa</title>
+<meta name="description" content="Which alga&#x27;s chloroplasts the sequenced Elysia papillosa carried, worked out from the plastid DNA among its genome reads.">
+<link rel="preload" href="../assets/fonts/BricolageGrotesque-300-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+<a class="brand" href="../index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia</em> clocks</span></a>
+<nav aria-label="Site"><a href="../index.html">Species</a><a href="../compare.html">Compare</a><a href="../methods.html">Methods and data</a></nav>
+</div></header>
+<div class="subhead"><div class="wrap"><a class="sp" href="index.html"><i>Elysia papillosa</i></a><nav aria-label="Pages for this species"><a href="index.html">Clock genes</a><a href="kleptoplasts.html" aria-current="page">Whose chloroplasts</a><a href="gene-transfer.html">Gene transfer</a></nav></div></div>
+<main>
+
+<section class="page-head"><div class="wrap">
+<h1>Whose chloroplasts was this slug carrying?</h1>
+<p class="lede">The animal sequenced for the genome came from Tampa, Florida, in 2024. The plastid DNA among its reads says which alga it had been eating.</p>
+<div class="answer"><p><strong>One shaving-brush alga, <i>Penicillus lamourouxii</i>.</strong> All 1,700 plastid reads match a single plastid genome at a median identity of 100.0%. That genome, OZ494339.1, was assembled by the Sanger Institute from this same animal and filed as <i>P. lamourouxii</i>. Each of the two barcode genes occurs as one sequence only, so there is no second alga in the mix.</p><p><strong>It is the lesser of the two algae found in the <i>E. crispata</i> animal.</strong> Against that plastid genome (OZ372796.1), rbcL is identical over 1,269 bases and tufA differs at one base in 821.</p><p><strong>There is not much of it.</strong> Plastid DNA is 0.14% of the sequenced bases, about 16 copies of the plastid genome for every copy of the slug genome. The <i>E. crispata</i> animal carried roughly 250.</p></div>
+</div></section>
+
+<section class="block article"><div class="wrap">
+<h2>The reads</h2>
+<div class="tablewrap"><table class="data">
+<thead><tr><th>DNA from</th><th>Sequencing</th><th>Runs</th><th class="num">Examined</th><th>Note</th></tr></thead>
+<tbody><tr><td>The sequenced animal (specimen xgElyPapi4, Tampa, Florida, 2024)</td><td>PacBio Revio (HiFi)</td><td class="mono">ERR14842698</td><td class="num">8.3 Gb</td><td>One of the three runs behind the assembly, in full.</td></tr></tbody></table></div>
+<p class="small muted" style="margin-top:10px;max-width:90ch">Every read was compared with a panel of 1,271 algal plastid sequences (241 whole plastid genomes of green algae, plastid records of Dasycladales, Xanthophyceae and Cladophorales, and distant plastids to catch anything else), 117 algal mitochondrial genomes, 7,352 nuclear ribosomal DNA sequences of algae and the mitochondrial genomes of nine <i>Elysia</i> species. Reads with a match were then aligned base by base to the panel and to this species’ own assembly.</p>
+
+<h2>How much of the DNA is not slug</h2>
+<div class="chart"><h3>Share of sequenced bases</h3><p class="sub">8.3 Gb of accurate long reads examined. Counted here: bases that match the reference at 97% or better. Everything else is slug nuclear DNA or matches nothing in the panel.</p><svg viewBox="0 0 760 116" role="img" aria-label="Algal plastid DNA: 0.14%; Slug mitochondrion: 0.07%; Algal nuclear ribosomal DNA: 0.00%">
+<line class="gridline" x1="250" x2="250" y1="8" y2="110"/>
+<text class="lbl" x="240" y="28" text-anchor="end">Algal plastid DNA</text>
+<rect class="bar" x="250" y="15" width="355.9" height="18" rx="4" data-tip="1,700 reads, 11.87 Mb" tabindex="0"><title>1,700 reads, 11.87 Mb</title></rect>
+<text class="val" x="613.9" y="28">0.14%</text>
+<text class="lbl" x="240" y="62" text-anchor="end">Slug mitochondrion</text>
+<rect class="bar" x="250" y="49" width="166.3" height="18" rx="4" data-tip="816 reads, 5.54 Mb" tabindex="0"><title>816 reads, 5.54 Mb</title></rect>
+<text class="val" x="424.3" y="62">0.067%</text>
+<text class="lbl" x="240" y="96" text-anchor="end">Algal nuclear ribosomal DNA</text>
+<rect class="bar" x="250" y="83" width="2.0" height="18" rx="4" data-tip="2.2 kb" tabindex="0"><title>2.2 kb</title></rect>
+<text class="val" x="260.0" y="96">0%</text></svg></div>
+
+<h2>Which alga</h2>
+<p>Reads were assigned to whichever plastid reference they match best, and the two barcode genes were read directly out of every read that spans them.</p>
+<div class="tablewrap"><table class="data">
+<thead><tr><th>Plastid reference matched best</th><th class="num">Share of plastid DNA</th><th class="num">Reads</th><th class="num">Identity, median</th><th class="num">Middle 80%</th></tr></thead>
+<tbody><tr><td><i>Penicillus lamourouxii</i> <span class="mono muted">OZ494339.1</span></td><td class="num">100.0%</td><td class="num">1,701</td><td class="num">100.0%</td><td class="num">99.7 to 100.0%</td></tr></tbody></table></div>
+<p class="small muted" style="margin-top:10px;max-width:90ch">A read is assigned to the reference it matches best. Identity near 100% means the reference is the alga eaten, or one of its own species; identity well below that means only that the nearest sequenced relative is named.</p>
+
+<h2>Two barcode genes</h2><p class="small muted" style="max-width:86ch">Each row is one distinct sequence (haplotype) read directly out of the reads that span the gene.</p><div class="tablewrap"><table class="data">
+<thead><tr><th>Gene</th><th class="num">Length, bp</th><th>From</th><th>Longest good match in GenBank</th><th class="num">Identity</th><th>Most similar record of 400 bp or more</th></tr></thead>
+<tbody><tr><td>rbcL</td><td class="num">1,269</td><td>95 reads (100%)</td><td><i>Penicillus dumetosus</i> <span class="mono muted">AY942175.1</span></td><td class="num">97.8% of 1,266 bp</td><td>100.0% over 559 bp: Uncultured Bryopsidales (3); Penicillus lamourouxii (1)</td></tr><tr><td>tufA</td><td class="num">821</td><td>101 reads (100%)</td><td><i>Penicillus dumetosus</i> <span class="mono muted">MG784729.1</span></td><td class="num">98.5% of 821 bp</td><td>98.6% over 821 bp: Penicillus dumetosus (2)</td></tr></tbody></table></div>
+
+<h2>Did algal nuclei come along?</h2><p>Almost none. Reads that carry nuclear ribosomal DNA of a <i>Penicillus</i>: 1 of 1,202,224. The match is about 99% to a <i>P. pyriformis</i> record across the variable spacers, where the slug’s own ribosomal DNA does not match at all. So a trace of algal nuclear DNA was in the sample, most likely from food still in the gut. No read matches an algal mitochondrial genome.</p><p>This matters for the <a href="gene-transfer.html">gene transfer question</a>. With algal nuclear DNA present, even as a trace, an algal gene among the reads would not by itself show that the gene is in the slug genome.</p>
+
+<h2>For rhythm work</h2><p>To follow kleptoplast transcripts in animals like this one, map them to OZ494339.1, the plastid genome assembled from this same animal (89,758 bp). It has no gene annotation in the archive. It is 99.4% identical, along nearly its whole length, to OZ372796.1, the second plastid genome of the <i>E. crispata</i> animal, for which a gene table made by homology is among <a href="../elysia-crispata/methods.html">that species’ downloads</a>.</p><p>The alga in an animal changes with its meals. A transcript study should check what its own animals carry; the two barcode genes are enough for that.</p><p>Downloads: <a href="../downloads/elysia-papillosa_barcodes.fa">barcode sequences</a>, and <a href="../downloads/elysia-papillosa_kleptoplast.json">all the numbers on this page</a>.</p>
+
+<h2>What to keep in mind</h2><ul><li>The name <i>P. lamourouxii</i> rests on one 562-base rbcL record in GenBank (DQ469333), which the reads match exactly, and on the name the Sanger Institute gave the plastid genome. There is no tufA record for the species. The nearest species with full-length barcodes, <i>P. dumetosus</i>, is 97.8% (rbcL) and 98.5% (tufA) identical.</li><li>This is one animal on one day. <i>E. papillosa</i> may eat other algae as well.</li><li>8.3 Gb of the 101 Gb of reads behind the assembly were examined.</li></ul>
+</div></section>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><i>Elysia papillosa</i>: reads ERR14842698; assembly xgElyPapi4.2 (GCA_977015215.2). Methods and sources are on the <a href="../methods.html">methods page</a>.</p>
+<p>Built 2026-11-14 from public genome data. The analysis is independent of the groups that produced the genomes and has not been peer reviewed. Gene roles are inferred from homology with flies and mammals; nothing here measures a rhythm.</p>
+<p>Scripts, tables and sequences are in the repository that hosts this site. Photographs are credited on the <a href="../methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
+</div></footer>
+<script src="../assets/pages.js"></script>
+</body>
+</html>

@@ -7,9 +7,17 @@ classes
   plastid-only contig / bacterial contig  the locus lies on a small contig that the DNA screen
                     (script 23, assembly_screen.json beside embedded_plastid.json) already found
                     to be plastid or bacterial DNA from end to end
-  animal gene       best database match is an animal protein: the slug's own homologue
-  alga-like         best match is an algal, plant or cyanobacterial protein
-  microbe-like      best match is a bacterial, archaeal or fungal protein
+  animal gene       the slug's own homologue. The best match among animals other than sea slugs
+                    (MET) is at least as good as the best algal or microbial match; or it is within
+                    10% of it and a protein of another sacoglossan species (SAC) beats both, as
+                    happens for very conserved proteins such as GAPDH
+  alga-like         otherwise, when the best non-animal match is an algal, plant or cyanobacterial protein
+  microbe-like      otherwise, when it is a bacterial, archaeal or fungal protein
+                    The published proteome of the species being screened is never counted as
+                    animal evidence (OWN_PROTEOME below): gene annotations include genes on
+                    bacterial and plastid sequences that were assembled along with the slug, and
+                    such a gene would otherwise vouch for itself. Whether the locus is listed as a
+                    gene in that annotation is recorded (own_annotation_bits).
   no database match the translated locus matches no protein at all (E <= 1e-3); these are short or
                     low-complexity alignments (Shannon entropy of the peptide is reported)
 Writes protein_screen_raw.json (all loci) and, merging the follow-up checks of script 29 when
@@ -57,20 +65,33 @@ out = f"{wd}/loci_vs_db.tsv"
 fresh = os.path.exists(out) and all(os.path.getmtime(out) > os.path.getmtime(f"{wd}/{a}.gff") for a in asms)
 if not fresh: subprocess.run([D, "blastp", "-q", f"{wd}/loci.faa", "-d", db, "-o", out, "--sensitive", "-e", "1e-3", "-k", "50", "--threads", "2", "--quiet",
                 "--outfmt", "6", "qseqid", "sseqid", "pident", "length", "evalue", "bitscore"], check=True)
-best = collections.defaultdict(dict)
+# the proteome in the database that was annotated on the assembly being screened, if any
+OWN_PROTEOME = {"elysia-chlorotica": "ELYCH", "elysia-marginata": "ELYMA"}
+best = collections.defaultdict(dict); sac = collections.defaultdict(dict)
 for line in open(out):
     q, s, pid, ln, ev, bs = line.rstrip().split("\t"); g = s.split("|")[0]; bs = float(bs)
+    if g == "SAC":
+        tag = s.split("|")[1]
+        if bs > sac[q].get(tag, 0): sac[q][tag] = bs
+        continue
     if g not in best[q] or bs > best[q][g][0]: best[q][g] = (bs, s, float(pid))
 for l in loci:
-    d = best.get(l["id"], {})
-    animal = max(d.get("MET", (0,))[0], d.get("SAC", (0,))[0]); alga = max(d.get("ALG", (0,))[0], d.get("CYA", (0,))[0]); micro = max(d.get("BAC", (0,))[0], d.get("FUN", (0,))[0])
-    l.update(animal_bits=animal, alga_bits=alga, microbe_bits=micro, best_alga_hit=(d.get("ALG") or d.get("CYA") or (0, ""))[1])
+    d = best.get(l["id"], {}); own_tag = OWN_PROTEOME.get(l["assembly"])
+    met = d.get("MET", (0,))[0]; alga = max(d.get("ALG", (0,))[0], d.get("CYA", (0,))[0]); micro = max(d.get("BAC", (0,))[0], d.get("FUN", (0,))[0])
+    slug = max((b for t, b in sac.get(l["id"], {}).items() if t != own_tag), default=0)      # other sacoglossan species
+    own = sac.get(l["id"], {}).get(own_tag, 0)
+    other = max(alga, micro)
+    is_animal = (met > 0 or slug > 0) and (met >= other or (slug > other and met >= 0.9 * other))
+    animal = max(met, slug) if is_animal else met
+    l.update(animal_bits=max(met, slug), met_bits=met, other_sacoglossan_bits=slug, own_annotation_bits=own, alga_bits=alga, microbe_bits=micro,
+             best_alga_hit=(d.get("ALG") or d.get("CYA") or (0, ""))[1])
+    d = d or ({"SAC": 1} if slug else {})       # matched by nothing but its own annotation: no database match
     l["on_plastid_fragment"] = any(c == l["contig"] and l["start"] < b and l["end"] > a for c, a, b in frags.get(l["assembly"], []))
     w = whole.get((l["assembly"], l["contig"]))
     if l["on_plastid_fragment"]: l["class"] = "plastid fragment (assembly artefact)"
     elif w and animal < max(alga, micro, 1): l["class"] = "plastid-only contig" if w == "cp" else "bacterial contig"
     elif not d: l["class"] = "no database match"
-    elif animal >= max(alga, micro): l["class"] = "animal gene"
+    elif is_animal: l["class"] = "animal gene"
     elif alga >= micro: l["class"] = "alga-like"
     else: l["class"] = "microbe-like"
 summary = {}

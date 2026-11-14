@@ -1,0 +1,2054 @@
+{
+ "slug": "elysia-leucolegnote",
+ "species": "Elysia leucolegnote",
+ "assembly": {
+  "name": "ASM5281519v1",
+  "accession": "GCA_052815195.1",
+  "level": "chromosome"
+ },
+ "screen": {
+  "whole": [],
+  "loci": [
+   {
+    "contig": "JBQKML010000169.1",
+    "start": 81064,
+    "end": 82006,
+    "cls": "plastid",
+    "target": "cp|MH591113.1",
+    "tstart": 0,
+    "tend": 923,
+    "length": 965,
+    "identity": 0.8269,
+    "target_entropy": 5.87,
+    "matches": 1,
+    "span": 942,
+    "contig_length": 747000,
+    "target_desc": "Udotea sp. TZ0819 chloroplast, complete genome",
+    "genes": [
+     "rns",
+     "small subunit ribosomal RNA"
+    ]
+   },
+   {
+    "contig": "JBQKML010000381.1",
+    "start": 294,
+    "end": 710,
+    "cls": "plastid",
+    "target": "cp|MH591104.1",
+    "tstart": 21359,
+    "tend": 21775,
+    "length": 416,
+    "identity": 0.8702,
+    "target_entropy": 5.49,
+    "matches": 1,
+    "span": 416,
+    "contig_length": 9365,
+    "target_desc": "Boodleopsis sp. H.0758 chloroplast, complete genome",
+    "genes": [
+     "chlN",
+     "Protochlorophyllide reductase subunit N"
+    ]
+   }
+  ],
+  "numt_like": [],
+  "removed": {
+   "repeat_like_matches": 15,
+   "low_complexity_matches": 2,
+   "repeat_like_panel_sequences": 1,
+   "own_rdna_loci": 20
+  },
+  "repeats": [
+   {
+    "target": "algrDNA|MH894190.1",
+    "target_desc": "Dasycladus sp. HV04045 small subunit ribosomal RNA gene, partial sequence",
+    "places": 15
+   }
+  ]
+ },
+ "reads": [
+  {
+   "library": "main",
+   "label": "Shenzhen animal",
+   "runs": [
+    "SRR41369319"
+   ],
+   "kind": "short",
+   "platform": "Illumina NovaSeq X Plus (paired)",
+   "animal": "another animal (isolate SZU-EL01, Shenzhen, China, 2025), not the one assembled",
+   "reads": 40000000,
+   "bases": 6000000000,
+   "bases_screened": 6000000000,
+   "chimera": {
+    "rates": {
+     "cp": {
+      "pairs_with_mate": 20757,
+      "pairs_also_with_slug": 302,
+      "rate": 0.01455
+     },
+     "slugmt": {
+      "pairs_with_mate": 10491,
+      "pairs_also_with_slug": 106,
+      "rate": 0.0101
+     },
+     "slugrDNA": {
+      "pairs_with_mate": 25,
+      "pairs_also_with_slug": 0,
+      "rate": 0.0
+     },
+     "algrDNA": {
+      "pairs_with_mate": 262,
+      "pairs_also_with_slug": 30,
+      "rate": 0.1145
+     }
+    },
+    "recurrent": [
+     {
+      "kind": "algrDNA",
+      "slug": "CM127907.1",
+      "start": 25893000,
+      "pairs": 28,
+      "distinct_pairs": 16,
+      "other_targets": [
+       "algrDNA|MZ596061.1",
+       "algrDNA|MZ596066.1",
+       "algrDNA|MZ596070.1",
+       "algrDNA|MZ596076.1"
+      ],
+      "other_positions": [
+       2173,
+       2180,
+       2182,
+       2182,
+       2182,
+       2183,
+       2186,
+       2189,
+       2191,
+       2197,
+       2209,
+       4487,
+       4491,
+       4495,
+       4496,
+       4502,
+       4503,
+       4505,
+       4509,
+       4511
+      ]
+     }
+    ],
+    "split_mates": {
+     "algmt": 6,
+     "slugmt": 3,
+     "cp": 18
+    },
+    "split_examples": [
+     {
+      "read": "SRR41369319.15130.2",
+      "other": "algmt",
+      "slug": "CM127899.1",
+      "slug_pos": 18575163,
+      "other_t": "algmt|MN853878.1",
+      "other_pos": 34382,
+      "slug_len": 68,
+      "other_len": 62
+     },
+     {
+      "read": "SRR41369319.451901.2",
+      "other": "slugmt",
+      "slug": "CM127894.1",
+      "slug_pos": 73981697,
+      "other_t": "slugmt|QB170827.1",
+      "other_pos": 6785,
+      "slug_len": 98,
+      "other_len": 58
+     },
+     {
+      "read": "SRR41369319.611011.2",
+      "other": "algmt",
+      "slug": "CM127895.1",
+      "slug_pos": 51292868,
+      "other_t": "algmt|MN853878.1",
+      "other_pos": 34385,
+      "slug_len": 46,
+      "other_len": 69
+     },
+     {
+      "read": "SRR41369319.709614.2",
+      "other": "cp",
+      "slug": "CM127895.1",
+      "slug_pos": 48699792,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 2337,
+      "slug_len": 60,
+      "other_len": 89
+     },
+     {
+      "read": "SRR41369319.709629.2",
+      "other": "cp",
+      "slug": "CM127895.1",
+      "slug_pos": 48699792,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 2337,
+      "slug_len": 60,
+      "other_len": 89
+     },
+     {
+      "read": "SRR41369319.1510338.2",
+      "other": "cp",
+      "slug": "CM127899.1",
+      "slug_pos": 28414890,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 41419,
+      "slug_len": 40,
+      "other_len": 100
+     },
+     {
+      "read": "SRR41369319.1929637.2",
+      "other": "algmt",
+      "slug": "CM127902.1",
+      "slug_pos": 16496977,
+      "other_t": "algmt|MN853878.1",
+      "other_pos": 34383,
+      "slug_len": 67,
+      "other_len": 65
+     },
+     {
+      "read": "SRR41369319.1931754.2",
+      "other": "cp",
+      "slug": "CM127895.1",
+      "slug_pos": 44507540,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 75423,
+      "slug_len": 53,
+      "other_len": 98
+     },
+     {
+      "read": "SRR41369319.2810611.1",
+      "other": "cp",
+      "slug": "CM127903.1",
+      "slug_pos": 4407436,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 72706,
+      "slug_len": 48,
+      "other_len": 103
+     },
+     {
+      "read": "SRR41369319.2810612.1",
+      "other": "cp",
+      "slug": "CM127903.1",
+      "slug_pos": 4407436,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 72706,
+      "slug_len": 48,
+      "other_len": 103
+     },
+     {
+      "read": "SRR41369319.2810627.1",
+      "other": "cp",
+      "slug": "CM127903.1",
+      "slug_pos": 4407436,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 72706,
+      "slug_len": 48,
+      "other_len": 103
+     },
+     {
+      "read": "SRR41369319.3072167.2",
+      "other": "cp",
+      "slug": "CM127894.1",
+      "slug_pos": 79808796,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 2891,
+      "slug_len": 95,
+      "other_len": 60
+     },
+     {
+      "read": "SRR41369319.3072176.2",
+      "other": "cp",
+      "slug": "CM127894.1",
+      "slug_pos": 79808796,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 2891,
+      "slug_len": 95,
+      "other_len": 60
+     },
+     {
+      "read": "SRR41369319.3519249.2",
+      "other": "cp",
+      "slug": "CM127901.1",
+      "slug_pos": 11338174,
+      "other_t": "cp|GQ892829.1",
+      "other_pos": 132425,
+      "slug_len": 95,
+      "other_len": 55
+     },
+     {
+      "read": "SRR41369319.4138605.2",
+      "other": "cp",
+      "slug": "CM127896.1",
+      "slug_pos": 75855913,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 38065,
+      "slug_len": 70,
+      "other_len": 90
+     },
+     {
+      "read": "SRR41369319.4297062.1",
+      "other": "cp",
+      "slug": "CM127894.1",
+      "slug_pos": 95246168,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 3444,
+      "slug_len": 111,
+      "other_len": 40
+     },
+     {
+      "read": "SRR41369319.4419392.2",
+      "other": "slugmt",
+      "slug": "CM127896.1",
+      "slug_pos": 26675363,
+      "other_t": "slugmt|QB170827.1",
+      "other_pos": 6893,
+      "slug_len": 57,
+      "other_len": 101
+     },
+     {
+      "read": "SRR41369319.4523247.2",
+      "other": "cp",
+      "slug": "CM127895.1",
+      "slug_pos": 92974704,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 16723,
+      "slug_len": 80,
+      "other_len": 71
+     },
+     {
+      "read": "SRR41369319.4523258.2",
+      "other": "cp",
+      "slug": "CM127895.1",
+      "slug_pos": 92974704,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 16723,
+      "slug_len": 80,
+      "other_len": 71
+     },
+     {
+      "read": "SRR41369319.4866902.2",
+      "other": "cp",
+      "slug": "CM127894.1",
+      "slug_pos": 125605667,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 3424,
+      "slug_len": 97,
+      "other_len": 43
+     },
+     {
+      "read": "SRR41369319.4996301.2",
+      "other": "cp",
+      "slug": "CM127906.1",
+      "slug_pos": 25212301,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 19453,
+      "slug_len": 82,
+      "other_len": 69
+     },
+     {
+      "read": "SRR41369319.5481387.1",
+      "other": "cp",
+      "slug": "CM127906.1",
+      "slug_pos": 5534953,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 8635,
+      "slug_len": 75,
+      "other_len": 76
+     },
+     {
+      "read": "SRR41369319.6268003.2",
+      "other": "slugmt",
+      "slug": "CM127894.1",
+      "slug_pos": 128227151,
+      "other_t": "slugmt|QB170827.1",
+      "other_pos": 4191,
+      "slug_len": 105,
+      "other_len": 43
+     },
+     {
+      "read": "SRR41369319.6416360.1",
+      "other": "cp",
+      "slug": "CM127895.1",
+      "slug_pos": 22333799,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 20480,
+      "slug_len": 70,
+      "other_len": 92
+     },
+     {
+      "read": "SRR41369319.6619871.1",
+      "other": "algmt",
+      "slug": "CM127902.1",
+      "slug_pos": 16496974,
+      "other_t": "algmt|MN853878.1",
+      "other_pos": 34386,
+      "slug_len": 71,
+      "other_len": 65
+     },
+     {
+      "read": "SRR41369319.6619879.1",
+      "other": "algmt",
+      "slug": "CM127902.1",
+      "slug_pos": 16496976,
+      "other_t": "algmt|MN853878.1",
+      "other_pos": 34387,
+      "slug_len": 68,
+      "other_len": 66
+     },
+     {
+      "read": "SRR41369319.6847232.2",
+      "other": "algmt",
+      "slug": "CM127900.1",
+      "slug_pos": 28727532,
+      "other_t": "algmt|MN853878.1",
+      "other_pos": 34385,
+      "slug_len": 92,
+      "other_len": 57
+     }
+    ]
+   },
+   "min_identity": null,
+   "locus_tests": {
+    "kind": "short",
+    "margin": 25,
+    "loci": [
+     {
+      "name": "bait|JBQKML010000381.1:0-3863|plastid|0-863",
+      "contig": "JBQKML010000381.1",
+      "start": 0,
+      "end": 863,
+      "kind": "plastid",
+      "reads_aligned": 1552,
+      "depth_locus": 49.72,
+      "depth_left_flank": null,
+      "depth_right_flank": 0.0,
+      "edges": {
+       "left": {
+        "note": "the locus reaches the end of the assembly sequence here; there is no flank to test"
+       },
+       "right": {
+        "position": 863,
+        "through": 0,
+        "stop_inside": 46,
+        "stop_outside": 0
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "library": "hainan",
+   "label": "Hainan animal",
+   "runs": [
+    "SRR17036819"
+   ],
+   "kind": "short",
+   "platform": "Illumina HiSeq 2500 (paired)",
+   "animal": "another animal (genome-survey library, Hainan University), not the one assembled",
+   "reads": 33333334,
+   "bases": 5000000100,
+   "bases_screened": 5000000100,
+   "chimera": {
+    "rates": {
+     "slugmt": {
+      "pairs_with_mate": 5764,
+      "pairs_also_with_slug": 23,
+      "rate": 0.00399
+     },
+     "cp": {
+      "pairs_with_mate": 13661,
+      "pairs_also_with_slug": 112,
+      "rate": 0.0082
+     },
+     "algrDNA": {
+      "pairs_with_mate": 373,
+      "pairs_also_with_slug": 8,
+      "rate": 0.02145
+     },
+     "slugrDNA": {
+      "pairs_with_mate": 20,
+      "pairs_also_with_slug": 0,
+      "rate": 0.0
+     },
+     "algmt": {
+      "pairs_with_mate": 10,
+      "pairs_also_with_slug": 0,
+      "rate": 0.0
+     }
+    },
+    "recurrent": [
+     {
+      "kind": "cp",
+      "slug": "JBQKML010000169.1",
+      "start": 77000,
+      "pairs": 15,
+      "distinct_pairs": 9,
+      "other_targets": [
+       "cp|MH591101.1",
+       "cp|MH591103.1",
+       "cp|NC_039520.1"
+      ],
+      "other_positions": [
+       51095,
+       51185,
+       51208,
+       51209,
+       51210,
+       51212,
+       51219,
+       51225,
+       51230,
+       51230,
+       51233,
+       51237,
+       121373,
+       121378,
+       121398
+      ]
+     },
+     {
+      "kind": "algrDNA",
+      "slug": "CM127907.1",
+      "start": 25893000,
+      "pairs": 7,
+      "distinct_pairs": 7,
+      "other_targets": [
+       "algrDNA|MZ596063.1",
+       "algrDNA|MZ596065.1",
+       "algrDNA|MZ596110.1",
+       "algrDNA|MZ596133.1"
+      ],
+      "other_positions": [
+       2174,
+       2197,
+       2204,
+       4505,
+       4518,
+       4535,
+       4568
+      ]
+     }
+    ],
+    "split_mates": {
+     "cp": 30,
+     "algrDNA": 1,
+     "slugmt": 3,
+     "slugrDNA": 1
+    },
+    "split_examples": [
+     {
+      "read": "SRR17036819.211532.2",
+      "other": "cp",
+      "slug": "CM127898.1",
+      "slug_pos": 28044294,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 72571,
+      "slug_len": 73,
+      "other_len": 85
+     },
+     {
+      "read": "SRR17036819.518256.2",
+      "other": "cp",
+      "slug": "CM127900.1",
+      "slug_pos": 36792414,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 32941,
+      "slug_len": 62,
+      "other_len": 90
+     },
+     {
+      "read": "SRR17036819.2796038.2",
+      "other": "algrDNA",
+      "slug": "CM127898.1",
+      "slug_pos": 9818528,
+      "other_t": "algrDNA|AJ579341.1",
+      "other_pos": 566,
+      "slug_len": 101,
+      "other_len": 50
+     },
+     {
+      "read": "SRR17036819.4444471.1",
+      "other": "cp",
+      "slug": "CM127895.1",
+      "slug_pos": 25822437,
+      "other_t": "cp|NC_037364.1",
+      "other_pos": 13337,
+      "slug_len": 92,
+      "other_len": 42
+     },
+     {
+      "read": "SRR17036819.4546927.2",
+      "other": "cp",
+      "slug": "CM127896.1",
+      "slug_pos": 61966314,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 30487,
+      "slug_len": 93,
+      "other_len": 66
+     },
+     {
+      "read": "SRR17036819.5927097.1",
+      "other": "cp",
+      "slug": "CM127894.1",
+      "slug_pos": 84870204,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 31813,
+      "slug_len": 107,
+      "other_len": 47
+     },
+     {
+      "read": "SRR17036819.6082729.2",
+      "other": "cp",
+      "slug": "CM127896.1",
+      "slug_pos": 36299768,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 55131,
+      "slug_len": 111,
+      "other_len": 40
+     },
+     {
+      "read": "SRR17036819.6083675.2",
+      "other": "cp",
+      "slug": "CM127896.1",
+      "slug_pos": 36299768,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 55131,
+      "slug_len": 111,
+      "other_len": 40
+     },
+     {
+      "read": "SRR17036819.6340472.1",
+      "other": "cp",
+      "slug": "CM127896.1",
+      "slug_pos": 13351497,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 58185,
+      "slug_len": 112,
+      "other_len": 43
+     },
+     {
+      "read": "SRR17036819.6347139.2",
+      "other": "cp",
+      "slug": "CM127906.1",
+      "slug_pos": 1941259,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 21394,
+      "slug_len": 95,
+      "other_len": 65
+     },
+     {
+      "read": "SRR17036819.6348393.2",
+      "other": "cp",
+      "slug": "CM127906.1",
+      "slug_pos": 1941259,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 21394,
+      "slug_len": 95,
+      "other_len": 65
+     },
+     {
+      "read": "SRR17036819.6348426.2",
+      "other": "cp",
+      "slug": "CM127906.1",
+      "slug_pos": 1941259,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 21394,
+      "slug_len": 95,
+      "other_len": 65
+     },
+     {
+      "read": "SRR17036819.6954084.2",
+      "other": "cp",
+      "slug": "CM127897.1",
+      "slug_pos": 28883682,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 68449,
+      "slug_len": 107,
+      "other_len": 45
+     },
+     {
+      "read": "SRR17036819.7197976.2",
+      "other": "cp",
+      "slug": "CM127896.1",
+      "slug_pos": 14017436,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 66367,
+      "slug_len": 55,
+      "other_len": 98
+     },
+     {
+      "read": "SRR17036819.7286188.2",
+      "other": "cp",
+      "slug": "CM127903.1",
+      "slug_pos": 25846197,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 72768,
+      "slug_len": 78,
+      "other_len": 69
+     },
+     {
+      "read": "SRR17036819.7453257.2",
+      "other": "cp",
+      "slug": "CM127903.1",
+      "slug_pos": 25846197,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 72766,
+      "slug_len": 78,
+      "other_len": 74
+     },
+     {
+      "read": "SRR17036819.7714849.1",
+      "other": "cp",
+      "slug": "CM127898.1",
+      "slug_pos": 28114918,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 48607,
+      "slug_len": 48,
+      "other_len": 109
+     },
+     {
+      "read": "SRR17036819.7714849.2",
+      "other": "cp",
+      "slug": "CM127898.1",
+      "slug_pos": 28114908,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 48597,
+      "slug_len": 68,
+      "other_len": 89
+     },
+     {
+      "read": "SRR17036819.7822756.2",
+      "other": "cp",
+      "slug": "CM127901.1",
+      "slug_pos": 11338173,
+      "other_t": "cp|NC_013359.1",
+      "other_pos": 132425,
+      "slug_len": 95,
+      "other_len": 55
+     },
+     {
+      "read": "SRR17036819.8012052.2",
+      "other": "cp",
+      "slug": "CM127894.1",
+      "slug_pos": 19167905,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 47858,
+      "slug_len": 99,
+      "other_len": 56
+     },
+     {
+      "read": "SRR17036819.8017330.2",
+      "other": "cp",
+      "slug": "CM127894.1",
+      "slug_pos": 19167905,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 47858,
+      "slug_len": 99,
+      "other_len": 56
+     },
+     {
+      "read": "SRR17036819.10053396.1",
+      "other": "cp",
+      "slug": "CM127899.1",
+      "slug_pos": 33430087,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 531,
+      "slug_len": 104,
+      "other_len": 45
+     },
+     {
+      "read": "SRR17036819.10182287.2",
+      "other": "cp",
+      "slug": "CM127898.1",
+      "slug_pos": 35957865,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 14620,
+      "slug_len": 74,
+      "other_len": 82
+     },
+     {
+      "read": "SRR17036819.10194249.1",
+      "other": "cp",
+      "slug": "CM127895.1",
+      "slug_pos": 56626827,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 25884,
+      "slug_len": 51,
+      "other_len": 98
+     },
+     {
+      "read": "SRR17036819.10913265.2",
+      "other": "cp",
+      "slug": "CM127898.1",
+      "slug_pos": 12491095,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 35412,
+      "slug_len": 87,
+      "other_len": 67
+     },
+     {
+      "read": "SRR17036819.11365375.1",
+      "other": "cp",
+      "slug": "CM127894.1",
+      "slug_pos": 73406759,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 43231,
+      "slug_len": 65,
+      "other_len": 88
+     },
+     {
+      "read": "SRR17036819.11434633.2",
+      "other": "slugmt",
+      "slug": "CM127894.1",
+      "slug_pos": 60928174,
+      "other_t": "slugmt|QB170827.1",
+      "other_pos": 3980,
+      "slug_len": 92,
+      "other_len": 61
+     },
+     {
+      "read": "SRR17036819.11735426.2",
+      "other": "cp",
+      "slug": "CM127900.1",
+      "slug_pos": 9706307,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 4744,
+      "slug_len": 86,
+      "other_len": 72
+     },
+     {
+      "read": "SRR17036819.13561034.1",
+      "other": "cp",
+      "slug": "CM127900.1",
+      "slug_pos": 34206696,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 10111,
+      "slug_len": 98,
+      "other_len": 54
+     },
+     {
+      "read": "SRR17036819.13710637.2",
+      "other": "slugrDNA",
+      "slug": "CM127898.1",
+      "slug_pos": 39006576,
+      "other_t": "slugrDNA|MK919695.1",
+      "other_pos": 82,
+      "slug_len": 103,
+      "other_len": 46
+     },
+     {
+      "read": "SRR17036819.13828885.1",
+      "other": "slugmt",
+      "slug": "CM127898.1",
+      "slug_pos": 4930050,
+      "other_t": "slugmt|QB170827.1",
+      "other_pos": 6474,
+      "slug_len": 110,
+      "other_len": 47
+     },
+     {
+      "read": "SRR17036819.14091582.2",
+      "other": "cp",
+      "slug": "CM127908.1",
+      "slug_pos": 19990024,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 25685,
+      "slug_len": 85,
+      "other_len": 68
+     },
+     {
+      "read": "SRR17036819.14161785.2",
+      "other": "slugmt",
+      "slug": "CM127905.1",
+      "slug_pos": 15542435,
+      "other_t": "slugmt|QB170827.1",
+      "other_pos": 5896,
+      "slug_len": 114,
+      "other_len": 43
+     },
+     {
+      "read": "SRR17036819.14461587.2",
+      "other": "cp",
+      "slug": "CM127894.1",
+      "slug_pos": 78894634,
+      "other_t": "cp|NC_039521.1",
+      "other_pos": 28577,
+      "slug_len": 63,
+      "other_len": 90
+     },
+     {
+      "read": "SRR17036819.16565769.2",
+      "other": "cp",
+      "slug": "CM127895.1",
+      "slug_pos": 65994915,
+      "other_t": "cp|MH591104.1",
+      "other_pos": 3768,
+      "slug_len": 86,
+      "other_len": 65
+     }
+    ]
+   },
+   "min_identity": null,
+   "locus_tests": {
+    "kind": "short",
+    "margin": 25,
+    "loci": [
+     {
+      "name": "bait|JBQKML010000381.1:0-3863|plastid|0-863",
+      "contig": "JBQKML010000381.1",
+      "start": 0,
+      "end": 863,
+      "kind": "plastid",
+      "reads_aligned": 1154,
+      "depth_locus": 28.8,
+      "depth_left_flank": null,
+      "depth_right_flank": 0.0,
+      "edges": {
+       "left": {
+        "note": "the locus reaches the end of the assembly sequence here; there is no flank to test"
+       },
+       "right": {
+        "position": 863,
+        "through": 0,
+        "stop_inside": 13,
+        "stop_outside": 0
+       }
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "protein_screen": {
+  "n_queries": 471,
+  "summary": {
+   "loci": 149,
+   "animal gene": 113,
+   "no database match": 2,
+   "microbe-like": 32,
+   "alga-like": 2
+  },
+  "genome_gc": 0.357,
+  "non_animal_contigs": [
+   {
+    "contig": "JBQKML010000180.1",
+    "length": 1085000,
+    "loci": 13,
+    "classes": [
+     "alga-like",
+     "microbe-like"
+    ],
+    "genes": [
+     "ATPase",
+     "LFNR1",
+     "PPi",
+     "accD",
+     "PPDK",
+     "ftsH",
+     "GapC2",
+     "trpAB",
+     "tkt",
+     "cysA",
+     "hsp70",
+     "cpn60"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.32,
+    "identity_max": 0.6,
+    "with_stops": 1,
+    "multi_exon": 1,
+    "whole": null,
+    "listed_in_own_annotation": 0,
+    "census": {
+     "gc": 0.4624,
+     "examined_length": 1085000,
+     "n_bases": 14304,
+     "stretches": {
+      "microbe": 465,
+      "alga": 68,
+      "animal": 34
+     },
+     "coding_bp": 565004,
+     "nearest_bacteria": [
+      [
+       "Bacillus",
+       42
+      ],
+      [
+       "Escherichia",
+       39
+      ],
+      [
+       "Pseudomonas",
+       32
+      ],
+      [
+       "Haemophilus",
+       22
+      ],
+      [
+       "Treponema",
+       11
+      ]
+     ],
+     "bacterial_identity_median": 40.1
+    }
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "length": 747000,
+    "loci": 17,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "cysA",
+     "hsp70",
+     "ATPase",
+     "fnt",
+     "rps12",
+     "tufA",
+     "rpl2",
+     "rps19",
+     "rps3",
+     "rpl14",
+     "infA",
+     "rps11",
+     "atpB",
+     "atpA",
+     "ThrRS",
+     "ftsH"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.35,
+    "identity_max": 0.72,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 0,
+    "census": {
+     "gc": 0.4573,
+     "examined_length": 747000,
+     "n_bases": 3699,
+     "stretches": {
+      "microbe": 373,
+      "alga": 52,
+      "slug_only": 5,
+      "animal": 29
+     },
+     "coding_bp": 423394,
+     "nearest_bacteria": [
+      [
+       "Bacillus",
+       26
+      ],
+      [
+       "Escherichia",
+       20
+      ],
+      [
+       "Pseudomonas",
+       16
+      ],
+      [
+       "Haemophilus",
+       15
+      ],
+      [
+       "Geobacter",
+       13
+      ]
+     ],
+     "bacterial_identity_median": 42.7
+    }
+   },
+   {
+    "contig": "JBQKML010000192.1",
+    "length": 50102,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "hsp70"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.46,
+    "identity_max": 0.46,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 0,
+    "census": {
+     "gc": 0.4736,
+     "examined_length": 50102,
+     "n_bases": 127,
+     "stretches": {
+      "alga": 4,
+      "animal": 3,
+      "microbe": 15
+     },
+     "coding_bp": 19416,
+     "nearest_bacteria": [
+      [
+       "Geobacter",
+       3
+      ],
+      [
+       "Escherichia",
+       1
+      ],
+      [
+       "Priestia",
+       1
+      ],
+      [
+       "Halalkalibacterium",
+       1
+      ],
+      [
+       "Bacillus",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 41.7
+    }
+   },
+   {
+    "contig": "JBQKML010000331.1",
+    "length": 15706,
+    "loci": 1,
+    "classes": [
+     "microbe-like"
+    ],
+    "genes": [
+     "ftsH"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.5,
+    "identity_max": 0.5,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 0,
+    "census": {
+     "gc": 0.4755,
+     "examined_length": 15706,
+     "n_bases": 0,
+     "stretches": {
+      "microbe": 7,
+      "alga": 1
+     },
+     "coding_bp": 10688,
+     "nearest_bacteria": [
+      [
+       "Ruegeria",
+       1
+      ],
+      [
+       "Pseudomonas",
+       1
+      ],
+      [
+       "Bacillus",
+       1
+      ],
+      [
+       "Geobacillus",
+       1
+      ],
+      [
+       "Myxococcus",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 54.8
+    }
+   },
+   {
+    "contig": "JBQKML010000381.1",
+    "length": 9365,
+    "loci": 2,
+    "classes": [
+     "alga-like",
+     "microbe-like"
+    ],
+    "genes": [
+     "chlL",
+     "chlN"
+    ],
+    "animal_loci_on_contig": 0,
+    "identity_min": 0.77,
+    "identity_max": 0.77,
+    "with_stops": 0,
+    "multi_exon": 0,
+    "whole": null,
+    "listed_in_own_annotation": 0,
+    "census": {
+     "gc": 0.366,
+     "examined_length": 9365,
+     "n_bases": 3734,
+     "stretches": {
+      "alga": 1,
+      "microbe": 1,
+      "animal": 1
+     },
+     "coding_bp": 1437,
+     "nearest_bacteria": [
+      [
+       "Acaryochloris",
+       1
+      ]
+     ],
+     "bacterial_identity_median": 83.3
+    }
+   }
+  ],
+  "no_match": {
+   "n": 2,
+   "low_complexity": 0,
+   "short": 2,
+   "other": []
+  },
+  "non_animal": [
+   {
+    "contig": "CM127901.1",
+    "contig_length": 34355000,
+    "start": 31379540,
+    "end": 31379797,
+    "class": "no database match",
+    "query": "ARATH|O49668",
+    "query_description": "PAM68 Protein PAM68, chloroplastic",
+    "identity": 0.3158,
+    "query_cover": 0.4252336448598131,
+    "aligned_aa": 91,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.33,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 62776,
+    "end": 63477,
+    "class": "microbe-like",
+    "query": "UDOFL|cysA",
+    "query_description": "",
+    "identity": 0.4359,
+    "query_cover": 1.0,
+    "aligned_aa": 231,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 269.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.0,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 146643,
+    "end": 148172,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB83",
+    "query_description": "hsp70 Heat shock 70 kDa protein",
+    "identity": 0.4229,
+    "query_cover": 0.795144157814871,
+    "aligned_aa": 524,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 417.0,
+    "microbe_bits": 438.0,
+    "best_alga_hit": "ALG|CYAME|M1VIC6",
+    "peptide_entropy": 4.03,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 163856,
+    "end": 165670,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB90",
+    "query_description": "ATPase",
+    "identity": 0.3825,
+    "query_cover": 0.8418604651162791,
+    "aligned_aa": 724,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 543.0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 543.0,
+    "own_annotation_bits": 0,
+    "alga_bits": 515.0,
+    "microbe_bits": 610.0,
+    "best_alga_hit": "ALG|CHOCR|M5DDC7",
+    "peptide_entropy": 4.05,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 168372,
+    "end": 170276,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB90",
+    "query_description": "ATPase",
+    "identity": 0.4185,
+    "query_cover": 0.791860465116279,
+    "aligned_aa": 681,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 588.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.05,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 177363,
+    "end": 178037,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB80",
+    "query_description": "fnt Farnesyltransferase",
+    "identity": 0.4097,
+    "query_cover": 0.6504297994269341,
+    "aligned_aa": 227,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 175.0,
+    "microbe_bits": 197.0,
+    "best_alga_hit": "ALG|VOLCA|D8U458",
+    "peptide_entropy": 3.97,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 406424,
+    "end": 406789,
+    "class": "microbe-like",
+    "query": "UDOFL|rps12",
+    "query_description": "",
+    "identity": 0.7213,
+    "query_cover": 1.0,
+    "aligned_aa": 122,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 207.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.9,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 409358,
+    "end": 410557,
+    "class": "microbe-like",
+    "query": "UDOFL|tufA",
+    "query_description": "",
+    "identity": 0.6504,
+    "query_cover": 1.0,
+    "aligned_aa": 409,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 612.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.06,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 411878,
+    "end": 412600,
+    "class": "microbe-like",
+    "query": "UDOFL|rpl2",
+    "query_description": "",
+    "identity": 0.4959,
+    "query_cover": 1.0,
+    "aligned_aa": 244,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 313.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.01,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 412640,
+    "end": 412903,
+    "class": "microbe-like",
+    "query": "UDOFL|rps19",
+    "query_description": "",
+    "identity": 0.5402,
+    "query_cover": 0.9354838709677419,
+    "aligned_aa": 87,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 132.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.97,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 413273,
+    "end": 413902,
+    "class": "microbe-like",
+    "query": "UDOFL|rps3",
+    "query_description": "",
+    "identity": 0.35,
+    "query_cover": 1.0,
+    "aligned_aa": 218,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 237.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.05,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 414795,
+    "end": 415163,
+    "class": "microbe-like",
+    "query": "UDOFL|rpl14",
+    "query_description": "",
+    "identity": 0.5887,
+    "query_cover": 1.0,
+    "aligned_aa": 124,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 184.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.88,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 420713,
+    "end": 420916,
+    "class": "microbe-like",
+    "query": "UDOFL|infA",
+    "query_description": "",
+    "identity": 0.5294,
+    "query_cover": 0.9066666666666666,
+    "aligned_aa": 68,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 112.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.96,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 421413,
+    "end": 421790,
+    "class": "microbe-like",
+    "query": "UDOFL|rps11",
+    "query_description": "",
+    "identity": 0.4328,
+    "query_cover": 0.9370629370629371,
+    "aligned_aa": 134,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 165.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.02,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 526015,
+    "end": 527418,
+    "class": "microbe-like",
+    "query": "UDOFL|atpB",
+    "query_description": "",
+    "identity": 0.6646,
+    "query_cover": 1.0,
+    "aligned_aa": 470,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 637.0,
+    "met_bits": 637.0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 674.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.09,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 528331,
+    "end": 529830,
+    "class": "microbe-like",
+    "query": "UDOFL|atpA",
+    "query_description": "",
+    "identity": 0.59,
+    "query_cover": 0.9880715705765407,
+    "aligned_aa": 497,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 657.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.04,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 636210,
+    "end": 637865,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB86",
+    "query_description": "ThrRS Probable threonine--tRNA ligase, cytoplasmic",
+    "identity": 0.4151,
+    "query_cover": 0.7313624678663239,
+    "aligned_aa": 569,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 701.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.18,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000169.1",
+    "contig_length": 747000,
+    "start": 742081,
+    "end": 743528,
+    "class": "microbe-like",
+    "query": "VAULI|B7T1V0",
+    "query_description": "ftsH ATP-dependent zinc metalloprotease FtsH",
+    "identity": 0.4966,
+    "query_cover": 0.7562111801242236,
+    "aligned_aa": 487,
+    "frameshifts": 3,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 496.0,
+    "microbe_bits": 542.0,
+    "best_alga_hit": "CYA|SYNY3|P72991",
+    "peptide_entropy": 4.09,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 2,
+    "end": 45348,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB90",
+    "query_description": "ATPase",
+    "identity": 0.455,
+    "query_cover": 0.2569767441860465,
+    "aligned_aa": 221,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 179.0,
+    "microbe_bits": 187.0,
+    "best_alga_hit": "ALG|ARATH|Q9LF37",
+    "peptide_entropy": 4.04,
+    "exons": 2
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 119667,
+    "end": 120638,
+    "class": "alga-like",
+    "query": "ARATH|Q9FKW6",
+    "query_description": "LFNR1 Ferredoxin--NADP reductase, leaf isozyme 1, chloroplastic",
+    "identity": 0.4007,
+    "query_cover": 0.8416666666666667,
+    "aligned_aa": 303,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 88.2,
+    "met_bits": 88.2,
+    "other_sacoglossan_bits": 84.7,
+    "own_annotation_bits": 0,
+    "alga_bits": 229.0,
+    "microbe_bits": 229.0,
+    "best_alga_hit": "ALG|ARATH|Q9FKW6",
+    "peptide_entropy": 4.17,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 196566,
+    "end": 197741,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB78",
+    "query_description": "PPi_pfk Pyrophosphate-dependant phosphofructokinase",
+    "identity": 0.4695,
+    "query_cover": 0.7642436149312377,
+    "aligned_aa": 389,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 371.0,
+    "microbe_bits": 393.0,
+    "best_alga_hit": "ALG|ARATH|Q9M076",
+    "peptide_entropy": 4.11,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 215227,
+    "end": 215991,
+    "class": "microbe-like",
+    "query": "UDOFL|accD",
+    "query_description": "",
+    "identity": 0.4844,
+    "query_cover": 0.7463556851311953,
+    "aligned_aa": 256,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 301.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.1,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 232278,
+    "end": 234842,
+    "class": "microbe-like",
+    "query": "ARATH|O23404",
+    "query_description": "PPDK Pyruvate, phosphate dikinase 1, chloroplastic",
+    "identity": 0.323,
+    "query_cover": 0.9044652128764278,
+    "aligned_aa": 871,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 311.0,
+    "met_bits": 83.6,
+    "other_sacoglossan_bits": 311.0,
+    "own_annotation_bits": 0,
+    "alga_bits": 402.0,
+    "microbe_bits": 672.0,
+    "best_alga_hit": "ALG|ARATH|O23404",
+    "peptide_entropy": 4.09,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 378585,
+    "end": 380360,
+    "class": "microbe-like",
+    "query": "VAULI|B7T1V0",
+    "query_description": "ftsH ATP-dependent zinc metalloprotease FtsH",
+    "identity": 0.4078,
+    "query_cover": 0.9549689440993789,
+    "aligned_aa": 615,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 491.0,
+    "microbe_bits": 566.0,
+    "best_alga_hit": "CYA|SYNY3|P72991",
+    "peptide_entropy": 4.08,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 641096,
+    "end": 641992,
+    "class": "microbe-like",
+    "query": "VAULI|B9ZZR6",
+    "query_description": "GapC2 Glyceraldehyde-3-phosphate dehydrogenase (Fragment)",
+    "identity": 0.5954,
+    "query_cover": 1.0,
+    "aligned_aa": 304,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 409.0,
+    "met_bits": 407.0,
+    "other_sacoglossan_bits": 409.0,
+    "own_annotation_bits": 0,
+    "alga_bits": 405.0,
+    "microbe_bits": 413.0,
+    "best_alga_hit": "ALG|ARATH|Q9SAJ6",
+    "peptide_entropy": 4.06,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 703642,
+    "end": 704793,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB94",
+    "query_description": "trpAB Tryptophan synthase",
+    "identity": 0.4923,
+    "query_cover": 0.5898617511520737,
+    "aligned_aa": 384,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 410.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.11,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 740335,
+    "end": 742290,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB79",
+    "query_description": "tkt transketolase",
+    "identity": 0.4051,
+    "query_cover": 0.9102209944751382,
+    "aligned_aa": 659,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 557.0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 557.0,
+    "own_annotation_bits": 0,
+    "alga_bits": 570.0,
+    "microbe_bits": 583.0,
+    "best_alga_hit": "ALG|OSTQU|A0A8S1IP08",
+    "peptide_entropy": 4.13,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 870054,
+    "end": 870369,
+    "class": "no database match",
+    "query": "CHLRE|A0A2K3DBG0",
+    "query_description": "CHLRE_10g454734v5 Chlorophyll a-b binding protein, chloroplastic",
+    "identity": 0.2804,
+    "query_cover": 0.11162255466052934,
+    "aligned_aa": 97,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.64,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 876401,
+    "end": 877102,
+    "class": "microbe-like",
+    "query": "UDOFL|cysA",
+    "query_description": "",
+    "identity": 0.3932,
+    "query_cover": 1.0,
+    "aligned_aa": 231,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 278.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.09,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 930068,
+    "end": 931981,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB83",
+    "query_description": "hsp70 Heat shock 70 kDa protein",
+    "identity": 0.4548,
+    "query_cover": 1.0,
+    "aligned_aa": 659,
+    "frameshifts": 0,
+    "stops": 1,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 809.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.04,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 1014422,
+    "end": 1015996,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB82",
+    "query_description": "cpn60 Chaperonin",
+    "identity": 0.4725,
+    "query_cover": 0.8959044368600683,
+    "aligned_aa": 525,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 718.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 3.91,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000180.1",
+    "contig_length": 1085000,
+    "start": 1051084,
+    "end": 1051785,
+    "class": "microbe-like",
+    "query": "UDOFL|cysA",
+    "query_description": "",
+    "identity": 0.406,
+    "query_cover": 1.0,
+    "aligned_aa": 231,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 301.0,
+    "microbe_bits": 315.0,
+    "best_alga_hit": "CYA|SYNY3|Q79EE4",
+    "peptide_entropy": 4.07,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000192.1",
+    "contig_length": 50102,
+    "start": 30209,
+    "end": 32120,
+    "class": "microbe-like",
+    "query": "VAULI|H6WB83",
+    "query_description": "hsp70 Heat shock 70 kDa protein",
+    "identity": 0.4563,
+    "query_cover": 1.0,
+    "aligned_aa": 659,
+    "frameshifts": 2,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 0,
+    "microbe_bits": 802.0,
+    "best_alga_hit": "",
+    "peptide_entropy": 4.03,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000331.1",
+    "contig_length": 15706,
+    "start": 9650,
+    "end": 11097,
+    "class": "microbe-like",
+    "query": "VAULI|B7T1V0",
+    "query_description": "ftsH ATP-dependent zinc metalloprotease FtsH",
+    "identity": 0.4969,
+    "query_cover": 0.7562111801242236,
+    "aligned_aa": 487,
+    "frameshifts": 1,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 494.0,
+    "microbe_bits": 558.0,
+    "best_alga_hit": "CYA|SYNY3|P72991",
+    "peptide_entropy": 4.08,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000381.1",
+    "contig_length": 9365,
+    "start": 2,
+    "end": 169,
+    "class": "alga-like",
+    "query": "UDOFL|chlL",
+    "query_description": "",
+    "identity": 0.7679,
+    "query_cover": 0.19718309859154928,
+    "aligned_aa": 56,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 82.4,
+    "microbe_bits": 79.3,
+    "best_alga_hit": "ALG|BRYSP|BEI31748.1",
+    "peptide_entropy": 3.69,
+    "exons": 1
+   },
+   {
+    "contig": "JBQKML010000381.1",
+    "contig_length": 9365,
+    "start": 231,
+    "end": 830,
+    "class": "microbe-like",
+    "query": "UDOFL|chlN",
+    "query_description": "",
+    "identity": 0.7739,
+    "query_cover": 0.44222222222222224,
+    "aligned_aa": 199,
+    "frameshifts": 0,
+    "stops": 0,
+    "animal_bits": 0,
+    "met_bits": 0,
+    "other_sacoglossan_bits": 0,
+    "own_annotation_bits": 0,
+    "alga_bits": 281.0,
+    "microbe_bits": 286.0,
+    "best_alga_hit": "ALG|BRYSP|BEI31749.1",
+    "peptide_entropy": 4.15,
+    "exons": 1
+   }
+  ]
+ }
+}

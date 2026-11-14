@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Whose chloroplasts? Elysia chlorotica</title>
+<meta name="description" content="Which alga&#x27;s chloroplasts the sequenced Elysia chlorotica carried, worked out from the plastid DNA among its genome reads.">
+<link rel="preload" href="../assets/fonts/BricolageGrotesque-300-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+<a class="brand" href="../index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia</em> clocks</span></a>
+<nav aria-label="Site"><a href="../index.html">Species</a><a href="../compare.html">Compare</a><a href="../methods.html">Methods and data</a></nav>
+</div></header>
+<div class="subhead"><div class="wrap"><a class="sp" href="index.html"><i>Elysia chlorotica</i></a><nav aria-label="Pages for this species"><a href="index.html">Clock genes</a><a href="kleptoplasts.html" aria-current="page">Whose chloroplasts</a><a href="gene-transfer.html">Gene transfer</a></nav></div></div>
+<main>
+
+<section class="page-head"><div class="wrap">
+<h1>Whose chloroplasts was this slug carrying?</h1>
+<p class="lede"><i>E. chlorotica</i> is the textbook case: it feeds on the yellow-green alga <i>Vaucheria litorea</i> and keeps its chloroplasts for months. Three sets of reads were examined, from two adults and from eggs.</p>
+<div class="answer"><p><strong><i>Vaucheria litorea</i>, in both adults.</strong> 99.6% of the plastid DNA in the long reads and 97.8% in the short reads matches the <i>V. litorea</i> plastid genome. The barcode gene rbcL, cut from plastid contigs assembled out of the short reads, is 100.0% identical to <i>V. litorea</i> records over 2,178 bases.</p><p><strong>A heavy load.</strong> Plastid DNA is 3.52% of the sequenced bases in one adult and 14.1% in the other: about 170 and 684 copies of the plastid genome for every copy of the slug genome.</p><p><strong>None in the eggs.</strong> In 11.1 Gb of egg DNA, 8 read pairs match a plastid sequence of any kind, and two single reads match <i>Vaucheria</i>. Eggs have not fed, so this is the germ line on its own. It is the control for the <a href="gene-transfer.html">gene transfer question</a>.</p></div>
+</div></section>
+
+<section class="block article"><div class="wrap">
+<h2>The reads</h2>
+<div class="tablewrap"><table class="data">
+<thead><tr><th>DNA from</th><th>Sequencing</th><th>Runs</th><th class="num">Examined</th><th>Note</th></tr></thead>
+<tbody><tr><td>An adult (isolate EC2010, Martha&#x27;s Vineyard) used for the long reads of the assembly</td><td>PacBio RS (older, error-prone long reads)</td><td class="mono">SRR7647856</td><td class="num">9.4 Gb</td><td>The whole run.</td></tr><tr><td>An adult used for the short reads of the assembly</td><td>Illumina HiSeq 2000 (paired, 500 bp inserts)</td><td class="mono">SRR7647851</td><td class="num">6.0 Gb</td><td>The first 6 Gb of one of six adult libraries.</td></tr><tr><td>Eggs (germ line; Bhattacharya et al. 2013), which have not yet fed and hold no chloroplasts</td><td>Illumina Genome Analyzer IIx (paired)</td><td class="mono">SRR768897</td><td class="num">11.1 Gb</td><td>One of the two runs of the egg DNA library.</td></tr></tbody></table></div>
+<p class="small muted" style="margin-top:10px;max-width:90ch">Every read was compared with a panel of 1,271 algal plastid sequences (241 whole plastid genomes of green algae, plastid records of Dasycladales, Xanthophyceae and Cladophorales, and distant plastids to catch anything else), 117 algal mitochondrial genomes, 7,352 nuclear ribosomal DNA sequences of algae and the mitochondrial genomes of nine <i>Elysia</i> species. Reads with a match were then aligned base by base to the panel and to this species’ own assembly.</p>
+
+<h2>How much of the DNA is not slug</h2>
+<div class="chart"><h3>Share of sequenced bases: Adult, long reads</h3><p class="sub">9.4 Gb of older long reads examined. Counted here: bases that match the reference at 82% or better. Everything else is slug nuclear DNA or matches nothing in the panel.</p><svg viewBox="0 0 760 82" role="img" aria-label="Algal plastid DNA: 3.52%; Slug mitochondrion: 0.16%">
+<line class="gridline" x1="250" x2="250" y1="8" y2="76"/>
+<text class="lbl" x="240" y="28" text-anchor="end">Algal plastid DNA</text>
+<rect class="bar" x="250" y="15" width="355.9" height="18" rx="4" data-tip="169,152 reads, 332.52 Mb" tabindex="0"><title>169,152 reads, 332.52 Mb</title></rect>
+<text class="val" x="613.9" y="28">3.52%</text>
+<text class="lbl" x="240" y="62" text-anchor="end">Slug mitochondrion</text>
+<rect class="bar" x="250" y="49" width="16.4" height="18" rx="4" data-tip="7,644 reads, 15.36 Mb" tabindex="0"><title>7,644 reads, 15.36 Mb</title></rect>
+<text class="val" x="274.4" y="62">0.16%</text></svg></div><div class="chart"><h3>Share of sequenced bases: Second adult, short reads</h3><p class="sub">6.0 Gb of short read pairs examined. Counted here: bases that match the reference at 97% or better. Everything else is slug nuclear DNA or matches nothing in the panel.</p><svg viewBox="0 0 760 82" role="img" aria-label="Algal plastid DNA: 14.15%; Slug mitochondrion: 0.36%">
+<line class="gridline" x1="250" x2="250" y1="8" y2="76"/>
+<text class="lbl" x="240" y="28" text-anchor="end">Algal plastid DNA</text>
+<rect class="bar" x="250" y="15" width="355.9" height="18" rx="4" data-tip="438,580 pairs, 84.87 Mb" tabindex="0"><title>438,580 pairs, 84.87 Mb</title></rect>
+<text class="val" x="613.9" y="28">14.1%</text>
+<text class="lbl" x="240" y="62" text-anchor="end">Slug mitochondrion</text>
+<rect class="bar" x="250" y="49" width="9.0" height="18" rx="4" data-tip="11,373 pairs, 2.14 Mb" tabindex="0"><title>11,373 pairs, 2.14 Mb</title></rect>
+<text class="val" x="267.0" y="62">0.36%</text></svg></div><div class="chart"><h3>Share of sequenced bases: Eggs, short reads</h3><p class="sub">11.1 Gb of short read pairs examined. Counted here: bases that match the reference at 97% or better. Everything else is slug nuclear DNA or matches nothing in the panel.</p><svg viewBox="0 0 760 82" role="img" aria-label="Algal plastid DNA: 0.00%; Slug mitochondrion: 0.10%">
+<line class="gridline" x1="250" x2="250" y1="8" y2="76"/>
+<text class="lbl" x="240" y="28" text-anchor="end">Algal plastid DNA</text>
+<rect class="bar" x="250" y="15" width="2.0" height="18" rx="4" data-tip="8 pairs, 0.00 Mb" tabindex="0"><title>8 pairs, 0.00 Mb</title></rect>
+<text class="val" x="260.0" y="28">0%</text>
+<text class="lbl" x="240" y="62" text-anchor="end">Slug mitochondrion</text>
+<rect class="bar" x="250" y="49" width="355.9" height="18" rx="4" data-tip="40,733 pairs, 11.11 Mb" tabindex="0"><title>40,733 pairs, 11.11 Mb</title></rect>
+<text class="val" x="613.9" y="62">0.10%</text></svg></div>
+
+<h2>Which alga</h2>
+<p>Reads and read pairs were assigned to whichever plastid reference they match best. The long reads of this species are of an older, error-prone kind, about 92% accurate, so their identity to the reference reflects the reads and not the alga. The short reads match at 100%.</p><p>The short plastid pairs assemble into 7 contigs, 110 kb in all, against 115 kb for the published plastid genome.</p>
+<h3>Adult, long reads</h3><div class="tablewrap"><table class="data">
+<thead><tr><th>Plastid reference matched best</th><th class="num">Share of plastid DNA</th><th class="num">Reads</th><th class="num">Identity, median</th><th class="num">Middle 80%</th></tr></thead>
+<tbody><tr><td><i>Vaucheria litorea</i> <span class="mono muted">NC_011600.1</span></td><td class="num">99.6%</td><td class="num">245,428</td><td class="num">91.6%</td><td class="num">86.2 to 94.6%</td></tr><tr><td>plastid sequence in the assembly <span class="mono muted">RQTK01003255.1</span></td><td class="num">0.25%</td><td class="num">821</td><td class="num">91.2%</td><td class="num">85.8 to 94.6%</td></tr><tr><td><i>Uncultured xanthophyte</i> <span class="mono muted">PQ213021.1</span></td><td class="num">0.091%</td><td class="num">346</td><td class="num">91.2%</td><td class="num">85.8 to 94.3%</td></tr></tbody></table></div><h3>Second adult, short reads</h3><div class="tablewrap"><table class="data">
+<thead><tr><th>Plastid reference matched best</th><th class="num">Share of plastid DNA</th><th class="num">Mates</th><th class="num">Identity, median</th><th class="num">Middle 80%</th></tr></thead>
+<tbody><tr><td><i>Vaucheria litorea</i> <span class="mono muted">NC_011600.1</span></td><td class="num">97.8%</td><td class="num">842,815</td><td class="num">100.0%</td><td class="num">99.0 to 100.0%</td></tr><tr><td>plastid sequence in the assembly <span class="mono muted">RQTK01003255.1</span></td><td class="num">1.45%</td><td class="num">12,511</td><td class="num">100.0%</td><td class="num">100.0 to 100.0%</td></tr><tr><td><i>Uncultured xanthophyte</i> <span class="mono muted">PQ213021.1</span></td><td class="num">0.43%</td><td class="num">3,731</td><td class="num">100.0%</td><td class="num">99.0 to 100.0%</td></tr><tr><td><i>Sphaerosorus coelastroides</i> <span class="mono muted">PV826133.1</span></td><td class="num">0.12%</td><td class="num">1,053</td><td class="num">100.0%</td><td class="num">97.0 to 100.0%</td></tr><tr><td><i>Porphyra purpurea</i> <span class="mono muted">NC_000925.1</span></td><td class="num">0.033%</td><td class="num">291</td><td class="num">99.0%</td><td class="num">96.0 to 100.0%</td></tr><tr><td><i>Phaeodactylum tricornutum</i> <span class="mono muted">NC_008588.1</span></td><td class="num">0.033%</td><td class="num">283</td><td class="num">100.0%</td><td class="num">97.0 to 100.0%</td></tr></tbody></table></div>
+<p class="small muted" style="margin-top:10px;max-width:90ch">A read is assigned to the reference it matches best. Identity near 100% means the reference is the alga eaten, or one of its own species; identity well below that means only that the nearest sequenced relative is named.</p>
+
+<h2>Two barcode genes</h2><h3>Second adult, short reads</h3><p class="small muted" style="max-width:86ch">Cut out of the plastid contigs assembled from these reads (7 contigs, 110 kb in all).</p><div class="tablewrap"><table class="data">
+<thead><tr><th>Gene</th><th class="num">Length, bp</th><th>From</th><th>Longest good match in GenBank</th><th class="num">Identity</th><th>Most similar record of 400 bp or more</th></tr></thead>
+<tbody><tr><td>rbcL</td><td class="num">2,178</td><td>contig of 16,146 bp</td><td><i>Vaucheria litorea</i> <span class="mono muted">MW266050.1</span></td><td class="num">100.0% of 2,178 bp</td><td>100.0% over 2,178 bp: Vaucheria litorea (3); Uncultured xanthophyte (2)</td></tr><tr><td>tufA</td><td class="num">1,228</td><td>contig of 35,959 bp</td><td><i>Michococcus sphaerocephalus</i> <span class="mono muted">AF038001.1</span></td><td class="num">82.5% of 1,109 bp</td><td>83.6% over 707 bp: Vaucheria bursata (1)</td></tr></tbody></table></div>
+
+<h2>Did algal nuclei come along?</h2><p>The panel holds one nuclear ribosomal DNA record of <i>V. litorea</i> that includes a variable spacer. No long read matches it. Short reads cannot settle the question, because they match algal ribosomal DNA records only in the conserved parts that the slug’s own genes share.</p>
+
+<h2>For rhythm work</h2><p>Map kleptoplast transcripts to NC_011600.1, the plastid genome of <i>Vaucheria litorea</i> (115,341 bp, annotated). The short reads of the second adult match it at 100%.</p><p>The assembly of the slug itself should be used with the plastid pieces and bacterial sequences set aside (they are listed on the <a href="gene-transfer.html">gene transfer page</a>). Otherwise plastid transcripts will map to them and look like transcripts of slug genes.</p><p>Downloads: <a href="../downloads/elysia-chlorotica_adult_plastid_contigs.fa">plastid contigs (Second adult, short reads)</a>, <a href="../downloads/elysia-chlorotica_adult_barcodes.fa">barcode sequences (Second adult, short reads)</a>, and <a href="../downloads/elysia-chlorotica_kleptoplast.json">all the numbers on this page</a>.</p>
+
+<h2>What to keep in mind</h2><ul><li>The two adults are different animals: a wild-caught one (isolate EC2010, Martha’s Vineyard) for the long reads and one from a laboratory culture for the short reads. Their loads differ fourfold.</li><li>Of the short reads of the adult, the first 6.0 Gb of one library were screened and a tenth of the matching pairs analysed in detail.</li><li>One of the two runs of the egg library was used.</li></ul>
+</div></section>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><i>Elysia chlorotica</i>: reads SRR7647856, SRR7647851, SRR768897; assembly ElyChl2.0 (GCA_003991915.1). Methods and sources are on the <a href="../methods.html">methods page</a>.</p>
+<p>Built 2026-11-14 from public genome data. The analysis is independent of the groups that produced the genomes and has not been peer reviewed. Gene roles are inferred from homology with flies and mammals; nothing here measures a rhythm.</p>
+<p>Scripts, tables and sequences are in the repository that hosts this site. Photographs are credited on the <a href="../methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
+</div></footer>
+<script src="../assets/pages.js"></script>
+</body>
+</html>

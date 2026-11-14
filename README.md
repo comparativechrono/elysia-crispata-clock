@@ -47,6 +47,42 @@ Models for species without a public annotation (and for genes the annotation lac
 The gene annotation of *E. timida* is not in GenBank and its server could not be reached, so all
 *E. timida* models are of this kind. The GenBank sequence of *E. leucolegnote* is 35% masked (N).
 
+**Whose chloroplasts.** The plastid DNA among the reads of each sequenced animal names the alga it
+had been eating. The read sets are listed in `config/species_reads.tsv`.
+
+| Species | Chloroplasts from | Reads from | Plastid share of sequenced bases |
+|---|---|---|---|
+| *E. chlorotica* | *Vaucheria litorea* | two adults, and eggs as a control | 3.5% and 14.1%; eggs: two reads in 76 million |
+| *E. marginata* | *Bryopsis* (*B. hypnoides* type, PQ652170.1) | the animal assembled | 0.27% |
+| *E. timida* | *Acetabularia acetabulum* | the animals assembled | 0.003% or more: only 49 kb of that plastid genome is public |
+| *E. leucolegnote* | a *Boodleopsis* (97–99% identical to NC_039521.1) and at least one further alga | two other animals | 0.095% and 0.075% or more |
+| *E. atroviridis* | *Bryopsis*, the same type, as two strains (95:5) | the animal assembled | 1.9% |
+| *E. papillosa* | *Penicillus lamourouxii* (OZ494339.1) | the animal assembled | 0.14% |
+
+**Gene transfer.** No algal DNA inserted in a slug genome was found in any species. Reads that
+join plastid DNA to slug DNA are rare, scattered over the genome, and turn up at rates similar to
+joins of the slug's own mitochondrial DNA to its nuclear DNA, which library preparation makes.
+
+- *E. chlorotica*: the assembly holds five small plastid scaffolds (8.3 kb), plastid stretches
+  inside two larger scaffolds (1.6 kb and 230 bp) and four stretches of mitochondrial DNA. No short
+  read from an adult or from eggs supports any of them; three long reads from two molecules cross
+  one edge, against 1,772 that stop there. Egg DNA holds almost no plastid DNA. None of the
+  *Vaucheria* nuclear genes reported in early studies (psbO, prk, lhc, chlD, chlG, chlH) matches
+  the assembly. Fourteen scaffolds (525 kb) come from a bacterium related to *Francisella*.
+- *E. marginata*: one 3.7 kb scaffold is *Bryopsis* plastid DNA. About 2.0 Mb on 23 scaffolds is
+  bacterial (mycoplasma-like, flavobacteria-like and others), and the gene set published with the
+  assembly includes genes on them.
+- *E. leucolegnote*: the unplaced sequence JBQKML010000381.1 begins with 863 bp of plastid DNA
+  joined to a slug repeat. In two other animals the same plastid sequence carries on as plastid
+  DNA at that point (46 and 13 reads stop, none runs through). Four sequences (1.9 Mb) are bacterial.
+  Reads of the assembled animal are not public.
+- *E. papillosa*: contig CDRNNR020002991.1 (30.9 kb) is a piece of an algal mitochondrial genome.
+- *E. timida*, *E. atroviridis*: nothing of the kind in the assembly.
+
+In the protein screen of these species the gene set published with an assembly is not counted as
+evidence that a sequence of that assembly is animal, because the published gene sets of
+*E. chlorotica* and *E. marginata* include genes on bacterial and plastid sequences.
+
 ## *Elysia crispata* in detail
 
 **Clock genes.** 47 genes are catalogued: the core loop (Clock, Bmal1, Period, Timeless, Timeout,
@@ -93,10 +129,10 @@ The website gives the evidence, the caveats and what the screens cannot rule out
 |---|---|
 | `docs/` | The website (static). `index.html` lists the species, `compare.html` compares their clock proteins, and each species has a folder (`docs/elysia-crispata/`, …). Data are embedded in `docs/data/<species>.js` and `docs/data/genus.js`; files offered for download are in `docs/downloads/` and `docs/elysia-crispata/downloads/`. Photographs and their credits are in `docs/assets/photos/`. |
 | `results/` | *E. crispata* tables: `clock_genes.tsv` / `.json`, `sequences/` (proteins and coding sequences), `kleptoplast.json`, `kleptoplast_barcodes.tsv`, `hgt.json`, `plastid_fragments_in_assembly.tsv`, `penicillus_plastome_genes.bed`. |
-| `results/genus/` | One catalogue per further species (`<species>.clock.json`), the gene-by-species table (`clock_matrix.tsv`), protein alignments (`alignments/`), the concatenated alignment and species tree. |
+| `results/genus/` | Per further species: the clock catalogue (`<species>.clock.json`), what its reads contain (`<species>.kleptoplast.json`) and the gene-transfer screens (`<species>.transfer.json`). Also the gene-by-species table (`clock_matrix.tsv`), protein alignments (`alignments/`), the concatenated alignment and species tree, and the intermediate tables of the screens: the reference panel (`panel.tsv.gz`), barcode records and sequences, plastid contigs, read junctions, every protein match (`protein_screen_loci.json.gz`) and every coding stretch on the bacterial and other foreign sequences (`foreign_sequences.json.gz`). |
 | `results/trees/` | Family alignments (trimmed) and FastTree trees in Newick format. |
 | `results/intermediate/` | Small intermediate tables: orthologue calls, model choice, read support, expression, the reference panel listing, chimeric-read junctions, boundary evidence, protein-screen inputs. |
-| `config/` | The curated inputs: reference clock proteins (`clock_seeds.tsv`), the gene catalogue with its anchors (`clock_catalogue.tsv`), genes searched for but not found (`clock_not_found.tsv`), the species and their assemblies (`species.tsv`), and the survey of public *Elysia* data (`species_catalogue.tsv`). |
+| `config/` | The curated inputs: reference clock proteins (`clock_seeds.tsv`), the gene catalogue with its anchors (`clock_catalogue.tsv`), genes searched for but not found (`clock_not_found.tsv`), the species and their assemblies (`species.tsv`), the read sets screened (`species_reads.tsv`), the written conclusions shown on the species pages (`species_text.json`), and the survey of public *Elysia* data (`species_catalogue.tsv`). |
 | `scripts/` | The *E. crispata* pipeline, numbered in the order it runs; `scripts/genus/` holds the steps that run over every species. |
 
 ## Scripts
@@ -119,19 +155,26 @@ Steps that run over every species (`scripts/genus/`):
 | Fetch | `00_fetch_assemblies.sh`, `01_fetch_photos.py`, `02_choose_photos.py` | Assemblies (and annotation where GenBank has one) from NCBI; openly licensed photographs from iNaturalist with their credits. |
 | Clock genes | `09_clock_refs.sh`, `10_project_clock_genes.sh`, `11_clock_catalogue.py` | The 47 *E. crispata* proteins aligned to each genome with miniprot; annotated proteins added where available; a reciprocal test against all *E. crispata* proteins; one model per gene. |
 | Compare | `12_compare_species.py`, `13_domains.sh` | Protein alignments (MAFFT), completeness against the positions most sequences share, pairwise identity, the species tree (IQ-TREE), Pfam domains. |
-| Build | `chrome.py`, `20_build_genus_site.py` | Shared page frame; homepage, comparison page and the species pages. |
+| Reference panel | `30_build_panel.py`, `30b_mask_and_index.sh` | Plastid, mitochondrial and ribosomal DNA references for all species; low-complexity sequence masked for the first pass. |
+| Reads | `fetch_ranges.py`, `31_read_screen.sh`, `31_select_hits.py`, `31b_slim_rdna.py`, `33_pass2.sh`, `sam_segments.py`, `34_read_analysis.py`, `37_pair_analysis.py` | Each run fetched and mapped to the panel as a stream; reads with a match aligned base by base to the species' assembly and the panel; what the library contains; reads or read pairs that join two kinds of DNA. |
+| Naming the alga | `36_barcodes.py`, `38_plastid_contigs.sh` | rbcL and tufA read out of long reads, or cut from plastid contigs assembled from short reads (MEGAHIT), and compared with GenBank. |
+| Assemblies | `35_assembly_screen.py`, `42_protein_screen_inputs.py`, `43_foreign_sequences.py` (with `scripts/22` and `scripts/28`) | Organelle-like DNA in each assembly; 471 algal proteins aligned to it; every sequence with a non-animal match translated as a whole and its genes classified. |
+| Places tested with reads | `40_locus_baits.py`, `41_locus_test.py`, `44_window_reads.sh` | Reads that run through, or stop at, each edge of an organelle-like stretch inside an assembly sequence. |
+| Collect and build | `39_collect_species.py`, `45_export_tables.py`, `chrome.py`, `21_build_species_pages.py`, `20_build_genus_site.py` | Result files and small tables; shared page frame; the chloroplast and gene-transfer pages of each species; homepage, comparison page, clock pages and methods. |
+| Order of the screens | `run_screens.sh` | The commands for the six added species in the order they were run (`DRY=1` prints them). |
 
 The scripts were written for one working machine: tool locations
 (`/home/claude/tools/mamba/envs/bio/bin`, overridable with `BIO_BIN` where the script reads it)
 and working directories are passed on the command line or set at the top of each script. Each
 script states its usage in its header. Software used: minimap2, miniprot, DIAMOND, BLAST+, MAFFT,
-trimAl, FastTree, IQ-TREE, HMMER (Pfam-A), salmon, samtools, seqkit, sra-tools, Python 3 with Biopython.
+trimAl, FastTree, IQ-TREE, HMMER (Pfam-A), salmon, samtools, seqkit, sra-tools, MEGAHIT, Python 3 with Biopython.
 
 To rebuild the website from the results already in the repository:
 
 ```
 python3 scripts/30_build_site.py . results/trees/figures   # E. crispata pages; second argument optional
-python3 scripts/genus/20_build_genus_site.py .             # homepage, comparison and the other species
+python3 scripts/genus/21_build_species_pages.py .          # chloroplast and gene-transfer pages of the other species
+python3 scripts/genus/20_build_genus_site.py .             # homepage, comparison, methods and clock pages
 python3 -m http.server -d docs 8000
 ```
 
@@ -152,8 +195,23 @@ Assemblies of the other species: *E. chlorotica* GCA_003991915.1, *E. marginata*
 *E. timida* GCA_043644045.1, *E. leucolegnote* GCA_052815195.1, *E. atroviridis* GCA_059052615.1,
 *E. papillosa* GCA_977015215.2 (details in `config/species.tsv`).
 
-The reference panel used to screen the reads (241 green-algal plastid genomes and others) is
-listed in `results/intermediate/panel.tsv`.
+Reads screened for the other species (details in `config/species_reads.tsv`):
+
+| Species | Run | Kind | Examined |
+|---|---|---|---|
+| *E. papillosa* | ERR14842698 | PacBio HiFi, the animal assembled | 8.3 Gb (one of three runs) |
+| *E. atroviridis* | SRR34916404 | PacBio HiFi, the animal assembled | 30.6 Gb (all) |
+| *E. timida* | SRR30016879 | PacBio HiFi, amplified library, the animals assembled | first 20 Gb |
+| *E. chlorotica* | SRR7647856 | PacBio RS, an adult | 9.4 Gb (all) |
+| *E. chlorotica* | SRR7647851 | Illumina pairs, a second adult | first 6 Gb |
+| *E. chlorotica* | SRR768897 | Illumina pairs, eggs | 11.1 Gb (all) |
+| *E. marginata* | DRR238951 | Illumina pairs, the animal assembled | first 4.5 Gb |
+| *E. leucolegnote* | SRR41369319, SRR17036819 | Illumina pairs, two other animals | first 6 Gb and 5 Gb |
+
+The reference panel used to screen the *E. crispata* reads (241 green-algal plastid genomes and
+others) is listed in `results/intermediate/panel.tsv`; the wider panel used for the other species
+(1,271 plastid sequences, 117 algal mitochondrial genomes, 7,352 algal ribosomal DNA sequences
+and nine *Elysia* mitochondrial genomes) is listed in `results/genus/panel.tsv.gz`.
 
 ## Caveats
 
@@ -168,6 +226,12 @@ listed in `results/intermediate/panel.tsv`.
   the Purdue assembly very likely holds more *Acetabularia* chloroplast contigs than the ones
   found through their genes.
 - The second kleptoplast species is named from a single 562-bp reference sequence.
+- Other species: *E. leucolegnote* was read from two animals that are not the one assembled, and
+  algae without a close reference are under-counted there; the *E. timida* plastid share is a
+  floor; *E. papillosa* reads cover the genome about 8 times, so an insertion in a minority of
+  cells could be missed; short reads test a join only through read pairs. The protein screen
+  searches with 471 proteins, so it finds only the bacterial and foreign sequences that happen
+  to carry a relative of one of them.
 
 ## Credits
 

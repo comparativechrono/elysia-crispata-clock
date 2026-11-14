@@ -1,0 +1,161 @@
+{
+ "slug": "elysia-timida",
+ "species": "Elysia timida",
+ "libraries": [
+  {
+   "library": "main",
+   "label": "",
+   "runs": [
+    "SRR30016879"
+   ],
+   "kind": "hifi",
+   "platform": "PacBio Revio (HiFi, amplified ultra-low-input library)",
+   "animal": "the sequenced animals (adults, Cadaqu\u00e9s, Spain)",
+   "note": "The first 20 Gb of the Revio run behind the assembly. The library was amplified by PCR.",
+   "reads": 3468033,
+   "bases": 20000001740,
+   "bases_screened": 20000001740,
+   "plastid": {
+    "reads": 151,
+    "bp": 504982,
+    "fraction": 2.5e-05
+   },
+   "mitochondrion": {
+    "reads": 6174,
+    "bp": 34986121,
+    "fraction": 0.001749
+   },
+   "algal_mitochondrion": {
+    "reads": null,
+    "bp": 0,
+    "fraction": 0.0
+   },
+   "algal_rdna": {
+    "reads": null,
+    "bp": 0,
+    "fraction": 0.0
+   },
+   "plastid_any_identity": {
+    "reads": 326,
+    "bp": 488941,
+    "fraction_of_bases": 2.4e-05
+   },
+   "other_taxa": {
+    "algrDNA": [],
+    "algmt": []
+   },
+   "donors": [
+    {
+     "name": "Acetabularia acetabulum",
+     "reads": 269,
+     "bp": 447702,
+     "fraction": 0.91566,
+     "median_identity": 0.9977,
+     "identity_q10": 0.9945,
+     "identity_q90": 1.0,
+     "accession": "HG518438.1"
+    },
+    {
+     "name": "Neomeris sp.",
+     "reads": 36,
+     "bp": 23817,
+     "fraction": 0.04871,
+     "median_identity": 0.9018,
+     "identity_q10": 0.9005,
+     "identity_q90": 0.9018,
+     "accession": "KY495864.1"
+    },
+    {
+     "name": "Batophora oerstedii",
+     "reads": 17,
+     "bp": 13545,
+     "fraction": 0.0277,
+     "median_identity": 0.876,
+     "identity_q10": 0.8731,
+     "identity_q90": 0.9029,
+     "accession": "MH545238.1"
+    },
+    {
+     "name": "Acetabularia mediterranea",
+     "reads": 5,
+     "bp": 3877,
+     "fraction": 0.00793,
+     "median_identity": 0.9811,
+     "identity_q10": 0.9796,
+     "identity_q90": 0.9817,
+     "accession": "X05806.1"
+    }
+   ],
+   "barcodes": [],
+   "contigs": null,
+   "hot_windows": [
+    {
+     "target": "algrDNA|Y07979.1",
+     "start": 3000,
+     "end": 3200,
+     "reads": 21057
+    },
+    {
+     "target": "algrDNA|AY206425.1",
+     "start": 200,
+     "end": 400,
+     "reads": 7876
+    },
+    {
+     "target": "algrDNA|AY206424.1",
+     "start": 200,
+     "end": 400,
+     "reads": 7784
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 0,
+     "end": 200,
+     "reads": 4562
+    },
+    {
+     "target": "algrDNA|KY271671.1",
+     "start": 200,
+     "end": 400,
+     "reads": 2519
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 200,
+     "end": 400,
+     "reads": 1916
+    },
+    {
+     "target": "slugrDNA|MK919695.1",
+     "start": 1000,
+     "end": 1200,
+     "reads": 1577
+    },
+    {
+     "target": "algrDNA|MH894190.1",
+     "start": 800,
+     "end": 1000,
+     "reads": 1179
+    }
+   ]
+  }
+ ],
+ "donors": [
+  {
+   "name": "Acetabularia acetabulum",
+   "fraction": 0.91566,
+   "median_identity": 0.9977
+  },
+  {
+   "name": "Neomeris sp.",
+   "fraction": 0.04871,
+   "median_identity": 0.9018
+  },
+  {
+   "name": "Batophora oerstedii",
+   "fraction": 0.0277,
+   "median_identity": 0.876
+  }
+ ],
+ "plastid_fraction": 2.5e-05
+}

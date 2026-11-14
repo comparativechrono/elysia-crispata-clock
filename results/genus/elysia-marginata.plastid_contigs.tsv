@@ -1,0 +1,5 @@
+contig	length	depth	best_panel_match	identity
+kcp|k141_4	1145	66.5319	cp|PQ652170.1	1.0000
+kcp|k141_0	8844	85.7851	cp|GQ892829.1	0.9975
+kcp|k141_3	24160	68.5041	cp|PQ652170.1	0.9998
+kcp|k141_5	101417	76.0145	cp|PQ652170.1	0.9546
