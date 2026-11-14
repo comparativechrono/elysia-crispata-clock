@@ -114,14 +114,14 @@
  "reads": [
   {
    "library": "main",
-   "label": "The assembled animal",
+   "label": "Assembled individual",
    "runs": [
     "ERR14842698",
     "ERR14842697"
    ],
    "kind": "hifi",
    "platform": "PacBio Revio (HiFi)",
-   "animal": "the sequenced animal (specimen xgElyPapi4, Tampa, Florida, 2024)",
+   "animal": "the individual used for the assembly (specimen xgElyPapi4, Tampa, Florida, 2024)",
    "reads": 5406003,
    "bases": 36247978396,
    "bases_screened": 36247978396,
@@ -294,7 +294,7 @@
    },
    "sample": null,
    "sensitivity": null,
-   "note": "Both long-read runs of this specimen, in full.",
+   "note": "Both long-read runs from this specimen, analysed in full.",
    "thinned": 1,
    "candidate_places": null,
    "repeat_joins": null,
@@ -302,13 +302,13 @@
   },
   {
    "library": "papi1",
-   "label": "A second animal",
+   "label": "Second individual",
    "runs": [
     "ERR14842696"
    ],
    "kind": "hifi",
    "platform": "PacBio Revio (HiFi, amplified library)",
-   "animal": "a second animal (specimen xgElyPapi1, a whole adult, Tampa, Florida, 2024)",
+   "animal": "a second individual (specimen xgElyPapi1, a whole adult, Tampa, Florida, 2024)",
    "reads": 10201468,
    "bases": 64842836831,
    "bases_screened": 64842836831,
@@ -444,7 +444,7 @@
    },
    "sample": null,
    "sensitivity": null,
-   "note": "The long-read run of the other specimen sequenced for the same project, in full.",
+   "note": "The long-read run from the other specimen sequenced for the same project, analysed in full.",
    "thinned": 1,
    "candidate_places": null,
    "repeat_joins": null,

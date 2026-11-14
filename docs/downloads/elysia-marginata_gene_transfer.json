@@ -85,14 +85,14 @@
  "reads": [
   {
    "library": "main",
-   "label": "",
+   "label": "Assembled individual",
    "runs": [
     "DRR238951",
     "DRR238952"
    ],
    "kind": "short",
-   "platform": "Illumina HiSeq 2500 (paired; inserts of 250 and 500 bp)",
-   "animal": "the sequenced animal (one individual, Kagoshima, Japan, 2013)",
+   "platform": "Illumina HiSeq 2500 (paired-end; inserts of 250 and 500 bp)",
+   "animal": "the individual used for the assembly (one animal, Kagoshima, Japan, 2013)",
    "reads": 562732268,
    "bases": 84409840200,
    "bases_screened": 84409840200,
@@ -774,7 +774,7 @@
     "mixed_pairs_per_insertion_per_cell": 78.93,
     "split_mates_per_insertion_per_cell": 35.53
    },
-   "note": "Both paired-end libraries behind the assembly, in full. The reads are filed in the archive as Elysia ornata. The mate-pair libraries were left out.",
+   "note": "Both paired-end libraries used for the assembly, analysed in full. The reads are deposited in the archive under the name Elysia ornata. The mate-pair libraries were excluded.",
    "thinned": 1,
    "candidate_places": null,
    "repeat_joins": null,

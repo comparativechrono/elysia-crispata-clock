@@ -1,8 +1,8 @@
 slug	species	tag	accession	asm_name	level	annotation	long_reads	origin
 elysia-crispata	Elysia crispata	ELYCR	GCA_963854125.1	xgElyCris1.1	chromosome	ensembl	PacBio HiFi	Key Largo, Florida, USA (clarki ecotype)
-elysia-chlorotica	Elysia chlorotica	ELYCH	GCA_003991915.1	ElyChl2.0	scaffold	genbank	PacBio RS (noisy)	Martha's Vineyard, Massachusetts, USA
+elysia-chlorotica	Elysia chlorotica	ELYCH	GCA_003991915.1	ElyChl2.0	scaffold	genbank	PacBio RS (error-prone)	Martha’s Vineyard, Massachusetts, USA
 elysia-marginata	Elysia marginata	ELYMA	GCA_019649035.1	Ema_v1	scaffold	genbank	none	Kagoshima, Japan
-elysia-timida	Elysia timida	ELYTI	GCA_043644045.1	ASM4364404v1	chromosome	senckenberg	PacBio HiFi	Cadaques, Spain
-elysia-leucolegnote	Elysia leucolegnote	ELYLE	GCA_052815195.1	ASM5281519v1	chromosome	none	none	Dongzhai Harbor, Hainan, China
+elysia-timida	Elysia timida	ELYTI	GCA_043644045.1	ASM4364404v1	chromosome	senckenberg	PacBio HiFi	Cadaqués, Spain
+elysia-leucolegnote	Elysia leucolegnote	ELYLE	GCA_052815195.1	ASM5281519v1	chromosome	none	not publicly available	Dongzhai Harbor, Hainan, China
 elysia-atroviridis	Elysia atroviridis	ELYAT	GCA_059052615.1	ASM5905261v1	chromosome	none	PacBio HiFi	Qingdao, China
 elysia-papillosa	Elysia papillosa	ELYPA	GCA_977015215.2	xgElyPapi4.2	contig	none	PacBio HiFi	Tampa, Florida, USA

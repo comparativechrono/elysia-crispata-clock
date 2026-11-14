@@ -75,11 +75,11 @@ with open(os.path.join(SITE, "data", "elysia-crispata.js"), "w") as fo:
     fo.write("window.CLOCK = " + json.dumps(data, separators=(",", ":")) + ";\n")
 
 # ------------------------------------------------------------------ shared chrome
-CRISPATA_SOURCES = ("<i>Elysia crispata</i>: genome assembly xgElyCris1.1 and reads of BioProject PRJEB67629 (Middlebrooks et al. 2026, Wellcome Open Research 11:148; "
-                    "Aquatic Symbiosis Genomics, Wellcome Sanger Institute), released under the Tree of Life open data policy.")
+CRISPATA_SOURCES = ("Data for <i>Elysia crispata</i>: genome assembly xgElyCris1.1 and sequencing reads from BioProject PRJEB67629 (Middlebrooks et al. 2026, Wellcome Open Research 11:148; "
+                    "Aquatic Symbiosis Genomics project, Wellcome Sanger Institute), released under the Tree of Life open data policy.")
 def page(title, current, body, scripts=""):
     return chrome.page(title, body, root="../", species="Elysia crispata", tabs=chrome.SPECIES_TABS, tab_current=current, scripts=scripts, today=today, sources=CRISPATA_SOURCES,
-                       description="Circadian clock genes, kleptoplast identity and a test for algal gene transfer in the lettuce sea slug Elysia crispata, from the xgElyCris1 genome data.")
+                       description="Circadian clock genes, the algal source of the kleptoplasts and a test for algal gene transfer in the lettuce sea slug Elysia crispata, based on the xgElyCris1 genome data.")
 
 def status_counts():
     c = {}
@@ -100,40 +100,48 @@ typ = round(meta["typical_exon_depth"])
 lowtxt = ""
 if low:
     lo = [g for g in low if g["reads_support"]["median_reads"] < 0.4 * meta["typical_exon_depth"]]
-    lowtxt = (f"Several of them sit in stretches the sequencing library barely sampled: {', '.join(g['label'] + ' (' + str(round(g['reads_support']['median_reads'])) + ' reads per exon)' for g in lo[:5])}, "
-              f"against {typ} for a typical clock gene. The library was amplified by PCR from very little DNA, which leaves holes like these.") if lo else ""
+    def _depths(gs):
+        xs = [f"{g['label']} ({round(g['reads_support']['median_reads'])}{' reads per exon' if i == 0 else ''})" for i, g in enumerate(gs)]
+        return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1]
+    lowtxt = (f"Several of these genes lie in regions with low read depth: {_depths(lo[:5])}, compared with a median of {typ} for all clock genes. "
+              "The sequencing library was amplified by PCR from a small amount of DNA, which results in uneven coverage of the genome.") if lo else ""
+# number of genes in each part of the catalogue, for the summary
+import collections
+ncat = collections.Counter(g["category"] for g in genes)
+n_ptm = ncat["kinase"] + ncat["phosphatase"] + ncat["degradation"] + ncat["modulator"]
+word = chrome.word
 
 index_body = f"""
 <section class="intro"><div class="wrap">
-<h1>The lettuce sea slug’s clock, gene by gene</h1>
-<p class="lede"><i>Elysia crispata</i> keeps stolen chloroplasts photosynthesising for months. This is a catalogue of the circadian clock genes in its genome: where each one sits in the Sanger assembly xgElyCris1.1, whether the assembly has it whole, and the protein it encodes.</p>
+<h1>Circadian clock genes of <i>Elysia&nbsp;crispata</i></h1>
+<p class="lede">The lettuce sea slug <i>Elysia crispata</i> retains chloroplasts from the algae it feeds on and keeps them photosynthetically active for months. This page lists the circadian clock genes identified in its genome. For each gene it gives the position in the Sanger Institute assembly xgElyCris1.1, whether the gene is complete in that assembly, and the protein it encodes.</p>
 <div class="clockwork">
 <div id="schematic"></div>
 <div class="clockwork-list" id="schematic-list"></div>
 <div class="clockwork-legend" aria-label="Key to gene status in xgElyCris1.1">
 <span><i class="glyph ok"></i>intact in xgElyCris1.1</span>
-<span><i class="glyph warn"></i>whole, but the assembly sequence differs</span>
-<span><i class="glyph part"></i>partial or in pieces</span>
-<span><i class="glyph miss"></i>missing from the assembly</span>
+<span><i class="glyph warn"></i>complete, but with a frameshift or stop codon in the assembly sequence</span>
+<span><i class="glyph part"></i>partial or fragmented</span>
+<span><i class="glyph miss"></i>not found in the assembly</span>
 </div>
 </div>
-<p class="clockwork-caveat">Select a gene to open it. The wiring is the textbook fly and mouse clock; which gene does what in <i>Elysia</i> has not been tested, and one RNA sample cannot show rhythm.</p>
+<p class="clockwork-caveat">Select a gene to see its details. The diagram shows the interactions established in <i>Drosophila</i> and mouse. The functions of these genes have not been tested in <i>Elysia</i>, and the single RNA-seq sample available cannot show whether any of them is expressed rhythmically.</p>
 </div></section>
 
 <section class="block"><div class="wrap">
 <div class="cols">
-<div><h3>A complete clock, by homology</h3>
-<p>{n} genes: both halves of the core activator (Clock and Bmal1), the repressors Period, Timeless and a mammalian-type Cryptochrome, a light-sensitive Cryptochrome, the second loop (Pdp1, Vrille, E75, Hr3, Clockwork orange), fifteen kinases, phosphatases and degradation factors, ten opsins and four photolyases. Each call rests on reciprocal best hits and a family tree.</p></div>
-<div><h3>The assembly misses some of it</h3>
-<p>{n_ok} genes are intact in xgElyCris1.1 and {n_disc} more are whole but with a frameshift or other mismatch in the assembly sequence. {len(partial)} are partial or scrambled ({names(partial)}) and {len(missing)} are absent ({names(missing)}).</p></div>
-<div><h3>Missing from the assembly, not the animal</h3>
-<p>All {n} genes are whole in at least one of the two other <i>E. crispata</i> assemblies, and reads from the sequenced animal itself cover their exons. {lowtxt}</p></div>
+<div><h3>Genes in the catalogue</h3>
+<p>The catalogue contains {n} genes. They include the two core activators (Clock and Bmal1), the repressors Period, Timeless and a mammalian-type Cryptochrome, a light-sensitive <i>Drosophila</i>-type Cryptochrome, and the components of the second feedback loop (Pdp1, Vrille, E75, Hr3 and Clockwork orange). There are also {word(n_ptm)} kinases, phosphatases and other regulators of protein stability, {word(ncat["output"])} output genes, {word(ncat["light"])} opsins and {word(ncat["photolyase"])} photolyases. Each gene was identified by reciprocal best hits and by its position in a phylogenetic tree of its gene family.</p></div>
+<div><h3>Status in the reference assembly</h3>
+<p>In xgElyCris1.1, {n_ok} of the {n} genes are intact and {word(n_disc)} more are complete but contain a frameshift or stop codon in the assembly sequence. A further {word(len(partial))} are partial or fragmented ({names(partial)}), and {word(len(missing))} are missing from the assembly ({names(missing)}).</p></div>
+<div><h3>The missing genes are present in the genome</h3>
+<p>All {n} genes are complete in at least one of the other two <i>E. crispata</i> assemblies, and reads from the individual sequenced for xgElyCris1.1 cover their exons. The genes that are incomplete or missing in xgElyCris1.1 are therefore absent from the assembly, not from the genome. {lowtxt}</p></div>
 </div>
 </div></section>
 
 <section class="block"><div class="wrap">
-<h2>Where the genes sit</h2>
-<p>The 15 chromosome-scale scaffolds of xgElyCris1.1, drawn to scale. Each mark is a clock gene; select one to open it.</p>
+<h2>Chromosomal locations</h2>
+<p>The 15 chromosome-scale scaffolds of xgElyCris1.1 are drawn to scale. Each mark is a clock gene; select a mark to see the details of that gene.</p>
 <div class="karyo-card"><div class="karyo" id="karyo"></div><div class="offmap" id="offmap"></div></div>
 </div></section>
 
@@ -141,13 +149,13 @@ index_body = f"""
 <h2>All {n} genes</h2>
 <div class="filters" id="filters"></div>
 <div class="tablewrap"><table class="genes">
-<thead><tr><th>Gene</th><th>Role</th><th class="num">Protein, aa</th><th>In xgElyCris1.1</th><th>Other assemblies</th><th class="num" title="Median number of HiFi reads from the sequenced animal covering each exon">Reads per exon</th><th class="num" title="Transcripts per million in the head RNA-seq library">Head RNA, TPM</th></tr></thead>
+<thead><tr><th>Gene</th><th>Category</th><th class="num">Protein length (aa)</th><th>Status in xgElyCris1.1</th><th>Other assemblies</th><th class="num" title="Median number of PacBio HiFi reads from the sequenced individual that cover each exon">Reads per exon</th><th class="num" title="Transcripts per million in the head RNA-seq library">Expression in head (TPM)</th></tr></thead>
 <tbody id="genes-body"></tbody></table></div>
-<p class="small muted" style="margin-top:12px;max-width:90ch">Other assemblies: the alternate haplotype of the same animal, and two independent assemblies of other individuals (Purdue, GCA_033675545.1; Tampa, GCA_984581095.1). Reads per exon counts PacBio HiFi reads from the sequenced animal. Head RNA is one library from the same animal.</p>
+<p class="small muted" style="margin-top:12px;max-width:90ch">The other assemblies are the alternate haplotype of the same individual and two independent assemblies of other individuals (Purdue, GCA_033675545.1; Tampa, GCA_984581095.1). Reads per exon is the median number of PacBio HiFi reads from the sequenced individual that cover each exon. Expression was estimated from a single head RNA-seq library from the same individual.</p>
 
-<h3 style="margin-top:34px">Looked for and not found</h3>
+<h3 style="margin-top:34px">Genes searched for but not found</h3>
 <div class="tablewrap" style="margin-top:10px"><table class="data">
-<thead><tr><th>Gene</th><th>Searched with</th><th>Reading</th></tr></thead>
+<thead><tr><th>Gene</th><th>Query proteins</th><th>Interpretation</th></tr></thead>
 <tbody>{''.join(f'<tr><td><strong>{e(x["symbol"])}</strong><br><span class="muted small">{e(x["name"])}</span></td><td class="mono">{e(x["seeds"].replace(",", ", "))}</td><td>{e(x["interpretation"])}</td></tr>' for x in clock["not_found"])}</tbody></table></div>
 </div></section>
 <dialog class="gene" id="gene" aria-label="Gene details"></dialog>
@@ -165,4 +173,4 @@ print("index.html written:", n, "genes;", n_ok, "intact,", n_disc, "discrepant,"
 if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "31_build_pages.py")):
     import runpy
     runpy.run_path(os.path.join(os.path.dirname(os.path.abspath(__file__)), "31_build_pages.py"),
-                   init_globals=dict(repo=repo, R=R, DOCS=DOCS, page=page, e=e, genes=genes, klepto=klepto, hgt=hgt, today=today, meta=meta))
+                   init_globals=dict(repo=repo, R=R, DOCS=DOCS, page=page, e=e, genes=genes, klepto=klepto, hgt=hgt, today=today, meta=meta, word=word))

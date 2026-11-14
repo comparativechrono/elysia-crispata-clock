@@ -28,8 +28,8 @@
     return n;
   }
   const STATUS = {
-    complete: { cls: "ok", word: "intact" }, complete_discrepancy: { cls: "warn", word: "whole, sequence does not translate cleanly" },
-    fragmented: { cls: "part", word: "in pieces" }, partial: { cls: "part", word: "partial" },
+    complete: { cls: "ok", word: "intact" }, complete_discrepancy: { cls: "warn", word: "complete, with a frameshift or stop codon" },
+    fragmented: { cls: "part", word: "fragmented" }, partial: { cls: "part", word: "partial" },
     divergent: { cls: "miss", word: "divergent copy only" }, absent: { cls: "miss", word: "not found" },
   };
   const SP = D.species, G = {};
@@ -56,7 +56,7 @@
           const st = STATUS[g.status[s.slug]] || STATUS.absent;
           const id = s.tag === "ELYCR" ? null : g.identity[pair(s.tag, "ELYCR")];
           const comp = g.completeness[s.slug], copies = g.copies[s.slug];
-          const tip = `${s.name}: ${st.word}` + (comp ? `, fills ${Math.round(comp * 100)}% of the shared positions` : "") + (copies && copies > 1 ? `, ${copies} places in the assembly` : "");
+          const tip = `${s.name}: ${st.word}` + (comp ? `, covers ${Math.round(comp * 100)}% of the conserved alignment positions` : "") + (copies && copies > 1 ? `, ${copies} loci in the assembly` : "");
           return el("td", {}, [el("a", { class: "cell", href: `${s.slug}/index.html#gene/${encodeURIComponent(g.symbol)}`, title: tip, "aria-label": tip },
             [glyph(st.cls), document.createTextNode(s.tag === "ELYCR" ? "" : (g.status[s.slug] === "absent" ? "" : pct(id)))])]);
         });
@@ -120,7 +120,7 @@
     if (idm) {
       const all = tags.concat(outs);
       const head = el("tr", {}, [el("th", { text: "Identity" })].concat(all.map((t) => el("th", { class: "num", html: "<i>" + NAME[t].replace(/^(\w)\w+ /, "$1. ") + "</i>" }))));
-      const rows = all.map((a, i) => el("tr", {}, [el("td", { html: "<i>" + NAME[a] + "</i>" + (outs.includes(a) ? ' <span class="muted small">other gastropod</span>' : "") })].concat(
+      const rows = all.map((a, i) => el("tr", {}, [el("td", { html: "<i>" + NAME[a] + "</i>" + (outs.includes(a) ? ' <span class="muted small">outgroup</span>' : "") })].concat(
         all.map((b, j) => el("td", { class: "num", text: i === j ? "" : (j > i ? "" : pct(g.identity[pair(a, b)])) })))));
       idm.replaceChildren(el("div", { class: "tablewrap" }, [el("table", { class: "data" }, [el("thead", {}, [head]), el("tbody", {}, rows)])]));
     }
@@ -191,7 +191,7 @@
     const maxD = Math.max(...leaves.map((l) => l.depth));
     const W = 880, X0 = 16, PW = 520, ROW = 30, TOP = 14, H = TOP + leaves.length * ROW + 34;
     const x = (d) => X0 + (d / maxD) * PW, y = (n) => TOP + n.y * ROW + 12;
-    const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, class: "tree", role: "img", "aria-label": "Tree of the species from concatenated clock proteins" });
+    const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, class: "tree", role: "img", "aria-label": "Species tree inferred from concatenated clock proteins" });
     (function draw(n, px) {
       svg.append(sv("path", { class: "br", d: `M${px},${y(n)}H${x(n.depth)}` }));
       if (n.kids.length) {
@@ -202,7 +202,7 @@
         const og = !!D.outgroups[n.name];
         const t = sv("text", { x: x(n.depth) + 8, y: y(n) + 4, "font-style": "italic", class: og ? "og" : "", text: NAME[n.name] || n.name });
         svg.append(t);
-        if (og) svg.append(sv("text", { class: "sup", x: x(n.depth) + 8 + (NAME[n.name] || n.name).length * 7.2 + 8, y: y(n) + 4, text: "other gastropod" }));
+        if (og) svg.append(sv("text", { class: "sup", x: x(n.depth) + 8 + (NAME[n.name] || n.name).length * 7.2 + 8, y: y(n) + 4, text: "outgroup" }));
       }
     })(root, X0);
     const bar = 0.1;

@@ -103,13 +103,13 @@
  "reads": [
   {
    "library": "main",
-   "label": "",
+   "label": "Assembled individual",
    "runs": [
     "SRR34916404"
    ],
    "kind": "hifi",
    "platform": "PacBio Sequel II (HiFi)",
-   "animal": "the sequenced animal (adult, Qingdao, China, 2024)",
+   "animal": "the individual used for the assembly (adult, Qingdao, China, 2024)",
    "reads": 3514321,
    "bases": 30628534557,
    "bases_screened": 30628534557,
@@ -536,7 +536,7 @@
    },
    "sample": null,
    "sensitivity": null,
-   "note": "The only long-read run behind the assembly, in full.",
+   "note": "The single long-read run used for the assembly, analysed in full.",
    "thinned": 1,
    "candidate_places": null,
    "repeat_joins": null,

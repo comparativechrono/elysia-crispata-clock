@@ -109,10 +109,10 @@ code, .mono { font-family: var(--mono); font-size: 0.86em; }
 
 /* ---------- intro */
 .intro { padding: 56px 0 18px; }
-.intro h1 { max-width: 15ch; }
+.intro h1 { max-width: 22ch; }
 .intro .lede { font-size: 1.22rem; line-height: 1.42; margin-top: 22px; max-width: 58ch; color: var(--ink-2); }
 .page-head { padding: 52px 0 8px; }
-.page-head h1 { max-width: 18ch; }
+.page-head h1 { max-width: 28ch; }
 .page-head .lede { font-size: 1.2rem; line-height: 1.42; margin-top: 20px; max-width: 60ch; color: var(--ink-2); }
 
 section.block { padding: 34px 0; }
@@ -225,7 +225,7 @@ dialog.gene::backdrop { background: rgba(8, 20, 16, 0.45); }
 table.kv { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
 table.kv th { text-align: left; font-weight: 600; color: var(--ink-2); font-size: 0.82rem; padding: 6px 12px 6px 0; border-bottom: 1px solid var(--rule-strong); }
 table.kv td { padding: 7px 12px 7px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
-table.kv td.mono { font-size: 0.8rem; word-break: break-all; }
+table.kv td.mono { font-size: 0.8rem; overflow-wrap: anywhere; }
 table.kv .num { text-align: right; font-variant-numeric: tabular-nums; }
 .fig { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 12px 14px; margin: 10px 0; overflow-x: auto; }
 .fig svg { display: block; max-width: 100%; height: auto; }

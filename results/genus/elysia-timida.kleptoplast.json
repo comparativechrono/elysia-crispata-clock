@@ -4,14 +4,14 @@
  "libraries": [
   {
    "library": "main",
-   "label": "",
+   "label": "Assembled individuals",
    "runs": [
     "SRR30016879"
    ],
    "kind": "hifi",
    "platform": "PacBio Revio (HiFi, amplified ultra-low-input library)",
-   "animal": "the sequenced animals (adults, Cadaqu\u00e9s, Spain)",
-   "note": "The whole Revio run behind the assembly. The library was amplified by PCR.",
+   "animal": "the individuals used for the assembly (adults, Cadaqu\u00e9s, Spain)",
+   "note": "The complete Revio run used for the assembly. The library was amplified by PCR.",
    "reads": 9552331,
    "bases": 53125525286,
    "bases_screened": 53125525286,

@@ -3,60 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Clock genes compared across Elysia species</title>
-<meta name="description" content="Circadian clock genes, kleptoplast identity and tests for algal gene transfer in the sea slugs of the genus Elysia, from public genome data.">
+<title>Comparison of clock genes across seven Elysia species</title>
+<meta name="description" content="Circadian clock genes, the algal source of the kleptoplasts and tests for algal gene transfer in sea slugs of the genus Elysia, based on public genome data.">
 <link rel="preload" href="assets/fonts/BricolageGrotesque-300-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <header class="masthead"><div class="wrap">
 <a class="brand" href="index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia</em> clocks</span></a>
-<nav aria-label="Site"><a href="index.html">Species</a><a href="compare.html" aria-current="page">Compare</a><a href="methods.html">Methods and data</a></nav>
+<nav aria-label="Site"><a href="index.html">Species</a><a href="compare.html" aria-current="page">Comparison</a><a href="methods.html">Methods and data</a></nav>
 </div></header>
 
 <main>
 
 <section class="page-head"><div class="wrap">
-<h1>The same clock in seven sea slugs</h1>
-<p class="lede">The 47 clock genes of <i>E. crispata</i>, looked for in the genome of every <i>Elysia</i> species that has one, and their proteins laid side by side.</p>
+<h1>Comparison of clock genes across seven <i>Elysia</i> species</h1>
+<p class="lede">The 47 clock genes catalogued in <i>E. crispata</i> were searched for in every <i>Elysia</i> species with a genome assembly, and the encoded proteins were aligned and compared.</p>
 <div class="answer">
-<p><strong>The clock is the same throughout the genus.</strong> 27 of the 47 genes are whole in the reference assembly of all seven species. Every one of the other species has both halves of the activator (Clock and Bmal1), the repressors Period, Timeless and a mammalian-type Cryptochrome, and a light-sensitive Cryptochrome, each as a whole gene.</p>
-<p><strong>Where a gene is missing or partial, the assembly is usually the reason.</strong> The two assemblies built wholly or mainly from short reads have the most genes that are not intact (<i>Elysia marginata</i> 14, <i>Elysia chlorotica</i> 8); the four built from accurate long reads have 3 to 4 each. Two genes are exceptions: the Go-opsins, whose number differs from species to species, and r-opsin-like 1, whose model is incomplete in <i>E. crispata</i> itself.</p>
-<p><strong>The proteins differ in how fast they change.</strong> The most alike across the genus are Ck2β 100%, Pp2a-C 100%, Pp2a-B56ε 99%; the least alike are Tipin 61%, Sirt1 66%, Vrille 70%. Among the core loop, Cry2 97%, Cry1 87%, Clock 85%, Bmal1 83%, Timeout 81%, Period 78%, Timeless 77%.</p>
+<p><strong>The set of clock genes is conserved across the genus.</strong> Of the 47 genes, 27 are complete in the reference assembly of all seven species. In each of the other species the two core activators (Clock and Bmal1), the repressors Period, Timeless and a mammalian-type Cryptochrome, and a light-sensitive <i>Drosophila</i>-type Cryptochrome are all present as complete genes.</p>
+<p><strong>Missing and partial genes mostly reflect the quality of the assemblies.</strong> The two assemblies built entirely or mainly from short reads have the largest numbers of genes that are not intact (14 in <i>E. marginata</i> and 8 in <i>E. chlorotica</i>), whereas the four assemblies built from high-accuracy long reads have 3 to 4 each. The exceptions are the Go-opsins, which vary in number between species, and r-opsin-like 1, for which the gene model is incomplete in <i>E. crispata</i> itself.</p>
+<p><strong>The proteins differ in their degree of conservation.</strong> The most conserved across the genus, by mean pairwise identity, are Ck2β (100%), Pp2a-C (100%) and Pp2a-B56ε (99%); the least conserved are Tipin (61%), Sirt1 (66%) and Vrille (70%). The values for the core loop are Cry2 (97%), Cry1 (87%), Clock (85%), Bmal1 (83%), Timeout (81%), Period (78%) and Timeless (77%).</p>
 </div>
 </div></section>
 
 <section class="block"><div class="wrap">
-<h2>Gene by species</h2>
-<p>Each cell shows the state of the gene in that species’ reference assembly, and how identical its protein is to the <i>E. crispata</i> one. Select a gene name for the alignment, or a cell to open the gene in that species.</p>
-<div class="legend"><span><i class="glyph ok"></i>intact</span><span><i class="glyph warn"></i>whole, sequence does not translate cleanly</span><span><i class="glyph part"></i>partial or in pieces</span><span><i class="glyph miss"></i>not found</span></div>
+<h2>Gene status by species</h2>
+<p>Each cell shows the status of the gene in the reference assembly of that species and the identity of its protein to the <i>E. crispata</i> protein. Select a gene name to see the alignment, or a cell to see the gene in that species.</p>
+<div class="legend"><span><i class="glyph ok"></i>intact</span><span><i class="glyph warn"></i>complete, with a frameshift or stop codon</span><span><i class="glyph part"></i>partial or fragmented</span><span><i class="glyph miss"></i>not found</span></div>
 <div class="tablewrap"><table class="matrix" id="matrix"></table></div>
-<p class="small muted" style="margin-top:12px;max-width:92ch">For <i>E. crispata</i> the state is that of the Sanger assembly xgElyCris1.1; all 47 genes are whole in at least one other assembly of that species. A model counts as intact when it fills at least 90% of the alignment positions that most sequences share.</p>
+<p class="small muted" style="margin-top:12px;max-width:92ch">For <i>E. crispata</i> the status refers to the Sanger Institute assembly xgElyCris1.1; all 47 genes are complete in at least one other assembly of that species. A gene model is classed as intact when it covers at least 90% of the alignment positions that are present in most sequences and contains no frameshift or stop codon.</p>
 </div></section>
 
 <section class="block"><div class="wrap">
-<h2>How alike are the proteins?</h2>
-<p>Mean identity between every pair of <i>Elysia</i> species, for each protein that is complete in at least two of them. Select a bar for the alignment.</p>
-<div class="fig"><div id="cons"></div><p class="figcap">Identity is counted over the positions where both proteins have a residue. Opsins and photolyases are shown with the rest; low values there partly reflect paralogues that are hard to tell apart.</p></div>
+<h2>Protein conservation</h2>
+<p>Mean pairwise identity among the <i>Elysia</i> species, for each protein that is complete in at least two of them. Select a bar to see the alignment.</p>
+<div class="fig"><div id="cons"></div><p class="figcap">Identity is calculated over the positions at which both proteins have a residue. For the opsins and photolyases, low values partly reflect the difficulty of distinguishing paralogues.</p></div>
 </div></section>
 
 <section class="block"><div class="wrap">
-<h2>One protein, all species</h2>
+<h2>Protein alignments</h2>
 <div class="gene-pick"><label for="pick">Protein</label><select id="pick"></select><span class="muted small" id="pick-note"></span></div>
 <div id="idmatrix"></div>
 <div class="aln-wrap" style="margin-top:14px"><div class="aln" id="aln"></div></div>
-<p class="small muted" style="margin-top:10px;max-width:92ch">Shaded residues differ from the most common residue among the <i>Elysia</i> sequences at that position. The three sequences below the line are other gastropods, for orientation. Alignments are in <code>results/genus/alignments/</code> in the repository.</p>
+<p class="small muted" style="margin-top:10px;max-width:92ch">Shaded residues differ from the most common residue at that position among the <i>Elysia</i> sequences. The three sequences below the dotted line are from other gastropods and are included as outgroups. The alignments are available in <code>results/genus/alignments/</code> in the repository.</p>
 </div></section>
 
 <section class="block"><div class="wrap">
-<h2>How the species are related</h2>
-<p>A tree from 35 clock proteins that are complete in every species, joined end to end (21,190 aligned positions), rooted on the sea hare <i>Aplysia</i>.</p>
-<div class="fig"><div id="tree"></div><p class="figcap">Maximum likelihood (IQ-TREE, LG+F+G4). Numbers are ultrafast bootstrap supports. Branch lengths are substitutions per site. A tree from clock proteins alone is a guide to the species on this site, not a phylogeny of the genus.</p></div>
+<h2>Species tree</h2>
+<p>The tree was inferred from a concatenated alignment of the 35 clock proteins that are complete in every species (21,190 aligned positions) and is rooted on the sea hare <i>Aplysia californica</i>.</p>
+<div class="fig"><div id="tree"></div><p class="figcap">Maximum-likelihood tree (IQ-TREE, LG+F+G4). Numbers are ultrafast bootstrap support values, and branch lengths are in substitutions per site. A tree based on clock proteins alone is intended as a guide to the relationships among the species on this site, not as a phylogeny of the genus.</p></div>
 </div></section>
 
 <section class="block"><div class="wrap">
-<h2>Do the genes stay on the same chromosomes?</h2>
-<p>Four of the assemblies are chromosome-level, each with 15 chromosomes numbered by size, so the numbers themselves do not correspond. What can be compared is company: of the 54 pairs of clock genes that share a chromosome in <i>E. crispata</i>, 53 share one in all three other species too.</p>
+<h2>Conservation of chromosomal linkage</h2>
+<p>Four of the assemblies are chromosome-level. Each has 15 chromosomes, which are numbered by size, so chromosome numbers do not correspond between species. Linkage can nevertheless be compared: of the 54 pairs of clock genes that lie on the same chromosome in <i>E. crispata</i>, 53 also lie on the same chromosome in all three other species.</p>
 <div class="tablewrap"><table class="data" id="linkage"></table></div>
 </div></section>
 
@@ -65,8 +65,8 @@
 </main>
 <footer class="site"><div class="wrap">
 
-<p>Built 2026-11-14 from public genome data. The analysis is independent of the groups that produced the genomes and has not been peer reviewed. Gene roles are inferred from homology with flies and mammals; nothing here measures a rhythm.</p>
-<p>Scripts, tables and sequences are in the repository that hosts this site. Photographs are credited on the <a href="methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
+<p>Last updated 14 November 2026. All analyses are based on publicly available genome data. They were carried out independently of the groups that produced the genomes and have not been peer reviewed. Gene functions are inferred from homology with <i>Drosophila</i> and mammals; no rhythms were measured.</p>
+<p>The scripts, tables and sequences are available in the repository that hosts this site. Photograph credits are given on the <a href="methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
 </div></footer>
 <script src="data/genus.js"></script>
 <script src="assets/pages.js"></script>

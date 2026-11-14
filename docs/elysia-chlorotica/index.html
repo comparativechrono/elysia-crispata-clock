@@ -4,42 +4,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Elysia chlorotica clock genes</title>
-<meta name="description" content="The circadian clock genes of the sea slug Elysia chlorotica, located in the genome assembly ElyChl2.0.">
+<meta name="description" content="Circadian clock genes of the sea slug Elysia chlorotica, identified in the genome assembly ElyChl2.0.">
 <link rel="preload" href="../assets/fonts/BricolageGrotesque-300-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <header class="masthead"><div class="wrap">
 <a class="brand" href="../index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia</em> clocks</span></a>
-<nav aria-label="Site"><a href="../index.html">Species</a><a href="../compare.html">Compare</a><a href="../methods.html">Methods and data</a></nav>
+<nav aria-label="Site"><a href="../index.html">Species</a><a href="../compare.html">Comparison</a><a href="../methods.html">Methods and data</a></nav>
 </div></header>
-<div class="subhead"><div class="wrap"><a class="sp" href="index.html"><i>Elysia chlorotica</i></a><nav aria-label="Pages for this species"><a href="index.html" aria-current="page">Clock genes</a><a href="kleptoplasts.html">Whose chloroplasts</a><a href="gene-transfer.html">Gene transfer</a></nav></div></div>
+<div class="subhead"><div class="wrap"><a class="sp" href="index.html"><i>Elysia chlorotica</i></a><nav aria-label="Pages for this species"><a href="index.html" aria-current="page">Clock genes</a><a href="kleptoplasts.html">Kleptoplasts</a><a href="gene-transfer.html">Gene transfer</a></nav></div></div>
 <main>
 
 <section class="intro"><div class="wrap">
-<h1 style="max-width:18ch">The clock genes of <i>Elysia chlorotica</i></h1>
-<p class="lede">Where each of the 47 clock genes catalogued in <i>E. crispata</i> sits in the scaffold-level assembly ElyChl2.0 (557 Mb), whether the assembly has it whole, and the protein it encodes. The sequenced animal came from Martha&#x27;s Vineyard, Massachusetts, USA.</p>
+<h1 style="max-width:22ch">Circadian clock genes of <i>Elysia&nbsp;chlorotica</i></h1>
+<p class="lede">The 47 clock genes catalogued in <i>E. crispata</i> were searched for in ElyChl2.0, the scaffold-level assembly of <i>Elysia chlorotica</i> (557 Mb). For each gene, this page gives its position in the assembly, whether it is complete, and the protein it encodes. The sequenced specimen came from Martha’s Vineyard, Massachusetts, USA.</p>
 <div class="clockwork">
 <div id="schematic"></div>
 <div class="clockwork-list" id="schematic-list"></div>
 <div class="clockwork-legend" aria-label="Key to gene status in ElyChl2.0">
 <span><i class="glyph ok"></i>intact in ElyChl2.0</span>
-<span><i class="glyph warn"></i>whole, but the sequence does not translate cleanly</span>
-<span><i class="glyph part"></i>partial or in pieces</span>
+<span><i class="glyph warn"></i>complete, but with a frameshift or stop codon in the assembly sequence</span>
+<span><i class="glyph part"></i>partial or fragmented</span>
 <span><i class="glyph miss"></i>not found</span>
 </div>
 </div>
-<p class="clockwork-caveat">Select a gene to open it. The wiring is the textbook fly and mouse clock; which gene does what in <i>Elysia</i> has not been tested.</p>
+<p class="clockwork-caveat">Select a gene to see its details. The diagram shows the interactions established in <i>Drosophila</i> and mouse; the functions of these genes have not been tested in <i>Elysia</i>.</p>
 </div></section>
 
 <section class="block"><div class="wrap">
 <div class="cols">
-<div><h3>What was found</h3>
-<p>39 of the 47 genes are intact and five more are whole but need a frameshift or stop codon to read through (Bmal1, Period, Cry-DASH 1, Vrille, Slimb). Three are partial or in pieces (Timeout, Lark, r-opsin 1).</p></div>
-<div><h3>How the genes were found</h3>
-<p>23 models are the species’ own annotated genes and 24 are the <i>E. crispata</i> protein aligned to the genome, used where the annotation has no gene or a shorter one. Every model had to pass a reciprocal test against all <i>E. crispata</i> proteins, which keeps paralogues apart. The proteins are 66 to 100% identical to their <i>E. crispata</i> counterparts (median 88%).</p></div>
-<div><h3>What to keep in mind</h3>
-<p>The assembly is in 9,989 scaffolds built from short reads and early PacBio reads. Genes that come out partial or with a broken reading frame here are more likely casualties of the assembly than of evolution.</p></div>
+<div><h3>Genes found</h3>
+<p>Of the 47 genes, 39 are intact, and five more are complete but contain a frameshift or stop codon in the assembly sequence (Bmal1, Period, Cry-DASH 1, Vrille, Slimb). Three are partial or fragmented (Timeout, Lark, r-opsin 1).</p></div>
+<div><h3>Identification</h3>
+<p>Of the 47 gene models, 23 are annotated genes of this species. The other 24 were obtained by aligning the <i>E. crispata</i> protein to the genome, at loci where the annotation has no gene or only a shorter one. Each gene model was accepted only if it passed a reciprocal best-hit test against all <i>E. crispata</i> proteins, which distinguishes orthologues from paralogues. The proteins are 66 to 100% identical to their <i>E. crispata</i> orthologues (median 88%).</p></div>
+<div><h3>Limitations of the assembly</h3>
+<p>The assembly consists of 9,989 scaffolds built from short reads and early PacBio reads. Genes that appear partial here, or that have an interrupted reading frame, are more likely to reflect errors in the assembly than real changes in the genes.</p></div>
 </div>
 </div></section>
 
@@ -47,20 +47,20 @@
 <h2>All 47 genes</h2>
 <div class="filters" id="filters"></div>
 <div class="tablewrap"><table class="genes">
-<thead><tr><th>Gene</th><th>Role</th><th class="num">Protein, aa</th><th>In ElyChl2.0</th><th class="num" title="Identical residues over the aligned part of the two proteins">Identity to <i>E. crispata</i></th><th>Model</th></tr></thead>
+<thead><tr><th>Gene</th><th>Category</th><th class="num">Protein length (aa)</th><th>Status in ElyChl2.0</th><th class="num" title="Percentage of identical residues over the aligned part of the two proteins">Identity to <i>E. crispata</i></th><th>Gene model</th></tr></thead>
 <tbody id="genes-body"></tbody></table></div>
-<p class="small muted" style="margin-top:12px;max-width:90ch">A model is called intact when it fills at least 90% of the alignment positions that most species share and the genome reads through without a frameshift or stop. Models aligned from <i>E. crispata</i> can miss poorly conserved ends of a protein.</p>
+<p class="small muted" style="margin-top:12px;max-width:90ch">A gene model is classed as intact when it covers at least 90% of the alignment positions that are present in most species and its coding sequence in the assembly contains no frameshift or stop codon. Models obtained by aligning the <i>E. crispata</i> protein may lack poorly conserved regions at the ends of a protein.</p>
 
-<h3 style="margin-top:34px">Looked for and not found</h3>
-<p style="max-width:80ch">The seven clock-associated genes that <i>E. crispata</i> lacks were searched for here too, with the same fly and mammal proteins. None has a counterpart in this genome either.</p>
+<h3 style="margin-top:34px">Genes searched for but not found</h3>
+<p style="max-width:80ch">The seven clock-associated genes that were not found in <i>E. crispata</i> were also searched for in this genome, with the same <i>Drosophila</i> and mammalian query proteins. None of them was found.</p>
 </div></section>
 <dialog class="gene" id="gene" aria-label="Gene details"></dialog>
 
 </main>
 <footer class="site"><div class="wrap">
-<p><i>Elysia chlorotica</i>: genome assembly ElyChl2.0 (GCA_003991915.1). Sources and papers for every species are listed on the <a href="../methods.html">methods page</a>.</p>
-<p>Built 2026-11-14 from public genome data. The analysis is independent of the groups that produced the genomes and has not been peer reviewed. Gene roles are inferred from homology with flies and mammals; nothing here measures a rhythm.</p>
-<p>Scripts, tables and sequences are in the repository that hosts this site. Photographs are credited on the <a href="../methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
+<p>Data for <i>Elysia chlorotica</i>: genome assembly ElyChl2.0 (GCA_003991915.1). The data sources and publications for all species are listed on the <a href="../methods.html">methods page</a>.</p>
+<p>Last updated 14 November 2026. All analyses are based on publicly available genome data. They were carried out independently of the groups that produced the genomes and have not been peer reviewed. Gene functions are inferred from homology with <i>Drosophila</i> and mammals; no rhythms were measured.</p>
+<p>The scripts, tables and sequences are available in the repository that hosts this site. Photograph credits are given on the <a href="../methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
 </div></footer>
 <script src="../data/elysia-chlorotica.js"></script>
 <script src="../assets/app.js"></script>

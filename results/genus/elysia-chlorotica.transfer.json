@@ -209,7 +209,7 @@
    ],
    "kind": "clr",
    "platform": "PacBio RS (older, error-prone long reads)",
-   "animal": "an adult (isolate EC2010, Martha's Vineyard) used for the long reads of the assembly",
+   "animal": "an adult (isolate EC2010, Martha\u2019s Vineyard), the source of the long reads used for the assembly",
    "reads": 7717313,
    "bases": 9445445540,
    "bases_screened": 9445445540,
@@ -1223,7 +1223,7 @@
    },
    "sample": null,
    "sensitivity": null,
-   "note": "The whole run.",
+   "note": "The complete run.",
    "thinned": 1,
    "candidate_places": null,
    "repeat_joins": null,
@@ -1241,8 +1241,8 @@
     "SRR7647850"
    ],
    "kind": "short",
-   "platform": "Illumina HiSeq 2000 (paired; inserts of 170, 500 and 800 bp)",
-   "animal": "an adult used for the short reads of the assembly",
+   "platform": "Illumina HiSeq 2000 (paired-end; inserts of 170, 500 and 800 bp)",
+   "animal": "a second adult, the source of the short reads used for the assembly",
    "reads": 1024996320,
    "bases": 102499632000,
    "bases_screened": 102499632000,
@@ -2441,7 +2441,7 @@
     "mixed_pairs_per_insertion_per_cell": 135.0,
     "split_mates_per_insertion_per_cell": 17.82
    },
-   "note": "All six paired-end libraries of this adult, in full. The mate-pair libraries, made from other animals, were left out.",
+   "note": "All six paired-end libraries from this adult, analysed in full. The mate-pair libraries, which were made from other individuals, were excluded.",
    "thinned": 50,
    "candidate_places": {
     "places": [
@@ -2905,8 +2905,8 @@
     "SRR768899"
    ],
    "kind": "short",
-   "platform": "Illumina Genome Analyzer IIx (paired)",
-   "animal": "eggs (germ line; Bhattacharya et al. 2013), which have not yet fed and hold no chloroplasts",
+   "platform": "Illumina Genome Analyzer IIx (paired-end)",
+   "animal": "eggs (germline DNA; Bhattacharya et al. 2013), which contain no chloroplasts because the animals have not yet fed",
    "reads": 153333832,
    "bases": 22386739472,
    "bases_screened": 22386739472,

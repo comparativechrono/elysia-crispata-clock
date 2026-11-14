@@ -4,14 +4,14 @@
  "libraries": [
   {
    "library": "main",
-   "label": "Shenzhen animal",
+   "label": "Shenzhen individual",
    "runs": [
     "SRR41369319"
    ],
    "kind": "short",
-   "platform": "Illumina NovaSeq X Plus (paired)",
-   "animal": "another animal (isolate SZU-EL01, Shenzhen, China, 2025), not the one assembled",
-   "note": "The whole shotgun library used for the mitochondrial genome QB170827.",
+   "platform": "Illumina NovaSeq X Plus (paired-end)",
+   "animal": "a different individual (isolate SZU-EL01, Shenzhen, China, 2025), not the one used for the assembly",
+   "note": "The complete shotgun library that was used to assemble the mitochondrial genome QB170827.",
    "reads": 83046474,
    "bases": 12456971100,
    "bases_screened": 12456971100,
@@ -484,14 +484,14 @@
   },
   {
    "library": "hainan",
-   "label": "Hainan animal",
+   "label": "Hainan individual",
    "runs": [
     "SRR17036819"
    ],
    "kind": "short",
-   "platform": "Illumina HiSeq 2500 (paired)",
-   "animal": "another animal (genome-survey library, Hainan University), not the one assembled",
-   "note": "The whole library. No reads of the assembled animal are public.",
+   "platform": "Illumina HiSeq 2500 (paired-end)",
+   "animal": "a different individual (genome-survey library, Hainan University), not the one used for the assembly",
+   "note": "The complete library. No reads from the assembled individual are publicly available.",
    "reads": 169685414,
    "bases": 25452812100,
    "bases_screened": 25452812100,

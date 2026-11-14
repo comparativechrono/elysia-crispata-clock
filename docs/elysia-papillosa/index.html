@@ -4,42 +4,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Elysia papillosa clock genes</title>
-<meta name="description" content="The circadian clock genes of the sea slug Elysia papillosa, located in the genome assembly xgElyPapi4.2.">
+<meta name="description" content="Circadian clock genes of the sea slug Elysia papillosa, identified in the genome assembly xgElyPapi4.2.">
 <link rel="preload" href="../assets/fonts/BricolageGrotesque-300-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <header class="masthead"><div class="wrap">
 <a class="brand" href="../index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia</em> clocks</span></a>
-<nav aria-label="Site"><a href="../index.html">Species</a><a href="../compare.html">Compare</a><a href="../methods.html">Methods and data</a></nav>
+<nav aria-label="Site"><a href="../index.html">Species</a><a href="../compare.html">Comparison</a><a href="../methods.html">Methods and data</a></nav>
 </div></header>
-<div class="subhead"><div class="wrap"><a class="sp" href="index.html"><i>Elysia papillosa</i></a><nav aria-label="Pages for this species"><a href="index.html" aria-current="page">Clock genes</a><a href="kleptoplasts.html">Whose chloroplasts</a><a href="gene-transfer.html">Gene transfer</a></nav></div></div>
+<div class="subhead"><div class="wrap"><a class="sp" href="index.html"><i>Elysia papillosa</i></a><nav aria-label="Pages for this species"><a href="index.html" aria-current="page">Clock genes</a><a href="kleptoplasts.html">Kleptoplasts</a><a href="gene-transfer.html">Gene transfer</a></nav></div></div>
 <main>
 
 <section class="intro"><div class="wrap">
-<h1 style="max-width:18ch">The clock genes of <i>Elysia papillosa</i></h1>
-<p class="lede">Where each of the 47 clock genes catalogued in <i>E. crispata</i> sits in the contig-level assembly xgElyPapi4.2 (1,024 Mb), whether the assembly has it whole, and the protein it encodes. The sequenced animal came from Tampa, Florida, USA.</p>
+<h1 style="max-width:22ch">Circadian clock genes of <i>Elysia&nbsp;papillosa</i></h1>
+<p class="lede">The 47 clock genes catalogued in <i>E. crispata</i> were searched for in xgElyPapi4.2, the contig-level assembly of <i>Elysia papillosa</i> (1,024 Mb). For each gene, this page gives its position in the assembly, whether it is complete, and the protein it encodes. The sequenced specimen came from Tampa, Florida, USA.</p>
 <div class="clockwork">
 <div id="schematic"></div>
 <div class="clockwork-list" id="schematic-list"></div>
 <div class="clockwork-legend" aria-label="Key to gene status in xgElyPapi4.2">
 <span><i class="glyph ok"></i>intact in xgElyPapi4.2</span>
-<span><i class="glyph warn"></i>whole, but the sequence does not translate cleanly</span>
-<span><i class="glyph part"></i>partial or in pieces</span>
+<span><i class="glyph warn"></i>complete, but with a frameshift or stop codon in the assembly sequence</span>
+<span><i class="glyph part"></i>partial or fragmented</span>
 <span><i class="glyph miss"></i>not found</span>
 </div>
 </div>
-<p class="clockwork-caveat">Select a gene to open it. The wiring is the textbook fly and mouse clock; which gene does what in <i>Elysia</i> has not been tested.</p>
+<p class="clockwork-caveat">Select a gene to see its details. The diagram shows the interactions established in <i>Drosophila</i> and mouse; the functions of these genes have not been tested in <i>Elysia</i>.</p>
 </div></section>
 
 <section class="block"><div class="wrap">
 <div class="cols">
-<div><h3>What was found</h3>
-<p>43 of the 47 genes are intact. Three are partial or in pieces (Hr3, Nemo, r-opsin-like 1), and one has no counterpart (Go-opsin 1).</p></div>
-<div><h3>How the genes were found</h3>
-<p>The assembly has no public gene annotation, so all 46 models are the <i>E. crispata</i> protein aligned to the genome. Every model had to pass a reciprocal test against all <i>E. crispata</i> proteins, which keeps paralogues apart. The proteins are 55 to 100% identical to their <i>E. crispata</i> counterparts (median 86%).</p></div>
-<div><h3>What to keep in mind</h3>
-<p>A contig-level assembly from accurate long reads, not yet scaffolded into chromosomes and without a gene annotation. Every model here is the <i>E. crispata</i> protein aligned to the genome.</p></div>
+<div><h3>Genes found</h3>
+<p>Of the 47 genes, 43 are intact. Three are partial or fragmented (Hr3, Nemo, r-opsin-like 1), and one was not found (Go-opsin 1).</p></div>
+<div><h3>Identification</h3>
+<p>No gene annotation is available in GenBank for this assembly, so all 46 gene models were obtained by aligning the <i>E. crispata</i> proteins to the genome. Each gene model was accepted only if it passed a reciprocal best-hit test against all <i>E. crispata</i> proteins, which distinguishes orthologues from paralogues. The proteins are 55 to 100% identical to their <i>E. crispata</i> orthologues (median 86%).</p></div>
+<div><h3>Limitations of the assembly</h3>
+<p>This is a contig-level assembly built from PacBio HiFi reads, which has not yet been scaffolded into chromosomes. Because all gene models were derived from the <i>E. crispata</i> proteins, regions that are poorly conserved or that are absent from the <i>E. crispata</i> model may be missing from the models shown here.</p></div>
 </div>
 </div></section>
 
@@ -47,20 +47,20 @@
 <h2>All 47 genes</h2>
 <div class="filters" id="filters"></div>
 <div class="tablewrap"><table class="genes">
-<thead><tr><th>Gene</th><th>Role</th><th class="num">Protein, aa</th><th>In xgElyPapi4.2</th><th class="num" title="Identical residues over the aligned part of the two proteins">Identity to <i>E. crispata</i></th><th>Model</th></tr></thead>
+<thead><tr><th>Gene</th><th>Category</th><th class="num">Protein length (aa)</th><th>Status in xgElyPapi4.2</th><th class="num" title="Percentage of identical residues over the aligned part of the two proteins">Identity to <i>E. crispata</i></th><th>Gene model</th></tr></thead>
 <tbody id="genes-body"></tbody></table></div>
-<p class="small muted" style="margin-top:12px;max-width:90ch">A model is called intact when it fills at least 90% of the alignment positions that most species share and the genome reads through without a frameshift or stop. Models aligned from <i>E. crispata</i> can miss poorly conserved ends of a protein.</p>
+<p class="small muted" style="margin-top:12px;max-width:90ch">A gene model is classed as intact when it covers at least 90% of the alignment positions that are present in most species and its coding sequence in the assembly contains no frameshift or stop codon. Models obtained by aligning the <i>E. crispata</i> protein may lack poorly conserved regions at the ends of a protein.</p>
 
-<h3 style="margin-top:34px">Looked for and not found</h3>
-<p style="max-width:80ch">The seven clock-associated genes that <i>E. crispata</i> lacks were searched for here too, with the same fly and mammal proteins. None has a counterpart in this genome either.</p>
+<h3 style="margin-top:34px">Genes searched for but not found</h3>
+<p style="max-width:80ch">The seven clock-associated genes that were not found in <i>E. crispata</i> were also searched for in this genome, with the same <i>Drosophila</i> and mammalian query proteins. None of them was found.</p>
 </div></section>
 <dialog class="gene" id="gene" aria-label="Gene details"></dialog>
 
 </main>
 <footer class="site"><div class="wrap">
-<p><i>Elysia papillosa</i>: genome assembly xgElyPapi4.2 (GCA_977015215.2). Sources and papers for every species are listed on the <a href="../methods.html">methods page</a>.</p>
-<p>Built 2026-11-14 from public genome data. The analysis is independent of the groups that produced the genomes and has not been peer reviewed. Gene roles are inferred from homology with flies and mammals; nothing here measures a rhythm.</p>
-<p>Scripts, tables and sequences are in the repository that hosts this site. Photographs are credited on the <a href="../methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
+<p>Data for <i>Elysia papillosa</i>: genome assembly xgElyPapi4.2 (GCA_977015215.2). The data sources and publications for all species are listed on the <a href="../methods.html">methods page</a>.</p>
+<p>Last updated 14 November 2026. All analyses are based on publicly available genome data. They were carried out independently of the groups that produced the genomes and have not been peer reviewed. Gene functions are inferred from homology with <i>Drosophila</i> and mammals; no rhythms were measured.</p>
+<p>The scripts, tables and sequences are available in the repository that hosts this site. Photograph credits are given on the <a href="../methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
 </div></footer>
 <script src="../data/elysia-papillosa.js"></script>
 <script src="../assets/app.js"></script>

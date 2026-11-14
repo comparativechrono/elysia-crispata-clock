@@ -1,4 +1,5 @@
 """Shared page frame for every page of the site (header, species tabs, footer)."""
+import datetime
 import html
 
 LABEL = {"Ck1de": "Ck1δ/ε", "Ck1a": "Ck1α", "Ck2a": "Ck2α", "Ck2b": "Ck2β", "Pp1a": "Pp1α", "Pp1b": "Pp1β", "Pp2aC": "Pp2a-C",
@@ -8,10 +9,23 @@ LABEL = {"Ck1de": "Ck1δ/ε", "Ck1a": "Ck1α", "Ck2a": "Ck2α", "Ck2b": "Ck2β",
 CATS = {"core": "Core loop", "photolyase": "Photolyase family", "loop2": "Second loop", "kinase": "Kinase", "phosphatase": "Phosphatase",
         "degradation": "Degradation", "modulator": "Modulator", "output": "Output", "light": "Opsin"}
 STATUS_CLASS = {"complete": "ok", "complete_discrepancy": "warn", "fragmented": "part", "partial": "part", "divergent": "miss", "absent": "miss"}
-STATUS_WORD = {"complete": "intact", "complete_discrepancy": "whole, sequence differs", "fragmented": "in pieces", "partial": "partial", "divergent": "divergent copy only", "absent": "missing"}
+STATUS_WORD = {"complete": "intact", "complete_discrepancy": "complete, with a frameshift or stop codon", "fragmented": "fragmented", "partial": "partial", "divergent": "divergent copy only", "absent": "not found"}
 
-SITE_NAV = [("index.html", "Species"), ("compare.html", "Compare"), ("methods.html", "Methods and data")]
-SPECIES_TABS = [("index.html", "Clock genes"), ("kleptoplasts.html", "Whose chloroplasts"), ("gene-transfer.html", "Gene transfer"), ("methods.html", "Methods for this species")]
+WORDS = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
+def word(k):
+    """small whole numbers as words, for running text"""
+    return WORDS[k] if isinstance(k, int) and 0 <= k < len(WORDS) else f"{k:,}"
+
+def long_date(iso):
+    """2026-11-14 -> 14 November 2026"""
+    try:
+        d = datetime.date.fromisoformat(iso)
+    except (TypeError, ValueError):
+        return iso
+    return f"{d.day} {d.strftime('%B')} {d.year}"
+
+SITE_NAV = [("index.html", "Species"), ("compare.html", "Comparison"), ("methods.html", "Methods and data")]
+SPECIES_TABS = [("index.html", "Clock genes"), ("kleptoplasts.html", "Kleptoplasts"), ("gene-transfer.html", "Gene transfer"), ("methods.html", "Methods")]
 
 def page(title, body, root="", description="", site_current=None, species=None, tabs=None, tab_current=None, scripts="", today="", sources=""):
     """root: '' for pages at the top of the site, '../' for pages in a species folder.
@@ -22,7 +36,7 @@ def page(title, body, root="", description="", site_current=None, species=None, 
     if species:
         links = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h == tab_current else ""}>{t}</a>' for h, t in (tabs or []))
         sub = f'<div class="subhead"><div class="wrap"><a class="sp" href="index.html"><i>{e(species)}</i></a><nav aria-label="Pages for this species">{links}</nav></div></div>'
-    desc = description or "Circadian clock genes, kleptoplast identity and tests for algal gene transfer in the sea slugs of the genus Elysia, from public genome data."
+    desc = description or "Circadian clock genes, the algal source of the kleptoplasts and tests for algal gene transfer in sea slugs of the genus Elysia, based on public genome data."
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -44,8 +58,8 @@ def page(title, body, root="", description="", site_current=None, species=None, 
 </main>
 <footer class="site"><div class="wrap">
 {f"<p>{sources}</p>" if sources else ""}
-<p>Built {today} from public genome data. The analysis is independent of the groups that produced the genomes and has not been peer reviewed. Gene roles are inferred from homology with flies and mammals; nothing here measures a rhythm.</p>
-<p>Scripts, tables and sequences are in the repository that hosts this site. Photographs are credited on the <a href="{root}methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
+<p>Last updated {long_date(today)}. All analyses are based on publicly available genome data. They were carried out independently of the groups that produced the genomes and have not been peer reviewed. Gene functions are inferred from homology with <i>Drosophila</i> and mammals; no rhythms were measured.</p>
+<p>The scripts, tables and sequences are available in the repository that hosts this site. Photograph credits are given on the <a href="{root}methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
 </div></footer>
 {scripts}
 </body>
