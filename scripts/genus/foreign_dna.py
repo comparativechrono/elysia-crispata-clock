@@ -112,11 +112,12 @@ def lengths(asm):
 
 
 def background(asm, n=40, size=20000, seed=1):
-    """Share of long reading frames (standard code) in n random windows of the assembly."""
+    """Share of long reading frames (standard code) in n random windows of the assembly, with the
+    windows themselves (sequence, start, share, G+C content)."""
     rnd = random.Random(f"{seed}-{asm}")
     big = [(c, m) for c, m in lengths(asm).items() if m > 3 * size]
     tot = sum(m for _, m in big)
-    vals = []
+    vals, rows = [], []
     while len(vals) < n:
         r = rnd.randrange(tot)
         for c, m in big:
@@ -127,9 +128,12 @@ def background(asm, n=40, size=20000, seed=1):
         seq = fetch(asm, f"{c}:{a + 1}-{a + size}")
         if seq.upper().count("N") > size / 2:
             continue
-        vals.append(share(orf_mask(seq), seq))
+        up = seq.upper()
+        acgt = sum(up.count(x) for x in "ACGT")
+        rows.append([c, a, round(share(orf_mask(seq), seq), 4), round((up.count("G") + up.count("C")) / max(1, acgt), 4)])
+        vals.append(rows[-1][2])
     vals.sort()
-    return dict(windows=len(vals), median=round(statistics.median(vals), 3), p90=round(vals[int(0.9 * len(vals))], 3))
+    return dict(windows=len(vals), median=round(statistics.median(vals), 3), p90=round(vals[int(0.9 * len(vals))], 3), list=rows)
 
 
 def kinds(record):

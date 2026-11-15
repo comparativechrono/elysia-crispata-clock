@@ -98,7 +98,7 @@ for (asm, ctg), ls in sorted(foreign.items()):
     hits = [x["best_hit"].split("|")[-1] for x in s["list"] if x["cls"] in ("microbe", "alga") and x["best_hit"].split("|")[0] in ("BAC", "ALG", "CYA", "FUN")]
     verdicts[(asm, ctg)] = dict(
         assembly=asm, sequence=ctg, length=s["contig_length"], gc=round(s["gc"], 3), genome_gc=F["genome_gc"].get(asm),
-        orf_share=whole, genetic_code=code, background_orf_share=bg[asm], stretches=st, stretch_kinds=j["stretch_kinds"],
+        orf_share=whole, genetic_code=code, background_orf_share={k: v for k, v in bg[asm].items() if k != "list"}, stretches=st, stretch_kinds=j["stretch_kinds"],
         bacterial_identity_median=s["bacterial_identity_median"],
         nearest_bacteria=s["nearest_bacteria"], other_genes=hits[:12], verdict=verdict, foreign_stretch=segment,
         loci=[dict(query=l["query"], regulators=queries[l["query"]]["name"], start=l["start"], end=l["end"], identity=l["identity"],
