@@ -3,13 +3,13 @@
 # they were run. E. crispata has its own, earlier pipeline (scripts/10 to 29); the two steps of
 # this one that were applied to it as well are in crispata() below.
 #
-# usage: run_screens.sh STEP ...      STEP = panel | assembly | reads | controls | loci | proteins | crispata | other_assemblies | crispata_animals | regulators | collect | all
+# usage: run_screens.sh STEP ...      STEP = panel | assembly | reads | controls | loci | proteins | crispata | other_assemblies | crispata_animals | regulators | census | collect | all
 #        DRY=1 run_screens.sh all     prints the commands without running them
 #
 # Layout (all outside the repository; set with the variables below)
 #   $DATA/asm/<slug>/genome.fa.gz           assemblies (00_fetch_assemblies.sh; bgzip + faidx)
 #   $DATA/genus_refs/                       extra references for the panel and the barcode records
-#   $WORK/panel, asm_screen, reads/<slug>[.<library>], protscreen, chl_control
+#   $WORK/panel, asm_screen, reads/<slug>[.<library>], protscreen, chl_control, census
 # Needs 6 GB of memory and about 15 GB of free disk. Every sequencing run is read in full, in
 # pieces; a run of up to 11 GB is fetched first, a larger one is read from the archive directly.
 # Nothing but the chosen reads and a random sample is kept. One run takes 10 to 90 minutes on two
@@ -355,6 +355,15 @@ regulators(){
   run bash "$HERE/74_crydash_tree.sh" "$WORK/crydash" "$REPO/results/genus/crydash_tree"
 }
 
+census(){
+  # DNA of bacteria and other organisms in every sequence of the eleven assemblies, judged by the rules of
+  # foreign_dna.py: one inventory, which contains every foreign sequence that the searches above found.
+  big python3 "$HERE/76_foreign_census.py" "$WORK/census" "$HGT/alien/alien_db.dmnd" "$PANEL/panel.fa" "$PANEL/panel.tsv" \
+      "$REPO/config/panel_extra.tsv" "$REPO/results" "$REPO/results/genus/foreign_dna_census.json.gz" \
+      elysia-crispata elysia-crispata-alt elysia-crispata-purdue elysia-crispata-tampa elysia-chlorotica elysia-marginata \
+      elysia-timida elysia-leucolegnote elysia-atroviridis elysia-papillosa elysia-papillosa-alt
+}
+
 collect(){
   run python3 "$HERE/39_collect_species.py" "$REPO" "$WORK/reads" "$WORK/asm_screen" "$WORK/protscreen"
   run python3 "$HERE/45_export_tables.py" "$REPO" "$WORK"
@@ -366,8 +375,8 @@ collect(){
 [ $# -gt 0 ] || { sed -n 2,8p "$0"; exit 1; }
 for step in "$@"; do
   case $step in
-    all) panel; assembly; reads; controls; loci; proteins; crispata; other_assemblies; crispata_animals; regulators; collect ;;
-    panel|assembly|reads|controls|loci|proteins|crispata|other_assemblies|crispata_animals|regulators|collect) $step ;;
+    all) panel; assembly; reads; controls; loci; proteins; crispata; other_assemblies; crispata_animals; regulators; census; collect ;;
+    panel|assembly|reads|controls|loci|proteins|crispata|other_assemblies|crispata_animals|regulators|census|collect) $step ;;
     *) echo "unknown step: $step" >&2; exit 1 ;;
   esac
 done

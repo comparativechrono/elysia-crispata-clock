@@ -170,25 +170,77 @@ Foreign DNA in the assemblies:
   adult or from the eggs contains it. No read from any library crosses either boundary of the
   230 bp region, and two long reads span the locus without it. No short read crosses a boundary
   of the mitochondrial regions. None of the *Vaucheria* nuclear genes reported in early studies
-  (psbO, prk, lhc, chlD, chlG, chlH) has a match in the assembly. Fourteen scaffolds (525 kb)
-  derive from a bacterium related to *Francisella*.
-- *E. marginata*: one 3.7 kb scaffold consists of *Bryopsis* plastid DNA. About 2.0 Mb on 23
-  scaffolds is bacterial (mycoplasma-like, flavobacteria-like and others), and the gene set
-  published with the assembly includes genes on these scaffolds.
+  (psbO, prk, lhc, chlD, chlG, chlH) has a match in the assembly. 99 scaffolds (1.74 Mb) are
+  DNA of bacteria and other organisms, 1.10 Mb of it on scaffolds whose genes are closest to
+  those of *Francisella* (see the census below).
+- *E. marginata*: one 3.7 kb scaffold consists of *Bryopsis* plastid DNA. 233 scaffolds (3.60 Mb)
+  are DNA of bacteria and other organisms (mycoplasma-like, flavobacteria-like and others), and
+  bacterial stretches lie at the ends of two slug scaffolds (40 kb); the gene set published with
+  the assembly includes genes on these scaffolds.
 - *E. leucolegnote*: the unplaced sequence JBQKML010000381.1 begins with 863 bp of plastid DNA
   joined to a slug repeat. In two other individuals, the same plastid sequence continues as
   plastid DNA at that point (87 and 77 reads diverge from the assembly there, and none spans the
   junction). The reads of the assembled individual are not public, so the junction itself
-  cannot be tested. Four sequences (1.9 Mb) are bacterial.
+  cannot be tested. 17 sequences (2.06 Mb) are DNA of bacteria and other organisms, 1.83 Mb of
+  it on two sequences (JBQKML010000180.1 and JBQKML010000169.1).
 - *E. papillosa*: contig CDRNNR020002991.1 (30.9 kb) of the reference assembly is a fragment of
-  an algal mitochondrial genome. The alternate haplotype (GCA_977015365.2) contains no
-  organelle-like DNA and no gene of algal or bacterial type, and the algal mitochondrial contig
-  has no counterpart in it.
-- *E. timida* and *E. atroviridis*: no foreign DNA of these kinds was found in the assembly.
+  an algal mitochondrial genome; nine contigs (245 kb) are bacterial. The alternate haplotype
+  (GCA_977015365.2) contains no organelle-like DNA and one bacterial contig (12 kb), and the
+  algal mitochondrial contig has no counterpart in it.
+- *E. timida* and *E. atroviridis*: no organelle DNA was found in the assembly; six sequences
+  (160 kb) of *E. timida* and four (209 kb) of *E. atroviridis* are bacterial.
 
 In the protein-level search of these species, the gene set published with an assembly was not
 used as evidence that a sequence in that assembly is of animal origin, because the published
 gene sets of *E. chlorotica* and *E. marginata* include genes on bacterial and plastid sequences.
+
+**Bacteria and other organisms in every sequence.** The searches with proteins find a bacterial
+sequence only when it carries one of the genes they look for, so each found a different part of
+the foreign DNA. All sequences of the eleven assemblies were therefore examined in one way
+(`scripts/genus/76_foreign_census.py`, with `orfscan.py` and the rules of `foreign_dna.py`; every
+piece of foreign DNA in `results/genus/foreign_dna_census.tsv`, the details in
+`foreign_dna_census.json.gz`). Bacterial, phage and giant-virus DNA is 85 to 95% coding, slug DNA
+much less (medians of 12 to 28% in random 20-kb windows). Every sequence of which at least 60% lies
+in open reading frames of 300 bases or more (Mycoplasma code where it alone reaches 85%; simple
+sequence left out), or whose GC content differs from the assembly's by 0.08 or more, was translated
+in full (DIAMOND blastx, as in `43_foreign_sequences.py`) and judged with `foreign_dna.judge`,
+unless it is a tandem array (fewer than half of its 12-base words distinct; such arrays, with
+periods too long for the simple-sequence mask, are common in the HiFi assemblies). Coding runs of
+5-kb windows at the ends of slug sequences were translated too, and counted as foreign when they
+carry at least three foreign coding stretches and twice as many as stretches matched best by sea
+slugs and other animals. Foreign sequences that align to plastid
+or algal mitochondrial genomes of the panel (or to the *Acetabularia* contigs of the Purdue
+assembly) are organelle DNA and are listed with it above.
+
+| Assembly | Bacteria and other organisms | Stretches at the ends of slug sequences | Organelle DNA among the candidates | Short sequences not assigned |
+| --- | --- | --- | --- | --- |
+| *E. crispata* xgElyCris1.1 | 2 (3.0 kb) | 0 | 1 (2.0 kb) | 33 (280 kb) |
+| *E. crispata* alternate haplotype | 0 | 1 (5.0 kb) | 0 | 14 (199 kb) |
+| *E. crispata* Purdue | 0 | 0 | 12 (703 kb) | 245 (1.37 Mb) |
+| *E. crispata* Tampa | 175 (631 kb) | 0 | 1 (4.9 kb) | 859 (1.74 Mb) |
+| *E. chlorotica* | 99 (1.74 Mb) | 0 | 5 (8.3 kb) | 991 (823 kb) |
+| *E. marginata* | 233 (3.60 Mb) | 2 (40 kb) | 0 | 215 (715 kb) |
+| *E. timida* | 6 (160 kb) | 0 | 0 | 7 (36 kb) |
+| *E. leucolegnote* | 17 (2.06 Mb) | 0 | 0 | 23 (72 kb) |
+| *E. atroviridis* | 4 (209 kb) | 0 | 0 | 22 (74 kb) |
+| *E. papillosa* xgElyPapi4.2 | 9 (245 kb) | 0 | 1 (30.9 kb) | 4 (58 kb) |
+| *E. papillosa* alternate haplotype | 1 (12 kb) | 0 | 0 | 30 (241 kb) |
+
+Every sequence that the searches with plastid proteins, chloroplast regulators and gene sets
+judged to be bacterial or otherwise foreign is among them. The only sequences listed by those
+searches that are not are plastid DNA: an *Acetabularia* chloroplast contig of the Purdue assembly
+with few reading frames (JAWDGP010006093.1), and two slug sequences with a plastid fragment
+(JAWDGP010001684.1 of the Purdue assembly and JBQKML010000381.1 of *E. leucolegnote*). The three
+sequences that the regulator and gene-set searches judged to be slug DNA despite dense reading
+frames are slug DNA here too. Short sequences not assigned are those under 20 kb without any
+coding stretch matched by another sea slug, another animal, an alga or a microbe. The organisms
+can be named only roughly: on half of the sequences the bacterial genes are 37 to 52% identical
+to their closest Swiss-Prot proteins (median 44%). In the Tampa assembly most foreign contigs are
+shorter than 5 kb and AT-rich (median GC 26%); one, of 39 kb, is the T7-like phage described
+below. In *E. marginata*, a few
+GC-rich scaffolds carry RNA polymerase subunits, ribonucleotide reductase, a flavin-dependent
+thymidylate synthase and thymidine kinase whose closest proteins are algal, fungal or bacterial,
+a set of genes typical of large DNA viruses.
 
 **Nuclear genes that regulate the chloroplast.** A chloroplast taken from an alga arrives without
 the nuclear genes that control it in the alga. Whether any of them reached the genome of a slug,
@@ -376,7 +428,7 @@ The website presents the evidence in full, together with the limitations of each
 |---|---|
 | `docs/` | The website (static). `index.html` lists the species, `compare.html` compares their clock proteins, and each species has its own folder (`docs/elysia-crispata/`, …). The data are embedded in `docs/data/<species>.js` and `docs/data/genus.js`; the files offered for download are in `docs/downloads/` and `docs/elysia-crispata/downloads/`. The photographs and their credits are in `docs/assets/photos/`. |
 | `results/` | Tables for *E. crispata*: `clock_genes.tsv` / `.json`, `sequences/` (proteins and coding sequences), `kleptoplast.json`, `kleptoplast_barcodes.tsv`, `hgt.json`, `plastid_fragments_in_assembly.tsv`, `penicillus_plastome_genes.bed`. |
-| `results/genus/` | For each of the other species: the clock-gene catalogue (`<species>.clock.json`; `elysia-papillosa.alt.clock.json` for the alternate haplotype), the composition of its reads (`<species>.kleptoplast.json`) and the gene-transfer analyses (`<species>.transfer.json`); for the other sequenced individuals of *E. crispata*, both in `elysia-crispata.other_animals.json`, with the stretches of the Purdue assembly that are absent from egg DNA, the positions of adapter sequence in that assembly and the circular elements of the Tampa long-read library. Also the gene-by-species table (`clock_matrix.tsv`), protein alignments (`alignments/`), the concatenated alignment and species tree, and the intermediate tables of the read and assembly analyses: the reference panel (`panel.tsv.gz`), barcode records and sequences, plastid contigs, read junctions, every protein match (`protein_screen_loci.json.gz`) and every coding region on the bacterial and other foreign sequences (`foreign_sequences.json.gz`). The search for chloroplast regulators (`plastid_regulators.json`, `plastid_regulators_matrix.tsv`, `plastid_regulators_loci.json.gz`), the genes of non-animal origin in four proteomes (`alien_genes.json`) and the Cry-DASH tree (`crydash_tree/`). |
+| `results/genus/` | For each of the other species: the clock-gene catalogue (`<species>.clock.json`; `elysia-papillosa.alt.clock.json` for the alternate haplotype), the composition of its reads (`<species>.kleptoplast.json`) and the gene-transfer analyses (`<species>.transfer.json`); for the other sequenced individuals of *E. crispata*, both in `elysia-crispata.other_animals.json`, with the stretches of the Purdue assembly that are absent from egg DNA, the positions of adapter sequence in that assembly and the circular elements of the Tampa long-read library. Also the gene-by-species table (`clock_matrix.tsv`), protein alignments (`alignments/`), the concatenated alignment and species tree, and the intermediate tables of the read and assembly analyses: the reference panel (`panel.tsv.gz`), barcode records and sequences, plastid contigs, read junctions, every protein match (`protein_screen_loci.json.gz`) and every coding region on the bacterial and other foreign sequences (`foreign_sequences.json.gz`). The search for chloroplast regulators (`plastid_regulators.json`, `plastid_regulators_matrix.tsv`, `plastid_regulators_loci.json.gz`), the genes of non-animal origin in four proteomes (`alien_genes.json`), the Cry-DASH tree (`crydash_tree/`) and the inventory of foreign DNA in every sequence of the eleven assemblies (`foreign_dna_census.tsv`, details in `foreign_dna_census.json.gz`). |
 | `results/trees/` | Trimmed alignments of the gene families and FastTree trees in Newick format. |
 | `results/intermediate/` | Small intermediate tables: orthologue calls, choice of gene model, read support, expression, the list of sequences in the reference panel, chimeric-read junctions, boundary evidence, the inputs to the protein-level search and the proteins of the search for chloroplast regulators (`regulator_queries.fa` / `.tsv`). |
 | `config/` | Curated inputs: reference clock proteins (`clock_seeds.tsv`), the gene catalogue with its anchors (`clock_catalogue.tsv`), genes searched for but not found (`clock_not_found.tsv`), the species and their reference assemblies (`species.tsv`), the further assemblies of *E. crispata* and *E. papillosa* (`species_assemblies.tsv`), the read sets analysed (`species_reads.tsv`), the contigs of the Purdue assembly that were added to the reference panel (`panel_extra.tsv`), the positions at which that assembly joins chloroplast DNA to other DNA (`assembly_junctions.tsv`), the text of the conclusions shown on the species pages (`species_text.json`), the survey of public *Elysia* data (`species_catalogue.tsv`), and the plant and algal genes that regulate the chloroplast (`plastid_regulators.tsv`). |
@@ -410,6 +462,7 @@ Steps that are run for every species (`scripts/genus/`):
 | Read-based tests of loci | `40_locus_baits.py`, `41_locus_test.py` | Reads that span, or end at, each boundary of an organelle-like region within an assembly sequence, and at the locus of each read in which organelle DNA is flanked by nuclear DNA. |
 | An assembly examined with egg reads | `59_germline_coverage.py`, `60_classify_absent_stretches.py`, `56_adapter_in_assembly.py` | Stretches of the Purdue assembly of *E. crispata* on which no read of the egg mass lies, and their classification (chloroplast, bacterial, slug DNA, tandem repeats); Nanopore adapter sequence inside contigs. |
 | Chloroplast regulators and genes of non-animal origin | `70_regulator_queries.py`, `71_regulator_screen.sh`, `73_regulator_summary.py`, `72_alien_proteomes.py`, `75_alien_candidates.py`, `foreign_dna.py`, `74_crydash_tree.sh` | The *Arabidopsis* regulators and their counterparts in eleven algae (reciprocal best hits by family); their alignment to all eleven assemblies and the classification of every place; the kind of DNA that carries a place of algal or microbial type (open reading frames, genes shared with other sea slugs, GC content); the comparison of four annotated proteomes with the same database, the placing of each candidate on its assembly and the same judgement of its sequence; the tree of Cry-DASH proteins and photolyases. |
+| Foreign DNA in every sequence | `76_foreign_census.py`, `orfscan.py` (with `foreign_dna.py`) | Open reading frames, GC content and 12-base word diversity of every sequence of the eleven assemblies; translation of every sequence dense in reading frames or of unusual GC content, and of coding runs at the ends of slug sequences, and the judgement of each by the rules of `foreign_dna.py`; organelle DNA among them. |
 | Collect and build | `39_collect_species.py`, `45_export_tables.py`, `chrome.py`, `21_build_species_pages.py`, `20_build_genus_site.py` | Result files and small tables; the shared page frame; the kleptoplast and gene-transfer pages of each species; the home page, comparison page, clock-gene pages and methods. |
 | Order of the analyses | `run_screens.sh` | The commands for the six additional species, for the second assembly of *E. papillosa*, for the other individuals of *E. crispata* (step `crispata_animals`) and for the search for chloroplast regulators (step `regulators`), in the order in which they were run (`DRY=1` prints them). |
 
