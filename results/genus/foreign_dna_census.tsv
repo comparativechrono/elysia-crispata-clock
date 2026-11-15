@@ -1,6 +1,7 @@
 assembly	sequence	start	end	sequence_length	kind	gc	orf_share	genetic_code	foreign_stretches	sea_slug_stretches	animal_stretches	nearest_bacteria	bacterial_identity_median	found_by_earlier_searches
-elysia-crispata	CAWKYH010001747.1	0	2000	2000	bacterium or other organism	0.497	0.912	standard	1	1	0	Methanocaldococcus 1	27.3	
+elysia-crispata	CAWKYH010001747.1	0	2000	2000	bacterium or other organism	0.497	0.912	standard	1	1	0	Methanocaldococcus 1	27.3	DNA-level search
 elysia-crispata	CAWKYH010000778.1	0	1000	1000	bacterium or other organism	0.489	0.712	standard	1	0	0			
+elysia-crispata	CAWKYH010001652.1	0	1000	1000	bacterium or other organism	0.581	0.0	standard	0	0	0			DNA-level search
 elysia-crispata	CAWKYH010002246.1	0	2000	2000	plastid DNA	0.342	0.789	standard	2	1	0			
 elysia-crispata-alt	CAWKYI010013408.1	0	5000	73662	bacterium or other organism, at the end of a slug sequence				5	0	0	Shigella 2, Haemophilus 1, Rickettsia 1	44.3	
 elysia-crispata-purdue	JAWDGP010006072.1	0	157771	157771	plastid DNA	0.5254	0.718	standard	7	0	0			plastid-protein search
@@ -80,10 +81,11 @@ elysia-crispata-tampa	CFHGKC010009697.1	0	2919	2919	bacterium or other organism	
 elysia-crispata-tampa	CFHGKC010009708.1	0	2909	2909	bacterium or other organism	0.2314	0.857	standard	1	0	0	Escherichia 1	32.0	
 elysia-crispata-tampa	CFHGKC010009735.1	0	2889	2889	bacterium or other organism	0.288	0.808	standard	4	0	0	Halalkalibacterium 1, Dictyoglomus 1, Caldicellulosiruptor 1	41.8	regulator search
 elysia-crispata-tampa	CFHGKC010009740.1	0	2883	2883	bacterium or other organism	0.2938	0.929	standard	6	0	0	Halothermothrix 1, Leptospira 1, Jannaschia 1	54.5	plastid-protein search
-elysia-crispata-tampa	CFHGKC010009778.1	0	2846	2846	bacterium or other organism	0.4065	0.787	standard	2	0	0	Hathewaya 1, Methanocaldococcus 1	38.1	
+elysia-crispata-tampa	CFHGKC010009778.1	0	2846	2846	bacterium or other organism	0.4065	0.787	standard	2	0	0	Hathewaya 1, Methanocaldococcus 1	38.1	DNA-level search
 elysia-crispata-tampa	CFHGKC010009787.1	0	2839	2839	bacterium or other organism	0.2603	0.663	standard	3	0	0	Halalkalibacterium 1, Pseudomonas 1	51.2	
 elysia-crispata-tampa	CFHGKC010009821.1	0	2809	2809	bacterium or other organism	0.235	0.927	standard	2	0	0	Bacillus 1, Fusobacterium 1	33.5	
 elysia-crispata-tampa	CFHGKC010009855.1	0	2778	2778	bacterium or other organism	0.3492	0.637	standard	1	1	0	Acinetobacter 1	54.7	
+elysia-crispata-tampa	CFHGKC010009859.1	0	2774	2774	bacterium or other organism	0.3403	0.818	standard	0	0	0			DNA-level search
 elysia-crispata-tampa	CFHGKC010009866.1	0	2769	2769	bacterium or other organism	0.2268	0.715	standard	1	0	0	Wolbachia 1	27.8	
 elysia-crispata-tampa	CFHGKC010009917.1	0	2736	2736	bacterium or other organism	0.2354	0.887	standard	1	0	0	Leptotrichia 1	24.5	
 elysia-crispata-tampa	CFHGKC010009932.1	0	2724	2724	bacterium or other organism	0.301	0.786	standard	1	0	1	Clostridium 1	55.7	
@@ -93,7 +95,7 @@ elysia-crispata-tampa	CFHGKC010010039.1	0	2647	2647	bacterium or other organism	
 elysia-crispata-tampa	CFHGKC010010118.1	0	2590	2590	bacterium or other organism	0.3046	0.893	standard	2	0	0	Shigella 1, Neisseria 1	54.4	
 elysia-crispata-tampa	CFHGKC010010149.1	0	2569	2569	bacterium or other organism	0.2546	0.993	standard	1	0	0	Cellvibrio 1	60.5	
 elysia-crispata-tampa	CFHGKC010010211.1	0	2517	2517	bacterium or other organism	0.2797	0.996	standard	1	1	0	Acetivibrio 1	39.6	
-elysia-crispata-tampa	CFHGKC010010220.1	0	2512	2512	bacterium or other organism	0.3929	0.829	standard	2	0	0	Methanocaldococcus 1, Bacillus 1	41.5	
+elysia-crispata-tampa	CFHGKC010010220.1	0	2512	2512	bacterium or other organism	0.3929	0.829	standard	2	0	0	Methanocaldococcus 1, Bacillus 1	41.5	DNA-level search
 elysia-crispata-tampa	CFHGKC010010224.1	0	2510	2510	bacterium or other organism	0.2474	0.741	standard	3	0	0	Desulfocurvibacter 1, Clostridium 1, Chlamydia 1	34.3	
 elysia-crispata-tampa	CFHGKC010010245.1	0	2502	2502	bacterium or other organism	0.3082	0.834	standard	1	1	0	Staphylococcus 1	37.9	
 elysia-crispata-tampa	CFHGKC010009279.1	0	2453	2453	bacterium or other organism	0.2499	0.667	standard	3	0	0	Natranaerobius 1, Methanocaldococcus 1, Bacillus 1	45.9	
@@ -109,7 +111,7 @@ elysia-crispata-tampa	CFHGKC010010670.1	0	2232	2232	bacterium or other organism	
 elysia-crispata-tampa	CFHGKC010010733.1	0	2201	2201	bacterium or other organism	0.2517	0.83	standard	1	0	0	Aromatoleum 1	34.6	
 elysia-crispata-tampa	CFHGKC010010760.1	0	2187	2187	bacterium or other organism	0.2529	0.845	standard	1	0	0			
 elysia-crispata-tampa	CFHGKC010010818.1	0	2159	2159	bacterium or other organism	0.2566	0.866	standard	1	1	0	Rickettsia 1	41.2	
-elysia-crispata-tampa	CFHGKC010010834.1	0	2149	2149	bacterium or other organism	0.3969	0.81	standard	1	0	0	Hathewaya 1	50.8	
+elysia-crispata-tampa	CFHGKC010010834.1	0	2149	2149	bacterium or other organism	0.3969	0.81	standard	1	0	0	Hathewaya 1	50.8	DNA-level search
 elysia-crispata-tampa	CFHGKC010010860.1	0	2137	2137	bacterium or other organism	0.2115	0.643	standard	1	0	0	Bacillus 1	42.1	
 elysia-crispata-tampa	CFHGKC010010902.1	0	2116	2116	bacterium or other organism	0.2495	0.635	standard	2	0	0	Flavobacterium 1, Thermosipho 1	63.1	
 elysia-crispata-tampa	CFHGKC010010926.1	0	2100	2100	bacterium or other organism	0.2538	0.846	standard	1	0	0			
@@ -121,12 +123,14 @@ elysia-crispata-tampa	CFHGKC010011087.1	0	2022	2022	bacterium or other organism	
 elysia-crispata-tampa	CFHGKC010011109.1	0	2010	2010	bacterium or other organism	0.307	0.999	standard	1	0	0	Clostridium 1	46.1	
 elysia-crispata-tampa	CFHGKC010011155.1	0	1989	1989	bacterium or other organism	0.2383	0.969	standard	2	0	0	Borrelia 1, Rickettsia 1	48.5	
 elysia-crispata-tampa	CFHGKC010011188.1	0	1969	1969	bacterium or other organism	0.2463	0.946	standard	1	0	0	Bacillus 1	24.2	
+elysia-crispata-tampa	CFHGKC010011212.1	0	1954	1954	bacterium or other organism	0.3444	0.942	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010011287.1	0	1923	1923	bacterium or other organism	0.338	0.811	standard	0	0	0			DNA-level search
 elysia-crispata-tampa	CFHGKC010011309.1	0	1914	1914	bacterium or other organism	0.2471	0.801	standard	2	0	0	Vibrio 2	75.6	
 elysia-crispata-tampa	CFHGKC010011342.1	0	1901	1901	bacterium or other organism	0.2962	0.937	standard	2	0	0	Bacillus 1, Natranaerobius 1	38.6	
 elysia-crispata-tampa	CFHGKC010011348.1	0	1899	1899	bacterium or other organism	0.2812	0.91	standard	1	0	0	Methanocaldococcus 1	23.5	
 elysia-crispata-tampa	CFHGKC010011358.1	0	1895	1895	bacterium or other organism	0.2422	0.586	standard	1	0	0			
 elysia-crispata-tampa	CFHGKC010009913.1	0	1894	1894	bacterium or other organism	0.312	0.999	standard	1	0	0	Bacillus 1	26.6	
-elysia-crispata-tampa	CFHGKC010011398.1	0	1877	1877	bacterium or other organism	0.3937	0.836	standard	1	0	0	Hathewaya 1	57.7	
+elysia-crispata-tampa	CFHGKC010011398.1	0	1877	1877	bacterium or other organism	0.3937	0.836	standard	1	0	0	Hathewaya 1	57.7	DNA-level search
 elysia-crispata-tampa	CFHGKC010011591.1	0	1796	1796	bacterium or other organism	0.3736	0.994	standard	2	0	0			
 elysia-crispata-tampa	CFHGKC010011600.1	0	1793	1793	bacterium or other organism	0.2828	0.954	standard	1	0	0	Brachyspira 1	37.9	
 elysia-crispata-tampa	CFHGKC010011673.1	0	1764	1764	bacterium or other organism	0.2489	0.796	standard	1	0	0	Thermotoga 1	28.3	
@@ -136,17 +140,20 @@ elysia-crispata-tampa	CFHGKC010011757.1	0	1729	1729	bacterium or other organism	
 elysia-crispata-tampa	CFHGKC010011789.1	0	1717	1717	bacterium or other organism	0.2079	0.657	standard	1	0	0	Methanocaldococcus 1	27.5	
 elysia-crispata-tampa	CFHGKC010011807.1	0	1712	1712	bacterium or other organism	0.3213	0.998	standard	3	0	0	Desulforamulus 1, Thermodesulfovibrio 1, Geobacter 1	45.6	
 elysia-crispata-tampa	CFHGKC010011812.1	0	1711	1711	bacterium or other organism	0.287	0.722	standard	2	0	0	Methanocaldococcus 1, Rhodopirellula 1	54.8	
-elysia-crispata-tampa	CFHGKC010011898.1	0	1680	1680	bacterium or other organism	0.3518	0.998	standard	2	0	0	Escherichia 1	34.8	
+elysia-crispata-tampa	CFHGKC010011898.1	0	1680	1680	bacterium or other organism	0.3518	0.998	standard	2	0	0	Escherichia 1	34.8	DNA-level search
 elysia-crispata-tampa	CFHGKC010011907.1	0	1677	1677	bacterium or other organism	0.2302	0.617	standard	1	0	0	Caldanaerobacter 1	44.6	
 elysia-crispata-tampa	CFHGKC010011966.1	0	1652	1652	bacterium or other organism	0.3874	0.841	standard	1	0	0	Clostridium 1	24.7	
 elysia-crispata-tampa	CFHGKC010011986.1	0	1647	1647	bacterium or other organism	0.2702	0.999	standard	2	0	0	Caldicellulosiruptor 1, Clostridium 1	45.5	regulator search
 elysia-crispata-tampa	CFHGKC010012014.1	0	1638	1638	bacterium or other organism	0.2491	0.85	standard	2	0	0	Mycobacterium 1	41.6	
 elysia-crispata-tampa	CFHGKC010012025.1	0	1633	1633	bacterium or other organism	0.3417	0.999	standard	1	0	0	Brachyspira 1	49.1	regulator search
 elysia-crispata-tampa	CFHGKC010004979.1	0	1619	1619	bacterium or other organism	0.3101	0.999	standard	1	0	0	Aeropyrum 1	30.4	
+elysia-crispata-tampa	CFHGKC010004984.1	0	1617	1617	bacterium or other organism	0.3915	0.748	standard	0	0	0			DNA-level search
 elysia-crispata-tampa	CFHGKC010004986.1	0	1617	1617	bacterium or other organism	0.2832	0.965	standard	1	0	0	Treponema 1	29.5	
 elysia-crispata-tampa	CFHGKC010005159.1	0	1563	1563	bacterium or other organism	0.2828	0.994	standard	2	0	0	Streptomyces 1, Bacillus 1	60.9	
+elysia-crispata-tampa	CFHGKC010005165.1	0	1561	1561	bacterium or other organism	0.36	0.0	standard	0	0	0			DNA-level search
 elysia-crispata-tampa	CFHGKC010005178.1	0	1558	1558	bacterium or other organism	0.2311	0.801	standard	1	0	0	Borreliella 1	49.0	
 elysia-crispata-tampa	CFHGKC010005197.1	0	1554	1554	bacterium or other organism	0.2239	0.641	standard	1	0	0	Pasteurella 1	30.7	
+elysia-crispata-tampa	CFHGKC010005251.1	0	1538	1538	bacterium or other organism	0.409	0.793	standard	0	0	1			DNA-level search
 elysia-crispata-tampa	CFHGKC010005286.1	0	1526	1526	bacterium or other organism	0.3303	0.897	standard	3	0	0	Nostoc 1, Caldanaerobacter 1	60.9	
 elysia-crispata-tampa	CFHGKC010005294.1	0	1524	1524	bacterium or other organism	0.2434	0.929	standard	3	0	0	Buchnera 1, Onion 1, Treponema 1	40.7	
 elysia-crispata-tampa	CFHGKC010005392.1	0	1492	1492	bacterium or other organism	0.2245	0.949	standard	1	0	0			
@@ -159,19 +166,23 @@ elysia-crispata-tampa	CFHGKC010005657.1	0	1418	1418	bacterium or other organism	
 elysia-crispata-tampa	CFHGKC010005705.1	0	1407	1407	bacterium or other organism	0.2289	0.763	standard	1	0	0	Caldicellulosiruptor 1	35.3	
 elysia-crispata-tampa	CFHGKC010005772.1	0	1388	1388	bacterium or other organism	0.2976	0.7	standard	4	0	0	Clostridium 1, Xylella 1, Thermoanaerobacter 1	54.7	
 elysia-crispata-tampa	CFHGKC010005815.1	0	1377	1377	bacterium or other organism	0.2186	0.917	standard	1	0	0	Methanocaldococcus 1	23.1	
-elysia-crispata-tampa	CFHGKC010005844.1	0	1369	1369	bacterium or other organism	0.431	0.866	standard	1	0	0	Hathewaya 1	54.9	
+elysia-crispata-tampa	CFHGKC010005844.1	0	1369	1369	bacterium or other organism	0.431	0.866	standard	1	0	0	Hathewaya 1	54.9	DNA-level search
 elysia-crispata-tampa	CFHGKC010005908.1	0	1349	1349	bacterium or other organism	0.2802	0.997	standard	2	0	1	Staphylococcus 1, Acholeplasma 1	49.4	
 elysia-crispata-tampa	CFHGKC010006002.1	0	1321	1321	bacterium or other organism	0.2324	0.552	standard	1	0	0	Natranaerobius 1	46.2	
+elysia-crispata-tampa	CFHGKC010006097.1	0	1302	1302	bacterium or other organism	0.5607	0.999	standard	0	0	1			DNA-level search
 elysia-crispata-tampa	CFHGKC010006139.1	0	1293	1293	bacterium or other organism	0.29	0.603	standard	2	0	0	Halalkalibacterium 1	52.8	
 elysia-crispata-tampa	CFHGKC010006159.1	0	1288	1288	bacterium or other organism	0.2057	0.843	standard	1	0	0	Bacillus 1	25.4	
 elysia-crispata-tampa	CFHGKC010006180.1	0	1283	1283	bacterium or other organism	0.2658	0.998	standard	2	0	0	Vibrio 1	39.3	
 elysia-crispata-tampa	CFHGKC010006222.1	0	1272	1272	bacterium or other organism	0.2712	0.992	standard	2	0	0	Leptospira 1, Clostridium 1	39.0	
 elysia-crispata-tampa	CFHGKC010006260.1	0	1260	1260	bacterium or other organism	0.2087	0.955	standard	1	0	0	Mycolicibacterium 1	38.9	
 elysia-crispata-tampa	CFHGKC010006273.1	0	1259	1259	bacterium or other organism	0.2613	0.999	standard	1	0	0	Archaeoglobus 1	42.7	
+elysia-crispata-tampa	CFHGKC010006286.1	0	1254	1254	bacterium or other organism	0.3939	0.998	standard	0	0	1			DNA-level search
 elysia-crispata-tampa	CFHGKC010006453.1	0	1218	1218	bacterium or other organism	0.3522	0.719	standard	1	1	0	Helicobacter 1	65.0	regulator search
 elysia-crispata-tampa	CFHGKC010006478.1	0	1214	1214	bacterium or other organism	0.2916	0.998	standard	1	0	0	Escherichia 1	25.5	
 elysia-crispata-tampa	CFHGKC010006491.1	0	1211	1211	bacterium or other organism	0.2436	0.374	standard	1	0	0	Bacillus 1	35.3	
+elysia-crispata-tampa	CFHGKC010006525.1	0	1203	1203	bacterium or other organism	0.4048	0.935	standard	0	0	0			DNA-level search
 elysia-crispata-tampa	CFHGKC010006529.1	0	1201	1201	bacterium or other organism	0.2515	0.754	standard	1	0	0	Desulforapulum 1	67.3	
+elysia-crispata-tampa	CFHGKC010006586.1	0	1189	1189	bacterium or other organism	0.3549	0.998	standard	0	0	0			DNA-level search
 elysia-crispata-tampa	CFHGKC010006594.1	0	1188	1188	bacterium or other organism	0.25	0.564	standard	2	0	0	Buchnera 1, Borreliella 1	60.9	
 elysia-crispata-tampa	CFHGKC010006650.1	0	1174	1174	bacterium or other organism	0.224	0.608	standard	1	0	0	Methanocaldococcus 1	37.7	
 elysia-crispata-tampa	CFHGKC010006655.1	0	1173	1173	bacterium or other organism	0.3598	0.998	standard	1	0	0	Methylacidiphilum 1	70.8	plastid-protein search
@@ -186,9 +197,16 @@ elysia-crispata-tampa	CFHGKC010006926.1	0	1122	1122	bacterium or other organism	
 elysia-crispata-tampa	CFHGKC010006989.1	0	1109	1109	bacterium or other organism	0.2516	0.308	standard	3	0	0	Protochlamydia 1, Paraburkholderia 1, Archaeoglobus 1	44.3	
 elysia-crispata-tampa	CFHGKC010007122.1	0	1086	1086	bacterium or other organism	0.2339	0.638	standard	1	0	0	Staphylococcus 1	35.5	
 elysia-crispata-tampa	CFHGKC010007131.1	0	1084	1084	bacterium or other organism	0.2712	0.75	standard	1	0	0	Clostridium 1	40.1	
+elysia-crispata-tampa	CFHGKC010007167.1	0	1078	1078	bacterium or other organism	0.3562	0.615	standard	0	0	0			DNA-level search
 elysia-crispata-tampa	CFHGKC010007176.1	0	1076	1076	bacterium or other organism	0.2212	0.99	standard	1	0	0	Halothermothrix 1	32.5	
 elysia-crispata-tampa	CFHGKC010007244.1	0	1065	1065	bacterium or other organism	0.2385	0.997	standard	1	0	0	Leptospira 1	27.8	
+elysia-crispata-tampa	CFHGKC010007294.1	0	1056	1056	bacterium or other organism	0.3248	0.0	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010007404.1	0	1038	1038	bacterium or other organism	0.3882	0.876	standard	0	2	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010007433.1	0	1032	1032	bacterium or other organism	0.3711	0.317	standard	0	0	0			DNA-level search
 elysia-crispata-tampa	CFHGKC010007460.1	0	1027	1027	bacterium or other organism	0.2201	0.511	standard	3	0	0	Borreliella 1, Campylobacter 1, Leptospira 1	54.1	
+elysia-crispata-tampa	CFHGKC010007463.1	0	1026	1026	bacterium or other organism	0.2827	0.0	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010007483.1	0	1024	1024	bacterium or other organism	0.3311	0.352	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010007573.1	0	1006	1006	bacterium or other organism	0.3231	0.0	standard	0	0	0			DNA-level search
 elysia-crispata-tampa	CFHGKC010007578.1	0	1005	1005	bacterium or other organism	0.2308	0.776	standard	1	0	0	Buchnera 1	39.9	
 elysia-crispata-tampa	CFHGKC010001527.1	0	4860	4860	plastid DNA	0.2327	0.864	standard	1	0	0	Leptotrichia 1	22.8	
 elysia-chlorotica	RQTK01001497.1	0	81532	81532	bacterium or other organism	0.3083	0.936	standard	71	1	1	Francisella 12, Escherichia 9, Bacillus 7	43.8	gene-set search; regulator search

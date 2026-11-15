@@ -33,8 +33,13 @@ for. Here every sequence of each assembly is examined, by the rules of foreign_d
    mitochondrial contig of E. papillosa, too divergent to align), reported apart from the DNA of
    bacteria and other organisms; foreign sequences whose coding stretches match algae (or
    cyanobacteria) more often than other microbes are flagged (mostly_algal_matches).
-6. For each foreign sequence, which of the earlier searches found it (RESULTS_DIR: hgt.json,
-   genus/foreign_sequences.json.gz, genus/plastid_regulators.json, genus/alien_genes.json).
+6. In the four assemblies of E. crispata, whose DNA-level search had the genomes of the four bacteria
+   assembled from the reference individual in its panel, the sequences that search classed as
+   bacterial (RESULTS_DIR/intermediate/crispata_whole_contigs.tsv) are counted too, whatever their
+   genes: they are short, and most carry no gene that matches the database.
+7. For each foreign sequence, which of the earlier searches found it (RESULTS_DIR: hgt.json,
+   genus/foreign_sequences.json.gz, genus/plastid_regulators.json, genus/alien_genes.json and the
+   DNA-level list above).
 
 Intermediate files go to WORKDIR (<assembly>.orf.tsv, .distinct.tsv, .ends.tsv, .bg.json, .cand.fa,
 .blastx.tsv, .foreign.fa, .panel.paf); they are reused when present. Besides OUT.json[.gz], a table
@@ -158,7 +163,19 @@ def earlier_searches():
     for c in A["candidates"]:
         if c.get("verdict", "").startswith("foreign"):
             found[c["assembly"]][c["sequence"]].add("gene-set search")
+    for asm, rows in dna_bacteria.items():
+        for n in rows:
+            found[asm][n].add("DNA-level search")
     return found
+
+
+# The DNA-level search of the four E. crispata assemblies (scripts 21 to 23) had the genomes of the four
+# bacteria assembled from the reference individual in its panel; the sequences that it classed as bacterial
+# (at least half of their length aligned to those genomes) are bacterial here too, whatever their genes.
+dna_bacteria = collections.defaultdict(dict)
+for r in csv.DictReader(open(os.path.join(resdir, "intermediate", "crispata_whole_contigs.tsv")), delimiter="\t"):
+    if r["class"] == "bac":
+        dna_bacteria[r["assembly"]][r["sequence"]] = r
 
 
 def fetch_many(asm, regions, path):
@@ -320,6 +337,23 @@ for asm in assemblies:
         if e["verdict"] != "slug DNA":
             e["organelle_cover"] = cover.get(f'{e["sequence"]}|{e["start"]}|{e["side"]}', {})
             e["kind"] = kind(e["organelle_cover"])
+    # 5b. sequences that the DNA-level search classed as bacterial (E. crispata assemblies only)
+    for n, w in dna_bacteria.get(asm, {}).items():
+        x = next((y for y in seqs if y["sequence"] == n), None)
+        if x is None:
+            r = rows[n]
+            sh, code = best(r)
+            x = dict(sequence=n, length=int(r["length"]), gc=round(float(r["gc"]), 4), orf_share=round(sh, 3), genetic_code=code, distinct_12mers=None,
+                     stretches={}, stretch_kinds=dict(sea_slug=0, animal=0, foreign=0, unmatched=0), coding_bp=0, nearest_bacteria=[],
+                     bacterial_identity_median=None, verdict="not a candidate", top_hits=[], organelle_cover={}, found_by=[])
+            seqs.append(x)
+        x["dna_match"] = w["best_match"]
+        if x["verdict"] != "foreign sequence":
+            x["verdict_by_genes"] = x["verdict"]
+            x["verdict"] = "foreign sequence"
+            x["kind"] = "bacterium or other organism"
+            x["mostly_algal_matches"] = False
+        x["found_by"] = sorted(set(x["found_by"]) | found[asm].get(n, set()))
     # 6. earlier finds that the census does not count as foreign
     census_foreign = {s["sequence"] for s in seqs if s["verdict"] == "foreign sequence"} | {e["sequence"] for e in end_rows if e["verdict"] != "slug DNA"}
     missed = []

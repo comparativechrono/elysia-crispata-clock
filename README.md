@@ -208,16 +208,19 @@ unless it is a tandem array (fewer than half of its 12-base words distinct; such
 periods too long for the simple-sequence mask, are common in the HiFi assemblies). Coding runs of
 5-kb windows at the ends of slug sequences were translated too, and counted as foreign when they
 carry at least three foreign coding stretches and twice as many as stretches matched best by sea
-slugs and other animals. Foreign sequences that align to plastid
-or algal mitochondrial genomes of the panel (or to the *Acetabularia* contigs of the Purdue
+slugs and other animals. In the four assemblies of *E. crispata*, whose DNA-level search had the
+genomes of the four bacteria assembled from the reference individual in its panel, the sequences
+that search classed as bacterial are counted too (`results/intermediate/crispata_whole_contigs.tsv`);
+they are short, and most carry no gene that matches the database. Foreign sequences that align to
+plastid or algal mitochondrial genomes of the panel (or to the *Acetabularia* contigs of the Purdue
 assembly) are organelle DNA and are listed with it above.
 
 | Assembly | Bacteria and other organisms | Stretches at the ends of slug sequences | Organelle DNA among the candidates | Short sequences not assigned |
 | --- | --- | --- | --- | --- |
-| *E. crispata* xgElyCris1.1 | 2 (3.0 kb) | 0 | 1 (2.0 kb) | 33 (280 kb) |
+| *E. crispata* xgElyCris1.1 | 3 (4.0 kb) | 0 | 1 (2.0 kb) | 33 (280 kb) |
 | *E. crispata* alternate haplotype | 0 | 1 (5.0 kb) | 0 | 14 (199 kb) |
 | *E. crispata* Purdue | 0 | 0 | 12 (703 kb) | 245 (1.37 Mb) |
-| *E. crispata* Tampa | 175 (631 kb) | 0 | 1 (4.9 kb) | 859 (1.74 Mb) |
+| *E. crispata* Tampa | 192 (654 kb) | 0 | 1 (4.9 kb) | 852 (1.73 Mb) |
 | *E. chlorotica* | 99 (1.74 Mb) | 0 | 5 (8.3 kb) | 991 (823 kb) |
 | *E. marginata* | 233 (3.60 Mb) | 2 (40 kb) | 0 | 215 (715 kb) |
 | *E. timida* | 6 (160 kb) | 0 | 0 | 7 (36 kb) |
@@ -226,18 +229,19 @@ assembly) are organelle DNA and are listed with it above.
 | *E. papillosa* xgElyPapi4.2 | 9 (245 kb) | 0 | 1 (30.9 kb) | 4 (58 kb) |
 | *E. papillosa* alternate haplotype | 1 (12 kb) | 0 | 0 | 30 (241 kb) |
 
-Every sequence that the searches with plastid proteins, chloroplast regulators and gene sets
-judged to be bacterial or otherwise foreign is among them. The only sequences listed by those
-searches that are not are plastid DNA: an *Acetabularia* chloroplast contig of the Purdue assembly
-with few reading frames (JAWDGP010006093.1), and two slug sequences with a plastid fragment
-(JAWDGP010001684.1 of the Purdue assembly and JBQKML010000381.1 of *E. leucolegnote*). The three
-sequences that the regulator and gene-set searches judged to be slug DNA despite dense reading
-frames are slug DNA here too. Short sequences not assigned are those under 20 kb without any
-coding stretch matched by another sea slug, another animal, an alga or a microbe. The organisms
-can be named only roughly: on half of the sequences the bacterial genes are 37 to 52% identical
-to their closest Swiss-Prot proteins (median 44%). In the Tampa assembly most foreign contigs are
-shorter than 5 kb and AT-rich (median GC 26%); one, of 39 kb, is the T7-like phage described
-below. In *E. marginata*, a few
+Every sequence that the searches with plastid proteins, chloroplast regulators and gene sets, or
+the DNA-level search of the *E. crispata* assemblies, judged to be bacterial or otherwise foreign
+is among them. The only sequences listed by those searches that are not are plastid DNA: an
+*Acetabularia* chloroplast contig of the Purdue assembly with few reading frames
+(JAWDGP010006093.1), and two slug sequences with a plastid fragment (JAWDGP010001684.1 of the
+Purdue assembly and JBQKML010000381.1 of *E. leucolegnote*). The three sequences that the regulator
+and gene-set searches judged to be slug DNA despite dense reading frames are slug DNA here too.
+Short sequences not assigned are those under 20 kb without any coding stretch matched by another
+sea slug, another animal, an alga or a microbe. The organisms can be named only roughly: on half
+of the sequences the bacterial genes are 37 to 52% identical to their closest Swiss-Prot proteins
+(median 44%). In the Tampa assembly most foreign contigs are shorter than 5 kb and AT-rich (median
+GC 26%); 23 of them match the genomes of the *Ekhidna* and *Kistimonas* bacteria assembled from
+the reference individual, and one, of 39 kb, is the T7-like phage described below. In *E. marginata*, a few
 GC-rich scaffolds carry RNA polymerase subunits, ribonucleotide reductase, a flavin-dependent
 thymidylate synthase and thymidine kinase whose closest proteins are algal, fungal or bacterial,
 a set of genes typical of large DNA viruses.
