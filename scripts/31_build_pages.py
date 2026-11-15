@@ -228,9 +228,20 @@ if hgt:
     def wh(a, label):
         w = hgt["assembly_screen"].get(a, {}).get("whole_contigs", {}); parts = []
         if w.get("cp"): parts.append(f'{word(w["cp"]["n"])} plastid contig{"" if w["cp"]["n"] == 1 else "s"} ({w["cp"]["bp"] / 1000:.0f} kb)')
-        if w.get("bac"): parts.append(f'{word(w["bac"]["n"])} bacterial contig{"" if w["bac"]["n"] == 1 else "s"} ({w["bac"]["bp"] / 1000:.0f} kb)')
         return f'{" and ".join(parts)} in {label}' if parts else ""
     WH = "; ".join(x for x in (wh("sanger", "xgElyCris1.1"), wh("alt", "the alternate haplotype"), wh("purdue", "the Purdue assembly"), wh("tampa", "the Tampa assembly")) if x)
+    # bacteria and other organisms in every sequence of the four assemblies (scripts/genus/76_foreign_census.py)
+    _cz = os.path.join(repo, "results", "genus", "foreign_dna_census.json.gz")
+    CZ = json.load(__import__("gzip").open(_cz))["assemblies"] if os.path.exists(_cz) else {}
+    def kb(bp): return f"{bp / 1e6:.1f} Mb" if bp >= 1e6 else (f"{bp / 1e3:.0f} kb" if bp >= 10000 else f"{bp / 1e3:.1f} kb")
+    def cz(a, label):
+        F = CZ[a]["foreign"]; n = F["sequences"]; parts = []
+        if n: parts.append(f'{word(n)} contig{"" if n == 1 else "s"} ({kb(F["bp"])})')
+        for x in CZ[a]["foreign_ends"]: parts.append(f'a {kb(x["end"] - x["start"])} stretch at one end of a {kb(x["length"])} contig')
+        return f'{" and ".join(parts) if parts else "none"} in {label}'
+    _bac = [cz(a, lab) for a, lab in (("elysia-crispata", "xgElyCris1.1"), ("elysia-crispata-alt", "its alternate haplotype"), ("elysia-crispata-purdue", "the Purdue assembly"), ("elysia-crispata-tampa", "the Tampa assembly")) if a in CZ]
+    BAC = (", ".join(_bac[:-1]) + " and " + _bac[-1]) if len(_bac) > 1 else "".join(_bac)
+    DNA_BAC = sum(1 for a in ("elysia-crispata-tampa",) if a in CZ for x in CZ[a]["foreign_sequences"] if x.get("dna_match"))
     alg_c = [c for c in cands if c["top_group"] in ("ALG", "CYA")]
     PS = hgt.get("protein_screen") or {}
     def chrn(c): return ("chr" + c) if c.isdigit() else c
@@ -391,7 +402,7 @@ if hgt:
 <p>An insertion that arose in an earlier generation, or that derived from a different alga, would differ in sequence from the present kleptoplasts, so all matches that are not exact copies were also listed and classified. The primary assembly has {num(DV["sanger"]["non_exact_matches"])} such matches to the 241 plastid genomes and to algal mitochondrial and ribosomal DNA. All but {DV["sanger"]["loci"]} are shorter than 200 bp, are less than 80% identical, or lie in simple repeats such as (CTT)n, which also occur in AT-rich plastid genomes. The remaining {DV["sanger"]["loci"]} are the slug’s own ribosomal RNA genes, which are about 81% identical to those of algae. The alternate haplotype ({DV["alt"]["loci"]} {"locus" if DV["alt"]["loci"] == 1 else "loci"}) and the Tampa assembly ({DV["tampa"]["loci"]} {"locus" if DV["tampa"]["loci"] == 1 else "loci"}) give the same result.</p>
 <p>Thus, apart from the {len(fr)} exact copies and simple repeats, none of these three assemblies contains a region of 200 bp or more with at least 80% identity to plastid DNA. The Purdue assembly does contain such regions, which are described <a href="#purdue">below</a>.</p>
 <p>The reads give the same result, including for parts of the genome that are not represented in any assembly. A total of {num(WR.get("weak_reads", 0))} reads matched a plastid genome only weakly and were analysed separately. Base-level alignment shows that {WR.get("with_exact_piece", 0)} of them contain a short segment identical to kleptoplast DNA (chimeric reads like those described above, with a plastid segment shorter than 1 kb), and {len(WR.get("diverged", []))} contain plastid-like sequence that differs by 4 to 8% from every reference. {word(sum(1 for d in WR.get("diverged", []) if not d["slug_bp"])).capitalize()} of the latter are ordinary plastid reads from minor algal species for which no close reference is available. The other is a low-accuracy read in which the nuclear part differs from the assembly to a similar extent ({100 * (1 - WRL["slug_identity"]):.1f}%, compared with {100 * (1 - WRL["identity"]):.1f}% for the plastid-like part). No read joins divergent plastid-like DNA to nuclear DNA.</p>
-<p>The assemblies also contain a few small separate contigs of plastid or bacterial DNA that are not joined to any other sequence: {WH}. These are contaminant contigs of the kind that commonly remain after decontamination.</p>
+<p>The assemblies also contain a few small separate contigs of plastid DNA that are not joined to any other sequence: {WH}. Every sequence of the four assemblies was also examined for DNA of bacteria and other organisms, by its density of protein-coding sequence, by the best matches of its genes and by its identity to the four bacterial genomes assembled from this individual (<a href="../methods.html#foreign-dna">methods</a>). Such DNA makes up {BAC}{f"; {word(DNA_BAC)} of the Tampa contigs match the bacterial genomes of this individual" if DNA_BAC else ""}. These are contaminant sequences of the kind that commonly remain after decontamination; they are listed in <a href="../downloads/foreign_dna_census.tsv">foreign_dna_census.tsv</a>.</p>
 {alien_block}
 {prot_block}
 <h2>Limitations</h2>

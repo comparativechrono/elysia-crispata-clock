@@ -200,7 +200,7 @@ the foreign DNA. All sequences of the eleven assemblies were therefore examined 
 (`scripts/genus/76_foreign_census.py`, with `orfscan.py` and the rules of `foreign_dna.py`; every
 piece of foreign DNA in `results/genus/foreign_dna_census.tsv`, the details in
 `foreign_dna_census.json.gz`). Bacterial, phage and giant-virus DNA is 85 to 95% coding, slug DNA
-much less (medians of 12 to 28% in random 20-kb windows). Every sequence of which at least 60% lies
+much less (medians of 12 to 31% in random 20-kb windows of the eleven assemblies). Every sequence of which at least 60% lies
 in open reading frames of 300 bases or more (Mycoplasma code where it alone reaches 85%; simple
 sequence left out), or whose GC content differs from the assembly's by 0.08 or more, was translated
 in full (DIAMOND blastx, as in `43_foreign_sequences.py`) and judged with `foreign_dna.judge`,

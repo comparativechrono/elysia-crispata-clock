@@ -1,0 +1,588 @@
+assembly	sequence	start	end	sequence_length	kind	gc	orf_share	genetic_code	foreign_stretches	sea_slug_stretches	animal_stretches	nearest_bacteria	bacterial_identity_median	found_by_earlier_searches
+elysia-crispata	CAWKYH010001747.1	0	2000	2000	bacterium or other organism	0.497	0.912	standard	1	1	0	Methanocaldococcus 1	27.3	DNA-level search
+elysia-crispata	CAWKYH010000778.1	0	1000	1000	bacterium or other organism	0.489	0.712	standard	1	0	0			
+elysia-crispata	CAWKYH010001652.1	0	1000	1000	bacterium or other organism	0.581	0.0	standard	0	0	0			DNA-level search
+elysia-crispata	CAWKYH010002246.1	0	2000	2000	plastid DNA	0.342	0.789	standard	2	1	0			
+elysia-crispata-alt	CAWKYI010013408.1	0	5000	73662	bacterium or other organism, at the end of a slug sequence				5	0	0	Shigella 2, Haemophilus 1, Rickettsia 1	44.3	
+elysia-crispata-purdue	JAWDGP010006072.1	0	157771	157771	plastid DNA	0.5254	0.718	standard	7	0	0			plastid-protein search
+elysia-crispata-purdue	JAWDGP010001067.1	0	130901	130901	plastid DNA	0.5366	0.81	standard	5	0	0	Trichodesmium 2	90.6	plastid-protein search
+elysia-crispata-purdue	JAWDGP010001250.1	0	76989	76989	plastid DNA	0.5293	0.807	standard	2	0	0			plastid-protein search
+elysia-crispata-purdue	JAWDGP010003417.1	0	74320	74320	plastid DNA	0.5308	0.757	standard	2	1	0			
+elysia-crispata-purdue	JAWDGP010005039.1	0	68207	68207	plastid DNA	0.5008	0.79	standard	2	0	0			plastid-protein search
+elysia-crispata-purdue	JAWDGP010004663.1	0	58229	58229	plastid DNA	0.5097	0.656	standard	2	0	0			plastid-protein search
+elysia-crispata-purdue	JAWDGP010000296.1	0	38656	38656	plastid DNA	0.4511	0.803	standard	1	0	0			plastid-protein search
+elysia-crispata-purdue	JAWDGP010005634.1	0	30561	30561	plastid DNA	0.5116	0.628	standard	1	0	0			plastid-protein search
+elysia-crispata-purdue	JAWDGP010002135.1	0	22502	22502	plastid DNA	0.5301	0.764	standard	1	0	0			plastid-protein search
+elysia-crispata-purdue	JAWDGP010001375.1	0	21862	21862	plastid DNA	0.5025	0.702	standard	1	0	0			plastid-protein search
+elysia-crispata-purdue	JAWDGP010002183.1	0	18025	18025	plastid DNA	0.5068	0.792	standard	1	0	0			plastid-protein search
+elysia-crispata-purdue	JAWDGP010003279.1	0	4642	4642	plastid DNA	0.2626	0.951	standard	1	0	0			
+elysia-crispata-tampa	CFHGKC010010019.1	0	39127	39127	bacterium or other organism	0.4737	0.931	standard	5	0	1	Salmonella 1, Shigella 1, Paracoccus 1	55.6	regulator search
+elysia-crispata-tampa	CFHGKC010010306.1	0	38335	38335	bacterium or other organism	0.2351	0.613	standard	3	0	0	Pseudomonas 1, Treponema 1, Halalkalibacterium 1	27.4	
+elysia-crispata-tampa	CFHGKC010007813.1	0	27376	27376	bacterium or other organism	0.2385	0.913	standard	16	0	0	Escherichia 3, Bacillus 3, Pseudomonas 1	34.2	
+elysia-crispata-tampa	CFHGKC010011845.1	0	13035	13035	bacterium or other organism	0.27	0.952	standard	3	1	0	Escherichia 1, Brachyspira 1, Neisseria 1	50.1	
+elysia-crispata-tampa	CFHGKC010007370.1	0	11379	11379	bacterium or other organism	0.217	0.418	standard	2	0	0	Caulobacter 1, Nautilia 1	56.6	
+elysia-crispata-tampa	CFHGKC010007606.1	0	10957	10957	bacterium or other organism	0.2764	0.865	standard	4	0	1	Persephonella 1, Thermosipho 1, Bacillus 1	35.3	
+elysia-crispata-tampa	CFHGKC010007622.1	0	10521	10521	bacterium or other organism	0.2549	0.868	standard	4	0	0	Syntrophotalea 1, Mycolicibacterium 1, Wolinella 1	50.4	
+elysia-crispata-tampa	CFHGKC010007644.1	0	9895	9895	bacterium or other organism	0.2629	0.895	standard	4	0	1	Acetivibrio 2, Sulfurihydrogenibium 1, Escherichia 1	44.1	regulator search
+elysia-crispata-tampa	CFHGKC010007646.1	0	9868	9868	bacterium or other organism	0.2606	0.816	standard	4	0	0	Archaeoglobus 1, Geobacillus 1, Thermodesulfovibrio 1	48.1	
+elysia-crispata-tampa	CFHGKC010007667.1	0	9595	9595	bacterium or other organism	0.2295	0.935	standard	2	1	0	Methanospirillum 1, Borreliella 1	34.1	
+elysia-crispata-tampa	CFHGKC010007726.1	0	8737	8737	bacterium or other organism	0.6174	0.976	standard	3	1	0	Jannaschia 1, Escherichia 1, Bacillus 1	32.7	
+elysia-crispata-tampa	CFHGKC010007746.1	0	8565	8565	bacterium or other organism	0.2525	0.862	standard	6	0	0	Methanocaldococcus 1, Leptospira 1, Desulfosudis 1	49.1	
+elysia-crispata-tampa	CFHGKC010007810.1	0	7826	7826	bacterium or other organism	0.2476	0.776	standard	9	0	0	Leptospira 1, Carboxydothermus 1, Aquifex 1	40.2	
+elysia-crispata-tampa	CFHGKC010007914.1	0	7057	7057	bacterium or other organism	0.2361	0.945	standard	2	0	0	Buchnera 1, Rhizobium 1	36.9	
+elysia-crispata-tampa	CFHGKC010007921.1	0	7035	7035	bacterium or other organism	0.2327	0.824	standard	5	0	0	Haemophilus 2, Bacillus 1, Escherichia 1	34.7	
+elysia-crispata-tampa	CFHGKC010007926.1	0	7013	7013	bacterium or other organism	0.23	0.768	standard	7	0	0	Bacillus 1, Campylobacter 1, Leptospira 1	44.7	
+elysia-crispata-tampa	CFHGKC010007972.1	0	6645	6645	bacterium or other organism	0.2275	0.844	standard	3	0	0	Escherichia 1, Bacillus 1, Streptococcus 1	43.2	
+elysia-crispata-tampa	CFHGKC010008009.1	0	6445	6445	bacterium or other organism	0.2388	0.775	standard	2	0	0	Borreliella 1, Pectobacterium 1	34.2	
+elysia-crispata-tampa	CFHGKC010008037.1	0	6297	6297	bacterium or other organism	0.25	0.564	standard	3	0	0	Pseudomonas 1, Deinococcus 1, Escherichia 1	43.7	
+elysia-crispata-tampa	CFHGKC010008076.1	0	6080	6080	bacterium or other organism	0.2651	0.949	standard	1	0	0	Aquifex 1	39.3	
+elysia-crispata-tampa	CFHGKC010008091.1	0	6000	6000	bacterium or other organism	0.247	0.817	standard	6	0	0	Pelotomaculum 1, Methanocaldococcus 1, Thermotoga 1	36.6	
+elysia-crispata-tampa	CFHGKC010008095.1	0	5982	5982	bacterium or other organism	0.2894	0.866	standard	3	0	1	Treponema 1, Clostridium 1	59.8	
+elysia-crispata-tampa	CFHGKC010008108.1	0	5951	5951	bacterium or other organism	0.2952	0.838	standard	6	0	0	Borreliella 2, Treponema 2, Bacillus 2	50.0	
+elysia-crispata-tampa	CFHGKC010008165.1	0	5715	5715	bacterium or other organism	0.2558	0.919	standard	4	0	0	Treponema 1, Xylella 1, Staphylococcus 1	34.5	plastid-protein search
+elysia-crispata-tampa	CFHGKC010008209.1	0	5576	5576	bacterium or other organism	0.2701	0.835	standard	2	0	0	Escherichia 1, Neisseria 1	44.2	
+elysia-crispata-tampa	CFHGKC010008272.1	0	5319	5319	bacterium or other organism	0.2649	0.971	standard	2	0	0	Clostridium 1, Treponema 1	38.6	
+elysia-crispata-tampa	CFHGKC010008331.1	0	5100	5100	bacterium or other organism	0.2469	0.902	standard	2	0	0	Buchnera 2	30.5	
+elysia-crispata-tampa	CFHGKC010008367.1	0	4965	4965	bacterium or other organism	0.2594	0.773	standard	3	0	0	Rhizobium 1, Desulfotalea 1, Clostridium 1	60.5	
+elysia-crispata-tampa	CFHGKC010008371.1	0	4958	4958	bacterium or other organism	0.2388	0.809	standard	3	0	0	Clostridium 1	44.7	regulator search
+elysia-crispata-tampa	CFHGKC010008380.1	0	4926	4926	bacterium or other organism	0.2574	0.945	standard	5	0	0	Pseudomonas 1, Lactococcus 1, Nostoc 1	32.6	
+elysia-crispata-tampa	CFHGKC010008415.1	0	4851	4851	bacterium or other organism	0.2958	0.937	standard	4	0	0	Prosthecochloris 1, Myxococcus 1, Aquifex 1	47.1	regulator search
+elysia-crispata-tampa	CFHGKC010008558.1	0	4466	4466	bacterium or other organism	0.2732	0.729	standard	2	0	0	Anoxybacillus 1, Clostridium 1	51.5	
+elysia-crispata-tampa	CFHGKC010008580.1	0	4419	4419	bacterium or other organism	0.2396	0.84	standard	2	0	0	Staphylococcus 1, Borreliella 1	37.9	
+elysia-crispata-tampa	CFHGKC010008600.1	0	4374	4374	bacterium or other organism	0.3006	0.933	standard	5	0	0	Desulfotalea 1, Syntrophotalea 1, Nitratidesulfovibrio 1	44.0	
+elysia-crispata-tampa	CFHGKC010008632.1	0	4299	4299	bacterium or other organism	0.251	0.915	standard	3	0	0	Psychrobacter 1, Xylella 1, Buchnera 1	43.8	
+elysia-crispata-tampa	CFHGKC010008640.1	0	4272	4272	bacterium or other organism	0.2313	0.761	standard	3	0	0	Borreliella 1, Fusobacterium 1, Thermodesulfovibrio 1	43.6	
+elysia-crispata-tampa	CFHGKC010008651.1	0	4245	4245	bacterium or other organism	0.258	0.805	standard	3	0	0	Clostridium 1, Methanothermobacter 1, Brachyspira 1	45.9	
+elysia-crispata-tampa	CFHGKC010008657.1	0	4233	4233	bacterium or other organism	0.3083	0.841	standard	5	0	0	Bacillus 2, Halothermothrix 1, Ligilactobacillus 1	49.1	
+elysia-crispata-tampa	CFHGKC010008687.1	0	4182	4182	bacterium or other organism	0.248	0.721	standard	3	0	0	Xylella 1, Treponema 1, Alkaliphilus 1	49.9	regulator search
+elysia-crispata-tampa	CFHGKC010008711.1	0	4132	4132	bacterium or other organism	0.2481	0.901	standard	4	0	0	Chlorobaculum 1, Mycobacterium 1, Thermus 1	43.9	
+elysia-crispata-tampa	CFHGKC010008811.1	0	3953	3953	bacterium or other organism	0.2623	0.982	standard	2	0	0	Treponema 1	28.6	
+elysia-crispata-tampa	CFHGKC010008891.1	0	3833	3833	bacterium or other organism	0.2445	0.913	standard	3	0	0	Macrococcoides 1, Dictyoglomus 1, Bacillus 1	41.2	
+elysia-crispata-tampa	CFHGKC010008901.1	0	3818	3818	bacterium or other organism	0.2499	0.866	standard	2	0	0	Bacillus 1, Protochlamydia 1	48.7	
+elysia-crispata-tampa	CFHGKC010008929.1	0	3786	3786	bacterium or other organism	0.29	0.938	standard	1	0	0	Bacillus 1	46.0	
+elysia-crispata-tampa	CFHGKC010008931.1	0	3781	3781	bacterium or other organism	0.2883	0.99	standard	2	0	0	Haemophilus 1, Trichlorobacter 1	29.7	
+elysia-crispata-tampa	CFHGKC010008962.1	0	3735	3735	bacterium or other organism	0.305	0.998	standard	1	1	0	Borrelia 1	57.2	plastid-protein search
+elysia-crispata-tampa	CFHGKC010008968.1	0	3730	3730	bacterium or other organism	0.2729	0.812	standard	5	0	0	Caldicellulosiruptor 1, Borrelia 1, Thermotoga 1	41.0	
+elysia-crispata-tampa	CFHGKC010009000.1	0	3694	3694	bacterium or other organism	0.261	0.759	standard	2	0	0	Escherichia 1, Methanothermobacter 1	68.2	
+elysia-crispata-tampa	CFHGKC010009023.1	0	3656	3656	bacterium or other organism	0.2713	0.779	standard	3	0	0	Bacillus 1, Geobacter 1	38.6	
+elysia-crispata-tampa	CFHGKC010008597.1	0	3617	3617	bacterium or other organism	0.2076	0.91	standard	2	0	0	Pectobacterium 1, Pseudomonas 1	37.0	
+elysia-crispata-tampa	CFHGKC010009069.1	0	3604	3604	bacterium or other organism	0.2145	0.815	standard	1	1	0	Bacillus 1	32.5	
+elysia-crispata-tampa	CFHGKC010009213.1	0	3424	3424	bacterium or other organism	0.2243	0.838	standard	3	0	0	Bacillus 1, Cupriavidus 1, Musicola 1	21.5	
+elysia-crispata-tampa	CFHGKC010009260.1	0	3359	3359	bacterium or other organism	0.2623	0.904	standard	4	0	0	Caldanaerobacter 1, Carboxydothermus 1, Brachyspira 1	43.8	
+elysia-crispata-tampa	CFHGKC010009387.1	0	3226	3226	bacterium or other organism	0.3354	0.603	standard	1	0	0	Aliarcobacter 1	75.7	
+elysia-crispata-tampa	CFHGKC010009417.1	0	3198	3198	bacterium or other organism	0.2814	0.942	standard	2	0	0	Halalkalibacterium 1, Staphylococcus 1	48.7	
+elysia-crispata-tampa	CFHGKC010009480.1	0	3139	3139	bacterium or other organism	0.2478	0.956	standard	2	0	0	Thermotoga 1, Thermodesulfovibrio 1	58.8	
+elysia-crispata-tampa	CFHGKC010009495.1	0	3121	3121	bacterium or other organism	0.2768	0.929	standard	2	0	0	Bacillus 1	34.8	
+elysia-crispata-tampa	CFHGKC010009547.1	0	3067	3067	bacterium or other organism	0.2181	0.793	standard	1	0	0	Bacillus 1	24.2	
+elysia-crispata-tampa	CFHGKC010009551.1	0	3063	3063	bacterium or other organism	0.2729	0.969	standard	2	0	0	Caldanaerobacter 1, Escherichia 1	37.7	
+elysia-crispata-tampa	CFHGKC010009653.1	0	2963	2963	bacterium or other organism	0.2487	0.859	standard	3	0	0	Carboxydothermus 1, Bacillus 1	42.5	
+elysia-crispata-tampa	CFHGKC010009690.1	0	2929	2929	bacterium or other organism	0.2591	0.905	standard	2	0	0	Treponema 2	64.4	
+elysia-crispata-tampa	CFHGKC010009697.1	0	2919	2919	bacterium or other organism	0.2706	0.92	standard	2	0	0	Deinococcus 1, Chlorobaculum 1	45.8	
+elysia-crispata-tampa	CFHGKC010009708.1	0	2909	2909	bacterium or other organism	0.2314	0.857	standard	1	0	0	Escherichia 1	32.0	
+elysia-crispata-tampa	CFHGKC010009735.1	0	2889	2889	bacterium or other organism	0.288	0.808	standard	4	0	0	Halalkalibacterium 1, Dictyoglomus 1, Caldicellulosiruptor 1	41.8	regulator search
+elysia-crispata-tampa	CFHGKC010009740.1	0	2883	2883	bacterium or other organism	0.2938	0.929	standard	6	0	0	Halothermothrix 1, Leptospira 1, Jannaschia 1	54.5	plastid-protein search
+elysia-crispata-tampa	CFHGKC010009778.1	0	2846	2846	bacterium or other organism	0.4065	0.787	standard	2	0	0	Hathewaya 1, Methanocaldococcus 1	38.1	DNA-level search
+elysia-crispata-tampa	CFHGKC010009787.1	0	2839	2839	bacterium or other organism	0.2603	0.663	standard	3	0	0	Halalkalibacterium 1, Pseudomonas 1	51.2	
+elysia-crispata-tampa	CFHGKC010009821.1	0	2809	2809	bacterium or other organism	0.235	0.927	standard	2	0	0	Bacillus 1, Fusobacterium 1	33.5	
+elysia-crispata-tampa	CFHGKC010009855.1	0	2778	2778	bacterium or other organism	0.3492	0.637	standard	1	1	0	Acinetobacter 1	54.7	
+elysia-crispata-tampa	CFHGKC010009859.1	0	2774	2774	bacterium or other organism	0.3403	0.818	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010009866.1	0	2769	2769	bacterium or other organism	0.2268	0.715	standard	1	0	0	Wolbachia 1	27.8	
+elysia-crispata-tampa	CFHGKC010009917.1	0	2736	2736	bacterium or other organism	0.2354	0.887	standard	1	0	0	Leptotrichia 1	24.5	
+elysia-crispata-tampa	CFHGKC010009932.1	0	2724	2724	bacterium or other organism	0.301	0.786	standard	1	0	1	Clostridium 1	55.7	
+elysia-crispata-tampa	CFHGKC010009938.1	0	2720	2720	bacterium or other organism	0.2224	0.672	standard	1	0	0	Thermotoga 1	32.6	
+elysia-crispata-tampa	CFHGKC010010000.1	0	2670	2670	bacterium or other organism	0.2614	0.876	standard	3	0	0	Actinobacillus 1, Haemophilus 1	47.7	
+elysia-crispata-tampa	CFHGKC010010039.1	0	2647	2647	bacterium or other organism	0.2743	0.803	standard	2	0	0	Yersinia 1, Bacillus 1	42.4	
+elysia-crispata-tampa	CFHGKC010010118.1	0	2590	2590	bacterium or other organism	0.3046	0.893	standard	2	0	0	Shigella 1, Neisseria 1	54.4	
+elysia-crispata-tampa	CFHGKC010010149.1	0	2569	2569	bacterium or other organism	0.2546	0.993	standard	1	0	0	Cellvibrio 1	60.5	
+elysia-crispata-tampa	CFHGKC010010211.1	0	2517	2517	bacterium or other organism	0.2797	0.996	standard	1	1	0	Acetivibrio 1	39.6	
+elysia-crispata-tampa	CFHGKC010010220.1	0	2512	2512	bacterium or other organism	0.3929	0.829	standard	2	0	0	Methanocaldococcus 1, Bacillus 1	41.5	DNA-level search
+elysia-crispata-tampa	CFHGKC010010224.1	0	2510	2510	bacterium or other organism	0.2474	0.741	standard	3	0	0	Desulfocurvibacter 1, Clostridium 1, Chlamydia 1	34.3	
+elysia-crispata-tampa	CFHGKC010010245.1	0	2502	2502	bacterium or other organism	0.3082	0.834	standard	1	1	0	Staphylococcus 1	37.9	
+elysia-crispata-tampa	CFHGKC010009279.1	0	2453	2453	bacterium or other organism	0.2499	0.667	standard	3	0	0	Natranaerobius 1, Methanocaldococcus 1, Bacillus 1	45.9	
+elysia-crispata-tampa	CFHGKC010010420.1	0	2389	2389	bacterium or other organism	0.3035	0.925	standard	1	0	0			
+elysia-crispata-tampa	CFHGKC010010429.1	0	2382	2382	bacterium or other organism	0.2456	0.943	standard	1	0	0	Syntrophus 1	33.8	
+elysia-crispata-tampa	CFHGKC010010464.1	0	2364	2364	bacterium or other organism	0.2174	0.574	standard	2	0	0	Methanocaldococcus 1, Nitratiruptor 1	45.5	
+elysia-crispata-tampa	CFHGKC010010471.1	0	2359	2359	bacterium or other organism	0.2632	0.788	standard	1	0	0	Bacillus 1	43.3	
+elysia-crispata-tampa	CFHGKC010010510.1	0	2335	2335	bacterium or other organism	0.2274	0.711	standard	1	0	0	Thermus 1	36.9	
+elysia-crispata-tampa	CFHGKC010010535.1	0	2320	2320	bacterium or other organism	0.3522	0.975	standard	1	0	0			
+elysia-crispata-tampa	CFHGKC010010570.1	0	2293	2293	bacterium or other organism	0.2843	0.929	standard	1	0	1	Methanocaldococcus 1	36.1	
+elysia-crispata-tampa	CFHGKC010010575.1	0	2290	2290	bacterium or other organism	0.2192	0.832	standard	1	0	0	Campylobacter 1	27.6	
+elysia-crispata-tampa	CFHGKC010010670.1	0	2232	2232	bacterium or other organism	0.2384	0.851	standard	2	0	0	Coxiella 1, Pectobacterium 1	56.7	
+elysia-crispata-tampa	CFHGKC010010733.1	0	2201	2201	bacterium or other organism	0.2517	0.83	standard	1	0	0	Aromatoleum 1	34.6	
+elysia-crispata-tampa	CFHGKC010010760.1	0	2187	2187	bacterium or other organism	0.2529	0.845	standard	1	0	0			
+elysia-crispata-tampa	CFHGKC010010818.1	0	2159	2159	bacterium or other organism	0.2566	0.866	standard	1	1	0	Rickettsia 1	41.2	
+elysia-crispata-tampa	CFHGKC010010834.1	0	2149	2149	bacterium or other organism	0.3969	0.81	standard	1	0	0	Hathewaya 1	50.8	DNA-level search
+elysia-crispata-tampa	CFHGKC010010860.1	0	2137	2137	bacterium or other organism	0.2115	0.643	standard	1	0	0	Bacillus 1	42.1	
+elysia-crispata-tampa	CFHGKC010010902.1	0	2116	2116	bacterium or other organism	0.2495	0.635	standard	2	0	0	Flavobacterium 1, Thermosipho 1	63.1	
+elysia-crispata-tampa	CFHGKC010010926.1	0	2100	2100	bacterium or other organism	0.2538	0.846	standard	1	0	0			
+elysia-crispata-tampa	CFHGKC010010959.1	0	2078	2078	bacterium or other organism	0.3551	0.918	standard	1	0	0	Halothermothrix 1	66.7	
+elysia-crispata-tampa	CFHGKC010010985.1	0	2068	2068	bacterium or other organism	0.3917	0.766	standard	1	0	0	Hathewaya 1	41.7	
+elysia-crispata-tampa	CFHGKC010011066.1	0	2035	2035	bacterium or other organism	0.2108	0.976	standard	2	0	0	Bacillus 1, Borreliella 1	35.2	
+elysia-crispata-tampa	CFHGKC010011071.1	0	2033	2033	bacterium or other organism	0.2878	0.927	standard	2	0	0	Methanothermobacter 1, Staphylococcus 1	43.3	
+elysia-crispata-tampa	CFHGKC010011087.1	0	2022	2022	bacterium or other organism	0.2522	0.772	standard	1	0	0	Bacteroides 1	34.8	
+elysia-crispata-tampa	CFHGKC010011109.1	0	2010	2010	bacterium or other organism	0.307	0.999	standard	1	0	0	Clostridium 1	46.1	
+elysia-crispata-tampa	CFHGKC010011155.1	0	1989	1989	bacterium or other organism	0.2383	0.969	standard	2	0	0	Borrelia 1, Rickettsia 1	48.5	
+elysia-crispata-tampa	CFHGKC010011188.1	0	1969	1969	bacterium or other organism	0.2463	0.946	standard	1	0	0	Bacillus 1	24.2	
+elysia-crispata-tampa	CFHGKC010011212.1	0	1954	1954	bacterium or other organism	0.3444	0.942	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010011287.1	0	1923	1923	bacterium or other organism	0.338	0.811	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010011309.1	0	1914	1914	bacterium or other organism	0.2471	0.801	standard	2	0	0	Vibrio 2	75.6	
+elysia-crispata-tampa	CFHGKC010011342.1	0	1901	1901	bacterium or other organism	0.2962	0.937	standard	2	0	0	Bacillus 1, Natranaerobius 1	38.6	
+elysia-crispata-tampa	CFHGKC010011348.1	0	1899	1899	bacterium or other organism	0.2812	0.91	standard	1	0	0	Methanocaldococcus 1	23.5	
+elysia-crispata-tampa	CFHGKC010011358.1	0	1895	1895	bacterium or other organism	0.2422	0.586	standard	1	0	0			
+elysia-crispata-tampa	CFHGKC010009913.1	0	1894	1894	bacterium or other organism	0.312	0.999	standard	1	0	0	Bacillus 1	26.6	
+elysia-crispata-tampa	CFHGKC010011398.1	0	1877	1877	bacterium or other organism	0.3937	0.836	standard	1	0	0	Hathewaya 1	57.7	DNA-level search
+elysia-crispata-tampa	CFHGKC010011591.1	0	1796	1796	bacterium or other organism	0.3736	0.994	standard	2	0	0			
+elysia-crispata-tampa	CFHGKC010011600.1	0	1793	1793	bacterium or other organism	0.2828	0.954	standard	1	0	0	Brachyspira 1	37.9	
+elysia-crispata-tampa	CFHGKC010011673.1	0	1764	1764	bacterium or other organism	0.2489	0.796	standard	1	0	0	Thermotoga 1	28.3	
+elysia-crispata-tampa	CFHGKC010011685.1	0	1759	1759	bacterium or other organism	0.4326	0.781	standard	1	0	0			
+elysia-crispata-tampa	CFHGKC010011688.1	0	1757	1757	bacterium or other organism	0.2373	0.99	standard	2	0	0	Staphylococcus 1, Mycobacterium 1	58.9	
+elysia-crispata-tampa	CFHGKC010011757.1	0	1729	1729	bacterium or other organism	0.2782	0.786	standard	2	0	0	Picrophilus 1, Bacillus 1	64.4	
+elysia-crispata-tampa	CFHGKC010011789.1	0	1717	1717	bacterium or other organism	0.2079	0.657	standard	1	0	0	Methanocaldococcus 1	27.5	
+elysia-crispata-tampa	CFHGKC010011807.1	0	1712	1712	bacterium or other organism	0.3213	0.998	standard	3	0	0	Desulforamulus 1, Thermodesulfovibrio 1, Geobacter 1	45.6	
+elysia-crispata-tampa	CFHGKC010011812.1	0	1711	1711	bacterium or other organism	0.287	0.722	standard	2	0	0	Methanocaldococcus 1, Rhodopirellula 1	54.8	
+elysia-crispata-tampa	CFHGKC010011898.1	0	1680	1680	bacterium or other organism	0.3518	0.998	standard	2	0	0	Escherichia 1	34.8	DNA-level search
+elysia-crispata-tampa	CFHGKC010011907.1	0	1677	1677	bacterium or other organism	0.2302	0.617	standard	1	0	0	Caldanaerobacter 1	44.6	
+elysia-crispata-tampa	CFHGKC010011966.1	0	1652	1652	bacterium or other organism	0.3874	0.841	standard	1	0	0	Clostridium 1	24.7	
+elysia-crispata-tampa	CFHGKC010011986.1	0	1647	1647	bacterium or other organism	0.2702	0.999	standard	2	0	0	Caldicellulosiruptor 1, Clostridium 1	45.5	regulator search
+elysia-crispata-tampa	CFHGKC010012014.1	0	1638	1638	bacterium or other organism	0.2491	0.85	standard	2	0	0	Mycobacterium 1	41.6	
+elysia-crispata-tampa	CFHGKC010012025.1	0	1633	1633	bacterium or other organism	0.3417	0.999	standard	1	0	0	Brachyspira 1	49.1	regulator search
+elysia-crispata-tampa	CFHGKC010004979.1	0	1619	1619	bacterium or other organism	0.3101	0.999	standard	1	0	0	Aeropyrum 1	30.4	
+elysia-crispata-tampa	CFHGKC010004984.1	0	1617	1617	bacterium or other organism	0.3915	0.748	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010004986.1	0	1617	1617	bacterium or other organism	0.2832	0.965	standard	1	0	0	Treponema 1	29.5	
+elysia-crispata-tampa	CFHGKC010005159.1	0	1563	1563	bacterium or other organism	0.2828	0.994	standard	2	0	0	Streptomyces 1, Bacillus 1	60.9	
+elysia-crispata-tampa	CFHGKC010005165.1	0	1561	1561	bacterium or other organism	0.36	0.0	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010005178.1	0	1558	1558	bacterium or other organism	0.2311	0.801	standard	1	0	0	Borreliella 1	49.0	
+elysia-crispata-tampa	CFHGKC010005197.1	0	1554	1554	bacterium or other organism	0.2239	0.641	standard	1	0	0	Pasteurella 1	30.7	
+elysia-crispata-tampa	CFHGKC010005251.1	0	1538	1538	bacterium or other organism	0.409	0.793	standard	0	0	1			DNA-level search
+elysia-crispata-tampa	CFHGKC010005286.1	0	1526	1526	bacterium or other organism	0.3303	0.897	standard	3	0	0	Nostoc 1, Caldanaerobacter 1	60.9	
+elysia-crispata-tampa	CFHGKC010005294.1	0	1524	1524	bacterium or other organism	0.2434	0.929	standard	3	0	0	Buchnera 1, Onion 1, Treponema 1	40.7	
+elysia-crispata-tampa	CFHGKC010005392.1	0	1492	1492	bacterium or other organism	0.2245	0.949	standard	1	0	0			
+elysia-crispata-tampa	CFHGKC010005417.1	0	1487	1487	bacterium or other organism	0.2683	0.92	standard	2	0	0	Bilophila 1, Geobacter 1	41.6	
+elysia-crispata-tampa	CFHGKC010005438.1	0	1483	1483	bacterium or other organism	0.2684	0.92	standard	1	0	0	Treponema 1	44.7	
+elysia-crispata-tampa	CFHGKC010005500.1	0	1468	1468	bacterium or other organism	0.2623	0.997	standard	1	0	0	Geotalea 1	48.2	
+elysia-crispata-tampa	CFHGKC010005608.1	0	1431	1431	bacterium or other organism	0.2928	0.998	standard	1	0	0	Borreliella 1	33.7	
+elysia-crispata-tampa	CFHGKC010005613.1	0	1430	1430	bacterium or other organism	0.2979	0.819	standard	2	0	0	Escherichia 1	25.6	
+elysia-crispata-tampa	CFHGKC010005657.1	0	1418	1418	bacterium or other organism	0.2426	0.884	standard	1	0	0	Salmonella 1	44.6	regulator search
+elysia-crispata-tampa	CFHGKC010005705.1	0	1407	1407	bacterium or other organism	0.2289	0.763	standard	1	0	0	Caldicellulosiruptor 1	35.3	
+elysia-crispata-tampa	CFHGKC010005772.1	0	1388	1388	bacterium or other organism	0.2976	0.7	standard	4	0	0	Clostridium 1, Xylella 1, Thermoanaerobacter 1	54.7	
+elysia-crispata-tampa	CFHGKC010005815.1	0	1377	1377	bacterium or other organism	0.2186	0.917	standard	1	0	0	Methanocaldococcus 1	23.1	
+elysia-crispata-tampa	CFHGKC010005844.1	0	1369	1369	bacterium or other organism	0.431	0.866	standard	1	0	0	Hathewaya 1	54.9	DNA-level search
+elysia-crispata-tampa	CFHGKC010005908.1	0	1349	1349	bacterium or other organism	0.2802	0.997	standard	2	0	1	Staphylococcus 1, Acholeplasma 1	49.4	
+elysia-crispata-tampa	CFHGKC010006002.1	0	1321	1321	bacterium or other organism	0.2324	0.552	standard	1	0	0	Natranaerobius 1	46.2	
+elysia-crispata-tampa	CFHGKC010006097.1	0	1302	1302	bacterium or other organism	0.5607	0.999	standard	0	0	1			DNA-level search
+elysia-crispata-tampa	CFHGKC010006139.1	0	1293	1293	bacterium or other organism	0.29	0.603	standard	2	0	0	Halalkalibacterium 1	52.8	
+elysia-crispata-tampa	CFHGKC010006159.1	0	1288	1288	bacterium or other organism	0.2057	0.843	standard	1	0	0	Bacillus 1	25.4	
+elysia-crispata-tampa	CFHGKC010006180.1	0	1283	1283	bacterium or other organism	0.2658	0.998	standard	2	0	0	Vibrio 1	39.3	
+elysia-crispata-tampa	CFHGKC010006222.1	0	1272	1272	bacterium or other organism	0.2712	0.992	standard	2	0	0	Leptospira 1, Clostridium 1	39.0	
+elysia-crispata-tampa	CFHGKC010006260.1	0	1260	1260	bacterium or other organism	0.2087	0.955	standard	1	0	0	Mycolicibacterium 1	38.9	
+elysia-crispata-tampa	CFHGKC010006273.1	0	1259	1259	bacterium or other organism	0.2613	0.999	standard	1	0	0	Archaeoglobus 1	42.7	
+elysia-crispata-tampa	CFHGKC010006286.1	0	1254	1254	bacterium or other organism	0.3939	0.998	standard	0	0	1			DNA-level search
+elysia-crispata-tampa	CFHGKC010006453.1	0	1218	1218	bacterium or other organism	0.3522	0.719	standard	1	1	0	Helicobacter 1	65.0	regulator search
+elysia-crispata-tampa	CFHGKC010006478.1	0	1214	1214	bacterium or other organism	0.2916	0.998	standard	1	0	0	Escherichia 1	25.5	
+elysia-crispata-tampa	CFHGKC010006491.1	0	1211	1211	bacterium or other organism	0.2436	0.374	standard	1	0	0	Bacillus 1	35.3	
+elysia-crispata-tampa	CFHGKC010006525.1	0	1203	1203	bacterium or other organism	0.4048	0.935	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010006529.1	0	1201	1201	bacterium or other organism	0.2515	0.754	standard	1	0	0	Desulforapulum 1	67.3	
+elysia-crispata-tampa	CFHGKC010006586.1	0	1189	1189	bacterium or other organism	0.3549	0.998	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010006594.1	0	1188	1188	bacterium or other organism	0.25	0.564	standard	2	0	0	Buchnera 1, Borreliella 1	60.9	
+elysia-crispata-tampa	CFHGKC010006650.1	0	1174	1174	bacterium or other organism	0.224	0.608	standard	1	0	0	Methanocaldococcus 1	37.7	
+elysia-crispata-tampa	CFHGKC010006655.1	0	1173	1173	bacterium or other organism	0.3598	0.998	standard	1	0	0	Methylacidiphilum 1	70.8	plastid-protein search
+elysia-crispata-tampa	CFHGKC010006674.1	0	1170	1170	bacterium or other organism	0.3128	1.0	standard	1	0	0	Bacillus 1	39.8	
+elysia-crispata-tampa	CFHGKC010006722.1	0	1160	1160	bacterium or other organism	0.2466	0.959	standard	2	0	0	Bacillus 1, Borreliella 1	51.2	
+elysia-crispata-tampa	CFHGKC010006723.1	0	1160	1160	bacterium or other organism	0.2991	0.998	standard	1	0	0	Rickettsia 1	29.8	
+elysia-crispata-tampa	CFHGKC010006747.1	0	1156	1156	bacterium or other organism	0.269	0.696	standard	1	0	0	Bacillus 1	52.1	
+elysia-crispata-tampa	CFHGKC010006757.1	0	1153	1153	bacterium or other organism	0.2134	0.781	standard	1	0	0	Methanothermobacter 1	40.4	
+elysia-crispata-tampa	CFHGKC010006768.1	0	1151	1151	bacterium or other organism	0.2554	0.998	standard	1	0	0	Pseudomonas 1	26.1	
+elysia-crispata-tampa	CFHGKC010006813.1	0	1141	1141	bacterium or other organism	0.2174	0.273	standard	1	0	0			
+elysia-crispata-tampa	CFHGKC010006926.1	0	1122	1122	bacterium or other organism	0.262	0.81	standard	2	0	0	Chlorobaculum 1, Ralstonia 1	50.0	
+elysia-crispata-tampa	CFHGKC010006989.1	0	1109	1109	bacterium or other organism	0.2516	0.308	standard	3	0	0	Protochlamydia 1, Paraburkholderia 1, Archaeoglobus 1	44.3	
+elysia-crispata-tampa	CFHGKC010007122.1	0	1086	1086	bacterium or other organism	0.2339	0.638	standard	1	0	0	Staphylococcus 1	35.5	
+elysia-crispata-tampa	CFHGKC010007131.1	0	1084	1084	bacterium or other organism	0.2712	0.75	standard	1	0	0	Clostridium 1	40.1	
+elysia-crispata-tampa	CFHGKC010007167.1	0	1078	1078	bacterium or other organism	0.3562	0.615	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010007176.1	0	1076	1076	bacterium or other organism	0.2212	0.99	standard	1	0	0	Halothermothrix 1	32.5	
+elysia-crispata-tampa	CFHGKC010007244.1	0	1065	1065	bacterium or other organism	0.2385	0.997	standard	1	0	0	Leptospira 1	27.8	
+elysia-crispata-tampa	CFHGKC010007294.1	0	1056	1056	bacterium or other organism	0.3248	0.0	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010007404.1	0	1038	1038	bacterium or other organism	0.3882	0.876	standard	0	2	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010007433.1	0	1032	1032	bacterium or other organism	0.3711	0.317	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010007460.1	0	1027	1027	bacterium or other organism	0.2201	0.511	standard	3	0	0	Borreliella 1, Campylobacter 1, Leptospira 1	54.1	
+elysia-crispata-tampa	CFHGKC010007463.1	0	1026	1026	bacterium or other organism	0.2827	0.0	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010007483.1	0	1024	1024	bacterium or other organism	0.3311	0.352	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010007573.1	0	1006	1006	bacterium or other organism	0.3231	0.0	standard	0	0	0			DNA-level search
+elysia-crispata-tampa	CFHGKC010007578.1	0	1005	1005	bacterium or other organism	0.2308	0.776	standard	1	0	0	Buchnera 1	39.9	
+elysia-crispata-tampa	CFHGKC010001527.1	0	4860	4860	plastid DNA	0.2327	0.864	standard	1	0	0	Leptotrichia 1	22.8	
+elysia-chlorotica	RQTK01001497.1	0	81532	81532	bacterium or other organism	0.3083	0.936	standard	71	1	1	Francisella 12, Escherichia 9, Bacillus 7	43.8	gene-set search; regulator search
+elysia-chlorotica	RQTK01001529.1	0	75781	75781	bacterium or other organism	0.3318	0.935	standard	54	1	0	Francisella 18, Pseudomonas 6, Escherichia 5	51.8	gene-set search; plastid-protein search; regulator search
+elysia-chlorotica	RQTK01001550.1	0	73533	73533	bacterium or other organism	0.3316	0.943	standard	42	0	2	Francisella 13, Escherichia 4, Haemophilus 4	52.0	gene-set search; regulator search
+elysia-chlorotica	RQTK01001610.1	0	64420	64420	bacterium or other organism	0.3315	0.857	standard	42	6	4	Francisella 9, Bacillus 5, Haemophilus 3	46.4	gene-set search
+elysia-chlorotica	RQTK01001650.1	0	59588	59588	bacterium or other organism	0.3212	0.925	standard	35	0	1	Francisella 11, Escherichia 3, Yersinia 2	50.1	gene-set search; plastid-protein search
+elysia-chlorotica	RQTK01001696.1	0	52701	52701	bacterium or other organism	0.3199	0.917	standard	41	0	0	Escherichia 6, Bacillus 6, Francisella 5	47.2	gene-set search
+elysia-chlorotica	RQTK01001714.1	0	50308	50308	bacterium or other organism	0.3276	0.914	standard	38	1	4	Francisella 9, Bacillus 7, Escherichia 4	43.8	gene-set search; plastid-protein search; regulator search
+elysia-chlorotica	RQTK01001777.1	0	42890	42890	bacterium or other organism	0.3124	0.958	standard	26	0	5	Francisella 6, Bacillus 4, Pseudomonas 3	42.0	gene-set search; regulator search
+elysia-chlorotica	RQTK01001784.1	0	41680	41680	bacterium or other organism	0.3302	0.925	standard	31	3	2	Francisella 7, Escherichia 3, Vibrio 2	46.3	gene-set search
+elysia-chlorotica	RQTK01001787.1	0	41564	41564	bacterium or other organism	0.3028	0.907	standard	30	0	0	Bacillus 5, Francisella 3, Haemophilus 3	41.1	regulator search
+elysia-chlorotica	RQTK01001790.1	0	41415	41415	bacterium or other organism	0.3257	0.943	standard	29	1	0	Francisella 5, Haemophilus 4, Pseudomonas 3	45.8	gene-set search; plastid-protein search; regulator search
+elysia-chlorotica	RQTK01001803.1	0	40570	40570	bacterium or other organism	0.3471	0.911	standard	54	0	2	Francisella 38, Pseudomonas 2, Escherichia 2	87.7	gene-set search; plastid-protein search
+elysia-chlorotica	RQTK01001810.1	0	39706	39706	bacterium or other organism	0.293	0.918	standard	29	0	1	Bacillus 5, Aneurinibacillus 3, Chlamydia 2	36.1	gene-set search; regulator search
+elysia-chlorotica	RQTK01001842.1	0	36717	36717	bacterium or other organism	0.3327	0.897	standard	30	2	2	Francisella 9, Pseudomonas 4, Escherichia 4	45.8	gene-set search; plastid-protein search
+elysia-chlorotica	RQTK01001844.1	0	36254	36254	bacterium or other organism	0.3305	0.931	standard	28	1	1	Francisella 11, Escherichia 4, Bacillus 1	68.4	gene-set search
+elysia-chlorotica	RQTK01001851.1	0	35243	35243	bacterium or other organism	0.3361	0.93	standard	23	0	0	Francisella 5, Escherichia 2, Haemophilus 2	54.2	gene-set search; plastid-protein search
+elysia-chlorotica	RQTK01001857.1	0	34746	34746	bacterium or other organism	0.3103	0.901	standard	27	0	2	Francisella 4, Shigella 2, Haemophilus 2	41.2	gene-set search
+elysia-chlorotica	RQTK01001861.1	0	34505	34505	bacterium or other organism	0.3258	0.892	standard	24	1	1	Escherichia 4, Francisella 4, Erwinia 1	44.2	gene-set search; plastid-protein search; regulator search
+elysia-chlorotica	RQTK01001903.1	0	30283	30283	bacterium or other organism	0.3414	0.923	standard	19	0	1	Francisella 4, Escherichia 4, Shigella 2	65.3	gene-set search
+elysia-chlorotica	RQTK01001904.1	0	30272	30272	bacterium or other organism	0.3397	0.93	standard	17	2	0	Francisella 7, Escherichia 3, Vibrio 2	60.6	gene-set search; plastid-protein search
+elysia-chlorotica	RQTK01001910.1	0	29636	29636	bacterium or other organism	0.3034	0.9	standard	26	0	3	Francisella 11, Pasteurella 2, Escherichia 2	71.0	gene-set search; plastid-protein search
+elysia-chlorotica	RQTK01001919.1	0	28865	28865	bacterium or other organism	0.3305	0.891	standard	21	0	2	Bacillus 5, Aquifex 2, Salmonella 1	40.8	gene-set search
+elysia-chlorotica	RQTK01001933.1	0	27603	27603	bacterium or other organism	0.3191	0.93	standard	22	0	0	Francisella 3, Escherichia 2, Haemophilus 2	43.8	gene-set search; regulator search
+elysia-chlorotica	RQTK01001943.1	0	26392	26392	bacterium or other organism	0.3257	0.927	standard	24	0	0	Francisella 6, Haemophilus 3, Vibrio 3	47.2	gene-set search; plastid-protein search
+elysia-chlorotica	RQTK01001974.1	0	24240	24240	bacterium or other organism	0.3275	0.912	standard	18	1	0	Francisella 4, Escherichia 2, Bacillus 2	42.9	
+elysia-chlorotica	RQTK01001975.1	0	24222	24222	bacterium or other organism	0.3286	0.937	standard	18	3	0	Francisella 5, Bacillus 2, Pseudomonas 2	41.2	gene-set search; regulator search
+elysia-chlorotica	RQTK01001978.1	0	23975	23975	bacterium or other organism	0.3484	0.925	standard	19	0	2	Francisella 9, Thermotoga 1, Aquifex 1	83.0	gene-set search
+elysia-chlorotica	RQTK01001990.1	0	23066	23066	bacterium or other organism	0.326	0.914	standard	13	1	3	Francisella 5, Shewanella 1, Actinobacillus 1	64.4	gene-set search; plastid-protein search
+elysia-chlorotica	RQTK01001995.1	0	22730	22730	bacterium or other organism	0.3376	0.893	standard	15	0	1	Francisella 6, Pseudomonas 1, Escherichia 1	60.8	gene-set search; plastid-protein search
+elysia-chlorotica	RQTK01001998.1	0	22468	22468	bacterium or other organism	0.3316	0.918	standard	17	0	0	Haemophilus 3, Escherichia 2, Aliivibrio 1	29.7	gene-set search
+elysia-chlorotica	RQTK01001999.1	0	22430	22430	bacterium or other organism	0.3169	0.925	standard	14	0	0	Francisella 2, Methanocaldococcus 2, Buchnera 1	40.2	gene-set search
+elysia-chlorotica	RQTK01002000.1	0	22415	22415	bacterium or other organism	0.3127	0.929	standard	15	0	0	Burkholderia 2, Francisella 2, Haemophilus 2	38.6	gene-set search; regulator search
+elysia-chlorotica	RQTK01002014.1	0	21301	21301	bacterium or other organism	0.3023	0.945	standard	9	0	0	Staphylococcus 1, Deinococcus 1, Neisseria 1	36.0	gene-set search
+elysia-chlorotica	RQTK01002041.1	0	19135	19135	bacterium or other organism	0.3071	0.884	standard	13	1	0	Francisella 3, Escherichia 2, Haemophilus 2	47.4	gene-set search; regulator search
+elysia-chlorotica	RQTK01002056.1	0	18450	18450	bacterium or other organism	0.3168	0.863	standard	12	0	0	Escherichia 3, Francisella 2, Yersinia 1	46.1	gene-set search; plastid-protein search
+elysia-chlorotica	RQTK01002063.1	0	18130	18130	bacterium or other organism	0.3216	0.937	standard	9	0	0	Francisella 2, Escherichia 1, Methanocaldococcus 1	58.9	gene-set search
+elysia-chlorotica	RQTK01002087.1	0	16863	16863	bacterium or other organism	0.3271	0.925	standard	14	0	0	Streptococcus 2, Pseudomonas 2, Azotobacter 2	33.0	
+elysia-chlorotica	RQTK01002097.1	0	16600	16600	bacterium or other organism	0.3363	0.951	standard	11	1	0	Francisella 4, Aquifex 1, Vibrio 1	51.3	gene-set search
+elysia-chlorotica	RQTK01002098.1	0	16575	16575	bacterium or other organism	0.335	0.925	standard	7	1	1	Haemophilus 2, Shigella 1, Psychromonas 1	40.2	gene-set search
+elysia-chlorotica	RQTK01002134.1	0	14746	14746	bacterium or other organism	0.3211	0.838	standard	13	0	2	Francisella 3, Haemophilus 2, Shigella 1	48.3	gene-set search; regulator search
+elysia-chlorotica	RQTK01002135.1	0	14674	14674	bacterium or other organism	0.3324	0.85	standard	9	1	0	Sinorhizobium 1, Bacillus 1, Idiomarina 1	62.7	gene-set search; regulator search
+elysia-chlorotica	RQTK01002137.1	0	14616	14616	bacterium or other organism	0.3218	0.921	standard	7	1	0	Escherichia 3, Rhodobacter 1, Vibrio 1	51.3	gene-set search
+elysia-chlorotica	RQTK01002143.1	0	14309	14309	bacterium or other organism	0.3198	0.87	standard	6	2	0	Mycobacterium 1, Shigella 1, Escherichia 1	41.8	gene-set search
+elysia-chlorotica	RQTK01002160.1	0	13825	13825	bacterium or other organism	0.3051	0.879	standard	5	0	0	Escherichia 3, Haemophilus 2	31.5	
+elysia-chlorotica	RQTK01002176.1	0	13045	13045	bacterium or other organism	0.3197	0.948	standard	6	0	0	Staphylococcus 2, Clostridium 1, Agrobacterium 1	49.2	
+elysia-chlorotica	RQTK01002181.1	0	12906	12906	bacterium or other organism	0.3292	0.825	standard	4	2	2	Acinetobacter 1, Yersinia 1, Nocardia 1	49.3	
+elysia-chlorotica	RQTK01002200.1	0	12333	12333	bacterium or other organism	0.322	0.888	standard	5	0	0	Agrobacterium 1, Bacillus 1, Escherichia 1	43.0	gene-set search
+elysia-chlorotica	RQTK01002202.1	0	12255	12255	bacterium or other organism	0.3065	0.947	standard	4	0	4	Haemophilus 2, Shewanella 1, Escherichia 1	47.9	
+elysia-chlorotica	RQTK01002211.1	0	12011	12011	bacterium or other organism	0.3205	0.905	standard	6	0	0	Mycobacterium 1, Escherichia 1, Aeromonas 1	47.0	gene-set search
+elysia-chlorotica	RQTK01002233.1	0	11235	11235	bacterium or other organism	0.3125	0.839	standard	6	1	0	Aliivibrio 1, Francisella 1, Haemophilus 1	43.6	
+elysia-chlorotica	RQTK01002272.1	0	10199	10199	bacterium or other organism	0.3017	0.844	standard	3	0	0	Bacillus 1, Haemophilus 1, Fusobacterium 1	43.3	
+elysia-chlorotica	RQTK01002310.1	0	9105	9105	bacterium or other organism	0.3355	0.938	standard	5	0	0	Vibrio 1, Streptococcus 1, Pasteurella 1	46.9	gene-set search
+elysia-chlorotica	RQTK01002312.1	0	9082	9082	bacterium or other organism	0.3202	0.938	standard	4	0	0	Aggregatibacter 1, Vibrio 1, Francisella 1	48.3	
+elysia-chlorotica	RQTK01002319.1	0	8891	8891	bacterium or other organism	0.3112	0.914	standard	5	1	0	Staphylococcus 2, Sinorhizobium 1, Francisella 1	47.1	gene-set search
+elysia-chlorotica	RQTK01002324.1	0	8793	8793	bacterium or other organism	0.3097	0.926	standard	2	0	0	Staphylococcus 1	33.6	
+elysia-chlorotica	RQTK01002325.1	0	8741	8741	bacterium or other organism	0.317	0.811	standard	1	1	1	Aeromonas 1	31.3	
+elysia-chlorotica	RQTK01002352.1	0	7967	7967	bacterium or other organism	0.3027	0.762	standard	2	0	1	Enterococcus 1	44.4	
+elysia-chlorotica	RQTK01002355.1	0	7912	7912	bacterium or other organism	0.3067	0.961	standard	5	0	0	Bacillus 1, Shigella 1, Francisella 1	34.9	
+elysia-chlorotica	RQTK01002365.1	0	7794	7794	bacterium or other organism	0.3069	0.863	standard	5	0	0	Escherichia 1, Nitrosococcus 1, Vibrio 1	34.7	regulator search
+elysia-chlorotica	RQTK01002369.1	0	7745	7745	bacterium or other organism	0.3232	0.855	standard	7	0	0	Coxiella 1, Francisella 1, Shewanella 1	37.8	gene-set search
+elysia-chlorotica	RQTK01002387.1	0	7498	7498	bacterium or other organism	0.3174	0.849	standard	9	0	0	Francisella 2, Haemophilus 1, Escherichia 1	41.0	
+elysia-chlorotica	RQTK01002401.1	0	7299	7299	bacterium or other organism	0.3265	0.943	standard	5	0	0	Mycobacterium 2, Clostridium 1, Caldanaerobacter 1	41.1	
+elysia-chlorotica	RQTK01002407.1	0	7188	7188	bacterium or other organism	0.3009	0.932	standard	3	0	1	Rhizobium 1, Pelagibacter 1	47.6	
+elysia-chlorotica	RQTK01002411.1	0	7103	7103	bacterium or other organism	0.3346	0.745	standard	3	0	0	Neisseria 1, Bradyrhizobium 1	44.8	gene-set search
+elysia-chlorotica	RQTK01002419.1	0	6964	6964	bacterium or other organism	0.3033	0.812	standard	6	0	0	Francisella 2, Pseudomonas 2, Sodalis 1	52.1	
+elysia-chlorotica	RQTK01002453.1	0	6410	6410	bacterium or other organism	0.3168	0.857	standard	5	0	0	Francisella 4, Escherichia 1	76.4	gene-set search
+elysia-chlorotica	RQTK01002463.1	0	6261	6261	bacterium or other organism	0.3317	0.886	standard	4	0	0	Escherichia 1, Bacillus 1	35.4	gene-set search
+elysia-chlorotica	RQTK01002466.1	0	6238	6238	bacterium or other organism	0.3039	0.906	standard	5	0	0	Francisella 2, Escherichia 1	57.1	
+elysia-chlorotica	RQTK01002561.1	0	4999	4999	bacterium or other organism	0.3085	0.867	standard	2	0	0			
+elysia-chlorotica	RQTK01002605.1	0	4625	4625	bacterium or other organism	0.5332	0.622	standard	2	1	4			
+elysia-chlorotica	RQTK01002607.1	0	4604	4604	bacterium or other organism	0.3304	0.812	standard	3	0	0	Shigella 1, Escherichia 1	46.1	
+elysia-chlorotica	RQTK01002637.1	0	4384	4384	bacterium or other organism	0.3057	0.878	standard	2	0	1			gene-set search
+elysia-chlorotica	RQTK01002673.1	0	4128	4128	bacterium or other organism	0.3009	0.957	standard	5	0	0	Bacillus 1, Marinomonas 1, Francisella 1	40.9	
+elysia-chlorotica	RQTK01002724.1	0	3847	3847	bacterium or other organism	0.5378	0.612	standard	4	1	3			gene-set search
+elysia-chlorotica	RQTK01002775.1	0	3616	3616	bacterium or other organism	0.3211	0.862	standard	3	0	1	Sinorhizobium 1, Francisella 1	78.7	gene-set search
+elysia-chlorotica	RQTK01002782.1	0	3597	3597	bacterium or other organism	0.3342	0.813	standard	3	0	0	Haemophilus 2, Bacillus 1	45.3	
+elysia-chlorotica	RQTK01002800.1	0	3565	3565	bacterium or other organism	0.2968	0.834	standard	2	0	0	Bacillus 1, Escherichia 1	59.2	
+elysia-chlorotica	RQTK01002819.1	0	3479	3479	bacterium or other organism	0.3139	0.875	standard	1	0	2	Francisella 1	69.4	
+elysia-chlorotica	RQTK01002827.1	0	3466	3466	bacterium or other organism	0.3407	0.906	standard	1	0	1	Aggregatibacter 1	56.1	
+elysia-chlorotica	RQTK01002934.1	0	3121	3121	bacterium or other organism	0.5533	0.733	standard	4	1	3			
+elysia-chlorotica	RQTK01003009.1	0	2954	2954	bacterium or other organism	0.2857	0.878	standard	2	0	0	Neisseria 1, Listeria 1	35.0	
+elysia-chlorotica	RQTK01003034.1	0	2907	2907	bacterium or other organism	0.3058	0.738	standard	2	0	1	Treponema 1	37.4	
+elysia-chlorotica	RQTK01003058.1	0	2848	2848	bacterium or other organism	0.2893	0.814	standard	2	0	0	Methanocaldococcus 1	24.1	
+elysia-chlorotica	RQTK01003091.1	0	2763	2763	bacterium or other organism	0.3062	0.83	standard	1	0	0	Pseudomonas 1	28.1	
+elysia-chlorotica	RQTK01003190.1	0	2572	2572	bacterium or other organism	0.5548	0.631	standard	2	1	2			
+elysia-chlorotica	RQTK01003232.1	0	2478	2478	bacterium or other organism	0.4984	0.923	mycoplasma (TGA = Trp)	2	0	2			
+elysia-chlorotica	RQTK01003347.1	0	2276	2276	bacterium or other organism	0.5778	0.638	standard	5	1	1			
+elysia-chlorotica	RQTK01003442.1	0	2130	2130	bacterium or other organism	0.3085	0.861	mycoplasma (TGA = Trp)	1	0	0			
+elysia-chlorotica	RQTK01003748.1	0	1822	1822	bacterium or other organism	0.5285	0.857	mycoplasma (TGA = Trp)	2	0	4			
+elysia-chlorotica	RQTK01003761.1	0	1811	1811	bacterium or other organism	0.5251	0.856	mycoplasma (TGA = Trp)	2	0	4			
+elysia-chlorotica	RQTK01003883.1	0	1689	1689	bacterium or other organism	0.3049	0.71	standard	1	0	0	Shewanella 1	40.8	
+elysia-chlorotica	RQTK01004046.1	0	1570	1570	bacterium or other organism	0.5815	0.724	standard	3	1	0			
+elysia-chlorotica	RQTK01004201.1	0	1469	1469	bacterium or other organism	0.5609	0.948	mycoplasma (TGA = Trp)	3	1	0			
+elysia-chlorotica	RQTK01004212.1	0	1462	1462	bacterium or other organism	0.3146	0.743	standard	1	0	0	Aliivibrio 1	66.7	
+elysia-chlorotica	RQTK01004290.1	0	1413	1413	bacterium or other organism	0.569	0.946	mycoplasma (TGA = Trp)	3	1	0			
+elysia-chlorotica	RQTK01004823.1	0	1192	1192	bacterium or other organism	0.6124	1.0	mycoplasma (TGA = Trp)	1	1	1			
+elysia-chlorotica	RQTK01004840.1	0	1182	1182	bacterium or other organism	0.6091	0.999	mycoplasma (TGA = Trp)	1	1	1			
+elysia-chlorotica	RQTK01004916.1	0	1146	1146	bacterium or other organism	0.6056	1.0	mycoplasma (TGA = Trp)	1	1	1			
+elysia-chlorotica	RQTK01008018.1	0	626	626	bacterium or other organism	0.3339	0.997	standard	2	0	0	Escherichia 1	61.7	
+elysia-chlorotica	RQTK01003255.1	0	2425	2425	plastid DNA	0.2553	0.689	standard	6	0	0	Thermosynechococcus 1	70.7	
+elysia-chlorotica	RQTK01003420.1	0	2163	2163	plastid DNA	0.2524	0.598	standard	4	0	0			
+elysia-chlorotica	RQTK01003942.1	0	1640	1640	plastid DNA	0.3335	0.997	standard	2	0	0			
+elysia-chlorotica	RQTK01004186.1	0	1480	1480	plastid DNA	0.2723	0.957	standard	1	0	0			
+elysia-chlorotica	RQTK01008813.1	0	569	569	plastid DNA	0.1951	0.822	standard	1	0	0			
+elysia-marginata	BMAT01007964.1	0	498232	498232	bacterium or other organism	0.2747	0.625	standard	270	1	6	Mycoplasmopsis 59, Bacillus 34, Mycoplasma 33	43.5	gene-set search; plastid-protein search; regulator search
+elysia-marginata	BMAT01004790.1	0	305179	305179	bacterium or other organism	0.3673	0.914	standard	128	2	21	Bacillus 12, Flavobacterium 8, Christiangramia 6	38.1	gene-set search; plastid-protein search
+elysia-marginata	BMAT01004542.1	0	199701	199701	bacterium or other organism	0.3657	0.887	standard	80	1	12	Christiangramia 6, Bacillus 5, Haemophilus 4	38.1	gene-set search; plastid-protein search; regulator search
+elysia-marginata	BMAT01004028.1	0	171461	171461	bacterium or other organism	0.3761	0.93	standard	82	1	13	Escherichia 4, Bacillus 4, Haemophilus 3	36.9	gene-set search; plastid-protein search; regulator search
+elysia-marginata	BMAT01004631.1	0	167860	167860	bacterium or other organism	0.3633	0.905	standard	75	0	10	Haemophilus 5, Bacillus 5, Bacteroides 3	37.5	gene-set search; plastid-protein search; regulator search
+elysia-marginata	BMAT01004494.1	0	117125	117125	bacterium or other organism	0.3806	0.928	standard	91	0	6	Flavobacterium 9, Christiangramia 9, Chloroherpeton 3	52.8	gene-set search; plastid-protein search; regulator search
+elysia-marginata	BMAT01003247.1	0	96942	96942	bacterium or other organism	0.2944	0.885	mycoplasma (TGA = Trp)	41	1	0	Mycoplasma 11, Mycoplasmopsis 10, Bacillus 6	51.2	gene-set search; plastid-protein search; regulator search
+elysia-marginata	BMAT01006000.1	0	85382	85382	bacterium or other organism	0.3808	0.936	standard	43	1	7	Flavobacterium 4, Haemophilus 3, Geobacillus 1	49.4	gene-set search; plastid-protein search
+elysia-marginata	BMAT01006657.1	0	80029	80029	bacterium or other organism	0.2787	0.667	standard	53	0	2	Mycoplasmopsis 19, Bacillus 10, Mycoplasmoides 5	41.1	gene-set search; plastid-protein search; regulator search
+elysia-marginata	BMAT01010395.1	0	68860	68860	bacterium or other organism	0.3666	0.86	standard	17	0	4	Flavobacterium 2, Christiangramia 1, Porphyromonas 1	48.8	gene-set search; plastid-protein search; regulator search
+elysia-marginata	BMAT01004643.1	0	52790	52790	bacterium or other organism	0.3929	0.957	standard	26	0	4	Christiangramia 3, Porphyromonas 2, Bacillus 2	46.3	gene-set search; plastid-protein search; regulator search
+elysia-marginata	BMAT01001440.1	0	39111	39111	bacterium or other organism	0.3816	0.914	standard	20	0	2	Flavobacterium 2, Bacteroides 2, Haemophilus 2	44.1	gene-set search
+elysia-marginata	BMAT01001487.1	0	36389	36389	bacterium or other organism	0.3862	0.925	standard	21	0	3	Escherichia 2, Streptomyces 1, Staphylococcus 1	37.6	gene-set search; regulator search
+elysia-marginata	BMAT01003092.1	0	29502	29502	bacterium or other organism	0.2821	0.622	standard	15	0	0	Mycoplasma 5, Mycoplasmopsis 4, Mesomycoplasma 3	46.0	
+elysia-marginata	BMAT01000963.1	0	29429	29429	bacterium or other organism	0.2785	0.936	mycoplasma (TGA = Trp)	19	0	0	Bacillus 5, Mycoplasma 5, Mycoplasmopsis 3	43.8	gene-set search
+elysia-marginata	BMAT01004961.1	0	28977	28977	bacterium or other organism	0.3708	0.845	standard	13	0	1	Amoebophilus 1, Parabacteroides 1, Porphyromonas 1	46.3	gene-set search
+elysia-marginata	BMAT01013518.1	0	26861	26861	bacterium or other organism	0.2826	0.655	standard	11	0	0	Mycoplasmopsis 3, Ureaplasma 2, Mycoplasma 1	50.3	gene-set search; plastid-protein search
+elysia-marginata	BMAT01006730.1	0	25594	25594	bacterium or other organism	0.2651	0.921	mycoplasma (TGA = Trp)	6	0	0	Lactococcus 2, Mycoplasmopsis 2, Shigella 1	43.1	
+elysia-marginata	BMAT01003417.1	0	25537	25537	bacterium or other organism	0.4546	0.805	standard	8	0	1	Escherichia 1	67.1	gene-set search
+elysia-marginata	BMAT01011217.1	0	25437	25437	bacterium or other organism	0.3761	0.95	standard	13	0	4	Phocaeicola 1, Bacillus 1, Christiangramia 1	36.3	gene-set search; plastid-protein search
+elysia-marginata	BMAT01011875.1	0	25261	25261	bacterium or other organism	0.4287	0.845	standard	9	0	2	Allochromatium 1, Pseudomonas 1	68.8	gene-set search
+elysia-marginata	BMAT01003553.1	0	25110	25110	bacterium or other organism	0.2817	0.978	mycoplasma (TGA = Trp)	6	0	0	Mycoplasmoides 2, Mycoplasma 1, Ruminiclostridium 1	55.7	gene-set search; plastid-protein search
+elysia-marginata	BMAT01000196.1	0	24962	24962	bacterium or other organism	0.3696	0.909	standard	15	0	1	Bacteroides 2, Phocaeicola 1, Photorhabdus 1	56.7	gene-set search; regulator search
+elysia-marginata	BMAT01005152.1	0	24913	24913	bacterium or other organism	0.5822	0.976	standard	1	0	0			
+elysia-marginata	BMAT01005195.1	0	22808	22808	bacterium or other organism	0.581	0.964	standard	1	0	1			gene-set search
+elysia-marginata	BMAT01013746.1	0	21492	21492	bacterium or other organism	0.3638	0.948	standard	5	0	4	Escherichia 1, Christiangramia 1	63.9	gene-set search
+elysia-marginata	BMAT01004359.1	0	20703	20703	bacterium or other organism	0.3661	0.933	standard	17	0	0	Flavobacterium 2, Christiangramia 1, Methanocaldococcus 1	40.2	gene-set search; plastid-protein search
+elysia-marginata	BMAT01005353.1	0	20640	20640	bacterium or other organism	0.566	0.972	standard	3	1	2			gene-set search
+elysia-marginata	BMAT01002845.1	0	20509	20509	bacterium or other organism	0.4332	0.843	standard	5	0	1			gene-set search
+elysia-marginata	BMAT01010719.1	0	19354	19354	bacterium or other organism	0.3433	0.964	standard	9	0	0	Escherichia 2, Methanocaldococcus 1, Thermoanaerobacter 1	27.9	gene-set search
+elysia-marginata	BMAT01001705.1	0	18872	18872	bacterium or other organism	0.4646	0.915	standard	11	0	2	Campylobacter 1, Pseudomonas 1	47.2	gene-set search
+elysia-marginata	BMAT01013745.1	0	18595	18595	bacterium or other organism	0.3645	0.88	standard	6	0	1	Formosa 1, Vibrio 1, Carboxydothermus 1	39.1	gene-set search
+elysia-marginata	BMAT01006930.1	0	18253	18253	bacterium or other organism	0.4393	0.845	standard	6	0	2			gene-set search
+elysia-marginata	BMAT01013213.1	0	17930	17930	bacterium or other organism	0.4519	0.826	standard	7	0	2	Alcanivorax 1	76.0	gene-set search; plastid-protein search
+elysia-marginata	BMAT01009872.1	0	17276	17276	bacterium or other organism	0.4654	0.91	standard	4	0	1	Azotobacter 1, Pseudomonas 1	82.5	gene-set search
+elysia-marginata	BMAT01000877.1	0	17053	17053	bacterium or other organism	0.4958	0.788	standard	3	0	2			gene-set search
+elysia-marginata	BMAT01005280.1	0	16739	16739	bacterium or other organism	0.432	0.966	standard	2	0	0			gene-set search
+elysia-marginata	BMAT01004107.1	0	16402	16402	bacterium or other organism	0.437	0.802	standard	5	0	1	Shigella 2, Escherichia 1, Deinococcus 1	42.5	gene-set search
+elysia-marginata	BMAT01002023.1	0	15895	15895	bacterium or other organism	0.2997	0.898	mycoplasma (TGA = Trp)	5	0	0	Mycoplasmoides 3, Mycoplasmopsis 1, Acholeplasma 1	42.8	gene-set search
+elysia-marginata	BMAT01007662.1	0	15772	15772	bacterium or other organism	0.4967	0.962	standard	7	0	0	Pseudomonas 2	46.9	gene-set search
+elysia-marginata	BMAT01005139.1	0	15453	15453	bacterium or other organism	0.5579	0.926	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01001004.1	0	15062	15062	bacterium or other organism	0.4388	0.955	standard	3	0	1	Streptococcus 1, Shigella 1	47.0	gene-set search
+elysia-marginata	BMAT01005177.1	0	14802	14802	bacterium or other organism	0.5532	0.922	standard	1	0	1			gene-set search
+elysia-marginata	BMAT01001504.1	0	14488	14488	bacterium or other organism	0.4104	0.998	standard	1	0	0			
+elysia-marginata	BMAT01006085.1	0	14303	14303	bacterium or other organism	0.3893	0.857	standard	4	0	1	Escherichia 1	23.4	gene-set search
+elysia-marginata	BMAT01005237.1	0	14063	14063	bacterium or other organism	0.3634	0.975	standard	6	0	1	Christiangramia 1	70.3	gene-set search
+elysia-marginata	BMAT01007826.1	0	13856	13856	bacterium or other organism	0.4907	0.52	standard	4	1	1	Vibrio 1	45.1	gene-set search
+elysia-marginata	BMAT01012267.1	0	13313	13313	bacterium or other organism	0.4782	0.878	standard	3	0	3	Pectobacterium 1	45.8	gene-set search
+elysia-marginata	BMAT01014006.1	0	12816	12816	bacterium or other organism	0.3784	0.812	standard	7	0	2	Shewanella 1, Christiangramia 1, Flavobacterium 1	70.0	gene-set search; regulator search
+elysia-marginata	BMAT01012825.1	0	12686	12686	bacterium or other organism	0.4898	0.861	standard	7	0	0			gene-set search
+elysia-marginata	BMAT01007765.1	0	12394	12394	bacterium or other organism	0.4564	0.915	standard	4	0	0	Brucella 1	31.4	gene-set search
+elysia-marginata	BMAT01007738.1	0	11904	11904	bacterium or other organism	0.4376	0.906	standard	4	0	0	Haemophilus 1	41.8	gene-set search
+elysia-marginata	BMAT01003641.1	0	11873	11873	bacterium or other organism	0.4536	0.715	standard	4	0	1			gene-set search
+elysia-marginata	BMAT01005250.1	0	11778	11778	bacterium or other organism	0.3722	0.932	standard	7	0	0	Mycobacterium 1	25.0	gene-set search
+elysia-marginata	BMAT01007505.1	0	11709	11709	bacterium or other organism	0.4179	0.886	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01000876.1	0	11621	11621	bacterium or other organism	0.5013	0.886	standard	6	0	1	Pseudomonas 2, Escherichia 1	55.8	gene-set search; plastid-protein search
+elysia-marginata	BMAT01005329.1	0	11572	11572	bacterium or other organism	0.5716	0.988	standard	1	0	1			gene-set search
+elysia-marginata	BMAT01002832.1	0	11304	11304	bacterium or other organism	0.464	0.862	standard	4	0	0	Pseudomonas 1	73.9	gene-set search
+elysia-marginata	BMAT01007008.1	0	11108	11108	bacterium or other organism	0.4268	0.768	standard	4	0	1			gene-set search
+elysia-marginata	BMAT01012703.1	0	11055	11055	bacterium or other organism	0.3928	0.926	standard	8	0	1	Shigella 1, Parabacteroides 1	50.6	gene-set search
+elysia-marginata	BMAT01011381.1	0	11051	11051	bacterium or other organism	0.4553	0.831	standard	4	0	0	Myxococcus 1	30.3	gene-set search
+elysia-marginata	BMAT01010599.1	0	10556	10556	bacterium or other organism	0.3856	0.891	standard	3	0	3			gene-set search
+elysia-marginata	BMAT01001925.1	0	10440	10440	bacterium or other organism	0.275	0.967	mycoplasma (TGA = Trp)	5	0	0	Acholeplasma 1, Mycoplasmopsis 1, Oceanobacillus 1	42.0	gene-set search
+elysia-marginata	BMAT01011200.1	0	10235	10235	bacterium or other organism	0.4551	0.917	standard	4	0	0			gene-set search
+elysia-marginata	BMAT01005335.1	0	10010	10010	bacterium or other organism	0.5389	0.87	standard	1	1	1			
+elysia-marginata	BMAT01002025.1	0	9928	9928	bacterium or other organism	0.2808	0.937	mycoplasma (TGA = Trp)	4	0	0	Mycoplasma 1, Treponema 1, Escherichia 1	52.5	
+elysia-marginata	BMAT01012289.1	0	9753	9753	bacterium or other organism	0.4798	0.863	standard	3	0	2	Escherichia 1, Haemophilus 1	52.5	gene-set search
+elysia-marginata	BMAT01008677.1	0	9732	9732	bacterium or other organism	0.4542	0.816	standard	2	0	1	Hahella 1	83.3	gene-set search
+elysia-marginata	BMAT01008021.1	0	9694	9694	bacterium or other organism	0.4555	0.88	standard	3	0	0	Vibrio 1	38.7	gene-set search
+elysia-marginata	BMAT01005273.1	0	9631	9631	bacterium or other organism	0.364	0.941	standard	5	0	2	Prochlorococcus 1, Phocaeicola 1, Rhizobium 1	52.6	gene-set search
+elysia-marginata	BMAT01006820.1	0	9484	9484	bacterium or other organism	0.4254	0.902	standard	1	0	1			
+elysia-marginata	BMAT01007481.1	0	9313	9313	bacterium or other organism	0.4557	0.794	standard	3	0	0	Pyrobaculum 1	33.1	gene-set search
+elysia-marginata	BMAT01001273.1	0	8931	8931	bacterium or other organism	0.4845	0.821	standard	4	0	0			gene-set search
+elysia-marginata	BMAT01001088.1	0	8911	8911	bacterium or other organism	0.4589	0.865	standard	2	0	1	Helicobacter 1	37.9	gene-set search
+elysia-marginata	BMAT01005154.1	0	8793	8793	bacterium or other organism	0.5669	1.0	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01011058.1	0	8780	8780	bacterium or other organism	0.4517	0.628	standard	3	0	1			gene-set search
+elysia-marginata	BMAT01001582.1	0	8771	8771	bacterium or other organism	0.3686	0.907	standard	3	0	0	Cytophaga 1	43.3	gene-set search
+elysia-marginata	BMAT01004395.1	0	8763	8763	bacterium or other organism	0.3952	0.934	standard	5	0	1	Parabacteroides 1	30.3	gene-set search
+elysia-marginata	BMAT01008053.1	0	8718	8718	bacterium or other organism	0.4469	0.662	standard	2	0	0			gene-set search
+elysia-marginata	BMAT01005358.1	0	8666	8666	bacterium or other organism	0.4804	0.834	standard	3	0	0			gene-set search; plastid-protein search; regulator search
+elysia-marginata	BMAT01006591.1	0	8593	8593	bacterium or other organism	0.4861	0.853	standard	3	0	1			gene-set search
+elysia-marginata	BMAT01004867.1	0	8580	8580	bacterium or other organism	0.4967	0.798	standard	8	0	0	Pseudomonas 2, Aromatoleum 1	50.9	gene-set search; plastid-protein search; regulator search
+elysia-marginata	BMAT01012762.1	0	8546	8546	bacterium or other organism	0.4544	0.812	standard	5	0	1	Sinorhizobium 1	30.9	gene-set search
+elysia-marginata	BMAT01009695.1	0	8535	8535	bacterium or other organism	0.5203	0.928	standard	2	0	1			gene-set search
+elysia-marginata	BMAT01009757.1	0	8467	8467	bacterium or other organism	0.4945	0.833	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01010535.1	0	8333	8333	bacterium or other organism	0.2664	0.877	mycoplasma (TGA = Trp)	4	0	0	Bacillus 1, Streptococcus 1, Mesomycoplasma 1	47.7	gene-set search; plastid-protein search; regulator search
+elysia-marginata	BMAT01005257.1	0	8155	8155	bacterium or other organism	0.3792	0.941	standard	4	1	0	Christiangramia 1, Cytophaga 1, Aquifex 1	48.4	gene-set search
+elysia-marginata	BMAT01008931.1	0	8145	8145	bacterium or other organism	0.4995	0.931	standard	5	0	2	Alkalilimnicola 1	72.1	gene-set search; regulator search
+elysia-marginata	BMAT01009591.1	0	7881	7881	bacterium or other organism	0.3979	0.837	standard	1	0	0	Pseudomonas 1	66.0	
+elysia-marginata	BMAT01003306.1	0	7766	7766	bacterium or other organism	0.5222	0.959	standard	3	0	0	Nitrosomonas 1	62.5	gene-set search
+elysia-marginata	BMAT01012573.1	0	7723	7723	bacterium or other organism	0.4813	0.822	standard	3	0	0	Escherichia 1	45.5	gene-set search
+elysia-marginata	BMAT01008812.1	0	7636	7636	bacterium or other organism	0.4386	0.781	standard	2	0	1			gene-set search
+elysia-marginata	BMAT01011691.1	0	7570	7570	bacterium or other organism	0.4005	0.957	standard	6	0	0	Christiangramia 1	46.7	gene-set search; regulator search
+elysia-marginata	BMAT01000736.1	0	7403	7403	bacterium or other organism	0.4829	0.901	standard	2	0	3			gene-set search
+elysia-marginata	BMAT01010330.1	0	7182	7182	bacterium or other organism	0.5181	0.895	standard	8	0	0	Pseudomonas 1, Yersinia 1, Saccharophagus 1	86.0	gene-set search; plastid-protein search
+elysia-marginata	BMAT01005281.1	0	7002	7002	bacterium or other organism	0.3709	0.986	standard	2	0	1	Bacillus 1	25.2	gene-set search
+elysia-marginata	BMAT01011645.1	0	6870	6870	bacterium or other organism	0.4514	0.868	standard	2	0	0			gene-set search
+elysia-marginata	BMAT01009441.1	0	6781	6781	bacterium or other organism	0.4911	0.924	standard	5	0	0			gene-set search
+elysia-marginata	BMAT01008112.1	0	6622	6622	bacterium or other organism	0.4292	0.948	standard	1	0	2			
+elysia-marginata	BMAT01012602.1	0	6544	6544	bacterium or other organism	0.4195	0.93	standard	1	0	0	Xanthomonas 1	43.2	
+elysia-marginata	BMAT01007207.1	0	6423	6423	bacterium or other organism	0.3162	0.963	standard	2	0	0	Bacillus 1, Kocuria 1	37.3	
+elysia-marginata	BMAT01009186.1	0	6250	6250	bacterium or other organism	0.4488	0.519	standard	1	0	0			
+elysia-marginata	BMAT01008252.1	0	6235	6235	bacterium or other organism	0.4393	0.857	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01007918.1	0	5999	5999	bacterium or other organism	0.522	0.824	standard	2	0	1			gene-set search
+elysia-marginata	BMAT01005312.1	0	5970	5970	bacterium or other organism	0.3762	0.975	standard	3	0	1	Bacillus 1, Syntrophus 1	46.3	gene-set search
+elysia-marginata	BMAT01005176.1	0	5947	5947	bacterium or other organism	0.3711	0.944	standard	5	0	0	Bacteroides 1, Chlorobium 1, Mycobacterium 1	33.5	gene-set search
+elysia-marginata	BMAT01005572.1	0	5930	5930	bacterium or other organism	0.5135	0.946	standard	6	2	0	Stutzerimonas 1	89.0	gene-set search; plastid-protein search
+elysia-marginata	BMAT01014111.1	0	5888	5888	bacterium or other organism	0.4115	0.73	standard	3	0	1	Escherichia 1	35.5	
+elysia-marginata	BMAT01005278.1	0	5866	5866	bacterium or other organism	0.3802	0.995	standard	5	0	0	Vibrio 1, Myxococcus 1, Bacteroides 1	45.0	
+elysia-marginata	BMAT01010606.1	0	5833	5833	bacterium or other organism	0.4356	0.733	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01012190.1	0	5740	5740	bacterium or other organism	0.38	0.888	standard	7	0	0	Haemophilus 1, Escherichia 1, Flavobacterium 1	32.9	gene-set search; regulator search
+elysia-marginata	BMAT01003215.1	0	5739	5739	bacterium or other organism	0.4454	0.787	standard	2	0	1			gene-set search
+elysia-marginata	BMAT01005254.1	0	5707	5707	bacterium or other organism	0.3739	0.891	standard	5	0	0	Vibrio 1, Porphyromonas 1	44.7	gene-set search
+elysia-marginata	BMAT01003907.1	0	5619	5619	bacterium or other organism	0.4695	0.823	standard	5	0	0	Burkholderia 1, Marinobacter 1	65.5	gene-set search
+elysia-marginata	BMAT01005322.1	0	5601	5601	bacterium or other organism	0.3689	0.896	standard	5	0	0	Haemophilus 1, Rhizobium 1, Bacillus 1	38.9	gene-set search
+elysia-marginata	BMAT01009957.1	0	5546	5546	bacterium or other organism	0.4163	0.754	standard	2	0	0			
+elysia-marginata	BMAT01003366.1	0	5461	5461	bacterium or other organism	0.4479	0.767	standard	2	0	1	Archaeoglobus 1	36.1	gene-set search
+elysia-marginata	BMAT01014054.1	0	5457	5457	bacterium or other organism	0.4557	0.852	standard	2	0	0			
+elysia-marginata	BMAT01011819.1	0	5422	5422	bacterium or other organism	0.5112	0.837	standard	3	0	0			gene-set search
+elysia-marginata	BMAT01010964.1	0	5392	5392	bacterium or other organism	0.5203	0.921	standard	3	0	0			gene-set search
+elysia-marginata	BMAT01003978.1	0	5335	5335	bacterium or other organism	0.3812	0.916	standard	6	0	0	Zymomonas 1, Dehalococcoides 1, Bacillus 1	32.8	gene-set search
+elysia-marginata	BMAT01006509.1	0	5310	5310	bacterium or other organism	0.465	0.838	standard	3	0	1	Pseudomonas 1	76.2	gene-set search
+elysia-marginata	BMAT01005311.1	0	5277	5277	bacterium or other organism	0.3923	0.965	standard	4	0	0	Helicobacter 1	52.4	gene-set search
+elysia-marginata	BMAT01005352.1	0	5269	5269	bacterium or other organism	0.5437	0.897	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01005885.1	0	5208	5208	bacterium or other organism	0.4678	0.971	standard	2	0	0			gene-set search
+elysia-marginata	BMAT01005184.1	0	5099	5099	bacterium or other organism	0.4056	0.943	standard	1	0	3			gene-set search
+elysia-marginata	BMAT01007584.1	0	5074	5074	bacterium or other organism	0.4915	0.887	standard	4	0	0	Escherichia 1	47.5	gene-set search
+elysia-marginata	BMAT01008097.1	0	4900	4900	bacterium or other organism	0.4698	0.935	standard	3	0	1	Pseudomonas 1	51.4	gene-set search
+elysia-marginata	BMAT01012239.1	0	4894	4894	bacterium or other organism	0.492	0.603	standard	3	0	0	Yersinia 1	43.2	gene-set search
+elysia-marginata	BMAT01000351.1	0	4887	4887	bacterium or other organism	0.4446	0.704	standard	2	0	1	Shigella 2	51.8	
+elysia-marginata	BMAT01012697.1	0	4864	4864	bacterium or other organism	0.4964	0.831	standard	2	0	2			gene-set search
+elysia-marginata	BMAT01001269.1	0	4807	4807	bacterium or other organism	0.5184	0.943	standard	3	0	0			gene-set search
+elysia-marginata	BMAT01005349.1	0	4748	4748	bacterium or other organism	0.3635	0.984	standard	2	0	0	Escherichia 1	33.3	gene-set search
+elysia-marginata	BMAT01013646.1	0	4731	4731	bacterium or other organism	0.4731	0.834	standard	1	0	0			
+elysia-marginata	BMAT01001324.1	0	4653	4653	bacterium or other organism	0.4045	0.842	standard	1	0	0	Cupriavidus 1	50.8	
+elysia-marginata	BMAT01005136.1	0	4617	4617	bacterium or other organism	0.3994	0.878	standard	4	0	0	Christiangramia 1, Thermotoga 1	50.8	gene-set search
+elysia-marginata	BMAT01011607.1	0	4560	4560	bacterium or other organism	0.4291	0.683	standard	2	0	1	Shigella 1, Escherichia 1	56.4	
+elysia-marginata	BMAT01011413.1	0	4545	4545	bacterium or other organism	0.5062	0.951	standard	4	0	0	Hahella 1, Pseudomonas 1	90.0	gene-set search
+elysia-marginata	BMAT01002371.1	0	4520	4520	bacterium or other organism	0.4874	0.8	standard	5	0	0	Pseudomonas 1	87.2	gene-set search
+elysia-marginata	BMAT01000443.1	0	4518	4518	bacterium or other organism	0.3608	0.663	standard	1	0	1			
+elysia-marginata	BMAT01011766.1	0	4465	4465	bacterium or other organism	0.4625	0.836	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01013494.1	0	4426	4426	bacterium or other organism	0.4619	0.788	standard	2	0	1			gene-set search
+elysia-marginata	BMAT01005341.1	0	4406	4406	bacterium or other organism	0.3779	0.95	standard	3	0	1	Halalkalibacterium 1	58.4	gene-set search
+elysia-marginata	BMAT01013139.1	0	4347	4347	bacterium or other organism	0.5123	0.925	standard	3	1	0			gene-set search
+elysia-marginata	BMAT01008604.1	0	4259	4259	bacterium or other organism	0.5407	0.946	standard	9	0	1	Alcanivorax 1, Azotobacter 1, Cellvibrio 1	76.2	gene-set search; plastid-protein search
+elysia-marginata	BMAT01005224.1	0	4253	4253	bacterium or other organism	0.3494	0.955	standard	1	0	1			gene-set search
+elysia-marginata	BMAT01014143.1	0	4155	4155	bacterium or other organism	0.4877	0.618	standard	3	0	1	Roseovarius 1, Bacillus 1	75.0	gene-set search
+elysia-marginata	BMAT01005244.1	0	4123	4123	bacterium or other organism	0.3902	0.777	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01005169.1	0	4106	4106	bacterium or other organism	0.5451	0.979	standard	1	0	0			
+elysia-marginata	BMAT01008526.1	0	4098	4098	bacterium or other organism	0.446	0.653	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01006442.1	0	4090	4090	bacterium or other organism	0.4868	0.973	standard	4	0	0			gene-set search
+elysia-marginata	BMAT01012839.1	0	4076	4076	bacterium or other organism	0.5231	0.905	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01009504.1	0	4066	4066	bacterium or other organism	0.3784	0.854	standard	1	0	0	Streptomyces 1	37.9	
+elysia-marginata	BMAT01005344.1	0	4045	4045	bacterium or other organism	0.4101	0.948	standard	4	0	0	Halobacterium 1, Shigella 1	29.7	
+elysia-marginata	BMAT01001292.1	0	4019	4019	bacterium or other organism	0.4723	0.911	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01005210.1	0	4012	4012	bacterium or other organism	0.3647	0.804	standard	4	0	0	Pasteurella 1	58.2	gene-set search
+elysia-marginata	BMAT01005307.1	0	3921	3921	bacterium or other organism	0.3724	0.822	standard	3	0	1	Parabacteroides 1	39.7	gene-set search
+elysia-marginata	BMAT01005203.1	0	3906	3906	bacterium or other organism	0.576	0.984	standard	2	0	0			gene-set search
+elysia-marginata	BMAT01013210.1	0	3840	3840	bacterium or other organism	0.5331	0.999	standard	1	0	1	Pseudomonas 1	30.7	
+elysia-marginata	BMAT01005305.1	0	3810	3810	bacterium or other organism	0.3549	0.898	standard	1	0	2			gene-set search
+elysia-marginata	BMAT01004206.1	0	3804	3804	bacterium or other organism	0.4235	0.784	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01005230.1	0	3752	3752	bacterium or other organism	0.5677	0.944	standard	2	0	1			
+elysia-marginata	BMAT01006377.1	0	3688	3688	bacterium or other organism	0.4267	0.92	standard	1	0	0	Thermoplasma 1	24.1	gene-set search
+elysia-marginata	BMAT01005290.1	0	3578	3578	bacterium or other organism	0.3876	0.977	standard	3	0	0	Bacillus 1	27.8	gene-set search
+elysia-marginata	BMAT01002478.1	0	3539	3539	bacterium or other organism	0.4815	0.839	standard	2	0	1			gene-set search; regulator search
+elysia-marginata	BMAT01005266.1	0	3491	3491	bacterium or other organism	0.3813	0.999	standard	3	0	0	Mycolicibacterium 1, Rickettsia 1	38.1	
+elysia-marginata	BMAT01005320.1	0	3464	3464	bacterium or other organism	0.3776	0.893	standard	2	0	1	Christiangramia 1	38.8	
+elysia-marginata	BMAT01012919.1	0	3393	3393	bacterium or other organism	0.4356	0.819	standard	2	0	0	Carboxydothermus 1	62.6	gene-set search
+elysia-marginata	BMAT01005145.1	0	3310	3310	bacterium or other organism	0.3864	0.961	standard	2	0	0	Flavobacterium 1	43.2	gene-set search
+elysia-marginata	BMAT01003949.1	0	3300	3300	bacterium or other organism	0.3839	0.97	standard	3	0	0	Shewanella 1	23.5	gene-set search
+elysia-marginata	BMAT01009321.1	0	3300	3300	bacterium or other organism	0.4015	0.791	standard	4	0	0	Aquifex 1	46.5	gene-set search
+elysia-marginata	BMAT01001541.1	0	3296	3296	bacterium or other organism	0.4745	0.85	standard	2	0	1	Shewanella 1	71.4	gene-set search
+elysia-marginata	BMAT01010126.1	0	3164	3164	bacterium or other organism	0.4848	0.872	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01008869.1	0	3080	3080	bacterium or other organism	0.4734	0.869	standard	2	0	0			gene-set search
+elysia-marginata	BMAT01005147.1	0	3031	3031	bacterium or other organism	0.3461	0.946	standard	3	0	0	Desulfosudis 1, Flavobacterium 1, Capnocytophaga 1	66.9	regulator search
+elysia-marginata	BMAT01005269.1	0	3031	3031	bacterium or other organism	0.3669	0.951	standard	1	0	1			
+elysia-marginata	BMAT01000527.1	0	2992	2992	bacterium or other organism	0.4382	0.748	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01000579.1	0	2964	2964	bacterium or other organism	0.5304	0.965	standard	1	0	1			gene-set search
+elysia-marginata	BMAT01006706.1	0	2897	2897	bacterium or other organism	0.4277	0.821	standard	2	0	0	Pseudomonas 1	51.4	gene-set search
+elysia-marginata	BMAT01005324.1	0	2863	2863	bacterium or other organism	0.3863	0.864	standard	2	1	0	Phocaeicola 1	40.3	gene-set search
+elysia-marginata	BMAT01014136.1	0	2863	2863	bacterium or other organism	0.4604	0.79	standard	1	0	1			
+elysia-marginata	BMAT01012356.1	0	2830	2830	bacterium or other organism	0.5212	0.82	standard	1	0	1			
+elysia-marginata	BMAT01000613.1	0	2823	2823	bacterium or other organism	0.4548	0.82	standard	2	0	0			gene-set search
+elysia-marginata	BMAT01005246.1	0	2799	2799	bacterium or other organism	0.3633	0.92	standard	2	0	0	Rickettsia 1, Buchnera 1	41.9	
+elysia-marginata	BMAT01010380.1	0	2774	2774	bacterium or other organism	0.5101	0.999	standard	1	0	3			gene-set search
+elysia-marginata	BMAT01013867.1	0	2727	2727	bacterium or other organism	0.4807	0.882	standard	3	0	0			gene-set search
+elysia-marginata	BMAT01005286.1	0	2713	2713	bacterium or other organism	0.3432	0.849	standard	2	0	0	Methanocaldococcus 1	24.4	gene-set search
+elysia-marginata	BMAT01001529.1	0	2677	2677	bacterium or other organism	0.3665	0.857	standard	2	0	0	Christiangramia 1	70.5	gene-set search
+elysia-marginata	BMAT01005175.1	0	2638	2638	bacterium or other organism	0.3772	0.867	standard	2	0	0			gene-set search
+elysia-marginata	BMAT01008098.1	0	2631	2631	bacterium or other organism	0.4259	0.903	standard	2	0	0	Escherichia 1	41.9	gene-set search
+elysia-marginata	BMAT01003356.1	0	2596	2596	bacterium or other organism	0.4411	0.864	standard	2	0	0	Cellvibrio 1	77.1	
+elysia-marginata	BMAT01013361.1	0	2573	2573	bacterium or other organism	0.5216	0.968	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01010339.1	0	2570	2570	bacterium or other organism	0.4774	0.965	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01000256.1	0	2559	2559	bacterium or other organism	0.4592	0.823	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01000212.1	0	2537	2537	bacterium or other organism	0.5022	0.895	standard	2	0	1	Rhodobacter 1	57.4	gene-set search
+elysia-marginata	BMAT01000724.1	0	2513	2513	bacterium or other organism	0.456	0.811	standard	1	0	1			gene-set search
+elysia-marginata	BMAT01002697.1	0	2484	2484	bacterium or other organism	0.4424	0.732	standard	2	0	0			gene-set search
+elysia-marginata	BMAT01011913.1	0	2476	2476	bacterium or other organism	0.4188	0.729	standard	1	0	1	Pseudomonas 1	55.0	gene-set search
+elysia-marginata	BMAT01009780.1	0	2469	2469	bacterium or other organism	0.4966	0.95	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01008647.1	0	2465	2465	bacterium or other organism	0.4486	0.705	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01001081.1	0	2448	2448	bacterium or other organism	0.4882	0.998	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01002583.1	0	2437	2437	bacterium or other organism	0.4325	0.838	standard	2	0	1	Stutzerimonas 1	34.6	gene-set search
+elysia-marginata	BMAT01008837.1	0	2429	2429	bacterium or other organism	0.4319	0.977	standard	1	0	1	Pseudomonas 1	58.4	
+elysia-marginata	BMAT01000216.1	0	2413	2413	bacterium or other organism	0.4737	0.72	standard	1	0	0			
+elysia-marginata	BMAT01009391.1	0	2402	2402	bacterium or other organism	0.5416	0.974	standard	3	0	0			gene-set search
+elysia-marginata	BMAT01000110.1	0	2392	2392	bacterium or other organism	0.4507	1.0	standard	1	0	0			
+elysia-marginata	BMAT01013819.1	0	2387	2387	bacterium or other organism	0.5245	0.804	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01005298.1	0	2385	2385	bacterium or other organism	0.4013	0.998	standard	2	0	0	Nitratidesulfovibrio 1	31.1	
+elysia-marginata	BMAT01007792.1	0	2381	2381	bacterium or other organism	0.428	0.873	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01012805.1	0	2348	2348	bacterium or other organism	0.4524	0.711	standard	3	0	0	Pseudomonas 1	44.4	gene-set search
+elysia-marginata	BMAT01005144.1	0	2344	2344	bacterium or other organism	0.3754	0.779	standard	7	0	0	Christiangramia 3, Flavobacterium 2, Chlamydia 1	83.9	gene-set search; plastid-protein search
+elysia-marginata	BMAT01005318.1	0	2327	2327	bacterium or other organism	0.3799	0.946	standard	2	0	0	Bacillus 1, Cytophaga 1	52.6	
+elysia-marginata	BMAT01003270.1	0	2321	2321	bacterium or other organism	0.4321	0.964	standard	1	0	0	Pseudomonas 1	51.9	
+elysia-marginata	BMAT01011657.1	0	2291	2291	bacterium or other organism	0.419	0.612	standard	2	0	1	Haemophilus 1	70.5	gene-set search
+elysia-marginata	BMAT01007326.1	0	2278	2278	bacterium or other organism	0.4618	0.462	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01012167.1	0	2262	2262	bacterium or other organism	0.4748	0.984	standard	1	0	0			
+elysia-marginata	BMAT01012891.1	0	2241	2241	bacterium or other organism	0.3994	0.87	standard	1	0	0			
+elysia-marginata	BMAT01000665.1	0	2219	2219	bacterium or other organism	0.5174	0.881	standard	2	0	0			gene-set search
+elysia-marginata	BMAT01000039.1	0	2174	2174	bacterium or other organism	0.4494	0.735	standard	1	0	0			
+elysia-marginata	BMAT01013858.1	0	2170	2170	bacterium or other organism	0.5088	0.897	standard	2	0	0	Pseudomonas 1	75.3	gene-set search
+elysia-marginata	BMAT01000085.1	0	2162	2162	bacterium or other organism	0.5109	0.882	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01000494.1	0	2142	2142	bacterium or other organism	0.4659	0.886	standard	1	0	0	Photobacterium 1	72.6	
+elysia-marginata	BMAT01001527.1	0	2137	2137	bacterium or other organism	0.3678	0.986	standard	2	0	0	Bacillus 1	27.5	gene-set search
+elysia-marginata	BMAT01002861.1	0	2107	2107	bacterium or other organism	0.4186	0.867	standard	1	0	0	Bacillus 1	40.3	
+elysia-marginata	BMAT01000883.1	0	2092	2092	bacterium or other organism	0.5521	0.98	standard	2	0	0			gene-set search
+elysia-marginata	BMAT01005294.1	0	2086	2086	bacterium or other organism	0.3854	0.899	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01003457.1	0	2076	2076	bacterium or other organism	0.488	0.766	standard	2	0	0			gene-set search
+elysia-marginata	BMAT01001858.1	0	2067	2067	bacterium or other organism	0.4698	0.987	mycoplasma (TGA = Trp)	2	0	1			gene-set search
+elysia-marginata	BMAT01013487.1	0	2064	2064	bacterium or other organism	0.4574	0.935	standard	1	0	0			gene-set search
+elysia-marginata	BMAT01005284.1	0	2060	2060	bacterium or other organism	0.3539	0.996	standard	1	0	0			
+elysia-marginata	BMAT01010597.1	0	2047	2047	bacterium or other organism	0.4715	0.333	standard	1	0	0			
+elysia-marginata	BMAT01005219.1	0	2030	2030	bacterium or other organism	0.369	0.907	standard	1	0	0	Flavobacterium 1	41.3	
+elysia-marginata	BMAT01013843.1	0	2020	2020	bacterium or other organism	0.4614	0.933	standard	1	0	0			
+elysia-marginata	BMAT01000970.1	55000	70361	70361	bacterium or other organism, at the end of a slug sequence				6	0	0	Escherichia 1	36.8	gene-set search; regulator search
+elysia-marginata	BMAT01004951.1	0	25000	147693	bacterium or other organism, at the end of a slug sequence				6	0	0	Porphyromonas 1, Christiangramia 1, Brachyspira 1	48.1	gene-set search
+elysia-timida	JBHHFL010000332.1	0	67354	67354	bacterium or other organism	0.3501	0.859	standard	25	1	0	Rickettsia 5, Sinorhizobium 2, Escherichia 2	35.5	
+elysia-timida	JBHHFL010000478.1	0	47178	47178	bacterium or other organism	0.3485	0.925	standard	17	0	0	Escherichia 9, Sinorhizobium 2, Bacillus 1	31.1	
+elysia-timida	JBHHFL010000927.1	0	16531	16531	bacterium or other organism	0.3045	0.853	mycoplasma (TGA = Trp)	1	1	0	Treponema 1	30.1	
+elysia-timida	JBHHFL010001288.1	0	11432	11432	bacterium or other organism	0.5898	0.888	standard	7	0	0	Azospira 2, Escherichia 2, Neisseria 2	40.0	
+elysia-timida	JBHHFL010001560.1	0	9230	9230	bacterium or other organism	0.3307	0.92	standard	4	0	0	Escherichia 1, Rickettsia 1	46.9	
+elysia-timida	JBHHFL010001705.1	0	8113	8113	bacterium or other organism	0.4643	0.646	standard	1	0	0	Lactococcus 1	31.0	
+elysia-leucolegnote	JBQKML010000180.1	0	1085000	1085000	bacterium or other organism	0.4624	0.887	standard	523	14	30	Bacillus 42, Escherichia 39, Pseudomonas 32	40.1	plastid-protein search; regulator search
+elysia-leucolegnote	JBQKML010000169.1	0	747000	747000	bacterium or other organism	0.4573	0.905	standard	413	18	28	Bacillus 26, Escherichia 20, Pseudomonas 16	42.7	plastid-protein search; regulator search
+elysia-leucolegnote	JBQKML010000192.1	0	50102	50102	bacterium or other organism	0.4736	0.8	standard	19	1	2	Geobacter 3, Escherichia 1, Priestia 1	41.7	plastid-protein search
+elysia-leucolegnote	JBQKML010000224.1	0	30110	30110	bacterium or other organism	0.4421	0.827	standard	10	0	1	Methanocaldococcus 1, Neisseria 1, Lactococcus 1	38.0	
+elysia-leucolegnote	JBQKML010000227.1	0	24045	24045	bacterium or other organism	0.4867	0.705	standard	4	0	2	Rhodobacter 1, Escherichia 1	51.6	
+elysia-leucolegnote	JBQKML010000168.1	0	18184	18184	bacterium or other organism	0.5031	0.856	standard	8	0	0	Agrobacterium 1, Bacillus 1, Shouchella 1	41.9	
+elysia-leucolegnote	JBQKML010000296.1	0	18108	18108	bacterium or other organism	0.4584	0.831	standard	7	1	2	Legionella 1, Helicobacter 1, Stutzerimonas 1	42.5	
+elysia-leucolegnote	JBQKML010000258.1	0	16584	16584	bacterium or other organism	0.5116	0.928	standard	7	0	2	Streptococcus 1, Bacillus 1, Porphyromonas 1	47.2	
+elysia-leucolegnote	JBQKML010000331.1	0	15706	15706	bacterium or other organism	0.4755	0.948	standard	7	1	0	Ruegeria 1, Pseudomonas 1, Bacillus 1	54.8	plastid-protein search
+elysia-leucolegnote	JBQKML010000299.1	0	15401	15401	bacterium or other organism	0.4465	0.863	standard	9	0	0	Caldanaerobacter 1, Escherichia 1, Haemophilus 1	55.6	
+elysia-leucolegnote	JBQKML010000206.1	0	14000	14000	bacterium or other organism	0.4224	0.849	standard	5	0	0	Agrobacterium 1, Rhodobacter 1, Haemophilus 1	34.7	
+elysia-leucolegnote	JBQKML010000297.1	0	10000	10000	bacterium or other organism	0.4609	0.856	standard	3	0	0	Acetivibrio 1, Bacillus 1	41.7	
+elysia-leucolegnote	JBQKML010000298.1	0	8000	8000	bacterium or other organism	0.4598	0.823	standard	4	0	0	Chlamydia 1	33.2	
+elysia-leucolegnote	JBQKML010000142.1	0	4192	4192	bacterium or other organism	0.4547	0.87	standard	3	0	0	Escherichia 1, Haemophilus 1, Shigella 1	35.0	
+elysia-leucolegnote	JBQKML010000225.1	0	2000	2000	bacterium or other organism	0.504	0.928	standard	1	0	0	Bacillus 1	31.7	
+elysia-leucolegnote	JBQKML010000226.1	0	2000	2000	bacterium or other organism	0.4535	0.887	standard	2	0	0	Shigella 1, Haemophilus 1	52.2	
+elysia-leucolegnote	JBQKML010000402.1	0	1471	1471	bacterium or other organism	0.4901	0.828	standard	3	0	0	Syntrophotalea 1, Mycobacterium 1, Helicobacter 1	36.0	
+elysia-atroviridis	JBWBDL010000115.1	0	142323	142323	bacterium or other organism	0.4344	0.903	standard	33	1	0	Escherichia 14, Shigella 3, Salmonella 2	32.0	
+elysia-atroviridis	JBWBDL010000297.1	0	28069	28069	bacterium or other organism	0.386	0.878	standard	14	2	0	Shigella 2, Mycobacterium 2, Escherichia 2	34.8	
+elysia-atroviridis	JBWBDL010000363.1	0	22756	22756	bacterium or other organism	0.388	0.876	standard	10	2	1	Bacillus 2, Shigella 1, Bacteroides 1	35.3	
+elysia-atroviridis	JBWBDL010000529.1	0	15969	15969	bacterium or other organism	0.3984	0.892	standard	9	1	2	Shigella 3, Mycobacterium 2, Burkholderia 2	37.2	
+elysia-papillosa	CDRNNR020002995.1	0	60305	60305	bacterium or other organism	0.4632	0.934	standard	3	0	1	Pseudomonas 1, Streptomyces 1	47.3	
+elysia-papillosa	CDRNNR020002729.1	0	35811	35811	bacterium or other organism	0.4322	0.923	standard	20	1	1	Bdellovibrio 3, Bacillus 2, Pseudomonas 2	42.1	
+elysia-papillosa	CDRNNR020002865.1	0	32126	32126	bacterium or other organism	0.5963	0.965	standard	2	0	0	Sinorhizobium 2	52.2	
+elysia-papillosa	CDRNNR020002758.1	0	29879	29879	bacterium or other organism	0.3614	0.913	standard	20	0	3	Coxiella 2, Escherichia 2, Chromohalobacter 1	42.2	
+elysia-papillosa	CDRNNR020003258.1	0	25108	25108	bacterium or other organism	0.2391	0.925	standard	5	0	0	Rickettsia 1, Mesoplasma 1, Chlamydia 1	30.8	
+elysia-papillosa	CDRNNR020003119.1	0	20792	20792	bacterium or other organism	0.3546	0.975	standard	6	0	0	Agrobacterium 2, Sinorhizobium 1, Bartonella 1	27.4	
+elysia-papillosa	CDRNNR020003234.1	0	16086	16086	bacterium or other organism	0.4214	0.895	standard	9	0	1	Bacillus 2, Bdellovibrio 2, Xanthomonas 1	42.5	
+elysia-papillosa	CDRNNR020003107.1	0	13685	13685	bacterium or other organism	0.2989	0.755	standard	2	0	0	Neisseria 1, Clostridium 1	33.8	
+elysia-papillosa	CDRNNR020002260.1	0	10951	10951	bacterium or other organism	0.3112	0.914	standard	6	0	0	Pseudomonas 1, Escherichia 1, Coxiella 1	37.7	
+elysia-papillosa	CDRNNR020002991.1	0	30876	30876	algal mitochondrial DNA	0.4799	0.462	standard	7	1	0			plastid-protein search
+elysia-papillosa-alt	CDRNNS020019312.1	0	12263	12263	bacterium or other organism	0.481	0.922	standard	1	0	1	Streptomyces 1	47.3	

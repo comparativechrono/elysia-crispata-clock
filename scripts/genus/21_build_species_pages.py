@@ -4,12 +4,13 @@
 
 usage: 21_build_species_pages.py REPO
 Reads  results/genus/<slug>.kleptoplast.json and <slug>.transfer.json (39_collect_species.py),
+       results/genus/foreign_dna_census.json.gz (76_foreign_census.py),
        config/species.tsv and config/species_text.json (the conclusions, written by hand once the
        numbers were in; every number in them is filled in from the result files at build time).
 Writes docs/<slug>/kleptoplasts.html, docs/<slug>/gene-transfer.html and copies the result files
        to docs/downloads/.
 """
-import sys, os, json, csv, html, datetime, shutil, re
+import sys, os, json, csv, html, datetime, shutil, re, gzip
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import chrome
 repo = os.path.abspath(sys.argv[1]); RG = os.path.join(repo, "results", "genus"); SITE = os.path.join(repo, "docs")
@@ -17,6 +18,12 @@ e = html.escape; today = datetime.date.today().isoformat()
 SP = list(csv.DictReader(open(os.path.join(repo, "config", "species.tsv")), delimiter="\t"))
 TEXT = json.load(open(os.path.join(repo, "config", "species_text.json"))) if os.path.exists(os.path.join(repo, "config", "species_text.json")) else {}
 def jload(p): return json.load(open(p)) if os.path.exists(p) else None
+# every piece of foreign DNA in the eleven assemblies (76_foreign_census.py)
+_census = os.path.join(RG, "foreign_dna_census.json.gz")
+CENSUS = json.load(gzip.open(_census))["assemblies"] if os.path.exists(_census) else {}
+def size(bp):
+    """a length in running text: 3.6 Mb, 245 kb, 4.0 kb"""
+    return f"{bp / 1e6:.1f} Mb" if bp >= 1e6 else (f"{bp / 1e3:.0f} kb" if bp >= 10000 else f"{bp / 1e3:.1f} kb")
 SPAN = {}
 for _sp in SP:
     _c = jload(os.path.join(RG, _sp["slug"] + ".clock.json"))
@@ -248,6 +255,14 @@ def context(sp, K, T):
             c["bact_genes"] = num(sum(x["census"]["stretches"].get("microbe", 0) for x in cen))
             c["bact_listed"] = word(sum(x["listed_in_own_annotation"] for x in T["protein_screen"].get("non_animal_contigs", []))); c["Bact_listed"] = c["bact_listed"].capitalize()
             c["genome_gc"] = f'{100 * T["protein_screen"]["genome_gc"]:.0f}%' if T["protein_screen"].get("genome_gc") else ""
+    for key, asm in (("cen", sp["slug"]), ("cen_alt", sp["slug"] + "-alt")):          # the census of foreign DNA
+        A = CENSUS.get(asm)
+        if not A: continue
+        F = A["foreign"]; cap = key[0].upper() + key[1:]
+        c[key + "_n"] = word(F["sequences"]); c[cap + "_n"] = word(F["sequences"]).capitalize()
+        c[key + "_size"] = size(F["bp"]); c[key + "_mb"] = f'{F["bp"] / 1e6:.1f}'
+        c[key + "_ends"] = word(F["ends"]); c[key + "_und"] = num(F["undetermined"]); c[key + "_und_size"] = size(F["undetermined_bp"])
+        c[key + "_byprot"] = word(sum(1 for x in A["foreign_sequences"] if "plastid-protein search" in x["found_by"]))
     return c
 
 def lib_label(L, n_libs): return (L.get("label") or (L["animal"][0].upper() + L["animal"][1:])) if n_libs > 1 else "The reads"
@@ -547,6 +562,69 @@ def tx_join(slug, x): return TEXT.get(slug, {}).get("join_notes", {}).get(f'{x["
 def tx_break(slug, x): return TEXT.get(slug, {}).get("break_notes", {}).get(f'{x["slug"]}:{x["slug_break"]}', "")
 def tx_place(slug, x): return TEXT.get(slug, {}).get("place_notes", {}).get(f'{x["slug"]}:{x["start"]}', "")
 
+def census_html(slug, T):
+    """Bacteria and other organisms in the assembly (and in the second assembly of the species): every
+    sequence examined by the census of foreign DNA (76_foreign_census.py)"""
+    keys = [(slug, None)] + [(slug + "-" + O["key"], O) for O in T.get("other_assemblies", [])]
+    keys = [(k, O) for k, O in keys if CENSUS.get(k)]
+    if not keys: return ""
+    two = len(keys) > 1
+    bgm = CENSUS[keys[0][0]]["background_orf_share"]["median"]
+    out = [f'<h2 id="foreign-dna">Bacteria and other organisms in the {"assemblies" if two else "assembly"}</h2>',
+           f'<p>The protein search finds a bacterial sequence only when it carries a gene similar to one of its query proteins. Every sequence of the '
+           f'{"two assemblies" if two else "assembly"} was therefore also examined on its own. The DNA of bacteria and phages is 85 to 95% protein-coding, whereas in random '
+           f'20-kb windows of {"the reference assembly" if two else "this assembly"} long open reading frames (300 bases or more) cover a median of {round(100 * bgm)}% of the sequence. '
+           'Each sequence in which such reading frames cover at least 60%, or whose G+C content differs from that of the assembly by 8 percentage points or more, '
+           'was translated in all six reading frames, unless it is a tandem repeat, and each of its coding regions was compared with the protein database. '
+           'A sequence was counted as DNA of a bacterium or another organism when at least one of its coding regions is of non-animal type and hardly any are matched '
+           'best by a protein of another sea slug, or when its G+C content is unusual and its coding regions of non-animal type outnumber those of animal type. '
+           'Coding stretches at the ends of slug sequences were examined in the same way. The rules are given on the <a href="../methods.html#foreign-dna">methods page</a>.</p>']
+    for k, O in keys:
+        A = CENSUS[k]; F = A["foreign"]; fs = A["foreign_sequences"]; ends = A["foreign_ends"]
+        where = "the alternate haplotype" if O else ("the reference assembly" if two else "this assembly")
+        if two: out.append(f'<h3>{"The alternate haplotype" if O else "The reference assembly"}</h3>')
+        n = F["sequences"]; byp = sum(1 for x in fs if "plastid-protein search" in x["found_by"])
+        txt = (f'In {where}, {word(n)} {plural(n, "sequence")} with a total length of {size(F["bp"])} {"is" if n == 1 else "are"} DNA of bacteria or other organisms'
+               if n else f'In {where}, no sequence is DNA of bacteria or other organisms')
+        if ends: txt += f', and bacterial DNA forms the {"end" if len(ends) == 1 else "ends"} of {word(len(ends))} slug {plural(len(ends), "sequence")} ({size(F["ends_bp"])})'
+        txt += "."
+        if n:
+            txt += (f' The protein search had found {word(byp)} of {"it" if n == 1 else "them"}.' if byp else
+                    (" The protein search did not find it, because it carries no gene similar to the query proteins." if n == 1 else
+                     " The protein search found none of them, because none carries a gene similar to its query proteins."))
+        if F["undetermined"]:
+            txt += (f' A further {word(F["undetermined"])} short {plural(F["undetermined"], "sequence")} ({size(F["undetermined_bp"])}) could not be assigned to the slug or to another organism, '
+                    f'because none of {"its" if F["undetermined"] == 1 else "their"} coding regions matches a protein in the database.')
+        out.append(f"<p>{txt}</p>")
+        if fs:
+            def genera(x):
+                g = ", ".join(it(name) for name, _ in x["nearest_bacteria"][:3])
+                return g + (f' <span class="muted">({x["bacterial_identity_median"]:.0f}%)</span>' if x["bacterial_identity_median"] is not None else "") if g else '<span class="muted">–</span>'
+            def row(x):
+                k_ = x["stretch_kinds"]
+                return (f'<tr><td class="mono">{e(x["sequence"])}</td><td class="num">{num(x["length"])}</td><td class="num">{100 * x["gc"]:.0f}%</td>'
+                        f'<td class="num">{100 * x["orf_share"]:.0f}%{"*" if x["genetic_code"].startswith("myco") else ""}</td><td class="num">{k_["foreign"]}</td>'
+                        f'<td class="num">{k_["sea_slug"]}</td><td class="num">{k_["animal"]}</td><td>{genera(x)}</td>'
+                        f'<td>{"yes" if "plastid-protein search" in x["found_by"] else ""}</td></tr>')
+            rest = fs[40:]
+            more = (f'<tr><td colspan="9" class="muted">and {num(len(rest))} shorter sequences ({size(sum(x["length"] for x in rest))} in all), listed in the download below</td></tr>' if rest else "")
+            out.append('<div class="tablewrap"><table class="data"><thead><tr><th>Sequence</th><th class="num">Length (bp)</th><th class="num">G+C</th>'
+                       '<th class="num" title="Share of the sequence in open reading frames of 300 bases or more">Reading frames</th>'
+                       '<th class="num" title="Coding regions whose best match is an algal, plant, bacterial or fungal protein">Of non-animal type</th>'
+                       '<th class="num" title="Coding regions whose best match is a protein of another sea slug">Matched by other sea slugs</th>'
+                       '<th class="num" title="Coding regions whose best match is a protein of another animal">Matched by other animals</th>'
+                       '<th>Closest bacterial genera (median protein identity)</th><th>Found by the protein search</th></tr></thead>'
+                       f'<tbody>{"".join(row(x) for x in fs[:40])}{more}</tbody></table></div>')
+            notes = []
+            if any(x["genetic_code"].startswith("myco") for x in fs): notes.append("* reading frames counted with the genetic code of mycoplasmas, in which TGA codes for tryptophan.")
+            notes.append("The genera are those of the closest Swiss-Prot proteins; at these identities they indicate related groups, not the species present.")
+            out.append(f'<p class="small muted" style="margin-top:8px">{" ".join(notes)}</p>')
+        if ends:
+            out.append("<p>" + "Bacterial stretches at the ends of slug sequences: " + "; ".join(
+                f'<span class="mono">{e(x["sequence"])}</span>:{num(x["start"] + 1)}–{num(x["end"])} of {num(x["length"])} bp ({x["stretch_kinds"]["foreign"]} coding regions of non-animal type)' for x in ends) + ".</p>")
+    out.append('<p class="small">Every piece of foreign DNA found in the eleven assemblies: <a href="../downloads/foreign_dna_census.tsv">foreign_dna_census.tsv</a>.</p>')
+    return "\n".join(out)
+
 def transfer_page(sp, K, T, parts=False, extra=None):
     slug = sp["slug"]; tx = TEXT.get(slug, {}); ctx = context(sp, K, T); ctx.update(extra or {}); s = T["screen"]
     lede = fmt(tx.get("transfer_lede", "Algal DNA was searched for in the assembly and in the reads from which it was built."), ctx)
@@ -626,8 +704,9 @@ def transfer_page(sp, K, T, parts=False, extra=None):
 <tr><th class="num">reads spanning</th><th class="num">reads ending</th><th class="num">reads spanning</th><th class="num">reads ending</th></tr></thead><tbody>{rows}</tbody></table></div>'''
     reads_html += locus_html + "".join(f'<p{" style=\"margin-top:16px\"" if i == 0 else ""}>{fmt(p, ctx)}</p>' for i, p in enumerate(tx.get("locus_after", [])))
     # ---- proteins
-    def prot_block(P, text_key="transfer_proteins", heading="Protein-level search for algal genes", first=True):
+    def prot_block(P, text_key="transfer_proteins", heading="Protein-level search for algal genes", first=True, asm_key=None):
         prot = ""
+        cz = {x["sequence"] for x in (CENSUS.get(asm_key) or {}).get("foreign_sequences", [])}
         if P:
             ps = P["summary"]
             def census_of(c):
@@ -642,6 +721,7 @@ def transfer_page(sp, K, T, parts=False, extra=None):
                 if "plastid fragment (assembly artefact)" in c["classes"]: return "The plastid region described above."
                 k = census_of(c)
                 if k and k["microbe"] >= 3 and k["microbe"] >= 0.5 * k["n"]: return "Bacterial sequence."
+                if c["contig"] in cz: return 'DNA of a bacterium or another organism (<a href="#foreign-dna">see below</a>).'
                 if k: return "Too few genes to classify."
                 if c["loci"] >= 2 and not c["animal_loci_on_contig"]: return "Adjacent genes of bacterial type and no slug gene among the proteins searched: a bacterial sequence in the assembly."
                 if c["loci"] >= 2: return "Several genes of bacterial type: a bacterial sequence, or a sequence joined to one."
@@ -671,14 +751,14 @@ def transfer_page(sp, K, T, parts=False, extra=None):
     {ptext}
     {f'<div class="tablewrap"><table class="data"><thead><tr><th>Sequence</th><th class="num">Length (bp)</th>{census_head}<th>Query proteins that matched</th><th>Interpretation</th></tr></thead><tbody>{rows}</tbody></table></div>' if rows else ""}'''
         return "\n".join(l.lstrip() for l in prot.split("\n"))
-    prot = prot_block(T.get("protein_screen"))
+    prot = prot_block(T.get("protein_screen"), asm_key=slug)
     # ---- a second assembly of the species
     other_html = ""
     for O in T.get("other_assemblies", []):
         m2, w2, l2, n2 = asm_tables(O["screen"])
         other_html += (f'<h2>Search of the second assembly</h2>' + "".join(f"<p>{fmt(p, ctx)}</p>" for p in tx.get("other_assembly_" + O["key"], []))
                        + f"<p>{m2}</p>" + "".join(f"<p>{fmt(p, ctx)}</p>" for p in tx.get("transfer_assembly_" + O["key"], [])) + w2 + l2 + n2
-                       + prot_block(O.get("protein_screen"), "transfer_proteins_" + O["key"], "Protein-level search of the second assembly", first=False))
+                       + prot_block(O.get("protein_screen"), "transfer_proteins_" + O["key"], "Protein-level search of the second assembly", first=False, asm_key=slug + "-" + O["key"]))
     caveats = "".join(f"<li>{fmt(p, ctx)}</li>" for p in tx.get("transfer_caveats", []))
     # tables written by 45_export_tables.py
     dls = []
@@ -708,6 +788,8 @@ def transfer_page(sp, K, T, parts=False, extra=None):
 {prot}
 
 {other_html}
+
+{census_html(slug, T)}
 
 {"<h2>Limitations</h2><ul>" + caveats + "</ul>" if caveats else ""}
 </div></section>
@@ -875,6 +957,8 @@ def other_animals_page(sp, O):
                        description=f"Kleptoplasts and tests for algal gene transfer in the other sequenced individuals of the sea slug {sp['species']}.")
 
 os.makedirs(os.path.join(SITE, "downloads"), exist_ok=True)
+if os.path.exists(os.path.join(RG, "foreign_dna_census.tsv")):
+    shutil.copy(os.path.join(RG, "foreign_dna_census.tsv"), os.path.join(SITE, "downloads", "foreign_dna_census.tsv"))
 # E. crispata: the page on its other sequenced animals (its other pages are written by scripts/30 and 31)
 _O = jload(os.path.join(RG, "elysia-crispata.other_animals.json"))
 if _O and chrome.has_other_individuals(repo):
