@@ -1,0 +1,7487 @@
+{
+ "summary": {
+  "queries": 829,
+  "regulators": 160,
+  "assemblies": [
+   "elysia-crispata",
+   "elysia-crispata-alt",
+   "elysia-crispata-purdue",
+   "elysia-crispata-tampa",
+   "elysia-chlorotica",
+   "elysia-marginata",
+   "elysia-timida",
+   "elysia-leucolegnote",
+   "elysia-atroviridis",
+   "elysia-papillosa",
+   "elysia-papillosa-alt"
+  ],
+  "loci": 2092,
+  "codes": {
+   "?": 1461,
+   "S": 60,
+   "P": 2,
+   "M": 499,
+   "b": 69,
+   "j": 1
+  },
+  "alga_or_microbe_like_on_slug_dna": 0,
+  "regulators_with_alga_or_microbe_like_copy_on_slug_dna": [],
+  "sequences_with_alga_or_microbe_like_loci": {
+   "foreign sequence": 47,
+   "foreign stretch at the end of a slug sequence": 1
+  },
+  "unconfirmed_long_alignments": {
+   "n": 47,
+   "with_any_match": 6,
+   "significant": 3,
+   "significant_outside_sea_slugs": 0
+  },
+  "no_database_match": {
+   "n": 1460,
+   "low_complexity": 1322,
+   "short": 91,
+   "other": 47
+  }
+ },
+ "regulators": {
+  "SIG1": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "sigma factor of the plastid-encoded RNA polymerase (PEP)",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "M?",
+    "elysia-chlorotica": "bM?",
+    "elysia-marginata": "bM",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "SIG2": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "sigma factor of PEP",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "M?",
+    "elysia-chlorotica": "bM?",
+    "elysia-marginata": "bM",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "SIG3": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "sigma factor of PEP",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "M?",
+    "elysia-chlorotica": "bM?",
+    "elysia-marginata": "bM",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "SIG4": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "sigma factor of PEP",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "M?",
+    "elysia-chlorotica": "bM?",
+    "elysia-marginata": "bM",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "SIG5": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "light- and clock-regulated sigma factor of PEP (psbD blue-light promoter)",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "M?",
+    "elysia-chlorotica": "bM?",
+    "elysia-marginata": "bM?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "S?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "SIG6": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "sigma factor of PEP, early chloroplast development",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "M?",
+    "elysia-chlorotica": "bM?",
+    "elysia-marginata": "bM",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "SIB1": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "sigma factor-binding protein (VQ motif)",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PTAC2": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "PEP-associated protein PAP2 (PPR protein)",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PTAC7": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "PEP-associated protein PAP12",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PTAC10": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "PEP-associated protein PAP3",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PTAC12/HMR": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "PEP-associated protein PAP5, phytochrome signalling",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "S",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PTAC14": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "PEP-associated protein PAP7 (SET-domain methyltransferase)",
+   "queries": 7,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PTAC16": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "nucleoid-thylakoid tethering protein",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "S",
+    "elysia-crispata-purdue": "S",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "S?",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PTAC5": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "heat-induced PEP-associated protein",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "?",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PTAC6": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "PEP-associated protein PAP8",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "FLN1": {
+   "category": "plastid transcription",
+   "animal_family": "yes",
+   "role": "PEP-associated protein PAP6 (pfkB-type carbohydrate kinase family)",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "FLN2": {
+   "category": "plastid transcription",
+   "animal_family": "yes",
+   "role": "fructokinase-like protein of the PEP complex",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "FSD2": {
+   "category": "plastid transcription",
+   "animal_family": "yes",
+   "role": "PEP-associated protein PAP9 (Fe superoxide dismutase)",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "jM",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "FSD3": {
+   "category": "plastid transcription",
+   "animal_family": "yes",
+   "role": "PEP-associated protein PAP4 (Fe superoxide dismutase)",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TRXz": {
+   "category": "plastid transcription",
+   "animal_family": "yes",
+   "role": "PEP-associated protein PAP10 (thioredoxin)",
+   "queries": 10,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "M",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "MurE": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "PEP-associated protein PAP11 (MurE homologue)",
+   "queries": 8,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "b?",
+    "elysia-chlorotica": "bM?",
+    "elysia-marginata": "b",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "RPOTm": {
+   "category": "plastid transcription",
+   "animal_family": "yes",
+   "role": "phage-type RNA polymerase, mitochondrial",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "M?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "M?",
+    "elysia-crispata-tampa": "bM",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "RPOTmp": {
+   "category": "plastid transcription",
+   "animal_family": "yes",
+   "role": "phage-type RNA polymerase (NEP), plastid and mitochondria",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "M?",
+    "elysia-crispata-tampa": "bM",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "RPOTp": {
+   "category": "plastid transcription",
+   "animal_family": "yes",
+   "role": "phage-type RNA polymerase (NEP), plastid",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "M?",
+    "elysia-crispata-purdue": "M?",
+    "elysia-crispata-tampa": "bM",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "MS",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CSK": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "chloroplast sensor kinase (two-component histidine kinase)",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "?",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "S?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PRIN2": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "plastid redox insensitive 2, PEP activity",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "DG1": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "PPR protein, PEP-dependent transcription",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "MRL7": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "thioredoxin-like regulator of PEP",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CSP41b": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "stem-loop binding protein of plastid transcripts",
+   "queries": 10,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "RNE": {
+   "category": "plastid transcription",
+   "animal_family": "no",
+   "role": "ribonuclease E of plastid RNA processing",
+   "queries": 3,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "GUN1": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "PPR protein integrating plastid retrograde signals",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "GUN4": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "tetrapyrrole-binding regulator of Mg-chelatase",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "-",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CHLH/GUN5": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "Mg-chelatase H subunit",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CHLI1": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "Mg-chelatase I subunit",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "P",
+    "elysia-crispata-alt": "P",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CHLI2": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "Mg-chelatase I subunit",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "P",
+    "elysia-crispata-alt": "P",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CHLD": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "Mg-chelatase D subunit",
+   "queries": 11,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "MS?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "S?",
+    "elysia-marginata": "S?",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "M?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "HO1/GUN2": {
+   "category": "retrograde signalling",
+   "animal_family": "yes",
+   "role": "heme oxygenase",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "HY2/GUN3": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "phytochromobilin synthase",
+   "queries": 3,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "FC1/GUN6": {
+   "category": "retrograde signalling",
+   "animal_family": "yes",
+   "role": "ferrochelatase 1",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "b",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "b",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "FC2": {
+   "category": "retrograde signalling",
+   "animal_family": "yes",
+   "role": "ferrochelatase 2",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "M",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "bM",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "bM",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M?",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "EX1": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "singlet-oxygen signalling",
+   "queries": 5,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "EX2": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "singlet-oxygen signalling",
+   "queries": 5,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "FLU": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "negative regulator of tetrapyrrole synthesis",
+   "queries": 8,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "?",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "SAL1": {
+   "category": "retrograde signalling",
+   "animal_family": "yes",
+   "role": "PAP phosphatase, PAP retrograde signal",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "M?",
+    "elysia-marginata": "?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PTM": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "envelope-bound PHD transcription factor",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "ABI4": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "AP2 transcription factor of retrograde signalling",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "GLK1": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "Golden2-like transcription factor of chloroplast development",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "GLK2": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "Golden2-like transcription factor of chloroplast development",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "HY5": {
+   "category": "retrograde signalling",
+   "animal_family": "yes",
+   "role": "bZIP transcription factor of light signalling",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "S",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "?",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "S?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "HEMA1": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "glutamyl-tRNA reductase, first step of tetrapyrrole synthesis",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "GSA1": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "glutamate-1-semialdehyde aminomutase",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "b",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "b",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CHLM": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "Mg-protoporphyrin IX methyltransferase",
+   "queries": 10,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CRD1": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "Mg-protoporphyrin IX monomethyl ester cyclase",
+   "queries": 11,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PORA": {
+   "category": "retrograde signalling",
+   "animal_family": "yes",
+   "role": "protochlorophyllide reductase (short-chain dehydrogenase family)",
+   "queries": 4,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "M",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PORB": {
+   "category": "retrograde signalling",
+   "animal_family": "yes",
+   "role": "protochlorophyllide reductase",
+   "queries": 4,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "M",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M?",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CAO": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "chlorophyllide a oxygenase",
+   "queries": 7,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CHLG": {
+   "category": "retrograde signalling",
+   "animal_family": "yes",
+   "role": "chlorophyll synthase (UbiA prenyltransferase family)",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "DXS": {
+   "category": "retrograde signalling",
+   "animal_family": "yes",
+   "role": "MEP pathway (transketolase family)",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "DXR": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "MEP pathway",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "b",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "ISPF": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "MEP pathway, makes the retrograde signal MEcPP",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "HDS": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "MEP pathway",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "HDR": {
+   "category": "retrograde signalling",
+   "animal_family": "no",
+   "role": "MEP pathway",
+   "queries": 11,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PHYA": {
+   "category": "light signalling",
+   "animal_family": "no",
+   "role": "phytochrome",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PHYB": {
+   "category": "light signalling",
+   "animal_family": "no",
+   "role": "phytochrome",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PHOT1": {
+   "category": "light signalling",
+   "animal_family": "no",
+   "role": "phototropin (LOV kinase)",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "MS?",
+    "elysia-crispata-alt": "M",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M?",
+    "elysia-leucolegnote": "M?",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M?",
+    "elysia-papillosa-alt": "M?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PHOT2": {
+   "category": "light signalling",
+   "animal_family": "no",
+   "role": "phototropin (LOV kinase)",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "MS?",
+    "elysia-crispata-alt": "M",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M?",
+    "elysia-leucolegnote": "M?",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M?",
+    "elysia-papillosa-alt": "M?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CRY1": {
+   "category": "light signalling",
+   "animal_family": "yes",
+   "role": "plant cryptochrome",
+   "queries": 10,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "MS?",
+    "elysia-papillosa-alt": "S?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CRY2": {
+   "category": "light signalling",
+   "animal_family": "yes",
+   "role": "plant cryptochrome",
+   "queries": 10,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "M?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "M?",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "MS?",
+    "elysia-papillosa-alt": "S?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CRY3": {
+   "category": "light signalling",
+   "animal_family": "yes",
+   "role": "cryptochrome DASH",
+   "queries": 10,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "M",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "M?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "UVR8": {
+   "category": "light signalling",
+   "animal_family": "yes",
+   "role": "UV-B receptor (RCC1 repeats)",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "ZTL": {
+   "category": "light signalling",
+   "animal_family": "no",
+   "role": "LOV F-box kelch protein, clock",
+   "queries": 3,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "LKP2": {
+   "category": "light signalling",
+   "animal_family": "no",
+   "role": "LOV F-box kelch protein, clock",
+   "queries": 3,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "FKF1": {
+   "category": "light signalling",
+   "animal_family": "no",
+   "role": "LOV F-box kelch protein, clock",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "COP1": {
+   "category": "light signalling",
+   "animal_family": "yes",
+   "role": "E3 ligase of light signalling",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "M",
+    "elysia-crispata-purdue": "M?",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "SPA1": {
+   "category": "light signalling",
+   "animal_family": "no",
+   "role": "partner of COP1",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "DET1": {
+   "category": "light signalling",
+   "animal_family": "yes",
+   "role": "repressor of photomorphogenesis",
+   "queries": 5,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "STN7": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "state-transition kinase",
+   "queries": 8,
+   "assemblies": {
+    "elysia-crispata": "M?",
+    "elysia-crispata-alt": "S?",
+    "elysia-crispata-purdue": "M?",
+    "elysia-crispata-tampa": "M?",
+    "elysia-chlorotica": "M?",
+    "elysia-marginata": "M?",
+    "elysia-timida": "M?",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M?",
+    "elysia-papillosa": "M?",
+    "elysia-papillosa-alt": "M?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "STN8": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "PSII core kinase",
+   "queries": 8,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "M",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "M",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PPH1/TAP38": {
+   "category": "photosynthesis regulation",
+   "animal_family": "yes",
+   "role": "LHCII phosphatase (PP2C)",
+   "queries": 8,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "M",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M?",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "M?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CAS": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "thylakoid calcium-sensing receptor",
+   "queries": 8,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "S",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PGR5": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "cyclic electron flow",
+   "queries": 11,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PGRL1A": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "cyclic electron flow",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PGRL1B": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "cyclic electron flow",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CP12-1": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "redox regulator of the Calvin cycle",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CP12-2": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "redox regulator of the Calvin cycle",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "FTRB": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "ferredoxin-thioredoxin reductase, catalytic chain",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "S",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "S?",
+    "elysia-papillosa-alt": "S?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "FTRA1": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "ferredoxin-thioredoxin reductase, variable chain",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "NTRC": {
+   "category": "photosynthesis regulation",
+   "animal_family": "yes",
+   "role": "NADPH-thioredoxin reductase C",
+   "queries": 8,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "b",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TRXf1": {
+   "category": "photosynthesis regulation",
+   "animal_family": "yes",
+   "role": "thioredoxin f",
+   "queries": 3,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TRXm1": {
+   "category": "photosynthesis regulation",
+   "animal_family": "yes",
+   "role": "thioredoxin m",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "b",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TRXm2": {
+   "category": "photosynthesis regulation",
+   "animal_family": "yes",
+   "role": "thioredoxin m",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "b",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TRXx": {
+   "category": "photosynthesis regulation",
+   "animal_family": "yes",
+   "role": "thioredoxin x",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "M",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TRXy1": {
+   "category": "photosynthesis regulation",
+   "animal_family": "yes",
+   "role": "thioredoxin y",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "M",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "RCA": {
+   "category": "photosynthesis regulation",
+   "animal_family": "yes",
+   "role": "Rubisco activase (AAA+)",
+   "queries": 8,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PSBS": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "non-photochemical quenching",
+   "queries": 4,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "VDE": {
+   "category": "photosynthesis regulation",
+   "animal_family": "yes",
+   "role": "violaxanthin de-epoxidase",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "ZEP": {
+   "category": "photosynthesis regulation",
+   "animal_family": "yes",
+   "role": "zeaxanthin epoxidase",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "HCF136": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "PSII assembly factor",
+   "queries": 11,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PAM68": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "PSII assembly factor",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "-",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "?",
+    "elysia-atroviridis": "S?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "S?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "LPA1": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "PSII assembly factor",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "LPA2": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "PSII assembly factor",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "LPA3": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "PSII assembly factor",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "HCF101": {
+   "category": "photosynthesis regulation",
+   "animal_family": "yes",
+   "role": "Fe-S cluster assembly for PSI",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "M?",
+    "elysia-crispata-tampa": "M?",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "bM",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M?",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "VIPP1": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "thylakoid biogenesis (PspA family)",
+   "queries": 11,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "S?",
+    "elysia-papillosa-alt": "S?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "THF1": {
+   "category": "photosynthesis regulation",
+   "animal_family": "no",
+   "role": "thylakoid formation",
+   "queries": 10,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "ALB3": {
+   "category": "photosynthesis regulation",
+   "animal_family": "yes",
+   "role": "thylakoid insertase (YidC/Oxa1 family)",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "M?",
+    "elysia-marginata": "?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "?",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "ALB4": {
+   "category": "photosynthesis regulation",
+   "animal_family": "yes",
+   "role": "thylakoid insertase (YidC/Oxa1 family)",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "?",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "S?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TOC33": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "outer envelope receptor GTPase",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "M?",
+    "elysia-crispata-alt": "M",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M?",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TOC34": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "outer envelope receptor GTPase",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "M?",
+    "elysia-crispata-alt": "M",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "M",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "M",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M?",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TOC75-III": {
+   "category": "protein import",
+   "animal_family": "yes",
+   "role": "outer envelope channel (Omp85 family)",
+   "queries": 8,
+   "assemblies": {
+    "elysia-crispata": "S?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "S?",
+    "elysia-crispata-tampa": "S?",
+    "elysia-chlorotica": "S?",
+    "elysia-marginata": "?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "S?",
+    "elysia-papillosa": "MS?",
+    "elysia-papillosa-alt": "MS?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TOC159": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "outer envelope receptor GTPase",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "M?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "M?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "M?",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M?",
+    "elysia-atroviridis": "MS?",
+    "elysia-papillosa": "M?",
+    "elysia-papillosa-alt": "M?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TOC132": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "outer envelope receptor GTPase",
+   "queries": 7,
+   "assemblies": {
+    "elysia-crispata": "M?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "M?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "M?",
+    "elysia-timida": "M?",
+    "elysia-leucolegnote": "M?",
+    "elysia-atroviridis": "MS?",
+    "elysia-papillosa": "M?",
+    "elysia-papillosa-alt": "M?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TOC120": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "outer envelope receptor GTPase",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "M?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "M?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "M?",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "M?",
+    "elysia-atroviridis": "MS?",
+    "elysia-papillosa": "M?",
+    "elysia-papillosa-alt": "M?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TOC90": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "outer envelope receptor GTPase",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "M?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "M?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "M?",
+    "elysia-timida": "M?",
+    "elysia-leucolegnote": "M?",
+    "elysia-atroviridis": "MS?",
+    "elysia-papillosa": "M?",
+    "elysia-papillosa-alt": "M?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TIC20-I": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "inner envelope channel",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TIC110": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "inner envelope translocon",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "S",
+    "elysia-timida": "S",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TIC40": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "inner envelope co-chaperone",
+   "queries": 3,
+   "assemblies": {
+    "elysia-crispata": "M?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "MS?",
+    "elysia-chlorotica": "M?",
+    "elysia-marginata": "M?",
+    "elysia-timida": "M?",
+    "elysia-leucolegnote": "M?",
+    "elysia-atroviridis": "M?",
+    "elysia-papillosa": "MS?",
+    "elysia-papillosa-alt": "MS?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TIC55": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "inner envelope redox regulator (Rieske)",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TIC62": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "inner envelope redox regulator",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "M",
+    "elysia-marginata": "bM",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "bM",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TIC56": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "1-MDa TIC complex",
+   "queries": 5,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TIC100": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "1-MDa TIC complex",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "S?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "S?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "OEP80": {
+   "category": "protein import",
+   "animal_family": "yes",
+   "role": "outer envelope Omp85 protein",
+   "queries": 8,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "S?",
+    "elysia-marginata": "bS?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "M?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "OEP16": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "outer envelope amino-acid channel",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CLPC1": {
+   "category": "protein import",
+   "animal_family": "yes",
+   "role": "stromal import motor (Clp ATPase)",
+   "queries": 10,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "M",
+    "elysia-crispata-purdue": "M",
+    "elysia-crispata-tampa": "bM",
+    "elysia-chlorotica": "bM",
+    "elysia-marginata": "bM",
+    "elysia-timida": "M",
+    "elysia-leucolegnote": "bM",
+    "elysia-atroviridis": "M",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "SECA1": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "thylakoid Sec translocase ATPase",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "b",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "SCY1": {
+   "category": "protein import",
+   "animal_family": "yes",
+   "role": "thylakoid Sec translocase channel (SecY)",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "b",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "M?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TATC": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "thylakoid Tat translocase",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TATA": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "thylakoid Tat translocase",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TATB/HCF106": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "thylakoid Tat translocase",
+   "queries": 4,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "M?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "?",
+    "elysia-atroviridis": "M?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "cpSRP43": {
+   "category": "protein import",
+   "animal_family": "no",
+   "role": "chloroplast signal recognition particle",
+   "queries": 8,
+   "assemblies": {
+    "elysia-crispata": "M",
+    "elysia-crispata-alt": "M",
+    "elysia-crispata-purdue": "M?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "M?",
+    "elysia-marginata": "M",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "M",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "M",
+    "elysia-papillosa-alt": "M"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "cpSRP54": {
+   "category": "protein import",
+   "animal_family": "yes",
+   "role": "chloroplast signal recognition particle",
+   "queries": 11,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "b",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "cpFtsY": {
+   "category": "protein import",
+   "animal_family": "yes",
+   "role": "chloroplast SRP receptor",
+   "queries": 12,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "bS?",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "b",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "FTSZ1": {
+   "category": "plastid division",
+   "animal_family": "no",
+   "role": "plastid division ring (tubulin-like)",
+   "queries": 11,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "b",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "FTSZ2-1": {
+   "category": "plastid division",
+   "animal_family": "no",
+   "role": "plastid division ring (tubulin-like)",
+   "queries": 11,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "b",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "FTSZ2-2": {
+   "category": "plastid division",
+   "animal_family": "no",
+   "role": "plastid division ring (tubulin-like)",
+   "queries": 11,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "b",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "ARC3": {
+   "category": "plastid division",
+   "animal_family": "no",
+   "role": "division site positioning",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "ARC5/DRP5B": {
+   "category": "plastid division",
+   "animal_family": "yes",
+   "role": "outer division ring dynamin",
+   "queries": 9,
+   "assemblies": {
+    "elysia-crispata": "S?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "S?",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "MS?",
+    "elysia-papillosa-alt": "S?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "ARC6": {
+   "category": "plastid division",
+   "animal_family": "no",
+   "role": "inner envelope division protein",
+   "queries": 8,
+   "assemblies": {
+    "elysia-crispata": "M?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "-",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PARC6": {
+   "category": "plastid division",
+   "animal_family": "no",
+   "role": "inner envelope division protein",
+   "queries": 5,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PDV1": {
+   "category": "plastid division",
+   "animal_family": "no",
+   "role": "outer envelope division protein",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PDV2": {
+   "category": "plastid division",
+   "animal_family": "no",
+   "role": "outer envelope division protein",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "MIND1": {
+   "category": "plastid division",
+   "animal_family": "no",
+   "role": "division site selection (MinD)",
+   "queries": 6,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "b",
+    "elysia-marginata": "b",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "b",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "MINE1": {
+   "category": "plastid division",
+   "animal_family": "no",
+   "role": "division site selection (MinE)",
+   "queries": 4,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "MCD1": {
+   "category": "plastid division",
+   "animal_family": "no",
+   "role": "division site positioning",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CCA1": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "morning Myb transcription factor; regulates SIG5",
+   "queries": 3,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "?",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "S?",
+    "elysia-papillosa-alt": "S"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "LHY": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "morning Myb transcription factor",
+   "queries": 3,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "?",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "S?",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "RVE8": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "Myb transcription factor of the clock",
+   "queries": 3,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "TOC1": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "pseudo-response regulator",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "b?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "-",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PRR3": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "pseudo-response regulator",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "b",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PRR5": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "pseudo-response regulator",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "b",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PRR7": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "pseudo-response regulator",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "?",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "bM?",
+    "elysia-chlorotica": "S?",
+    "elysia-marginata": "?",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "S",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "PRR9": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "pseudo-response regulator",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "b",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "GI": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "GIGANTEA",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "ELF3": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "evening complex",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "S"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "ELF4": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "evening complex",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "LUX": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "evening complex Myb transcription factor",
+   "queries": 2,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "?",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "LNK1": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "night light-inducible clock regulator",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "LNK2": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "night light-inducible clock regulator",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "-",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "CHE": {
+   "category": "plant clock",
+   "animal_family": "no",
+   "role": "TCP transcription factor of the clock",
+   "queries": 1,
+   "assemblies": {
+    "elysia-crispata": "-",
+    "elysia-crispata-alt": "-",
+    "elysia-crispata-purdue": "-",
+    "elysia-crispata-tampa": "-",
+    "elysia-chlorotica": "-",
+    "elysia-marginata": "-",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "-",
+    "elysia-papillosa": "-",
+    "elysia-papillosa-alt": "-"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  },
+  "AUREO": {
+   "category": "light signalling",
+   "animal_family": "no",
+   "role": "aureochrome, the blue-light receptor of stramenopiles",
+   "queries": 11,
+   "assemblies": {
+    "elysia-crispata": "S?",
+    "elysia-crispata-alt": "?",
+    "elysia-crispata-purdue": "?",
+    "elysia-crispata-tampa": "?",
+    "elysia-chlorotica": "?",
+    "elysia-marginata": "?",
+    "elysia-timida": "?",
+    "elysia-leucolegnote": "-",
+    "elysia-atroviridis": "M?",
+    "elysia-papillosa": "?",
+    "elysia-papillosa-alt": "?"
+   },
+   "on_slug_dna_alga_or_microbe_like": 0
+  }
+ },
+ "foreign_sequences": [
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01001497.1",
+   "length": 81532,
+   "gc": 0.308,
+   "genome_gc": 0.3738,
+   "orf_share": 0.936,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "microbe": 67,
+    "alga": 5,
+    "animal": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 1,
+    "animal": 1,
+    "foreign": 71,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 43.8,
+   "nearest_bacteria": [
+    [
+     "Francisella",
+     12
+    ],
+    [
+     "Escherichia",
+     9
+    ],
+    [
+     "Bacillus",
+     7
+    ],
+    [
+     "Haemophilus",
+     4
+    ],
+    [
+     "Shigella",
+     3
+    ]
+   ],
+   "other_genes": [
+    "MENE_LACLA",
+    "PABB_ECOLI",
+    "PABC_BACSU",
+    "TRPG_MYCTU",
+    "RLMKL_FRAP2",
+    "MFD_HAEIN",
+    "YCCA_ECOL6",
+    "END3_HAEIN",
+    "RNFB_HAHCH",
+    "GLRX2_ECO57",
+    "FTN_STAS1",
+    "ELBB_SHIFL"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "CHLVA|DXS|E1ZQR7",
+     "regulators": "DXS",
+     "start": 22596,
+     "end": 24422,
+     "identity": 0.4566,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 989.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    },
+    {
+     "query": "BRYSP|cpSRP54|GMH32709.1",
+     "regulators": "cpSRP54",
+     "start": 70394,
+     "end": 71755,
+     "identity": 0.432,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 337.0,
+     "microbe_bits": 469.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 333.0,
+     "best_alga_hit": "ALG|BRYSP|GMH32709.1"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01001529.1",
+   "length": 75781,
+   "gc": 0.332,
+   "genome_gc": 0.3738,
+   "orf_share": 0.935,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "microbe": 52,
+    "alga": 3
+   },
+   "stretch_kinds": {
+    "sea_slug": 1,
+    "animal": 0,
+    "foreign": 54,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 51.8,
+   "nearest_bacteria": [
+    [
+     "Francisella",
+     18
+    ],
+    [
+     "Pseudomonas",
+     6
+    ],
+    [
+     "Escherichia",
+     5
+    ],
+    [
+     "Legionella",
+     2
+    ],
+    [
+     "Salmonella",
+     2
+    ]
+   ],
+   "other_genes": [
+    "DCDA_FRATH",
+    "RDSA_ECOLI",
+    "YGEQ_ECOLI",
+    "TSGA_BUCBP",
+    "Y1691_LEGPH",
+    "CH10_FRAP2",
+    "ESTX_LEPX4",
+    "GBPA_SHEON",
+    "RFBK_SALTY",
+    "GALE_VIBCL",
+    "PGLC_CAMJE",
+    "PGLF_CAMJE"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "BRYSP|DXR|GMH42809.1",
+     "regulators": "DXR",
+     "start": 41804,
+     "end": 42946,
+     "identity": 0.4,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 504.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01001550.1",
+   "length": 73533,
+   "gc": 0.332,
+   "genome_gc": 0.3738,
+   "orf_share": 0.943,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "microbe": 38,
+    "alga": 4,
+    "animal": 2
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 2,
+    "foreign": 42,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 52.0,
+   "nearest_bacteria": [
+    [
+     "Francisella",
+     13
+    ],
+    [
+     "Escherichia",
+     4
+    ],
+    [
+     "Haemophilus",
+     4
+    ],
+    [
+     "Bacillus",
+     4
+    ],
+    [
+     "Pseudomonas",
+     3
+    ]
+   ],
+   "other_genes": [
+    "GLPF_STRR6",
+    "A0A8S1J4V1",
+    "GLPK_FRATT",
+    "UVRD_ECOLI",
+    "FTSY_HAEIN",
+    "RF3_FRAP2",
+    "KTHY_FRAP2",
+    "NUPC_BACSU",
+    "NUPC_ECOL6",
+    "DEOC_SHEFN",
+    "DEOB_PROMH",
+    "COAX1_FRATT"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "BRYSP|cpFtsY|GMH35353.1",
+     "regulators": "cpFtsY",
+     "start": 9140,
+     "end": 10114,
+     "identity": 0.4327,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 246.0,
+     "microbe_bits": 352.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 248.0,
+     "best_alga_hit": "ALG|MICPC|C1MZD5"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01001714.1",
+   "length": 50308,
+   "gc": 0.328,
+   "genome_gc": 0.3738,
+   "orf_share": 0.914,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "alga": 4,
+    "microbe": 35,
+    "animal": 4
+   },
+   "stretch_kinds": {
+    "sea_slug": 1,
+    "animal": 4,
+    "foreign": 38,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 43.8,
+   "nearest_bacteria": [
+    [
+     "Francisella",
+     9
+    ],
+    [
+     "Bacillus",
+     7
+    ],
+    [
+     "Escherichia",
+     4
+    ],
+    [
+     "Haemophilus",
+     3
+    ],
+    [
+     "Pectobacterium",
+     1
+    ]
+   ],
+   "other_genes": [
+    "P73967",
+    "OPPC_HAEIN",
+    "GSIA_PECAS",
+    "YKWB_BACSU",
+    "YJHB_BACSU",
+    "YUSI_BACSU",
+    "ADEP_ECOLI",
+    "DPRA_HAEIN",
+    "ISPH_FRATN",
+    "AROH_BACSU",
+    "PSS_HELPY",
+    "TOLQ_HAEIN"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "VOLCA|SECA1|D8TNW2",
+     "regulators": "SECA1",
+     "start": 22186,
+     "end": 32098,
+     "identity": 0.4213,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 1377.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01001777.1",
+   "length": 42890,
+   "gc": 0.312,
+   "genome_gc": 0.3738,
+   "orf_share": 0.958,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "animal": 5,
+    "microbe": 25,
+    "alga": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 5,
+    "foreign": 26,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 42.0,
+   "nearest_bacteria": [
+    [
+     "Francisella",
+     6
+    ],
+    [
+     "Bacillus",
+     4
+    ],
+    [
+     "Pseudomonas",
+     3
+    ],
+    [
+     "Escherichia",
+     2
+    ],
+    [
+     "Haemophilus",
+     2
+    ]
+   ],
+   "other_genes": [
+    "FOCA_ECO57",
+    "Y1480_AQUAE",
+    "NUC1_CUNEE",
+    "AMPP1_ASPN4",
+    "PGEF_PSEAE",
+    "ISPG_FRATN",
+    "YBGIH_YERPE",
+    "YWTG_BACSU",
+    "GLMS_THEKO",
+    "TCYP_BACLD",
+    "RECF_FRAP2",
+    "COABC_HAEIN"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "CYAME|HDS|M1VIF2",
+     "regulators": "HDS",
+     "start": 10835,
+     "end": 12016,
+     "identity": 0.385,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 640.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01001787.1",
+   "length": 41564,
+   "gc": 0.303,
+   "genome_gc": 0.3738,
+   "orf_share": 0.907,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "microbe": 26,
+    "alga": 4
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 30,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 41.1,
+   "nearest_bacteria": [
+    [
+     "Bacillus",
+     5
+    ],
+    [
+     "Francisella",
+     3
+    ],
+    [
+     "Haemophilus",
+     3
+    ],
+    [
+     "Escherichia",
+     2
+    ],
+    [
+     "Pseudomonas",
+     2
+    ]
+   ],
+   "other_genes": [
+    "RUBR_ACIAD",
+    "M1V3Y2",
+    "CBH_CLOPE",
+    "SYGB_PSET1",
+    "6PGL_BACSU",
+    "BCR_ECOLI",
+    "RND_GLUDA",
+    "D7FXK8",
+    "UVRC_FRATN",
+    "OGT_HAEIN",
+    "MAGA_PARM1",
+    "Q8L725"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "BRYSP|CRY1|GMH43542.1",
+     "regulators": "CRY1,CRY2",
+     "start": 24471,
+     "end": 25865,
+     "identity": 0.3766,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 300.0,
+     "microbe_bits": 380.0,
+     "animal_bits": 238.0,
+     "sea_slug_bits": 178.0,
+     "best_alga_hit": "ALG|BRYSP|GMH43542.1"
+    },
+    {
+     "query": "MICPC|SIG1|C1MUC7",
+     "regulators": "SIG1,SIG2,SIG3,SIG4,SIG5,SIG6",
+     "start": 39043,
+     "end": 40671,
+     "identity": 0.4106,
+     "exons": 2,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 358.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01001790.1",
+   "length": 41415,
+   "gc": 0.326,
+   "genome_gc": 0.3738,
+   "orf_share": 0.943,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "microbe": 28,
+    "alga": 2
+   },
+   "stretch_kinds": {
+    "sea_slug": 1,
+    "animal": 0,
+    "foreign": 29,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 45.8,
+   "nearest_bacteria": [
+    [
+     "Francisella",
+     5
+    ],
+    [
+     "Haemophilus",
+     4
+    ],
+    [
+     "Pseudomonas",
+     3
+    ],
+    [
+     "Synechococcus",
+     1
+    ],
+    [
+     "Coxiella",
+     1
+    ]
+   ],
+   "other_genes": [
+    "RHO_PSEAE",
+    "THIO1_SYNE7",
+    "PPX_HAEIN",
+    "RARA_COXBU",
+    "RPOA2_FRATW",
+    "D7FI20",
+    "TRML_YERPE",
+    "SPUE_PSEAE",
+    "Y1691_LEGPH",
+    "PERM_HAEIN",
+    "RECJ_HAEIN",
+    "BIRA_HAEIN"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "CHOCR|TRXm1|M5DDH8",
+     "regulators": "TRXm1,TRXm2",
+     "start": 1653,
+     "end": 1973,
+     "identity": 0.5,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 130.0,
+     "microbe_bits": 137.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 111.0,
+     "best_alga_hit": "ALG|CHOCR|M5DDH8"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01001810.1",
+   "length": 39706,
+   "gc": 0.293,
+   "genome_gc": 0.3738,
+   "orf_share": 0.918,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "animal": 1,
+    "microbe": 27,
+    "alga": 2
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 1,
+    "foreign": 29,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 36.1,
+   "nearest_bacteria": [
+    [
+     "Bacillus",
+     5
+    ],
+    [
+     "Aneurinibacillus",
+     3
+    ],
+    [
+     "Chlamydia",
+     2
+    ],
+    [
+     "Vibrio",
+     2
+    ],
+    [
+     "Escherichia",
+     2
+    ]
+   ],
+   "other_genes": [
+    "FOLKP_CHLPN",
+    "FOLB_CHLTR",
+    "TRPC_VIBPA",
+    "MSRA_BACLD",
+    "TRPGD_ECOLI",
+    "TRPE_VIBPA",
+    "RNG_SHIFL",
+    "DNAA_FRATH",
+    "DPO3B_PSEAE",
+    "AIMA_BACSU",
+    "GUAA_HELHP",
+    "DPO4_PELTS"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ARATH|RNE|F4IV66",
+     "regulators": "RNE",
+     "start": 9349,
+     "end": 10569,
+     "identity": 0.3508,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 233.0,
+     "microbe_bits": 343.0,
+     "animal_bits": 194.0,
+     "sea_slug_bits": 134.0,
+     "best_alga_hit": "ALG|ARATH|F4IV66"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01001861.1",
+   "length": 34505,
+   "gc": 0.326,
+   "genome_gc": 0.3738,
+   "orf_share": 0.892,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "microbe": 21,
+    "alga": 3,
+    "animal": 2
+   },
+   "stretch_kinds": {
+    "sea_slug": 1,
+    "animal": 1,
+    "foreign": 24,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 44.2,
+   "nearest_bacteria": [
+    [
+     "Escherichia",
+     4
+    ],
+    [
+     "Francisella",
+     4
+    ],
+    [
+     "Erwinia",
+     1
+    ],
+    [
+     "Pseudomonas",
+     1
+    ],
+    [
+     "Stutzerimonas",
+     1
+    ]
+   ],
+   "other_genes": [
+    "YLBG_ECO57",
+    "P74141",
+    "NHAA_FRATN",
+    "Y2641_ERWT9",
+    "PLSC_PSEAE",
+    "FER_STUST",
+    "PURT_FRATN",
+    "B7GE04",
+    "FIXL_BRADU",
+    "YAFC_ECOLI",
+    "SDAC_ECO57",
+    "MURQ_BACC4"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ARATH|CLPC1|Q9FI56",
+     "regulators": "CLPC1",
+     "start": 16626,
+     "end": 19190,
+     "identity": 0.4425,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 872.0,
+     "microbe_bits": 1016.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "CYA|SYNY3|P74361"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01001933.1",
+   "length": 27603,
+   "gc": 0.319,
+   "genome_gc": 0.3738,
+   "orf_share": 0.93,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "microbe": 20,
+    "alga": 2
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 22,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 43.8,
+   "nearest_bacteria": [
+    [
+     "Francisella",
+     3
+    ],
+    [
+     "Escherichia",
+     2
+    ],
+    [
+     "Haemophilus",
+     2
+    ],
+    [
+     "Aquifex",
+     1
+    ],
+    [
+     "Glaesserella",
+     1
+    ]
+   ],
+   "other_genes": [
+    "Y740_AQUAE",
+    "CUTC_GLAP5",
+    "ARAJ_ECOLI",
+    "DMLR_ECOLI",
+    "TRXB_VIBCH",
+    "DTPB_PHOLU",
+    "RLMB_SALTY",
+    "MPL_HAEIN",
+    "PYRE_PHOPR",
+    "LPXH_HAEIG",
+    "RL20_FRAP2",
+    "RL35_FRATT"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ARATH|NTRC|O22229",
+     "regulators": "NTRC",
+     "start": 7558,
+     "end": 8499,
+     "identity": 0.4508,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 276.0,
+     "microbe_bits": 447.0,
+     "animal_bits": 429.0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|ARATH|Q39242"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01001975.1",
+   "length": 24222,
+   "gc": 0.329,
+   "genome_gc": 0.3738,
+   "orf_share": 0.937,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "microbe": 21
+   },
+   "stretch_kinds": {
+    "sea_slug": 3,
+    "animal": 0,
+    "foreign": 18,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 41.2,
+   "nearest_bacteria": [
+    [
+     "Francisella",
+     5
+    ],
+    [
+     "Bacillus",
+     2
+    ],
+    [
+     "Pseudomonas",
+     2
+    ],
+    [
+     "Escherichia",
+     1
+    ],
+    [
+     "Vibrio",
+     1
+    ]
+   ],
+   "other_genes": [
+    "GCVA_ECO57",
+    "TGT_FRAP2",
+    "PLSY_FRATN",
+    "METN_FRATH",
+    "METI_VIBCH",
+    "METQ_SALTI",
+    "TYRPA_HAEIN",
+    "ISPF_FRATN",
+    "MURE_BACAN",
+    "CINA_CLOBM",
+    "YQIK_BACSU",
+    "PILC_PSEAE"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "PHATC|ISPF|B7FYU2",
+     "regulators": "ISPF",
+     "start": 8196,
+     "end": 8651,
+     "identity": 0.3935,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 256.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01002000.1",
+   "length": 22415,
+   "gc": 0.313,
+   "genome_gc": 0.3738,
+   "orf_share": 0.929,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "microbe": 15
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 15,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 38.6,
+   "nearest_bacteria": [
+    [
+     "Burkholderia",
+     2
+    ],
+    [
+     "Francisella",
+     2
+    ],
+    [
+     "Haemophilus",
+     2
+    ],
+    [
+     "Escherichia",
+     2
+    ],
+    [
+     "Vibrio",
+     1
+    ]
+   ],
+   "other_genes": [
+    "HCP_BURVG",
+    "FMT_FRAP2",
+    "GSHB_VIBPA",
+    "GSA_FRATN",
+    "ARNT_YERE8",
+    "ADC_RALN1",
+    "NADE_MANSM",
+    "TTGC_PSEPT",
+    "EMRA_HAEIN",
+    "EMRB_ECO57",
+    "CEPS_BURCJ",
+    "LCFA_ECOL6"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ECTSI|GSA1|D7G5Q0",
+     "regulators": "GSA1",
+     "start": 5343,
+     "end": 6605,
+     "identity": 0.5511,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 682.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01002041.1",
+   "length": 19135,
+   "gc": 0.307,
+   "genome_gc": 0.3738,
+   "orf_share": 0.884,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "microbe": 13,
+    "slug_only": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 1,
+    "animal": 0,
+    "foreign": 13,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 47.4,
+   "nearest_bacteria": [
+    [
+     "Francisella",
+     3
+    ],
+    [
+     "Escherichia",
+     2
+    ],
+    [
+     "Haemophilus",
+     2
+    ],
+    [
+     "Hydrogenovibrio",
+     1
+    ],
+    [
+     "Mesorhizobium",
+     1
+    ]
+   ],
+   "other_genes": [
+    "YQAB_ECOLI",
+    "HSLV_HYDCU",
+    "HSLU_FRAP2",
+    "ISPB_HAEIN",
+    "DCHS_RHILO",
+    "DARP_HAEIN",
+    "GLYA_FRATT",
+    "THIO_PSEAE",
+    "HSLR_ECO57",
+    "SYY_FRATT"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "CHOCR|TRXz|R7QJF9",
+     "regulators": "TRXz,TRXx,TRXy1",
+     "start": 12509,
+     "end": 12793,
+     "identity": 0.3958,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 93.6,
+     "microbe_bits": 95.5,
+     "animal_bits": 0,
+     "sea_slug_bits": 95.1,
+     "best_alga_hit": "ALG|BRYSP|GMH32398.1"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01002134.1",
+   "length": 14746,
+   "gc": 0.321,
+   "genome_gc": 0.3738,
+   "orf_share": 0.838,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "microbe": 12,
+    "animal": 2,
+    "alga": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 2,
+    "foreign": 13,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 48.3,
+   "nearest_bacteria": [
+    [
+     "Francisella",
+     3
+    ],
+    [
+     "Haemophilus",
+     2
+    ],
+    [
+     "Shigella",
+     1
+    ],
+    [
+     "Bacillus",
+     1
+    ],
+    [
+     "Vibrio",
+     1
+    ]
+   ],
+   "other_genes": [
+    "UHPT_SHIFL",
+    "YWHC_BACSU",
+    "UBIG_VIBA3",
+    "Y076_RICFE",
+    "Y1082_HAEIN",
+    "MINE_FRATT",
+    "MIND_NEIMB",
+    "MINC_ALISL",
+    "RL33_FRAP2",
+    "RL28_FRAP2",
+    "RECG_HAEIN",
+    "A0A8S1J187"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ECTSI|MIND1|D7FU34",
+     "regulators": "MIND1",
+     "start": 9351,
+     "end": 10175,
+     "identity": 0.5254,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 280.0,
+     "microbe_bits": 328.0,
+     "animal_bits": 56.6,
+     "sea_slug_bits": 275.0,
+     "best_alga_hit": "ALG|ECTSI|D7FU34"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01002135.1",
+   "length": 14674,
+   "gc": 0.332,
+   "genome_gc": 0.3738,
+   "orf_share": 0.85,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "microbe": 8,
+    "slug_only": 1,
+    "alga": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 1,
+    "animal": 0,
+    "foreign": 9,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 62.7,
+   "nearest_bacteria": [
+    [
+     "Sinorhizobium",
+     1
+    ],
+    [
+     "Bacillus",
+     1
+    ],
+    [
+     "Idiomarina",
+     1
+    ],
+    [
+     "Colwellia",
+     1
+    ],
+    [
+     "Francisella",
+     1
+    ]
+   ],
+   "other_genes": [
+    "Y4CH_SINFN",
+    "YBBK_BACSU",
+    "SYK_IDILO",
+    "RF2_COLP3",
+    "LPXC_FRATT"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "OSTTA|FTSZ2-1|A0A090M7J3",
+     "regulators": "FTSZ2-1,FTSZ2-2",
+     "start": 9752,
+     "end": 10888,
+     "identity": 0.4818,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 312.0,
+     "microbe_bits": 592.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|OSTTA|A0A090M7J3"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-chlorotica",
+   "sequence": "RQTK01002365.1",
+   "length": 7794,
+   "gc": 0.307,
+   "genome_gc": 0.3738,
+   "orf_share": 0.863,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.28,
+    "p90": 0.427
+   },
+   "stretches": {
+    "microbe": 5
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 5,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 34.7,
+   "nearest_bacteria": [
+    [
+     "Escherichia",
+     1
+    ],
+    [
+     "Nitrosococcus",
+     1
+    ],
+    [
+     "Vibrio",
+     1
+    ],
+    [
+     "Francisella",
+     1
+    ],
+    [
+     "Bacillus",
+     1
+    ]
+   ],
+   "other_genes": [
+    "MURF_ECOLI",
+    "GPH_NITOC",
+    "MURE_VIBVU",
+    "SYGA_FRATN",
+    "AROE_BACC3"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "MICPC|MurE|C1MWV5",
+     "regulators": "MurE",
+     "start": 3441,
+     "end": 4832,
+     "identity": 0.3354,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 301.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-crispata-tampa",
+   "sequence": "CFHGKC010005657.1",
+   "length": 1418,
+   "gc": 0.243,
+   "genome_gc": 0.3609,
+   "orf_share": 0.884,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.376
+   },
+   "stretches": {
+    "microbe": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 1,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 44.6,
+   "nearest_bacteria": [
+    [
+     "Salmonella",
+     1
+    ]
+   ],
+   "other_genes": [
+    "ZRAR_SALTY"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "VOLCA|TOC1|D8UJ68",
+     "regulators": "TOC1,PRR3,PRR5,PRR7,PRR9",
+     "start": 889,
+     "end": 1239,
+     "identity": 0.2742,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 73.6,
+     "microbe_bits": 90.1,
+     "animal_bits": 65.9,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|CYAME|Q85G18"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-crispata-tampa",
+   "sequence": "CFHGKC010006453.1",
+   "length": 1218,
+   "gc": 0.352,
+   "genome_gc": 0.3609,
+   "orf_share": 0.719,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.376
+   },
+   "stretches": {
+    "microbe": 2
+   },
+   "stretch_kinds": {
+    "sea_slug": 1,
+    "animal": 0,
+    "foreign": 1,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 65.0,
+   "nearest_bacteria": [
+    [
+     "Helicobacter",
+     1
+    ]
+   ],
+   "other_genes": [
+    "AHPC_HELPY"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "CHLVA|cpFtsY|E1ZPR0",
+     "regulators": "cpFtsY",
+     "start": 2,
+     "end": 337,
+     "identity": 0.5045,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 115.0,
+     "microbe_bits": 133.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 152.0,
+     "best_alga_hit": "ALG|CHLVA|E1ZPR0"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-crispata-tampa",
+   "sequence": "CFHGKC010007644.1",
+   "length": 9895,
+   "gc": 0.263,
+   "genome_gc": 0.3609,
+   "orf_share": 0.895,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.376
+   },
+   "stretches": {
+    "animal": 1,
+    "microbe": 4
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 1,
+    "foreign": 4,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 44.1,
+   "nearest_bacteria": [
+    [
+     "Acetivibrio",
+     2
+    ],
+    [
+     "Sulfurihydrogenibium",
+     1
+    ],
+    [
+     "Escherichia",
+     1
+    ]
+   ],
+   "other_genes": [
+    "SYE_SULSY",
+    "GUNC_ACETH",
+    "LFTR_ACET2",
+    "CLPA_ECO57"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "CYAME|CLPC1|Q85G08",
+     "regulators": "CLPC1",
+     "start": 9334,
+     "end": 9894,
+     "identity": 0.3586,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 128.0,
+     "microbe_bits": 152.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 126.0,
+     "best_alga_hit": "ALG|CHOCR|M5DDC7"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-crispata-tampa",
+   "sequence": "CFHGKC010008371.1",
+   "length": 4958,
+   "gc": 0.239,
+   "genome_gc": 0.3609,
+   "orf_share": 0.809,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.376
+   },
+   "stretches": {
+    "microbe": 1,
+    "alga": 2
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 3,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 44.7,
+   "nearest_bacteria": [
+    [
+     "Clostridium",
+     1
+    ]
+   ],
+   "other_genes": [
+    "DXR_CLOBM",
+    "P73389",
+    "P73390"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "OSTQU|DXR|A0A8S1IMH2",
+     "regulators": "DXR",
+     "start": 92,
+     "end": 1258,
+     "identity": 0.4211,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 301.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-crispata-tampa",
+   "sequence": "CFHGKC010008415.1",
+   "length": 4851,
+   "gc": 0.296,
+   "genome_gc": 0.3609,
+   "orf_share": 0.937,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.376
+   },
+   "stretches": {
+    "microbe": 3,
+    "alga": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 4,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 47.1,
+   "nearest_bacteria": [
+    [
+     "Prosthecochloris",
+     1
+    ],
+    [
+     "Myxococcus",
+     1
+    ],
+    [
+     "Aquifex",
+     1
+    ]
+   ],
+   "other_genes": [
+    "PANB_PROA2",
+    "PGOX_MYXXA",
+    "P54225",
+    "HEMN_AQUAE"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "PHATC|FC1/GUN6|B7FXE4",
+     "regulators": "FC1/GUN6,FC2",
+     "start": 2875,
+     "end": 3831,
+     "identity": 0.3842,
+     "exons": 1,
+     "code": "A",
+     "alga_bits": 254.0,
+     "microbe_bits": 254.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|ARATH|P42043"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-crispata-tampa",
+   "sequence": "CFHGKC010008687.1",
+   "length": 4182,
+   "gc": 0.248,
+   "genome_gc": 0.3609,
+   "orf_share": 0.721,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.376
+   },
+   "stretches": {
+    "microbe": 3
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 3,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 49.9,
+   "nearest_bacteria": [
+    [
+     "Xylella",
+     1
+    ],
+    [
+     "Treponema",
+     1
+    ],
+    [
+     "Alkaliphilus",
+     1
+    ]
+   ],
+   "other_genes": [
+    "PARB2_XYLFA",
+    "MURA_TREDE",
+    "GSA_ALKMQ"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ARATH|GSA1|P42799",
+     "regulators": "GSA1",
+     "start": 2919,
+     "end": 4178,
+     "identity": 0.4857,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 462.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-crispata-tampa",
+   "sequence": "CFHGKC010010019.1",
+   "length": 39127,
+   "gc": 0.474,
+   "genome_gc": 0.3609,
+   "orf_share": 0.931,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.376
+   },
+   "stretches": {
+    "animal": 1,
+    "microbe": 4,
+    "alga": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 1,
+    "foreign": 5,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 55.6,
+   "nearest_bacteria": [
+    [
+     "Salmonella",
+     1
+    ],
+    [
+     "Shigella",
+     1
+    ],
+    [
+     "Paracoccus",
+     1
+    ],
+    [
+     "Bacillus",
+     1
+    ]
+   ],
+   "other_genes": [
+    "DPO1_SALTY",
+    "O24600",
+    "NRDH_SHIFL",
+    "NRDI_PARDP",
+    "YOMI_BACSU"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "CHOCR|RPOTm|R7QN31",
+     "regulators": "RPOTm,RPOTmp,RPOTp",
+     "start": 18072,
+     "end": 19868,
+     "identity": 0.3102,
+     "exons": 1,
+     "code": "A",
+     "alga_bits": 287.0,
+     "microbe_bits": 242.0,
+     "animal_bits": 253.0,
+     "sea_slug_bits": 218.0,
+     "best_alga_hit": "ALG|CHOCR|R7QN31"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-crispata-tampa",
+   "sequence": "CFHGKC010011986.1",
+   "length": 1647,
+   "gc": 0.27,
+   "genome_gc": 0.3609,
+   "orf_share": 0.999,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.376
+   },
+   "stretches": {
+    "microbe": 2
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 2,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 45.5,
+   "nearest_bacteria": [
+    [
+     "Caldicellulosiruptor",
+     1
+    ],
+    [
+     "Clostridium",
+     1
+    ]
+   ],
+   "other_genes": [
+    "RSMH_CALS8",
+    "MURE_CLOTE"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "MICPC|MurE|C1MWV5",
+     "regulators": "MurE",
+     "start": 1224,
+     "end": 1646,
+     "identity": 0.3471,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 85.1,
+     "microbe_bits": 114.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|MICPC|C1MWV5"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-crispata-tampa",
+   "sequence": "CFHGKC010012025.1",
+   "length": 1633,
+   "gc": 0.342,
+   "genome_gc": 0.3609,
+   "orf_share": 0.999,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.376
+   },
+   "stretches": {
+    "microbe": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 1,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 49.1,
+   "nearest_bacteria": [
+    [
+     "Brachyspira",
+     1
+    ]
+   ],
+   "other_genes": [
+    "HLYB_BRAHO"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "CYAME|CLPC1|Q85G08",
+     "regulators": "CLPC1",
+     "start": 3,
+     "end": 656,
+     "identity": 0.4541,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 186.0,
+     "microbe_bits": 204.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 133.0,
+     "best_alga_hit": "ALG|CYAME|Q85G08"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-leucolegnote",
+   "sequence": "JBQKML010000169.1",
+   "length": 747000,
+   "gc": 0.457,
+   "genome_gc": 0.357,
+   "orf_share": 0.905,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.121,
+    "p90": 0.317
+   },
+   "stretches": {
+    "microbe": 373,
+    "alga": 52,
+    "slug_only": 5,
+    "animal": 29
+   },
+   "stretch_kinds": {
+    "sea_slug": 18,
+    "animal": 28,
+    "foreign": 413,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 42.7,
+   "nearest_bacteria": [
+    [
+     "Bacillus",
+     26
+    ],
+    [
+     "Escherichia",
+     20
+    ],
+    [
+     "Pseudomonas",
+     16
+    ],
+    [
+     "Haemophilus",
+     15
+    ],
+    [
+     "Geobacter",
+     13
+    ]
+   ],
+   "other_genes": [
+    "NAGZ_NITEC",
+    "GPH_AQUAE",
+    "GMH44650.1",
+    "DHSU_ALLVD",
+    "USHA_YERE8",
+    "SOXA_CHLTE",
+    "C555_CHLTE",
+    "A0A8S1JBI9",
+    "DPO3_THEP1",
+    "Y2612_VIBPA",
+    "SERA_METJA",
+    "IOLB_GEOKA"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "CHOCR|cpFtsY|R7Q9Y6",
+     "regulators": "cpFtsY",
+     "start": 69600,
+     "end": 70580,
+     "identity": 0.4536,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 229.0,
+     "microbe_bits": 245.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 219.0,
+     "best_alga_hit": "ALG|CHOCR|R7Q9Y6"
+    },
+    {
+     "query": "CHOCR|RNE|M5DDC5",
+     "regulators": "RNE",
+     "start": 130170,
+     "end": 131582,
+     "identity": 0.3165,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 234.0,
+     "microbe_bits": 363.0,
+     "animal_bits": 158.0,
+     "sea_slug_bits": 161.0,
+     "best_alga_hit": "ALG|CHOCR|M5DDC5"
+    },
+    {
+     "query": "CHOCR|CLPC1|M5DDC7",
+     "regulators": "CLPC1",
+     "start": 163448,
+     "end": 167648,
+     "identity": 0.3877,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 530.0,
+     "microbe_bits": 692.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 642.0,
+     "best_alga_hit": "ALG|CHOCR|M5DDC7"
+    },
+    {
+     "query": "OSTTA|CLPC1|A0A096PBH0",
+     "regulators": "CLPC1",
+     "start": 168309,
+     "end": 256641,
+     "identity": 0.4201,
+     "exons": 2,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 587.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    },
+    {
+     "query": "BRYSP|CRY1|GMH43542.1",
+     "regulators": "CRY1,CRY2",
+     "start": 454609,
+     "end": 456030,
+     "identity": 0.4033,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 350.0,
+     "microbe_bits": 434.0,
+     "animal_bits": 277.0,
+     "sea_slug_bits": 213.0,
+     "best_alga_hit": "ALG|BRYSP|GMH43542.1"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-leucolegnote",
+   "sequence": "JBQKML010000180.1",
+   "length": 1085000,
+   "gc": 0.462,
+   "genome_gc": 0.357,
+   "orf_share": 0.887,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.121,
+    "p90": 0.317
+   },
+   "stretches": {
+    "microbe": 465,
+    "alga": 68,
+    "animal": 34
+   },
+   "stretch_kinds": {
+    "sea_slug": 14,
+    "animal": 30,
+    "foreign": 523,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 40.1,
+   "nearest_bacteria": [
+    [
+     "Bacillus",
+     42
+    ],
+    [
+     "Escherichia",
+     39
+    ],
+    [
+     "Pseudomonas",
+     32
+    ],
+    [
+     "Haemophilus",
+     22
+    ],
+    [
+     "Treponema",
+     11
+    ]
+   ],
+   "other_genes": [
+    "CLPB_TREDE",
+    "RIR1_CHLTR",
+    "RIR2_CHLMU",
+    "ILVA_BURM1",
+    "MRDA_HAEIN",
+    "YFJP_BACSU",
+    "HEMH_PARUW",
+    "LON1_SYNC1",
+    "FLGI_GEOSL",
+    "HSPC2_RICFE",
+    "A0A8S1IX94",
+    "ISPH_RALN1"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ARATH|CLPC1|Q9FI56",
+     "regulators": "CLPC1",
+     "start": 2,
+     "end": 913,
+     "identity": 0.3633,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 201.0,
+     "microbe_bits": 224.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|OSTQU|A0A8S1JFG2"
+    },
+    {
+     "query": "BRYSP|cpSRP54|GMH32709.1",
+     "regulators": "cpSRP54",
+     "start": 117041,
+     "end": 168798,
+     "identity": 0.4304,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 382.0,
+     "microbe_bits": 424.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 365.0,
+     "best_alga_hit": "ALG|ARATH|P37107"
+    },
+    {
+     "query": "CHOCR|SECA1|M5DC18",
+     "regulators": "SECA1",
+     "start": 226386,
+     "end": 229149,
+     "identity": 0.3955,
+     "exons": 2,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 801.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    },
+    {
+     "query": "ECTSI|TIC62|D7G4L2",
+     "regulators": "TIC62",
+     "start": 548098,
+     "end": 548478,
+     "identity": 0.4646,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 164.0,
+     "microbe_bits": 165.0,
+     "animal_bits": 158.0,
+     "sea_slug_bits": 146.0,
+     "best_alga_hit": "ALG|CYAME|M1UV91"
+    },
+    {
+     "query": "CYAME|FTSZ1|A0A125YR75",
+     "regulators": "FTSZ1,FTSZ2-1,FTSZ2-2",
+     "start": 724650,
+     "end": 726005,
+     "identity": 0.4393,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 263.0,
+     "microbe_bits": 274.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 251.0,
+     "best_alga_hit": "ALG|CYAME|A0A125YR75"
+    },
+    {
+     "query": "BRYSP|TRXx|GMH32917.1",
+     "regulators": "TRXx",
+     "start": 733720,
+     "end": 733944,
+     "identity": 0.3816,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 82.8,
+     "microbe_bits": 92.4,
+     "animal_bits": 79.3,
+     "sea_slug_bits": 85.9,
+     "best_alga_hit": "ALG|MICPC|C1MXE9"
+    },
+    {
+     "query": "MICPC|SIG1|C1MUC7",
+     "regulators": "SIG1,SIG2,SIG3,SIG4,SIG5,SIG6",
+     "start": 752096,
+     "end": 754690,
+     "identity": 0.4136,
+     "exons": 3,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 393.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    },
+    {
+     "query": "BRYSP|DXS|GMH36910.1",
+     "regulators": "DXS",
+     "start": 763643,
+     "end": 765538,
+     "identity": 0.4397,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 549.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    },
+    {
+     "query": "ECTSI|DXR|D7FLF2",
+     "regulators": "DXR",
+     "start": 941520,
+     "end": 943505,
+     "identity": 0.3828,
+     "exons": 2,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 300.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    },
+    {
+     "query": "MICPC|MIND1|C1MMW2",
+     "regulators": "MIND1",
+     "start": 985346,
+     "end": 986089,
+     "identity": 0.2903,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 94.7,
+     "microbe_bits": 169.0,
+     "animal_bits": 87.8,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|MICPC|C1MMW2"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01000196.1",
+   "length": 24962,
+   "gc": 0.37,
+   "genome_gc": 0.3646,
+   "orf_share": 0.909,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 15,
+    "own_only": 1,
+    "animal": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 1,
+    "foreign": 15,
+    "unmatched": 1
+   },
+   "bacterial_identity_median": 56.7,
+   "nearest_bacteria": [
+    [
+     "Bacteroides",
+     2
+    ],
+    [
+     "Phocaeicola",
+     1
+    ],
+    [
+     "Photorhabdus",
+     1
+    ],
+    [
+     "Streptococcus",
+     1
+    ],
+    [
+     "Salmonella",
+     1
+    ]
+   ],
+   "other_genes": [
+    "HIS1_PHOV8",
+    "HIS8_PHOLL",
+    "HIS7_BACTN",
+    "HIS5_BACFR",
+    "MSMR_STRMU",
+    "DPO1_SALTY",
+    "SGLT_VIBPH"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "CYAME|FC1/GUN6|M1VBI3",
+     "regulators": "FC1/GUN6,FC2",
+     "start": 16650,
+     "end": 17627,
+     "identity": 0.4137,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 265.0,
+     "microbe_bits": 311.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|CYAME|M1VBI3"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01000970.1",
+   "length": 70361,
+   "gc": 0.37,
+   "genome_gc": 0.3646,
+   "orf_share": 0.208,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "own_only": 10,
+    "slug_only": 2,
+    "microbe": 6
+   },
+   "stretch_kinds": {
+    "sea_slug": 2,
+    "animal": 0,
+    "foreign": 6,
+    "unmatched": 10
+   },
+   "bacterial_identity_median": 36.8,
+   "nearest_bacteria": [
+    [
+     "Escherichia",
+     1
+    ]
+   ],
+   "other_genes": [
+    "CIRA_ECOLI"
+   ],
+   "verdict": "foreign stretch at the end of a slug sequence",
+   "foreign_stretch": {
+    "start": 55000,
+    "end": 70361,
+    "rest_median_orf_share": 0.119
+   },
+   "loci": [
+    {
+     "query": "ARATH|FSD2|Q9LU64",
+     "regulators": "FSD2",
+     "start": 57855,
+     "end": 58412,
+     "identity": 0.4904,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 253.0,
+     "microbe_bits": 308.0,
+     "animal_bits": 301.0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|ECTSI|D8LI17"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01001487.1",
+   "length": 36389,
+   "gc": 0.386,
+   "genome_gc": 0.3646,
+   "orf_share": 0.925,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 20,
+    "alga": 1,
+    "animal": 3,
+    "own_only": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 3,
+    "foreign": 21,
+    "unmatched": 1
+   },
+   "bacterial_identity_median": 37.6,
+   "nearest_bacteria": [
+    [
+     "Escherichia",
+     2
+    ],
+    [
+     "Streptomyces",
+     1
+    ],
+    [
+     "Staphylococcus",
+     1
+    ],
+    [
+     "Helicobacter",
+     1
+    ],
+    [
+     "Thermus",
+     1
+    ]
+   ],
+   "other_genes": [
+    "AVRB_STRVR",
+    "D7G4R4",
+    "MENA_ECOLI",
+    "Y2086_STAEQ",
+    "PSS_HELPJ",
+    "NDX1_THETH",
+    "PYRE_PORGI",
+    "LOLD_BACTN",
+    "GNTX_ECO57",
+    "MUTS_CHRFK"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "CHOCR|SECA1|M5DC18",
+     "regulators": "SECA1",
+     "start": 5039,
+     "end": 8170,
+     "identity": 0.4083,
+     "exons": 4,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 1131.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01002478.1",
+   "length": 3539,
+   "gc": 0.481,
+   "genome_gc": 0.3646,
+   "orf_share": 0.839,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "own_only": 1,
+    "microbe": 2,
+    "animal": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 1,
+    "foreign": 2,
+    "unmatched": 1
+   },
+   "bacterial_identity_median": null,
+   "nearest_bacteria": [],
+   "other_genes": [],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ECTSI|MIND1|D7FU34",
+     "regulators": "MIND1",
+     "start": 2108,
+     "end": 2923,
+     "identity": 0.5887,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 319.0,
+     "microbe_bits": 392.0,
+     "animal_bits": 52.4,
+     "sea_slug_bits": 50.1,
+     "best_alga_hit": "ALG|ECTSI|D7FU34"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01003247.1",
+   "length": 96942,
+   "gc": 0.294,
+   "genome_gc": 0.3646,
+   "orf_share": 0.885,
+   "genetic_code": "mycoplasma (TGA = Trp)",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 41,
+    "own_only": 3,
+    "slug_only": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 1,
+    "animal": 0,
+    "foreign": 41,
+    "unmatched": 3
+   },
+   "bacterial_identity_median": 51.2,
+   "nearest_bacteria": [
+    [
+     "Mycoplasma",
+     11
+    ],
+    [
+     "Mycoplasmopsis",
+     10
+    ],
+    [
+     "Bacillus",
+     6
+    ],
+    [
+     "Mycoplasmoides",
+     4
+    ],
+    [
+     "Methanocaldococcus",
+     1
+    ]
+   ],
+   "other_genes": [
+    "Y441_METJA",
+    "SYI_MYCAP",
+    "RS12_MYCM1",
+    "RS7_MYCM1",
+    "EFG_MYCM1",
+    "RECA_MYCM1",
+    "MSRA_MYCPN",
+    "YMDB_BACSU",
+    "PEPF_MYCPU",
+    "RPOB_MYCM1",
+    "RPOC_MYCM1",
+    "TPIS_LACDL"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "MICPC|SIG1|C1MUC7",
+     "regulators": "SIG1,SIG2,SIG3,SIG4,SIG5,SIG6",
+     "start": 76182,
+     "end": 76964,
+     "identity": 0.432,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 205.0,
+     "microbe_bits": 229.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "CYA|SYNY3|P74565"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01004028.1",
+   "length": 171461,
+   "gc": 0.376,
+   "genome_gc": 0.3646,
+   "orf_share": 0.93,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "own_only": 10,
+    "microbe": 80,
+    "animal": 13,
+    "alga": 3
+   },
+   "stretch_kinds": {
+    "sea_slug": 1,
+    "animal": 13,
+    "foreign": 82,
+    "unmatched": 10
+   },
+   "bacterial_identity_median": 36.9,
+   "nearest_bacteria": [
+    [
+     "Escherichia",
+     4
+    ],
+    [
+     "Bacillus",
+     4
+    ],
+    [
+     "Haemophilus",
+     3
+    ],
+    [
+     "Christiangramia",
+     3
+    ],
+    [
+     "Bacteroides",
+     2
+    ]
+   ],
+   "other_genes": [
+    "T1S1_ECOLX",
+    "MTEC_ENTCL",
+    "T1SI_HAEIN",
+    "WBDA2_ECOLX",
+    "COPA_LEGPH",
+    "RECO_CHRFK",
+    "TRPC_BACTN",
+    "GLDH_CHRFK",
+    "SCO22_RICBR",
+    "Y179_ALKPO",
+    "P74344",
+    "THIH_ECOLI"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "MICPC|MurE|C1MWV5",
+     "regulators": "MurE",
+     "start": 158172,
+     "end": 159572,
+     "identity": 0.3667,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 265.0,
+     "microbe_bits": 471.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|MICPC|C1MWV5"
+    },
+    {
+     "query": "OSTQU|FTSZ1|A0A8S1J9W0",
+     "regulators": "FTSZ1,FTSZ2-1,FTSZ2-2",
+     "start": 167847,
+     "end": 168932,
+     "identity": 0.4652,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 265.0,
+     "microbe_bits": 268.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 240.0,
+     "best_alga_hit": "ALG|OSTQU|A0A8S1J9W0"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01004494.1",
+   "length": 117125,
+   "gc": 0.381,
+   "genome_gc": 0.3646,
+   "orf_share": 0.928,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 85,
+    "animal": 6,
+    "own_only": 5,
+    "alga": 6
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 6,
+    "foreign": 91,
+    "unmatched": 5
+   },
+   "bacterial_identity_median": 52.8,
+   "nearest_bacteria": [
+    [
+     "Flavobacterium",
+     9
+    ],
+    [
+     "Christiangramia",
+     9
+    ],
+    [
+     "Chloroherpeton",
+     3
+    ],
+    [
+     "Parabacteroides",
+     2
+    ],
+    [
+     "Bacteroides",
+     2
+    ]
+   ],
+   "other_genes": [
+    "SECY_PSEAE",
+    "RL15_FLAJ1",
+    "RL30_PARD8",
+    "RL18_CLOK5",
+    "RL6_CHRFK",
+    "RS8_CHRFK",
+    "RS14_CHRFK",
+    "RL24_CHRFK",
+    "RS171_BACTN",
+    "RL29_FLAPJ",
+    "RL22_CHRFK",
+    "RS19_FLAJ1"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "BRYSP|SCY1|GMH33076.1",
+     "regulators": "SCY1",
+     "start": 10,
+     "end": 849,
+     "identity": 0.2954,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 181.0,
+     "microbe_bits": 192.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "CYA|SYNY3|P77964"
+    },
+    {
+     "query": "VOLCA|NTRC|D8TQ40",
+     "regulators": "NTRC",
+     "start": 105970,
+     "end": 106893,
+     "identity": 0.5016,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 292.0,
+     "microbe_bits": 308.0,
+     "animal_bits": 299.0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|VOLCA|D8TQ40"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01004542.1",
+   "length": 199701,
+   "gc": 0.366,
+   "genome_gc": 0.3646,
+   "orf_share": 0.887,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "own_only": 20,
+    "microbe": 69,
+    "alga": 11,
+    "animal": 12,
+    "slug_only": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 1,
+    "animal": 12,
+    "foreign": 80,
+    "unmatched": 20
+   },
+   "bacterial_identity_median": 38.1,
+   "nearest_bacteria": [
+    [
+     "Christiangramia",
+     6
+    ],
+    [
+     "Bacillus",
+     5
+    ],
+    [
+     "Haemophilus",
+     4
+    ],
+    [
+     "Flavobacterium",
+     2
+    ],
+    [
+     "Bacteroides",
+     2
+    ]
+   ],
+   "other_genes": [
+    "RL20_CHRFK",
+    "RL35_CHRFK",
+    "IF3_PARD8",
+    "PYRF_FLAJ1",
+    "PRIA_BACSU",
+    "MURQ_CHRFK",
+    "TRMB_CHRFK",
+    "YHFA_SHIFL",
+    "D8LP57",
+    "RLMB_NEIMB",
+    "Q9LT68",
+    "FOLCP_HALVD"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ARATH|CLPC1|Q9FI56",
+     "regulators": "CLPC1",
+     "start": 129469,
+     "end": 132057,
+     "identity": 0.4688,
+     "exons": 2,
+     "code": "B",
+     "alga_bits": 798.0,
+     "microbe_bits": 971.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|ARATH|Q8VYJ7"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01004631.1",
+   "length": 167860,
+   "gc": 0.363,
+   "genome_gc": 0.3646,
+   "orf_share": 0.905,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 68,
+    "own_only": 17,
+    "animal": 10,
+    "alga": 7
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 10,
+    "foreign": 75,
+    "unmatched": 17
+   },
+   "bacterial_identity_median": 37.5,
+   "nearest_bacteria": [
+    [
+     "Haemophilus",
+     5
+    ],
+    [
+     "Bacillus",
+     5
+    ],
+    [
+     "Bacteroides",
+     3
+    ],
+    [
+     "Flavobacterium",
+     3
+    ],
+    [
+     "Christiangramia",
+     3
+    ]
+   ],
+   "other_genes": [
+    "NDPA_SALPA",
+    "SUSD_BACO1",
+    "GALSF_BACTN",
+    "PLH3_FORAG",
+    "Q8GW72",
+    "TNR1_ECOLI",
+    "YCB9_SINSX",
+    "ETFA_THETC",
+    "Y4TK_SINFN",
+    "RSGA_FLAPJ",
+    "MURI_HERA2",
+    "TSAB_HAEIN"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "BRYSP|TRXm1|GMH32398.1",
+     "regulators": "TRXm1,TRXm2",
+     "start": 162861,
+     "end": 163157,
+     "identity": 0.4796,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 125.0,
+     "microbe_bits": 131.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 104.0,
+     "best_alga_hit": "ALG|MICPC|C1MKR0"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01004643.1",
+   "length": 52790,
+   "gc": 0.393,
+   "genome_gc": 0.3646,
+   "orf_share": 0.957,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 24,
+    "own_only": 2,
+    "alga": 2,
+    "animal": 4
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 4,
+    "foreign": 26,
+    "unmatched": 2
+   },
+   "bacterial_identity_median": 46.3,
+   "nearest_bacteria": [
+    [
+     "Christiangramia",
+     3
+    ],
+    [
+     "Porphyromonas",
+     2
+    ],
+    [
+     "Bacillus",
+     2
+    ],
+    [
+     "Haemophilus",
+     2
+    ],
+    [
+     "Phocaeicola",
+     1
+    ]
+   ],
+   "other_genes": [
+    "ARLY_PHOV8",
+    "BAMG_PORG3",
+    "COAX_CHRFK",
+    "DMD_SACS2",
+    "DYR_BACSU",
+    "FABD_BACSU",
+    "PERM_HAEIN",
+    "P72667",
+    "TSAD_CHRFK",
+    "Y288_THEMA",
+    "KGUA_PORGI",
+    "LPTB_HAEIN"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ECTSI|GSA1|D7G5Q0",
+     "regulators": "GSA1",
+     "start": 50773,
+     "end": 52065,
+     "identity": 0.4767,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 595.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01004867.1",
+   "length": 8580,
+   "gc": 0.497,
+   "genome_gc": 0.3646,
+   "orf_share": 0.798,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 8
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 8,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 50.9,
+   "nearest_bacteria": [
+    [
+     "Pseudomonas",
+     2
+    ],
+    [
+     "Aromatoleum",
+     1
+    ]
+   ],
+   "other_genes": [
+    "LFTR_AROAE",
+    "IF1_PSEU2",
+    "CLPS_PSEFS"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "CYAME|CLPC1|Q85G08",
+     "regulators": "CLPC1",
+     "start": 2856,
+     "end": 5050,
+     "identity": 0.4166,
+     "exons": 2,
+     "code": "B",
+     "alga_bits": 526.0,
+     "microbe_bits": 780.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|CYAME|Q85G08"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01005147.1",
+   "length": 3031,
+   "gc": 0.346,
+   "genome_gc": 0.3646,
+   "orf_share": 0.946,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 3
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 3,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 66.9,
+   "nearest_bacteria": [
+    [
+     "Desulfosudis",
+     1
+    ],
+    [
+     "Flavobacterium",
+     1
+    ],
+    [
+     "Capnocytophaga",
+     1
+    ]
+   ],
+   "other_genes": [
+    "SERC_DESOH",
+    "COAD_FLAPJ",
+    "TAML_CAPCC"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "BRYSP|OEP80|GMH41408.1",
+     "regulators": "OEP80",
+     "start": 755,
+     "end": 1060,
+     "identity": 0.3107,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 41.2,
+     "microbe_bits": 120.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "CYA|SYNY3|P73472"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01005358.1",
+   "length": 8666,
+   "gc": 0.48,
+   "genome_gc": 0.3646,
+   "orf_share": 0.834,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 2,
+    "own_only": 3,
+    "alga": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 3,
+    "unmatched": 3
+   },
+   "bacterial_identity_median": null,
+   "nearest_bacteria": [],
+   "other_genes": [],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ECTSI|HCF101|D7FMK8",
+     "regulators": "HCF101",
+     "start": 7072,
+     "end": 7716,
+     "identity": 0.3465,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 102.0,
+     "microbe_bits": 131.0,
+     "animal_bits": 69.3,
+     "sea_slug_bits": 61.2,
+     "best_alga_hit": "ALG|ECTSI|D7FMK8"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01006657.1",
+   "length": 80029,
+   "gc": 0.279,
+   "genome_gc": 0.3646,
+   "orf_share": 0.667,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 53,
+    "animal": 2
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 2,
+    "foreign": 53,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 41.1,
+   "nearest_bacteria": [
+    [
+     "Mycoplasmopsis",
+     19
+    ],
+    [
+     "Bacillus",
+     10
+    ],
+    [
+     "Mycoplasmoides",
+     5
+    ],
+    [
+     "Mycoplasma",
+     4
+    ],
+    [
+     "Staphylococcus",
+     4
+    ]
+   ],
+   "other_genes": [
+    "ASNA_CLOTE",
+    "YABB_BACSU",
+    "SYM_MYCPU",
+    "TRA2_STREE",
+    "DEOB_MYCPU",
+    "LICA_MYCCT",
+    "COAE_MYCGE",
+    "UVRB_MYCPU",
+    "UVRA_MYCPU",
+    "HPRK_MYCPU",
+    "LGT_MYCPU",
+    "TRXB_MYCPU"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "BRYSP|NTRC|GMH35286.1",
+     "regulators": "NTRC",
+     "start": 19009,
+     "end": 19995,
+     "identity": 0.3233,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 155.0,
+     "microbe_bits": 247.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|BRYSP|GMH35286.1"
+    },
+    {
+     "query": "CHLRE|SECA1|A0A2K3D3X9",
+     "regulators": "SECA1",
+     "start": 35711,
+     "end": 38098,
+     "identity": 0.3773,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 0,
+     "microbe_bits": 791.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": ""
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01007964.1",
+   "length": 498232,
+   "gc": 0.275,
+   "genome_gc": 0.3646,
+   "orf_share": 0.625,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 267,
+    "slug_only": 1,
+    "alga": 3,
+    "animal": 6,
+    "own_only": 4
+   },
+   "stretch_kinds": {
+    "sea_slug": 1,
+    "animal": 6,
+    "foreign": 270,
+    "unmatched": 4
+   },
+   "bacterial_identity_median": 43.5,
+   "nearest_bacteria": [
+    [
+     "Mycoplasmopsis",
+     59
+    ],
+    [
+     "Bacillus",
+     34
+    ],
+    [
+     "Mycoplasma",
+     33
+    ],
+    [
+     "Mycoplasmoides",
+     33
+    ],
+    [
+     "Metamycoplasma",
+     11
+    ]
+   ],
+   "other_genes": [
+    "AMID_STRR6",
+    "DPPD_LACLM",
+    "TRA2_STREE",
+    "PFKA_MYCCT",
+    "TKT_MYCGE",
+    "YWTE_BACSU",
+    "ULAF_MYCPN",
+    "ULAE_MYCPN",
+    "ULAD_MYCPN",
+    "ULAC_MYCPN",
+    "ULAB_MYCPN",
+    "ULAA_MYCPN"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "OSTQU|FTSZ1|A0A8S1J9W0",
+     "regulators": "FTSZ1,FTSZ2-1,FTSZ2-2",
+     "start": 54289,
+     "end": 56131,
+     "identity": 0.4735,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 278.0,
+     "microbe_bits": 367.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|OSTQU|A0A8S1J9W0"
+    },
+    {
+     "query": "BRYSP|cpFtsY|GMH35353.1",
+     "regulators": "cpFtsY",
+     "start": 228848,
+     "end": 229891,
+     "identity": 0.3848,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 208.0,
+     "microbe_bits": 430.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|CHOCR|R7Q9Y6"
+    },
+    {
+     "query": "CHOCR|cpSRP54|R7QHF1",
+     "regulators": "cpSRP54",
+     "start": 293750,
+     "end": 306718,
+     "identity": 0.4159,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 349.0,
+     "microbe_bits": 375.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|CHOCR|R7QHF1"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01008931.1",
+   "length": 8145,
+   "gc": 0.499,
+   "genome_gc": 0.3646,
+   "orf_share": 0.931,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "animal": 2,
+    "microbe": 5,
+    "own_only": 2
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 2,
+    "foreign": 5,
+    "unmatched": 2
+   },
+   "bacterial_identity_median": 72.1,
+   "nearest_bacteria": [
+    [
+     "Alkalilimnicola",
+     1
+    ]
+   ],
+   "other_genes": [
+    "MSRB_ALKEH"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ECTSI|TIC62|D7G4L2",
+     "regulators": "TIC62",
+     "start": 359,
+     "end": 730,
+     "identity": 0.4919,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 168.0,
+     "microbe_bits": 195.0,
+     "animal_bits": 167.0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|CYAME|M1UV91"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01010395.1",
+   "length": 68860,
+   "gc": 0.367,
+   "genome_gc": 0.3646,
+   "orf_share": 0.86,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 15,
+    "own_only": 14,
+    "alga": 2,
+    "animal": 4
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 4,
+    "foreign": 17,
+    "unmatched": 14
+   },
+   "bacterial_identity_median": 48.8,
+   "nearest_bacteria": [
+    [
+     "Flavobacterium",
+     2
+    ],
+    [
+     "Christiangramia",
+     1
+    ],
+    [
+     "Porphyromonas",
+     1
+    ],
+    [
+     "Lactococcus",
+     1
+    ],
+    [
+     "Thermodesulfovibrio",
+     1
+    ]
+   ],
+   "other_genes": [
+    "PYRB_CHRFK",
+    "RNZ_PORGI",
+    "D8UMX6",
+    "CAS2_FLAPJ",
+    "MTL21_LACLC",
+    "ALR_THEYD",
+    "ACP_FLAJ1",
+    "YBDG_SHIFL",
+    "YSNA_STRPR"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "VOLCA|CLPC1|D8U1R3",
+     "regulators": "CLPC1",
+     "start": 46201,
+     "end": 48759,
+     "identity": 0.4391,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 709.0,
+     "microbe_bits": 752.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|VOLCA|D8U1R3"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01010535.1",
+   "length": 8333,
+   "gc": 0.266,
+   "genome_gc": 0.3646,
+   "orf_share": 0.877,
+   "genetic_code": "mycoplasma (TGA = Trp)",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 4
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 4,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 47.7,
+   "nearest_bacteria": [
+    [
+     "Bacillus",
+     1
+    ],
+    [
+     "Streptococcus",
+     1
+    ],
+    [
+     "Mesomycoplasma",
+     1
+    ]
+   ],
+   "other_genes": [
+    "YRHG_BACSU",
+    "HGPRT_STRMU",
+    "GREA_MESHJ"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ARATH|CLPC1|Q9FI56",
+     "regulators": "CLPC1",
+     "start": 6979,
+     "end": 8331,
+     "identity": 0.4728,
+     "exons": 2,
+     "code": "B",
+     "alga_bits": 384.0,
+     "microbe_bits": 395.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "CYA|SYNY3|P74361"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01011691.1",
+   "length": 7570,
+   "gc": 0.401,
+   "genome_gc": 0.3646,
+   "orf_share": 0.957,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "alga": 2,
+    "microbe": 4
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 6,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 46.7,
+   "nearest_bacteria": [
+    [
+     "Christiangramia",
+     1
+    ]
+   ],
+   "other_genes": [
+    "P74252",
+    "FOLD_CHRFK"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "ARATH|cpSRP54|P37107",
+     "regulators": "cpSRP54",
+     "start": 5984,
+     "end": 7324,
+     "identity": 0.4577,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 358.0,
+     "microbe_bits": 429.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|ARATH|P37107"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01012190.1",
+   "length": 5740,
+   "gc": 0.38,
+   "genome_gc": 0.3646,
+   "orf_share": 0.888,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "microbe": 6,
+    "alga": 1
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 7,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 32.9,
+   "nearest_bacteria": [
+    [
+     "Haemophilus",
+     1
+    ],
+    [
+     "Escherichia",
+     1
+    ],
+    [
+     "Flavobacterium",
+     1
+    ]
+   ],
+   "other_genes": [
+    "ASNC_HAEIN",
+    "M1USB3",
+    "ENTC_ECO57",
+    "SERC_FLAPJ"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "PHATC|HCF101|B5Y591",
+     "regulators": "HCF101",
+     "start": 2572,
+     "end": 3642,
+     "identity": 0.3563,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 233.0,
+     "microbe_bits": 246.0,
+     "animal_bits": 217.0,
+     "sea_slug_bits": 214.0,
+     "best_alga_hit": "ALG|ARATH|O49472"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-marginata",
+   "sequence": "BMAT01014006.1",
+   "length": 12816,
+   "gc": 0.378,
+   "genome_gc": 0.3646,
+   "orf_share": 0.812,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.274
+   },
+   "stretches": {
+    "alga": 1,
+    "own_only": 2,
+    "animal": 2,
+    "microbe": 6
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 2,
+    "foreign": 7,
+    "unmatched": 2
+   },
+   "bacterial_identity_median": 70.0,
+   "nearest_bacteria": [
+    [
+     "Shewanella",
+     1
+    ],
+    [
+     "Christiangramia",
+     1
+    ],
+    [
+     "Flavobacterium",
+     1
+    ]
+   ],
+   "other_genes": [
+    "D8U9H3",
+    "PRPC_SHEON",
+    "RL33_CHRFK",
+    "RL28_FLAPJ"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "CHLVA|cpFtsY|E1ZPR0",
+     "regulators": "cpFtsY",
+     "start": 8805,
+     "end": 9722,
+     "identity": 0.4387,
+     "exons": 1,
+     "code": "B",
+     "alga_bits": 235.0,
+     "microbe_bits": 292.0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|CHLVA|E1ZPR0"
+    }
+   ]
+  }
+ ],
+ "unconfirmed": {
+  "n": 47,
+  "with_any_match": 6,
+  "significant": 3,
+  "significant_outside_sea_slugs": 0,
+  "loci": [
+   {
+    "assembly": "elysia-crispata",
+    "sequence": "OY973769.1",
+    "start": 12923205,
+    "end": 12997372,
+    "regulators": "RPOTp",
+    "identity": 0.3258,
+    "aligned": 132,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-crispata",
+    "sequence": "OY973772.1",
+    "start": 19581542,
+    "end": 19668637,
+    "regulators": "PRR7",
+    "identity": 0.2912,
+    "aligned": 172,
+    "exons": 4,
+    "best_match": {
+     "hit": "MET|MIZYE|A0A210Q4S8|KP79_PYT24209",
+     "identity": 38.1,
+     "length": 42,
+     "evalue": 0.102,
+     "bits": 36.6
+    }
+   },
+   {
+    "assembly": "elysia-crispata",
+    "sequence": "OY973775.1",
+    "start": 13842272,
+    "end": 13919994,
+    "regulators": "PAM68",
+    "identity": 0.2692,
+    "aligned": 154,
+    "exons": 4,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-crispata-purdue",
+    "sequence": "JAWDGP010000292.1",
+    "start": 49887,
+    "end": 75554,
+    "regulators": "SCY1",
+    "identity": 0.2619,
+    "aligned": 149,
+    "exons": 2,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-crispata-purdue",
+    "sequence": "JAWDGP010000342.1",
+    "start": 193314,
+    "end": 199188,
+    "regulators": "AUREO",
+    "identity": 0.2566,
+    "aligned": 221,
+    "exons": 4,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-crispata-purdue",
+    "sequence": "JAWDGP010000364.1",
+    "start": 215019,
+    "end": 234776,
+    "regulators": "MurE",
+    "identity": 0.2814,
+    "aligned": 195,
+    "exons": 4,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-crispata-purdue",
+    "sequence": "JAWDGP010000992.1",
+    "start": 88129,
+    "end": 97394,
+    "regulators": "TIC100",
+    "identity": 0.3248,
+    "aligned": 152,
+    "exons": 2,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-crispata-purdue",
+    "sequence": "JAWDGP010002605.1",
+    "start": 5176,
+    "end": 7204,
+    "regulators": "CSK",
+    "identity": 0.2718,
+    "aligned": 199,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-crispata-purdue",
+    "sequence": "JAWDGP010007023.1",
+    "start": 7802,
+    "end": 17934,
+    "regulators": "AUREO",
+    "identity": 0.3137,
+    "aligned": 143,
+    "exons": 2,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-crispata-tampa",
+    "sequence": "CFHGKC010000328.1",
+    "start": 148803,
+    "end": 209158,
+    "regulators": "CHLD",
+    "identity": 0.3415,
+    "aligned": 123,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-crispata-tampa",
+    "sequence": "CFHGKC010000467.1",
+    "start": 2169252,
+    "end": 2289323,
+    "regulators": "TIC100",
+    "identity": 0.3036,
+    "aligned": 270,
+    "exons": 4,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-crispata-tampa",
+    "sequence": "CFHGKC010000618.1",
+    "start": 78541,
+    "end": 85116,
+    "regulators": "TIC100",
+    "identity": 0.3269,
+    "aligned": 152,
+    "exons": 2,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-crispata-tampa",
+    "sequence": "CFHGKC010000728.1",
+    "start": 20404,
+    "end": 81190,
+    "regulators": "ARC5/DRP5B",
+    "identity": 0.3,
+    "aligned": 140,
+    "exons": 4,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-crispata-tampa",
+    "sequence": "CFHGKC010002915.1",
+    "start": 83090,
+    "end": 207122,
+    "regulators": "TIC100",
+    "identity": 0.2742,
+    "aligned": 245,
+    "exons": 5,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-chlorotica",
+    "sequence": "RQTK01000022.1",
+    "start": 1057727,
+    "end": 1058890,
+    "regulators": "CSK",
+    "identity": 0.2598,
+    "aligned": 233,
+    "exons": 2,
+    "best_match": {
+     "hit": "SAC|ELYCH|A0A433T4T6|EGW08_015661",
+     "identity": 88.9,
+     "length": 27,
+     "evalue": 3.06e-06,
+     "bits": 50.8
+    }
+   },
+   {
+    "assembly": "elysia-chlorotica",
+    "sequence": "RQTK01000050.1",
+    "start": 189469,
+    "end": 273424,
+    "regulators": "SIG5",
+    "identity": 0.2542,
+    "aligned": 175,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-chlorotica",
+    "sequence": "RQTK01000544.1",
+    "start": 264164,
+    "end": 275866,
+    "regulators": "STN7",
+    "identity": 0.3584,
+    "aligned": 128,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-chlorotica",
+    "sequence": "RQTK01000732.1",
+    "start": 30609,
+    "end": 112097,
+    "regulators": "PRR7",
+    "identity": 0.2534,
+    "aligned": 220,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-marginata",
+    "sequence": "BMAT01009191.1",
+    "start": 191150,
+    "end": 289855,
+    "regulators": "STN7",
+    "identity": 0.2787,
+    "aligned": 121,
+    "exons": 2,
+    "best_match": {
+     "hit": "SAC|ELYMA|A0AAV4HVI7|ElyMa_004570500",
+     "identity": 91.2,
+     "length": 34,
+     "evalue": 4.37e-11,
+     "bits": 62.4
+    }
+   },
+   {
+    "assembly": "elysia-marginata",
+    "sequence": "BMAT01009707.1",
+    "start": 343103,
+    "end": 399015,
+    "regulators": "STN7",
+    "identity": 0.303,
+    "aligned": 126,
+    "exons": 2,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-marginata",
+    "sequence": "BMAT01009834.1",
+    "start": 13628,
+    "end": 43876,
+    "regulators": "SIG5",
+    "identity": 0.2897,
+    "aligned": 142,
+    "exons": 4,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-marginata",
+    "sequence": "BMAT01011622.1",
+    "start": 10472,
+    "end": 19884,
+    "regulators": "CRY1,CRY2",
+    "identity": 0.318,
+    "aligned": 165,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-marginata",
+    "sequence": "BMAT01012055.1",
+    "start": 133020,
+    "end": 147350,
+    "regulators": "TOC75-III",
+    "identity": 0.3453,
+    "aligned": 126,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-marginata",
+    "sequence": "BMAT01013088.1",
+    "start": 156429,
+    "end": 284738,
+    "regulators": "CCA1",
+    "identity": 0.2792,
+    "aligned": 150,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-timida",
+    "sequence": "CM092925.1",
+    "start": 20855179,
+    "end": 20949987,
+    "regulators": "TOC90",
+    "identity": 0.255,
+    "aligned": 270,
+    "exons": 3,
+    "best_match": {
+     "hit": "SAC|ELYMA|A0AAV4FJG2|ElyMa_003861100",
+     "identity": 32.1,
+     "length": 168,
+     "evalue": 9.11e-14,
+     "bits": 75.9
+    }
+   },
+   {
+    "assembly": "elysia-timida",
+    "sequence": "CM092927.1",
+    "start": 33116441,
+    "end": 33196623,
+    "regulators": "SIG5",
+    "identity": 0.2895,
+    "aligned": 226,
+    "exons": 4,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-timida",
+    "sequence": "CM092928.1",
+    "start": 11240048,
+    "end": 11282695,
+    "regulators": "TOC75-III",
+    "identity": 0.2574,
+    "aligned": 123,
+    "exons": 2,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-atroviridis",
+    "sequence": "CM180488.1",
+    "start": 2185668,
+    "end": 2285516,
+    "regulators": "HY5",
+    "identity": 0.2663,
+    "aligned": 168,
+    "exons": 4,
+    "best_match": {
+     "hit": "SAC|PLAOC|A0AAV3Y570|PoB_000373400",
+     "identity": 100.0,
+     "length": 22,
+     "evalue": 0.00217,
+     "bits": 42.0
+    }
+   },
+   {
+    "assembly": "elysia-atroviridis",
+    "sequence": "CM180488.1",
+    "start": 84304859,
+    "end": 84357410,
+    "regulators": "CSK",
+    "identity": 0.3165,
+    "aligned": 233,
+    "exons": 6,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa",
+    "sequence": "CDRNNR020000356.1",
+    "start": 194286,
+    "end": 211057,
+    "regulators": "ARC5/DRP5B",
+    "identity": 0.2927,
+    "aligned": 201,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa",
+    "sequence": "CDRNNR020000484.1",
+    "start": 2160818,
+    "end": 2214137,
+    "regulators": "TIC100",
+    "identity": 0.2789,
+    "aligned": 141,
+    "exons": 2,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa",
+    "sequence": "CDRNNR020000599.1",
+    "start": 189459,
+    "end": 257367,
+    "regulators": "FLU",
+    "identity": 0.3121,
+    "aligned": 171,
+    "exons": 4,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa",
+    "sequence": "CDRNNR020000616.1",
+    "start": 703838,
+    "end": 779473,
+    "regulators": "CHLD",
+    "identity": 0.3097,
+    "aligned": 148,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa",
+    "sequence": "CDRNNR020001107.1",
+    "start": 113,
+    "end": 90776,
+    "regulators": "SIG3",
+    "identity": 0.3217,
+    "aligned": 143,
+    "exons": 4,
+    "best_match": {
+     "hit": "ALG|ARATH|O24621",
+     "identity": 33.8,
+     "length": 74,
+     "evalue": 0.619,
+     "bits": 34.3
+    }
+   },
+   {
+    "assembly": "elysia-papillosa",
+    "sequence": "CDRNNR020001600.1",
+    "start": 1184507,
+    "end": 1233285,
+    "regulators": "LPA1",
+    "identity": 0.3209,
+    "aligned": 131,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa",
+    "sequence": "CDRNNR020001699.1",
+    "start": 4227,
+    "end": 51860,
+    "regulators": "CRY1,CRY2",
+    "identity": 0.2502,
+    "aligned": 496,
+    "exons": 7,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa",
+    "sequence": "CDRNNR020001809.1",
+    "start": 4177,
+    "end": 6383,
+    "regulators": "CSK",
+    "identity": 0.2661,
+    "aligned": 233,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa",
+    "sequence": "CDRNNR020002749.1",
+    "start": 46960,
+    "end": 78077,
+    "regulators": "CHLD",
+    "identity": 0.297,
+    "aligned": 165,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-crispata-alt",
+    "sequence": "CAWKYI010006938.1",
+    "start": 2611,
+    "end": 10484,
+    "regulators": "RPOTp",
+    "identity": 0.3309,
+    "aligned": 139,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa-alt",
+    "sequence": "CDRNNS020000081.1",
+    "start": 356059,
+    "end": 356920,
+    "regulators": "TIC100",
+    "identity": 0.2758,
+    "aligned": 210,
+    "exons": 2,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa-alt",
+    "sequence": "CDRNNS020000835.1",
+    "start": 6688,
+    "end": 7068,
+    "regulators": "TIC100",
+    "identity": 0.3178,
+    "aligned": 123,
+    "exons": 1,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa-alt",
+    "sequence": "CDRNNS020001458.1",
+    "start": 59726,
+    "end": 143955,
+    "regulators": "SIG3",
+    "identity": 0.3672,
+    "aligned": 122,
+    "exons": 4,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa-alt",
+    "sequence": "CDRNNS020005496.1",
+    "start": 18616,
+    "end": 24511,
+    "regulators": "CSK",
+    "identity": 0.2559,
+    "aligned": 216,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa-alt",
+    "sequence": "CDRNNS020005755.1",
+    "start": 79743,
+    "end": 89296,
+    "regulators": "TOC159,TOC132,TOC120,TOC90",
+    "identity": 0.2844,
+    "aligned": 206,
+    "exons": 2,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa-alt",
+    "sequence": "CDRNNS020006201.1",
+    "start": 34262,
+    "end": 41318,
+    "regulators": "ARC5/DRP5B",
+    "identity": 0.2927,
+    "aligned": 122,
+    "exons": 4,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa-alt",
+    "sequence": "CDRNNS020009504.1",
+    "start": 5385,
+    "end": 40970,
+    "regulators": "CHLD",
+    "identity": 0.297,
+    "aligned": 165,
+    "exons": 3,
+    "best_match": null
+   },
+   {
+    "assembly": "elysia-papillosa-alt",
+    "sequence": "CDRNNS020021207.1",
+    "start": 351665,
+    "end": 392645,
+    "regulators": "CRY3",
+    "identity": 0.2762,
+    "aligned": 184,
+    "exons": 3,
+    "best_match": null
+   }
+  ]
+ },
+ "background_orf_share": {
+  "elysia-chlorotica": {
+   "windows": 40,
+   "median": 0.28,
+   "p90": 0.427
+  },
+  "elysia-crispata-tampa": {
+   "windows": 40,
+   "median": 0.198,
+   "p90": 0.376
+  },
+  "elysia-leucolegnote": {
+   "windows": 40,
+   "median": 0.121,
+   "p90": 0.317
+  },
+  "elysia-marginata": {
+   "windows": 40,
+   "median": 0.198,
+   "p90": 0.274
+  }
+ }
+}

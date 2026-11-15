@@ -1,0 +1,830 @@
+query	name	category	animal_family	source	lineage	accession	length	identity_to_arabidopsis	description
+ARATH|SIG1|O24629	SIG1	plastid transcription	no	ARATH	land plant	O24629	502		sigma factor of the plastid-encoded RNA polymerase (PEP)
+BRYSP|SIG1|GMH38498.1	SIG1,SIG2,SIG3,SIG4,SIG5,SIG6	plastid transcription	no	BRYSP	green alga (Bryopsidales)	GMH38498.1	525	34.0	hypothetical protein BSKO_06382 [Bryopsis sp. KO-2023]
+CHLRE|SIG1|Q8LK21	SIG1,SIG2,SIG3,SIG4,SIG5,SIG6	plastid transcription	no	CHLRE	green alga	Q8LK21	752	32.5	RNA polymerase sigma-70 domain-containing protein
+CHLVA|SIG1|E1ZEW9	SIG1,SIG2,SIG3,SIG4,SIG5,SIG6	plastid transcription	no	CHLVA	green alga	E1ZEW9	267	35.7	RNA polymerase sigma-70 domain-containing protein
+CHOCR|SIG1|R7QJX2	SIG1,SIG2,SIG4,SIG5	plastid transcription	no	CHOCR	red alga	R7QJX2	506	30.0	RNA polymerase sigma-70 domain-containing protein
+CYAME|SIG1|M1VL67	SIG1	plastid transcription	no	CYAME	red alga	M1VL67	649	32.3	Sigma subunit for chloroplast RNA polymerase
+ECTSI|SIG1|D8LNI6	SIG1,SIG2,SIG4,SIG5,SIG6	plastid transcription	no	ECTSI	stramenopile	D8LNI6	694	31.6	Chloroplast RNA-polymerase sigma factor
+MICPC|SIG1|C1MUC7	SIG1,SIG2,SIG3,SIG4,SIG5,SIG6	plastid transcription	no	MICPC	green alga	C1MUC7	587	32.7	Predicted protein
+OSTQU|SIG1|A0A8S1IVZ7	SIG1,SIG2,SIG3,SIG4,SIG5,SIG6	plastid transcription	no	OSTQU	green alga (Bryopsidales)	A0A8S1IVZ7	602	34.7	RNA polymerase sigma-70 domain-containing protein
+OSTTA|SIG1|A0A090M244	SIG1,SIG2,SIG3,SIG4,SIG5,SIG6	plastid transcription	no	OSTTA	green alga	A0A090M244	636	34.0	RNA polymerase sigma-70 region 2
+PHATC|SIG1|B7GEJ9	SIG1,SIG2,SIG4,SIG5,SIG6	plastid transcription	no	PHATC	stramenopile	B7GEJ9	329	31.0	RNA polymerase sigma-70 domain-containing protein (Fragment)
+VOLCA|SIG1|D8UF26	SIG1,SIG2,SIG3,SIG4,SIG5,SIG6	plastid transcription	no	VOLCA	green alga	D8UF26	733	32.2	RNA polymerase sigma-70 domain-containing protein
+ARATH|SIG2|O22056	SIG2	plastid transcription	no	ARATH	land plant	O22056	572		sigma factor of PEP
+CYAME|SIG2|M1V5C7	SIG2,SIG3,SIG4,SIG6	plastid transcription	no	CYAME	red alga	M1V5C7	721	41.7	Sigma subunit for chloroplast RNA polymerase
+ARATH|SIG3|O24621	SIG3	plastid transcription	no	ARATH	land plant	O24621	571		sigma factor of PEP
+CHOCR|SIG3|R7QDV9	SIG3,SIG6	plastid transcription	no	CHOCR	red alga	R7QDV9	414	33.1	RNA polymerase sigma-70 domain-containing protein
+ECTSI|SIG3|D8LNI4	SIG3	plastid transcription	no	ECTSI	stramenopile	D8LNI4	835	31.9	Chloroplast RNA-polymerase sigma factor
+PHATC|SIG3|B7FPT1	SIG3	plastid transcription	no	PHATC	stramenopile	B7FPT1	324	27.4	Uncharacterized protein
+ARATH|SIG4|Q9ZSL6	SIG4	plastid transcription	no	ARATH	land plant	Q9ZSL6	419		sigma factor of PEP
+ARATH|SIG5|Q9ZNX9	SIG5	plastid transcription	no	ARATH	land plant	Q9ZNX9	517		light- and clock-regulated sigma factor of PEP (psbD blue-light promoter)
+CYAME|SIG5|M1V5N0	SIG5	plastid transcription	no	CYAME	red alga	M1V5N0	591	32.6	Sigma subunit for chloroplast RNA polymerase
+ARATH|SIG6|Q9LD95	SIG6	plastid transcription	no	ARATH	land plant	Q9LD95	547		sigma factor of PEP, early chloroplast development
+ARATH|SIB1|Q9LDH1	SIB1	plastid transcription	no	ARATH	land plant	Q9LDH1	151		sigma factor-binding protein (VQ motif)
+ARATH|PTAC2|Q9S7Q2	PTAC2	plastid transcription	no	ARATH	land plant	Q9S7Q2	862		PEP-associated protein PAP2 (PPR protein)
+ARATH|PTAC7|Q8VZV9	PTAC7	plastid transcription	no	ARATH	land plant	Q8VZV9	161		PEP-associated protein PAP12
+ARATH|PTAC10|F4JF21	PTAC10	plastid transcription	no	ARATH	land plant	F4JF21	668		PEP-associated protein PAP3
+ARATH|PTAC12/HMR|F4IHY7	PTAC12/HMR	plastid transcription	no	ARATH	land plant	F4IHY7	527		PEP-associated protein PAP5, phytochrome signalling
+ARATH|PTAC14|Q84JF5	PTAC14	plastid transcription	no	ARATH	land plant	Q84JF5	483		PEP-associated protein PAP7 (SET-domain methyltransferase)
+BRYSP|PTAC14|GMH33548.1	PTAC14	plastid transcription	no	BRYSP	green alga (Bryopsidales)	GMH33548.1	455	23.5	hypothetical protein BSKO_01382 [Bryopsis sp. KO-2023]
+CHLRE|PTAC14|A0A2K3CSS1	PTAC14	plastid transcription	no	CHLRE	green alga	A0A2K3CSS1	513	26.1	SET domain-containing protein
+CHLVA|PTAC14|E1ZKX8	PTAC14	plastid transcription	no	CHLVA	green alga	E1ZKX8	470	35.0	SET domain-containing protein
+MICPC|PTAC14|C1MP39	PTAC14	plastid transcription	no	MICPC	green alga	C1MP39	563	23.0	Predicted protein
+OSTTA|PTAC14|A0A090M675	PTAC14	plastid transcription	no	OSTTA	green alga	A0A090M675	435	26.3	Nucleoside diphosphate kinase
+VOLCA|PTAC14|D8U0M3	PTAC14	plastid transcription	no	VOLCA	green alga	D8U0M3	618	28.1	Uncharacterized protein
+ARATH|PTAC16|Q9STF2	PTAC16	plastid transcription	no	ARATH	land plant	Q9STF2	510		nucleoid-thylakoid tethering protein
+ARATH|PTAC5|A1A6M1	PTAC5	plastid transcription	no	ARATH	land plant	A1A6M1	387		heat-induced PEP-associated protein
+ARATH|PTAC6|Q9XI19	PTAC6	plastid transcription	no	ARATH	land plant	Q9XI19	328		PEP-associated protein PAP8
+ARATH|FLN1|Q9M394	FLN1	plastid transcription	yes	ARATH	land plant	Q9M394	471		PEP-associated protein PAP6 (pfkB-type carbohydrate kinase family)
+ARATH|FLN2|F4I0K2	FLN2	plastid transcription	yes	ARATH	land plant	F4I0K2	614		fructokinase-like protein of the PEP complex
+ARATH|FSD2|Q9LU64	FSD2	plastid transcription	yes	ARATH	land plant	Q9LU64	305		PEP-associated protein PAP9 (Fe superoxide dismutase)
+ARATH|FSD3|Q9FMX0	FSD3	plastid transcription	yes	ARATH	land plant	Q9FMX0	263		PEP-associated protein PAP4 (Fe superoxide dismutase)
+ARATH|TRXz|Q9M7X9	TRXz	plastid transcription	yes	ARATH	land plant	Q9M7X9	183		PEP-associated protein PAP10 (thioredoxin)
+BRYSP|TRXz|GMH45947.1	TRXz	plastid transcription	yes	BRYSP	green alga (Bryopsidales)	GMH45947.1	180	41.5	hypothetical protein BSKO_13911 [Bryopsis sp. KO-2023]
+CHLRE|TRXz|A8J0Q8	TRXz	plastid transcription	yes	CHLRE	green alga	A8J0Q8	183	41.7	Uncharacterized protein
+CHLVA|TRXz|E1ZAG2	TRXz	plastid transcription	yes	CHLVA	green alga	E1ZAG2	54	50.0	Thioredoxin domain-containing protein (Fragment)
+CHOCR|TRXz|R7QJF9	TRXz,TRXx,TRXy1	plastid transcription	yes	CHOCR	red alga	R7QJF9	161	37.6	Thioredoxin TRX
+ECTSI|TRXz|D7FZ61	TRXz	plastid transcription	yes	ECTSI	stramenopile	D7FZ61	234	34.7	Thioredoxin-related protein
+MICPC|TRXz|C1MPX5	TRXz	plastid transcription	yes	MICPC	green alga	C1MPX5	160	48.6	Thioredoxin-related protein
+OSTTA|TRXz|Q01AW2	TRXz	plastid transcription	yes	OSTTA	green alga	Q01AW2	146	49.5	Thioredoxin, conserved site
+PHATC|TRXz|B5Y525	TRXz	plastid transcription	yes	PHATC	stramenopile	B5Y525	178	36.3	Thioredoxin y
+VOLCA|TRXz|D8TVT1	TRXz	plastid transcription	yes	VOLCA	green alga	D8TVT1	184	45.6	Thioredoxin
+ARATH|MurE|F4I3P9	MurE	plastid transcription	no	ARATH	land plant	F4I3P9	772		PEP-associated protein PAP11 (MurE homologue)
+BRYSP|MurE|GMH43410.1	MurE	plastid transcription	no	BRYSP	green alga (Bryopsidales)	GMH43410.1	777	33.1	hypothetical protein BSKO_11332 [Bryopsis sp. KO-2023]
+CHLRE|MurE|A0A2K3D404	MurE	plastid transcription	no	CHLRE	green alga	A0A2K3D404	803	31.5	Mur ligase central domain-containing protein
+CHLVA|MurE|E1Z4U6	MurE	plastid transcription	no	CHLVA	green alga	E1Z4U6	873	34.5	Mur ligase central domain-containing protein
+MICPC|MurE|C1MWV5	MurE	plastid transcription	no	MICPC	green alga	C1MWV5	614	43.9	Predicted protein
+OSTQU|MurE|A0A8S1JFM4	MurE	plastid transcription	no	OSTQU	green alga (Bryopsidales)	A0A8S1JFM4	391	38.3	Mur ligase central domain-containing protein (Fragment)
+OSTTA|MurE|A0A096PBW3	MurE	plastid transcription	no	OSTTA	green alga	A0A096PBW3	680	34.3	Mur ligase, C-terminal
+VOLCA|MurE|D8UHG1	MurE	plastid transcription	no	VOLCA	green alga	D8UHG1	696	32.2	Mur ligase central domain-containing protein
+ARATH|RPOTm|P92969	RPOTm	plastid transcription	yes	ARATH	land plant	P92969	976		phage-type RNA polymerase, mitochondrial
+BRYSP|RPOTm|GMH34103.1	RPOTm,RPOTmp,RPOTp	plastid transcription	yes	BRYSP	green alga (Bryopsidales)	GMH34103.1	1045	41.4	hypothetical protein BSKO_01937 [Bryopsis sp. KO-2023]
+CHLRE|RPOTm|A0A2K3E081	RPOTm,RPOTmp,RPOTp	plastid transcription	yes	CHLRE	green alga	A0A2K3E081	2129	32.9	DNA-directed RNA polymerase
+CHLVA|RPOTm|E1ZQB5	RPOTm,RPOTmp,RPOTp	plastid transcription	yes	CHLVA	green alga	E1ZQB5	599	46.5	DNA-directed RNA polymerase
+CHOCR|RPOTm|R7QN31	RPOTm,RPOTmp,RPOTp	plastid transcription	yes	CHOCR	red alga	R7QN31	928	36.0	DNA-directed RNA polymerase
+CYAME|RPOTm|M1V872	RPOTm,RPOTmp,RPOTp	plastid transcription	yes	CYAME	red alga	M1V872	1252	38.6	DNA-directed RNA polymerase
+ECTSI|RPOTm|D7FQU5	RPOTm,RPOTmp,RPOTp	plastid transcription	yes	ECTSI	stramenopile	D7FQU5	1167	38.8	DNA-directed RNA polymerase
+MICPC|RPOTm|C1MV11	RPOTm,RPOTmp,RPOTp	plastid transcription	yes	MICPC	green alga	C1MV11	838	40.1	DNA-directed RNA polymerase
+OSTQU|RPOTm|A0A8S1J5U7	RPOTm,RPOTmp,RPOTp	plastid transcription	yes	OSTQU	green alga (Bryopsidales)	A0A8S1J5U7	1014	40.2	DNA-directed RNA polymerase, mitochondrial
+OSTTA|RPOTm|Q010X3	RPOTm,RPOTmp,RPOTp	plastid transcription	yes	OSTTA	green alga	Q010X3	973	39.6	DNA-directed RNA polymerase
+PHATC|RPOTm|B7GAR5	RPOTm,RPOTmp,RPOTp	plastid transcription	yes	PHATC	stramenopile	B7GAR5	1188	34.1	DNA-directed RNA polymerase
+VOLCA|RPOTm|D8TN07	RPOTm,RPOTmp,RPOTp	plastid transcription	yes	VOLCA	green alga	D8TN07	169	51.2	DNA-directed RNA polymerase (Fragment)
+ARATH|RPOTmp|Q9LFV6	RPOTmp	plastid transcription	yes	ARATH	land plant	Q9LFV6	1011		phage-type RNA polymerase (NEP), plastid and mitochondria
+ARATH|RPOTp|O24600	RPOTp	plastid transcription	yes	ARATH	land plant	O24600	993		phage-type RNA polymerase (NEP), plastid
+ARATH|CSK|F4HVG8	CSK	plastid transcription	no	ARATH	land plant	F4HVG8	611		chloroplast sensor kinase (two-component histidine kinase)
+ARATH|PRIN2|Q9XIK0	PRIN2	plastid transcription	no	ARATH	land plant	Q9XIK0	179		plastid redox insensitive 2, PEP activity
+ARATH|DG1|Q9FJW6	DG1	plastid transcription	no	ARATH	land plant	Q9FJW6	798		PPR protein, PEP-dependent transcription
+ARATH|MRL7|F4JLC1	MRL7	plastid transcription	no	ARATH	land plant	F4JLC1	331		thioredoxin-like regulator of PEP
+ARATH|CSP41b|Q9SA52	CSP41b	plastid transcription	no	ARATH	land plant	Q9SA52	378		stem-loop binding protein of plastid transcripts
+BRYSP|CSP41b|GMH37337.1	CSP41b	plastid transcription	no	BRYSP	green alga (Bryopsidales)	GMH37337.1	367	66.8	hypothetical protein BSKO_05210 [Bryopsis sp. KO-2023]
+CHLRE|CSP41b|A0A2K3DA62	CSP41b	plastid transcription	no	CHLRE	green alga	A0A2K3DA62	401	70.3	NAD-dependent epimerase/dehydratase domain-containing protein
+CHLVA|CSP41b|E1ZLC0	CSP41b	plastid transcription	no	CHLVA	green alga	E1ZLC0	407	64.9	NAD-dependent epimerase/dehydratase domain-containing protein
+CHOCR|CSP41b|R7QCU1	CSP41b	plastid transcription	no	CHOCR	red alga	R7QCU1	401	48.0	Similar to mRNA binding protein CSP41
+CYAME|CSP41b|M1UQF3	CSP41b	plastid transcription	no	CYAME	red alga	M1UQF3	414	50.6	Similar to mRNA binding protein CSP41
+ECTSI|CSP41b|D8LDG3	CSP41b	plastid transcription	no	ECTSI	stramenopile	D8LDG3	383	47.1	38 kDa ribosome-associated protein
+OSTQU|CSP41b|A0A8S1J0L6	CSP41b	plastid transcription	no	OSTQU	green alga (Bryopsidales)	A0A8S1J0L6	373	69.1	NAD-dependent epimerase/dehydratase domain-containing protein
+PHATC|CSP41b|B7GB44	CSP41b	plastid transcription	no	PHATC	stramenopile	B7GB44	361	45.1	NAD-dependent epimerase/dehydratase domain-containing protein
+VOLCA|CSP41b|D8THB7	CSP41b	plastid transcription	no	VOLCA	green alga	D8THB7	401	71.7	NAD-dependent epimerase/dehydratase domain-containing protein
+ARATH|RNE|F4IV66	RNE	plastid transcription	no	ARATH	land plant	F4IV66	1001		ribonuclease E of plastid RNA processing
+CHOCR|RNE|M5DDC5	RNE	plastid transcription	no	CHOCR	red alga	M5DDC5	493	32.5	Ribonuclease E
+OSTTA|RNE|A0A090M978	RNE	plastid transcription	no	OSTTA	green alga	A0A090M978	752	28.5	Carbohydrate binding module family 20
+ARATH|GUN1|Q9SIC9	GUN1	retrograde signalling	no	ARATH	land plant	Q9SIC9	918		PPR protein integrating plastid retrograde signals
+ARATH|GUN4|Q9LX31	GUN4	retrograde signalling	no	ARATH	land plant	Q9LX31	265		tetrapyrrole-binding regulator of Mg-chelatase
+BRYSP|GUN4|GMH41788.1	GUN4	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	GMH41788.1	248	40.8	hypothetical protein BSKO_09698 [Bryopsis sp. KO-2023]
+CHLRE|GUN4|A8I5N5	GUN4	retrograde signalling	no	CHLRE	green alga	A8I5N5	260	49.0	GUN4-like domain-containing protein
+CHLVA|GUN4|E1Z401	GUN4	retrograde signalling	no	CHLVA	green alga	E1Z401	162	41.8	GUN4-like domain-containing protein (Fragment)
+CHOCR|GUN4|M5DCR1	GUN4	retrograde signalling	no	CHOCR	red alga	M5DCR1	240	34.9	Conserved hypothetical plastid protein
+CYAME|GUN4|Q85G69	GUN4	retrograde signalling	no	CYAME	red alga	Q85G69	155	37.5	Ycf53 protein
+ECTSI|GUN4|D7FZN6	GUN4	retrograde signalling	no	ECTSI	stramenopile	D7FZN6	219	40.6	Tetrapyrrole-binding protein
+MICPC|GUN4|C1N7L3	GUN4	retrograde signalling	no	MICPC	green alga	C1N7L3	197	40.1	Predicted protein
+OSTQU|GUN4|A0A8S1JEX1	GUN4	retrograde signalling	no	OSTQU	green alga (Bryopsidales)	A0A8S1JEX1	264	47.4	GUN4-like domain-containing protein
+OSTTA|GUN4|A0A096P8X0	GUN4	retrograde signalling	no	OSTTA	green alga	A0A096P8X0	255	48.1	GUN4-like
+PHATC|GUN4|B7GAX7	GUN4	retrograde signalling	no	PHATC	stramenopile	B7GAX7	119	42.2	GUN4-like domain-containing protein (Fragment)
+VOLCA|GUN4|D8U154	GUN4	retrograde signalling	no	VOLCA	green alga	D8U154	163	49.0	GUN4-like domain-containing protein
+ARATH|CHLH/GUN5|Q9FNB0	CHLH/GUN5	retrograde signalling	no	ARATH	land plant	Q9FNB0	1381		Mg-chelatase H subunit
+BRYSP|CHLH/GUN5|GMH44205.1	CHLH/GUN5	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	GMH44205.1	1410	67.2	hypothetical protein BSKO_12139 [Bryopsis sp. KO-2023]
+CHLRE|CHLH/GUN5|A8I7P5	CHLH/GUN5	retrograde signalling	no	CHLRE	green alga	A8I7P5	1399	67.6	magnesium chelatase
+CHLVA|CHLH/GUN5|E1ZI90	CHLH/GUN5	retrograde signalling	no	CHLVA	green alga	E1ZI90	1212	29.4	magnesium chelatase
+CHOCR|CHLH/GUN5|R7QV52	CHLH/GUN5	retrograde signalling	no	CHOCR	red alga	R7QV52	1388	62.0	magnesium chelatase
+CYAME|CHLH/GUN5|M1V602	CHLH/GUN5	retrograde signalling	no	CYAME	red alga	M1V602	1424	60.9	magnesium chelatase
+ECTSI|CHLH/GUN5|D7FW04	CHLH/GUN5	retrograde signalling	no	ECTSI	stramenopile	D7FW04	1427	63.0	magnesium chelatase
+MICPC|CHLH/GUN5|C1MQ15	CHLH/GUN5	retrograde signalling	no	MICPC	green alga	C1MQ15	1403	68.1	magnesium chelatase
+OSTQU|CHLH/GUN5|A0A8S1JDH5	CHLH/GUN5	retrograde signalling	no	OSTQU	green alga (Bryopsidales)	A0A8S1JDH5	1538	32.1	magnesium chelatase
+OSTTA|CHLH/GUN5|Q01B26	CHLH/GUN5	retrograde signalling	no	OSTTA	green alga	Q01B26	1397	69.1	magnesium chelatase
+PHATC|CHLH/GUN5|B5Y3F4	CHLH/GUN5	retrograde signalling	no	PHATC	stramenopile	B5Y3F4	1343	62.6	magnesium chelatase
+VOLCA|CHLH/GUN5|D8U8V7	CHLH/GUN5	retrograde signalling	no	VOLCA	green alga	D8U8V7	1398	68.2	magnesium chelatase
+ARATH|CHLI1|P16127	CHLI1	retrograde signalling	no	ARATH	land plant	P16127	424		Mg-chelatase I subunit
+BRYSP|CHLI1|BEI31765.1	CHLI1,CHLI2	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	BEI31765.1	355	74.0	Mg-protoporyphyrin IX chelatase (chloroplast) [Bryopsis sp. KO-2023]
+CHLRE|CHLI1|A8IMZ5	CHLI1,CHLI2	retrograde signalling	no	CHLRE	green alga	A8IMZ5	417	72.2	Mg-protoporphyrin IX chelatase
+CHLVA|CHLI1|E1ZAI8	CHLI1,CHLI2	retrograde signalling	no	CHLVA	green alga	E1ZAI8	426	57.7	magnesium chelatase
+CHOCR|CHLI1|M5DDK4	CHLI1,CHLI2	retrograde signalling	no	CHOCR	red alga	M5DDK4	350	68.6	Mg-protoporphyrin IX chelatase
+CYAME|CHLI1|Q85G76	CHLI1,CHLI2	retrograde signalling	no	CYAME	red alga	Q85G76	346	64.7	Mg-protoporphyrin IX chelatase
+ECTSI|CHLI1|A0ACM9J3B9	CHLI1,CHLI2	retrograde signalling	no	ECTSI	stramenopile	A0ACM9J3B9	340	68.2	Mg-protoporphyrin IX chelatase
+MICPC|CHLI1|C1MKH7	CHLI1,CHLI2	retrograde signalling	no	MICPC	green alga	C1MKH7	410	64.8	Mg-protoporphyrin IX chelatase
+OSTQU|CHLI1|A0A8S1IMK8	CHLI1,CHLI2	retrograde signalling	no	OSTQU	green alga (Bryopsidales)	A0A8S1IMK8	335	53.1	magnesium chelatase
+OSTTA|CHLI1|A0A090MBS7	CHLI1,CHLI2	retrograde signalling	no	OSTTA	green alga	A0A090MBS7	401	65.9	Mg-protoporphyrin IX chelatase
+PHATC|CHLI1|A0T0B5	CHLI1,CHLI2	retrograde signalling	no	PHATC	stramenopile	A0T0B5	353	70.1	Mg-protoporphyrin IX chelatase
+VOLCA|CHLI1|D8TKE8	CHLI1,CHLI2	retrograde signalling	no	VOLCA	green alga	D8TKE8	414	75.0	Mg-protoporphyrin IX chelatase
+ARATH|CHLI2|Q5XF33	CHLI2	retrograde signalling	no	ARATH	land plant	Q5XF33	418		Mg-chelatase I subunit
+ARATH|CHLD|Q9SJE1	CHLD	retrograde signalling	no	ARATH	land plant	Q9SJE1	760		Mg-chelatase D subunit
+BRYSP|CHLD|GMH42512.1	CHLD	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	GMH42512.1	754	66.7	hypothetical protein BSKO_10431 [Bryopsis sp. KO-2023]
+CHLRE|CHLD|A8I531	CHLD	retrograde signalling	no	CHLRE	green alga	A8I531	767	68.8	Mg-protoporphyrin IX chelatase
+CHLVA|CHLD|E1Z9P2	CHLD	retrograde signalling	no	CHLVA	green alga	E1Z9P2	289	53.3	magnesium chelatase
+CHOCR|CHLD|R7QF35	CHLD	retrograde signalling	no	CHOCR	red alga	R7QF35	659	58.8	Mg-protoporphyrin IX chelatase (Fragment)
+CYAME|CHLD|M1V5Q9	CHLD	retrograde signalling	no	CYAME	red alga	M1V5Q9	738	54.2	Mg-protoporphyrin IX chelatase
+ECTSI|CHLD|D7G476	CHLD	retrograde signalling	no	ECTSI	stramenopile	D7G476	698	55.0	Mg-protoporphyrin IX chelatase
+MICPC|CHLD|C1MUK3	CHLD	retrograde signalling	no	MICPC	green alga	C1MUK3	694	67.0	Mg-protoporphyrin IX chelatase
+OSTTA|CHLD|Q018A8	CHLD	retrograde signalling	no	OSTTA	green alga	Q018A8	756	66.9	Mg-protoporphyrin IX chelatase
+PHATC|CHLD|B7FTA2	CHLD	retrograde signalling	no	PHATC	stramenopile	B7FTA2	800	52.7	Mg-protoporphyrin IX chelatase
+VOLCA|CHLD|D8UBW5	CHLD	retrograde signalling	no	VOLCA	green alga	D8UBW5	702	67.7	Mg-protoporphyrin IX chelatase
+ARATH|HO1/GUN2|O48782	HO1/GUN2	retrograde signalling	yes	ARATH	land plant	O48782	282		heme oxygenase
+BRYSP|HO1/GUN2|GMH40141.1	HO1/GUN2	retrograde signalling	yes	BRYSP	green alga (Bryopsidales)	GMH40141.1	291	44.8	hypothetical protein BSKO_08045 [Bryopsis sp. KO-2023]
+CHLVA|HO1/GUN2|E1ZKC3	HO1/GUN2	retrograde signalling	yes	CHLVA	green alga	E1ZKC3	219	43.6	heme oxygenase (biliverdin-producing) (Fragment)
+CYAME|HO1/GUN2|M1V512	HO1/GUN2	retrograde signalling	yes	CYAME	red alga	M1V512	293	49.1	Heme oxygenase
+ECTSI|HO1/GUN2|D7FK52	HO1/GUN2	retrograde signalling	yes	ECTSI	stramenopile	D7FK52	427	40.6	Heme oxygenase 1
+MICPC|HO1/GUN2|C1N997	HO1/GUN2	retrograde signalling	yes	MICPC	green alga	C1N997	252	58.3	heme oxygenase (biliverdin-producing)
+OSTTA|HO1/GUN2|Q00SJ5	HO1/GUN2	retrograde signalling	yes	OSTTA	green alga	Q00SJ5	265	54.6	heme oxygenase (biliverdin-producing)
+PHATC|HO1/GUN2|B7FTE3	HO1/GUN2	retrograde signalling	yes	PHATC	stramenopile	B7FTE3	263	42.1	Heme oxygenase
+VOLCA|HO1/GUN2|D8TZR1	HO1/GUN2	retrograde signalling	yes	VOLCA	green alga	D8TZR1	264	52.8	heme oxygenase (biliverdin-producing)
+ARATH|HY2/GUN3|Q9SR43	HY2/GUN3	retrograde signalling	no	ARATH	land plant	Q9SR43	329		phytochromobilin synthase
+CHOCR|HY2/GUN3|R7QD04	HY2/GUN3	retrograde signalling	no	CHOCR	red alga	R7QD04	296	28.2	Phycoerythrobilin:ferredoxin oxidoreductase
+ECTSI|HY2/GUN3|D7G164	HY2/GUN3	retrograde signalling	no	ECTSI	stramenopile	D7G164	371	27.6	Phycoerythrobilin:ferredoxin oxidoreductase
+ARATH|FC1/GUN6|P42043	FC1/GUN6	retrograde signalling	yes	ARATH	land plant	P42043	466		ferrochelatase 1
+BRYSP|FC1/GUN6|GMH44226.1	FC1/GUN6,FC2	retrograde signalling	yes	BRYSP	green alga (Bryopsidales)	GMH44226.1	488	65.7	hypothetical protein BSKO_12160 [Bryopsis sp. KO-2023]
+CHLRE|FC1/GUN6|A0A2K3DKF6	FC1/GUN6,FC2	retrograde signalling	yes	CHLRE	green alga	A0A2K3DKF6	493	68.2	Ferrochelatase
+CHLVA|FC1/GUN6|E1ZHU3	FC1/GUN6,FC2	retrograde signalling	yes	CHLVA	green alga	E1ZHU3	432	67.4	Ferrochelatase (Fragment)
+CHOCR|FC1/GUN6|R7Q7L2	FC1/GUN6,FC2	retrograde signalling	yes	CHOCR	red alga	R7Q7L2	422	30.8	Ferrochelatase
+CYAME|FC1/GUN6|M1VBI3	FC1/GUN6,FC2	retrograde signalling	yes	CYAME	red alga	M1VBI3	427	30.4	Ferrochelatase
+ECTSI|FC1/GUN6|D7FNI1	FC1/GUN6,FC2	retrograde signalling	yes	ECTSI	stramenopile	D7FNI1	582	52.7	Ferrochelatase
+MICPC|FC1/GUN6|C1N107	FC1/GUN6,FC2	retrograde signalling	yes	MICPC	green alga	C1N107	542	57.4	Ferrochelatase
+OSTQU|FC1/GUN6|A0A8S1IXG4	FC1/GUN6,FC2	retrograde signalling	yes	OSTQU	green alga (Bryopsidales)	A0A8S1IXG4	920	64.6	Ferrochelatase
+OSTTA|FC1/GUN6|A0A090M691	FC1/GUN6,FC2	retrograde signalling	yes	OSTTA	green alga	A0A090M691	537	66.6	Ferrochelatase
+PHATC|FC1/GUN6|B7FXE4	FC1/GUN6,FC2	retrograde signalling	yes	PHATC	stramenopile	B7FXE4	509	57.2	Ferrochelatase
+VOLCA|FC1/GUN6|D8TZE5	FC1/GUN6,FC2	retrograde signalling	yes	VOLCA	green alga	D8TZE5	494	66.3	Ferrochelatase
+ARATH|FC2|O04921	FC2	retrograde signalling	yes	ARATH	land plant	O04921	512		ferrochelatase 2
+ARATH|EX1|Q93YW0	EX1	retrograde signalling	no	ARATH	land plant	Q93YW0	684		singlet-oxygen signalling
+BRYSP|EX1|GMH35156.1	EX1,EX2	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	GMH35156.1	656	25.6	hypothetical protein BSKO_03024 [Bryopsis sp. KO-2023]
+MICPC|EX1|C1N9A5	EX1,EX2	retrograde signalling	no	MICPC	green alga	C1N9A5	105	50.5	Predicted protein (Fragment)
+OSTQU|EX1|A0A8S1JFZ7	EX1,EX2	retrograde signalling	no	OSTQU	green alga (Bryopsidales)	A0A8S1JFZ7	596	26.1	UVR domain-containing protein
+OSTTA|EX1|A0A096P9U8	EX1,EX2	retrograde signalling	no	OSTTA	green alga	A0A096P9U8	749	28.5	Uncharacterized protein
+ARATH|EX2|Q94AT5	EX2	retrograde signalling	no	ARATH	land plant	Q94AT5	651		singlet-oxygen signalling
+ARATH|FLU|Q940U6	FLU	retrograde signalling	no	ARATH	land plant	Q940U6	316		negative regulator of tetrapyrrole synthesis
+BRYSP|FLU|GMH41343.1	FLU	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	GMH41343.1	362	39.5	hypothetical protein BSKO_09253 [Bryopsis sp. KO-2023]
+CHLRE|FLU|A0A2K3DBT7	FLU	retrograde signalling	no	CHLRE	green alga	A0A2K3DBT7	373	35.5	Uncharacterized protein
+CHLVA|FLU|E1Z8D7	FLU	retrograde signalling	no	CHLVA	green alga	E1Z8D7	323	31.8	Uncharacterized protein (Fragment)
+MICPC|FLU|C1MSC7	FLU	retrograde signalling	no	MICPC	green alga	C1MSC7	185	38.0	Predicted protein (Fragment)
+OSTQU|FLU|A0A8S1J1C5	FLU	retrograde signalling	no	OSTQU	green alga (Bryopsidales)	A0A8S1J1C5	390	35.8	Tetratricopeptide repeat
+OSTTA|FLU|A0A090MCT7	FLU	retrograde signalling	no	OSTTA	green alga	A0A090MCT7	292	35.8	Tetratricopeptide repeat
+VOLCA|FLU|D8TLR0	FLU	retrograde signalling	no	VOLCA	green alga	D8TLR0	382	34.6	Uncharacterized protein
+ARATH|SAL1|Q42546	SAL1	retrograde signalling	yes	ARATH	land plant	Q42546	353		PAP phosphatase, PAP retrograde signal
+BRYSP|SAL1|GMH40691.1	SAL1	retrograde signalling	yes	BRYSP	green alga (Bryopsidales)	GMH40691.1	359	44.9	hypothetical protein BSKO_08595 [Bryopsis sp. KO-2023]
+CHLRE|SAL1|A8HQG9	SAL1	retrograde signalling	yes	CHLRE	green alga	A8HQG9	347	45.9	3'(2'),5'-bisphosphate nucleotidase
+CHLVA|SAL1|E1ZIB9	SAL1	retrograde signalling	yes	CHLVA	green alga	E1ZIB9	439	49.2	3'(2'),5'-bisphosphate nucleotidase
+CHOCR|SAL1|R7QQQ1	SAL1	retrograde signalling	yes	CHOCR	red alga	R7QQQ1	345	38.9	3'(2'),5'-bisphosphate nucleotidase
+ECTSI|SAL1|D7FJF3	SAL1	retrograde signalling	yes	ECTSI	stramenopile	D7FJF3	624	42.8	3'(2'),5'-bisphosphate nucleotidase
+OSTQU|SAL1|A0A8S1ILS8	SAL1	retrograde signalling	yes	OSTQU	green alga (Bryopsidales)	A0A8S1ILS8	400	45.4	3'(2'),5'-bisphosphate nucleotidase
+OSTTA|SAL1|A0A090N4H9	SAL1	retrograde signalling	yes	OSTTA	green alga	A0A090N4H9	354	45.3	3'(2'),5'-bisphosphate nucleotidase
+VOLCA|SAL1|D8U9Y8	SAL1	retrograde signalling	yes	VOLCA	green alga	D8U9Y8	431	43.4	3'(2'),5'-bisphosphate nucleotidase
+ARATH|PTM|F4JYC8	PTM	retrograde signalling	no	ARATH	land plant	F4JYC8	1706		envelope-bound PHD transcription factor
+VOLCA|PTM|D8UEW1	PTM	retrograde signalling	no	VOLCA	green alga	D8UEW1	102	50.0	PHD-type domain-containing protein
+ARATH|ABI4|A0MES8	ABI4	retrograde signalling	no	ARATH	land plant	A0MES8	328		AP2 transcription factor of retrograde signalling
+ARATH|GLK1|Q9SIV3	GLK1	retrograde signalling	no	ARATH	land plant	Q9SIV3	420		Golden2-like transcription factor of chloroplast development
+ARATH|GLK2|Q9FFH0	GLK2	retrograde signalling	no	ARATH	land plant	Q9FFH0	386		Golden2-like transcription factor of chloroplast development
+ARATH|HY5|O24646	HY5	retrograde signalling	yes	ARATH	land plant	O24646	168		bZIP transcription factor of light signalling
+OSTTA|HY5|Q01G54	HY5	retrograde signalling	yes	OSTTA	green alga	Q01G54	150	56.7	Basic-leucine zipper domain
+ARATH|HEMA1|P42804	HEMA1	retrograde signalling	no	ARATH	land plant	P42804	543		glutamyl-tRNA reductase, first step of tetrapyrrole synthesis
+BRYSP|HEMA1|GMH36452.1	HEMA1	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	GMH36452.1	527	60.6	hypothetical protein BSKO_04320 [Bryopsis sp. KO-2023]
+CHLRE|HEMA1|A0A2K3DKK0	HEMA1	retrograde signalling	no	CHLRE	green alga	A0A2K3DKK0	522	59.2	Glutamyl-tRNA reductase
+CHLVA|HEMA1|E1Z3K3	HEMA1	retrograde signalling	no	CHLVA	green alga	E1Z3K3	516	45.0	Glutamyl-tRNA reductase
+CHOCR|HEMA1|R7QP86	HEMA1	retrograde signalling	no	CHOCR	red alga	R7QP86	421	42.7	Glutamyl-tRNA reductase
+CYAME|HEMA1|M1URF1	HEMA1	retrograde signalling	no	CYAME	red alga	M1URF1	532	43.2	Glutamyl-tRNA reductase
+ECTSI|HEMA1|D8LNJ4	HEMA1	retrograde signalling	no	ECTSI	stramenopile	D8LNJ4	585	40.5	Glutamyl-tRNA reductase
+MICPC|HEMA1|C1N0N8	HEMA1	retrograde signalling	no	MICPC	green alga	C1N0N8	454	56.8	Glutamyl-tRNA reductase
+OSTQU|HEMA1|A0A8S1IM80	HEMA1	retrograde signalling	no	OSTQU	green alga (Bryopsidales)	A0A8S1IM80	478	59.6	Glutamyl-tRNA reductase
+OSTTA|HEMA1|A0A090M5M5	HEMA1	retrograde signalling	no	OSTTA	green alga	A0A090M5M5	530	54.6	Glutamyl-tRNA reductase
+PHATC|HEMA1|B7FT63	HEMA1	retrograde signalling	no	PHATC	stramenopile	B7FT63	512	42.8	Glutamyl-tRNA reductase
+VOLCA|HEMA1|D8TZH2	HEMA1	retrograde signalling	no	VOLCA	green alga	D8TZH2	522	59.5	Glutamyl-tRNA reductase
+ARATH|GSA1|P42799	GSA1	retrograde signalling	no	ARATH	land plant	P42799	474		glutamate-1-semialdehyde aminomutase
+ECTSI|GSA1|D7G5Q0	GSA1	retrograde signalling	no	ECTSI	stramenopile	D7G5Q0	482	68.7	glutamate-1-semialdehyde 2,1-aminomutase
+ARATH|CHLM|Q9SW18	CHLM	retrograde signalling	no	ARATH	land plant	Q9SW18	312		Mg-protoporphyrin IX methyltransferase
+BRYSP|CHLM|GMH37321.1	CHLM	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	GMH37321.1	329	60.4	hypothetical protein BSKO_05194 [Bryopsis sp. KO-2023]
+CHLRE|CHLM|A8JGJ6	CHLM	retrograde signalling	no	CHLRE	green alga	A8JGJ6	326	60.2	Magnesium-protoporphyrin IX methyltransferase C-terminal domain-containing protein
+CHLVA|CHLM|E1ZQY3	CHLM	retrograde signalling	no	CHLVA	green alga	E1ZQY3	263	60.2	Magnesium-protoporphyrin IX methyltransferase C-terminal domain-containing protein (Fragment)
+CYAME|CHLM|M1V7N8	CHLM	retrograde signalling	no	CYAME	red alga	M1V7N8	292	51.8	Mg-protoporphyrin O-methyltransferase
+ECTSI|CHLM|D7FQ20	CHLM	retrograde signalling	no	ECTSI	stramenopile	D7FQ20	291	57.8	Magnesium-protoporphyrin IX methyltransferase, putative chloroplast
+MICPC|CHLM|C1MQQ8	CHLM	retrograde signalling	no	MICPC	green alga	C1MQQ8	330	57.7	Magnesium-protoporphyrin IX methyltransferase chloroplast
+OSTTA|CHLM|Q015B4	CHLM	retrograde signalling	no	OSTTA	green alga	Q015B4	331	56.3	Magnesium-protoporphyrin IX methyltransferase
+PHATC|CHLM|B7FTQ8	CHLM	retrograde signalling	no	PHATC	stramenopile	B7FTQ8	258	55.3	Magnesium-protoporphyrin IX methyltransferase
+VOLCA|CHLM|D8TNN2	CHLM	retrograde signalling	no	VOLCA	green alga	D8TNN2	335	59.7	Magnesium protoporphyrin IX S-adenosyl methionine O-methyl transferase chloroplast
+ARATH|CRD1|Q9M591	CRD1	retrograde signalling	no	ARATH	land plant	Q9M591	409		Mg-protoporphyrin IX monomethyl ester cyclase
+BRYSP|CRD1|GMH40164.1	CRD1	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	GMH40164.1	397	69.4	hypothetical protein BSKO_08068 [Bryopsis sp. KO-2023]
+CHLRE|CRD1|A0A2K3D2M2	CRD1	retrograde signalling	no	CHLRE	green alga	A0A2K3D2M2	404	69.5	magnesium-protoporphyrin IX monomethyl ester (oxidative) cyclase
+CHLVA|CRD1|E1ZCU9	CRD1	retrograde signalling	no	CHLVA	green alga	E1ZCU9	365	64.5	magnesium-protoporphyrin IX monomethyl ester (oxidative) cyclase
+CHOCR|CRD1|M5DDF8	CRD1	retrograde signalling	no	CHOCR	red alga	M5DDF8	349	60.4	Probable magnesium-protoporphyrin IX monomethyl ester [oxidative] cyclase
+CYAME|CRD1|Q85FX6	CRD1	retrograde signalling	no	CYAME	red alga	Q85FX6	335	63.9	Magnesium-protoporphyrin IX monomethyl ester [oxidative] cyclase
+ECTSI|CRD1|A0ACM9J377	CRD1	retrograde signalling	no	ECTSI	stramenopile	A0ACM9J377	365	62.8	Magnesium-protoporphyrin IX monomethyl ester [oxidative] cyclase
+MICPC|CRD1|C1N6J1	CRD1	retrograde signalling	no	MICPC	green alga	C1N6J1	414	68.4	magnesium-protoporphyrin IX monomethyl ester (oxidative) cyclase
+OSTQU|CRD1|A0A8S1IZ67	CRD1	retrograde signalling	no	OSTQU	green alga (Bryopsidales)	A0A8S1IZ67	428	69.3	magnesium-protoporphyrin IX monomethyl ester (oxidative) cyclase
+OSTTA|CRD1|A0A096PB99	CRD1	retrograde signalling	no	OSTTA	green alga	A0A096PB99	404	67.5	magnesium-protoporphyrin IX monomethyl ester (oxidative) cyclase
+VOLCA|CRD1|D8TP77	CRD1	retrograde signalling	no	VOLCA	green alga	D8TP77	407	70.6	magnesium-protoporphyrin IX monomethyl ester (oxidative) cyclase
+ARATH|PORA|Q42536	PORA	retrograde signalling	yes	ARATH	land plant	Q42536	405		protochlorophyllide reductase (short-chain dehydrogenase family)
+BRYSP|PORA|GMH44124.1	PORA,PORB	retrograde signalling	yes	BRYSP	green alga (Bryopsidales)	GMH44124.1	401	56.6	hypothetical protein BSKO_12058 [Bryopsis sp. KO-2023]
+OSTTA|PORA|Q015J2	PORA,PORB	retrograde signalling	yes	OSTTA	green alga	Q015J2	412	51.7	NADPH-protochlorophyllide oxidoreductase
+PHATC|PORA|B7FY80	PORA,PORB	retrograde signalling	yes	PHATC	stramenopile	B7FY80	433	51.8	protochlorophyllide reductase
+ARATH|PORB|P21218	PORB	retrograde signalling	yes	ARATH	land plant	P21218	401		protochlorophyllide reductase
+ARATH|CAO|Q9MBA1	CAO	retrograde signalling	no	ARATH	land plant	Q9MBA1	536		chlorophyllide a oxygenase
+BRYSP|CAO|GMH40354.1	CAO	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	GMH40354.1	514	49.2	hypothetical protein BSKO_08258 [Bryopsis sp. KO-2023]
+CHLRE|CAO|A8HMS2	CAO	retrograde signalling	no	CHLRE	green alga	A8HMS2	645	61.3	Uncharacterized protein
+CHLVA|CAO|E1ZQJ7	CAO	retrograde signalling	no	CHLVA	green alga	E1ZQJ7	683	43.5	Rieske domain-containing protein
+MICPC|CAO|C1MZ04	CAO	retrograde signalling	no	MICPC	green alga	C1MZ04	390	41.1	Chlorophyll a oxygenase
+OSTTA|CAO|A0A090MCR3	CAO	retrograde signalling	no	OSTTA	green alga	A0A090MCR3	383	42.2	Pheophorbide a oxygenase
+VOLCA|CAO|D8U5H3	CAO	retrograde signalling	no	VOLCA	green alga	D8U5H3	657	60.4	Chlorophyll a oxygenase
+ARATH|CHLG|Q38833	CHLG	retrograde signalling	yes	ARATH	land plant	Q38833	387		chlorophyll synthase (UbiA prenyltransferase family)
+BRYSP|CHLG|GMH39773.1	CHLG	retrograde signalling	yes	BRYSP	green alga (Bryopsidales)	GMH39773.1	386	69.2	hypothetical protein BSKO_07671 [Bryopsis sp. KO-2023]
+CHLRE|CHLG|A8JFJ1	CHLG	retrograde signalling	yes	CHLRE	green alga	A8JFJ1	383	66.3	Uncharacterized protein
+CHLVA|CHLG|E1ZA19	CHLG	retrograde signalling	yes	CHLVA	green alga	E1ZA19	409	74.5	Chlorophyll synthase
+CHOCR|CHLG|R7QL79	CHLG	retrograde signalling	yes	CHOCR	red alga	R7QL79	342	68.1	Chlorophyll a synthase
+CYAME|CHLG|M1VMG3	CHLG	retrograde signalling	yes	CYAME	red alga	M1VMG3	403	66.2	Chlorophyll a synthase
+ECTSI|CHLG|D7G581	CHLG	retrograde signalling	yes	ECTSI	stramenopile	D7G581	417	65.8	Chlorophyll synthase, putative chloroplast
+MICPC|CHLG|C1MSS6	CHLG	retrograde signalling	yes	MICPC	green alga	C1MSS6	361	68.0	Chlorophyll synthetase
+OSTQU|CHLG|A0A8S1IRK1	CHLG	retrograde signalling	yes	OSTQU	green alga (Bryopsidales)	A0A8S1IRK1	411	67.9	Chlorophyll synthase
+OSTTA|CHLG|A0A090MCH7	CHLG	retrograde signalling	yes	OSTTA	green alga	A0A090MCH7	379	63.6	UbiA prenyltransferase family (Fragment)
+PHATC|CHLG|B7G006	CHLG	retrograde signalling	yes	PHATC	stramenopile	B7G006	423	68.8	Chlorophyll synthase
+VOLCA|CHLG|D8TS41	CHLG	retrograde signalling	yes	VOLCA	green alga	D8TS41	380	69.4	Chlorophyll synthase
+ARATH|DXS|Q38854	DXS	retrograde signalling	yes	ARATH	land plant	Q38854	717		MEP pathway (transketolase family)
+BRYSP|DXS|GMH36910.1	DXS	retrograde signalling	yes	BRYSP	green alga (Bryopsidales)	GMH36910.1	737	66.8	hypothetical protein BSKO_04783 [Bryopsis sp. KO-2023]
+CHLRE|DXS|A0A2K3DLN0	DXS	retrograde signalling	yes	CHLRE	green alga	A0A2K3DLN0	735	69.6	1-deoxy-D-xylulose-5-phosphate synthase
+CHLVA|DXS|E1ZQR7	DXS	retrograde signalling	yes	CHLVA	green alga	E1ZQR7	720	68.3	1-deoxy-D-xylulose-5-phosphate synthase
+CHOCR|DXS|R7QHM0	DXS	retrograde signalling	yes	CHOCR	red alga	R7QHM0	732	59.2	1-deoxy-D-xylulose-5-phosphate synthase
+CYAME|DXS|M1VB53	DXS	retrograde signalling	yes	CYAME	red alga	M1VB53	772	56.8	1-deoxy-D-xylulose-5-phosphate synthase
+ECTSI|DXS|D7G8U2	DXS	retrograde signalling	yes	ECTSI	stramenopile	D7G8U2	795	53.5	1-deoxy-D-xylulose-5-phosphate synthase
+MICPC|DXS|C1MKH6	DXS	retrograde signalling	yes	MICPC	green alga	C1MKH6	739	69.7	1-deoxy-D-xylulose-5-phosphate synthase
+OSTQU|DXS|A0A8S1J138	DXS	retrograde signalling	yes	OSTQU	green alga (Bryopsidales)	A0A8S1J138	737	68.8	1-deoxy-D-xylulose-5-phosphate synthase
+OSTTA|DXS|Q01EJ0	DXS	retrograde signalling	yes	OSTTA	green alga	Q01EJ0	741	68.6	1-deoxy-D-xylulose-5-phosphate synthase
+PHATC|DXS|B7S452	DXS	retrograde signalling	yes	PHATC	stramenopile	B7S452	730	53.4	1-deoxy-D-xylulose-5-phosphate synthase
+VOLCA|DXS|D8UE88	DXS	retrograde signalling	yes	VOLCA	green alga	D8UE88	728	69.0	1-deoxy-D-xylulose-5-phosphate synthase
+ARATH|DXR|Q9XFS9	DXR	retrograde signalling	no	ARATH	land plant	Q9XFS9	477		MEP pathway
+BRYSP|DXR|GMH42809.1	DXR	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	GMH42809.1	461	71.4	hypothetical protein BSKO_10728 [Bryopsis sp. KO-2023]
+CHLRE|DXR|A0A2K3D6J2	DXR	retrograde signalling	no	CHLRE	green alga	A0A2K3D6J2	455	69.6	1-deoxy-D-xylulose-5-phosphate reductoisomerase
+CHLVA|DXR|E1Z6V5	DXR	retrograde signalling	no	CHLVA	green alga	E1Z6V5	455	71.3	1-deoxy-D-xylulose-5-phosphate reductoisomerase
+CHOCR|DXR|R7QSD4	DXR	retrograde signalling	no	CHOCR	red alga	R7QSD4	466	62.9	1-deoxy-D-xylulose 5-phosphate reductoisomerase, apicoplastic
+CYAME|DXR|M1V7B9	DXR	retrograde signalling	no	CYAME	red alga	M1V7B9	495	60.8	1-deoxy-D-xylulose 5-phosphate reductoisomerase, apicoplastic
+ECTSI|DXR|D7FLF2	DXR	retrograde signalling	no	ECTSI	stramenopile	D7FLF2	430	61.8	1-deoxy-D-xylulose 5-phosphate reductoisomerase, apicoplastic
+MICPC|DXR|C1MVB2	DXR	retrograde signalling	no	MICPC	green alga	C1MVB2	457	66.7	1-deoxy-D-xylulose-5-phosphate reductoisomerase
+OSTQU|DXR|A0A8S1IMH2	DXR	retrograde signalling	no	OSTQU	green alga (Bryopsidales)	A0A8S1IMH2	470	71.3	1-deoxy-D-xylulose-5-phosphate reductoisomerase
+OSTTA|DXR|A0A090M4N3	DXR	retrograde signalling	no	OSTTA	green alga	A0A090M4N3	467	64.0	1-deoxy-D-xylulose-5-phosphate reductoisomerase
+PHATC|DXR|B7FQZ5	DXR	retrograde signalling	no	PHATC	stramenopile	B7FQZ5	483	56.7	1-deoxy-D-xylulose 5-phosphate reductoisomerase, apicoplastic
+VOLCA|DXR|D8U4X2	DXR	retrograde signalling	no	VOLCA	green alga	D8U4X2	456	71.8	1-deoxy-D-xylulose-5-phosphate reductoisomerase
+ARATH|ISPF|Q9CAK8	ISPF	retrograde signalling	no	ARATH	land plant	Q9CAK8	231		MEP pathway, makes the retrograde signal MEcPP
+BRYSP|ISPF|GMH34406.1	ISPF	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	GMH34406.1	229	77.8	hypothetical protein BSKO_02240 [Bryopsis sp. KO-2023]
+CHLRE|ISPF|A8IJL3	ISPF	retrograde signalling	no	CHLRE	green alga	A8IJL3	207	72.0	2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase
+CHLVA|ISPF|E1ZJY8	ISPF	retrograde signalling	no	CHLVA	green alga	E1ZJY8	223	76.1	2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase
+CHOCR|ISPF|R7QC45	ISPF	retrograde signalling	no	CHOCR	red alga	R7QC45	355	61.7	2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase
+CYAME|ISPF|M1VMN6	ISPF	retrograde signalling	no	CYAME	red alga	M1VMN6	368	65.4	2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase
+ECTSI|ISPF|D7FSD9	ISPF	retrograde signalling	no	ECTSI	stramenopile	D7FSD9	168	61.0	2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase
+MICPC|ISPF|C1N0H8	ISPF	retrograde signalling	no	MICPC	green alga	C1N0H8	162	75.0	2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase
+OSTQU|ISPF|A0A8S1IX03	ISPF	retrograde signalling	no	OSTQU	green alga (Bryopsidales)	A0A8S1IX03	173	67.1	2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase
+OSTTA|ISPF|Q00ZE9	ISPF	retrograde signalling	no	OSTTA	green alga	Q00ZE9	206	73.0	2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase
+PHATC|ISPF|B7FYU2	ISPF	retrograde signalling	no	PHATC	stramenopile	B7FYU2	218	52.5	2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase
+VOLCA|ISPF|D8TND6	ISPF	retrograde signalling	no	VOLCA	green alga	D8TND6	197	75.0	2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase
+ARATH|HDS|F4K0E8	HDS	retrograde signalling	no	ARATH	land plant	F4K0E8	741		MEP pathway
+BRYSP|HDS|GMH42640.1	HDS	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	GMH42640.1	720	61.8	hypothetical protein BSKO_10559 [Bryopsis sp. KO-2023]
+CHLRE|HDS|A8ILN4	HDS	retrograde signalling	no	CHLRE	green alga	A8ILN4	681	63.8	4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase (ferredoxin), chloroplastic
+CHLVA|HDS|E1ZCS3	HDS	retrograde signalling	no	CHLVA	green alga	E1ZCS3	698	56.2	4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase
+CHOCR|HDS|R7QCN9	HDS	retrograde signalling	no	CHOCR	red alga	R7QCN9	477	29.1	4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase
+CYAME|HDS|M1VIF2	HDS	retrograde signalling	no	CYAME	red alga	M1VIF2	507	29.4	4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase
+ECTSI|HDS|D7FRY5	HDS	retrograde signalling	no	ECTSI	stramenopile	D7FRY5	695	59.6	4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase (ferredoxin), chloroplastic
+MICPC|HDS|C1MNJ9	HDS	retrograde signalling	no	MICPC	green alga	C1MNJ9	732	59.5	4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase (ferredoxin), chloroplastic
+OSTQU|HDS|A0A8S1J034	HDS	retrograde signalling	no	OSTQU	green alga (Bryopsidales)	A0A8S1J034	721	62.2	4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase (ferredoxin), chloroplastic
+OSTTA|HDS|Q012C2	HDS	retrograde signalling	no	OSTTA	green alga	Q012C2	726	61.8	4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase (ferredoxin), chloroplastic
+PHATC|HDS|B7FV10	HDS	retrograde signalling	no	PHATC	stramenopile	B7FV10	757	55.4	4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase (ferredoxin), chloroplastic
+VOLCA|HDS|D8U477	HDS	retrograde signalling	no	VOLCA	green alga	D8U477	679	63.8	4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase (ferredoxin), chloroplastic
+ARATH|HDR|Q94B35	HDR	retrograde signalling	no	ARATH	land plant	Q94B35	466		MEP pathway
+BRYSP|HDR|GMH44369.1	HDR	retrograde signalling	no	BRYSP	green alga (Bryopsidales)	GMH44369.1	461	49.6	hypothetical protein BSKO_12303 [Bryopsis sp. KO-2023]
+CHLRE|HDR|A8JEV9	HDR	retrograde signalling	no	CHLRE	green alga	A8JEV9	465	54.7	4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+CHLVA|HDR|E1ZCI4	HDR	retrograde signalling	no	CHLVA	green alga	E1ZCI4	505	54.8	4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+CHOCR|HDR|R7QBX7	HDR	retrograde signalling	no	CHOCR	red alga	R7QBX7	446	54.7	4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+CYAME|HDR|M1V838	HDR	retrograde signalling	no	CYAME	red alga	M1V838	463	55.0	4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+ECTSI|HDR|D8LGB8	HDR	retrograde signalling	no	ECTSI	stramenopile	D8LGB8	454	55.9	4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+MICPC|HDR|C1MT01	HDR	retrograde signalling	no	MICPC	green alga	C1MT01	523	61.0	4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+OSTTA|HDR|Q013S6	HDR	retrograde signalling	no	OSTTA	green alga	Q013S6	456	58.6	4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+PHATC|HDR|B7FUL0	HDR	retrograde signalling	no	PHATC	stramenopile	B7FUL0	458	48.6	4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+VOLCA|HDR|D8TLJ9	HDR	retrograde signalling	no	VOLCA	green alga	D8TLJ9	472	59.1	4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+ARATH|PHYA|P14712	PHYA	light signalling	no	ARATH	land plant	P14712	1122		phytochrome
+ARATH|PHYB|P14713	PHYB	light signalling	no	ARATH	land plant	P14713	1172		phytochrome
+ARATH|PHOT1|O48963	PHOT1	light signalling	no	ARATH	land plant	O48963	996		phototropin (LOV kinase)
+BRYSP|PHOT1|GMH33892.1	PHOT1,PHOT2	light signalling	no	BRYSP	green alga (Bryopsidales)	GMH33892.1	705	40.6	hypothetical protein BSKO_01726 [Bryopsis sp. KO-2023]
+CHLRE|PHOT1|Q8LPD9	PHOT1,PHOT2	light signalling	no	CHLRE	green alga	Q8LPD9	749	41.6	Phototropin
+CHLVA|PHOT1|E1ZSC2	PHOT1,PHOT2	light signalling	no	CHLVA	green alga	E1ZSC2	796	41.4	non-specific serine/threonine protein kinase
+CYAME|PHOT1|M1VCP3	PHOT1,PHOT2	light signalling	no	CYAME	red alga	M1VCP3	476	50.0	non-specific serine/threonine protein kinase
+MICPC|PHOT1|C1N6H8	PHOT1,PHOT2	light signalling	no	MICPC	green alga	C1N6H8	819	38.2	non-specific serine/threonine protein kinase
+OSTQU|PHOT1|A0A8S1J8V3	PHOT1,PHOT2	light signalling	no	OSTQU	green alga (Bryopsidales)	A0A8S1J8V3	654	41.2	non-specific serine/threonine protein kinase
+OSTTA|PHOT1|A0A096P896	PHOT1,PHOT2	light signalling	no	OSTTA	green alga	A0A096P896	881	39.7	non-specific serine/threonine protein kinase
+VOLCA|PHOT1|D8TV96	PHOT1,PHOT2	light signalling	no	VOLCA	green alga	D8TV96	744	42.9	non-specific serine/threonine protein kinase
+ARATH|PHOT2|P93025	PHOT2	light signalling	no	ARATH	land plant	P93025	915		phototropin (LOV kinase)
+ARATH|CRY1|Q43125	CRY1	light signalling	yes	ARATH	land plant	Q43125	681		plant cryptochrome
+BRYSP|CRY1|GMH43542.1	CRY1,CRY2	light signalling	yes	BRYSP	green alga (Bryopsidales)	GMH43542.1	473	36.6	hypothetical protein BSKO_11464 [Bryopsis sp. KO-2023]
+CHLRE|CRY1|A8JFI1	CRY1,CRY2	light signalling	yes	CHLRE	green alga	A8JFI1	1008	50.8	Uncharacterized protein
+CHOCR|CRY1|R7Q2P4	CRY1,CRY2	light signalling	yes	CHOCR	red alga	R7Q2P4	1417	33.7	Photolyase/cryptochrome alpha/beta domain-containing protein
+CYAME|CRY1|M1VDQ4	CRY1,CRY2	light signalling	yes	CYAME	red alga	M1VDQ4	1225	38.4	Probable cryptochrome
+MICPC|CRY1|C1MT40	CRY1,CRY2	light signalling	yes	MICPC	green alga	C1MT40	527	32.8	Predicted protein (Fragment)
+OSTQU|CRY1|A0A8S1IXK9	CRY1,CRY2	light signalling	yes	OSTQU	green alga (Bryopsidales)	A0A8S1IXK9	613	45.0	Photolyase/cryptochrome alpha/beta domain-containing protein
+OSTTA|CRY1|A0A096P9W2	CRY1,CRY2	light signalling	yes	OSTTA	green alga	A0A096P9W2	698	27.5	Cryptochrome/DNA photolyase, class 1
+PHATC|CRY1|B7FWG0	CRY1,CRY2	light signalling	yes	PHATC	stramenopile	B7FWG0	585	30.2	Photolyase/cryptochrome alpha/beta domain-containing protein (Fragment)
+VOLCA|CRY1|D8UF46	CRY1,CRY2	light signalling	yes	VOLCA	green alga	D8UF46	914	49.8	Deoxyribodipyrimidine photolyase, class 1
+ARATH|CRY2|Q96524	CRY2	light signalling	yes	ARATH	land plant	Q96524	612		plant cryptochrome
+ARATH|CRY3|Q84KJ5	CRY3	light signalling	yes	ARATH	land plant	Q84KJ5	569		cryptochrome DASH
+CHLRE|CRY3|A0A2K3E0E6	CRY3	light signalling	yes	CHLRE	green alga	A0A2K3E0E6	612	44.7	Cryptochrome DASH
+CHLVA|CRY3|E1ZDG8	CRY3	light signalling	yes	CHLVA	green alga	E1ZDG8	1184	40.2	Photolyase/cryptochrome alpha/beta domain-containing protein
+CHOCR|CRY3|R7QSK1	CRY3	light signalling	yes	CHOCR	red alga	R7QSK1	620	36.3	Cryptochrome DASH
+CYAME|CRY3|M1V828	CRY3	light signalling	yes	CYAME	red alga	M1V828	669	40.2	Cryptochrome DASH
+ECTSI|CRY3|D7FPZ3	CRY3	light signalling	yes	ECTSI	stramenopile	D7FPZ3	571	46.0	Cryptochrome DASH
+MICPC|CRY3|C1N4D5	CRY3	light signalling	yes	MICPC	green alga	C1N4D5	561	41.6	Cryptochrome DASH
+OSTTA|CRY3|Q5IFN2	CRY3	light signalling	yes	OSTTA	green alga	Q5IFN2	546	45.2	Cryptochrome DASH, chloroplastic/mitochondrial
+PHATC|CRY3|B7FV99	CRY3	light signalling	yes	PHATC	stramenopile	B7FV99	610	38.8	Cryptochrome DASH
+VOLCA|CRY3|D8U4Q6	CRY3	light signalling	yes	VOLCA	green alga	D8U4Q6	1025	43.2	Photolyase/cryptochrome alpha/beta domain-containing protein
+ARATH|UVR8|Q9FN03	UVR8	light signalling	yes	ARATH	land plant	Q9FN03	440		UV-B receptor (RCC1 repeats)
+BRYSP|UVR8|GMH38662.1	UVR8	light signalling	yes	BRYSP	green alga (Bryopsidales)	GMH38662.1	344	36.4	hypothetical protein BSKO_06546 [Bryopsis sp. KO-2023]
+CHLRE|UVR8|A0A2K3DS03	UVR8	light signalling	yes	CHLRE	green alga	A0A2K3DS03	465	49.1	RCC1-like domain-containing protein
+CHLVA|UVR8|E1ZGJ4	UVR8	light signalling	yes	CHLVA	green alga	E1ZGJ4	434	42.4	RCC1-like domain-containing protein
+CHOCR|UVR8|R7QRD3	UVR8	light signalling	yes	CHOCR	red alga	R7QRD3	537	31.1	RCC1-like domain-containing protein
+ECTSI|UVR8|D7G5L0	UVR8	light signalling	yes	ECTSI	stramenopile	D7G5L0	669	34.2	RCC1-like domain-containing protein
+OSTTA|UVR8|A0A090N351	UVR8	light signalling	yes	OSTTA	green alga	A0A090N351	419	32.9	Regulator of chromosome condensation, RCC1
+PHATC|UVR8|B7G795	UVR8	light signalling	yes	PHATC	stramenopile	B7G795	341	36.5	RCC1-like domain-containing protein (Fragment)
+VOLCA|UVR8|D8UKL7	UVR8	light signalling	yes	VOLCA	green alga	D8UKL7	367	55.4	RCC1-like domain-containing protein
+ARATH|ZTL|Q94BT6	ZTL	light signalling	no	ARATH	land plant	Q94BT6	609		LOV F-box kelch protein, clock
+BRYSP|ZTL|GMH45119.1	ZTL	light signalling	no	BRYSP	green alga (Bryopsidales)	GMH45119.1	341	26.7	hypothetical protein BSKO_13076 [Bryopsis sp. KO-2023]
+MICPC|ZTL|C1MU98	ZTL,LKP2	light signalling	no	MICPC	green alga	C1MU98	542	27.1	Predicted protein
+ARATH|LKP2|Q8W420	LKP2	light signalling	no	ARATH	land plant	Q8W420	611		LOV F-box kelch protein, clock
+CHLVA|LKP2|E1ZLQ4	LKP2	light signalling	no	CHLVA	green alga	E1ZLQ4	625	28.4	Uncharacterized protein
+ARATH|FKF1|Q9C9W9	FKF1	light signalling	no	ARATH	land plant	Q9C9W9	619		LOV F-box kelch protein, clock
+ARATH|COP1|P43254	COP1	light signalling	yes	ARATH	land plant	P43254	675		E3 ligase of light signalling
+CHLVA|COP1|E1Z5I5	COP1	light signalling	yes	CHLVA	green alga	E1Z5I5	641	41.4	RING-type domain-containing protein (Fragment)
+CHOCR|COP1|R7Q8L1	COP1	light signalling	yes	CHOCR	red alga	R7Q8L1	704	45.5	E3 ubiquitin-protein ligase
+CYAME|COP1|M1V895	COP1	light signalling	yes	CYAME	red alga	M1V895	855	32.0	Photoregulatory zinc-finger protein COP1
+MICPC|COP1|C1MH16	COP1	light signalling	yes	MICPC	green alga	C1MH16	669	37.8	Predicted protein
+OSTTA|COP1|A0A090M9T9	COP1	light signalling	yes	OSTTA	green alga	A0A090M9T9	961	45.2	Signal transduction response regulator, receiver domain
+ARATH|SPA1|Q9SYX2	SPA1	light signalling	no	ARATH	land plant	Q9SYX2	1029		partner of COP1
+VOLCA|SPA1|D8U4G6	SPA1	light signalling	no	VOLCA	green alga	D8U4G6	353	47.6	Uncharacterized protein (Fragment)
+ARATH|DET1|P48732	DET1	light signalling	yes	ARATH	land plant	P48732	543		repressor of photomorphogenesis
+CHLRE|DET1|A0A2K3CZU4	DET1	light signalling	yes	CHLRE	green alga	A0A2K3CZU4	981	25.5	Uncharacterized protein
+CHOCR|DET1|R7QAJ5	DET1	light signalling	yes	CHOCR	red alga	R7QAJ5	734	28.3	Uncharacterized protein
+OSTTA|DET1|A0A090N405	DET1	light signalling	yes	OSTTA	green alga	A0A090N405	588	27.0	De-etiolated protein 1, Det1
+VOLCA|DET1|D8TRZ9	DET1	light signalling	yes	VOLCA	green alga	D8TRZ9	914	25.7	Uncharacterized protein
+ARATH|STN7|Q9S713	STN7	photosynthesis regulation	no	ARATH	land plant	Q9S713	562		state-transition kinase
+BRYSP|STN7|GMH32543.1	STN7,STN8	photosynthesis regulation	no	BRYSP	green alga (Bryopsidales)	GMH32543.1	546	47.6	hypothetical protein BSKO_00377 [Bryopsis sp. KO-2023]
+CHLRE|STN7|A0A2K3E3K7	STN7	photosynthesis regulation	no	CHLRE	green alga	A0A2K3E3K7	743	45.6	non-specific serine/threonine protein kinase
+CHLVA|STN7|E1ZP43	STN7,STN8	photosynthesis regulation	no	CHLVA	green alga	E1ZP43	602	50.3	Protein kinase domain-containing protein
+MICPC|STN7|C1MQD6	STN7	photosynthesis regulation	no	MICPC	green alga	C1MQD6	670	44.1	Predicted protein
+OSTQU|STN7|A0A8S1J3W4	STN7	photosynthesis regulation	no	OSTQU	green alga (Bryopsidales)	A0A8S1J3W4	862	38.6	Protein kinase domain-containing protein
+OSTTA|STN7|A0A090MB91	STN7,STN8	photosynthesis regulation	no	OSTTA	green alga	A0A090MB91	640	46.6	Serine/threonine-protein kinase, active site
+VOLCA|STN7|D8UAF6	STN7	photosynthesis regulation	no	VOLCA	green alga	D8UAF6	762	47.0	Protein kinase domain-containing protein
+ARATH|STN8|Q9LZV4	STN8	photosynthesis regulation	no	ARATH	land plant	Q9LZV4	495		PSII core kinase
+CHLRE|STN8|A0A2K3D1N2	STN8	photosynthesis regulation	no	CHLRE	green alga	A0A2K3D1N2	458	40.4	Protein kinase domain-containing protein
+MICPC|STN8|C1MH85	STN8	photosynthesis regulation	no	MICPC	green alga	C1MH85	362	37.1	Predicted protein (Fragment)
+OSTQU|STN8|A0A8S1J302	STN8	photosynthesis regulation	no	OSTQU	green alga (Bryopsidales)	A0A8S1J302	518	40.7	Protein kinase domain-containing protein
+VOLCA|STN8|D8U435	STN8	photosynthesis regulation	no	VOLCA	green alga	D8U435	497	40.4	Protein kinase domain-containing protein
+ARATH|PPH1/TAP38|P49599	PPH1/TAP38	photosynthesis regulation	yes	ARATH	land plant	P49599	388		LHCII phosphatase (PP2C)
+BRYSP|PPH1/TAP38|GMH45465.1	PPH1/TAP38	photosynthesis regulation	yes	BRYSP	green alga (Bryopsidales)	GMH45465.1	457	36.5	hypothetical protein BSKO_13422 [Bryopsis sp. KO-2023]
+CHLRE|PPH1/TAP38|A0A2K3DU16	PPH1/TAP38	photosynthesis regulation	yes	CHLRE	green alga	A0A2K3DU16	436	36.9	protein-serine/threonine phosphatase
+CHLVA|PPH1/TAP38|E1ZJ15	PPH1/TAP38	photosynthesis regulation	yes	CHLVA	green alga	E1ZJ15	208	36.0	PPM-type phosphatase domain-containing protein
+MICPC|PPH1/TAP38|C1N516	PPH1/TAP38	photosynthesis regulation	yes	MICPC	green alga	C1N516	364	34.0	Predicted protein
+OSTQU|PPH1/TAP38|A0A8S1ISS7	PPH1/TAP38	photosynthesis regulation	yes	OSTQU	green alga (Bryopsidales)	A0A8S1ISS7	504	36.6	PPM-type phosphatase domain-containing protein
+OSTTA|PPH1/TAP38|Q01EE0	PPH1/TAP38	photosynthesis regulation	yes	OSTTA	green alga	Q01EE0	392	32.1	protein-serine/threonine phosphatase
+VOLCA|PPH1/TAP38|D8UFU1	PPH1/TAP38	photosynthesis regulation	yes	VOLCA	green alga	D8UFU1	321	40.3	protein-serine/threonine phosphatase (Fragment)
+ARATH|CAS|Q9FN48	CAS	photosynthesis regulation	no	ARATH	land plant	Q9FN48	387		thylakoid calcium-sensing receptor
+BRYSP|CAS|GMH40712.1	CAS	photosynthesis regulation	no	BRYSP	green alga (Bryopsidales)	GMH40712.1	405	27.0	hypothetical protein BSKO_08616 [Bryopsis sp. KO-2023]
+CHLRE|CAS|A8JGM1	CAS	photosynthesis regulation	no	CHLRE	green alga	A8JGM1	378	33.5	Rhodanese domain-containing protein
+CHLVA|CAS|E1Z7L4	CAS	photosynthesis regulation	no	CHLVA	green alga	E1Z7L4	416	27.4	Rhodanese domain-containing protein
+MICPC|CAS|C1N210	CAS	photosynthesis regulation	no	MICPC	green alga	C1N210	386	30.0	Predicted protein
+OSTQU|CAS|A0A8S1IQ20	CAS	photosynthesis regulation	no	OSTQU	green alga (Bryopsidales)	A0A8S1IQ20	396	31.4	Rhodanese domain-containing protein
+OSTTA|CAS|A0A090N3P6	CAS	photosynthesis regulation	no	OSTTA	green alga	A0A090N3P6	298	33.0	Rhodanese-like domain
+VOLCA|CAS|D8TN40	CAS	photosynthesis regulation	no	VOLCA	green alga	D8TN40	386	33.2	Rhodanese domain-containing protein
+ARATH|PGR5|Q9SL05	PGR5	photosynthesis regulation	no	ARATH	land plant	Q9SL05	133		cyclic electron flow
+BRYSP|PGR5|GMH38585.1	PGR5	photosynthesis regulation	no	BRYSP	green alga (Bryopsidales)	GMH38585.1	118	53.6	hypothetical protein BSKO_06469 [Bryopsis sp. KO-2023]
+CHLRE|PGR5|A8I547	PGR5	photosynthesis regulation	no	CHLRE	green alga	A8I547	141	53.6	Uncharacterized protein
+CHLVA|PGR5|E1ZN68	PGR5	photosynthesis regulation	no	CHLVA	green alga	E1ZN68	115	64.0	Uncharacterized protein
+CYAME|PGR5|M1VIA2	PGR5	photosynthesis regulation	no	CYAME	red alga	M1VIA2	139	60.6	PGR5
+ECTSI|PGR5|D7G229	PGR5	photosynthesis regulation	no	ECTSI	stramenopile	D7G229	144	46.7	Proton gradient regulation
+MICPC|PGR5|C1MZT9	PGR5	photosynthesis regulation	no	MICPC	green alga	C1MZT9	97	64.8	Predicted protein
+OSTQU|PGR5|A0A8S1JA36	PGR5	photosynthesis regulation	no	OSTQU	green alga (Bryopsidales)	A0A8S1JA36	83	63.1	Protein PROTON GRADIENT REGULATION 5, chloroplastic (Fragment)
+OSTTA|PGR5|Q00X85	PGR5	photosynthesis regulation	no	OSTTA	green alga	Q00X85	90	53.8	Unnamed product
+PHATC|PGR5|B7FVH9	PGR5	photosynthesis regulation	no	PHATC	stramenopile	B7FVH9	132	36.1	Uncharacterized protein
+VOLCA|PGR5|A0ACM8Q0W4	PGR5	photosynthesis regulation	no	VOLCA	green alga	A0ACM8Q0W4	144	55.0	Thylakoid membrane protein
+ARATH|PGRL1A|Q8H112	PGRL1A	photosynthesis regulation	no	ARATH	land plant	Q8H112	324		cyclic electron flow
+BRYSP|PGRL1A|GMH45776.1	PGRL1A,PGRL1B	photosynthesis regulation	no	BRYSP	green alga (Bryopsidales)	GMH45776.1	316	49.8	hypothetical protein BSKO_13739 [Bryopsis sp. KO-2023]
+CHLRE|PGRL1A|A8ITK6	PGRL1A,PGRL1B	photosynthesis regulation	no	CHLRE	green alga	A8ITK6	333	49.6	Uncharacterized protein
+CHLVA|PGRL1A|E1Z739	PGRL1A,PGRL1B	photosynthesis regulation	no	CHLVA	green alga	E1Z739	305	51.7	PGR5-like protein 1A, chloroplastic
+CHOCR|PGRL1A|R7QP96	PGRL1A,PGRL1B	photosynthesis regulation	no	CHOCR	red alga	R7QP96	338	39.0	PGR5-like protein 1A, chloroplastic
+CYAME|PGRL1A|M1UXN8	PGRL1A,PGRL1B	photosynthesis regulation	no	CYAME	red alga	M1UXN8	328	35.7	Uncharacterized protein
+ECTSI|PGRL1A|D7FM52	PGRL1A,PGRL1B	photosynthesis regulation	no	ECTSI	stramenopile	D7FM52	347	37.5	Uncharacterized protein
+PHATC|PGRL1A|B7FRN6	PGRL1A,PGRL1B	photosynthesis regulation	no	PHATC	stramenopile	B7FRN6	326	38.6	Uncharacterized protein
+VOLCA|PGRL1A|D8TZE0	PGRL1A,PGRL1B	photosynthesis regulation	no	VOLCA	green alga	D8TZE0	339	45.2	PGR5-like protein 1A, chloroplastic
+ARATH|PGRL1B|Q8GYC7	PGRL1B	photosynthesis regulation	no	ARATH	land plant	Q8GYC7	313		cyclic electron flow
+ARATH|CP12-1|O22914	CP12-1	photosynthesis regulation	no	ARATH	land plant	O22914	124		redox regulator of the Calvin cycle
+BRYSP|CP12-1|GMH41292.1	CP12-1,CP12-2	photosynthesis regulation	no	BRYSP	green alga (Bryopsidales)	GMH41292.1	112	53.0	hypothetical protein BSKO_09202 [Bryopsis sp. KO-2023]
+CHLRE|CP12-1|A0A2K3DI03	CP12-1,CP12-2	photosynthesis regulation	no	CHLRE	green alga	A0A2K3DI03	131	46.1	CP12 domain-containing protein
+CHLVA|CP12-1|E1Z4R5	CP12-1,CP12-2	photosynthesis regulation	no	CHLVA	green alga	E1Z4R5	110	43.9	CP12 domain-containing protein
+OSTQU|CP12-1|A0A8S1IWN5	CP12-1,CP12-2	photosynthesis regulation	no	OSTQU	green alga (Bryopsidales)	A0A8S1IWN5	115	50.0	CP12 domain-containing protein
+VOLCA|CP12-1|A1YQX6	CP12-1,CP12-2	photosynthesis regulation	no	VOLCA	green alga	A1YQX6	108	51.2	CP12 domain-containing protein
+ARATH|CP12-2|Q9LZP9	CP12-2	photosynthesis regulation	no	ARATH	land plant	Q9LZP9	131		redox regulator of the Calvin cycle
+ARATH|FTRB|Q9SJ89	FTRB	photosynthesis regulation	no	ARATH	land plant	Q9SJ89	146		ferredoxin-thioredoxin reductase, catalytic chain
+BRYSP|FTRB|GMH38301.1	FTRB	photosynthesis regulation	no	BRYSP	green alga (Bryopsidales)	GMH38301.1	147	65.0	hypothetical protein BSKO_06185 [Bryopsis sp. KO-2023]
+CHLRE|FTRB|A8IWK2	FTRB	photosynthesis regulation	no	CHLRE	green alga	A8IWK2	145	78.1	Ferredoxin-thioredoxin reductase catalytic chain, chloroplastic
+CHLVA|FTRB|E1ZIG2	FTRB	photosynthesis regulation	no	CHLVA	green alga	E1ZIG2	150	73.9	Ferredoxin-thioredoxin reductase catalytic chain, chloroplastic
+CHOCR|FTRB|M5DC21	FTRB	photosynthesis regulation	no	CHOCR	red alga	M5DC21	116	68.4	Ferredoxin-thioredoxin reductase, catalytic chain
+CYAME|FTRB|Q85FQ7	FTRB	photosynthesis regulation	no	CYAME	red alga	Q85FQ7	99	65.3	Ferredoxin-thioredoxin reductase, catalytic chain
+ECTSI|FTRB|A0ACM9J3G3	FTRB	photosynthesis regulation	no	ECTSI	stramenopile	A0ACM9J3G3	129	48.9	ferredoxin:thioredoxin reductase
+MICPC|FTRB|C1MYV2	FTRB	photosynthesis regulation	no	MICPC	green alga	C1MYV2	165	67.2	Ferredoxin-thioredoxin reductase catalytic chain, chloroplastic
+OSTQU|FTRB|A0A8S1J1F5	FTRB	photosynthesis regulation	no	OSTQU	green alga (Bryopsidales)	A0A8S1J1F5	103	78.1	Ferredoxin-thioredoxin reductase, catalytic chain
+OSTTA|FTRB|A0A096P7T4	FTRB	photosynthesis regulation	no	OSTTA	green alga	A0A096P7T4	143	73.2	Ferredoxin-thioredoxin reductase, catalytic chain
+PHATC|FTRB|B7FYD7	FTRB	photosynthesis regulation	no	PHATC	stramenopile	B7FYD7	160	60.6	ferredoxin:thioredoxin reductase
+VOLCA|FTRB|D8UF17	FTRB	photosynthesis regulation	no	VOLCA	green alga	D8UF17	143	71.4	Ferredoxin-thioredoxin reductase catalytic chain, chloroplastic
+ARATH|FTRA1|Q9FHL4	FTRA1	photosynthesis regulation	no	ARATH	land plant	Q9FHL4	182		ferredoxin-thioredoxin reductase, variable chain
+BRYSP|FTRA1|GMH42410.1	FTRA1	photosynthesis regulation	no	BRYSP	green alga (Bryopsidales)	GMH42410.1	107	38.2	hypothetical protein BSKO_10329 [Bryopsis sp. KO-2023]
+ARATH|NTRC|O22229	NTRC	photosynthesis regulation	yes	ARATH	land plant	O22229	529		NADPH-thioredoxin reductase C
+BRYSP|NTRC|GMH35286.1	NTRC	photosynthesis regulation	yes	BRYSP	green alga (Bryopsidales)	GMH35286.1	508	63.4	hypothetical protein BSKO_03154 [Bryopsis sp. KO-2023]
+CHLRE|NTRC|A0A2K3E888	NTRC	photosynthesis regulation	yes	CHLRE	green alga	A0A2K3E888	536	64.3	Thioredoxin reductase
+CHLVA|NTRC|E1ZFH3	NTRC	photosynthesis regulation	yes	CHLVA	green alga	E1ZFH3	491	60.6	Thioredoxin reductase
+ECTSI|NTRC|D8LDQ1	NTRC	photosynthesis regulation	yes	ECTSI	stramenopile	D8LDQ1	481	56.1	Thioredoxin reductase
+MICPC|NTRC|C1N9L2	NTRC	photosynthesis regulation	yes	MICPC	green alga	C1N9L2	530	62.1	Predicted protein
+OSTTA|NTRC|A0A096P8S8	NTRC	photosynthesis regulation	yes	OSTTA	green alga	A0A096P8S8	540	64.3	Thioredoxin reductase
+VOLCA|NTRC|D8TQ40	NTRC	photosynthesis regulation	yes	VOLCA	green alga	D8TQ40	777	63.5	Thioredoxin reductase
+ARATH|TRXf1|Q9XFH8	TRXf1	photosynthesis regulation	yes	ARATH	land plant	Q9XFH8	178		thioredoxin f
+MICPC|TRXf1|C1N0H7	TRXf1	photosynthesis regulation	yes	MICPC	green alga	C1N0H7	163	45.2	Predicted protein
+PHATC|TRXf1|B7G0P5	TRXf1	photosynthesis regulation	yes	PHATC	stramenopile	B7G0P5	174	39.9	Thioredoxin f
+ARATH|TRXm1|O48737	TRXm1	photosynthesis regulation	yes	ARATH	land plant	O48737	179		thioredoxin m
+BRYSP|TRXm1|GMH32398.1	TRXm1,TRXm2	photosynthesis regulation	yes	BRYSP	green alga (Bryopsidales)	GMH32398.1	190	50.9	hypothetical protein BSKO_00232 [Bryopsis sp. KO-2023]
+CHLRE|TRXm1|A0A2K3E865	TRXm1,TRXm2,TRXx	photosynthesis regulation	yes	CHLRE	green alga	A0A2K3E865	145	36.4	Thioredoxin domain-containing protein
+CHOCR|TRXm1|M5DDH8	TRXm1,TRXm2	photosynthesis regulation	yes	CHOCR	red alga	M5DDH8	106	50.5	Thioredoxin
+OSTTA|TRXm1|A0A090N3C3	TRXm1,TRXm2,TRXy1	photosynthesis regulation	yes	OSTTA	green alga	A0A090N3C3	146	53.3	Thioredoxin, conserved site
+PHATC|TRXm1|B7FNW9	TRXm1,TRXm2	photosynthesis regulation	yes	PHATC	stramenopile	B7FNW9	200	40.4	Thioredoxin m
+ARATH|TRXm2|Q9SEU8	TRXm2	photosynthesis regulation	yes	ARATH	land plant	Q9SEU8	186		thioredoxin m
+ARATH|TRXx|Q8LD49	TRXx	photosynthesis regulation	yes	ARATH	land plant	Q8LD49	182		thioredoxin x
+BRYSP|TRXx|GMH32917.1	TRXx	photosynthesis regulation	yes	BRYSP	green alga (Bryopsidales)	GMH32917.1	171	47.5	hypothetical protein BSKO_00751 [Bryopsis sp. KO-2023]
+CHLVA|TRXx|E1ZJF5	TRXx	photosynthesis regulation	yes	CHLVA	green alga	E1ZJF5	129	53.5	Thioredoxin domain-containing protein (Fragment)
+MICPC|TRXx|C1MXE9	TRXx	photosynthesis regulation	yes	MICPC	green alga	C1MXE9	160	57.7	Uncharacterized protein TRX_4
+OSTTA|TRXx|A0A090M5L7	TRXx	photosynthesis regulation	yes	OSTTA	green alga	A0A090M5L7	148	48.0	Thioredoxin, conserved site
+PHATC|TRXx|B7FUI3	TRXx,TRXy1	photosynthesis regulation	yes	PHATC	stramenopile	B7FUI3	117	33.0	Thioredoxin domain-containing protein (Fragment)
+VOLCA|TRXx|D8TPZ8	TRXx	photosynthesis regulation	yes	VOLCA	green alga	D8TPZ8	146	55.9	Thioredoxin domain-containing protein
+ARATH|TRXy1|Q6NPF9	TRXy1	photosynthesis regulation	yes	ARATH	land plant	Q6NPF9	172		thioredoxin y
+CHLRE|TRXy1|A0A2K3DAV6	TRXy1	photosynthesis regulation	yes	CHLRE	green alga	A0A2K3DAV6	152	54.6	Thioredoxin domain-containing protein
+CHLVA|TRXy1|E1ZQE0	TRXy1	photosynthesis regulation	yes	CHLVA	green alga	E1ZQE0	100	50.0	Thioredoxin domain-containing protein (Fragment)
+ARATH|RCA|P10896	RCA	photosynthesis regulation	yes	ARATH	land plant	P10896	474		Rubisco activase (AAA+)
+BRYSP|RCA|GMH38731.1	RCA	photosynthesis regulation	yes	BRYSP	green alga (Bryopsidales)	GMH38731.1	416	71.4	hypothetical protein BSKO_06615 [Bryopsis sp. KO-2023]
+CHLRE|RCA|Q6SA05	RCA	photosynthesis regulation	yes	CHLRE	green alga	Q6SA05	408	70.2	Ribulose bisphosphate carboxylase/oxygenase activase, chloroplastic
+CHLVA|RCA|E1Z378	RCA	photosynthesis regulation	yes	CHLVA	green alga	E1Z378	419	71.1	Ribulose bisphosphate carboxylase/oxygenase activase, chloroplastic
+MICPC|RCA|C1MPQ3	RCA	photosynthesis regulation	yes	MICPC	green alga	C1MPQ3	419	67.2	Ribulose bisphosphate carboxylase/oxygenase activase, chloroplastic
+OSTQU|RCA|A0A8S1J6Q1	RCA	photosynthesis regulation	yes	OSTQU	green alga (Bryopsidales)	A0A8S1J6Q1	431	73.2	Ribulose bisphosphate carboxylase/oxygenase activase, chloroplastic
+OSTTA|RCA|A0A090LZY6	RCA	photosynthesis regulation	yes	OSTTA	green alga	A0A090LZY6	416	63.0	Ribulose bisphosphate carboxylase/oxygenase activase, chloroplastic
+VOLCA|RCA|D8TZU3	RCA	photosynthesis regulation	yes	VOLCA	green alga	D8TZU3	409	69.8	Ribulose bisphosphate carboxylase/oxygenase activase, chloroplastic
+ARATH|PSBS|Q9XF91	PSBS	photosynthesis regulation	no	ARATH	land plant	Q9XF91	265		non-photochemical quenching
+CHLRE|PSBS|A8HPM2	PSBS	photosynthesis regulation	no	CHLRE	green alga	A8HPM2	245	50.0	Photosystem II protein PSBS1
+CHLVA|PSBS|E1Z5K0	PSBS	photosynthesis regulation	no	CHLVA	green alga	E1Z5K0	248	47.8	Uncharacterized protein
+VOLCA|PSBS|D8UAT1	PSBS	photosynthesis regulation	no	VOLCA	green alga	D8UAT1	241	47.8	Uncharacterized protein
+ARATH|VDE|Q39249	VDE	photosynthesis regulation	yes	ARATH	land plant	Q39249	462		violaxanthin de-epoxidase
+CHLVA|VDE|E1ZFV4	VDE	photosynthesis regulation	yes	CHLVA	green alga	E1ZFV4	446	50.0	VDE lipocalin domain-containing protein
+ECTSI|VDE|D7FY70	VDE	photosynthesis regulation	yes	ECTSI	stramenopile	D7FY70	408	51.2	Violaxanthin de-epoxidase, chloroplast
+MICPC|VDE|C1MYZ1	VDE	photosynthesis regulation	yes	MICPC	green alga	C1MYZ1	511	48.6	Violaxanthin deepoxidase
+OSTTA|VDE|A0A096P7U5	VDE	photosynthesis regulation	yes	OSTTA	green alga	A0A096P7U5	450	46.0	Violaxanthin de-epoxidase
+PHATC|VDE|B7FUR6	VDE	photosynthesis regulation	yes	PHATC	stramenopile	B7FUR6	437	47.2	Violaxanthin deepoxidase
+ARATH|ZEP|Q9FGC7	ZEP	photosynthesis regulation	yes	ARATH	land plant	Q9FGC7	667		zeaxanthin epoxidase
+BRYSP|ZEP|GMH35174.1	ZEP	photosynthesis regulation	yes	BRYSP	green alga (Bryopsidales)	GMH35174.1	676	52.9	hypothetical protein BSKO_03042 [Bryopsis sp. KO-2023]
+CHLRE|ZEP|Q84U73	ZEP	photosynthesis regulation	yes	CHLRE	green alga	Q84U73	763	59.1	Zeaxanthin epoxidase, chloroplastic
+CHLVA|ZEP|E1ZNN0	ZEP	photosynthesis regulation	yes	CHLVA	green alga	E1ZNN0	705	53.1	Zeaxanthin epoxidase, chloroplastic
+ECTSI|ZEP|D7G5I9	ZEP	photosynthesis regulation	yes	ECTSI	stramenopile	D7G5I9	566	38.7	Zeaxanthin epoxidase, chloroplast
+MICPC|ZEP|C1MYZ2	ZEP	photosynthesis regulation	yes	MICPC	green alga	C1MYZ2	497	43.4	Zeaxanthin epoxidase
+OSTTA|ZEP|A0A096P7X8	ZEP	photosynthesis regulation	yes	OSTTA	green alga	A0A096P7X8	522	42.5	Monooxygenase, FAD-binding
+PHATC|ZEP|B7FUR7	ZEP	photosynthesis regulation	yes	PHATC	stramenopile	B7FUR7	557	42.8	Zeaxanthin epoxidase
+VOLCA|ZEP|D8U4L4	ZEP	photosynthesis regulation	yes	VOLCA	green alga	D8U4L4	727	49.8	Zeaxanthin epoxidase, chloroplastic
+ARATH|HCF136|O82660	HCF136	photosynthesis regulation	no	ARATH	land plant	O82660	403		PSII assembly factor
+BRYSP|HCF136|GMH35075.1	HCF136	photosynthesis regulation	no	BRYSP	green alga (Bryopsidales)	GMH35075.1	406	55.3	hypothetical protein BSKO_02943 [Bryopsis sp. KO-2023]
+CHLRE|HCF136|A0A2K3DNI1	HCF136	photosynthesis regulation	no	CHLRE	green alga	A0A2K3DNI1	403	57.3	Photosystem II stability/assembly factor
+CHLVA|HCF136|E1ZPQ7	HCF136	photosynthesis regulation	no	CHLVA	green alga	E1ZPQ7	449	53.9	Photosystem II stability/assembly factor HCF136, chloroplastic
+CHOCR|HCF136|R7Q714	HCF136	photosynthesis regulation	no	CHOCR	red alga	R7Q714	249	48.5	Photosystem II stability/assembly factor HCF136, chloroplastic (Fragment)
+CYAME|HCF136|M1VJU3	HCF136	photosynthesis regulation	no	CYAME	red alga	M1VJU3	437	44.1	Photosystem II stability/assembly factor HCF136, chloroplastic
+ECTSI|HCF136|D7FML1	HCF136	photosynthesis regulation	no	ECTSI	stramenopile	D7FML1	424	48.4	Photosystem II stability/assembly factor HCF136, chloroplastic
+MICPC|HCF136|C1MMU8	HCF136	photosynthesis regulation	no	MICPC	green alga	C1MMU8	340	56.7	Photosystem II stability/assembly factor
+OSTQU|HCF136|A0A8S1IM47	HCF136	photosynthesis regulation	no	OSTQU	green alga (Bryopsidales)	A0A8S1IM47	414	57.5	Photosystem II stability/assembly factor HCF136, chloroplastic
+OSTTA|HCF136|A0A096P7W6	HCF136	photosynthesis regulation	no	OSTTA	green alga	A0A096P7W6	386	53.5	Photosystem II stability/assembly factor HCF136, chloroplastic (Fragment)
+PHATC|HCF136|B7G3A6	HCF136	photosynthesis regulation	no	PHATC	stramenopile	B7G3A6	408	45.6	Photosystem II stability/assembly factor HCF136, chloroplastic
+ARATH|PAM68|O49668	PAM68	photosynthesis regulation	no	ARATH	land plant	O49668	214		PSII assembly factor
+BRYSP|PAM68|GMH36015.1	PAM68	photosynthesis regulation	no	BRYSP	green alga (Bryopsidales)	GMH36015.1	204	47.7	hypothetical protein BSKO_03883 [Bryopsis sp. KO-2023]
+CHLRE|PAM68|A8IHE9	PAM68	photosynthesis regulation	no	CHLRE	green alga	A8IHE9	147	43.7	Uncharacterized protein
+CHLVA|PAM68|E1ZA22	PAM68	photosynthesis regulation	no	CHLVA	green alga	E1ZA22	234	52.9	Uncharacterized protein
+CYAME|PAM68|M1V5L5	PAM68	photosynthesis regulation	no	CYAME	red alga	M1V5L5	244	39.0	DUF3464 family protein
+ECTSI|PAM68|D8LCB7	PAM68	photosynthesis regulation	no	ECTSI	stramenopile	D8LCB7	323	38.7	All0748
+MICPC|PAM68|C1N420	PAM68	photosynthesis regulation	no	MICPC	green alga	C1N420	122	44.0	Predicted protein (Fragment)
+OSTTA|PAM68|Q01DJ3	PAM68	photosynthesis regulation	no	OSTTA	green alga	Q01DJ3	226	48.0	Uncharacterized protein
+VOLCA|PAM68|D8U3Y1	PAM68	photosynthesis regulation	no	VOLCA	green alga	D8U3Y1	189	44.8	Protein PAM68, chloroplastic
+ARATH|LPA1|Q9SRY4	LPA1	photosynthesis regulation	no	ARATH	land plant	Q9SRY4	453		PSII assembly factor
+BRYSP|LPA1|GMH35910.1	LPA1	photosynthesis regulation	no	BRYSP	green alga (Bryopsidales)	GMH35910.1	450	34.1	hypothetical protein BSKO_03778 [Bryopsis sp. KO-2023]
+CHLRE|LPA1|A0A2K3D9T5	LPA1	photosynthesis regulation	no	CHLRE	green alga	A0A2K3D9T5	449	29.0	Uncharacterized protein
+CHLVA|LPA1|E1ZP10	LPA1	photosynthesis regulation	no	CHLVA	green alga	E1ZP10	445	31.9	Uncharacterized protein
+CHOCR|LPA1|R7Q5I6	LPA1	photosynthesis regulation	no	CHOCR	red alga	R7Q5I6	265	25.9	Uncharacterized protein
+MICPC|LPA1|C1N173	LPA1	photosynthesis regulation	no	MICPC	green alga	C1N173	514	27.8	Predicted protein
+OSTQU|LPA1|A0A8S1ING4	LPA1	photosynthesis regulation	no	OSTQU	green alga (Bryopsidales)	A0A8S1ING4	461	33.2	Uncharacterized protein
+OSTTA|LPA1|A0A090MAC1	LPA1	photosynthesis regulation	no	OSTTA	green alga	A0A090MAC1	424	30.3	Tetratricopeptide-like helical
+VOLCA|LPA1|D8U625	LPA1	photosynthesis regulation	no	VOLCA	green alga	D8U625	1122	30.9	Acetylglucosaminyltransferase
+ARATH|LPA2|F4KDA6	LPA2	photosynthesis regulation	no	ARATH	land plant	F4KDA6	185		PSII assembly factor
+CHLVA|LPA2|E1Z9A0	LPA2	photosynthesis regulation	no	CHLVA	green alga	E1Z9A0	181	44.7	Uncharacterized protein
+ARATH|LPA3|Q8H0W0	LPA3	photosynthesis regulation	no	ARATH	land plant	Q8H0W0	358		PSII assembly factor
+BRYSP|LPA3|GMH39812.1	LPA3	photosynthesis regulation	no	BRYSP	green alga (Bryopsidales)	GMH39812.1	376	46.8	hypothetical protein BSKO_07710 [Bryopsis sp. KO-2023]
+CHLRE|LPA3|A0A2K3DY03	LPA3	photosynthesis regulation	no	CHLRE	green alga	A0A2K3DY03	303	44.4	DUF1995 domain-containing protein
+CHLVA|LPA3|E1Z1Y1	LPA3	photosynthesis regulation	no	CHLVA	green alga	E1Z1Y1	343	40.4	DUF1995 domain-containing protein
+CHOCR|LPA3|R7Q5D5	LPA3	photosynthesis regulation	no	CHOCR	red alga	R7Q5D5	363	37.3	DUF1995 domain-containing protein
+CYAME|LPA3|M1VHK1	LPA3	photosynthesis regulation	no	CYAME	red alga	M1VHK1	429	35.8	DUF1995 domain-containing protein
+ECTSI|LPA3|D8LBB0	LPA3	photosynthesis regulation	no	ECTSI	stramenopile	D8LBB0	322	34.4	DUF1995 domain-containing protein
+MICPC|LPA3|C1MLJ6	LPA3	photosynthesis regulation	no	MICPC	green alga	C1MLJ6	371	42.9	DUF1995 domain-containing protein
+OSTQU|LPA3|A0A8S1IZX4	LPA3	photosynthesis regulation	no	OSTQU	green alga (Bryopsidales)	A0A8S1IZX4	304	49.5	DUF1995 domain-containing protein
+OSTTA|LPA3|A0A090LY26	LPA3	photosynthesis regulation	no	OSTTA	green alga	A0A090LY26	331	44.3	DUF1995 domain-containing protein (Fragment)
+PHATC|LPA3|B5Y5Q7	LPA3	photosynthesis regulation	no	PHATC	stramenopile	B5Y5Q7	379	33.8	DUF1995 domain-containing protein
+VOLCA|LPA3|D8TJX1	LPA3	photosynthesis regulation	no	VOLCA	green alga	D8TJX1	379	45.2	DUF1995 domain-containing protein
+ARATH|HCF101|Q6STH5	HCF101	photosynthesis regulation	yes	ARATH	land plant	Q6STH5	532		Fe-S cluster assembly for PSI
+BRYSP|HCF101|GMH32418.1	HCF101	photosynthesis regulation	yes	BRYSP	green alga (Bryopsidales)	GMH32418.1	527	63.1	hypothetical protein BSKO_00252 [Bryopsis sp. KO-2023]
+CHLRE|HCF101|A0A2K3E7Q4	HCF101	photosynthesis regulation	yes	CHLRE	green alga	A0A2K3E7Q4	560	61.6	MIP18 family-like domain-containing protein
+CHLVA|HCF101|E1Z2D1	HCF101	photosynthesis regulation	yes	CHLVA	green alga	E1Z2D1	518	63.0	MIP18 family-like domain-containing protein
+CHOCR|HCF101|R7Q4I6	HCF101	photosynthesis regulation	yes	CHOCR	red alga	R7Q4I6	532	51.0	MIP18 family-like domain-containing protein
+CYAME|HCF101|M1UWE1	HCF101	photosynthesis regulation	yes	CYAME	red alga	M1UWE1	545	45.4	Probable multidrug resistance protein
+ECTSI|HCF101|D7FMK8	HCF101	photosynthesis regulation	yes	ECTSI	stramenopile	D7FMK8	586	44.3	HCF101 (HIGH-CHLOROPHYLL-FLUORESCENCE 101) ATP binding
+MICPC|HCF101|C1N868	HCF101	photosynthesis regulation	yes	MICPC	green alga	C1N868	476	55.4	Predicted protein
+OSTQU|HCF101|A0A8S1JC86	HCF101	photosynthesis regulation	yes	OSTQU	green alga (Bryopsidales)	A0A8S1JC86	531	62.7	MIP18 family-like domain-containing protein
+OSTTA|HCF101|A0A096P8K6	HCF101	photosynthesis regulation	yes	OSTTA	green alga	A0A096P8K6	518	58.7	ATPase-like, ParA/MinD
+PHATC|HCF101|B5Y591	HCF101	photosynthesis regulation	yes	PHATC	stramenopile	B5Y591	438	46.7	Uncharacterized protein (Fragment)
+VOLCA|HCF101|D8UHL0	HCF101	photosynthesis regulation	yes	VOLCA	green alga	D8UHL0	483	55.7	MIP18 family-like domain-containing protein
+ARATH|VIPP1|O80796	VIPP1	photosynthesis regulation	no	ARATH	land plant	O80796	330		thylakoid biogenesis (PspA family)
+BRYSP|VIPP1|GMH36128.1	VIPP1	photosynthesis regulation	no	BRYSP	green alga (Bryopsidales)	GMH36128.1	313	56.2	hypothetical protein BSKO_03996 [Bryopsis sp. KO-2023]
+CHLRE|VIPP1|A0A2K3D836	VIPP1	photosynthesis regulation	no	CHLRE	green alga	A0A2K3D836	394	51.9	Uncharacterized protein
+CHLVA|VIPP1|E1ZR98	VIPP1	photosynthesis regulation	no	CHLVA	green alga	E1ZR98	306	49.5	PspA/IM30 family protein
+CYAME|VIPP1|M1VMH1	VIPP1	photosynthesis regulation	no	CYAME	red alga	M1VMH1	314	49.3	Vesicle-inducing protein in plastids 1VIPP1
+ECTSI|VIPP1|D7FR71	VIPP1	photosynthesis regulation	no	ECTSI	stramenopile	D7FR71	384	41.3	Probable membrane-associated 30 kDa protein, chloroplast
+MICPC|VIPP1|C1MNK3	VIPP1	photosynthesis regulation	no	MICPC	green alga	C1MNK3	312	52.6	Predicted protein
+OSTQU|VIPP1|A0A8S1INQ6	VIPP1	photosynthesis regulation	no	OSTQU	green alga (Bryopsidales)	A0A8S1INQ6	311	53.3	PspA/IM30
+OSTTA|VIPP1|A0A090N4W6	VIPP1	photosynthesis regulation	no	OSTTA	green alga	A0A090N4W6	304	57.6	PspA/IM30
+PHATC|VIPP1|B7FWP5	VIPP1	photosynthesis regulation	no	PHATC	stramenopile	B7FWP5	319	42.2	Uncharacterized protein
+VOLCA|VIPP1|D8TQZ1	VIPP1	photosynthesis regulation	no	VOLCA	green alga	D8TQZ1	287	47.6	Uncharacterized protein
+ARATH|THF1|Q9SKT0	THF1	photosynthesis regulation	no	ARATH	land plant	Q9SKT0	300		thylakoid formation
+BRYSP|THF1|GMH36568.1	THF1	photosynthesis regulation	no	BRYSP	green alga (Bryopsidales)	GMH36568.1	290	47.3	hypothetical protein BSKO_04436 [Bryopsis sp. KO-2023]
+CHLRE|THF1|A8HR79	THF1	photosynthesis regulation	no	CHLRE	green alga	A8HR79	266	50.7	Uncharacterized protein
+CHLVA|THF1|E1ZA81	THF1	photosynthesis regulation	no	CHLVA	green alga	E1ZA81	273	46.3	Uncharacterized protein
+CYAME|THF1|M1VAS6	THF1	photosynthesis regulation	no	CYAME	red alga	M1VAS6	327	27.3	Photosystem II biogenesis protein Psb29
+ECTSI|THF1|D8LAS7	THF1	photosynthesis regulation	no	ECTSI	stramenopile	D8LAS7	226	33.3	Uncharacterized protein
+MICPC|THF1|C1N362	THF1	photosynthesis regulation	no	MICPC	green alga	C1N362	222	45.9	Predicted protein
+OSTQU|THF1|A0A8S1JFN0	THF1	photosynthesis regulation	no	OSTQU	green alga (Bryopsidales)	A0A8S1JFN0	268	48.8	Uncharacterized protein
+OSTTA|THF1|A0A090LYZ0	THF1	photosynthesis regulation	no	OSTTA	green alga	A0A090LYZ0	254	46.6	Photosystem II Psp29, biogenesis
+VOLCA|THF1|D8UGM0	THF1	photosynthesis regulation	no	VOLCA	green alga	D8UGM0	373	41.5	Uncharacterized protein
+ARATH|ALB3|Q8LBP4	ALB3	photosynthesis regulation	yes	ARATH	land plant	Q8LBP4	462		thylakoid insertase (YidC/Oxa1 family)
+BRYSP|ALB3|GMH43273.1	ALB3,ALB4	photosynthesis regulation	yes	BRYSP	green alga (Bryopsidales)	GMH43273.1	563	61.3	hypothetical protein BSKO_11195 [Bryopsis sp. KO-2023]
+CHLRE|ALB3|A0A2K3CQW3	ALB3,ALB4	photosynthesis regulation	yes	CHLRE	green alga	A0A2K3CQW3	422	57.2	Membrane insertase YidC/Oxa/ALB C-terminal domain-containing protein
+CHLVA|ALB3|E1ZJ88	ALB3,ALB4	photosynthesis regulation	yes	CHLVA	green alga	E1ZJ88	423	63.0	Membrane insertase YidC/Oxa/ALB C-terminal domain-containing protein (Fragment)
+CHOCR|ALB3|R7QEJ8	ALB3,ALB4	photosynthesis regulation	yes	CHOCR	red alga	R7QEJ8	239	52.2	Membrane insertase YidC/Oxa/ALB C-terminal domain-containing protein
+CYAME|ALB3|M1V7G8	ALB3,ALB4	photosynthesis regulation	yes	CYAME	red alga	M1V7G8	488	44.5	Chloroplast membrane protein ALBINO3 or ARTEMIS
+ECTSI|ALB3|D8LUC7	ALB3,ALB4	photosynthesis regulation	yes	ECTSI	stramenopile	D8LUC7	449	41.5	Alb3 homolog, thylakoidal inner membrane insertase
+MICPC|ALB3|C1N3L7	ALB3,ALB4	photosynthesis regulation	yes	MICPC	green alga	C1N3L7	483	54.7	Cytochrome oxidase biogenesis family
+OSTQU|ALB3|A0A8S1JI05	ALB3	photosynthesis regulation	yes	OSTQU	green alga (Bryopsidales)	A0A8S1JI05	559	56.3	Membrane insertase YidC/Oxa/ALB C-terminal domain-containing protein
+OSTTA|ALB3|A0A090LYJ2	ALB3,ALB4	photosynthesis regulation	yes	OSTTA	green alga	A0A090LYJ2	399	59.4	Membrane insertase OXA1/ALB3/YidC
+PHATC|ALB3|B7FT10	ALB3,ALB4	photosynthesis regulation	yes	PHATC	stramenopile	B7FT10	425	42.8	Membrane insertase YidC/Oxa/ALB C-terminal domain-containing protein
+VOLCA|ALB3|D8TT90	ALB3,ALB4	photosynthesis regulation	yes	VOLCA	green alga	D8TT90	413	58.3	Inner membrane ALBINO3-like protein 2, chloroplast (Fragment)
+ARATH|ALB4|Q9FYL3	ALB4	photosynthesis regulation	yes	ARATH	land plant	Q9FYL3	499		thylakoid insertase (YidC/Oxa1 family)
+OSTQU|ALB4|A0A8S1IWY3	ALB4	photosynthesis regulation	yes	OSTQU	green alga (Bryopsidales)	A0A8S1IWY3	565	62.2	Membrane insertase YidC/Oxa/ALB C-terminal domain-containing protein
+ARATH|TOC33|O23680	TOC33	protein import	no	ARATH	land plant	O23680	297		outer envelope receptor GTPase
+BRYSP|TOC33|GMH43708.1	TOC33,TOC34	protein import	no	BRYSP	green alga (Bryopsidales)	GMH43708.1	412	34.1	hypothetical protein BSKO_11630 [Bryopsis sp. KO-2023]
+CHLRE|TOC33|A0A2K3DM34	TOC33,TOC34	protein import	no	CHLRE	green alga	A0A2K3DM34	397	34.8	AIG1-type G domain-containing protein
+CHLVA|TOC33|E1ZDZ8	TOC33,TOC34	protein import	no	CHLVA	green alga	E1ZDZ8	265	38.6	AIG1-type G domain-containing protein (Fragment)
+CYAME|TOC33|M1V666	TOC33,TOC34	protein import	no	CYAME	red alga	M1V666	489	27.5	Similar to chloroplast outer membrane protein Toc34
+MICPC|TOC33|C1MJC5	TOC33,TOC34	protein import	no	MICPC	green alga	C1MJC5	321	35.5	Chloroplast envelope protein translocase family
+OSTQU|TOC33|A0A8S1JFY5	TOC33,TOC34	protein import	no	OSTQU	green alga (Bryopsidales)	A0A8S1JFY5	396	31.8	AIG1-type G domain-containing protein
+OSTTA|TOC33|Q01CB6	TOC33,TOC34	protein import	no	OSTTA	green alga	Q01CB6	335	36.4	P-loop containing nucleoside triphosphate hydrolase
+VOLCA|TOC33|D8UHZ0	TOC33,TOC34	protein import	no	VOLCA	green alga	D8UHZ0	465	37.2	AIG1-type G domain-containing protein
+ARATH|TOC34|Q38906	TOC34	protein import	no	ARATH	land plant	Q38906	313		outer envelope receptor GTPase
+ARATH|TOC75-III|Q9STE8	TOC75-III	protein import	yes	ARATH	land plant	Q9STE8	818		outer envelope channel (Omp85 family)
+BRYSP|TOC75-III|GMH32188.1	TOC75-III	protein import	yes	BRYSP	green alga (Bryopsidales)	GMH32188.1	785	35.0	hypothetical protein BSKO_00022 [Bryopsis sp. KO-2023]
+CHLRE|TOC75-III|A8IE32	TOC75-III	protein import	yes	CHLRE	green alga	A8IE32	798	35.3	Outer membrane protein assembly factor BamA-like domain-containing protein
+CHLVA|TOC75-III|E1ZRQ5	TOC75-III,OEP80	protein import	yes	CHLVA	green alga	E1ZRQ5	696	38.7	Outer membrane protein assembly factor BamA-like domain-containing protein
+MICPC|TOC75-III|C1MW30	TOC75-III	protein import	yes	MICPC	green alga	C1MW30	743	46.1	Chloroplast envelope protein translocase family
+OSTQU|TOC75-III|A0A8S1J4C4	TOC75-III	protein import	yes	OSTQU	green alga (Bryopsidales)	A0A8S1J4C4	796	37.0	Uncharacterized protein
+OSTTA|TOC75-III|Q01F30	TOC75-III	protein import	yes	OSTTA	green alga	Q01F30	824	43.1	Surface antigen variable number
+VOLCA|TOC75-III|D8TK08	TOC75-III	protein import	yes	VOLCA	green alga	D8TK08	802	34.3	Outer membrane protein assembly factor BamA-like domain-containing protein
+ARATH|TOC159|O81283	TOC159	protein import	no	ARATH	land plant	O81283	1503		outer envelope receptor GTPase
+BRYSP|TOC159|GMH32517.1	TOC159,TOC132,TOC120,TOC90	protein import	no	BRYSP	green alga (Bryopsidales)	GMH32517.1	993	23.7	hypothetical protein BSKO_00351 [Bryopsis sp. KO-2023]
+CHLVA|TOC159|E1ZE64	TOC159,TOC132,TOC120,TOC90	protein import	no	CHLVA	green alga	E1ZE64	799	30.5	AIG1-type G domain-containing protein
+MICPC|TOC159|C1N6P1	TOC159,TOC132,TOC120,TOC90	protein import	no	MICPC	green alga	C1N6P1	827	39.1	Chloroplast envelope protein translocase family
+OSTQU|TOC159|A0A8S1IU55	TOC159,TOC132,TOC120,TOC90	protein import	no	OSTQU	green alga (Bryopsidales)	A0A8S1IU55	991	25.2	AIG1-type G domain-containing protein
+OSTTA|TOC159|A0A096PBB4	TOC159,TOC132,TOC120,TOC90	protein import	no	OSTTA	green alga	A0A096PBB4	853	37.4	P-loop containing nucleoside triphosphate hydrolase
+ARATH|TOC132|Q9SLF3	TOC132	protein import	no	ARATH	land plant	Q9SLF3	1206		outer envelope receptor GTPase
+CHLRE|TOC132|A0A2K3CPC6	TOC132	protein import	no	CHLRE	green alga	A0A2K3CPC6	1080	24.0	Translocase of chloroplast 159/132 membrane anchor domain-containing protein
+ARATH|TOC120|Q9LUS2	TOC120	protein import	no	ARATH	land plant	Q9LUS2	1089		outer envelope receptor GTPase
+ARATH|TOC90|Q6S5G3	TOC90	protein import	no	ARATH	land plant	Q6S5G3	793		outer envelope receptor GTPase
+ARATH|TIC20-I|Q8GZ79	TIC20-I	protein import	no	ARATH	land plant	Q8GZ79	274		inner envelope channel
+BRYSP|TIC20-I|GMH42649.1	TIC20-I	protein import	no	BRYSP	green alga (Bryopsidales)	GMH42649.1	275	26.9	hypothetical protein BSKO_10568 [Bryopsis sp. KO-2023]
+CHLRE|TIC20-I|A8IZ79	TIC20-I	protein import	no	CHLRE	green alga	A8IZ79	259	25.9	Protein TIC 20
+OSTQU|TIC20-I|A0A8S1INB0	TIC20-I	protein import	no	OSTQU	green alga (Bryopsidales)	A0A8S1INB0	271	28.0	Protein TIC 20
+OSTTA|TIC20-I|A0A090M411	TIC20-I	protein import	no	OSTTA	green alga	A0A090M411	266	30.5	Protein TIC 20
+VOLCA|TIC20-I|D8U2X2	TIC20-I	protein import	no	VOLCA	green alga	D8U2X2	257	26.1	Protein TIC 20
+ARATH|TIC110|Q8LPR9	TIC110	protein import	no	ARATH	land plant	Q8LPR9	1016		inner envelope translocon
+BRYSP|TIC110|GMH36433.1	TIC110	protein import	no	BRYSP	green alga (Bryopsidales)	GMH36433.1	1061	33.6	hypothetical protein BSKO_04301 [Bryopsis sp. KO-2023]
+CHLRE|TIC110|A0A2K3DB95	TIC110	protein import	no	CHLRE	green alga	A0A2K3DB95	1046	31.1	Uncharacterized protein
+CHLVA|TIC110|E1ZPM7	TIC110	protein import	no	CHLVA	green alga	E1ZPM7	1083	32.1	Uncharacterized protein
+CYAME|TIC110|M1V6H9	TIC110	protein import	no	CYAME	red alga	M1V6H9	1218	21.5	Similar to chloroplast inner membrane protein Tic110
+MICPC|TIC110|C1MZD4	TIC110	protein import	no	MICPC	green alga	C1MZD4	845	33.9	Chloroplast envelope anion channel-forming Tic110 family
+OSTQU|TIC110|A0A8S1J4S6	TIC110	protein import	no	OSTQU	green alga (Bryopsidales)	A0A8S1J4S6	936	29.3	Uncharacterized protein
+OSTTA|TIC110|A0A090M857	TIC110	protein import	no	OSTTA	green alga	A0A090M857	1035	32.9	Unnamed product
+VOLCA|TIC110|D8UFD3	TIC110	protein import	no	VOLCA	green alga	D8UFD3	1055	30.1	Uncharacterized protein
+ARATH|TIC40|Q9FMD5	TIC40	protein import	no	ARATH	land plant	Q9FMD5	447		inner envelope co-chaperone
+CHLRE|TIC40|A0A2K3D2S0	TIC40	protein import	no	CHLRE	green alga	A0A2K3D2S0	412	41.8	Protein TIC 40, chloroplastic
+OSTTA|TIC40|Q00ZZ0	TIC40	protein import	no	OSTTA	green alga	Q00ZZ0	360	50.7	Protein TIC 40, chloroplastic
+ARATH|TIC55|Q9SK50	TIC55	protein import	no	ARATH	land plant	Q9SK50	539		inner envelope redox regulator (Rieske)
+ECTSI|TIC55|D7FIF8	TIC55	protein import	no	ECTSI	stramenopile	D7FIF8	190	42.4	Rieske domain-containing protein
+ARATH|TIC62|Q8H0U5	TIC62	protein import	no	ARATH	land plant	Q8H0U5	641		inner envelope redox regulator
+CHLVA|TIC62|E1Z393	TIC62	protein import	no	CHLVA	green alga	E1Z393	230	54.2	NAD(P)-binding domain-containing protein (Fragment)
+CYAME|TIC62|M1VIV6	TIC62	protein import	no	CYAME	red alga	M1VIV6	304	36.1	NAD(P)-binding domain-containing protein
+ECTSI|TIC62|D7G4L2	TIC62	protein import	no	ECTSI	stramenopile	D7G4L2	365	48.9	Peptide methionine sulfoxide reductase B1, chloroplastic
+OSTQU|TIC62|A0A8S1JDP9	TIC62	protein import	no	OSTQU	green alga (Bryopsidales)	A0A8S1JDP9	266	31.4	NAD(P)-binding domain-containing protein
+VOLCA|TIC62|D8TIU4	TIC62	protein import	no	VOLCA	green alga	D8TIU4	366	47.7	NAD(P)-binding domain-containing protein
+ARATH|TIC56|Q7Y1W1	TIC56	protein import	no	ARATH	land plant	Q7Y1W1	527		1-MDa TIC complex
+BRYSP|TIC56|GMH40532.1	TIC56	protein import	no	BRYSP	green alga (Bryopsidales)	GMH40532.1	165	32.0	hypothetical protein BSKO_08436 [Bryopsis sp. KO-2023]
+CHLRE|TIC56|A8J6R5	TIC56	protein import	no	CHLRE	green alga	A8J6R5	244	32.7	GYF domain-containing protein
+CHLVA|TIC56|E1ZB20	TIC56	protein import	no	CHLVA	green alga	E1ZB20	132	34.1	GYF domain-containing protein
+VOLCA|TIC56|D8U7G0	TIC56	protein import	no	VOLCA	green alga	D8U7G0	249	35.6	GYF domain-containing protein
+ARATH|TIC100|Q8LPR8	TIC100	protein import	no	ARATH	land plant	Q8LPR8	871		1-MDa TIC complex
+ARATH|OEP80|Q9C5J8	OEP80	protein import	yes	ARATH	land plant	Q9C5J8	732		outer envelope Omp85 protein
+BRYSP|OEP80|GMH41408.1	OEP80	protein import	yes	BRYSP	green alga (Bryopsidales)	GMH41408.1	698	43.0	hypothetical protein BSKO_09318 [Bryopsis sp. KO-2023]
+CHLRE|OEP80|A0A2K3DDY0	OEP80	protein import	yes	CHLRE	green alga	A0A2K3DDY0	651	45.6	Bacterial surface antigen (D15) domain-containing protein
+MICPC|OEP80|C1N0P0	OEP80	protein import	yes	MICPC	green alga	C1N0P0	716	38.8	Chloroplast envelope protein translocase family
+OSTQU|OEP80|A0A8S1IPK9	OEP80	protein import	yes	OSTQU	green alga (Bryopsidales)	A0A8S1IPK9	694	39.9	POTRA domain-containing protein
+OSTTA|OEP80|Q00Z83	OEP80	protein import	yes	OSTTA	green alga	Q00Z83	706	32.5	Bacterial surface antigen (D15)
+VOLCA|OEP80|D8TPS6	OEP80	protein import	yes	VOLCA	green alga	D8TPS6	745	37.9	Bacterial surface antigen (D15) domain-containing protein
+ARATH|OEP16|Q9ZV24	OEP16	protein import	no	ARATH	land plant	Q9ZV24	148		outer envelope amino-acid channel
+ARATH|CLPC1|Q9FI56	CLPC1	protein import	yes	ARATH	land plant	Q9FI56	929		stromal import motor (Clp ATPase)
+BRYSP|CLPC1|GMH32901.1	CLPC1	protein import	yes	BRYSP	green alga (Bryopsidales)	GMH32901.1	924	81.2	hypothetical protein BSKO_00735 [Bryopsis sp. KO-2023]
+CHLVA|CLPC1|E1ZP98	CLPC1	protein import	yes	CHLVA	green alga	E1ZP98	844	84.5	Clp R domain-containing protein
+CHOCR|CLPC1|M5DDC7	CLPC1	protein import	yes	CHOCR	red alga	M5DDC7	822	76.0	ATP-dependent Clp protease ATP-binding subunit ClpA homolog
+CYAME|CLPC1|Q85G08	CLPC1	protein import	yes	CYAME	red alga	Q85G08	821	71.8	ATP-dependent Clp protease ATP-binding subunit ClpA homolog
+ECTSI|CLPC1|A0ACM9J3E1	CLPC1	protein import	yes	ECTSI	stramenopile	A0ACM9J3E1	903	57.6	ATP-dependent Clp protease ATP-binding subunit clpA homolog
+OSTQU|CLPC1|A0A8S1JIA4	CLPC1	protein import	yes	OSTQU	green alga (Bryopsidales)	A0A8S1JIA4	925	84.2	Clp protease ATP binding subunit
+OSTTA|CLPC1|A0A096PBH0	CLPC1	protein import	yes	OSTTA	green alga	A0A096PBH0	917	78.5	Clp, N-terminal
+PHATC|CLPC1|A0T0K8	CLPC1	protein import	yes	PHATC	stramenopile	A0T0K8	926	57.3	ATP-dependent clp protease ATP-binding subunit
+VOLCA|CLPC1|D8U1R3	CLPC1	protein import	yes	VOLCA	green alga	D8U1R3	915	82.3	Clp R domain-containing protein
+ARATH|SECA1|Q9SYI0	SECA1	protein import	no	ARATH	land plant	Q9SYI0	1022		thylakoid Sec translocase ATPase
+BRYSP|SECA1|GMH40256.1	SECA1	protein import	no	BRYSP	green alga (Bryopsidales)	GMH40256.1	1019	67.3	hypothetical protein BSKO_08160 [Bryopsis sp. KO-2023]
+CHLRE|SECA1|A0A2K3D3X9	SECA1	protein import	no	CHLRE	green alga	A0A2K3D3X9	1029	65.8	Protein translocase subunit SecA
+CHLVA|SECA1|E1ZPM2	SECA1	protein import	no	CHLVA	green alga	E1ZPM2	506	64.5	chloroplast protein-transporting ATPase (Fragment)
+CHOCR|SECA1|M5DC18	SECA1	protein import	no	CHOCR	red alga	M5DC18	881	46.9	Protein translocase subunit SecA
+CYAME|SECA1|M1VGG3	SECA1	protein import	no	CYAME	red alga	M1VGG3	1011	46.2	Protein translocase subunit SecA
+ECTSI|SECA1|D8LR85	SECA1	protein import	no	ECTSI	stramenopile	D8LR85	936	46.4	Protein translocase subunit SecA
+MICPC|SECA1|C1MX90	SECA1	protein import	no	MICPC	green alga	C1MX90	1025	65.3	Protein translocase subunit SecA
+OSTQU|SECA1|A0A8S1JG45	SECA1	protein import	no	OSTQU	green alga (Bryopsidales)	A0A8S1JG45	979	68.2	Protein translocase subunit SecA
+OSTTA|SECA1|A0A090M4M9	SECA1	protein import	no	OSTTA	green alga	A0A090M4M9	945	65.3	Protein translocase subunit SecA
+PHATC|SECA1|A0T0G5	SECA1	protein import	no	PHATC	stramenopile	A0T0G5	886	47.3	Protein translocase subunit SecA
+VOLCA|SECA1|D8TNW2	SECA1	protein import	no	VOLCA	green alga	D8TNW2	1007	66.1	Protein translocase subunit SecA
+ARATH|SCY1|Q38885	SCY1	protein import	yes	ARATH	land plant	Q38885	551		thylakoid Sec translocase channel (SecY)
+BRYSP|SCY1|GMH33076.1	SCY1	protein import	yes	BRYSP	green alga (Bryopsidales)	GMH33076.1	531	57.3	hypothetical protein BSKO_00910 [Bryopsis sp. KO-2023]
+CHLRE|SCY1|A0A2K3CV14	SCY1	protein import	yes	CHLRE	green alga	A0A2K3CV14	528	51.9	CpSecY
+CHLVA|SCY1|E1Z729	SCY1	protein import	yes	CHLVA	green alga	E1Z729	523	55.1	CpSecY
+CHOCR|SCY1|M5DDE1	SCY1	protein import	yes	CHOCR	red alga	M5DDE1	411	38.1	Protein translocase subunit SecY
+CYAME|SCY1|Q85FU6	SCY1	protein import	yes	CYAME	red alga	Q85FU6	340	30.5	Protein translocase subunit SecY
+ECTSI|SCY1|A0ACM9J369	SCY1	protein import	yes	ECTSI	stramenopile	A0ACM9J369	432	34.4	Protein translocase subunit SecY
+MICPC|SCY1|C1MQ69	SCY1	protein import	yes	MICPC	green alga	C1MQ69	423	59.9	Protein translocase subunit SecY
+OSTQU|SCY1|A0A8S1J5K4	SCY1	protein import	yes	OSTQU	green alga (Bryopsidales)	A0A8S1J5K4	597	54.1	CpSecY
+OSTTA|SCY1|A0A090M006	SCY1	protein import	yes	OSTTA	green alga	A0A090M006	422	57.8	Protein translocase subunit SecY
+PHATC|SCY1|A0T0J6	SCY1	protein import	yes	PHATC	stramenopile	A0T0J6	423	33.9	Protein translocase subunit SecY
+VOLCA|SCY1|D8TT14	SCY1	protein import	yes	VOLCA	green alga	D8TT14	501	50.8	CpSecY
+ARATH|TATC|Q9SJV5	TATC	protein import	no	ARATH	land plant	Q9SJV5	340		thylakoid Tat translocase
+BRYSP|TATC|GMH41200.1	TATC	protein import	no	BRYSP	green alga (Bryopsidales)	GMH41200.1	320	71.9	hypothetical protein BSKO_09110 [Bryopsis sp. KO-2023]
+CHLRE|TATC|A0A2K3DVD4	TATC	protein import	no	CHLRE	green alga	A0A2K3DVD4	356	64.5	Sec-independent protein translocase protein TatC
+CHLVA|TATC|E1Z972	TATC	protein import	no	CHLVA	green alga	E1Z972	292	72.4	Sec-independent protein translocase protein TatC
+CHOCR|TATC|M5DES7	TATC	protein import	no	CHOCR	red alga	M5DES7	238	44.4	Sec-independent protein translocase-like protein
+CYAME|TATC|Q85FW9	TATC	protein import	no	CYAME	red alga	Q85FW9	230	42.4	Sec-independent protein translocase
+ECTSI|TATC|A0ACM9J3E2	TATC	protein import	no	ECTSI	stramenopile	A0ACM9J3E2	266	41.4	Sec-independent periplasmic protein translocase
+MICPC|TATC|C1N0E6	TATC	protein import	no	MICPC	green alga	C1N0E6	269	71.0	Twin arginine targeting family
+OSTQU|TATC|A0A8S1IR01	TATC	protein import	no	OSTQU	green alga (Bryopsidales)	A0A8S1IR01	335	60.6	Sec-independent protein translocase protein TatC
+OSTTA|TATC|A0A090N4A8	TATC	protein import	no	OSTTA	green alga	A0A090N4A8	400	72.7	Sec-independent periplasmic protein translocase,conserved site
+PHATC|TATC|A0T0D0	TATC	protein import	no	PHATC	stramenopile	A0T0D0	246	48.2	Sec-independent protein translocase component TatC
+VOLCA|TATC|D8U7S0	TATC	protein import	no	VOLCA	green alga	D8U7S0	338	69.3	Uncharacterized protein
+ARATH|TATA|Q9LKU2	TATA	protein import	no	ARATH	land plant	Q9LKU2	147		thylakoid Tat translocase
+BRYSP|TATA|GMH36834.1	TATA	protein import	no	BRYSP	green alga (Bryopsidales)	GMH36834.1	154	71.0	hypothetical protein BSKO_04707 [Bryopsis sp. KO-2023]
+CHLRE|TATA|A8IIS8	TATA	protein import	no	CHLRE	green alga	A8IIS8	114	72.4	Sec-independent protein translocase protein TatA/B/E N-terminal domain-containing protein
+CHLVA|TATA|E1ZJS2	TATA	protein import	no	CHLVA	green alga	E1ZJS2	56	79.5	Sec-independent protein translocase protein TatA/B/E N-terminal domain-containing protein
+MICPC|TATA|C1MLA4	TATA	protein import	no	MICPC	green alga	C1MLA4	144	64.3	Twin arginine targeting family
+OSTTA|TATA|A0A090M3K7	TATA	protein import	no	OSTTA	green alga	A0A090M3K7	116	53.3	Sec-independent protein translocase protein TatA/E
+ARATH|TATB/HCF106|Q9XH75	TATB/HCF106	protein import	no	ARATH	land plant	Q9XH75	260		thylakoid Tat translocase
+CHLRE|TATB/HCF106|A0A2K3DHB0	TATB/HCF106	protein import	no	CHLRE	green alga	A0A2K3DHB0	253	41.8	Sec-independent protein translocase protein TatA/B/E N-terminal domain-containing protein
+CHLVA|TATB/HCF106|E1ZEZ6	TATB/HCF106	protein import	no	CHLVA	green alga	E1ZEZ6	57	68.4	Sec-independent protein translocase protein TatA/B/E N-terminal domain-containing protein (Fragment)
+MICPC|TATB/HCF106|C1N292	TATB/HCF106	protein import	no	MICPC	green alga	C1N292	61	85.2	Twin arginine targeting family (Fragment)
+ARATH|cpSRP43|O22265	cpSRP43	protein import	no	ARATH	land plant	O22265	373		chloroplast signal recognition particle
+BRYSP|cpSRP43|GMH39684.1	cpSRP43	protein import	no	BRYSP	green alga (Bryopsidales)	GMH39684.1	405	43.9	hypothetical protein BSKO_07582 [Bryopsis sp. KO-2023]
+CHLRE|cpSRP43|A0A2K3DUY9	cpSRP43	protein import	no	CHLRE	green alga	A0A2K3DUY9	430	45.1	Chromo domain-containing protein
+CHLVA|cpSRP43|E1ZM15	cpSRP43	protein import	no	CHLVA	green alga	E1ZM15	436	40.3	Chromo domain-containing protein
+MICPC|cpSRP43|C1MLN9	cpSRP43	protein import	no	MICPC	green alga	C1MLN9	256	38.6	Predicted protein
+OSTQU|cpSRP43|A0A8S1JFI2	cpSRP43	protein import	no	OSTQU	green alga (Bryopsidales)	A0A8S1JFI2	361	46.2	Chromo domain-containing protein
+OSTTA|cpSRP43|A0A090N4M9	cpSRP43	protein import	no	OSTTA	green alga	A0A090N4M9	330	25.1	Ankyrin repeat
+VOLCA|cpSRP43|D8TZZ9	cpSRP43	protein import	no	VOLCA	green alga	D8TZZ9	561	42.4	Chromo domain-containing protein
+ARATH|cpSRP54|P37107	cpSRP54	protein import	yes	ARATH	land plant	P37107	564		chloroplast signal recognition particle
+BRYSP|cpSRP54|GMH32709.1	cpSRP54	protein import	yes	BRYSP	green alga (Bryopsidales)	GMH32709.1	574	50.7	hypothetical protein BSKO_00543 [Bryopsis sp. KO-2023]
+CHLRE|cpSRP54|A0A2K3D8M7	cpSRP54	protein import	yes	CHLRE	green alga	A0A2K3D8M7	549	53.6	signal-recognition-particle GTPase
+CHLVA|cpSRP54|E1ZC53	cpSRP54	protein import	yes	CHLVA	green alga	E1ZC53	415	52.5	signal-recognition-particle GTPase
+CHOCR|cpSRP54|R7QHF1	cpSRP54	protein import	yes	CHOCR	red alga	R7QHF1	462	49.1	signal-recognition-particle GTPase
+CYAME|cpSRP54|M1V3X8	cpSRP54	protein import	yes	CYAME	red alga	M1V3X8	608	45.8	signal-recognition-particle GTPase
+ECTSI|cpSRP54|D8LN22	cpSRP54	protein import	yes	ECTSI	stramenopile	D8LN22	557	44.9	PFfh, plastid Ffh subunit of the signal recognition particle
+MICPC|cpSRP54|C1MLE1	cpSRP54	protein import	yes	MICPC	green alga	C1MLE1	559	53.4	signal-recognition-particle GTPase
+OSTTA|cpSRP54|A0A090LXI7	cpSRP54	protein import	yes	OSTTA	green alga	A0A090LXI7	553	52.3	signal-recognition-particle GTPase
+PHATC|cpSRP54|B7FXT4	cpSRP54	protein import	yes	PHATC	stramenopile	B7FXT4	448	50.6	signal-recognition-particle GTPase
+VOLCA|cpSRP54|D8UEN3	cpSRP54	protein import	yes	VOLCA	green alga	D8UEN3	510	37.9	signal-recognition-particle GTPase
+ARATH|cpFtsY|O80842	cpFtsY	protein import	yes	ARATH	land plant	O80842	366		chloroplast SRP receptor
+BRYSP|cpFtsY|GMH35353.1	cpFtsY	protein import	yes	BRYSP	green alga (Bryopsidales)	GMH35353.1	371	55.9	hypothetical protein BSKO_03221 [Bryopsis sp. KO-2023]
+CHLRE|cpFtsY|A0A2K3DT85	cpFtsY	protein import	yes	CHLRE	green alga	A0A2K3DT85	381	53.8	SRP54-type proteins GTP-binding domain-containing protein
+CHLVA|cpFtsY|E1ZPR0	cpFtsY	protein import	yes	CHLVA	green alga	E1ZPR0	355	58.3	SRP54-type proteins GTP-binding domain-containing protein
+CHOCR|cpFtsY|R7Q9Y6	cpFtsY	protein import	yes	CHOCR	red alga	R7Q9Y6	390	44.3	SRP54-type proteins GTP-binding domain-containing protein
+CYAME|cpFtsY|M1V9A8	cpFtsY	protein import	yes	CYAME	red alga	M1V9A8	471	43.1	Chloroplast signal recognition particle receptor FtsY
+ECTSI|cpFtsY|D7FVJ7	cpFtsY	protein import	yes	ECTSI	stramenopile	D7FVJ7	522	41.4	PFtsY, plastid signal recognition particle receptor
+MICPC|cpFtsY|C1MZD5	cpFtsY	protein import	yes	MICPC	green alga	C1MZD5	340	50.5	Type II secretory pathway family protein (Fragment)
+OSTQU|cpFtsY|A0A8S1JDS2	cpFtsY	protein import	yes	OSTQU	green alga (Bryopsidales)	A0A8S1JDS2	373	53.0	SRP54-type proteins GTP-binding domain-containing protein
+OSTTA|cpFtsY|Q014I0	cpFtsY	protein import	yes	OSTTA	green alga	Q014I0	354	51.9	Signal-recognition particle receptor FtsY
+PHATC|cpFtsY|B7G5P8	cpFtsY	protein import	yes	PHATC	stramenopile	B7G5P8	298	42.9	SRP54-type proteins GTP-binding domain-containing protein (Fragment)
+VOLCA|cpFtsY|D8TMX0	cpFtsY	protein import	yes	VOLCA	green alga	D8TMX0	384	54.0	SRP54-type proteins GTP-binding domain-containing protein
+ARATH|FTSZ1|Q42545	FTSZ1	plastid division	no	ARATH	land plant	Q42545	433		plastid division ring (tubulin-like)
+BRYSP|FTSZ1|GMH35635.1	FTSZ1	plastid division	no	BRYSP	green alga (Bryopsidales)	GMH35635.1	431	72.9	hypothetical protein BSKO_03503 [Bryopsis sp. KO-2023]
+CHLRE|FTSZ1|A8JGS6	FTSZ1	plastid division	no	CHLRE	green alga	A8JGS6	479	69.2	Uncharacterized protein
+CHLVA|FTSZ1|E1ZA12	FTSZ1,FTSZ2-1,FTSZ2-2	plastid division	no	CHLVA	green alga	E1ZA12	289	59.0	Tubulin/FtsZ GTPase domain-containing protein
+CYAME|FTSZ1|A0A125YR75	FTSZ1,FTSZ2-1,FTSZ2-2	plastid division	no	CYAME	red alga	A0A125YR75	503	61.8	Plastid division protein FtsZ2-1
+ECTSI|FTSZ1|D8LC51	FTSZ1,FTSZ2-1,FTSZ2-2	plastid division	no	ECTSI	stramenopile	D8LC51	546	59.1	Plastid division protein FtsZ
+MICPC|FTSZ1|C1MRQ5	FTSZ1	plastid division	no	MICPC	green alga	C1MRQ5	367	70.8	Predicted protein
+OSTQU|FTSZ1|A0A8S1J9W0	FTSZ1,FTSZ2-1,FTSZ2-2	plastid division	no	OSTQU	green alga (Bryopsidales)	A0A8S1J9W0	445	70.7	Uncharacterized protein
+OSTTA|FTSZ1|A0A090MCQ7	FTSZ1	plastid division	no	OSTTA	green alga	A0A090MCQ7	418	75.3	Cell division protein FtsZ, C-terminal
+PHATC|FTSZ1|B7GDG0	FTSZ1	plastid division	no	PHATC	stramenopile	B7GDG0	471	56.3	Plastid division protein FtsZ
+VOLCA|FTSZ1|D8UAE3	FTSZ1	plastid division	no	VOLCA	green alga	D8UAE3	480	71.0	Plastid division protein FtsZ1
+ARATH|FTSZ2-1|O82533	FTSZ2-1	plastid division	no	ARATH	land plant	O82533	478		plastid division ring (tubulin-like)
+BRYSP|FTSZ2-1|GMH35536.1	FTSZ2-1,FTSZ2-2	plastid division	no	BRYSP	green alga (Bryopsidales)	GMH35536.1	468	66.0	hypothetical protein BSKO_03404 [Bryopsis sp. KO-2023]
+CHLRE|FTSZ2-1|A8JDK4	FTSZ2-1,FTSZ2-2	plastid division	no	CHLRE	green alga	A8JDK4	434	68.3	Uncharacterized protein
+MICPC|FTSZ2-1|C1MQY2	FTSZ2-1,FTSZ2-2	plastid division	no	MICPC	green alga	C1MQY2	443	72.8	Predicted protein
+OSTTA|FTSZ2-1|A0A090M7J3	FTSZ2-1,FTSZ2-2	plastid division	no	OSTTA	green alga	A0A090M7J3	424	73.0	Cell division protein FtsZ, C-terminal
+PHATC|FTSZ2-1|B7G5F6	FTSZ2-1,FTSZ2-2	plastid division	no	PHATC	stramenopile	B7G5F6	459	59.3	Cell division protein FtsZ
+VOLCA|FTSZ2-1|D8U1H7	FTSZ2-1,FTSZ2-2	plastid division	no	VOLCA	green alga	D8U1H7	424	59.1	Plastid division protein FtsZ2
+ARATH|FTSZ2-2|Q9LXJ0	FTSZ2-2	plastid division	no	ARATH	land plant	Q9LXJ0	473		plastid division ring (tubulin-like)
+ARATH|ARC3|Q6F6B5	ARC3	plastid division	no	ARATH	land plant	Q6F6B5	741		division site positioning
+ARATH|ARC5/DRP5B|Q84N64	ARC5/DRP5B	plastid division	yes	ARATH	land plant	Q84N64	777		outer division ring dynamin
+CHLRE|ARC5/DRP5B|A0A2K3DA00	ARC5/DRP5B	plastid division	yes	CHLRE	green alga	A0A2K3DA00	955	52.7	Dynamin-type G domain-containing protein
+CHLVA|ARC5/DRP5B|E1ZQ86	ARC5/DRP5B	plastid division	yes	CHLVA	green alga	E1ZQ86	792	57.1	Dynamin-type G domain-containing protein
+CYAME|ARC5/DRP5B|A0A125YX55	ARC5/DRP5B	plastid division	yes	CYAME	red alga	A0A125YX55	962	42.3	Dynamin-related protein involved in chloroplast division CmDnm2/DRP5
+ECTSI|ARC5/DRP5B|D8LDP8	ARC5/DRP5B	plastid division	yes	ECTSI	stramenopile	D8LDP8	1097	40.7	ARC5, dynamin-related protein involved in plastid division
+MICPC|ARC5/DRP5B|C1MXW9	ARC5/DRP5B	plastid division	yes	MICPC	green alga	C1MXW9	842	49.9	Predicted protein
+OSTTA|ARC5/DRP5B|Q01A95	ARC5/DRP5B	plastid division	yes	OSTTA	green alga	Q01A95	896	52.1	P-loop containing nucleoside triphosphate hydrolase
+PHATC|ARC5/DRP5B|B7G2X3	ARC5/DRP5B	plastid division	yes	PHATC	stramenopile	B7G2X3	815	39.8	Dynamin-type G domain-containing protein
+VOLCA|ARC5/DRP5B|D8TUY9	ARC5/DRP5B	plastid division	yes	VOLCA	green alga	D8TUY9	703	51.5	Dynamin-related GTPase
+ARATH|ARC6|Q9FIG9	ARC6	plastid division	no	ARATH	land plant	Q9FIG9	801		inner envelope division protein
+BRYSP|ARC6|GMH44775.1	ARC6,PARC6	plastid division	no	BRYSP	green alga (Bryopsidales)	GMH44775.1	907	27.2	hypothetical protein BSKO_12727 [Bryopsis sp. KO-2023]
+CHLRE|ARC6|A0A2K3D296	ARC6	plastid division	no	CHLRE	green alga	A0A2K3D296	909	26.0	J domain-containing protein
+CHLVA|ARC6|E1Z7S6	ARC6	plastid division	no	CHLVA	green alga	E1Z7S6	848	27.5	Uncharacterized protein
+MICPC|ARC6|C1MZX3	ARC6	plastid division	no	MICPC	green alga	C1MZX3	703	32.8	Predicted protein (Fragment)
+OSTQU|ARC6|A0A8S1J1R4	ARC6	plastid division	no	OSTQU	green alga (Bryopsidales)	A0A8S1J1R4	805	28.5	ARC6 IMS domain-containing protein
+OSTTA|ARC6|A0A090N330	ARC6,PARC6	plastid division	no	OSTTA	green alga	A0A090N330	818	29.4	Uncharacterized protein
+VOLCA|ARC6|D8TPG4	ARC6	plastid division	no	VOLCA	green alga	D8TPG4	681	28.1	Molecular chaperone (Fragment)
+ARATH|PARC6|Q8VY16	PARC6	plastid division	no	ARATH	land plant	Q8VY16	819		inner envelope division protein
+OSTQU|PARC6|A0A8S1J7W8	PARC6	plastid division	no	OSTQU	green alga (Bryopsidales)	A0A8S1J7W8	769	23.9	ARC6 IMS domain-containing protein
+VOLCA|PARC6|D8TJX0	PARC6	plastid division	no	VOLCA	green alga	D8TJX0	742	26.2	Uncharacterized protein
+ARATH|PDV1|Q9FK13	PDV1	plastid division	no	ARATH	land plant	Q9FK13	272		outer envelope division protein
+ARATH|PDV2|Q9XII1	PDV2	plastid division	no	ARATH	land plant	Q9XII1	307		outer envelope division protein
+ARATH|MIND1|Q9MBA2	MIND1	plastid division	no	ARATH	land plant	Q9MBA2	326		division site selection (MinD)
+CHLRE|MIND1|A0A2K3D476	MIND1	plastid division	no	CHLRE	green alga	A0A2K3D476	351	56.2	Putative septum site-determining protein MinD
+ECTSI|MIND1|D7FU34	MIND1	plastid division	no	ECTSI	stramenopile	D7FU34	339	37.2	CobQ/CobB/MinD/ParA nucleotide binding domain-containing protein
+MICPC|MIND1|C1MMW2	MIND1	plastid division	no	MICPC	green alga	C1MMW2	333	60.0	Putative septum site-determining protein MinD
+OSTTA|MIND1|A0A090M7Y7	MIND1	plastid division	no	OSTTA	green alga	A0A090M7Y7	314	62.8	Putative septum site-determining protein MinD
+VOLCA|MIND1|D8TN93	MIND1	plastid division	no	VOLCA	green alga	D8TN93	315	60.5	Putative septum site-determining protein MinD (Fragment)
+ARATH|MINE1|Q9C4Z7	MINE1	plastid division	no	ARATH	land plant	Q9C4Z7	229		division site selection (MinE)
+CHLRE|MINE1|A8J6D4	MINE1	plastid division	no	CHLRE	green alga	A8J6D4	208	42.7	Uncharacterized protein
+MICPC|MINE1|C1N8H3	MINE1	plastid division	no	MICPC	green alga	C1N8H3	204	37.0	Predicted protein
+OSTTA|MINE1|A0A096P9E1	MINE1	plastid division	no	OSTTA	green alga	A0A096P9E1	116	36.0	Septum formation topological specificity factor MinE
+ARATH|MCD1|Q8GWA7	MCD1	plastid division	no	ARATH	land plant	Q8GWA7	349		division site positioning
+ARATH|CCA1|P92973	CCA1	plant clock	no	ARATH	land plant	P92973	608		morning Myb transcription factor; regulates SIG5
+CHLVA|CCA1|E1ZDY2	CCA1,LHY,RVE8	plant clock	no	CHLVA	green alga	E1ZDY2	89	69.7	Uncharacterized protein (Fragment)
+VOLCA|CCA1|D8TI66	CCA1,LHY	plant clock	no	VOLCA	green alga	D8TI66	224	60.9	Myb-related transcription factor (Fragment)
+ARATH|LHY|Q6R0H1	LHY	plant clock	no	ARATH	land plant	Q6R0H1	645		morning Myb transcription factor
+ARATH|RVE8|Q8RWU3	RVE8	plant clock	no	ARATH	land plant	Q8RWU3	298		Myb transcription factor of the clock
+VOLCA|RVE8|D8TNR3	RVE8	plant clock	no	VOLCA	green alga	D8TNR3	53	62.3	Uncharacterized protein (Fragment)
+ARATH|TOC1|Q9LKL2	TOC1	plant clock	no	ARATH	land plant	Q9LKL2	618		pseudo-response regulator
+VOLCA|TOC1|D8UJ68	TOC1,PRR3,PRR5,PRR7,PRR9	plant clock	no	VOLCA	green alga	D8UJ68	124	36.7	Response regulatory domain-containing protein (Fragment)
+ARATH|PRR3|Q9LVG4	PRR3	plant clock	no	ARATH	land plant	Q9LVG4	495		pseudo-response regulator
+ARATH|PRR5|Q6LA42	PRR5	plant clock	no	ARATH	land plant	Q6LA42	558		pseudo-response regulator
+ARATH|PRR7|Q93WK5	PRR7	plant clock	no	ARATH	land plant	Q93WK5	727		pseudo-response regulator
+ARATH|PRR9|Q8L500	PRR9	plant clock	no	ARATH	land plant	Q8L500	468		pseudo-response regulator
+ARATH|GI|Q9SQI2	GI	plant clock	no	ARATH	land plant	Q9SQI2	1173		GIGANTEA
+ARATH|ELF3|O82804	ELF3	plant clock	no	ARATH	land plant	O82804	695		evening complex
+ARATH|ELF4|O04211	ELF4	plant clock	no	ARATH	land plant	O04211	111		evening complex
+MICPC|ELF4|C1MYP3	ELF4	plant clock	no	MICPC	green alga	C1MYP3	105	42.4	Uncharacterized protein ELF4
+ARATH|LUX|Q9SNB4	LUX	plant clock	no	ARATH	land plant	Q9SNB4	323		evening complex Myb transcription factor
+VOLCA|LUX|D8U936	LUX	plant clock	no	VOLCA	green alga	D8U936	61	68.3	HTH myb-type domain-containing protein (Fragment)
+ARATH|LNK1|A8MQN2	LNK1	plant clock	no	ARATH	land plant	A8MQN2	616		night light-inducible clock regulator
+ARATH|LNK2|F4JCX9	LNK2	plant clock	no	ARATH	land plant	F4JCX9	663		night light-inducible clock regulator
+ARATH|CHE|Q9FTA2	CHE	plant clock	no	ARATH	land plant	Q9FTA2	239		TCP transcription factor of the clock
+ECTSI|AUREO|D7FMH8	AUREO	light signalling	no	ECTSI	stramenopile	D7FMH8	621		aureochrome (LOV-bZIP blue-light receptor of stramenopiles): Aureochrome 1
+ECTSI|AUREO|D8LT99	AUREO	light signalling	no	ECTSI	stramenopile	D8LT99	275		aureochrome (LOV-bZIP blue-light receptor of stramenopiles): Aureochrome 3
+ECTSI|AUREO|D7FRW8	AUREO	light signalling	no	ECTSI	stramenopile	D7FRW8	285		aureochrome (LOV-bZIP blue-light receptor of stramenopiles): Aureochrome 4
+PHATC|AUREO|B7G9J2	AUREO	light signalling	no	PHATC	stramenopile	B7G9J2	103		aureochrome (LOV-bZIP blue-light receptor of stramenopiles): LOV domain-containing protein (Fragment)
+PHATC|AUREO|B7FYN4	AUREO	light signalling	no	PHATC	stramenopile	B7FYN4	142		aureochrome (LOV-bZIP blue-light receptor of stramenopiles): PAS domain-containing protein
+ECTSI|AUREO|D8LE91	AUREO	light signalling	no	ECTSI	stramenopile	D8LE91	441		aureochrome (LOV-bZIP blue-light receptor of stramenopiles): Aureochrome 2
+ECTSI|AUREO|D8LI77	AUREO	light signalling	no	ECTSI	stramenopile	D8LI77	261		aureochrome (LOV-bZIP blue-light receptor of stramenopiles): N/a (Partial) (Fragment)
+PHATC|AUREO|B7G8B3	AUREO	light signalling	no	PHATC	stramenopile	B7G8B3	120		aureochrome (LOV-bZIP blue-light receptor of stramenopiles): LOV domain-containing protein (Fragment)
+PHATC|AUREO|B7GAN3	AUREO	light signalling	no	PHATC	stramenopile	B7GAN3	108		aureochrome (LOV-bZIP blue-light receptor of stramenopiles): PAS domain-containing protein
+ECTSI|AUREO|D7FQI9	AUREO	light signalling	no	ECTSI	stramenopile	D7FQI9	310		aureochrome (LOV-bZIP blue-light receptor of stramenopiles): Aureochrome 5
+ECTSI|AUREO|D7FXV6	AUREO	light signalling	no	ECTSI	stramenopile	D7FXV6	135		aureochrome (LOV-bZIP blue-light receptor of stramenopiles): Blue light receptor

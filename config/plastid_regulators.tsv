@@ -1,0 +1,166 @@
+# Nuclear genes of plants and algae that regulate the chloroplast or signal between chloroplast and
+# nucleus, searched for in the Elysia genomes by scripts/genus/70_regulator_queries.py and
+# 71_regulator_screen.sh. One Arabidopsis protein per line (UniProt entry name), with the name used in
+# the text and the category; animal_family says whether animals have proteins of the same family
+# (yes: a slug homologue is expected and only its closeness to algal or animal proteins is informative;
+# no: any slug gene would itself be a candidate).
+entry	name	category	animal_family	role
+SIGA_ARATH	SIG1	plastid transcription	no	sigma factor of the plastid-encoded RNA polymerase (PEP)
+SIGB_ARATH	SIG2	plastid transcription	no	sigma factor of PEP
+SIGC_ARATH	SIG3	plastid transcription	no	sigma factor of PEP
+SIGD_ARATH	SIG4	plastid transcription	no	sigma factor of PEP
+SIGE_ARATH	SIG5	plastid transcription	no	light- and clock-regulated sigma factor of PEP (psbD blue-light promoter)
+SIGF_ARATH	SIG6	plastid transcription	no	sigma factor of PEP, early chloroplast development
+SIB1_ARATH	SIB1	plastid transcription	no	sigma factor-binding protein (VQ motif)
+PP124_ARATH	PTAC2	plastid transcription	no	PEP-associated protein PAP2 (PPR protein)
+PTA7_ARATH	PTAC7	plastid transcription	no	PEP-associated protein PAP12
+PTA10_ARATH	PTAC10	plastid transcription	no	PEP-associated protein PAP3
+PTA12_ARATH	PTAC12/HMR	plastid transcription	no	PEP-associated protein PAP5, phytochrome signalling
+PTA14_ARATH	PTAC14	plastid transcription	no	PEP-associated protein PAP7 (SET-domain methyltransferase)
+PTA16_ARATH	PTAC16	plastid transcription	no	nucleoid-thylakoid tethering protein
+PTAC5_ARATH	PTAC5	plastid transcription	no	heat-induced PEP-associated protein
+PTAC6_ARATH	PTAC6	plastid transcription	no	PEP-associated protein PAP8
+SCKL1_ARATH	FLN1	plastid transcription	yes	PEP-associated protein PAP6 (pfkB-type carbohydrate kinase family)
+SCKL2_ARATH	FLN2	plastid transcription	yes	fructokinase-like protein of the PEP complex
+SODF2_ARATH	FSD2	plastid transcription	yes	PEP-associated protein PAP9 (Fe superoxide dismutase)
+SODF3_ARATH	FSD3	plastid transcription	yes	PEP-associated protein PAP4 (Fe superoxide dismutase)
+CITRX_ARATH	TRXz	plastid transcription	yes	PEP-associated protein PAP10 (thioredoxin)
+MURE_ARATH	MurE	plastid transcription	no	PEP-associated protein PAP11 (MurE homologue)
+RPOT1_ARATH	RPOTm	plastid transcription	yes	phage-type RNA polymerase, mitochondrial
+RPOT2_ARATH	RPOTmp	plastid transcription	yes	phage-type RNA polymerase (NEP), plastid and mitochondria
+RPOT3_ARATH	RPOTp	plastid transcription	yes	phage-type RNA polymerase (NEP), plastid
+CSK_ARATH	CSK	plastid transcription	no	chloroplast sensor kinase (two-component histidine kinase)
+PRIN2_ARATH	PRIN2	plastid transcription	no	plastid redox insensitive 2, PEP activity
+PP451_ARATH	DG1	plastid transcription	no	PPR protein, PEP-dependent transcription
+MRL7_ARATH	MRL7	plastid transcription	no	thioredoxin-like regulator of PEP
+CP41B_ARATH	CSP41b	plastid transcription	no	stem-loop binding protein of plastid transcripts
+RNE_ARATH	RNE	plastid transcription	no	ribonuclease E of plastid RNA processing
+PP178_ARATH	GUN1	retrograde signalling	no	PPR protein integrating plastid retrograde signals
+GUN4C_ARATH	GUN4	retrograde signalling	no	tetrapyrrole-binding regulator of Mg-chelatase
+CHLH_ARATH	CHLH/GUN5	retrograde signalling	no	Mg-chelatase H subunit
+CHLI1_ARATH	CHLI1	retrograde signalling	no	Mg-chelatase I subunit
+CHLI2_ARATH	CHLI2	retrograde signalling	no	Mg-chelatase I subunit
+CHLD_ARATH	CHLD	retrograde signalling	no	Mg-chelatase D subunit
+HMOX1_ARATH	HO1/GUN2	retrograde signalling	yes	heme oxygenase
+PFBS_ARATH	HY2/GUN3	retrograde signalling	no	phytochromobilin synthase
+HEMH1_ARATH	FC1/GUN6	retrograde signalling	yes	ferrochelatase 1
+HEMH2_ARATH	FC2	retrograde signalling	yes	ferrochelatase 2
+EXEC1_ARATH	EX1	retrograde signalling	no	singlet-oxygen signalling
+EXEC2_ARATH	EX2	retrograde signalling	no	singlet-oxygen signalling
+FLU_ARATH	FLU	retrograde signalling	no	negative regulator of tetrapyrrole synthesis
+DPNP1_ARATH	SAL1	retrograde signalling	yes	PAP phosphatase, PAP retrograde signal
+PTM_ARATH	PTM	retrograde signalling	no	envelope-bound PHD transcription factor
+ABI4_ARATH	ABI4	retrograde signalling	no	AP2 transcription factor of retrograde signalling
+GLK1_ARATH	GLK1	retrograde signalling	no	Golden2-like transcription factor of chloroplast development
+GLK2_ARATH	GLK2	retrograde signalling	no	Golden2-like transcription factor of chloroplast development
+HY5_ARATH	HY5	retrograde signalling	yes	bZIP transcription factor of light signalling
+HEM11_ARATH	HEMA1	retrograde signalling	no	glutamyl-tRNA reductase, first step of tetrapyrrole synthesis
+GSA1_ARATH	GSA1	retrograde signalling	no	glutamate-1-semialdehyde aminomutase
+CHLM_ARATH	CHLM	retrograde signalling	no	Mg-protoporphyrin IX methyltransferase
+CRD1_ARATH	CRD1	retrograde signalling	no	Mg-protoporphyrin IX monomethyl ester cyclase
+PORA_ARATH	PORA	retrograde signalling	yes	protochlorophyllide reductase (short-chain dehydrogenase family)
+PORB_ARATH	PORB	retrograde signalling	yes	protochlorophyllide reductase
+CAO_ARATH	CAO	retrograde signalling	no	chlorophyllide a oxygenase
+CHLG_ARATH	CHLG	retrograde signalling	yes	chlorophyll synthase (UbiA prenyltransferase family)
+DXS_ARATH	DXS	retrograde signalling	yes	MEP pathway (transketolase family)
+DXR_ARATH	DXR	retrograde signalling	no	MEP pathway
+ISPF_ARATH	ISPF	retrograde signalling	no	MEP pathway, makes the retrograde signal MEcPP
+ISPG_ARATH	HDS	retrograde signalling	no	MEP pathway
+ISPH_ARATH	HDR	retrograde signalling	no	MEP pathway
+PHYA_ARATH	PHYA	light signalling	no	phytochrome
+PHYB_ARATH	PHYB	light signalling	no	phytochrome
+PHOT1_ARATH	PHOT1	light signalling	no	phototropin (LOV kinase)
+PHOT2_ARATH	PHOT2	light signalling	no	phototropin (LOV kinase)
+CRY1_ARATH	CRY1	light signalling	yes	plant cryptochrome
+CRY2_ARATH	CRY2	light signalling	yes	plant cryptochrome
+CRYD_ARATH	CRY3	light signalling	yes	cryptochrome DASH
+UVR8_ARATH	UVR8	light signalling	yes	UV-B receptor (RCC1 repeats)
+ADO1_ARATH	ZTL	light signalling	no	LOV F-box kelch protein, clock
+ADO2_ARATH	LKP2	light signalling	no	LOV F-box kelch protein, clock
+ADO3_ARATH	FKF1	light signalling	no	LOV F-box kelch protein, clock
+COP1_ARATH	COP1	light signalling	yes	E3 ligase of light signalling
+SPA1_ARATH	SPA1	light signalling	no	partner of COP1
+DET1_ARATH	DET1	light signalling	yes	repressor of photomorphogenesis
+STT7_ARATH	STN7	photosynthesis regulation	no	state-transition kinase
+STN8_ARATH	STN8	photosynthesis regulation	no	PSII core kinase
+P2C57_ARATH	PPH1/TAP38	photosynthesis regulation	yes	LHCII phosphatase (PP2C)
+CAS_ARATH	CAS	photosynthesis regulation	no	thylakoid calcium-sensing receptor
+PGR5_ARATH	PGR5	photosynthesis regulation	no	cyclic electron flow
+PGL1A_ARATH	PGRL1A	photosynthesis regulation	no	cyclic electron flow
+PGL1B_ARATH	PGRL1B	photosynthesis regulation	no	cyclic electron flow
+CP121_ARATH	CP12-1	photosynthesis regulation	no	redox regulator of the Calvin cycle
+CP122_ARATH	CP12-2	photosynthesis regulation	no	redox regulator of the Calvin cycle
+FTRC_ARATH	FTRB	photosynthesis regulation	no	ferredoxin-thioredoxin reductase, catalytic chain
+FTRA1_ARATH	FTRA1	photosynthesis regulation	no	ferredoxin-thioredoxin reductase, variable chain
+TRXB3_ARATH	NTRC	photosynthesis regulation	yes	NADPH-thioredoxin reductase C
+TRXF1_ARATH	TRXf1	photosynthesis regulation	yes	thioredoxin f
+TRXM1_ARATH	TRXm1	photosynthesis regulation	yes	thioredoxin m
+TRXM2_ARATH	TRXm2	photosynthesis regulation	yes	thioredoxin m
+TRXX_ARATH	TRXx	photosynthesis regulation	yes	thioredoxin x
+TRXY1_ARATH	TRXy1	photosynthesis regulation	yes	thioredoxin y
+RCA_ARATH	RCA	photosynthesis regulation	yes	Rubisco activase (AAA+)
+PSBS_ARATH	PSBS	photosynthesis regulation	no	non-photochemical quenching
+VDE_ARATH	VDE	photosynthesis regulation	yes	violaxanthin de-epoxidase
+ZEP_ARATH	ZEP	photosynthesis regulation	yes	zeaxanthin epoxidase
+P2SAF_ARATH	HCF136	photosynthesis regulation	no	PSII assembly factor
+PAM68_ARATH	PAM68	photosynthesis regulation	no	PSII assembly factor
+LPA1_ARATH	LPA1	photosynthesis regulation	no	PSII assembly factor
+LPA2_ARATH	LPA2	photosynthesis regulation	no	PSII assembly factor
+LPA3_ARATH	LPA3	photosynthesis regulation	no	PSII assembly factor
+HF101_ARATH	HCF101	photosynthesis regulation	yes	Fe-S cluster assembly for PSI
+VIPP1_ARATH	VIPP1	photosynthesis regulation	no	thylakoid biogenesis (PspA family)
+THF1_ARATH	THF1	photosynthesis regulation	no	thylakoid formation
+ALB3_ARATH	ALB3	photosynthesis regulation	yes	thylakoid insertase (YidC/Oxa1 family)
+ALB4_ARATH	ALB4	photosynthesis regulation	yes	thylakoid insertase (YidC/Oxa1 family)
+TOC33_ARATH	TOC33	protein import	no	outer envelope receptor GTPase
+TOC34_ARATH	TOC34	protein import	no	outer envelope receptor GTPase
+TC753_ARATH	TOC75-III	protein import	yes	outer envelope channel (Omp85 family)
+TC159_ARATH	TOC159	protein import	no	outer envelope receptor GTPase
+TC132_ARATH	TOC132	protein import	no	outer envelope receptor GTPase
+TC120_ARATH	TOC120	protein import	no	outer envelope receptor GTPase
+TOC90_ARATH	TOC90	protein import	no	outer envelope receptor GTPase
+TI201_ARATH	TIC20-I	protein import	no	inner envelope channel
+TI110_ARATH	TIC110	protein import	no	inner envelope translocon
+TIC40_ARATH	TIC40	protein import	no	inner envelope co-chaperone
+TIC55_ARATH	TIC55	protein import	no	inner envelope redox regulator (Rieske)
+TIC62_ARATH	TIC62	protein import	no	inner envelope redox regulator
+TIC56_ARATH	TIC56	protein import	no	1-MDa TIC complex
+TI100_ARATH	TIC100	protein import	no	1-MDa TIC complex
+OEP80_ARATH	OEP80	protein import	yes	outer envelope Omp85 protein
+OP161_ARATH	OEP16	protein import	no	outer envelope amino-acid channel
+CLPC1_ARATH	CLPC1	protein import	yes	stromal import motor (Clp ATPase)
+SECA1_ARATH	SECA1	protein import	no	thylakoid Sec translocase ATPase
+SCY1_ARATH	SCY1	protein import	yes	thylakoid Sec translocase channel (SecY)
+TATC_ARATH	TATC	protein import	no	thylakoid Tat translocase
+TATA_ARATH	TATA	protein import	no	thylakoid Tat translocase
+TATB_ARATH	TATB/HCF106	protein import	no	thylakoid Tat translocase
+SR43C_ARATH	cpSRP43	protein import	no	chloroplast signal recognition particle
+SR54C_ARATH	cpSRP54	protein import	yes	chloroplast signal recognition particle
+CFTSY_ARATH	cpFtsY	protein import	yes	chloroplast SRP receptor
+FTSZ1_ARATH	FTSZ1	plastid division	no	plastid division ring (tubulin-like)
+FTZ21_ARATH	FTSZ2-1	plastid division	no	plastid division ring (tubulin-like)
+FTZ22_ARATH	FTSZ2-2	plastid division	no	plastid division ring (tubulin-like)
+ARC3_ARATH	ARC3	plastid division	no	division site positioning
+ARC5_ARATH	ARC5/DRP5B	plastid division	yes	outer division ring dynamin
+ARC6_ARATH	ARC6	plastid division	no	inner envelope division protein
+CDP1_ARATH	PARC6	plastid division	no	inner envelope division protein
+PDV1_ARATH	PDV1	plastid division	no	outer envelope division protein
+PDV2_ARATH	PDV2	plastid division	no	outer envelope division protein
+MIND1_ARATH	MIND1	plastid division	no	division site selection (MinD)
+MINE1_ARATH	MINE1	plastid division	no	division site selection (MinE)
+MCD1_ARATH	MCD1	plastid division	no	division site positioning
+CCA1_ARATH	CCA1	plant clock	no	morning Myb transcription factor; regulates SIG5
+LHY_ARATH	LHY	plant clock	no	morning Myb transcription factor
+RVE8_ARATH	RVE8	plant clock	no	Myb transcription factor of the clock
+APRR1_ARATH	TOC1	plant clock	no	pseudo-response regulator
+APRR3_ARATH	PRR3	plant clock	no	pseudo-response regulator
+APRR5_ARATH	PRR5	plant clock	no	pseudo-response regulator
+APRR7_ARATH	PRR7	plant clock	no	pseudo-response regulator
+APRR9_ARATH	PRR9	plant clock	no	pseudo-response regulator
+GIGAN_ARATH	GI	plant clock	no	GIGANTEA
+ELF3_ARATH	ELF3	plant clock	no	evening complex
+ELF4_ARATH	ELF4	plant clock	no	evening complex
+PCL1_ARATH	LUX	plant clock	no	evening complex Myb transcription factor
+LNK1_ARATH	LNK1	plant clock	no	night light-inducible clock regulator
+LNK2_ARATH	LNK2	plant clock	no	night light-inducible clock regulator
+TCP21_ARATH	CHE	plant clock	no	TCP transcription factor of the clock

@@ -1,0 +1,28 @@
+{
+ "sequences": 61,
+ "sites": "365",
+ "groups": {
+  "Cry-DASH2 of the sea slugs": {
+   "members": 7,
+   "support": 100
+  },
+  "Cry-DASH2 with Aplysia Cry-DASH1": {
+   "support": 45
+  },
+  "Cry-DASH1 of the sea slugs with Biomphalaria Cry-DASH1": {
+   "support": 88
+  },
+  "heterobranch Cry-DASH (sea slugs, Aplysia, Biomphalaria; Cry-DASH1 and Cry-DASH2)": {
+   "members": 17,
+   "support": 99
+  },
+  "animal Cry-DASH (cnidarian, molluscs, vertebrates)": {
+   "members": 23,
+   "support": 100
+  },
+  "outgroup (photolyases and cryptochromes)": {
+   "members": 17,
+   "support": 100
+  }
+ }
+}

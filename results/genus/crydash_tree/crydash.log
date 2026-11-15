@@ -1,0 +1,189 @@
+IQ-TREE version 3.1.4 for Linux x86 64-bit built Sep 29 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    vm (AVX512, FMA3, 7 GB RAM)
+Command: iqtree -s /home/claude/elysia-crispata-clock/results/genus/crydash_tree/crydash.trimmed.fa -m LG+F+G4 -B 1000 -T 1 --seed 1 --prefix /home/claude/elysia-crispata-clock/results/genus/crydash_tree/crydash -redo -quiet
+Seed:    1 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun Nov 15 16:57:32 2026
+Kernel:  AVX+FMA - 1 threads (2 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 2 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file /home/claude/elysia-crispata-clock/results/genus/crydash_tree/crydash.trimmed.fa ... Fasta format detected
+Reading fasta file: done in 0.000627041 secs using 26.79% CPU
+Alignment most likely contains protein sequences
+Constructing alignment: done in 0.000359058 secs using 49.85% CPU
+Alignment has 61 sequences with 365 columns, 365 distinct patterns
+341 parsimony-informative, 15 singleton sites, 9 constant sites
+                         Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 2.69413e-05 secs using 48.25% CPU
+   1  SLUG|ELYCR|CryDASH1        2.47%    passed     99.45%
+   2  SLUG|ELYCH|CryDASH1        2.74%    passed     99.86%
+   3  SLUG|ELYMA|CryDASH1        5.21%    passed     36.57%
+   4  SLUG|ELYTI|CryDASH1        2.47%    passed     99.79%
+   5  SLUG|ELYLE|CryDASH1        2.47%    passed     97.79%
+   6  SLUG|ELYAT|CryDASH1        2.47%    passed     99.86%
+   7  SLUG|ELYPA|CryDASH1        2.47%    passed     97.44%
+   8  SLUG|PLAOC|CryDASH1        2.47%    passed     98.78%
+   9  SLUG|APLCA|CryDASH1        2.47%    passed     97.76%
+  10  SLUG|BIOGL|CryDASH1        2.47%    passed     96.49%
+  11  SLUG|ELYCR|CryDASH2        4.38%    passed     19.61%
+  12  SLUG|ELYCH|CryDASH2        4.38%    passed      9.11%
+  13  SLUG|ELYTI|CryDASH2        4.38%    passed     17.27%
+  14  SLUG|ELYLE|CryDASH2        4.38%    passed     17.05%
+  15  SLUG|ELYAT|CryDASH2        4.38%    passed      6.31%
+  16  SLUG|ELYPA|CryDASH2        4.38%    passed     10.36%
+  17  SLUG|PLAOC|CryDASH2        4.38%    failed      4.36%
+  18  SLUG|ELYCR|Phr6-4          2.47%    passed     91.78%
+  19  SLUG|ELYCR|PhrCPD         20.27%    passed     42.65%
+  20  HUMAN|Q16526               2.19%    passed     93.09%
+  21  DROME|Q0E8P0               2.74%    passed     79.05%
+  22  DANPL|A0A212FAM3           2.47%    passed     44.99%
+  23  TRICA|D6WKQ9               2.47%    passed     38.13%
+  24  MAGGI|A0A8W8IDI3           2.47%    passed     95.84%
+  25  LOTGI|V4B9P4               2.47%    passed     96.65%
+  26  POMCA|A0A2T7NWZ3           2.47%    passed     99.85%
+  27  MIZYE|A0A210PW80           3.01%    passed     37.23%
+  28  CAPTE|R7UL99               2.19%    passed     53.88%
+  29  NEMVE|A7SYS9               2.47%    passed     95.69%
+  30  BRAFL|A0A9J7HRF9           2.19%    passed     92.63%
+  31  ARATH|Q84KJ5               6.30%    passed     65.56%
+  32  BRYSP|GMH43542.1           5.75%    passed     46.66%
+  33  OSTQU|A0A8S1IXK9           3.29%    passed     27.50%
+  34  CHLRE|A0A2K3E0E6           2.47%    passed     96.09%
+  35  VOLCA|D8U4Q6               2.47%    passed     79.20%
+  36  CHLVA|E1ZDG8               2.19%    passed     79.26%
+  37  OSTTA|Q5IFN2               3.56%    passed     25.26%
+  38  MICPC|C1N4D5               2.19%    failed      4.76%
+  39  ECTSI|D7FPZ4               2.47%    passed     24.59%
+  40  PHATC|B7FV99               4.66%    passed     43.52%
+  41  CYAME|M1V828               2.47%    failed      4.57%
+  42  CHOCR|R7QSK1               2.19%    passed     65.67%
+  43  SYNY3|P77967               2.47%    passed     40.51%
+  44  SPROT|CRYD_DANRE|Q4KML2    2.74%    passed     99.83%
+  45  SPROT|CRYD_GIBZE|Q4I1Q6    2.19%    passed     65.02%
+  46  SPROT|CRYD_GLOVI|Q7NMD1    2.47%    passed     76.18%
+  47  SPROT|CRYD_IDILO|Q5QXE0    8.22%    passed      9.74%
+  48  SPROT|CRYD_NATPD|Q3IPX9    2.47%    failed      0.00%
+  49  SPROT|CRYD_NEUCR|Q7SI68    2.19%    passed     78.58%
+  50  SPROT|CRYD_ORYSJ|Q651U1    6.58%    passed     98.30%
+  51  SPROT|CRYD_RHOBA|Q7UJB1    2.19%    passed     15.57%
+  52  SPROT|CRYD_SOLLC|Q38JU2    6.58%    passed     94.26%
+  53  SPROT|CRYD_VIBCH|Q9KR33    8.22%    passed     16.28%
+  54  SPROT|CRYD_VIBPA|Q87JP5    8.22%    passed      5.89%
+  55  SPROT|CRYD_XENLA|Q75WS4    2.74%    passed     99.99%
+  56  SPROT|PHR_ARATH|Q9SB00    15.07%    passed     77.79%
+  57  SPROT|PHR_ECOLI|P00914     6.85%    passed      6.22%
+  58  SPROT|PHR_POTTR|Q28811    21.64%    passed     80.66%
+  59  SPROT|PHR_SYNY3|Q55081     5.48%    failed      0.29%
+  60  SPROT|PHR_YEAST|P05066     9.86%    passed      7.11%
+  61  SPROT|UVR3_ARATH|O48652    1.92%    passed     43.64%
+****  TOTAL                      4.37%  5 sequences failed composition chi2 test (p-value<5%; df=19)
+Checking for duplicate sequences: done in 0.000128984 secs using 99.24% CPU
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.017 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 1)...
+
+NOTE: 16 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -26375.983
+2. Current log-likelihood: -26120.769
+3. Current log-likelihood: -26117.447
+4. Current log-likelihood: -26117.286
+Optimal log-likelihood: -26117.263
+Gamma shape alpha: 1.190
+Parameters optimization took 4 rounds (1.300 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.395694 secs using 93.48% CPU
+Computing ML distances took 0.395830 sec (of wall-clock time) 0.370041 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 9.98974e-05 secs using 99.1% CPU
+Constructing RapidNJ tree: done in 0.000177145 secs using 99.35% CPU
+Computing RapidNJ tree took 0.000396 sec (of wall-clock time) 0.000355 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -26118.701
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.930 second
+Computing log-likelihood of 98 initial trees ... 6.451 seconds
+Current best score: -26117.263
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -26092.169
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -26081.427
+Iteration 10 / LogL: -26091.435 / Time: 0h:0m:18s
+Iteration 20 / LogL: -26091.644 / Time: 0h:0m:28s
+Finish initializing candidate tree set (18)
+Current best tree score: -26081.427 / CPU time: 26.447
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 25: -26079.913
+Iteration 30 / LogL: -26080.597 / Time: 0h:0m:42s (0h:2m:18s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 33: -26078.952
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 40: -26078.325
+Iteration 40 / LogL: -26078.325 / Time: 0h:0m:57s (0h:2m:26s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 48: -26077.057
+Iteration 50 / LogL: -26077.459 / Time: 0h:1m:10s (0h:2m:21s left)
+Log-likelihood cutoff on original alignment: -26150.968
+Iteration 60 / LogL: -26086.050 / Time: 0h:1m:22s (0h:2m:3s left)
+Iteration 70 / LogL: -26401.795 / Time: 0h:1m:35s (0h:1m:47s left)
+Iteration 80 / LogL: -26097.371 / Time: 0h:1m:49s (0h:1m:33s left)
+Iteration 90 / LogL: -26078.123 / Time: 0h:2m:3s (0h:1m:20s left)
+Iteration 100 / LogL: -26077.186 / Time: 0h:2m:17s (0h:1m:6s left)
+Log-likelihood cutoff on original alignment: -26150.968
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
+Iteration 110 / LogL: -26081.577 / Time: 0h:2m:31s (0h:2m:4s left)
+Iteration 120 / LogL: -26077.922 / Time: 0h:2m:44s (0h:1m:50s left)
+Iteration 130 / LogL: -26090.051 / Time: 0h:2m:58s (0h:1m:36s left)
+Iteration 140 / LogL: -26091.441 / Time: 0h:3m:11s (0h:1m:22s left)
+TREE SEARCH COMPLETED AFTER 149 ITERATIONS / Time: 0h:3m:24s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -26077.057
+Optimal log-likelihood: -26077.055
+Gamma shape alpha: 1.195
+Parameters optimization took 1 rounds (0.192 sec)
+BEST SCORE FOUND : -26077.055
+Creating bootstrap support values...
+Split supports printed to NEXUS file /home/claude/elysia-crispata-clock/results/genus/crydash_tree/crydash.splits.nex
+Total tree length: 27.055
+
+Total number of iterations: 149
+CPU time used for tree search: 197.075 sec (0h:3m:17s)
+Wall-clock time used for tree search: 201.907 sec (0h:3m:21s)
+Total CPU time used: 199.302 sec (0h:3m:19s)
+Total wall-clock time used: 204.352 sec (0h:3m:24s)
+
+Computing bootstrap consensus tree...
+Reading input file /home/claude/elysia-crispata-clock/results/genus/crydash_tree/crydash.splits.nex...
+61 taxa and 342 splits.
+Consensus tree written to /home/claude/elysia-crispata-clock/results/genus/crydash_tree/crydash.contree
+Reading input trees file /home/claude/elysia-crispata-clock/results/genus/crydash_tree/crydash.contree
+Log-likelihood of consensus tree: -26079.461
+
+Analysis results written to: 
+  IQ-TREE report:                /home/claude/elysia-crispata-clock/results/genus/crydash_tree/crydash.iqtree
+  Maximum-likelihood tree:       /home/claude/elysia-crispata-clock/results/genus/crydash_tree/crydash.treefile
+  Likelihood distances:          /home/claude/elysia-crispata-clock/results/genus/crydash_tree/crydash.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /home/claude/elysia-crispata-clock/results/genus/crydash_tree/crydash.splits.nex
+  Consensus tree:                /home/claude/elysia-crispata-clock/results/genus/crydash_tree/crydash.contree
+  Screen log file:               /home/claude/elysia-crispata-clock/results/genus/crydash_tree/crydash.log
+
+Date and Time: Sun Nov 15 17:00:57 2026

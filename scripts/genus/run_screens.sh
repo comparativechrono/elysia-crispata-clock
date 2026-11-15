@@ -3,7 +3,7 @@
 # they were run. E. crispata has its own, earlier pipeline (scripts/10 to 29); the two steps of
 # this one that were applied to it as well are in crispata() below.
 #
-# usage: run_screens.sh STEP ...      STEP = panel | assembly | reads | controls | loci | proteins | crispata | other_assemblies | crispata_animals | collect | all
+# usage: run_screens.sh STEP ...      STEP = panel | assembly | reads | controls | loci | proteins | crispata | other_assemblies | crispata_animals | regulators | collect | all
 #        DRY=1 run_screens.sh all     prints the commands without running them
 #
 # Layout (all outside the repository; set with the variables below)
@@ -337,6 +337,24 @@ crispata_animals(){   # the other sequenced animals of E. crispata, each aligned
   fi
 }
 
+regulators(){
+  # Nuclear genes of plants and algae that regulate the chloroplast or carry signals between chloroplast and nucleus
+  # (sigma factors and other plastid transcription factors, retrograde signalling, light signalling, regulation of
+  # photosynthesis, protein import, plastid division, the plant clock), searched for in all eleven assemblies; genes
+  # of non-animal origin in the four annotated sacoglossan proteomes; and the origin of the second Cry-DASH gene.
+  local R=$WORK/regscreen A=$WORK/alienprot DB=$HGT/alien/alien_db.dmnd
+  run python3 "$HERE/70_regulator_queries.py" "$REPO/config/plastid_regulators.tsv" "$DATA/algae" "$R/q" \
+      "$REPO/results/intermediate/regulator_queries.fa" "$REPO/results/intermediate/regulator_queries.tsv"
+  big bash "$HERE/71_regulator_screen.sh" "$R" "$REPO/results/intermediate/regulator_queries.fa" "$DB"
+  run python3 "$HERE/73_regulator_summary.py" "$REPO/config/plastid_regulators.tsv" "$REPO/results/intermediate/regulator_queries.tsv" \
+      "$R" "$DB" "$REPO/results/genus/plastid_regulators.json" "$REPO/results/genus/plastid_regulators_matrix.tsv"
+  big python3 "$HERE/72_alien_proteomes.py" "$DB" "$DATA/algae" "$A" "$R/alien_proteomes.json" \
+      ELYCR="$DATA/ensembl/Elysia_crispata-GCA_963854125.1-2024_05-pep.fa.gz" ELYCH="$DATA/refprot/ELYCH.fa.gz" \
+      ELYMA="$DATA/refprot/ELYMA.fa.gz" PLAOC="$DATA/refprot/PLAOC.fa.gz"
+  run python3 "$HERE/75_alien_candidates.py" "$R/alien_proteomes.json" "$A/proteomes.fa" "$DB" "$R" "$A" "$REPO/results/genus/alien_genes.json"
+  run bash "$HERE/74_crydash_tree.sh" "$WORK/crydash" "$REPO/results/genus/crydash_tree"
+}
+
 collect(){
   run python3 "$HERE/39_collect_species.py" "$REPO" "$WORK/reads" "$WORK/asm_screen" "$WORK/protscreen"
   run python3 "$HERE/45_export_tables.py" "$REPO" "$WORK"
@@ -348,8 +366,8 @@ collect(){
 [ $# -gt 0 ] || { sed -n 2,8p "$0"; exit 1; }
 for step in "$@"; do
   case $step in
-    all) panel; assembly; reads; controls; loci; proteins; crispata; other_assemblies; crispata_animals; collect ;;
-    panel|assembly|reads|controls|loci|proteins|crispata|other_assemblies|crispata_animals|collect) $step ;;
+    all) panel; assembly; reads; controls; loci; proteins; crispata; other_assemblies; crispata_animals; regulators; collect ;;
+    panel|assembly|reads|controls|loci|proteins|crispata|other_assemblies|crispata_animals|regulators|collect) $step ;;
     *) echo "unknown step: $step" >&2; exit 1 ;;
   esac
 done
