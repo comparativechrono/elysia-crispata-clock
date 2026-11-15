@@ -41,7 +41,7 @@ kind = ARGV[4] if len(ARGV) > 4 else "clr"
 tmp = ARGV[5] if len(ARGV) > 5 else out + ".tmp"
 os.makedirs(tmp, exist_ok=True)
 BIN = os.environ.get("BIO_BIN", "/home/claude/tools/mamba/envs/bio/bin")
-FL = 400; NEED = 120; ORG = ("cp", "slugmt", "algmt")
+FL = 400; NEED = 120; ORG = ("cp", "slugmt", "algmt", "circ")
 COMP = str.maketrans("ACGTNacgtn", "TGCANtgcan")
 d = json.load(open(cand_json))
 J = {}

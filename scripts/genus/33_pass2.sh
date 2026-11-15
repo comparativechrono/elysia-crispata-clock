@@ -13,6 +13,7 @@
 # usage: 33_pass2.sh WORKDIR GENOME.fa.gz PANEL.fa SCREEN.json hifi|clr|short [EXTRA_REF.fa]
 #        SAMPLE_ONLY=1   align only the random sample (RUN.sample.fa -> sample.paf)
 #        PASS2_PRESET=map-ont   another minimap2 preset than the one of the kind (Nanopore reads, with kind clr)
+#        SAMPLE_EVERY=K   read pairs: align every K-th pair of the random sample only (a large sample on a small disk)
 set -euo pipefail
 export PATH=${BIO_BIN:-/home/claude/tools/mamba/envs/bio/bin}:$PATH
 W=$(realpath "$1"); G=$(realpath "$2"); PANEL=$(realpath "$3"); SCREEN=$(realpath "$4"); KIND=$5; EXTRA=${6:+$(realpath "$6")}
@@ -54,8 +55,13 @@ fi
 # to sample.thin so that 46_candidates.py knows what share of the library the alignments stand for.
 if ls ./*.sample.fa > /dev/null 2>&1; then
   k=1
-  if [ "$KIND" != short ]; then n=$(cat ./*.sample.fa | grep -c '>'); k=$(( (n + ${SAMPLE_MAX:-12000} - 1) / ${SAMPLE_MAX:-12000} )); fi
-  cat ./*.sample.fa | awk -v k="$k" 'NR % 2 == 1 {keep = (((NR + 1) / 2) % k == 0)} keep' > all_sample.fa
+  if [ "$KIND" != short ]; then
+    n=$(cat ./*.sample.fa | grep -c '>'); k=$(( (n + ${SAMPLE_MAX:-12000} - 1) / ${SAMPLE_MAX:-12000} ))
+    cat ./*.sample.fa | awk -v k="$k" 'NR % 2 == 1 {keep = (((NR + 1) / 2) % k == 0)} keep' > all_sample.fa
+  else          # the two mates of a pair follow each other: both or neither
+    k=${SAMPLE_EVERY:-1}
+    cat ./*.sample.fa | awk -v k="$k" 'NR % 4 == 1 {keep = (((NR + 3) / 4) % k == 0)} keep' > all_sample.fa
+  fi
   echo "$k" > sample.thin
   map all_sample.fa sample.log > sample.paf.tmp || { echo "alignment of the sample failed (see sample.log)" >&2; rm -f ref.fa sample.paf.tmp p2tmp.*; exit 1; }
   mv sample.paf.tmp sample.paf

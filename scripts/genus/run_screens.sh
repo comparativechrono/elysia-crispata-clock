@@ -92,12 +92,12 @@ lib(){
       run python3 "$HERE/31b_slim_rdna.py" "$W/$r.p1.paf" "$W/$r.allhits.fasta" "$W/$r.hits.fa"
     done
   fi
-  big env ${PASS2_PRESET:+PASS2_PRESET=$PASS2_PRESET} bash "$HERE/33_pass2.sh" "$W" "$(genome "$slug")" "$PANEL/panel.fa" "$WORK/asm_screen/$slug.screen.json" "$mode"
+  big env ${PASS2_PRESET:+PASS2_PRESET=$PASS2_PRESET} ${PASS2_INDEX_BASES:+PASS2_INDEX_BASES=$PASS2_INDEX_BASES} ${SAMPLE_EVERY:+SAMPLE_EVERY=$SAMPLE_EVERY} bash "$HERE/33_pass2.sh" "$W" "$(genome "$slug")" "$PANEL/panel.fa" "$WORK/asm_screen/$slug.screen.json" "$mode"
   if [ "$kind" = short ]; then P1_INDEX=$PANEL/$pn.sr.mmi analyse "$dir" "$mode"; else analyse "$dir" "$mode"; fi
 }
 analyse(){
   local dir=$1 mode=$2 slug=${ASM:-${1%%.*}}
-  run env ${DEPTH_PAF:+DEPTH_PAF=$DEPTH_PAF} ${REPEAT_FA:+REPEAT_FA=$REPEAT_FA} ${P1_INDEX:+P1_INDEX=$P1_INDEX} ${EXTRA_ORGANELLE:+EXTRA_ORGANELLE=$EXTRA_ORGANELLE} bash "$HERE/49_analyse_library.sh" "$WORK/reads/$dir" "$(genome "$slug")" "$PANEL" "$WORK/asm_screen/$slug.screen.json" "$mode" "$BC"
+  run env ${DEPTH_PAF:+DEPTH_PAF=$DEPTH_PAF} ${REPEAT_FA:+REPEAT_FA=$REPEAT_FA} ${P1_INDEX:+P1_INDEX=$P1_INDEX} ${EXTRA_ORGANELLE:+EXTRA_ORGANELLE=$EXTRA_ORGANELLE} ${LONG_READ_PLATFORM:+LONG_READ_PLATFORM=$LONG_READ_PLATFORM} bash "$HERE/49_analyse_library.sh" "$WORK/reads/$dir" "$(genome "$slug")" "$PANEL" "$WORK/asm_screen/$slug.screen.json" "$mode" "$BC"
 }
 # spots and size of a run: run_info RUN spots|size_MB   (E-utilities; the answers are kept in $WORK/runs.tsv)
 run_info(){
@@ -238,39 +238,103 @@ once(){
   "$@"; [ "${DRY:-0}" = 1 ] || touch "$d/lib.done"
 }
 
-crispata_animals(){   # the other sequenced animals of E. crispata, each aligned to the assembly made from it
+crispata_animals(){   # the other sequenced animals of E. crispata, each aligned to the assembly made from the same DNA
   # The panel for these libraries is the genus panel plus the chloroplast contigs of the Purdue assembly
   # (config/panel_extra.tsv): about 650 kb of an Acetabularia chloroplast genome, for which no other reference exists.
-  local P=$WORK/panel_ecr s
+  local P=$WORK/panel_ecr s GP GT A=$WORK/reads/elysia-crispata.purdue E=$WORK/reads/elysia-crispata.eggs T=$WORK/reads/elysia-crispata.tampa
+  local C=$WORK/asm_census/elysia-crispata-purdue
+  GP=$(genome elysia-crispata-purdue); GT=$(genome elysia-crispata-tampa)      # GCA_033675545.1 and GCA_984581095.1 (bgzip + faidx)
   run python3 "$HERE/30c_extend_panel.py" "$PANEL" "$REPO/config/panel_extra.tsv" "$DATA/asm" "$P"
   run bash "$HERE/30b_mask_and_index.sh" "$P"
-  run bash "$HERE/30b_mask_and_index.sh" "$P" - org
-  # $DATA/asm/elysia-crispata-purdue and elysia-crispata-tampa hold GCA_033675545.1 and GCA_984581095.1 (bgzip + faidx)
   for s in elysia-crispata-purdue elysia-crispata-tampa; do
     run bash "$REPO/scripts/22_assembly_organelle_screen.sh" "$PANEL/panel.ont.mmi" "$WORK/asm_screen" "$s=$(genome "$s")"
     run python3 "$HERE/35_assembly_screen.py" "$PANEL/panel.tsv" "$PANEL/panel.fa" "$(genome "$s").fai" "$WORK/asm_screen/$s.paf" "$WORK/asm_screen/$s.screen.json"
   done
   # the chloroplast contigs of the Purdue assembly are hidden in it: their reads are compared with the panel records
   run python3 "$HERE/35b_hide_panel_extra.py" "$REPO/config/panel_extra.tsv" elysia-crispata-purdue "$WORK/asm_screen/elysia-crispata-purdue.screen.json"
-  # Places of the Purdue assembly at which chloroplast DNA meets other DNA within a contig, to be tested with
-  # the read pairs of the egg mass (panel.org.pur): the five places described on the gene-transfer page of
-  # E. crispata, four found with the reads of the adults (three of them at Nanopore adapter sequence in the
-  # contig, 56_adapter_in_assembly.py) and a place within slug DNA as a control
-  run python3 "$HERE/40_locus_baits.py" - "$(genome elysia-crispata-purdue)" "$WORK/reads/elysia-crispata.purdue/baits.fa" 3000 \
-      JAWDGP010001375.1:1975-4975:plastid JAWDGP010004663.1:3970-6970:plastid JAWDGP010006093.1:1001-4001:plastid JAWDGP010001684.1:0-514:plastid \
-      JAWDGP010005248.1:144410-144817:plastid JAWDGP010008029.1:16030-19030:plastid JAWDGP010003417.1:696-3696:plastid JAWDGP010003417.1:70552-73552:plastid \
-      JAWDGP010002183.1:14566-17566:plastid JAWDGP010004937.1:4000-7000:control
-  run bash "$HERE/30b_mask_and_index.sh" "$P" "$WORK/reads/elysia-crispata.purdue/baits.fa" org.pur
-  # Purdue (PRJNA987316, isolate ECLA1): Nanopore reads of a whole animal and of a brain, read pairs of an egg mass
-  PANEL=$P ASM=elysia-crispata-purdue PASS2_PRESET=map-ont STORE_MAX_MB=5500 once elysia-crispata.purdue lib elysia-crispata.purdue panel.dust \
+  run mkdir -p "$WORK/asm_adapters" "$WORK/asm_census" "$A" "$E" "$T"
+  # Nanopore adapter built into contigs of the Purdue assembly
+  [ -s "$WORK/asm_adapters/elysia-crispata-purdue.adapters.tsv" ] || run python3 "$HERE/56_adapter_in_assembly.py" "$GP" "$WORK/asm_adapters/elysia-crispata-purdue.adapters.tsv"
+
+  # 1. The egg mass of the Purdue isolate (PRJNA987316). Its read pairs test the places at which the Purdue assembly
+  #    joins chloroplast DNA to other DNA within a contig (config/assembly_junctions.tsv; they join the panel as baits),
+  #    and the random sample (one pair in 100, of which every second pair is aligned: 0.4-fold coverage) shows which
+  #    stretches of the assembly are not in the germline.
+  run python3 "$HERE/40_locus_baits.py" - "$GP" "$A/baits.fa" 3000 $(awk -F'\t' 'NR > 1 && $1 == "elysia-crispata" && $2 == "purdue" {printf "%s:%s-%s:%s ", $3, $4, $5, $6}' "$REPO/config/assembly_junctions.tsv")
+  run bash "$HERE/30b_mask_and_index.sh" "$P" "$A/baits.fa" org.pur
+  PASS2_INDEX_BASES=250M SAMPLE_EVERY=2 PANEL=$P ASM=elysia-crispata-purdue STORE_MAX_MB=5500 once elysia-crispata.eggs lib elysia-crispata.eggs panel.org.pur "SRR25020525" short short --sample 100 --streams 10
+  if [ -e "$E/lib.done" ] || [ "${DRY:-0}" = 1 ]; then
+    [ -s "$E/junction_tests.json" ] || run python3 "$HERE/41_locus_test.py" "$A/baits.fa.tsv" "$GP" "$E/all_hits.fa" short "$E/junction_tests.json"
+    # windows of 8 kb, tested where at least 14 reads are expected (2.1 reads per kb)
+    [ -s "$C.tsv" ] || run python3 "$HERE/59_germline_coverage.py" "$E/sample.paf" "$GP" "$C" --window 8000 --min-expected 14
+    [ -s "$C.classes.tsv" ] || run python3 "$HERE/60_classify_absent_stretches.py" "$C.tsv" "$GP" "$P/panel.fa" "$HGT/alien/alien_db.dmnd" "$C.classes" --extra "$REPO/config/panel_extra.tsv" \
+        --other "tampa=$GT" "sanger=$(genome elysia-crispata)" "alt=$DATA/alt/alt_genomic.fna.gz"
+    # the stretches that are absent from the eggs and are chloroplast DNA are hidden as well (four contigs beyond those of the panel)
+    run python3 "$HERE/35b_hide_panel_extra.py" "$REPO/config/panel_extra.tsv" elysia-crispata-purdue "$WORK/asm_screen/elysia-crispata-purdue.screen.json" "$C.classes.hidden.tsv"
+  fi
+
+  # 2. The adults of the Purdue isolate: Nanopore reads of whole bodies (eleven runs, five flow cells) and of brains.
+  #    They are analysed like the older PacBio reads (clr), aligned with the Nanopore preset, and their junctions are
+  #    tested for the adapter of the ligation kit (LONG_READ_PLATFORM=ont). (In the published run their first pass was
+  #    made before the egg mass was read; the second pass and the analysis were repeated once the four further
+  #    chloroplast contigs had been hidden.)
+  LONG_READ_PLATFORM=ont PANEL=$P ASM=elysia-crispata-purdue PASS2_PRESET=map-ont STORE_MAX_MB=5500 once elysia-crispata.purdue lib elysia-crispata.purdue panel.dust \
       "SRR25020508 SRR25020509 SRR25020510 SRR25020511 SRR25020513 SRR25020514 SRR25020515 SRR25020516 SRR25020517 SRR25020518 SRR25020522" long clr --sample 200
-  PANEL=$P ASM=elysia-crispata-purdue PASS2_PRESET=map-ont STORE_MAX_MB=5500 once elysia-crispata.brain lib elysia-crispata.brain panel.dust "SRR25020519" long clr --sample 50
-  # egg mass: one pair in 100 is kept as the random sample (0.8-fold coverage), which shows which contigs of the assembly are in the germline
-  PANEL=$P ASM=elysia-crispata-purdue STORE_MAX_MB=5500 once elysia-crispata.eggs lib elysia-crispata.eggs panel.org.pur "SRR25020525" short short --sample 100 --streams 10
-  # University of Tampa (PRJNA1337476): PacBio reads of an amplified library and read pairs; one read pair in sixteen
-  # is plastid DNA, so one in 20 of the pairs that match an organelle genome and nothing else is carried on
+  LONG_READ_PLATFORM=ont PANEL=$P ASM=elysia-crispata-purdue PASS2_PRESET=map-ont STORE_MAX_MB=5500 once elysia-crispata.brain lib elysia-crispata.brain panel.dust "SRR25020519" long clr --sample 50
+
+  # 3. The long reads of the University of Tampa (PRJNA1337476, library EC2). The library was made by whole-genome
+  #    amplification: a quarter of it is mitochondrial DNA, and of the reads that match nothing but the mitochondrial
+  #    genome one in 20 is carried on (thin.tsv, 31_select_hits.py).
+  local TS=$WORK/reads/elysia-crispata.tampa_short SCT=$WORK/asm_screen/elysia-crispata-tampa.screen.json
+  [ -s "$T/thin.tsv" ] || [ "${DRY:-0}" = 1 ] || printf 'slugmt\t20\n' > "$T/thin.tsv"
   PANEL=$P ASM=elysia-crispata-tampa STORE_MAX_MB=5500 once elysia-crispata.tampa lib elysia-crispata.tampa panel.dust "SRR35727887" long hifi --sample 100
-  PANEL=$P ASM=elysia-crispata-tampa STORE_MAX_MB=5500 once elysia-crispata.tampa_short lib elysia-crispata.tampa_short panel.org "SRR35727888" short short --sample 800 --plain-keep 20 --match-keep 20 --streams 10
+  if [ ! -s "$T/circ.contigs.tsv" ]; then
+    #  a. In this first analysis every read with a plastid-like match was examined: its reads with an insertion-like
+    #     structure are kept apart from the counts of what follows.
+    run cp "$T/candidates.json" "$T/candidates.all_plastid.json"
+    #  b. Nearly all of the plastid-like reads match no reference closely. From here on one in five of the reads that
+    #     match nothing but plastid sequences is carried on: the choice of reads is made again, and the chosen reads
+    #     are taken from those kept before.
+    [ "${DRY:-0}" = 1 ] || printf 'slugmt\t20\ncp\t5\n' > "$T/thin.tsv"
+    run python3 "$HERE/31_select_hits.py" "$T/SRR35727887.p1.paf" "$T/SRR35727887.count" "$T/SRR35727887" long
+    run mv "$T/SRR35727887.hits.fa" "$T/SRR35727887.hits.first.fa"
+    run sh -c "seqkit grep -j 2 -w 0 -f '$T/SRR35727887.keep.names' '$T/SRR35727887.hits.first.fa' > '$T/SRR35727887.hits.fa'"
+    run rm -f "$T/SRR35727887.hits.first.fa"
+    big bash "$HERE/33_pass2.sh" "$T" "$GT" "$P/panel.fa" "$SCT" hifi
+    #  c. Contigs are assembled from a sample of the plastid-like reads (hifiasm). All of them turn out to be tandem
+    #     arrays of a unit of about 5 kb: small circular elements that the amplification copied many times over
+    #     (38c_tandem_contigs.py). They become a kind of DNA of their own (circ|...), the library is aligned again
+    #     with them, and it is analysed again. (In the published run the second pass was made with the contigs before
+    #     they were recognised as arrays; the names of its targets were changed with contigs.rename.tsv instead.)
+    run bash "$HERE/38b_plastid_contigs_long.sh" "$T" "$P/panel.fa" "$GT"
+    run python3 "$HERE/38c_tandem_contigs.py" "$T" "$REPO/results/intermediate/protein_screen_queries.fa"
+    big bash "$HERE/33_pass2.sh" "$T" "$GT" "$P/panel.fa" "$SCT" hifi "$T/own.contigs.fa"
+    PANEL=$P ASM=elysia-crispata-tampa analyse elysia-crispata.tampa hifi
+    #  d. The barcode genes are read from all reads that span them, including those that were not carried on.
+    run python3 "$HERE/36b_barcode_reads_set_aside.py" "$T" "$P/panel.fa" "$T/barcodes/frames.fa" "$T/barcode_reads.fa"
+    run sh -c "cat '$T/all_hits.fa' '$T/barcode_reads.fa' > '$T/barcode_all.fa'"
+    run python3 "$HERE/36_barcodes.py" reads "$T/barcode_all.fa" "$BC" "$T/barcodes"
+    run rm -f "$T/barcode_all.fa"
+    #  e. Every read of the library at the place of the one read with an insertion-like structure (step a): the run is
+    #     read once more against that place alone, and the reads found are aligned to the unmasked stretch of the assembly.
+    run python3 "$HERE/40_locus_baits.py" - "$GT" "$T/baits.fa" 3000 CFHGKC010004091.1:16397-16398:candidate
+    run minimap2 -x map-ont -k15 -w10 -d "$T/baits.ont.mmi" "$T/baits.fa"
+    run python3 "$HERE/31c_screen_run.py" "$WORK/reads/elysia-crispata.tampa_locus" "$T/baits" SRR35727887 long "$(run_info SRR35727887 spots)"
+    run sh -c "samtools faidx '$GT' CFHGKC010004091.1:13398-19398 > '$T/candidate_place.fa'"
+    run sh -c "minimap2 -x map-hifi -c --secondary=no '$T/candidate_place.fa' '$WORK/reads/elysia-crispata.tampa_locus/SRR35727887.hits.fa' | cut -f1-12 > '$T/candidate_place_all_reads.paf'"
+  fi
+
+  # 4. The read pairs of the University of Tampa (library EC1, registered under the same sample). One pair in sixteen is
+  #    plastid DNA, so one in 20 of the pairs that match an organelle genome and nothing else is carried on. The place
+  #    of the one long read with an insertion-like structure joins the panel, and the pairs at that place are examined.
+  run python3 "$HERE/40_locus_baits.py" - "$GT" "$T/baits.fa" 3000 CFHGKC010004091.1:16397-16398:candidate
+  run bash "$HERE/30b_mask_and_index.sh" "$P" "$T/baits.fa" org.tam
+  PANEL=$P ASM=elysia-crispata-tampa STORE_MAX_MB=5500 once elysia-crispata.tampa_short lib elysia-crispata.tampa_short panel.org.tam "SRR35727888" short short --sample 800 --plain-keep 20 --match-keep 20 --streams 10
+  if [ -e "$TS/lib.done" ] || [ "${DRY:-0}" = 1 ]; then
+    [ -s "$TS/candidate_places.json" ] || run python3 "$HERE/41_locus_test.py" "$T/baits.fa.tsv" "$GT" "$TS/all_hits.fa" short "$TS/candidate_places.json"
+    # do the two libraries of the Tampa sample come from one animal? Their mitochondrial genomes are compared.
+    [ -s "$TS/mt_haplotypes.json" ] || run python3 "$HERE/58_mt_haplotypes.py" "$P/panel.fa" "slugmt|OY973781.1" "$TS/mt_haplotypes.json" "tampa_short=$TS:short" "tampa=$T:hifi"
+  fi
 }
 
 collect(){

@@ -73,7 +73,7 @@ MAXGAP, MINGAP = 5000, -300          # reference distance allowed between the tw
 FAR = 50000                          # "elsewhere": another sequence, or further than this
 UNIQ = 30                            # mapping quality from which a piece of slug DNA counts as placed
 MINSEEDED = 0.3 if kind == "hifi" else 0.2   # first-pass match: share of its length covered by matching seeds
-ORG = ("cp", "slugmt", "algmt")
+ORG = ("cp", "slugmt", "algmt", "circ")          # circ: circular elements of the library itself (38c_tandem_contigs.py)
 def norm_cls(c): return {"asmcp": "cp", "asmalgmt": "algmt", "kcp": "cp"}.get(c, c)
 
 S = paf_segments(A.paf or os.path.join(W, "pass2.paf"), minlen=MINSHORT)
@@ -175,7 +175,8 @@ def second_pass(t, i, j):
 shape_n = collections.Counter(); cand = []; reads_with = collections.Counter(); nuclear = collections.Counter(); nuc_rows = []; shared = collections.Counter(); strands = collections.Counter()
 # a kind of organelle DNA of which only an even sample of the reads was carried on (THIN_K): its counts are those of the sample
 THIN, THIN_K = thinned_reads(W) if not A.paf else ({}, {})
-def counted(r, k): return k not in THIN_K or THIN.get(r) == k
+def tk(k): return "cp" if k == "circ" else k          # the first pass thinned the circular elements as plastid-like reads
+def counted(r, k): return tk(k) not in THIN_K or THIN.get(r) == tk(k)
 for r, t in tiles.items():
     kinds = {s["cls"] for s in t}
     for k in kinds:

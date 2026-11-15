@@ -16,6 +16,8 @@
    "reads": 7717313,
    "bases": 9445445540,
    "bases_screened": 9445445540,
+   "donors_by_group": [],
+   "sampled_classes": {},
    "plastid": {
     "reads": 169152,
     "bp": 332517254,
@@ -129,6 +131,7 @@
    ],
    "barcodes": [],
    "contigs": null,
+   "circular_elements": null,
    "hot_windows": [
     {
      "target": "bait|RQTK01002715.1:0-3919|numt|2600-3794",
@@ -187,6 +190,8 @@
    "reads": 1024996320,
    "bases": 102499632000,
    "bases_screened": 102499632000,
+   "donors_by_group": [],
+   "sampled_classes": {},
    "plastid": {
     "reads": 57986168,
     "bp": 11311034926,
@@ -460,6 +465,7 @@
      }
     ]
    },
+   "circular_elements": null,
    "hot_windows": []
   },
   {
@@ -477,6 +483,8 @@
    "reads": 153333832,
    "bases": 22386739472,
    "bases_screened": 22386739472,
+   "donors_by_group": [],
+   "sampled_classes": {},
    "plastid": {
     "reads": 13,
     "bp": 1567,
@@ -669,13 +677,8 @@
     }
    ],
    "barcodes": [],
-   "contigs": {
-    "n": 0,
-    "bp": 0,
-    "longest": 0,
-    "groups": [],
-    "top": []
-   },
+   "contigs": null,
+   "circular_elements": null,
    "hot_windows": []
   }
  ],

@@ -16,6 +16,8 @@
    "reads": 3514321,
    "bases": 30628534557,
    "bases_screened": 30628534557,
+   "donors_by_group": [],
+   "sampled_classes": {},
    "plastid": {
     "reads": 68891,
     "bp": 572768084,
@@ -186,6 +188,7 @@
     }
    ],
    "contigs": null,
+   "circular_elements": null,
    "hot_windows": [
     {
      "target": "algrDNA|AY206425.1",

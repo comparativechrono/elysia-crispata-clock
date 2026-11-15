@@ -198,6 +198,8 @@
    },
    "min_identity": 0.97,
    "locus_tests": null,
+   "sampled_classes": {},
+   "adapter_tested": null,
    "shapes": {
     "min_identity": 0.97,
     "min_segment": 300,
@@ -349,6 +351,8 @@
    },
    "min_identity": 0.97,
    "locus_tests": null,
+   "sampled_classes": {},
+   "adapter_tested": null,
    "shapes": {
     "min_identity": 0.97,
     "min_segment": 300,

@@ -170,7 +170,7 @@ index_body = f"""
 <div class="tablewrap"><table class="genes">
 <thead><tr><th>Gene</th><th>Category</th><th class="num">Protein length (aa)</th><th>Status in xgElyCris1.1</th><th>Other assemblies</th><th class="num" title="Median number of PacBio HiFi reads from the sequenced individual that cover each exon">Reads per exon</th><th class="num" title="Transcripts per million in the head RNA-seq library">Expression in head (TPM)</th></tr></thead>
 <tbody id="genes-body"></tbody></table></div>
-<p class="small muted" style="margin-top:12px;max-width:90ch">The other assemblies are the alternate haplotype of the same individual and two independent assemblies of other individuals (Purdue, GCA_033675545.1; Tampa, GCA_984581095.1). Reads per exon is the median number of PacBio HiFi reads from the sequenced individual that cover each exon. Expression was estimated from a single head RNA-seq library from the same individual.</p>
+<p class="small muted" style="margin-top:12px;max-width:90ch">The other assemblies are the alternate haplotype of the same individual and two independent assemblies of other animals (Purdue, GCA_033675545.1; Tampa, GCA_984581095.1). Reads per exon is the median number of PacBio HiFi reads from the sequenced individual that cover each exon. Expression was estimated from a single head RNA-seq library from the same individual.</p>
 
 <h3 style="margin-top:34px">Genes searched for but not found</h3>
 <div class="tablewrap" style="margin-top:10px"><table class="data">
@@ -192,4 +192,4 @@ print("index.html written:", n, "genes;", n_ok, "intact,", n_disc, "discrepant,"
 if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "31_build_pages.py")):
     import runpy
     runpy.run_path(os.path.join(os.path.dirname(os.path.abspath(__file__)), "31_build_pages.py"),
-                   init_globals=dict(repo=repo, R=R, DOCS=DOCS, page=page, e=e, genes=genes, klepto=klepto, hgt=hgt, today=today, meta=meta, word=word))
+                   init_globals=dict(repo=repo, R=R, DOCS=DOCS, page=page, e=e, genes=genes, klepto=klepto, hgt=hgt, today=today, meta=meta, word=word, chrome=chrome))

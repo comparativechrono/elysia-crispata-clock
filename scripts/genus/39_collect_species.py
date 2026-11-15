@@ -60,7 +60,8 @@ def contig_groups(rows):
     top = max((g["depth"] for g in G), default=max(m["depth"] for m in R))
     for kind, ms in (("distant, plentiful", [m for m in far if m["depth"] >= 0.1 * top]), ("distant, sparse", [m for m in far if m["depth"] < 0.1 * top])):
         if ms: G.append(summary(ms, kind, ""))
-    for g in G: g["relative"] = g["depth"] / top
+    top = max(g["depth"] for g in G)          # the most deeply covered kind, whichever it is
+    for g in G: g["relative"] = g["depth"] / top if top else 0.0
     return sorted(G, key=lambda g: -g["depth"])
 
 def features(acc):
@@ -135,6 +136,10 @@ def long_read_shapes(d, mode):
     out["candidates"] = sorted((trim_candidate(c) for c in rows.values()), key=lambda r: (r["shape"] != "insertion", r["insert"], -r["piece_bp"]))
     R = load(os.path.join(d, "recurrent.json"))
     if R: out["recurrent_joins"] = R
+    # reads with an insertion-like structure found when every read with a plastid-like match was examined, before those
+    # reads were thinned (run_screens.sh, crispata_animals): kept apart from the counts of the sample
+    F = load(os.path.join(d, "candidates.all_plastid.json"))
+    if F: out["candidates_before_thinning"] = [trim_candidate(c) for c in F["candidates"] if c["shape"] in ("insertion", "mirror")]
     return out
 def load(p): return json.load(open(p)) if os.path.exists(p) else None
 def collect_libraries(slug):
@@ -151,16 +156,36 @@ def collect_libraries(slug):
             rows = list(csv.DictReader(open(ct), delimiter="\t"))
             contigs = dict(n=len(rows), bp=sum(int(r["length"]) for r in rows), longest=max((int(r["length"]) for r in rows), default=0), groups=contig_groups(rows),
                            top=[dict(contig=r["contig"], length=int(r["length"]), depth=float(r["depth"]), best_panel_match=r["best_panel_match"], identity=float(r["identity"])) for r in sorted(rows, key=lambda r: -int(r["length"]))[:8]])
+        # contigs of the library's own reads that are tandem arrays of a short unit: circular elements (38c_tandem_contigs.py)
+        elements = None; et = os.path.join(d, "circ.contigs.tsv")
+        if os.path.exists(et) and cl.get("circ"):
+            rows = list(csv.DictReader(open(et), delimiter="\t")); fams = sorted({r["family"] for r in rows}, key=int)
+            elements = dict(part("circ"), contigs=len(rows), families=len(fams), unit_min=min(int(r["unit_length"]) for r in rows), unit_max=max(int(r["unit_length"]) for r in rows),
+                            units_bp=sum(max(int(r["unit_length"]) for r in rows if r["family"] == f) for f in fams), single_reads=load(os.path.join(d, "circ.reads.json")),
+                            rows=[dict(contig=r["contig"], length=int(r["length"]), unit_length=int(r["unit_length"]), copies=float(r["copies"]), family=int(r["family"]), best_panel_match=r["best_panel_match"],
+                                       identity=float(r["identity"]), plastid_share=float(r["plastid_share"]), proteins=r["proteins"]) for r in rows])
         # a library of which only a sample of the matching pairs was analysed keeps the size of what was screened
         full = [os.path.join(d, r + ".count.full") for r in L["runs"].split(",")]
         screened = sum(int(open(f).read().split()[1]) for f in full if os.path.exists(f)) or a["bases"]
+        # runs that belong together (the flow cells of a Nanopore library): the plastid DNA of each group by the reference it matches best
+        groups = []
+        if L.get("run_groups") and a.get("donors_by_run"):
+            for g in L["run_groups"].split(";"):
+                gname, gruns = g.split("=", 1); gruns = gruns.split("+"); don = collections.Counter(); bases = 0
+                for r_ in gruns:
+                    for k, v in (a["donors_by_run"].get(r_) or {}).get("donors", {}).items(): don[k] += v
+                    bases += next((x["bases"] for x in a["runs"] if x["run"] == r_), 0)
+                tot = sum((a["donors_by_run"].get(r_) or {}).get("bp", 0) for r_ in gruns)
+                groups.append(dict(group=gname, runs=gruns, bases=bases, plastid_bp=tot, donors=[dict(name=k, bp=v, fraction=round(v / tot, 4)) for k, v in don.most_common(8)] if tot else []))
         lib = dict(library=L["library"], label=L.get("label", ""), runs=L["runs"].split(","), kind=L["kind"], platform=L["platform"], animal=L["animal"], note=L["note"], assembly=L.get("assembly") or "", reads=a["reads"], bases=a["bases"], bases_screened=screened,
+                   donors_by_group=groups, sampled_classes=a.get("thinned") or {},
                    plastid=part("cp"), mitochondrion=part("slugmt"), algal_mitochondrion=part("algmt"), algal_rdna=part("algrDNA"),
-                   plastid_any_identity=a.get("plastid_any_identity"), other_taxa=a.get("other_taxa", {}), donors=a["donors"], barcodes=load(os.path.join(d, "barcodes", "barcodes.json")) or [], contigs=contigs,
+                   plastid_any_identity=a.get("plastid_any_identity"), other_taxa=a.get("other_taxa", {}), donors=a["donors"], barcodes=load(os.path.join(d, "barcodes", "barcodes.json")) or [], contigs=contigs if contigs and contigs["n"] else None,
+                   circular_elements=elements,
                    hot_windows=[h for r in a["runs"] for h in r.get("hot_windows", [])][:8])
         libs.append(lib)
         tr_reads.append(dict(library=L["library"], label=L.get("label", ""), runs=lib["runs"], kind=L["kind"], platform=L["platform"], animal=L["animal"], assembly=L.get("assembly") or "", reads=a["reads"], bases=a["bases"], bases_screened=screened, chimera=a["chimera"],
-                             min_identity=a.get("min_identity"), locus_tests=load(os.path.join(d, "locus_tests.json")),
+                             min_identity=a.get("min_identity"), locus_tests=load(os.path.join(d, "locus_tests.json")), sampled_classes=a.get("thinned") or {}, adapter_tested=a.get("adapter_tested"),
                              shapes=long_read_shapes(d, "clr" if L["kind"] == "ont" else L["kind"]) if L["kind"] != "short" else None, sample=a.get("sample"), sensitivity=a.get("sensitivity"), note=L["note"],
                              thinned=a.get("organelle_pairs_examined_one_in", 1), candidate_places=load(os.path.join(d, "candidate_places.json")), repeat_joins=load(os.path.join(d, "satellite_joins.json")),
                              end_piece_control=load(os.path.join(d, "end_piece_control.json"))))
@@ -183,6 +208,43 @@ def collect_libraries(slug):
                              joins_here=len(near), joins_here_same_organelle=sum(1 for j in near if j[2] == c["insert"]), joins=[dict(molecule=j[0], evidence=j[1], organelle=j[2], organelle_sequence=j[7], organelle_position=int(j[8])) for j in near[:10]]))
         R["candidate_places"] = dict(places=rows)
     return libs, tr_reads
+def assembly_checks(slug, key):
+    """A further assembly of a species examined with the reads of an egg mass of the same isolate (run_screens.sh
+    crispata_animals): the stretches without egg reads and what they are (59_germline_coverage.py,
+    60_classify_absent_stretches.py), sequencing adapter inside its sequences (56_adapter_in_assembly.py), and the
+    egg reads at the places where it joins chloroplast DNA to other DNA (41_locus_test.py; config/assembly_junctions.tsv)."""
+    work = os.path.dirname(os.path.abspath(reads_root)); name = f"{slug}-{key}"; res = dict(assembly=key)
+    cj = load(os.path.join(work, "asm_census", name + ".json")); cc = load(os.path.join(work, "asm_census", name + ".classes.json"))
+    ct = os.path.join(work, "asm_census", name + ".classes.tsv")
+    if cj and cc and os.path.exists(ct):
+        rows = list(csv.DictReader(open(ct), delimiter="\t"))
+        for r in rows:
+            for k in ("sequence_length", "start", "end", "bases", "reads_found", "genes_alga", "genes_microbe", "genes_animal", "genes_slug_only"): r[k] = int(r[k])
+            for k in ("gc", "reads_expected", "plastid_share", "panel_contig_share", "other_assemblies_share", "distinct_words"): r[k] = float(r[k]) if r.get(k) not in ("", "None", None) else None
+        res["census"] = dict(summary=cj, classes=cc["classes"], stretches=[r for r in rows if r["class"] != "slug"],
+                             slug_stretches=dict(n=sum(1 for r in rows if r["class"] == "slug"), bases=sum(r["bases"] for r in rows if r["class"] == "slug"),
+                                                 within_longer_sequences=sum(1 for r in rows if r["class"] == "slug" and r["whole_sequence"] == "no"),
+                                                 with_animal_genes=sum(1 for r in rows if r["class"] == "slug" and r["genes_animal"] + r["genes_slug_only"] > 0),
+                                                 in_other_assemblies=sum(1 for r in rows if r["class"] == "slug" and (r["other_assemblies_share"] or 0) >= 0.5),
+                                                 tandem_repeats=sum(1 for r in rows if r["class"] == "slug" and (r["distinct_words"] or 1) < 0.5),
+                                                 largest=[r for r in rows if r["class"] == "slug"][:10]))
+    at = os.path.join(work, "asm_adapters", name + ".adapters.tsv")
+    if os.path.exists(at):
+        rows = list(csv.DictReader(open(at), delimiter="\t"))
+        res["adapters"] = dict(places=len(rows), at_an_end=sum(1 for r in rows if r["where"] == "end"), inside=[dict(sequence=r["sequence"], length=int(r["length"]), position=int(r["position"]), distance_to_end=int(r["distance_to_end"])) for r in rows if r["where"] == "inside"])
+    jt = load(os.path.join(libdir(slug, "eggs"), "junction_tests.json")); jc = os.path.join(repo, "config", "assembly_junctions.tsv")
+    if jt and os.path.exists(jc):
+        out = []
+        for r in csv.DictReader(open(jc), delimiter="\t"):
+            if r["slug"] != slug or r["assembly"] != key: continue
+            L = next((x for x in jt["loci"] if x["contig"] == r["contig"] and x["start"] == int(r["stretch_start"]) and x["end"] == int(r["stretch_end"])), None)
+            if not L: continue
+            e_ = L["edges"].get(r["junction_edge"], {}); left = r["junction_edge"] == "left"
+            out.append(dict(contig=r["contig"], position=int(r["stretch_start"] if left else r["stretch_end"]), kind=r["kind"], sequences_joined=r["sequences_joined"], adapter_in_contig=r["adapter_in_contig"] == "yes", found_by=r["found_by"],
+                            reads_spanning=e_.get("through"), reads_spanning_with_gap=e_.get("through_with_gap"), reads_ending=(e_.get("stop_inside", 0) + e_.get("stop_outside", 0)) if "through" in e_ else None,
+                            depth_tested_side=L["depth_locus"], depth_other_side=L["depth_left_flank"] if left else L["depth_right_flank"], reads_aligned=L["reads_aligned"]))
+        res["egg_junction_tests"] = out
+    return res if len(res) > 1 else None
 def assembly_results(name, pdir):
     """organelle-like DNA in an assembly (35_assembly_screen.py) and the protein screen of it, under the name it was screened by"""
     scr = load(os.path.join(screen_dir, name + ".screen.json")); prot = None
@@ -245,7 +307,22 @@ for sp in SP:
         # the other sequenced animals of the species (run_screens.sh crispata_animals), each aligned to the assembly made from it
         libs, tr_reads = collect_libraries(slug)
         if libs:
-            json.dump(dict(slug=slug, species=sp["species"], libraries=libs, reads=tr_reads), open(os.path.join(OUT, slug + ".other_animals.json"), "w"), indent=1)
+            # two libraries registered under one sample, compared by their mitochondrial genomes (58_mt_haplotypes.py),
+            # and all reads of the long-read library at the place of its one read with an insertion-like structure
+            extra = {}
+            mh = load(os.path.join(libdir(slug, "tampa_short"), "mt_haplotypes.json"))
+            if mh: extra["library_comparisons"] = [mh]
+            cp_ = os.path.join(libdir(slug, "tampa"), "candidate_place_all_reads.paf")
+            if os.path.exists(cp_):
+                rows = [l.split("\t") for l in open(cp_)]; by = collections.defaultdict(list)
+                for c in rows:
+                    w0 = int(c[5].split(":")[1].split("-")[0]) - 1          # the target is a stretch of the assembly sequence, named SEQUENCE:START-END
+                    if int(c[10]) >= 500: by[c[0]].append((w0 + int(c[7]), w0 + int(c[8]), int(c[9]) / int(c[10])))
+                A_, B_ = 16397, 16655          # the stretch of the assembly that the insertion-like read lacks
+                extra["candidate_place_all_reads"] = dict(sequence="CFHGKC010004091.1", start=A_, end=B_, reads_at_the_place=len(by),
+                                                          reads_spanning_in_one_alignment=sum(1 for v in by.values() if any(a <= A_ - 100 and b >= B_ + 100 for a, b, i in v)),
+                                                          reads=[dict(read=r, alignments=[dict(start=a, end=b, identity=round(i, 3)) for a, b, i in sorted(v)]) for r, v in sorted(by.items())])
+            json.dump(dict(slug=slug, species=sp["species"], libraries=libs, reads=tr_reads, assembly_checks=assembly_checks(slug, "purdue"), **extra), open(os.path.join(OUT, slug + ".other_animals.json"), "w"), indent=1)
             print(slug, "other animals:", [l["library"] for l in libs])
         continue
     libs, tr_reads = collect_libraries(slug)

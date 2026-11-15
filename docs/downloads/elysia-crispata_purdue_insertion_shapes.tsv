@@ -1,0 +1,2 @@
+read	read_length	shape	insert	how	flank_sequence	left_from	left_to	right_from	right_to	flank_strand	flank_mapq	flank_identity	reference_gap	read_gap	piece_sequence	piece_from	piece_to	piece_bp	piece_identity	place_position	other_reads_crossing	second_pass	assembly_locus
+SRR25020509.644911	15772	mirror	slug_in_cp	between alignments	cp|JAWDGP010004663.1	37017	38587	35173	35977	-	16	0.8223	1040	2265	JAWDGP010001181.1	232828	233990	1174	0.8561				

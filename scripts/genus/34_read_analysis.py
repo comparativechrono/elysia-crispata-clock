@@ -8,6 +8,8 @@ Each read is described by its best set of non-overlapping alignments (segments).
   slug      on a sequence of the species' assembly
   cp        on a plastid sequence of the panel, or on an assembly sequence that is plastid DNA as a whole
   slugmt    on an Elysia mitochondrial genome;  algmt  algal mitochondrial;  algrDNA  algal nuclear rDNA
+  circ      on a contig of the library's own reads that is a tandem array of a short unit (38c_tandem_contigs.py):
+            a small circular element that the amplification of the library copied many times over
 Confident segments: >= 300 bp at >= MINID identity (97% for HiFi, 82% for the older, noisier
 PacBio RS reads). A read is chimeric when two neighbouring confident segments are of different
 kinds and overlap by <= 50 bp on the read. Junctions are clustered (both break points within
@@ -31,8 +33,9 @@ ADAPTER = "AAGCAGTGGTATCAACGCAGAGTACT"
 ONT = os.environ.get("LONG_READ_PLATFORM") == "ont"
 ONT_TOP = "AATGTACTTCGTTCAGTTACGTATTGCT"[-22:]; ONT_BOTTOM = "GCAATACGTAACTGAACGAAGT"      # read start (its last 22 bases) and read end
 THIN, THIN_K = thinned_reads(W)
-def wgt(r, c): return THIN_K[c] if THIN.get(r) == c else 1
-def counted(r, c): return c not in THIN_K or THIN.get(r) == c
+def tk(c): return "cp" if c == "circ" else c          # the first pass knew the circular elements as plastid-like reads, and thinned them as such
+def wgt(r, c): return THIN_K[tk(c)] if THIN.get(r) == tk(c) else 1
+def counted(r, c): return tk(c) not in THIN_K or THIN.get(r) == tk(c)
 COMP = str.maketrans("ACGT", "TGCA"); ADAPTER_RC = ADAPTER.translate(COMP)[::-1]
 desc = {}
 for l in list(open(panel_tsv))[1:]:
@@ -41,7 +44,12 @@ def taxon(t):
     d = desc.get(t, "")
     w = d.replace("UNVERIFIED: ", "").replace("UNVERIFIED_ORG: ", "").replace("UNVERIFIED_ASMBLY: ", "").split()
     return " ".join(w[:2]) if len(w) >= 2 else (d or t)
-def norm_cls(c): return {"asmcp": "cp", "asmalgmt": "algmt"}.get(c, c)
+def norm_cls(c): return {"asmcp": "cp", "asmalgmt": "algmt", "kcp": "cp"}.get(c, c)
+def kcp_ref(t):
+    """A plastid contig assembled from the reads of the library itself (38b_plastid_contigs_long.sh) is named
+    kcp|NAME|ACCESSION|IDENTITY after the panel record that it matches best: (that record, identity)."""
+    f = t.split("|")
+    return ("cp|" + f[2], float(f[3])) if f[0] == "kcp" and len(f) >= 4 else None
 
 runs = []
 for c in sorted(glob.glob(os.path.join(W, "*.count"))):
@@ -78,13 +86,16 @@ for r, kept in loose.items():
     seen = set()
     for s in kept:
         if s["cls"] != "cp" or s["aln"] < 500: continue
+        k = kcp_ref(s["t"])        # reads on a contig of the library's own plastid DNA count for the reference that the contig matches best, at the identity of the contig
         if s["t"].startswith("asmcp|"): tx = "plastid sequence in the assembly"
+        elif k: tx = taxon(k[0])
         else: tx = taxon(s["t"])
-        d = don[tx]; d["bp"] += s["qe"] - s["qs"]; d["ids"].append((s["ident"], s["aln"])); d["acc"][s["t"]] += s["aln"]
-        don_run[r.split(".")[0]][tx] += s["qe"] - s["qs"]
-        cp_loose_bp += s["qe"] - s["qs"]
-        if tx not in seen: d["reads"] += 1; seen.add(tx)
-    if seen: cp_loose_reads += 1
+        w_ = wgt(r, "cp")          # a read of an even sample of the plastid reads stands for K reads
+        d = don[tx]; d["bp"] += (s["qe"] - s["qs"]) * w_; d["ids"].append((k[1] if k else s["ident"], s["aln"] * w_)); d["acc"][k[0] if k else s["t"]] += s["aln"] * w_
+        don_run[r.split(".")[0]][tx] += (s["qe"] - s["qs"]) * w_
+        cp_loose_bp += (s["qe"] - s["qs"]) * w_
+        if tx not in seen: d["reads"] += w_; seen.add(tx)
+    if seen: cp_loose_reads += wgt(r, "cp")
 def wq(pairs, q):
     pairs = sorted(pairs); tot = sum(w for _, w in pairs); acc = 0
     for v, w in pairs:
@@ -191,8 +202,9 @@ have = collections.Counter()
 for r, kept in tiles.items():
     for c in set(s["cls"] for s in kept):
         if c != "slug" and counted(r, c): have[c] += 1
-for c in THIN_K: chim_by[c] = {r for r in chim_by[c] if counted(r, c)}
-rates = {c: dict(reads_with_segment=have[c], reads_also_with_slug=len(chim_by[c]), rate=round(len(chim_by[c]) / have[c], 5) if have[c] else None, **({"sample_one_in": THIN_K[c]} if c in THIN_K else {})) for c in have}
+for c in list(chim_by):
+    if tk(c) in THIN_K: chim_by[c] = {r for r in chim_by[c] if counted(r, c)}
+rates = {c: dict(reads_with_segment=have[c], reads_also_with_slug=len(chim_by[c]), rate=round(len(chim_by[c]) / have[c], 5) if have[c] else None, **({"sample_one_in": THIN_K[tk(c)]} if tk(c) in THIN_K else {})) for c in have}
 # slug - organelle - slug at one slug locus
 flank = []
 for r, kept in tiles.items():
@@ -207,6 +219,7 @@ with open(os.path.join(W, "junctions.tsv"), "w") as fo:
     fo.write("\t".join(cols) + "\n")
     for row in rows: fo.write("\t".join(str(row[c]) for c in cols) + "\n")
 other_taxa = {k: [dict(name=t, segments=len(v), mean_identity=round(sum(v) / len(v), 4)) for t, v in sorted(d.items(), key=lambda kv: -len(kv[1]))[:8]] for k, d in by_taxon.items()}
+if "circ" in cls_bp and "cp" in THIN_K: THIN_K = dict(THIN_K, circ=THIN_K["cp"])
 res = dict(kind=kind, min_identity=MINID, runs=runs, reads=tot_reads, bases=tot_bases, reads_examined=len(S), other_taxa=other_taxa, thinned=THIN_K, adapter_tested="nanopore ligation adapter" if ONT else "amplification adapter" if kind == "hifi" else None,
            classes={c: dict(reads=cls_reads[c], bp=cls_bp[c], fraction_of_bases=round(cls_bp[c] / max(1, tot_bases), 6)) for c in cls_bp},
            plastid_any_identity=dict(reads=cp_loose_reads, bp=cp_loose_bp, fraction_of_bases=round(cp_loose_bp / max(1, tot_bases), 6)),

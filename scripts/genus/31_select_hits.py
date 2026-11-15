@@ -70,7 +70,10 @@ if thin:      # the kept reads that stand for K reads each: read, class, K
 wins = collections.Counter()
 for b in hot:
     if shortc[b]: wins[b] = shortc[b]
-json.dump(dict(reads=n_reads, bases=n_bases, hit_reads=len(hits), reads_only_in_hot_windows=only_hot, own_rdna_reads=n_rdna, own_rdna_reads_kept=rdna_kept, kept=len(keep), hot_threshold=hot_min,
+# when the choice is made again for a run that 31c_screen_run.py has finished, what that script noted in the file is kept
+_old = json.load(open(pre + ".select.json")) if os.path.exists(pre + ".select.json") else {}
+json.dump(dict({k: _old[k] for k in ("method", "sample_one_in") if k in _old},
+               reads=n_reads, bases=n_bases, hit_reads=len(hits), reads_only_in_hot_windows=only_hot, own_rdna_reads=n_rdna, own_rdna_reads_kept=rdna_kept, kept=len(keep), hot_threshold=hot_min,
                thinned={c: dict(reads=seen_thin[c], kept=kept_thin[c], one_in=thin[c]) for c in thin},
                hot_windows=[dict(target=t, start=i * 200, end=i * 200 + 200, reads=n) for (t, i), n in wins.most_common()]), open(pre + ".select.json", "w"), indent=1)
 print(f"{len(hits)} reads with a hit; {n_rdna} match only ribosomal DNA at slug-like identity ({rdna_kept} kept as a sample); {only_hot} only in {len(wins)} hot windows (threshold {hot_min} reads); {len(keep)} kept"

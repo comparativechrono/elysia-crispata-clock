@@ -1,5 +1,5 @@
 slug	key	accession	asm_name	level	short	phrase	individual	span
 elysia-crispata	alt	GCA_963854135.1	xgElyCris1.1 alternate haplotype	scaffold	alt	the alternate haplotype	the same individual as the reference assembly	363824466
 elysia-crispata	purdue	GCA_033675545.1	ASM3367554v1	contig	Purdue	the Purdue assembly	adults of isolate ECLA1 (Florida Keys)	786336081
-elysia-crispata	tampa	GCA_984581095.1	Elysia_crispata_v1	scaffold	Tampa	the Tampa assembly	an individual collected at Key Largo, Florida	671510312
+elysia-crispata	tampa	GCA_984581095.1	Elysia_crispata_v1	scaffold	Tampa	the Tampa assembly	material collected at Key Largo, Florida (its two read libraries came from two animals)	671510312
 elysia-papillosa	alt	GCA_977015365.2	xgElyPapi4.2 alternate haplotype	contig	alt	the alternate haplotype	the same individual as the reference assembly	1194981432

@@ -17,6 +17,8 @@
    "reads": 5406003,
    "bases": 36247978396,
    "bases_screened": 36247978396,
+   "donors_by_group": [],
+   "sampled_classes": {},
    "plastid": {
     "reads": 6528,
     "bp": 43578653,
@@ -137,6 +139,7 @@
     }
    ],
    "contigs": null,
+   "circular_elements": null,
    "hot_windows": [
     {
      "target": "slugrDNA|MK919695.1",
@@ -202,6 +205,8 @@
    "reads": 10201468,
    "bases": 64842836831,
    "bases_screened": 64842836831,
+   "donors_by_group": [],
+   "sampled_classes": {},
    "plastid": {
     "reads": 1326,
     "bp": 8817683,
@@ -326,6 +331,7 @@
     }
    ],
    "contigs": null,
+   "circular_elements": null,
    "hot_windows": [
     {
      "target": "slugrDNA|MK919695.1",

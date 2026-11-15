@@ -94,6 +94,11 @@ chloroplast DNA is joined to slug nuclear DNA. These molecules are listed, one p
 | Library | Chloroplast reads (or read pairs) joined to nuclear DNA | Mitochondrial reads (or read pairs) joined to nuclear DNA | Nuclear DNA joined to unrelated nuclear DNA | Reads with chloroplast DNA flanked by nuclear DNA on both sides |
 |---|---|---|---|---|
 | *E. crispata*, PacBio HiFi reads (amplified) | 4,452 of 136,293 (3.3%) | bacterial DNA used instead: 3.2% | 4.2% | 0 |
+| *E. crispata*, Purdue adults, Nanopore reads | 1,985 of 22,988 (8.6%) | 115 of 1,142 (10.1%) | 7.4% | 0 |
+| *E. crispata*, Purdue adults, brains, Nanopore reads | 49 of 387 (12.7%) | 54 of 395 (13.7%) | 12.9% | 0 |
+| *E. crispata*, Purdue egg mass, paired-end short reads | 0 of 1 (0%) | 78 of 136,554 (0.057%) | 0.86% | not applicable (short reads) |
+| *E. crispata*, Tampa long-read library (amplified), PacBio HiFi reads (one read in 5 and one in 20 examined) | circular elements used instead: 37 of 16,335 (0.23%) | 114 of 29,015 (0.39%) | 6.3% | 0 |
+| *E. crispata*, Tampa short-read library, paired-end short reads (estimated from one pair in 20) | 4,858 of 13,267,181 (0.037%) | 223 of 786,007 (0.028%) | 0.27% | not applicable (short reads) |
 | *E. chlorotica*, adult, PacBio RS reads | 2,397 of 43,514 (5.5%) | 113 of 2,116 (5.3%) | 5.3% | 9 |
 | *E. chlorotica*, second adult, paired-end short reads (estimated from one pair in 50) | 71,401 of 57,986,168 (0.12%) | 976 of 1,113,806 (0.088%) | 0.99% | not applicable (short reads) |
 | *E. chlorotica*, eggs, paired-end short reads | 0 of 13 (0%) | 1 of 104,147 (0.001%) | 0.91% | not applicable (short reads) |
@@ -238,11 +243,54 @@ preparation.
   was found within nuclear DNA in xgElyCris1.1, its alternate haplotype or the Tampa assembly.
   The reads of this animal also contain no divergent plastid-like sequence joined to nuclear
   DNA.
-- The Purdue assembly (a different individual, sequenced with Nanopore reads) contains 11
-  contigs (646 kb) of *Acetabularia* chloroplast DNA, which evidently derive from the
-  kleptoplasts of that animal, an 11 kb contig from another alga, and a few positions at which
-  chloroplast DNA is joined to nuclear DNA at the end of a contig. These junctions were tested
-  with the reads of that individual; see the gene-transfer page of the website.
+- The Purdue assembly (other animals, sequenced with Nanopore reads) contains 11 contigs
+  (646 kb) of *Acetabularia* chloroplast DNA, which derive from the kleptoplasts of those
+  animals, an 11 kb plastid-like contig of unknown origin, and a few positions at which
+  chloroplast DNA is joined to nuclear DNA within a contig. These junctions were tested with the
+  reads of those animals; see the gene-transfer page of the website and the next section.
+
+**Other sequenced individuals.** The reads behind the Purdue and Tampa assemblies were analysed
+in the same way as those of the other species (`config/species_reads.tsv`; page "Other
+individuals" of the website): Nanopore reads of adults (33.0 Gb) and of dissected brains (5.1 Gb)
+and read pairs of an egg mass (63.4 Gb) of the Purdue isolate, and a PacBio HiFi library
+(17.1 Gb) and an Illumina library (60.0 Gb) from the University of Tampa.
+
+- Kleptoplasts. In the Purdue adults, the plastid DNA (0.11% of the bases) matches
+  *P. capitatus* (44%), an *Acetabularia* species (31%), *P. lamourouxii* (9%), a relative of
+  *Halimeda* (11%) and *Udotea flabellum* (1%). The proportions differ between the five flow
+  cells, so the DNA came from more than one animal. The Tampa short-read library contains
+  almost exclusively *P. lamourouxii* plastid DNA (98% of it; 6.1% of the bases). The Tampa
+  long-read library contains plastid DNA of an alga without a sequenced plastid genome, whose
+  rbcL is 93.7% identical to that of *Rhipiliopsis profunda* and identical, over 561 bp, to a
+  sequence from the kleptoplasts of *E. clarki* (KJ138404.1).
+- The two Tampa libraries are registered under one sample record but came from two animals:
+  their mitochondrial genomes differ by 42 substitutions, each fixed in its library, and
+  neither library contains the plastid DNA of the other.
+- Circular elements. In the Tampa long-read library, which was made by whole-genome
+  amplification, 26% of the bases are mitochondrial DNA and 3.6% come from small circular DNA
+  elements of 4.9 to 5.9 kb (nine families), which the amplification copied as tandem arrays.
+  They carry a gene related to open reading frames in the plastid genomes of siphonous algae
+  (in *R. profunda*, a gene with a phage- or plasmid-type DNA primase domain), and were first
+  mistaken for plastid contigs. They are counted as a type of DNA of their own. The plastid-like
+  contig JAWDGP010006602.1 of the Purdue assembly is related to them.
+- Germline. The egg mass contains no algal DNA: nine reads in 63.4 Gb match a plastid genome
+  (of a land plant, a red alga and green algae that are not siphonous), and none is joined to
+  nuclear DNA.
+- The Purdue assembly, examined with the egg reads: 292 stretches (3.4 Mb) have no egg reads.
+  Fifteen of them (754 kb) are *Acetabularia* chloroplast DNA, four of which (116 kb) had not
+  been recognised before; one is the plastid-like contig; 189 (1.8 Mb) are slug DNA that the
+  parents of the egg mass lack; 87 could not be assigned, 50 of them tandem repeats. The
+  assembly contains the Nanopore sequencing adapter at 58 places, 18 of them inside contigs.
+  At nine positions it joins chloroplast DNA to other DNA within a contig; no egg read spans
+  any of them, and two contain the adapter (`config/assembly_junctions.tsv`).
+- Junctions in the reads. Chloroplast DNA is joined to nuclear DNA about as frequently as
+  mitochondrial DNA is (table above). In the Nanopore reads of the adults, 27% of the junctions
+  with chloroplast DNA contain the sequencing adapter, that is, two molecules were read as
+  one. No read of the Purdue animals contains chloroplast DNA flanked on both sides by nuclear
+  DNA. One junction was read twice, from the two strands of one molecule, which is a chain of
+  three unrelated fragments. In the Tampa long-read library, one read contains about 300 bases
+  of a circular element between two adjacent nuclear segments; the read folds back, and its
+  second copy of the locus lacks the insert, so the insert arose during amplification.
 
 The website presents the evidence in full, together with the limitations of each analysis.
 
@@ -252,10 +300,10 @@ The website presents the evidence in full, together with the limitations of each
 |---|---|
 | `docs/` | The website (static). `index.html` lists the species, `compare.html` compares their clock proteins, and each species has its own folder (`docs/elysia-crispata/`, …). The data are embedded in `docs/data/<species>.js` and `docs/data/genus.js`; the files offered for download are in `docs/downloads/` and `docs/elysia-crispata/downloads/`. The photographs and their credits are in `docs/assets/photos/`. |
 | `results/` | Tables for *E. crispata*: `clock_genes.tsv` / `.json`, `sequences/` (proteins and coding sequences), `kleptoplast.json`, `kleptoplast_barcodes.tsv`, `hgt.json`, `plastid_fragments_in_assembly.tsv`, `penicillus_plastome_genes.bed`. |
-| `results/genus/` | For each of the other species: the clock-gene catalogue (`<species>.clock.json`; `elysia-papillosa.alt.clock.json` for the alternate haplotype), the composition of its reads (`<species>.kleptoplast.json`) and the gene-transfer analyses (`<species>.transfer.json`). Also the gene-by-species table (`clock_matrix.tsv`), protein alignments (`alignments/`), the concatenated alignment and species tree, and the intermediate tables of the read and assembly analyses: the reference panel (`panel.tsv.gz`), barcode records and sequences, plastid contigs, read junctions, every protein match (`protein_screen_loci.json.gz`) and every coding region on the bacterial and other foreign sequences (`foreign_sequences.json.gz`). |
+| `results/genus/` | For each of the other species: the clock-gene catalogue (`<species>.clock.json`; `elysia-papillosa.alt.clock.json` for the alternate haplotype), the composition of its reads (`<species>.kleptoplast.json`) and the gene-transfer analyses (`<species>.transfer.json`); for the other sequenced individuals of *E. crispata*, both in `elysia-crispata.other_animals.json`, with the stretches of the Purdue assembly that are absent from egg DNA, the positions of adapter sequence in that assembly and the circular elements of the Tampa long-read library. Also the gene-by-species table (`clock_matrix.tsv`), protein alignments (`alignments/`), the concatenated alignment and species tree, and the intermediate tables of the read and assembly analyses: the reference panel (`panel.tsv.gz`), barcode records and sequences, plastid contigs, read junctions, every protein match (`protein_screen_loci.json.gz`) and every coding region on the bacterial and other foreign sequences (`foreign_sequences.json.gz`). |
 | `results/trees/` | Trimmed alignments of the gene families and FastTree trees in Newick format. |
 | `results/intermediate/` | Small intermediate tables: orthologue calls, choice of gene model, read support, expression, the list of sequences in the reference panel, chimeric-read junctions, boundary evidence and the inputs to the protein-level search. |
-| `config/` | Curated inputs: reference clock proteins (`clock_seeds.tsv`), the gene catalogue with its anchors (`clock_catalogue.tsv`), genes searched for but not found (`clock_not_found.tsv`), the species and their reference assemblies (`species.tsv`), the further assemblies of *E. crispata* and *E. papillosa* (`species_assemblies.tsv`), the read sets analysed (`species_reads.tsv`), the text of the conclusions shown on the species pages (`species_text.json`), and the survey of public *Elysia* data (`species_catalogue.tsv`). |
+| `config/` | Curated inputs: reference clock proteins (`clock_seeds.tsv`), the gene catalogue with its anchors (`clock_catalogue.tsv`), genes searched for but not found (`clock_not_found.tsv`), the species and their reference assemblies (`species.tsv`), the further assemblies of *E. crispata* and *E. papillosa* (`species_assemblies.tsv`), the read sets analysed (`species_reads.tsv`), the contigs of the Purdue assembly that were added to the reference panel (`panel_extra.tsv`), the positions at which that assembly joins chloroplast DNA to other DNA (`assembly_junctions.tsv`), the text of the conclusions shown on the species pages (`species_text.json`), and the survey of public *Elysia* data (`species_catalogue.tsv`). |
 | `scripts/` | The *E. crispata* pipeline, numbered in the order in which it is run; `scripts/genus/` contains the steps that are run for every species. |
 
 ## Scripts
@@ -278,21 +326,22 @@ Steps that are run for every species (`scripts/genus/`):
 | Download | `00_fetch_assemblies.sh`, `01_fetch_photos.py`, `02_choose_photos.py` | Assemblies (and annotations, where GenBank has one) from NCBI; openly licensed photographs from iNaturalist, with their credits. |
 | Clock genes | `09_clock_refs.sh`, `10_project_clock_genes.sh`, `10b_miniprot_in_parts.sh`, `11_clock_catalogue.py` | Alignment of the 47 *E. crispata* proteins to each genome with miniprot (in parts, for a genome too large for the available memory); addition of annotated proteins where available; a reciprocal best-hit test against all *E. crispata* proteins; selection of one model per gene. |
 | Comparison | `12_compare_species.py`, `13_domains.sh`, `14_other_assemblies.py` | Protein alignments (MAFFT), completeness relative to the alignment positions present in most sequences, pairwise identity, the species tree (IQ-TREE), Pfam domains. For a second assembly of a species, each gene model is added to the finished alignment and scored against the same positions; where a gene is complete only in the second assembly, that protein represents the species. |
-| Reference panel | `30_build_panel.py`, `30b_mask_and_index.sh` | Plastid, mitochondrial and ribosomal DNA reference sequences for all species; masking of low-complexity sequence for the first pass. |
+| Reference panel | `30_build_panel.py`, `30b_mask_and_index.sh`, `30c_extend_panel.py`, `35b_hide_panel_extra.py` | Plastid, mitochondrial and ribosomal DNA reference sequences for all species; masking of low-complexity sequence for the first pass; for the other individuals of *E. crispata*, addition of the chloroplast contigs of the Purdue assembly to the panel, and masking of these contigs in that assembly. |
 | Reads | `fetch_ranges.py`, `31c_screen_run.py`, `31_select_hits.py`, `31b_slim_rdna.py`, `31d_sample_blocks.py`, `33_pass2.sh`, `sam_segments.py`, `49_analyse_library.sh`, `34_read_analysis.py`, `37_pair_analysis.py`, `55_end_piece_control.py` | Processing of each run in full, in batches, and mapping to the panel; base-level alignment of the reads with a match, and of a random sample of the library, to the assembly of the species and to the panel; composition of the library; every read or read pair in which two types of DNA are joined, with the same counts for mitochondrial DNA and for the random sample; the type of DNA at the end of the fragment in read pairs that span a junction. |
 | Single molecules | `46_candidates.py`, `51_recurrent_junctions.py`, `47_library_control.sh`, `47_shape_reads.py`, `52_fetch_reads.py`, `53_join_in_short_reads.py`, `54_internal_pieces.py` | Classification of long reads by structure (organelle DNA flanked by nuclear DNA, organelle DNA at one end, or the reciprocal structure), with short segments confirmed at base level; comparison of junctions between reads to find any that recur in independent molecules; PCR duplicates; the background rate of chimeras, measured on every read of a small run; retrieval of individual reads by name; search for a known junction in read pairs. |
-| Identification of the alga | `36_barcodes.py`, `38_plastid_contigs.sh` | rbcL and tufA extracted from long reads, or from plastid contigs assembled from short reads (MEGAHIT), and compared with GenBank. |
+| Identification of the alga | `36_barcodes.py`, `36b_barcode_reads_set_aside.py`, `38_plastid_contigs.sh`, `38b_plastid_contigs_long.sh`, `38c_tandem_contigs.py`, `58_mt_haplotypes.py` | rbcL and tufA extracted from long reads, or from plastid contigs assembled from short reads (MEGAHIT), and compared with GenBank; contigs assembled from long reads without a close reference (hifiasm), and the test that showed them to be tandem arrays of small circular elements; comparison of two libraries by their mitochondrial genomes. |
 | Assemblies | `35_assembly_screen.py`, `42_protein_screen_inputs.py`, `43_foreign_sequences.py` (with `scripts/22` and `scripts/28`) | Organelle-like DNA in each assembly; alignment of 471 algal proteins to each assembly; translation in full of every sequence with a non-animal match, and classification of its genes. |
 | Read-based tests of loci | `40_locus_baits.py`, `41_locus_test.py` | Reads that span, or end at, each boundary of an organelle-like region within an assembly sequence, and at the locus of each read in which organelle DNA is flanked by nuclear DNA. |
+| An assembly examined with egg reads | `59_germline_coverage.py`, `60_classify_absent_stretches.py`, `56_adapter_in_assembly.py` | Stretches of the Purdue assembly of *E. crispata* on which no read of the egg mass lies, and their classification (chloroplast, bacterial, slug DNA, tandem repeats); Nanopore adapter sequence inside contigs. |
 | Collect and build | `39_collect_species.py`, `45_export_tables.py`, `chrome.py`, `21_build_species_pages.py`, `20_build_genus_site.py` | Result files and small tables; the shared page frame; the kleptoplast and gene-transfer pages of each species; the home page, comparison page, clock-gene pages and methods. |
-| Order of the analyses | `run_screens.sh` | The commands for the six additional species and for the second assembly of *E. papillosa*, in the order in which they were run (`DRY=1` prints them). |
+| Order of the analyses | `run_screens.sh` | The commands for the six additional species, for the second assembly of *E. papillosa* and for the other individuals of *E. crispata* (step `crispata_animals`), in the order in which they were run (`DRY=1` prints them). |
 
 The scripts were written for a single machine. The locations of the tools
 (`/home/claude/tools/mamba/envs/bio/bin`, which can be overridden with `BIO_BIN` in the scripts
 that read it) and the working directories are passed on the command line or set at the top of
 each script, and the header of each script describes its usage. Software used: minimap2,
 miniprot, DIAMOND, BLAST+, MAFFT, trimAl, FastTree, IQ-TREE, HMMER (Pfam-A), salmon, samtools,
-seqkit, sra-tools, MEGAHIT, Python 3 with Biopython.
+seqkit, sra-tools, MEGAHIT, hifiasm, bedtools, Python 3 with Biopython.
 
 To rebuild the website from the results already in the repository:
 
@@ -314,17 +363,24 @@ python3 -m http.server -d docs 8000
 | Plastid genomes assembled from this individual | OZ373742.1, OZ372796.1 |
 | Bacterial genomes assembled from this individual | GCA_964289745, GCA_964291485, GCA_964291505, GCA_964291535 |
 | Other *E. crispata* assemblies (other individuals) | GCA_033675545.1 (Purdue, annotated), GCA_984581095.1 (Tampa) |
-| Nanopore reads of the Purdue individual (used only to test junctions) | PRJNA987316, 12 MinION runs |
+| Reads of the Purdue isolate (adults, brains and an egg mass) | PRJNA987316: 12 MinION runs and one Illumina run (table below) |
+| Reads of the University of Tampa (two animals) | PRJNA1337476: SRR35727887, SRR35727888 |
 
 Assemblies of the other species: *E. chlorotica* GCA_003991915.1, *E. marginata* GCA_019649035.1,
 *E. timida* GCA_043644045.1, *E. leucolegnote* GCA_052815195.1, *E. atroviridis* GCA_059052615.1,
 *E. papillosa* GCA_977015215.2 and its alternate haplotype GCA_977015365.2 (details in
 `config/species.tsv` and `config/species_assemblies.tsv`).
 
-Reads analysed for the other species (details in `config/species_reads.tsv`):
+Reads analysed for the other individuals of *E. crispata* and for the other species (details in
+`config/species_reads.tsv`):
 
 | Species | Runs | Platform and source of DNA | Bases analysed |
 |---|---|---|---|
+| *E. crispata* | SRR25020508 to SRR25020511, SRR25020513 to SRR25020518, SRR25020522 | Oxford Nanopore MinION (ligation libraries, five flow cells); whole bodies of adults of the Purdue isolate | 33.0 Gb |
+| *E. crispata* | SRR25020519 | Oxford Nanopore MinION; brains of adults of the Purdue isolate | 5.1 Gb |
+| *E. crispata* | SRR25020525 | Illumina NovaSeq 6000 (paired-end); an egg mass of the Purdue isolate | 63.4 Gb |
+| *E. crispata* | SRR35727887 | PacBio Sequel II (HiFi, library made by whole-genome amplification); an animal from Key Largo (University of Tampa) | 17.1 Gb |
+| *E. crispata* | SRR35727888 | Illumina HiSeq 4000 (paired-end); a second animal, registered under the same sample record | 60.0 Gb |
 | *E. papillosa* | ERR14842698, ERR14842697 | PacBio Revio (HiFi); assembled individual | 36.2 Gb |
 | *E. papillosa* | ERR14842696 | PacBio Revio (HiFi, amplified library); second individual | 64.8 Gb |
 | *E. atroviridis* | SRR34916404 | PacBio Sequel II (HiFi); assembled individual | 30.6 Gb |
@@ -354,9 +410,19 @@ DNA sequences and nine *Elysia* mitochondrial genomes) is listed in `results/gen
 - Expression values are from a single head sample collected at an unknown time of day.
 - The boundary test and the comparison of the Purdue contigs with the xgElyCris1 reads used two
   of the three HiFi runs (53% of the data).
-- The Purdue and Tampa assemblies were examined only as far as was needed to interpret
-  xgElyCris1; the Purdue assembly very probably contains more *Acetabularia* chloroplast contigs
-  than those found through their genes.
+- The Tampa assembly was examined only as far as was needed to interpret xgElyCris1. Its two
+  read libraries came from two animals, so it may combine the genomes of two individuals. The
+  Purdue assembly was examined with egg reads in windows of 8 kb, so foreign DNA in shorter
+  stretches would not have been found in this way.
+- Other individuals of *E. crispata*: the Nanopore libraries join unrelated molecules in about
+  one read in ten that contains organelle DNA. The DNA of the Purdue adults came from several
+  animals, and the egg mass from other animals again. The Tampa long-read library was amplified,
+  its plastid DNA has no close reference sequence (so it could be identified but not searched
+  for junctions with nuclear DNA), and of its mitochondrial and plastid-like reads a sample was
+  examined (one in 20 and one in five); in the Tampa short-read library, junctions were analysed
+  in one in 20 of the read pairs that match an organelle genome. The relative of *Halimeda* and
+  the *Acetabularia* species in the Purdue adults are under-represented, because the first has
+  no close reference and the reference for the second is incomplete.
 - The identification of the second kleptoplast species rests on a single 562-bp reference
   sequence.
 - Other species: the *E. leucolegnote* reads are from two individuals other than the one

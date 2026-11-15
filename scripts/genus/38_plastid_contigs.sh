@@ -43,5 +43,6 @@ with open("kcp.contigs.fa", "w") as fo, open("kcp.contigs.tsv", "w") as ft:
         elif name in keep: fo.write(l)
 print(f"plastid contigs: {n}, {tot} bp")
 PY
+if [ ! -s kcp.contigs.fa ]; then echo "no plastid contigs: nothing to read barcode genes from"; exit 0; fi      # a library without plastid DNA (eggs)
 samtools faidx kcp.contigs.fa
 python3 "$HERE/36_barcodes.py" contigs kcp.contigs.fa "$BC" barcodes

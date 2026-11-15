@@ -11,6 +11,11 @@ results/genus/
                                     (the three tables are also in docs/downloads)
   <library>.plastid_contigs.fa/.tsv short reads: plastid contigs assembled from the reads (also in docs/downloads)
   <library>.barcodes.fa             each distinct rbcL and tufA sequence found (also in docs/downloads)
+  <library>.circular_elements.fa/.tsv   long reads of an amplified library: one unit of each contig that is a tandem array
+                                    (38c_tandem_contigs.py), and the table of these contigs (also in docs/downloads)
+  elysia-crispata.purdue_assembly.not_in_eggs.tsv   stretches of the Purdue assembly without reads of the egg mass, and what they are
+  elysia-crispata.purdue_assembly.adapters.tsv      places at which the Purdue assembly holds the Nanopore adapter
+                                    (both also in docs/downloads)
   protein_screen_loci.json.gz       every place matched by one of the 471 proteins, with its classification
   foreign_sequences.json.gz         every coding stretch on the sequences that carry non-animal matches
 """
@@ -46,6 +51,12 @@ for d in sorted(glob.glob(os.path.join(reads_root, "elysia-*"))):
         if os.path.exists(p) and os.path.getsize(p) and sum(1 for _ in open(p)) >= 2:
             shutil.copy(p, os.path.join(RG, dst)); n += 1
             if src == "kcp.contigs.fa": shutil.copy(p, os.path.join(DL, lib.replace(".", "_") + "_plastid_contigs.fa"))
+        elif src == "kcp.contigs.fa" and os.path.exists(p) and os.path.exists(os.path.join(DL, lib.replace(".", "_") + "_plastid_contigs.fa")):
+            os.remove(os.path.join(DL, lib.replace(".", "_") + "_plastid_contigs.fa"))          # the contigs turned out not to be plastid DNA (38c_tandem_contigs.py)
+    for src, dst in (("circ.units.fa", "circular_elements.fa"), ("circ.contigs.tsv", "circular_elements.tsv")):
+        p = os.path.join(d, src)
+        if os.path.exists(p) and os.path.getsize(p):
+            shutil.copy(p, os.path.join(RG, f"{lib}.{dst}")); shutil.copy(p, os.path.join(DL, lib.replace(".", "_") + "_" + dst)); n += 1
     tag = lib.replace(".", "_")
     if os.path.exists(os.path.join(d, "analysis.json")) and gz(os.path.join(d, "junctions.tsv"), os.path.join(RG, f"{lib}.junctions.tsv.gz")):
         shutil.copy(os.path.join(RG, f"{lib}.junctions.tsv.gz"), os.path.join(DL, tag + "_junctions.tsv.gz")); n += 1
@@ -54,6 +65,11 @@ for d in sorted(glob.glob(os.path.join(reads_root, "elysia-*"))):
         import gzip as _g
         with _g.open(p, "rb") as fi, gzip.GzipFile(os.path.join(RG, f"{lib}.junction_pairs.tsv.gz"), "wb", mtime=0) as fo: shutil.copyfileobj(fi, fo)
         shutil.copy(os.path.join(RG, f"{lib}.junction_pairs.tsv.gz"), os.path.join(DL, tag + "_junction_pairs.tsv.gz")); n += 1
+# the Purdue assembly of E. crispata, examined with the reads of the egg mass (59, 60) and for adapter sequence (56)
+for src, name in ((os.path.join(work, "asm_census", "elysia-crispata-purdue.classes.tsv"), "purdue_assembly.not_in_eggs.tsv"),
+                  (os.path.join(work, "asm_adapters", "elysia-crispata-purdue.adapters.tsv"), "purdue_assembly.adapters.tsv")):
+    if os.path.exists(src):
+        shutil.copy(src, os.path.join(RG, "elysia-crispata." + name)); shutil.copy(src, os.path.join(DL, "elysia-crispata_" + name.replace(".", "_", 1))); n += 1
 # barcode sequences, with headers that say what they are (from the collected results of 39_collect_species.py)
 import json, re
 for kf in sorted(glob.glob(os.path.join(RG, "*.kleptoplast.json")) + glob.glob(os.path.join(RG, "*.other_animals.json"))):

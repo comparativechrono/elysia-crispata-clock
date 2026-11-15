@@ -16,6 +16,8 @@
    "reads": 83046474,
    "bases": 12456971100,
    "bases_screened": 12456971100,
+   "donors_by_group": [],
+   "sampled_classes": {},
    "plastid": {
     "reads": 125085,
     "bp": 34379056,
@@ -481,6 +483,7 @@
      }
     ]
    },
+   "circular_elements": null,
    "hot_windows": []
   },
   {
@@ -497,6 +500,8 @@
    "reads": 169685414,
    "bases": 25452812100,
    "bases_screened": 25452812100,
+   "donors_by_group": [],
+   "sampled_classes": {},
    "plastid": {
     "reads": 68603,
     "bp": 18764260,
@@ -1020,6 +1025,7 @@
      }
     ]
    },
+   "circular_elements": null,
    "hot_windows": []
   }
  ],

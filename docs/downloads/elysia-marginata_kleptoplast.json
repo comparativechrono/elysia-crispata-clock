@@ -17,6 +17,8 @@
    "reads": 562732268,
    "bases": 84409840200,
    "bases_screened": 84409840200,
+   "donors_by_group": [],
+   "sampled_classes": {},
    "plastid": {
     "reads": 759795,
     "bp": 220506104,
@@ -316,6 +318,7 @@
      }
     ]
    },
+   "circular_elements": null,
    "hot_windows": []
   }
  ],

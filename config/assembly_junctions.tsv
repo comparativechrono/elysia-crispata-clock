@@ -1,0 +1,11 @@
+slug	assembly	contig	stretch_start	stretch_end	kind	junction_edge	sequences_joined	adapter_in_contig	found_by
+elysia-crispata	purdue	JAWDGP010001375.1	1975	4975	plastid	left	2.0 kb of a slug repeat, followed by Acetabularia chloroplast DNA	no	protein search
+elysia-crispata	purdue	JAWDGP010004663.1	3970	6970	plastid	left	4.0 kb of AT-rich, repeat-like sequence, followed by Acetabularia chloroplast DNA	no	protein search
+elysia-crispata	purdue	JAWDGP010006093.1	1001	4001	plastid	left	1.0 kb of slug-like sequence, followed by Acetabularia chloroplast DNA	no	protein search
+elysia-crispata	purdue	JAWDGP010001684.1	0	514	plastid	right	0.5 kb of Penicillus-like chloroplast DNA at the start of the contig, followed by a microsatellite and slug nuclear DNA	no	DNA search
+elysia-crispata	purdue	JAWDGP010005248.1	144410	144817	plastid	left	0.4 kb of Penicillus-like chloroplast DNA within repetitive slug DNA	no	DNA search
+elysia-crispata	purdue	JAWDGP010008029.1	16030	19030	plastid	right	19 kb of Acetabularia chloroplast DNA, followed by 3.6 kb of slug nuclear DNA	yes	reads of the adults
+elysia-crispata	purdue	JAWDGP010003417.1	696	3696	plastid	left	0.7 kb of slug nuclear DNA, followed by Acetabularia chloroplast DNA	no	egg reads
+elysia-crispata	purdue	JAWDGP010003417.1	70552	73552	plastid	right	Acetabularia chloroplast DNA, followed by 0.8 kb of slug nuclear DNA at the end of the contig	no	egg reads
+elysia-crispata	purdue	JAWDGP010002183.1	14566	17566	plastid	right	Acetabularia chloroplast DNA, followed by the last 0.5 kb of the contig	yes	adapter search
+elysia-crispata	purdue	JAWDGP010004937.1	4000	7000	control	left	control: a position within slug nuclear DNA	no	

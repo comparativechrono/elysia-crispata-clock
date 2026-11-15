@@ -13,7 +13,7 @@
 <a class="brand" href="../index.html"><span class="ld" aria-hidden="true"></span><span><em>Elysia</em> clocks</span></a>
 <nav aria-label="Site"><a href="../index.html">Species</a><a href="../compare.html">Comparison</a><a href="../methods.html">Methods and data</a></nav>
 </div></header>
-<div class="subhead"><div class="wrap"><a class="sp" href="index.html"><i>Elysia crispata</i></a><nav aria-label="Pages for this species"><a href="index.html">Clock genes</a><a href="kleptoplasts.html">Kleptoplasts</a><a href="gene-transfer.html">Gene transfer</a><a href="methods.html" aria-current="page">Methods</a></nav></div></div>
+<div class="subhead"><div class="wrap"><a class="sp" href="index.html"><i>Elysia crispata</i></a><nav aria-label="Pages for this species"><a href="index.html">Clock genes</a><a href="kleptoplasts.html">Kleptoplasts</a><a href="gene-transfer.html">Gene transfer</a><a href="other-individuals.html">Other individuals</a><a href="methods.html" aria-current="page">Methods</a></nav></div></div>
 <main>
 
 <section class="page-head"><div class="wrap">
@@ -34,8 +34,8 @@
 <tr><td>RNA-seq (head, same individual)</td><td class="mono">ERR12342469</td><td>35.3 million read pairs, one library</td></tr>
 <tr><td>Plastid genomes assembled from this individual</td><td class="mono">OZ373742.1, OZ372796.1</td><td>assembled by the Sanger Institute team and assigned to <i>P. capitatus</i> and <i>P. lamourouxii</i></td></tr>
 <tr><td>Bacterial genomes assembled from this individual</td><td class="mono">GCA_964289745, GCA_964291485, GCA_964291505, GCA_964291535</td><td><i>Ekhidna</i>, two <i>Kistimonas</i> and <i>Francisella</i>; used as the baseline for chimera formation</td></tr>
-<tr><td>Other <i>E. crispata</i> assemblies</td><td class="mono">GCA_033675545.1 (Purdue), GCA_984581095.1 (Tampa)</td><td>from other individuals; the Purdue assembly has its own annotation</td></tr>
-<tr><td>Nanopore reads from the Purdue individual</td><td class="mono">PRJNA987316, 12 MinION runs</td><td>38 Gb; used only to test junctions in the Purdue assembly</td></tr>
+<tr><td>Other <i>E. crispata</i> assemblies</td><td class="mono">GCA_033675545.1 (Purdue), GCA_984581095.1 (Tampa)</td><td>from other animals; the Purdue assembly has its own annotation</td></tr>
+<tr><td>Nanopore reads of the Purdue adults</td><td class="mono">PRJNA987316, 12 MinION runs</td><td>38 Gb; used on the gene-transfer page to test junctions in the Purdue assembly; analysed in full on the page <a href="other-individuals.html">Other individuals</a></td></tr>
 <tr><td>Dasycladales plastid sequences</td><td class="mono">333 GenBank records</td><td>used to identify the <i>Acetabularia</i> contigs in the Purdue assembly</td></tr>
 </tbody></table></div>
 <p style="margin-top:14px">The specimen (NSU0021201, clarki ecotype) was collected at Dove Cove, Key Largo, Florida, on 30 July 2020. The genome is described by Middlebrooks et al. (2026), Wellcome Open Research 11:148.</p>
@@ -68,7 +68,7 @@
 <p>Every annotated protein (the longest isoform of each Ensembl gene, and all Purdue proteins) was searched with DIAMOND (sensitive mode) against the animal, algal, bacterial and fungal proteins listed on the gene-transfer page. A protein was listed when its best overall match was not an animal protein, and was classed as a strong candidate when the bit score of that match exceeded that of the best non-sacoglossan animal match by at least 20%. In a separate analysis, 471 plastid and photosynthesis proteins were aligned to all four assemblies with miniprot. Overlapping hits were merged into loci, and the translation of each locus was searched against the same database to distinguish algal genes from the slug’s own homologues (scripts 21, 28 and 29).</p></details>
 
 <details class="method"><summary>11. Foreign contigs and junctions in the Purdue assembly</summary>
-<p>Contigs carrying algal genes outside the known chloroplast fragments were compared with the other assemblies (minimap2, asm20 preset), with two runs of xgElyCris1 reads, and with the plastid sequences of Dasycladales in GenBank (BLAST, dc-megablast). Junctions between chloroplast and nuclear DNA were tested with the Nanopore reads from the Purdue individual. Every read was mapped to a 4 kb bait sequence on the single-copy side of the junction (with repeats masked), and reads that reached the junction were aligned to a window around it. A read was counted as spanning the junction if a single alignment extended at least 300 bp beyond it on both sides, and as ending at the junction if its alignment ended within 150 bp of the junction with at least 200 bp of the read remaining unaligned (script 29).</p></details>
+<p>Contigs carrying algal genes outside the known chloroplast fragments were compared with the other assemblies (minimap2, asm20 preset), with two runs of xgElyCris1 reads, and with the plastid sequences of Dasycladales in GenBank (BLAST, dc-megablast). Junctions between chloroplast and nuclear DNA were tested with the Nanopore reads of the Purdue adults. Every read was mapped to a 4 kb bait sequence on the single-copy side of the junction (with repeats masked), and reads that reached the junction were aligned to a window around it. A read was counted as spanning the junction if a single alignment extended at least 300 bp beyond it on both sides, and as ending at the junction if its alignment ended within 150 bp of the junction with at least 200 bp of the read remaining unaligned (script 29).</p></details>
 
 <h2>Limitations</h2>
 <ul>
@@ -84,7 +84,7 @@
 </main>
 <footer class="site"><div class="wrap">
 <p>Data for <i>Elysia crispata</i>: genome assembly xgElyCris1.1 and sequencing reads from BioProject PRJEB67629 (Middlebrooks et al. 2026, Wellcome Open Research 11:148; Aquatic Symbiosis Genomics project, Wellcome Sanger Institute), released under the Tree of Life open data policy.</p>
-<p>Last updated 14 November 2026. All analyses are based on publicly available genome data. They were carried out independently of the groups that produced the genomes and have not been peer reviewed. Gene functions are inferred from homology with <i>Drosophila</i> and mammals; no rhythms were measured.</p>
+<p>Last updated 15 November 2026. All analyses are based on publicly available genome data. They were carried out independently of the groups that produced the genomes and have not been peer reviewed. Gene functions are inferred from homology with <i>Drosophila</i> and mammals; no rhythms were measured.</p>
 <p>The scripts, tables and sequences are available in the repository that hosts this site. Photograph credits are given on the <a href="../methods.html#photos">methods page</a>. Typefaces: Bricolage Grotesque and IBM Plex Mono (SIL Open Font Licence).</p>
 </div></footer>
 <script src="../assets/pages.js"></script>
