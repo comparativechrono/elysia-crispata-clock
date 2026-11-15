@@ -484,7 +484,7 @@ body = f"""
 <h2>Limitations</h2>
 <ul>
 <li>Gene functions are inferred from homology with <i>Drosophila</i> and mammals. No rhythms were measured.</li>
-<li>The xgElyCris1.1 assembly is incomplete (BUSCO completeness 73.6%; about 60% of read k-mers are represented). As the catalogue shows, a gene that is missing from the assembly is not necessarily missing from the genome.</li>
+<li>The xgElyCris1.1 assembly is incomplete: 17 of the 47 clock genes are incomplete or missing in it, although each of them is intact in another assembly of the species. A gene that is missing from the assembly is therefore not necessarily missing from the genome.</li>
 <li>Six protein models are homology-guided translations based on a protein from another species, and may lack lineage-specific exons. These models are identified in the details of each gene.</li>
 <li>Support values in the trees are FastTree local support values, not bootstrap values. Where a clade is weakly supported, the assignment relies on reciprocal best hits.</li>
 <li>Expression values are from a single head sample collected at an unknown time of day.</li>

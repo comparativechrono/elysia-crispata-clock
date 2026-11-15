@@ -195,7 +195,7 @@ gene sets of *E. chlorotica* and *E. marginata* include genes on bacterial and p
 **Clock genes.** The catalogue contains 47 genes: the core loop (Clock, Bmal1, Period, Timeless,
 Timeout, Cry1, Cry2), the second loop (Pdp1, Vrille, E75, Hr3, Cwo), kinases, phosphatases,
 degradation factors, output genes, photolyases and nine opsins. All 47 are present in the
-species, but the Sanger Institute assembly xgElyCris1.1 is incomplete (BUSCO 73.6%): 30 genes
+species, but the Sanger Institute assembly xgElyCris1.1 is incomplete: 30 genes
 are intact in it, 4 are complete but contain a frameshift or stop codon in the assembly
 sequence, 5 are partial or fragmented (only the 3′ exons of Bmal1 are present, on an unplaced
 scaffold) and 8 are missing or represented only by a divergent copy. Each of these 17 genes is
