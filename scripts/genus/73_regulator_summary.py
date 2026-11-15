@@ -17,7 +17,8 @@ loci.faa, loci_vs_db.tsv). Every place where a regulator aligned is given one co
      where animals have the family, otherwise a gene that shares a domain with it (a kinase, a
      GTPase) or that it aligned to by chance
   S  a slug gene that matches only other sea slugs, and no algal or bacterial protein
-  ?  an alignment that the translated locus does not confirm (it matches no protein at all)
+  ?  an alignment that the translated locus does not confirm (it matches no protein at all), or a
+     match of algal or microbial type below 80 bits on a sequence that is not foreign
   -  nothing found
 Other sea slugs are not counted as animal evidence here: a gene that an ancestor acquired from an
 alga would be shared by them, so a locus counts as alga- or microbe-like whenever its best algal,
@@ -84,7 +85,7 @@ def base_code(l):
 foreign = collections.defaultdict(list)
 for l in loci:
     l["code"] = base_code(l)
-    if l["code"] in "AB":
+    if l["code"] in "AB" or l["class"] in ("alga-like", "microbe-like"):     # weaker ones too: their sequence is judged as well
         foreign[(l["assembly"], l["contig"])].append(l)
 
 bg = {a: fd.background(a) for a in sorted({a for a, _ in foreign})}

@@ -104,7 +104,7 @@ PAM68	PAM68_ARATH	photosynthesis regulation	no	?	?	-	?	?	-	?	?	S?	?	S?
 LPA1	LPA1_ARATH	photosynthesis regulation	no	-	-	?	-	-	-	?	-	-	?	-
 LPA2	LPA2_ARATH	photosynthesis regulation	no	-	-	-	-	-	-	-	-	-	?	?
 LPA3	LPA3_ARATH	photosynthesis regulation	no	-	-	?	?	-	-	-	-	-	-	-
-HCF101	HF101_ARATH	photosynthesis regulation	yes	M	-	M?	M?	M	bM	M	M	M?	M	M
+HCF101	HF101_ARATH	photosynthesis regulation	yes	M	-	M?	bM?	M	bM	M	M	M?	M	M
 VIPP1	VIPP1_ARATH	photosynthesis regulation	no	-	-	?	?	?	-	-	-	?	S?	S?
 THF1	THF1_ARATH	photosynthesis regulation	no	-	-	?	-	-	-	-	-	?	-	-
 ALB3	ALB3_ARATH	photosynthesis regulation	yes	?	?	?	?	M?	?	?	?	?	?	?

@@ -17,17 +17,17 @@
   ],
   "loci": 2092,
   "codes": {
-   "?": 1461,
+   "?": 1460,
    "S": 60,
    "P": 2,
    "M": 499,
-   "b": 69,
+   "b": 70,
    "j": 1
   },
   "alga_or_microbe_like_on_slug_dna": 0,
   "regulators_with_alga_or_microbe_like_copy_on_slug_dna": [],
   "sequences_with_alga_or_microbe_like_loci": {
-   "foreign sequence": 47,
+   "foreign sequence": 48,
    "foreign stretch at the end of a slug sequence": 1
   },
   "unconfirmed_long_alignments": {
@@ -2093,7 +2093,7 @@
     "elysia-crispata": "M",
     "elysia-crispata-alt": "-",
     "elysia-crispata-purdue": "M?",
-    "elysia-crispata-tampa": "M?",
+    "elysia-crispata-tampa": "bM?",
     "elysia-chlorotica": "M",
     "elysia-marginata": "bM",
     "elysia-timida": "M",
@@ -4872,6 +4872,72 @@
   },
   {
    "assembly": "elysia-crispata-tampa",
+   "sequence": "CFHGKC010009735.1",
+   "length": 2889,
+   "gc": 0.288,
+   "genome_gc": 0.3609,
+   "orf_share": 0.808,
+   "genetic_code": "standard",
+   "background_orf_share": {
+    "windows": 40,
+    "median": 0.198,
+    "p90": 0.376
+   },
+   "stretches": {
+    "microbe": 4
+   },
+   "stretch_kinds": {
+    "sea_slug": 0,
+    "animal": 0,
+    "foreign": 4,
+    "unmatched": 0
+   },
+   "bacterial_identity_median": 41.8,
+   "nearest_bacteria": [
+    [
+     "Halalkalibacterium",
+     1
+    ],
+    [
+     "Dictyoglomus",
+     1
+    ],
+    [
+     "Caldicellulosiruptor",
+     1
+    ],
+    [
+     "Borreliella",
+     1
+    ]
+   ],
+   "other_genes": [
+    "SOJ_HALH5",
+    "RSMG_DICT6",
+    "TRUA_CALS8",
+    "Y011_BORBU"
+   ],
+   "verdict": "foreign sequence",
+   "foreign_stretch": null,
+   "loci": [
+    {
+     "query": "PHATC|HCF101|B5Y591",
+     "regulators": "HCF101",
+     "start": 65,
+     "end": 205,
+     "identity": 0.4468,
+     "exons": 1,
+     "code": "?",
+     "alga_bits": 52.8,
+     "microbe_bits": 66.6,
+     "animal_bits": 47.4,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|CHOCR|R7Q4I6"
+    }
+   ]
+  },
+  {
+   "assembly": "elysia-crispata-tampa",
    "sequence": "CFHGKC010010019.1",
    "length": 39127,
    "gc": 0.474,
@@ -5260,6 +5326,34 @@
      "animal_bits": 0,
      "sea_slug_bits": 0,
      "best_alga_hit": "ALG|OSTQU|A0A8S1JFG2"
+    },
+    {
+     "query": "ARATH|SPA1|Q9SYX2",
+     "regulators": "SPA1",
+     "start": 49432,
+     "end": 50138,
+     "identity": 0.2706,
+     "exons": 1,
+     "code": "?",
+     "alga_bits": 49.7,
+     "microbe_bits": 46.6,
+     "animal_bits": 48.9,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|CHOCR|R7Q3X2"
+    },
+    {
+     "query": "ARATH|SPA1|Q9SYX2",
+     "regulators": "SPA1",
+     "start": 56261,
+     "end": 57121,
+     "identity": 0.2531,
+     "exons": 1,
+     "code": "?",
+     "alga_bits": 46.2,
+     "microbe_bits": 0,
+     "animal_bits": 0,
+     "sea_slug_bits": 0,
+     "best_alga_hit": "ALG|CHOCR|R7QKT5"
     },
     {
      "query": "BRYSP|cpSRP54|GMH32709.1",

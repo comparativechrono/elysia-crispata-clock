@@ -210,27 +210,27 @@ ancestor of the slugs would still be found.
 - None of the 2,092 places is an algal or plant gene on slug DNA
   (`results/genus/plastid_regulators.json`; by regulator and assembly in
   `plastid_regulators_matrix.tsv`; every place in `plastid_regulators_loci.json.gz`).
-- 70 places match an alga, a plant or a microbe best, and all lie on foreign DNA of the
-  assemblies: 47 sequences of bacteria and of a phage, and a bacterial stretch at the end of one
-  *E. marginata* sequence. Long open reading frames cover 62 to 100% of these sequences (median
-  90%), against medians of 12 to 28% in random windows of slug DNA, and of the coding stretches on
-  them 2,214 match a microbe or an alga best and 47 another sea slug. The sigma factors found in
-  *E. chlorotica*, *E. marginata* and *E. leucolegnote* are bacterial sigma-70 genes on such
-  sequences, among them those of mycoplasma-like bacteria. The phage-type RNA polymerase found in
-  the Tampa assembly lies on a 39 kb sequence that is 93% open reading frames and also encodes a
-  DNA polymerase I and the ribonucleotide-reductase proteins NrdH and NrdI, as the genome of a
-  T7-like phage does. Two further places, CHLI of magnesium chelatase in
-  *E. crispata* and its alternate haplotype, lie on kleptoplast DNA (chlI is a plastid gene in
-  *Bryopsis*).
+- 70 places are of algal or microbial type (their best algal, plant or microbial match scores at
+  least 80 bits and more than any animal that is not a sea slug). 68 of them lie on foreign DNA of
+  the assemblies: 47 sequences of bacteria and of a phage, and a bacterial stretch at the end of
+  one *E. marginata* sequence. Long open reading frames cover 62 to 100% of these 47 sequences
+  (median 90%), against medians of 12 to 28% in random windows of slug DNA, and of the coding
+  stretches on them 2,214 match a microbe or an alga best and 47 another sea slug. The sigma
+  factors found in *E. chlorotica*, *E. marginata* and *E. leucolegnote* are bacterial sigma-70
+  genes on such sequences, one of them of a mycoplasma-like bacterium. The phage-type RNA
+  polymerase found in the Tampa assembly lies on a 39 kb sequence that is 93% open reading frames
+  and also encodes a DNA polymerase I and the ribonucleotide-reductase proteins NrdH and NrdI, as
+  the genome of a T7-like phage does. The other two, CHLI of magnesium chelatase in *E. crispata*
+  and its alternate haplotype, lie on kleptoplast DNA (chlI is a plastid gene in *Bryopsis*).
 - 499 places are slug genes that match an animal protein best: relatives of the regulator where
   animals have the family (ferrochelatase, COP1, Cry-DASH, NUBPL for HCF101, retinol
   dehydrogenases for protochlorophyllide reductase), and otherwise genes that share a domain with
   it (protein kinases for STN7 and the phototropins, GTPases of the IMAP family for the TOC
-  receptors). Another 60 are
-  slug genes that match only other sea slugs and no algal or microbial protein. The remaining
-  1,461 alignments are not confirmed by the translated place: they are of low complexity (1,322)
-  or short (91), and of the 47 longer ones, a more sensitive search (DIAMOND --ultra-sensitive,
-  E <= 1) found significant matches for three, all to sea-slug proteins.
+  receptors). Another 60 are slug genes that match only other sea slugs and no algal or microbial
+  protein. The remaining 1,460 alignments are not confirmed by the translated place: they are of
+  low complexity (1,322) or short (91), and of the 47 longer ones, a more sensitive search
+  (DIAMOND --ultra-sensitive, E <= 1) found significant matches for three, all to sea-slug
+  proteins.
 - 35 regulators were not found at all, among them GUN1, GUN5 (the H subunit of magnesium
   chelatase), GLK1 and GLK2, both phytochromes, ZTL and FKF1, and PTAC2, PTAC7 and PTAC10.
 
@@ -254,10 +254,10 @@ is a candidate for a gene acquired from an alga or a bacterium:
   or microbial match is less than 1.2 times the animal one (13: actin, ubiquitin, histone H3, Rab
   GTPases, a thioredoxin, a glutamate dehydrogenase);
 - the *P. ocellatus* proteins could not be placed, because its assembly is not part of this
-  study. Its 25 microbial ones are bacterial (most match *Vibrio* proteins at 80 to 97%
-  identity); the algal-type ones are transposases, near-equal matches in conserved families, a
-  transporter and a cyanobacterial-type SufB whose closest sea-slug match lies on a bacterial
-  sequence of *E. marginata*.
+  study. Its 25 of microbial type are bacterial proteins (seven of them 80 to 97% identical to
+  proteins of *Vibrio*); of the 11 of algal type, five are transposases, four are near-equal
+  matches in conserved families, one is a bacterial-type transporter, and one is a SufB whose
+  closest sea-slug match lies on a bacterial sequence of *E. marginata*.
 
 **Cry-DASH2.** The second Cry-DASH gene, which only sacoglossans have, did not come from an alga.
 In a tree of 61 Cry-DASH proteins and photolyases (365 positions; IQ-TREE, LG+F+G4, 1000
